@@ -1,10 +1,43 @@
+import { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
+
+export const metadata: Metadata = {
+  title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+  description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies. Stay updated with the latest trends.",
+  keywords: "dumpster rental blog, dumpster rental, dumpster rental near me, roll off dumpster, rolloff dumpster, waste management tips, construction cleanup guide, dumpster rental tips, waste disposal blog, Icon Dumpsters blog, Utah dumpster rental blog",
+  openGraph: {
+    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies.",
+    url: 'https://icondumpsters.com/blog',
+    images: [
+      {
+        url: '/images/dumpsters.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Dumpster Rental Blog - Tips and Guides',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies.",
+    images: ['/images/dumpsters.jpeg'],
+  },
+  alternates: {
+    canonical: '/blog',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Blog() {
   return (
     <div>
       {/* Blog Header */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-16">
+      <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Dumpster Rental Blog</h1>
           <p className="text-xl max-w-3xl mx-auto mb-8">
@@ -19,7 +52,7 @@ export default function Blog() {
                placeholder="Search articles..." 
                className="w-full px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-400"
              />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
+            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#4e37a8] text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
               Search
             </button>
           </div>
@@ -38,7 +71,7 @@ export default function Blog() {
                                      <ImageWithFallback src="/images/dumpsters.jpeg" alt="Dumpster Rental Services" className="w-full h-full object-cover" fallbackSrc="/images/dumpsters.webp" />
                 </div>
               <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                                 <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                                 <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">FEATURED</span>
                 <span>8 min read</span>
                 <span>•</span>
                 <span>January 15, 2025</span>
@@ -51,7 +84,7 @@ export default function Blog() {
                 and maximizing efficiency for your construction or cleanup project. Learn the latest 
                 industry standards and best practices for waste management.
               </p>
-                             <a href="#" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                             <a href="#" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
                  Read Full Article →
                </a>
             </article>
@@ -76,7 +109,7 @@ export default function Blog() {
                      materials to choosing the right dumpster size, discover how to minimize costs and 
                      environmental impact.
                    </p>
-                   <a href="#" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                   <a href="#" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
                      Read More →
                    </a>
                 </div>
@@ -89,7 +122,7 @@ export default function Blog() {
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
-                    <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">RENOVATION</span>
+                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">RENOVATION</span>
                     <span>7 min read</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">

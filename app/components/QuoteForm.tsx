@@ -12,7 +12,7 @@ export default function QuoteForm() {
 
   return (
     <div id="quote-form" className="bg-gray-800 text-white p-6 sm:p-8 rounded-lg">
-      <h3 className="text-xl sm:text-2xl font-bold text-purple-400 mb-6">Get a Free Quote</h3>
+      <h3 className="text-xl sm:text-2xl font-bold text-[#4e37a8] mb-6">Get a Free Quote</h3>
       
       <form action="https://formspree.io/f/xanblnyj" method="POST" className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
         {/* Name Fields */}
@@ -22,7 +22,7 @@ export default function QuoteForm() {
             <input 
               type="text" 
               name="firstName"
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
               placeholder="First Name"
               required
             />
@@ -32,7 +32,7 @@ export default function QuoteForm() {
             <input 
               type="text" 
               name="lastName"
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
               placeholder="Last Name"
               required
             />
@@ -46,7 +46,7 @@ export default function QuoteForm() {
             <input 
               type="email" 
               name="email"
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
               placeholder="Email"
               required
             />
@@ -56,7 +56,7 @@ export default function QuoteForm() {
             <input 
               type="tel" 
               name="phone"
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
               placeholder="Phone"
               required
             />
@@ -70,14 +70,14 @@ export default function QuoteForm() {
             <input 
               type="text" 
               name="zipCode"
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
               placeholder="Zip Code"
               required
             />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">Waste Type</label>
-            <select name="wasteType" className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base" required>
+            <select name="wasteType" className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base" required>
               <option value="">Select Waste Type</option>
               <option value="Household Waste">Household Waste</option>
               <option value="Construction Debris">Construction Debris</option>
@@ -93,15 +93,15 @@ export default function QuoteForm() {
           <label className="block text-sm font-medium mb-3">Dumpster Size</label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <label className="flex items-center space-x-3 cursor-pointer">
-              <input type="radio" name="dumpsterSize" value="15" className="text-purple-500 focus:ring-purple-500" required />
+              <input type="radio" name="dumpsterSize" value="15" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
               <span className="text-xs sm:text-sm">15 Yard Dumpster</span>
             </label>
             <label className="flex items-center space-x-3 cursor-pointer">
-              <input type="radio" name="dumpsterSize" value="20" className="text-purple-500 focus:ring-purple-500" required />
+              <input type="radio" name="dumpsterSize" value="20" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
               <span className="text-xs sm:text-sm">20 Yard Dumpster</span>
             </label>
             <label className="flex items-center space-x-3 cursor-pointer">
-              <input type="radio" name="dumpsterSize" value="30" className="text-purple-500 focus:ring-purple-500" required />
+              <input type="radio" name="dumpsterSize" value="30" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
               <span className="text-xs sm:text-sm">30 Yard Dumpster</span>
             </label>
           </div>
@@ -115,7 +115,7 @@ export default function QuoteForm() {
               <input 
                 type="date" 
                 name="deliveryDate"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
                 required
               />
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -129,7 +129,7 @@ export default function QuoteForm() {
               <input 
                 type="date" 
                 name="pickupDate"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
                 required
               />
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -145,7 +145,7 @@ export default function QuoteForm() {
           <textarea 
             name="additionalInfo"
             rows={4}
-            className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 text-white text-sm sm:text-base resize-none"
+            className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base resize-none"
             placeholder="Tell us about your project, special requirements, or any questions you have..."
           ></textarea>
         </div>
@@ -153,7 +153,7 @@ export default function QuoteForm() {
         {/* Submit Button */}
         <button 
           type="submit" 
-          className="w-full bg-purple-600 text-white py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-base sm:text-lg"
+          className="w-full bg-[#4e37a8] text-white py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-base sm:text-lg"
         >
           Get Free Quote
         </button>

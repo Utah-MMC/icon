@@ -1,0 +1,35 @@
+{
+  "name": "Icon Dumpsters - Professional Dumpster Rental Services",
+  "short_name": "Icon Dumpsters",
+  "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4e37a8",
+  "theme_color": "#4e37a8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Icon_Dumpsters_Final.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Icon_Dumpsters_Final.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

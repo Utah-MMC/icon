@@ -17,7 +17,7 @@ export default function TestPage() {
         </div>
         <a 
           href="/" 
-          className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+          className="mt-6 inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
         >
           Go to Homepage
         </a>
