@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ErrorBoundary from "./components/ErrorBoundary";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,7 +95,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               <div className="flex items-center">
-                                  <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-12 w-auto" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                                  <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-12 w-auto" />
               </div>
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
@@ -125,9 +125,7 @@ export default function RootLayout({
         </header>
 
         <main className="flex-1">
-          <ErrorBoundary>
-            {children}
-          </ErrorBoundary>
+          {children}
         </main>
 
         {/* Footer - Purple Theme */}
@@ -136,7 +134,7 @@ export default function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                                   <div className="flex items-center space-x-3 mb-4">
-                    <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-10 w-auto" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                    <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-10 w-auto" />
                     <div>
                       <h3 className="text-lg font-semibold">ICON DUMPSTERS</h3>
                       <p className="text-sm text-gray-400">PROFESSIONAL WASTE SOLUTIONS</p>

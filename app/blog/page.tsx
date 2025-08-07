@@ -1,3 +1,5 @@
+import ImageWithFallback from "../components/ImageWithFallback";
+
 export default function Blog() {
   return (
     <div>
@@ -33,7 +35,7 @@ export default function Blog() {
             {/* Featured Post */}
                          <article className="mb-12 border-b border-gray-200 pb-12">
                                <div className="bg-gray-100 rounded-lg h-80 mb-6 overflow-hidden">
-                  <img src="/images/dumpsters.jpeg" alt="Dumpster Rental Services" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsters.webp"; }} />
+                                     <ImageWithFallback src="/images/dumpsters.jpeg" alt="Dumpster Rental Services" className="w-full h-full object-cover" fallbackSrc="/images/dumpsters.webp" />
                 </div>
               <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
                                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">FEATURED</span>
@@ -59,7 +61,7 @@ export default function Blog() {
               {/* Blog Post 1 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner.webp"; }} />
+                                       <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner.webp" />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -83,7 +85,7 @@ export default function Blog() {
               {/* Blog Post 2 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner2.webp"; }} />
+                                       <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -106,7 +108,7 @@ export default function Blog() {
               {/* Blog Post 3 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner3.jpeg" alt="Dumpster Size Guide" className="w-full h-full object-cover" />
+                                       <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" alt="Dumpster Size Guide" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner3.webp" />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -129,7 +131,7 @@ export default function Blog() {
               {/* Blog Post 4 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner4.jpeg" alt="Dumpster Rental Costs" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner4.webp"; }} />
+                                       <ImageWithFallback src="/images/dumpsterSmallBanner4.jpeg" alt="Dumpster Rental Costs" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner4.webp" />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -196,7 +198,7 @@ export default function Blog() {
               <div className="space-y-4">
                                  <a href="#" className="flex gap-3 text-gray-600 hover:text-purple-600 transition-colors">
                    <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-                     <img src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" />
+                                           <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner.webp" />
                    </div>
                    <div>
                      <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1">
@@ -207,7 +209,7 @@ export default function Blog() {
                  </a>
                                  <a href="#" className="flex gap-3 text-gray-600 hover:text-purple-600 transition-colors">
                    <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-                     <img src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" />
+                                           <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
                    </div>
                    <div>
                      <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1">
@@ -218,7 +220,7 @@ export default function Blog() {
                  </a>
                                  <a href="#" className="flex gap-3 text-gray-600 hover:text-purple-600 transition-colors">
                    <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-                     <img src="/images/dumpsterSmallBanner3.jpeg" alt="Dumpster Size Guide" className="w-full h-full object-cover" />
+                     <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" alt="Dumpster Size Guide" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner3.webp" />
                    </div>
                    <div>
                      <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1">
