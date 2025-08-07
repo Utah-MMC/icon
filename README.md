@@ -4,11 +4,34 @@ This is a [Next.js](https://nextjs.org) project for Icon Dumpsters, a profession
 
 ## Recent Fixes (Latest Deployment)
 
-- **Fixed 404 errors**: Added fallback image handling with onError events
+- **Fixed 404 errors**: Added fallback image handling with Client Components
 - **Improved error handling**: Added ErrorBoundary component and custom error pages
 - **Enhanced static asset handling**: Updated Next.js configuration for better image optimization
 - **Added health check endpoint**: `/api/health` for deployment verification
 - **Improved form handling**: Added loading states and better user feedback
+- **Fixed Server Component issues**: Moved event handlers to Client Components
+- **Added deployment configuration**: Created vercel.json for proper routing
+
+## Deployment Status
+
+- **Production URL**: https://icondumpsters.vercel.app
+- **Test Page**: https://icondumpsters.vercel.app/test
+- **Health Check**: https://icondumpsters.vercel.app/api/health
+
+## Troubleshooting 404 Errors
+
+If you encounter a 404 error:
+
+1. **Check the correct URL**: The deployment URL might be different from `icondumpsters.vercel.app`
+2. **Wait for deployment**: New deployments can take 2-5 minutes to propagate
+3. **Try the test page**: Visit `/test` to verify the deployment is working
+4. **Check Vercel dashboard**: Look for the actual deployment URL in your Vercel project
+5. **Health check**: Visit `/api/health` to verify API routes are working
+
+### Common Issues:
+- **Wrong URL**: Make sure you're using the correct deployment URL from Vercel
+- **Deployment in progress**: Wait a few minutes for the deployment to complete
+- **Cache issues**: Try hard refresh (Ctrl+F5) or incognito mode
 
 ## Features
 
