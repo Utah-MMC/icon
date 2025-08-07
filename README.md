@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Icon Dumpsters - Professional Waste Solutions
+
+This is a [Next.js](https://nextjs.org) project for Icon Dumpsters, a professional waste management company. The application provides dumpster rental services with instant quotes and comprehensive waste management solutions.
+
+## Recent Fixes (Latest Deployment)
+
+- **Fixed 404 errors**: Added fallback image handling with onError events
+- **Improved error handling**: Added ErrorBoundary component and custom error pages
+- **Enhanced static asset handling**: Updated Next.js configuration for better image optimization
+- **Added health check endpoint**: `/api/health` for deployment verification
+- **Improved form handling**: Added loading states and better user feedback
+
+## Features
+
+- Responsive design for all devices
+- Instant quote form with Formspree integration
+- Multiple dumpster sizes (15, 20, 30 yards)
+- Blog section with waste management articles
+- Professional waste management services
+- Contact information and service areas
 
 ## Getting Started
 

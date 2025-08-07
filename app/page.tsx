@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-purple-600 to-purple-700 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
         {/* Background image */}
@@ -11,6 +11,9 @@ export default function Home() {
           src="/images/dumpsterSmallBanner3.jpeg" 
           alt="Dumpster Rental Services" 
           className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.src = "/images/dumpsterSmallBanner3.webp";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
         
@@ -60,17 +63,17 @@ export default function Home() {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Dumpster Sizes</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <img src="/images/dumpsters.jpeg" alt="15 Yard Dumpster" className="w-full h-20 object-cover object-left rounded mb-2" />
+                  <img src="/images/dumpsters.jpeg" alt="15 Yard Dumpster" className="w-full h-20 object-cover object-left rounded mb-2" onError={(e) => { e.currentTarget.src = "/images/dumpsters.webp"; }} />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">15 Yard Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Perfect for small projects</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <img src="/images/dumpster500x500-1.jpeg" alt="20 Yard Dumpster" className="w-full h-20 object-cover rounded mb-2" />
+                  <img src="/images/dumpster500x500-1.jpeg" alt="20 Yard Dumpster" className="w-full h-20 object-cover rounded mb-2" onError={(e) => { e.currentTarget.src = "/images/dumpster500x500-1.webp"; }} />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">20 Yard Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Ideal for medium projects</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Dumpster" className="w-full h-20 object-cover rounded mb-2" />
+                  <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Dumpster" className="w-full h-20 object-cover rounded mb-2" onError={(e) => { e.currentTarget.src = "/images/dumpster5-500x500-1.webp"; }} />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">30 Yard Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Great for large projects</p>
                 </div>
@@ -82,7 +85,14 @@ export default function Home() {
           <div id="quote-form" className="bg-gray-800 text-white p-6 sm:p-8 rounded-lg">
             <h3 className="text-xl sm:text-2xl font-bold text-purple-400 mb-6">Get a Free Quote</h3>
             
-            <form action="https://formspree.io/f/xanblnyj" method="POST" className="space-y-4 sm:space-y-6">
+            <form action="https://formspree.io/f/xanblnyj" method="POST" className="space-y-4 sm:space-y-6" onSubmit={(e) => {
+              const form = e.currentTarget;
+              const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+              if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+              }
+            }}>
               {/* Name Fields */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -232,7 +242,7 @@ export default function Home() {
           
           {/* General Residential Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpsters.jpeg" alt="General Residential Waste" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpsters.jpeg" alt="General Residential Waste" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsters.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">General Residential Waste</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove residential household wastes during cleanouts, moves, or renovations.</p>
@@ -244,7 +254,7 @@ export default function Home() {
 
           {/* Construction Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpster500x500-1.jpeg" alt="Construction Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpster500x500-1.jpeg" alt="Construction Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpster500x500-1.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Construction Waste Dumpster</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove construction debris, drywall, lumber, and building materials.</p>
@@ -256,7 +266,7 @@ export default function Home() {
 
           {/* Concrete Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpster5-500x500-1.jpeg" alt="Concrete Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpster5-500x500-1.jpeg" alt="Concrete Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpster5-500x500-1.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Concrete Waste Dumpster</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove concrete, asphalt, bricks, and other heavy construction materials.</p>
@@ -268,7 +278,7 @@ export default function Home() {
 
           {/* Roofing Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpsterSmallBanner.jpeg" alt="Roofing Waste Removal" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpsterSmallBanner.jpeg" alt="Roofing Waste Removal" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Roofing Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster for roofing shingles, underlayment, and other roofing materials.</p>
@@ -280,7 +290,7 @@ export default function Home() {
 
           {/* Yard Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpsterSmallBanner2.jpeg" alt="Green Yard Waste Removal" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpsterSmallBanner2.jpeg" alt="Green Yard Waste Removal" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner2.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Green Yard Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove yard waste, branches, leaves, and landscaping debris.</p>
@@ -292,7 +302,7 @@ export default function Home() {
 
           {/* Recyclable Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src="/images/dumpsterSmallBanner3.jpeg" alt="Recyclable Waste Removal" className="w-full h-40 sm:h-48 object-cover" />
+                            <img src="/images/dumpsterSmallBanner3.jpeg" alt="Recyclable Waste Removal" className="w-full h-40 sm:h-48 object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner3.webp"; }} />
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Recyclable Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove recyclable materials, cardboard, paper, and plastic waste.</p>
@@ -312,7 +322,7 @@ export default function Home() {
           {/* Left Promotional Banner */}
           <div className="bg-[#4e37a8] text-white p-6 sm:p-8 rounded-lg relative overflow-hidden">
             <div className="absolute top-4 left-4 w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-              <img src="/images/dumpster500x200-1.jpeg" alt="Dumpster Truck" className="w-8 h-8 sm:w-12 sm:h-12 object-cover rounded" />
+                              <img src="/images/dumpster500x200-1.jpeg" alt="Dumpster Truck" className="w-8 h-8 sm:w-12 sm:h-12 object-cover rounded" onError={(e) => { e.currentTarget.src = "/images/dumpster500x200-1.webp"; }} />
             </div>
             <div className="text-center mt-6 sm:mt-8">
               <h2 className="text-xl sm:text-2xl font-bold mb-1">SEE OUR</h2>
@@ -329,7 +339,7 @@ export default function Home() {
           {/* 15 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">15 YARD DUMPSTER</h3>
-            <img src="/images/dumpster500x200-1.jpeg" alt="15 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" />
+                            <img src="/images/dumpster500x200-1.jpeg" alt="15 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" onError={(e) => { e.currentTarget.src = "/images/dumpster500x200-1.webp"; }} />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">
@@ -365,7 +375,7 @@ export default function Home() {
           {/* 20 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">20 YARD DUMPSTER</h3>
-            <img src="/images/dumpster500x200-2.jpeg" alt="20 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" />
+                            <img src="/images/dumpster500x200-2.jpeg" alt="20 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" onError={(e) => { e.currentTarget.src = "/images/dumpster500x200-2.webp"; }} />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">
@@ -401,7 +411,7 @@ export default function Home() {
           {/* 30 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">30 YARD DUMPSTER</h3>
-            <img src="/images/dumpster500x200-3.jpeg" alt="30 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" />
+                            <img src="/images/dumpster500x200-3.jpeg" alt="30 Yard Dumpster" className="w-full h-24 sm:h-32 object-cover rounded mb-4" onError={(e) => { e.currentTarget.src = "/images/dumpster500x200-3.webp"; }} />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">

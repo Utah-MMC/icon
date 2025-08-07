@@ -33,7 +33,7 @@ export default function Blog() {
             {/* Featured Post */}
                          <article className="mb-12 border-b border-gray-200 pb-12">
                                <div className="bg-gray-100 rounded-lg h-80 mb-6 overflow-hidden">
-                  <img src="/images/dumpsters.jpeg" alt="Dumpster Rental Services" className="w-full h-full object-cover" />
+                  <img src="/images/dumpsters.jpeg" alt="Dumpster Rental Services" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsters.webp"; }} />
                 </div>
               <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
                                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">FEATURED</span>
@@ -59,7 +59,7 @@ export default function Blog() {
               {/* Blog Post 1 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" />
+                   <img src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner.webp"; }} />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -83,7 +83,7 @@ export default function Blog() {
               {/* Blog Post 2 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" />
+                   <img src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner2.webp"; }} />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
@@ -129,7 +129,7 @@ export default function Blog() {
               {/* Blog Post 4 */}
                              <article className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                  <div className="bg-gray-100 h-48 overflow-hidden">
-                   <img src="/images/dumpsterSmallBanner4.jpeg" alt="Dumpster Rental Costs" className="w-full h-full object-cover" />
+                   <img src="/images/dumpsterSmallBanner4.jpeg" alt="Dumpster Rental Costs" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.src = "/images/dumpsterSmallBanner4.webp"; }} />
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
