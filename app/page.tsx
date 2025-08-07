@@ -85,7 +85,7 @@ export default function Home() {
           <QuoteForm />
         </div>
       </div>
-
+git
       {/* Our Services Section */}
       <div id="our-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
         <div className="text-center mb-8 sm:mb-12">
@@ -299,6 +299,147 @@ export default function Home() {
             <a href="#quote-form" className="w-full bg-orange-500 text-white py-2 sm:py-3 rounded-lg hover:bg-orange-600 transition-colors font-semibold text-center block text-sm sm:text-base">
               BOOK ONLINE
             </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Dumpster Rental Size Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <span className="text-gray-800">Our Dumpster</span>{" "}
+              <span className="text-[#4e37a8]">Rental Size</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect dumpster size for your project. All rentals include delivery, pickup, and landfill fees.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            
+            {/* 15 Yard Dumpster */}
+            <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-[#4e37a8] mb-4">15 Yard Dumpster</h3>
+              
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Dimensions:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">16 feet x 7 feet x 4 feet</p>
+                </div>
+                
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Capacity:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">Hold 15 cubic yards</p>
+                </div>
+                
+                <div className="pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">1.5 tons...</p>
+                </div>
+              </div>
+              
+              <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block mt-6">
+                Free Quote
+              </a>
+            </div>
+
+            {/* 20 Yard Dumpster */}
+            <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-[#4e37a8] mb-4">20 Yard Dumpster</h3>
+              
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Dimensions:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">16 feet x 7 feet x 6 feet</p>
+                </div>
+                
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Capacity:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">Hold 20 cubic yards</p>
+                </div>
+                
+                <div className="pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">2 tons...</p>
+                </div>
+              </div>
+              
+              <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block mt-6">
+                Free Quote
+              </a>
+            </div>
+
+            {/* 30 Yard Dumpster */}
+            <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-[#4e37a8] mb-4">30 Yard Dumpster</h3>
+              
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Dimensions:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">22 feet x 7 feet x 6 feet</p>
+                </div>
+                
+                <div className="border-b border-gray-200 pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Capacity:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">Hold 30 cubic yards</p>
+                </div>
+                
+                <div className="pb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">3 tons...</p>
+                </div>
+              </div>
+              
+              <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block mt-6">
+                Free Quote
+              </a>
+            </div>
           </div>
         </div>
       </div>
