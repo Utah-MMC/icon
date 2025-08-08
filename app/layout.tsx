@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       { rel: 'android-chrome-512x512', url: '/android-chrome-512x512.png' },
     ],
   },
-  manifest: '/site.webmanifest',
+  manifest: '/manifest.json',
   other: {
     'geo.region': 'US-UT',
     'geo.placename': 'Utah',
