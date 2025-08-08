@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-  description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 10-40 yard dumpsters available. Get reliable, affordable dumpster rentals from Icon Dumpsters. Call (801) 918-6000 for instant quotes.",
-  keywords: "dumpster rental, dumpster rental near me, Utah dumpster rental, construction dumpster, waste management, 10 yard dumpster, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, 40 yard dumpster, roll-off dumpster, rolloff dumpster, Icon Dumpsters, Salt Lake City dumpster rental",
+  description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available. Get reliable, affordable dumpster rentals from Icon Dumpsters. Call (801) 918-6000 for instant quotes.",
+  keywords: "dumpster rental, dumpster rental near me, Utah dumpster rental, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, roll-off dumpster, rolloff dumpster, Icon Dumpsters, Salt Lake City dumpster rental",
   authors: [{ name: "Icon Dumpsters" }],
   creator: "Icon Dumpsters",
   publisher: "Icon Dumpsters",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 10-40 yard dumpsters available. Get reliable, affordable dumpster rentals.",
+    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available. Get reliable, affordable dumpster rentals.",
     url: 'https://icondumpsters.com',
     siteName: 'Icon Dumpsters',
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 10-40 yard dumpsters available.",
+    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available.",
     images: ['/images/Icon_Dumpsters_Final.png'],
   },
   robots: {
@@ -138,9 +138,7 @@ export default function RootLayout({
               </div>
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
-                  <a href="#" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>
                   <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICES</a>
-                  <a href="#" className="text-white hover:text-purple-200 transition-colors font-medium">RENTAL LOCATIONS</a>
                   <div className="relative group">
                     <a href="/dumpster-sizes" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       DUMPSTER SIZES
@@ -154,17 +152,6 @@ export default function RootLayout({
                       <div className="p-6">
                         <h3 className="text-lg font-semibold text-gray-800 mb-4">Choose Your Dumpster Size</h3>
                         <div className="grid grid-cols-2 gap-4">
-                          {/* 10 Yard Dumpster */}
-                          <div className="group/item">
-                            <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpsterSmallBanner.jpeg" alt="10 Yard Dumpster" className="w-full h-24 object-cover" />
-                              <div className="p-3">
-                                <h4 className="font-semibold text-gray-800 text-sm">10 Yard Dumpsters</h4>
-                                <p className="text-xs text-gray-600">Perfect for small projects</p>
-                              </div>
-                            </div>
-                          </div>
-                          
                           {/* 15 Yard Dumpster */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
@@ -198,17 +185,6 @@ export default function RootLayout({
                             </div>
                           </div>
                           
-                          {/* 40 Yard Dumpster */}
-                          <div className="group/item">
-                            <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpsterSmallBanner2.jpeg" alt="40 Yard Dumpster" className="w-full h-24 object-cover" />
-                              <div className="p-3">
-                                <h4 className="font-semibold text-gray-800 text-sm">40 Yard Dumpsters</h4>
-                                <p className="text-xs text-gray-600">Maximum capacity</p>
-                              </div>
-                            </div>
-                          </div>
-                          
                           {/* View All Sizes */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
@@ -231,6 +207,7 @@ export default function RootLayout({
                     </div>
                   </div>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+                  <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>
                 </nav>
               <div className="flex items-center">
                 <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">

@@ -145,7 +145,7 @@ export default function Blog() {
                  </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600">
-                    <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">GUIDE</span>
+                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">GUIDE</span>
                     <span>10 min read</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">

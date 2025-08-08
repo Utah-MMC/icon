@@ -243,7 +243,7 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#quote-form"
-                className="inline-flex items-center bg-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm sm:text-base"
+                className="inline-flex items-center bg-[#4e37a8] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm sm:text-base"
                 onClick={onClose}
               >
                 Get Free Quote

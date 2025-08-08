@@ -66,12 +66,14 @@ export default function Services() {
               </p>
             </div>
             <div>
-              <ImageWithFallback 
-                src="/images/dumpsterWithTruck.jpeg" 
-                alt="Icon Dumpsters Services" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-                fallbackSrc="/images/dumpsterWithTruck.webp"
-              />
+              <a href="/dumpster-sizes" className="block">
+                <ImageWithFallback 
+                  src="/images/dumpsterWithTruck.jpeg" 
+                  alt="Icon Dumpsters Services" 
+                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                  fallbackSrc="/images/dumpsterWithTruck.webp"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -80,12 +82,14 @@ export default function Services() {
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <ImageWithFallback 
-                src="/images/dumpster500x500-1.jpeg" 
-                alt="Residential Dumpster Rental" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-                fallbackSrc="/images/dumpster500x500-1.webp"
-              />
+              <a href="/dumpster-sizes" className="block">
+                <ImageWithFallback 
+                  src="/images/dumpster500x500-1.jpeg" 
+                  alt="Residential Dumpster Rental" 
+                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                  fallbackSrc="/images/dumpster500x500-1.webp"
+                />
+              </a>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -122,12 +126,14 @@ export default function Services() {
               </a>
             </div>
             <div>
-              <ImageWithFallback 
-                src="/images/dumpster500x500-2.jpeg" 
-                alt="Construction Dumpster Rental" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-                fallbackSrc="/images/dumpster500x500-2.webp"
-              />
+              <a href="/dumpster-sizes" className="block">
+                <ImageWithFallback 
+                  src="/images/Construction-Rental-480x480.jpg" 
+                  alt="Construction Dumpster Rental" 
+                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                  fallbackSrc="/images/Construction-Rental-480x480.jpg"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -136,12 +142,14 @@ export default function Services() {
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <ImageWithFallback 
-                src="/images/dumpster500x500-1.jpeg" 
-                alt="Commercial Dumpster Rental" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-                fallbackSrc="/images/dumpster500x500-1.webp"
-              />
+              <a href="/dumpster-sizes" className="block">
+                <ImageWithFallback 
+                  src="/images/commercial.jpg" 
+                  alt="Commercial Dumpster Rental" 
+                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                  fallbackSrc="/images/dumpster500x500-1.webp"
+                />
+              </a>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -184,12 +192,14 @@ export default function Services() {
               </a>
             </div>
             <div>
-              <ImageWithFallback 
-                src="/images/dumpster500x500-2.jpeg" 
-                alt="Specialized Dumpster Rental" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-                fallbackSrc="/images/dumpster500x500-2.webp"
-              />
+              <a href="/dumpster-sizes" className="block">
+                <ImageWithFallback 
+                  src="/images/concrete.webp" 
+                  alt="Specialized Dumpster Rental" 
+                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                  fallbackSrc="/images/Lawn-Mower-Square-480x480.jpg"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -286,29 +296,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Unsure Section */}
-        <div className="bg-gray-50 rounded-lg p-8 mb-12">
-          <div className="text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Unsure if we rent dumpsters for your type of project?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-              Wondering if our dumpster rental services are the right fit for your specific project? Whether it's a home renovation, a major cleanout, or a landscaping overhaul, we've got you covered. Our friendly dumpster consultants are ready to assist you with expert advice and tailored solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setIsPhoneModalOpen(true)}
-                className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-lg"
-              >
-                CALL US
-              </button>
-              <a href="#quote-form" className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg border-2 border-[#4e37a8]">
-                GET A QUOTE
-              </a>
-            </div>
-          </div>
-        </div>
-
+        
         {/* CTA Section */}
         <div className="bg-[#4e37a8] rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

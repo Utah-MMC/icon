@@ -3,7 +3,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Icon Dumpsters",
-    "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. 10-40 yard dumpsters available.",
+    "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available.",
     "url": "https://icondumpsters.com",
     "telephone": "+1-801-918-6000",
     "email": "icondumpsters@gmail.com",
@@ -38,14 +38,7 @@ export default function StructuredData() {
       "@type": "OfferCatalog",
       "name": "Dumpster Rental Services",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "10 Yard Dumpster Rental",
-            "description": "Perfect for small projects and cleanups"
-          }
-        },
+
         {
           "@type": "Offer",
           "itemOffered": {
@@ -70,14 +63,7 @@ export default function StructuredData() {
             "description": "For major construction projects"
           }
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "40 Yard Dumpster Rental",
-            "description": "Maximum capacity for large projects"
-          }
-        }
+
       ]
     },
     "aggregateRating": {

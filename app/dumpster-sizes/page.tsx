@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
+import QuoteForm from "../components/QuoteForm";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
@@ -53,22 +54,21 @@ export default function DumpsterSizes() {
             <div className="space-y-4">
               <a 
                 href="#quote-form" 
-                className="inline-flex items-center bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+                className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                 </svg>
-                Get Start Pricing Online
+                Get Started Pricing
               </a>
-              <a 
-                href="tel:801-918-6000" 
-                className="inline-flex items-center bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition-colors font-medium"
+              <button 
+                className="inline-flex items-center bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
                 (801) 918-6000
-              </a>
+              </button>
             </div>
             
             {/* Breadcrumbs */}
@@ -171,6 +171,208 @@ export default function DumpsterSizes() {
               additional fees or refusal of pickup.
             </p>
           </div>
+
+          {/* Comprehensive Dumpster Size Guide */}
+          <div className="mt-16">
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Complete Dumpster Size Guide
+            </h3>
+            
+            <div className="mb-8">
+              <p className="text-gray-600 mb-6 text-center">
+                Choose the perfect dumpster size for your project. All rentals include delivery, pickup, and landfill fees.
+              </p>
+            </div>
+
+            {/* Detailed Dumpster Sizes Table */}
+            <div className="overflow-x-auto mb-8">
+              <table className="w-full border-collapse min-w-full">
+                <thead>
+                  <tr className="bg-[#4e37a8] text-white">
+                    <th className="p-2 sm:p-4 text-left text-xs sm:text-sm">Dumpster Size</th>
+                    <th className="p-2 sm:p-4 text-left text-xs sm:text-sm">Dimensions</th>
+                    <th className="p-2 sm:p-4 text-left text-xs sm:text-sm">Weight Capacity</th>
+                    <th className="p-2 sm:p-4 text-left text-xs sm:text-sm">Equivalent Capacity</th>
+                    <th className="p-2 sm:p-4 text-left text-xs sm:text-sm">Best For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* 15 Yard Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/dumpster500x200-1.jpeg" 
+                            alt="15 Yard Dumpster" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpster500x200-1.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">15 Yard Dumpster</h3>
+                          <p className="text-xs text-gray-600">Most Popular</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">16' long x 7.5' wide x 4.5' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">1-2 tons</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4-5 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Small renovations, garage cleanouts, yard waste</td>
+                  </tr>
+
+                  {/* 20 Yard Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/dumpster500x200-2.jpeg" 
+                            alt="20 Yard Dumpster" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpster500x200-2.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">20 Yard Dumpster</h3>
+                          <p className="text-xs text-gray-600">Great Value</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 7.5' wide x 4.5' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">2-3 tons</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">6 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Medium renovations, construction debris, multiple rooms</td>
+                  </tr>
+
+                  {/* 30 Yard Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/dumpster500x200-3.jpeg" 
+                            alt="30 Yard Dumpster" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpster500x200-3.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">30 Yard Dumpster</h3>
+                          <p className="text-xs text-gray-600">Large Projects</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 7.5' wide x 6' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">2-4 tons</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">9 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Major renovations, construction projects, commercial work</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Additional Information */}
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">What's Included</h4>
+                <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
+                  <li>• Delivery and pickup</li>
+                  <li>• Landfill fees (up to weight limit)</li>
+                  <li>• 7-day rental period</li>
+                  <li>• Professional service</li>
+                </ul>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Weight Limits</h4>
+                <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
+                  <li>• 15 Yard: 1-2 tons included</li>
+                  <li>• 20 Yard: 2-3 tons included</li>
+                  <li>• 30 Yard: 2-4 tons included</li>
+                  <li>• Additional weight fees apply</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Accepted & Prohibited Items Section */}
+            <div className="mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
+                Accepted & Prohibited Dumpster Rental Items
+              </h3>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                {/* Accepted Items */}
+                <div className="bg-green-50 border-2 border-green-500 rounded-lg p-4 sm:p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h4 className="text-lg sm:text-xl font-bold text-green-700">Accepted Items</h4>
+                  </div>
+                  
+                  <ul className="text-sm sm:text-base text-gray-700 space-y-2 mb-4">
+                    <li>• Household junk</li>
+                    <li>• Yard waste</li>
+                    <li>• Furniture</li>
+                    <li>• Construction debris</li>
+                    <li>• Demolition debris</li>
+                    <li>• Wood & drywall</li>
+                    <li>• Cardboard & paper</li>
+                    <li>• Light landscaping debris</li>
+                    <li>• General trash</li>
+                  </ul>
+
+                  <div className="bg-green-600 text-white p-3 rounded-lg">
+                    <h5 className="font-bold text-sm sm:text-base mb-2">SPECIALTY ITEMS WE TAKE</h5>
+                    <ul className="text-xs sm:text-sm space-y-1">
+                      <li>• Concrete, Dirt, Heavy Materials: Heavy Duty Dumpster Required</li>
+                      <li>• Mattresses / Box Springs: $25 / each</li>
+                      <li>• Freon Appliances: $30 / each</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Prohibited Items */}
+                <div className="bg-red-50 border-2 border-red-500 rounded-lg p-4 sm:p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h4 className="text-lg sm:text-xl font-bold text-red-700">Prohibited Items</h4>
+                  </div>
+                  
+                  <ul className="text-sm sm:text-base text-gray-700 space-y-2 mb-4">
+                    <li>• Tires</li>
+                    <li>• Paint</li>
+                    <li>• Batteries</li>
+                    <li>• Oil</li>
+                    <li>• Sealed containers</li>
+                    <li>• Railroad ties</li>
+                    <li>• Asbestos</li>
+                    <li>• Hazardous vehicle parts</li>
+                    <li>• Etc.</li>
+                  </ul>
+
+                  <div className="bg-red-600 text-white p-3 rounded-lg">
+                    <h5 className="font-bold text-sm sm:text-base mb-2">PROHIBITED ITEMS NOTICE</h5>
+                    <p className="text-xs sm:text-sm mb-2">
+                      Some materials are prohibited due to landfill restrictions and safety rules.
+                    </p>
+                    <p className="text-xs sm:text-sm mb-2">
+                      Extra charges may apply—or we may not be able to take the load.
+                    </p>
+                    <p className="text-xs sm:text-sm font-semibold">
+                      Call or text us at (801) 918-6000 before you load it if you're unsure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
           {/* Call to Action */}
           <div className="text-center mt-12">
@@ -178,16 +380,15 @@ export default function DumpsterSizes() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#quote-form" 
-                className="inline-flex items-center bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+                className="inline-flex items-center bg-[#4e37a8] text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
               >
                 Order Online
               </a>
-              <a 
-                href="tel:801-918-6000" 
-                className="inline-flex items-center bg-teal-500 text-white px-8 py-3 rounded-lg hover:bg-teal-600 transition-colors font-medium"
+              <button 
+                className="inline-flex items-center bg-[#4e37a8] text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
               >
                 (801) 918-6000
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -244,8 +445,26 @@ export default function DumpsterSizes() {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+                 </div>
+       </div>
+
+       {/* Quote Form Section */}
+       <div className="bg-gray-50 py-16">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+               Get Your Free Quote
+             </h2>
+             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+               Ready to get started? Fill out the form below and we'll get back to you with a custom quote for your project.
+             </p>
+           </div>
+           
+           <div className="max-w-2xl mx-auto">
+             <QuoteForm />
+           </div>
+         </div>
+       </div>
+     </div>
+   );
+ }

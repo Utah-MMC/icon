@@ -35,7 +35,7 @@ export default function CleanupSection() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">1. Choose Your Perfect Dumpster Size</h4>
-                <p className="text-gray-600">Select from our 10, 15, 20, 30, or 40 yard roll-off dumpsters based on your project needs.</p>
+                <p className="text-gray-600">Select from our 15, 20, or 30 yard roll-off dumpsters based on your project needs.</p>
               </div>
 
               {/* Step 2 */}
@@ -101,7 +101,7 @@ export default function CleanupSection() {
             <p className="text-gray-600 mb-4">Need help choosing the right dumpster size?</p>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+              className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
             >
               View Complete Dumpster Size Guide
             </button>

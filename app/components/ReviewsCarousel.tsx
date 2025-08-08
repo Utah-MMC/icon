@@ -171,7 +171,7 @@ export default function ReviewsCarousel() {
         <div className="bg-white rounded-lg shadow-lg p-6 min-w-[320px] flex-shrink-0">
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#4e37a8] rounded-full flex items-center justify-center">
                 <span className="text-white font-semibold text-sm">S</span>
               </div>
               <div>
