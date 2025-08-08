@@ -269,9 +269,16 @@ export default function RootLayout({
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-700">
-              <p className="text-gray-400 text-sm text-center">
-                © 2025 Icon Dumpsters. All rights reserved. | (801) 918-6000
-              </p>
+              <div className="flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
+                <p>
+                  © 2025 Icon Dumpsters. All rights reserved. | (801) 918-6000
+                </p>
+                <div className="flex space-x-4 mt-2 sm:mt-0">
+                  <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </footer>
