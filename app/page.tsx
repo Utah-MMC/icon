@@ -28,12 +28,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Cleanup Section */}
-      <CleanupSection />
-
-      {/* Main Content Area - Two Column Layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      {/* Dumpster Rental Service Section */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        {/* Purple Gradient Wipe */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4e37a8]/30 via-[#4e37a8]/15 to-purple-600/25 pointer-events-none"></div>
+        <div className="relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           
           {/* Left Column - Information */}
           <div className="space-y-6">
@@ -87,8 +87,13 @@ export default function Home() {
           {/* Right Column - Quote Form */}
           <QuoteForm />
         </div>
+        </div>
       </div>
-git
+
+      {/* Cleanup Section */}
+      <CleanupSection />
+
+
       {/* Customer Reviews Section */}
       <div className="bg-[#4e37a8] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,11 +164,13 @@ git
           
           {/* General Residential Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpsters.jpeg" alt="General Residential Waste" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpsters.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpsters.jpeg" alt="General Residential Waste" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsters.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">General Residential Waste</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove residential household wastes during cleanouts, moves, or renovations.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>
@@ -171,11 +178,13 @@ git
 
           {/* Construction Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Construction Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpster500x500-1.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Construction Waste Dumpster" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Construction Waste Dumpster</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove construction debris, drywall, lumber, and building materials.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>
@@ -183,11 +192,13 @@ git
 
           {/* Concrete Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="Concrete Waste Dumpster" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpster5-500x500-1.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="Concrete Waste Dumpster" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster5-500x500-1.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Concrete Waste Dumpster</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove concrete, asphalt, bricks, and other heavy construction materials.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>
@@ -195,11 +206,13 @@ git
 
           {/* Roofing Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Roofing Waste Removal" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpsterSmallBanner.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Roofing Waste Removal" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Roofing Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster for roofing shingles, underlayment, and other roofing materials.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>
@@ -207,11 +220,13 @@ git
 
           {/* Yard Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Green Yard Waste Removal" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Green Yard Waste Removal" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Green Yard Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove yard waste, branches, leaves, and landscaping debris.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>
@@ -219,11 +234,13 @@ git
 
           {/* Recyclable Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" alt="Recyclable Waste Removal" className="w-full h-40 sm:h-48 object-cover" fallbackSrc="/images/dumpsterSmallBanner3.webp" />
+            <a href="/services" className="block">
+              <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" alt="Recyclable Waste Removal" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner3.webp" />
+            </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Recyclable Waste Removal</h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a dumpster to remove recyclable materials, cardboard, paper, and plastic waste.</p>
-              <a href="#quote-form" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
+              <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
               </a>
             </div>

@@ -3,11 +3,11 @@ import ImageWithFallback from "../components/ImageWithFallback";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-  description: "Complete guide to dumpster sizes: 10, 15, 20, 30, and 40 yard roll-off dumpsters. View dimensions, weight limits, and pricing. Find the perfect size for your project. Call (801) 918-6000.",
-  keywords: "dumpster sizes, 10 yard dumpster, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, 40 yard dumpster, roll off dumpster, rolloff dumpster, dumpster rental, dumpster rental near me, roll off dumpster dimensions, dumpster weight limits, Utah dumpster rental sizes",
+  description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing. Find the perfect size for your project. Call (801) 918-6000.",
+  keywords: "dumpster sizes, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, roll off dumpster, rolloff dumpster, dumpster rental, dumpster rental near me, roll off dumpster dimensions, dumpster weight limits, Utah dumpster rental sizes",
   openGraph: {
     title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-    description: "Complete guide to dumpster sizes: 10, 15, 20, 30, and 40 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
+    description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
     url: 'https://icondumpsters.com/dumpster-sizes',
     images: [
       {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-    description: "Complete guide to dumpster sizes: 10, 15, 20, 30, and 40 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
+    description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
     images: ['/images/dumpsterWithTruck.webp'],
   },
   alternates: {
@@ -129,18 +129,7 @@ export default function DumpsterSizes() {
                 <tr className="bg-white">
                   <td className="border border-gray-300 px-6 py-4">
                     <div className="flex items-center">
-                      <img src="/images/dumpsterSmallBanner.jpeg" alt="10 Yard" className="w-12 h-12 object-cover rounded mr-3" />
-                      <span className="font-medium">10 Yard</span>
-                    </div>
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">12' x 8' x 4'</td>
-                  <td className="border border-gray-300 px-6 py-4">2 tons</td>
-                  <td className="border border-gray-300 px-6 py-4">Level with top</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-6 py-4">
-                    <div className="flex items-center">
-                      <img src="/images/dumpsters.jpeg" alt="15 Yard" className="w-12 h-12 object-cover rounded mr-3" />
+                      <ImageWithFallback src="/images/dumpsters.jpeg" alt="15 Yard" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpsters.webp" />
                       <span className="font-medium">15 Yard</span>
                     </div>
                   </td>
@@ -148,10 +137,10 @@ export default function DumpsterSizes() {
                   <td className="border border-gray-300 px-6 py-4">3 tons</td>
                   <td className="border border-gray-300 px-6 py-4">Level with top</td>
                 </tr>
-                <tr className="bg-white">
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 px-6 py-4">
                     <div className="flex items-center">
-                      <img src="/images/dumpster500x500-1.jpeg" alt="20 Yard" className="w-12 h-12 object-cover rounded mr-3" />
+                      <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="20 Yard" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster500x500-1.webp" />
                       <span className="font-medium">20 Yard</span>
                     </div>
                   </td>
@@ -159,26 +148,15 @@ export default function DumpsterSizes() {
                   <td className="border border-gray-300 px-6 py-4">4 tons</td>
                   <td className="border border-gray-300 px-6 py-4">Level with top</td>
                 </tr>
-                <tr className="bg-gray-50">
+                <tr className="bg-white">
                   <td className="border border-gray-300 px-6 py-4">
                     <div className="flex items-center">
-                      <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard" className="w-12 h-12 object-cover rounded mr-3" />
+                      <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster5-500x500-1.webp" />
                       <span className="font-medium">30 Yard</span>
                     </div>
                   </td>
                   <td className="border border-gray-300 px-6 py-4">22' x 8' x 8'</td>
                   <td className="border border-gray-300 px-6 py-4">6 tons</td>
-                  <td className="border border-gray-300 px-6 py-4">Level with top</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-300 px-6 py-4">
-                    <div className="flex items-center">
-                      <img src="/images/dumpsterSmallBanner2.jpeg" alt="40 Yard" className="w-12 h-12 object-cover rounded mr-3" />
-                      <span className="font-medium">40 Yard</span>
-                    </div>
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">22' x 8' x 10'</td>
-                  <td className="border border-gray-300 px-6 py-4">8 tons</td>
                   <td className="border border-gray-300 px-6 py-4">Level with top</td>
                 </tr>
               </tbody>

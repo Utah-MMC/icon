@@ -108,7 +108,10 @@ export default function CleanupSection() {
           </div>
 
           {/* The Icon Dumpsters Difference */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="relative bg-white rounded-lg shadow-lg p-8">
+            {/* Purple Gradient Wipe */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#4e37a8]/30 via-[#4e37a8]/15 to-purple-600/25 pointer-events-none rounded-lg"></div>
+            <div className="relative z-10">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-6">
               Why Choose Icon Dumpsters for Your Dumpster Rental
             </h3>
@@ -156,6 +159,7 @@ export default function CleanupSection() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">98% On-Time Delivery Rate</h4>
                 <p className="text-gray-600 text-sm">Reliable service you can count on for your project timeline</p>
               </div>
+            </div>
             </div>
           </div>
         </div>

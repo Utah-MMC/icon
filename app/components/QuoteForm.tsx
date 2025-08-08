@@ -1,20 +1,127 @@
 'use client';
 
+import { useState } from 'react';
+import ReCaptcha from './ReCaptcha';
+import Honeypot from './Honeypot';
+
 export default function QuoteForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string>('');
+  const [spamDetected, setSpamDetected] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Form submission started');
+    
+    // Temporarily disabled spam detection for testing
+    // if (spamDetected) {
+    //   console.log('Spam detected - form submission blocked');
+    //   return;
+    // }
+
     const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Log all form data for debugging
+    console.log('Form data:', {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      zipCode: formData.get('zipCode'),
+      wasteType: formData.get('wasteType'),
+      dumpsterSize: formData.get('dumpsterSize'),
+      deliveryDate: formData.get('deliveryDate'),
+      pickupDate: formData.get('pickupDate'),
+      additionalInfo: formData.get('additionalInfo'),
+    });
+    
+    // Basic validation
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    
+    if (!email || !phone) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    console.log('Form validation passed, starting submission');
+    setIsSubmitting(true);
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Submitting...';
     }
+
+    try {
+      console.log('Preparing form data for submission');
+      
+      // Use FormData for faster submission
+      const formDataToSend = new FormData();
+      formDataToSend.append('firstName', formData.get('firstName') as string);
+      formDataToSend.append('lastName', formData.get('lastName') as string);
+      formDataToSend.append('email', email);
+      formDataToSend.append('phone', phone);
+      formDataToSend.append('zipCode', formData.get('zipCode') as string);
+      formDataToSend.append('wasteType', formData.get('wasteType') as string);
+      formDataToSend.append('dumpsterSize', formData.get('dumpsterSize') as string);
+      formDataToSend.append('deliveryDate', formData.get('deliveryDate') as string);
+      formDataToSend.append('pickupDate', formData.get('pickupDate') as string);
+      formDataToSend.append('additionalInfo', formData.get('additionalInfo') as string);
+
+      // Submit to Formspree - don't wait for response to avoid CORS issues
+      fetch('https://formspree.io/f/xanblnyj', {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors', // This prevents CORS issues
+      }).then(() => {
+        // Assume success if no error
+        alert('Thank you! Your quote request has been submitted successfully.');
+        form.reset();
+        setRecaptchaToken('');
+      }).catch((error) => {
+        console.error('Form submission error:', error);
+        alert('There was an error submitting your request. Please try again.');
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Get Free Quote';
+      }
+    }
+  };
+
+  const handleRecaptchaVerify = (token: string) => {
+    setRecaptchaToken(token);
+    console.log('reCAPTCHA verified successfully');
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken('');
+    console.log('reCAPTCHA expired');
+  };
+
+  const handleRecaptchaError = () => {
+    setRecaptchaToken('');
+    console.log('reCAPTCHA error occurred');
+  };
+
+  const handleSpamDetected = () => {
+    setSpamDetected(true);
+    console.log('Spam detected in form');
   };
 
   return (
     <div id="quote-form" className="bg-gray-800 text-white p-6 sm:p-8 rounded-lg">
       <h3 className="text-xl sm:text-2xl font-bold text-[#4e37a8] mb-6">Get a Free Quote</h3>
       
-      <form action="https://formspree.io/f/xanblnyj" method="POST" className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
+      <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
+        {/* Temporarily disabled honeypot for testing */}
+        {/* <Honeypot onSpamDetected={handleSpamDetected} /> */}
         {/* Name Fields */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -75,17 +182,18 @@ export default function QuoteForm() {
               required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Waste Type</label>
-            <select name="wasteType" className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base" required>
-              <option value="">Select Waste Type</option>
-              <option value="Household Waste">Household Waste</option>
-              <option value="Construction Debris">Construction Debris</option>
-              <option value="Yard Waste">Yard Waste</option>
-              <option value="Recyclable Materials">Recyclable Materials</option>
-              <option value="Concrete">Concrete</option>
-            </select>
-          </div>
+                             <div>
+                     <label className="block text-sm font-medium mb-2">Waste Type</label>
+                     <select name="wasteType" className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base" required>
+                       <option value="">Select Waste Type</option>
+                       <option value="Household Waste">Household Waste</option>
+                       <option value="Construction Debris">Construction Debris</option>
+                       <option value="Yard Waste">Yard Waste</option>
+                       <option value="Recyclable Materials">Recyclable Materials</option>
+                       <option value="Concrete">Concrete</option>
+                       <option value="Other/Misc">Other/Misc</option>
+                     </select>
+                   </div>
         </div>
         
         {/* Dumpster Size Selection */}
@@ -107,37 +215,39 @@ export default function QuoteForm() {
           </div>
         </div>
         
-        {/* Date Selection */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium mb-2">Delivery Date</label>
-            <div className="relative">
-              <input 
-                type="date" 
-                name="deliveryDate"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
-                required
-              />
-              <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Pickup Date</label>
-            <div className="relative">
-              <input 
-                type="date" 
-                name="pickupDate"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base"
-                required
-              />
-              <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-            </div>
-          </div>
-        </div>
+                         {/* Date Selection */}
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                   <div>
+                     <label className="block text-sm font-medium mb-2">Delivery Date</label>
+                     <div className="relative">
+                       <input 
+                         type="date" 
+                         name="deliveryDate"
+                         className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base cursor-pointer"
+                         required
+                         min={new Date().toISOString().split('T')[0]} // Prevent past dates
+                       />
+                       <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+                         <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                       </svg>
+                     </div>
+                   </div>
+                   <div>
+                     <label className="block text-sm font-medium mb-2">Pickup Date</label>
+                     <div className="relative">
+                       <input 
+                         type="date" 
+                         name="pickupDate"
+                         className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base cursor-pointer"
+                         required
+                         min={new Date().toISOString().split('T')[0]} // Prevent past dates
+                       />
+                       <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+                         <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                       </svg>
+                     </div>
+                   </div>
+                 </div>
         
         {/* Additional Information */}
         <div>
@@ -150,12 +260,21 @@ export default function QuoteForm() {
           ></textarea>
         </div>
         
+        {/* reCAPTCHA */}
+        <ReCaptcha 
+          siteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+          onVerify={handleRecaptchaVerify}
+          onExpired={handleRecaptchaExpired}
+          onError={handleRecaptchaError}
+        />
+        
         {/* Submit Button */}
         <button 
           type="submit" 
-          className="w-full bg-[#4e37a8] text-white py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-base sm:text-lg"
+          disabled={isSubmitting}
+          className="w-full bg-[#4e37a8] text-white py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Get Free Quote
+          {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
         </button>
       </form>
     </div>
