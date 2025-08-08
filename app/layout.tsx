@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 
 const geistSans = Geist({
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-  description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available. Get reliable, affordable dumpster rentals from Icon Dumpsters. Call (801) 918-6000 for instant quotes.",
-  keywords: "dumpster rental, dumpster rental near me, Utah dumpster rental, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, roll-off dumpster, rolloff dumpster, Icon Dumpsters, Salt Lake City dumpster rental",
+  description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Get reliable, affordable dumpster rentals from Icon Dumpsters. Call (801) 918-6000 for instant quotes.",
+  keywords: "dumpster rental, roll-off dumpster, dumpster rental near me, Utah dumpster rental, dumpster rental Utah, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, rolloff dumpster, Icon Dumpsters, Salt Lake City dumpster rental",
   authors: [{ name: "Icon Dumpsters" }],
   creator: "Icon Dumpsters",
   publisher: "Icon Dumpsters",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available. Get reliable, affordable dumpster rentals.",
+    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Get reliable, affordable dumpster rentals.",
     url: 'https://icondumpsters.com',
     siteName: 'Icon Dumpsters',
     images: [
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
         url: '/images/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
-        alt: 'Icon Dumpsters - Professional Dumpster Rental Services',
+        alt: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
       },
     ],
     locale: 'en_US',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available.",
+    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
     images: ['/images/Icon_Dumpsters_Final.png'],
   },
   robots: {
@@ -71,12 +72,17 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+    other: [
+      { rel: 'android-chrome-192x192', url: '/android-chrome-192x192.png' },
+      { rel: 'android-chrome-512x512', url: '/android-chrome-512x512.png' },
+    ],
   },
-  manifest: '/manifest.json',
+  manifest: '/site.webmanifest',
   other: {
     'geo.region': 'US-UT',
     'geo.placename': 'Utah',
@@ -96,6 +102,7 @@ export default function RootLayout({
         <StructuredData />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </head>
+      <GoogleAnalytics />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
@@ -134,7 +141,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               <div className="flex items-center">
-                                  <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-12 w-auto" />
+                                  <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-12 w-auto" />
               </div>
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
@@ -231,10 +238,10 @@ export default function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                                   <div className="flex items-center space-x-3 mb-4">
-                    <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters Logo" className="h-10 w-auto" />
+                    <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-10 w-auto" />
                     <div>
                       <h3 className="text-lg font-semibold">ICON DUMPSTERS</h3>
-                      <p className="text-sm text-gray-400">PROFESSIONAL WASTE SOLUTIONS</p>
+                      <p className="text-sm text-gray-400">PROFESSIONAL DUMPSTER RENTAL SERVICES</p>
                     </div>
                   </div>
                 <p className="text-gray-400 mb-4">

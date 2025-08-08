@@ -43,7 +43,7 @@ export default function DumpsterSizes() {
         <div className="bg-[#4e37a8] text-white p-8 lg:p-12 flex flex-col justify-center">
           <div className="max-w-lg">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Roll Off Dumpster Size Guide
+              Roll-off Dumpster Size Guide for Utah Dumpster Rental
             </h1>
             <p className="text-lg mb-8 leading-relaxed">
               Find the right dumpster size to streamline your cleanup, whether you're clearing out a garage, 
@@ -82,7 +82,7 @@ export default function DumpsterSizes() {
         <div className="relative overflow-hidden">
           <ImageWithFallback 
             src="/images/dumpsterWithTruck.webp" 
-            alt="Roll Off Dumpsters" 
+            alt="Roll-off Dumpsters for Utah Dumpster Rental Services" 
             className="w-full h-full object-cover"
             fallbackSrc="/images/dumpsterWithTruck.webp"
           />

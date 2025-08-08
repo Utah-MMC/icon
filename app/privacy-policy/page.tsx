@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-lg text-purple-200">
-            Last updated: January 2025
+            Last updated: August 2025
           </p>
         </div>
       </div>

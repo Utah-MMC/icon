@@ -13,11 +13,11 @@ export default function AboutPage() {
           <div className="text-center sm:text-left">
             <p className="text-sm sm:text-base text-gray-600 mb-2">Local & Family Operated Dumpster Company</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4e37a8] mb-6">
-              About Icon Dumpsters
+              About Icon Dumpsters - Utah Dumpster Rental Services
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl leading-relaxed">
               Icon Dumpsters was founded by a family with deep roots in pond service and landscaping. 
-              With years of hands-on experience and a commitment to exceptional service, we set out to make 
+              With years of hands-on experience and a commitment to exceptional service, we set out to make image.png
               dumpster rentals more accessible, reliable, and affordable for homeowners and contractors throughout Utah.
             </p>
                          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
               <ImageWithFallback 
                 src="/images/Icon_Dumpsters_Final.png" 
-                alt="Icon Dumpsters Logo" 
+                alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" 
                 className="w-full h-full object-contain"
               />
             </div>

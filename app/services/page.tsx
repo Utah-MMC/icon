@@ -19,7 +19,7 @@ export default function Services() {
       <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Our Dumpster Rentals Are Great For A Variety Of Projects!
+            Professional Dumpster Rental Services in Utah
           </h1>
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Professional dumpster rental services in Utah with same-day delivery, competitive pricing, and reliable service.
@@ -67,12 +67,12 @@ export default function Services() {
             </div>
             <div>
               <a href="/dumpster-sizes" className="block">
-                <ImageWithFallback 
-                  src="/images/dumpsterWithTruck.jpeg" 
-                  alt="Icon Dumpsters Services" 
-                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                  fallbackSrc="/images/dumpsterWithTruck.webp"
-                />
+                              <ImageWithFallback 
+                src="/images/dumpsterWithTruck.jpeg" 
+                alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                fallbackSrc="/images/dumpsterWithTruck.webp"
+              />
               </a>
             </div>
           </div>
@@ -83,12 +83,12 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <a href="/dumpster-sizes" className="block">
-                <ImageWithFallback 
-                  src="/images/dumpster500x500-1.jpeg" 
-                  alt="Residential Dumpster Rental" 
-                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                  fallbackSrc="/images/dumpster500x500-1.webp"
-                />
+                              <ImageWithFallback 
+                src="/images/dumpster500x500-1.jpeg" 
+                alt="Residential Dumpster Rental Services in Utah" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                fallbackSrc="/images/dumpster500x500-1.webp"
+              />
               </a>
             </div>
             <div>
@@ -127,12 +127,12 @@ export default function Services() {
             </div>
             <div>
               <a href="/dumpster-sizes" className="block">
-                <ImageWithFallback 
-                  src="/images/Construction-Rental-480x480.jpg" 
-                  alt="Construction Dumpster Rental" 
-                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                  fallbackSrc="/images/Construction-Rental-480x480.jpg"
-                />
+                              <ImageWithFallback 
+                src="/images/Construction-Rental-480x480.jpg" 
+                alt="Construction Dumpster Rental Services in Utah" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                fallbackSrc="/images/Construction-Rental-480x480.jpg"
+              />
               </a>
             </div>
           </div>
@@ -143,12 +143,12 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <a href="/dumpster-sizes" className="block">
-                <ImageWithFallback 
-                  src="/images/commercial.jpg" 
-                  alt="Commercial Dumpster Rental" 
-                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                  fallbackSrc="/images/dumpster500x500-1.webp"
-                />
+                              <ImageWithFallback 
+                src="/images/commercial.jpg" 
+                alt="Commercial Dumpster Rental Services in Utah" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                fallbackSrc="/images/dumpster500x500-1.webp"
+              />
               </a>
             </div>
             <div>
@@ -193,11 +193,11 @@ export default function Services() {
             </div>
             <div>
               <a href="/dumpster-sizes" className="block">
-                <ImageWithFallback 
-                  src="/images/concrete.webp" 
-                  alt="Specialized Dumpster Rental" 
-                  className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                  fallbackSrc="/images/Lawn-Mower-Square-480x480.jpg"
+                              <ImageWithFallback 
+                src="/images/concrete.webp" 
+                alt="Specialized Dumpster Rental Services in Utah" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
+                fallbackSrc="/images/Lawn-Mower-Square-480x480.jpg"
                 />
               </a>
             </div>
