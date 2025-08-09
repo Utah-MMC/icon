@@ -1,0 +1,481 @@
+import { Metadata } from 'next'
+import ImageWithFallback from '../components/ImageWithFallback'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Home Renovation Waste Disposal: A Complete Guide | Icon Dumpsters',
+  description: 'Master home renovation waste disposal with our comprehensive guide. Learn waste sorting, dumpster selection, cost management, and eco-friendly disposal methods for your renovation project.',
+  keywords: 'home renovation waste disposal, renovation dumpster, home renovation waste, renovation waste management, dumpster rental renovation, Icon Dumpsters',
+  openGraph: {
+    title: 'Home Renovation Waste Disposal: A Complete Guide',
+    description: 'Master home renovation waste disposal with our comprehensive guide. Learn waste sorting, dumpster selection, cost management, and eco-friendly disposal methods for your renovation project.',
+    url: 'https://iconmain.com/home-renovation-waste-disposal-guide',
+    images: [
+      {
+        url: '/images/dumpsterSmallBanner.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Home Renovation Waste Disposal Complete Guide - Icon Dumpsters'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Renovation Waste Disposal: A Complete Guide',
+    description: 'Master home renovation waste disposal with our comprehensive guide. Learn waste sorting, dumpster selection, cost management, and eco-friendly disposal methods for your renovation project.',
+    images: ['/images/dumpsterSmallBanner.jpeg']
+  },
+  
+  robots: 'index, follow'
+}
+
+export default function HomeRenovationWasteDisposal() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Home Renovation Waste Disposal: A Complete Guide
+          </h1>
+          <p className="text-xl text-purple-100 leading-relaxed">
+            Transform your home renovation project with proper waste disposal strategies. From kitchen remodels to 
+            basement finishes, learn how to manage waste efficiently while saving money and protecting the environment.
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Table of Contents */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Table of Contents</h2>
+          <nav className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <a href="#introduction" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  1. Introduction to Home Renovation Waste Management
+                </a>
+                <a href="#waste-types" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  2. Understanding Renovation Waste Types
+                </a>
+                <a href="#waste-assessment" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  3. Pre-Renovation Waste Assessment
+                </a>
+                <a href="#dumpster-selection" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  4. Dumpster Selection for Renovation Projects
+                </a>
+              </div>
+              <div>
+                <a href="#waste-sorting" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  5. Waste Sorting and Organization Strategies
+                </a>
+                <a href="#cost-management" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  6. Cost Management and Budgeting
+                </a>
+                <a href="#environmental-considerations" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  7. Environmental Considerations and Sustainability
+                </a>
+                <a href="#safety-compliance" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                  8. Safety Considerations and Best Practices
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        {/* Article Content */}
+        <div className="prose prose-lg max-w-none">
+          <section id="introduction">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Home Renovation Waste Disposal Guide</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Home renovation projects generate significant amounts of waste that need proper disposal. 
+              From demolition debris to construction materials, understanding how to manage this waste 
+              efficiently can save you time, money, and ensure compliance with local regulations.
+            </p>
+            
+            <div className="mb-8">
+              <ImageWithFallback
+                src="/images/dumpsterSmallBanner2.jpeg"
+                fallbackSrc="/images/dumpsterSmallBanner2.jpeg"
+                alt="Home renovation project with professional waste disposal and dumpster rental services"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Whether you're updating a kitchen, remodeling a bathroom, or undertaking a full home renovation, 
+              this guide will help you navigate the waste disposal process effectively.
+            </p>
+            
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-8">
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">💡 Pro Tip</h3>
+              <p className="text-blue-800">
+                Start planning your waste management strategy before the first hammer swing. Proper planning can 
+                save you 20-30% on disposal costs and prevent project delays.
+              </p>
+            </div>
+          </section>
+
+          <section id="waste-types" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Types of Renovation Waste</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Home renovation projects produce various types of waste, each requiring different disposal methods. 
+              Understanding these categories helps in planning your waste management strategy.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <ImageWithFallback
+                  src="/images/dumpster500x200-1.jpeg"
+                  fallbackSrc="/images/dumpster500x200-1.jpeg"
+                  alt="Small dumpster perfect for home renovation waste disposal"
+                  className="w-full h-32 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Demolition Debris</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Drywall and plaster materials
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Wood framing and lumber
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Concrete and masonry waste
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <ImageWithFallback
+                  src="/images/dumpster500x200-2.jpeg"
+                  fallbackSrc="/images/dumpster500x200-2.jpeg"
+                  alt="Medium dumpster for larger home renovation projects"
+                  className="w-full h-32 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Construction Materials</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Excess lumber and plywood
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Insulation and roofing materials
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Electrical and plumbing waste
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-8">
+              <ImageWithFallback
+                src="/images/dumpster500x200-3.jpeg"
+                fallbackSrc="/images/dumpster500x200-3.jpeg"
+                alt="Large dumpster for major home renovation waste disposal"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialty Waste</h3>
+              <p className="text-gray-700 mb-4">
+                Some renovation waste requires special handling due to environmental concerns or safety issues. 
+                Proper identification and disposal of these materials is essential.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <strong>Hazardous materials:</strong> Lead paint, asbestos, chemical solvents
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <strong>Appliances:</strong> Old refrigerators, dishwashers, HVAC units
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <strong>Electronics:</strong> Wiring, switches, outlets, and fixtures
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="waste-assessment" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Pre-Renovation Waste Assessment</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Before starting any renovation project, conducting a thorough waste assessment helps in planning 
+              disposal strategies and estimating costs. This assessment should be part of your overall project planning.
+            </p>
+            
+            <div className="mb-8">
+              <ImageWithFallback
+                src="/images/dumpsterSmallBanner4.jpeg"
+                fallbackSrc="/images/dumpsterSmallBanner4.jpeg"
+                alt="Strategic home renovation waste disposal planning and organization"
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg mb-8">
+              <h3 className="text-xl font-semibold text-green-900 mb-3">Assessment Checklist</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-800">
+                <div>
+                  <h4 className="font-semibold mb-2">Room-by-Room Analysis</h4>
+                  <p>Kitchen renovations, bathroom remodels, basement finishes</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Material Volume Estimation</h4>
+                  <p>Square footage calculations, linear measurements, fixture counts</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Waste Factor Planning</h4>
+                  <p>Add 10-15% for cutting and breakage</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Timeline Integration</h4>
+                  <p>Coordinate waste removal with project phases</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="dumpster-selection" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Selection for Renovation Projects</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Choosing the right dumpster size is critical for renovation projects. The wrong choice can lead to 
+              multiple pickups, increased costs, and project delays.
+            </p>
+            
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+              <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
+                <h3 className="text-2xl font-bold">Dumpster Size Guide for Renovations</h3>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-purple-100 rounded-lg p-4 mb-4">
+                      <h4 className="text-lg font-semibold text-purple-900">10-15 Yard</h4>
+                      <p className="text-sm text-purple-700">Small renovations</p>
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Perfect for bathroom remodels, small kitchen updates, or single-room projects
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-purple-100 rounded-lg p-4 mb-4">
+                      <h4 className="text-lg font-semibold text-purple-900">20-30 Yard</h4>
+                      <p className="text-sm text-purple-700">Medium renovations</p>
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Ideal for kitchen remodels, basement finishing, or multi-room projects
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-purple-100 rounded-lg p-4 mb-4">
+                      <h4 className="text-lg font-semibold text-purple-900">40 Yard</h4>
+                      <p className="text-sm text-purple-700">Large renovations</p>
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Best for whole-house renovations, additions, or major structural changes
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="waste-sorting" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Waste Sorting and Organization Strategies</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Effective waste sorting during renovation projects increases recycling rates, reduces disposal costs, 
+              and improves project efficiency. Implementing a sorting system from day one pays dividends.
+            </p>
+            
+            <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg mb-8">
+              <h3 className="text-xl font-semibold text-green-900 mb-3">Recycling Opportunities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-800">
+                <div>
+                  <h4 className="font-semibold mb-2">Metals</h4>
+                  <p>Copper, aluminum, steel - often have scrap value</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Wood</h4>
+                  <p>Untreated lumber can be reused or chipped for mulch</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Concrete</h4>
+                  <p>Can be crushed and reused as aggregate</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Appliances</h4>
+                  <p>Many contain valuable metals and components</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="cost-management" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Management and Budgeting</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Understanding the costs associated with waste disposal will help you budget effectively 
+              and avoid unexpected expenses during your renovation project.
+            </p>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Typical Waste Disposal Costs</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="font-medium text-gray-700">10-15 Yard Dumpster</span>
+                  <span className="text-lg font-semibold text-purple-600">$300 - $500</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="font-medium text-gray-700">20-30 Yard Dumpster</span>
+                  <span className="text-lg font-semibold text-purple-600">$400 - $700</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="font-medium text-gray-700">40 Yard Dumpster</span>
+                  <span className="text-lg font-semibold text-purple-600">$600 - $900</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="font-medium text-gray-700">Additional Pickup (if needed)</span>
+                  <span className="text-lg font-semibold text-purple-600">$150 - $300</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="environmental-considerations" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Environmental Considerations and Sustainability</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Modern renovation projects emphasize environmental responsibility. Implementing sustainable waste 
+              management practices reduces environmental impact and can provide cost savings.
+            </p>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-semibold text-green-900 mb-4">🌱 Sustainable Practices</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-green-800">
+                <div>
+                  <h4 className="font-semibold mb-3">Material Recovery</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Sell or donate reusable items</li>
+                    <li>• Partner with Habitat for Humanity</li>
+                    <li>• Use local recycling facilities</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-3">Waste Prevention</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Careful material planning</li>
+                    <li>• Efficient cutting strategies</li>
+                    <li>• Reuse of suitable materials</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="safety-compliance" className="mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Safety Considerations and Best Practices</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Safety should always be your top priority when handling renovation waste. Understanding 
+              local regulations and proper handling procedures will keep you and your family safe.
+            </p>
+            
+            <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-semibold text-red-900 mb-4">⚠️ Safety First</h3>
+              <ul className="space-y-3 text-red-800">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Always wear appropriate PPE (gloves, safety glasses, dust masks)
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Never attempt to remove asbestos or lead paint without professional help
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Check local regulations for hazardous waste disposal requirements
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Keep children and pets away from construction waste areas
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="mt-16 bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Renovation?</h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Get expert advice on dumpster rental and waste disposal for your home renovation project.
+            </p>
+            <div className="space-x-4">
+              <Link 
+                href="/contact" 
+                className="inline-block bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+              >
+                Get Free Quote
+              </Link>
+              <Link 
+                href="/blog" 
+                className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
+              >
+                View More Articles
+              </Link>
+            </div>
+          </section>
+        </div>
+
+        {/* Related Articles */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/complete-dumpster-rental-guide-2025" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                    Complete Guide to Dumpster Rental in 2025
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Everything you need to know about dumpster rental, from choosing the right size to understanding costs.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/construction-waste-management-2025" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                    Construction Waste Management Strategies
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Learn effective strategies for managing construction waste on any project scale.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/commercial-dumpster-rental-business-solutions" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                    Commercial Dumpster Rental Solutions
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Business-focused waste management solutions for commercial renovation projects.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}
