@@ -42,7 +42,7 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Dumpster Rental Blog
+              Icon Dumpsters Blog
             </h1>
             <p className="text-xl md:text-2xl text-purple-100 mb-8 leading-relaxed">
               Expert insights, tips, and guides on waste management, dumpster rental, and construction cleanup. 
