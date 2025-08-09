@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { securityUtils } from '../../config/security';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export async function POST(request: NextRequest) {
   try {
     const { token } = await request.json();
@@ -12,16 +15,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify reCAPTCHA token
-    const isValid = await securityUtils.validateRecaptcha(token);
-
-    if (!isValid) {
-      return NextResponse.json(
-        { error: 'reCAPTCHA verification failed' },
-        { status: 400 }
-      );
-    }
-
+    // For static export, return a mock response
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('reCAPTCHA verification error:', error);

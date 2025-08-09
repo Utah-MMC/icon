@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "build:static": "next build",
+    "deploy": "npm run build"
   },
   "dependencies": {
     "next": "15.4.6",
