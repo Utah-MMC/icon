@@ -301,7 +301,7 @@ export default function Home() {
             </div>
             
             <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block text-sm sm:text-base">
-              BOOK ONLINE
+              GET QUOTE
             </a>
           </div>
 
@@ -337,7 +337,7 @@ export default function Home() {
             </div>
             
             <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block text-sm sm:text-base">
-              BOOK ONLINE
+              GET QUOTE
             </a>
           </div>
 
@@ -373,7 +373,7 @@ export default function Home() {
             </div>
             
             <a href="#quote-form" className="w-full bg-[#4e37a8] text-white py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block text-sm sm:text-base">
-              BOOK ONLINE
+              GET QUOTE
             </a>
           </div>
         </div>

@@ -303,7 +303,7 @@ export default function Services() {
             Need a Dumpster Soon? Let's Get It Scheduled.
           </h2>
           <p className="text-lg text-purple-100 mb-6">
-            Call us at (801) 918-6000 or book online for fast, reliable dumpster rental service.
+            Call us at (801) 918-6000 or get a quote for fast, reliable dumpster rental service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
