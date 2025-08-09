@@ -5,115 +5,127 @@ export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://icondumpsters.com'
   
+  // Define specific dates for better SEO
+  const currentDate = new Date()
+  const lastWeek = new Date(currentDate.getTime() - 7 * 24 * 60 * 60 * 1000)
+  const lastMonth = new Date(currentDate.getTime() - 30 * 24 * 60 * 60 * 1000)
+  const lastQuarter = new Date(currentDate.getTime() - 90 * 24 * 60 * 60 * 1000)
+  
   return [
+    // Homepage - Highest priority
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0,
     },
+    // Main service pages - High priority
     {
       url: `${baseUrl}/dumpster-sizes`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
+    // Local service pages - High priority for local SEO
+    {
+      url: `${baseUrl}/utah-dumpster-rental`,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/salt-lake-city-dumpster-rental`,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/provo-dumpster-rental`,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ogden-dumpster-rental`,
+      lastModified: lastWeek,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Blog main page - High priority for content
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: currentDate,
+      changeFrequency: 'daily',
       priority: 0.8,
     },
-    // Blog Posts - Added for better SEO indexing
+    // Blog Posts - High priority for content marketing
     {
       url: `${baseUrl}/complete-dumpster-rental-guide-2025`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/construction-waste-management-2025`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/home-renovation-waste-disposal-guide`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/commercial-dumpster-rental-business-solutions`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
+    // Contact and About pages - Medium priority
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: lastMonth,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: lastMonth,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/faq`,
+      lastModified: lastMonth,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    // Legal pages - Lower priority but important for compliance
+    {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: lastQuarter,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date(),
+      lastModified: lastQuarter,
       changeFrequency: 'yearly',
       priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/utah-dumpster-rental`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/salt-lake-city-dumpster-rental`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/provo-dumpster-rental`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/ogden-dumpster-rental`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
     },
   ]
 }

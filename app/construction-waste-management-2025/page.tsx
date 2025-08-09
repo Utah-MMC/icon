@@ -3,6 +3,7 @@
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/Analytics";
+import ArticleSchema from "../components/ArticleSchema";
 
 export default function ConstructionWasteManagement() {
   return (
@@ -11,6 +12,17 @@ export default function ConstructionWasteManagement() {
         pageName="Construction Waste Management: Best Practices for 2025"
         pageType="article"
         articleId="construction-waste-management-2025"
+      />
+      <ArticleSchema
+        title="Construction Waste Management: Best Practices for 2025"
+        description="Learn proven strategies for managing construction waste efficiently. From sorting materials to choosing the right dumpster size, discover how to minimize costs and environmental impact while maintaining project timelines."
+        author="Icon Dumpsters"
+        publishedDate="2025-01-20"
+        modifiedDate="2025-01-20"
+        imageUrl="https://icondumpsters.com/images/construction-waste.jpg"
+        articleUrl="https://icondumpsters.com/construction-waste-management-2025"
+        category="CONSTRUCTION"
+        readTime="PT6M"
       />
       <div className="min-h-screen bg-gray-50">
       {/* Article Header */}

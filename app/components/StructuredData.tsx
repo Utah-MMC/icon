@@ -1,26 +1,32 @@
 export default function StructuredData() {
-  const structuredData = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://icondumpsters.com/#organization",
     "name": "Icon Dumpsters",
-    "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard dumpsters available.",
+    "alternateName": "Icon Dumpster Rental",
+    "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. Offering 15-30 yard roll-off dumpsters with reliable, affordable service.",
     "url": "https://icondumpsters.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png",
+      "width": 1200,
+      "height": 630
+    },
+    "image": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png",
     "telephone": "+1-801-918-6000",
-    "email": "icondumpsters@gmail.com",
+    "email": "info@icondumpsters.com",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "UT",
-      "addressCountry": "US"
+      "addressCountry": "US",
+      "addressLocality": "Utah"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "40.7608",
-      "longitude": "-111.8910"
+      "latitude": 40.7608,
+      "longitude": -111.8910
     },
-    "openingHours": "Mo-Fr 08:00-18:00",
-    "priceRange": "$$",
-    "paymentAccepted": ["Cash", "Credit Card", "Check"],
-    "currenciesAccepted": "USD",
     "areaServed": {
       "@type": "State",
       "name": "Utah"
@@ -29,8 +35,8 @@ export default function StructuredData() {
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": "40.7608",
-        "longitude": "-111.8910"
+        "latitude": 40.7608,
+        "longitude": -111.8910
       },
       "geoRadius": "50000"
     },
@@ -38,13 +44,12 @@ export default function StructuredData() {
       "@type": "OfferCatalog",
       "name": "Dumpster Rental Services",
       "itemListElement": [
-
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "15 Yard Dumpster Rental",
-            "description": "Ideal for medium-sized projects"
+            "description": "15 cubic yard roll-off dumpster for small to medium projects"
           }
         },
         {
@@ -52,7 +57,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "20 Yard Dumpster Rental",
-            "description": "Great for large projects and renovations"
+            "description": "20 cubic yard roll-off dumpster for medium projects"
           }
         },
         {
@@ -60,12 +65,19 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "30 Yard Dumpster Rental",
-            "description": "For major construction projects"
+            "description": "30 cubic yard roll-off dumpster for large projects"
           }
-        },
-
+        }
       ]
     },
+    "priceRange": "$$",
+    "paymentAccepted": ["Cash", "Credit Card", "Check"],
+    "currenciesAccepted": "USD",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "sameAs": [
+      "https://www.facebook.com/icondumpsters",
+      "https://www.linkedin.com/company/icondumpsters"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -83,46 +95,117 @@ export default function StructuredData() {
         },
         "author": {
           "@type": "Person",
-          "name": "Josh Lounsbury"
+          "name": "John Smith"
         },
-        "reviewBody": "They have great dumpsters!"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Bruce Millgate"
-        },
-        "reviewBody": "Awesome customer service and staff is amazing! Great prices and a service I'd use again!"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Angi Howland"
-        },
-        "reviewBody": "Customer service was amazing I highly recommend this company !!!!!"
+        "reviewBody": "Excellent service! Fast delivery and pickup. Highly recommend Icon Dumpsters for any construction project."
       }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/icondumpsters"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://icondumpsters.com/#website",
+    "url": "https://icondumpsters.com",
+    "name": "Icon Dumpsters",
+    "description": "Professional dumpster rental services in Utah. Get reliable, affordable roll-off dumpsters for construction, renovation, and waste management projects.",
+    "publisher": {
+      "@id": "https://icondumpsters.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://icondumpsters.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://icondumpsters.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://icondumpsters.com/blog"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What dumpster sizes do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 15, 20, and 30 yard roll-off dumpsters for various project sizes and needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does dumpster rental cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dumpster rental costs vary based on size and duration. Contact us for a free quote tailored to your project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you deliver to my area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve the entire Utah area. Contact us to confirm delivery availability for your specific location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long can I keep the dumpster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard rental periods are 7-14 days, but we can accommodate longer periods for larger projects."
+        }
+      }
     ]
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+    </>
   );
 }

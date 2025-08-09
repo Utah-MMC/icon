@@ -3,6 +3,7 @@
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import NewsletterSubscription from "../components/NewsletterSubscription";
 
 // Blog post data for search functionality
 const blogPosts = [
@@ -50,8 +51,6 @@ const blogPosts = [
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-  const [isSubscribing, setIsSubscribing] = useState(false);
-  const [subscribeMessage, setSubscribeMessage] = useState("");
 
   // Search functionality
   useEffect(() => {
@@ -66,40 +65,6 @@ export default function Blog() {
       setFilteredPosts(filtered);
     }
   }, [searchTerm]);
-
-  // Handle subscribe form submission
-  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubscribing(true);
-    setSubscribeMessage("");
-
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email") as string;
-
-    try {
-      // Use the same Formspree endpoint as QuoteForm
-      const formDataToSend = new FormData();
-      formDataToSend.append('email', email);
-      formDataToSend.append('subject', 'Blog Newsletter Subscription');
-      formDataToSend.append('message', `New blog newsletter subscription from: ${email}`);
-
-      // Submit to Formspree using the same method as QuoteForm
-      const response = await fetch("https://formspree.io/f/xanblnyj", {
-        method: "POST",
-        body: formDataToSend,
-        mode: 'no-cors', // This prevents CORS issues like in QuoteForm
-      });
-
-      // Since we're using no-cors, we assume success if no error is thrown
-      setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");
-      (e.currentTarget as HTMLFormElement).reset();
-    } catch (error) {
-      console.error('Subscribe form error:', error);
-      setSubscribeMessage("Something went wrong. Please try again.");
-    } finally {
-      setIsSubscribing(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -151,12 +116,15 @@ export default function Blog() {
             {filteredPosts.find(post => post.featured) && (
               <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-12 hover:shadow-xl transition-all duration-300">
                 <div className="relative">
-                  <div className="h-96 overflow-hidden">
+                  <div className="h-96 overflow-hidden relative">
                     <ImageWithFallback 
                       src={filteredPosts.find(post => post.featured)?.image || "/images/dumpsters.jpeg"} 
                       alt="Complete Guide to Dumpster Rental" 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"} 
+                      className="hover:scale-105 transition-transform duration-500" 
+                      fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}
+                      fill={true}
+                      priority={true}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
                     />
                   </div>
                   <div className="absolute top-4 left-4">
@@ -206,14 +174,16 @@ export default function Blog() {
                 .filter(post => !post.featured)
                 .map((post) => (
                   <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
-                    <div className="h-48 overflow-hidden">
-                      <ImageWithFallback 
-                        src={post.image} 
-                        alt={post.title} 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                        fallbackSrc={post.fallbackImage} 
-                      />
-                    </div>
+                                         <div className="h-48 overflow-hidden relative">
+                       <ImageWithFallback 
+                         src={post.image} 
+                         alt={post.title} 
+                         className="hover:scale-105 transition-transform duration-500" 
+                         fallbackSrc={post.fallbackImage}
+                         fill={true}
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                       />
+                     </div>
                     
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3">
@@ -304,9 +274,16 @@ export default function Blog() {
               <div className="space-y-4">
                 
                 <Link href="/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
-                  <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow">
-                    <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Home Renovation Waste Disposal" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
-                  </div>
+                                     <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
+                     <ImageWithFallback 
+                       src="/images/dumpsterSmallBanner2.jpeg" 
+                       alt="Home Renovation Waste Disposal" 
+                       className="object-cover" 
+                       fallbackSrc="/images/dumpsterSmallBanner2.webp"
+                       fill={true}
+                       sizes="64px"
+                     />
+                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-[#4e37a8] transition-colors">
                       Home Renovation Waste Disposal: A Complete Guide
@@ -316,9 +293,16 @@ export default function Blog() {
                 </Link>
                 
                 <Link href="/commercial-dumpster-rental-business-solutions" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
-                  <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow">
-                    <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Commercial Dumpster Rental" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner.webp" />
-                  </div>
+                                     <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
+                     <ImageWithFallback 
+                       src="/images/dumpsterSmallBanner.jpeg" 
+                       alt="Commercial Dumpster Rental" 
+                       className="object-cover" 
+                       fallbackSrc="/images/dumpsterSmallBanner.webp"
+                       fill={true}
+                       sizes="64px"
+                     />
+                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-[#4e37a8] transition-colors">
                       Commercial Dumpster Rental: Business Solutions
@@ -330,45 +314,7 @@ export default function Blog() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="bg-gradient-to-br from-[#4e37a8] to-purple-700 text-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                Stay Updated
-              </h3>
-              <p className="text-purple-100 text-sm mb-4 leading-relaxed">
-                Get the latest dumpster rental tips and industry insights delivered to your inbox.
-              </p>
-              
-              {subscribeMessage && (
-                <div className={`mb-4 p-3 rounded-lg text-sm ${
-                  subscribeMessage.includes('Thank you') 
-                    ? 'bg-green-500 text-white' 
-                    : 'bg-red-500 text-white'
-                }`}>
-                  {subscribeMessage}
-                </div>
-              )}
-              
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Your email address" 
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-opacity-50"
-                  required
-                />
-                <button 
-                  type="submit" 
-                  disabled={isSubscribing}
-                  className="w-full bg-white text-[#4e37a8] py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubscribing ? "Subscribing..." : "Subscribe"}
-                </button>
-              </form>
-            </div>
+            <NewsletterSubscription />
 
             {/* Contact Info */}
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
@@ -397,7 +343,7 @@ export default function Blog() {
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
                   </div>
-                  <span className="text-gray-700 font-medium">info@icondumpsters.com</span>
+                  <span className="text-gray-700 font-medium">icondumpsters@gmail.com</span>
                 </div>
               </div>
               

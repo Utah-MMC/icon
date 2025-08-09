@@ -3,14 +3,26 @@
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/Analytics";
+import ArticleSchema from "../components/ArticleSchema";
 
 export default function CompleteDumpsterRentalGuide() {
-  return (
+    return (
     <>
-      <Analytics 
+      <Analytics
         pageName="Complete Guide to Dumpster Rental: Everything You Need to Know in 2025"
         pageType="article"
         articleId="complete-dumpster-rental-guide-2025"
+      />
+      <ArticleSchema
+        title="Complete Dumpster Rental Guide 2025: Everything You Need to Know"
+        description="Master the essentials of dumpster rental with our comprehensive guide covering sizes, costs, permits, and best practices for 2025. Get expert tips on choosing the right dumpster size, understanding pricing, and ensuring compliance with local regulations."
+        author="Icon Dumpsters"
+        publishedDate="2025-01-15"
+        modifiedDate="2025-01-15"
+        imageUrl="https://icondumpsters.com/images/dumpsters.jpeg"
+        articleUrl="https://icondumpsters.com/complete-dumpster-rental-guide-2025"
+        category="DUMPSTER RENTAL"
+        readTime="PT8M"
       />
       <div className="min-h-screen bg-gray-50">
         {/* Article Header */}

@@ -3,6 +3,7 @@
 import ImageWithFallback from '../components/ImageWithFallback'
 import Link from 'next/link'
 import Analytics from '../components/Analytics'
+import ArticleSchema from '../components/ArticleSchema'
 
 export default function HomeRenovationWasteDisposal() {
   return (
@@ -11,6 +12,17 @@ export default function HomeRenovationWasteDisposal() {
         pageName="Home Renovation Waste Disposal: A Complete Guide"
         pageType="article"
         articleId="home-renovation-waste-disposal-guide"
+      />
+      <ArticleSchema
+        title="Home Renovation Waste Disposal: A Complete Guide"
+        description="Transform your home renovation project with proper waste disposal strategies. From kitchen remodels to basement finishes, learn how to manage waste efficiently while saving money and protecting the environment."
+        author="Icon Dumpsters"
+        publishedDate="2025-01-18"
+        modifiedDate="2025-01-18"
+        imageUrl="https://icondumpsters.com/images/home-renovation.jpg"
+        articleUrl="https://icondumpsters.com/home-renovation-waste-disposal-guide"
+        category="HOME RENOVATION"
+        readTime="PT7M"
       />
       <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

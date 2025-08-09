@@ -3,6 +3,7 @@
 import ImageWithFallback from '../components/ImageWithFallback'
 import Link from 'next/link'
 import Analytics from '../components/Analytics'
+import ArticleSchema from '../components/ArticleSchema'
 
 export default function CommercialDumpsterRentalBusinessSolutions() {
   return (
@@ -11,6 +12,17 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
         pageName="Commercial Dumpster Rental: Business Solutions"
         pageType="article"
         articleId="commercial-dumpster-rental-business-solutions"
+      />
+      <ArticleSchema
+        title="Commercial Dumpster Rental: Business Solutions"
+        description="Optimize your business operations with strategic commercial dumpster rental and waste management solutions. From cost optimization to compliance management, discover how proper waste handling can drive business success."
+        author="Icon Dumpsters"
+        publishedDate="2025-01-22"
+        modifiedDate="2025-01-22"
+        imageUrl="https://icondumpsters.com/images/commercial-dumpster.jpg"
+        articleUrl="https://icondumpsters.com/commercial-dumpster-rental-business-solutions"
+        category="COMMERCIAL"
+        readTime="PT8M"
       />
       <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

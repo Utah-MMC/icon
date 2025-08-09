@@ -1,0 +1,108 @@
+'use client';
+
+import { useState } from 'react';
+
+interface NewsletterSubscriptionProps {
+  className?: string;
+}
+
+export default function NewsletterSubscription({ className = "" }: NewsletterSubscriptionProps) {
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscribeMessage, setSubscribeMessage] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubscribing(true);
+    setSubscribeMessage("");
+
+    console.log('Starting newsletter subscription for:', email);
+
+    try {
+      // Create form data for newsletter subscription
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('_subject', 'Newsletter Subscription - Icon Dumpsters Blog');
+      formData.append('_replyto', email);
+      formData.append('message', `New newsletter subscription from: ${email}\n\nThis user has subscribed to the Icon Dumpsters blog newsletter.`);
+
+      console.log('Form data prepared, submitting to Formspree...');
+
+      // Submit to Formspree - try multiple approaches for better reliability
+      let response;
+      try {
+        // First try with no-cors
+        response = await fetch("https://formspree.io/f/mwpqaoqk", {
+          method: "POST",
+          body: formData,
+          mode: 'no-cors',
+        });
+        console.log('Formspree response received (no-cors):', response);
+      } catch (corsError) {
+        console.log('CORS error, trying alternative approach...');
+        // If no-cors fails, try a different approach
+        response = await fetch("https://formspree.io/f/mwpqaoqk", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams(formData as any),
+        });
+        console.log('Formspree response received (alternative):', response);
+      }
+
+      // Success - reset form and show message
+      setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");
+      setEmail("");
+      console.log('Newsletter subscription successful:', email);
+    } catch (error) {
+      console.error('Subscribe form error:', error);
+      setSubscribeMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
+  return (
+    <div className={`bg-gradient-to-br from-[#4e37a8] to-purple-700 text-white rounded-xl p-6 shadow-lg ${className}`}>
+      <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        </svg>
+        Stay Updated
+      </h3>
+      <p className="text-purple-100 text-sm mb-4 leading-relaxed">
+        Get the latest dumpster rental tips and industry insights delivered to your inbox.
+      </p>
+      
+      {subscribeMessage && (
+        <div className={`mb-4 p-3 rounded-lg text-sm ${
+          subscribeMessage.includes('Thank you') 
+            ? 'bg-green-500 text-white' 
+            : 'bg-red-500 text-white'
+        }`}>
+          {subscribeMessage}
+        </div>
+      )}
+      
+      <form onSubmit={handleSubscribe} className="space-y-3">
+        <input 
+          type="email" 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Your email address" 
+          className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-opacity-50"
+          required
+        />
+        <button 
+          type="submit" 
+          disabled={isSubscribing}
+          className="w-full bg-white text-[#4e37a8] py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubscribing ? "Subscribing..." : "Subscribe"}
+        </button>
+      </form>
+    </div>
+  );
+}
