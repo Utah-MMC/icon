@@ -21,7 +21,7 @@ export default function Home() {
         
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4">
-                      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Utah</h1>
+                      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
           <a href="#quote-form" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
             Get A Quote
           </a>
