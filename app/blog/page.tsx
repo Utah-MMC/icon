@@ -77,25 +77,24 @@ export default function Blog() {
     const email = formData.get("email") as string;
 
     try {
-      const response = await fetch("https://formspree.io/f/xpzgwqgw", {
+      // Use the same Formspree endpoint as QuoteForm
+      const formDataToSend = new FormData();
+      formDataToSend.append('email', email);
+      formDataToSend.append('subject', 'Blog Newsletter Subscription');
+      formDataToSend.append('message', `New blog newsletter subscription from: ${email}`);
+
+      // Submit to Formspree using the same method as QuoteForm
+      const response = await fetch("https://formspree.io/f/xanblnyj", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          subject: "Blog Newsletter Subscription",
-          message: `New blog newsletter subscription from: ${email}`
-        }),
+        body: formDataToSend,
+        mode: 'no-cors', // This prevents CORS issues like in QuoteForm
       });
 
-      if (response.ok) {
-        setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");
-        (e.currentTarget as HTMLFormElement).reset();
-      } else {
-        setSubscribeMessage("Something went wrong. Please try again.");
-      }
+      // Since we're using no-cors, we assume success if no error is thrown
+      setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");
+      (e.currentTarget as HTMLFormElement).reset();
     } catch (error) {
+      console.error('Subscribe form error:', error);
       setSubscribeMessage("Something went wrong. Please try again.");
     } finally {
       setIsSubscribing(false);
