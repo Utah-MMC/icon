@@ -30,6 +30,41 @@
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-DNS-Prefetch-Control "on"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.google.com https://formspree.io; frame-src 'self' https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# Bot blocking
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block common bots and scrapers
+    RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|scraper|scraping|curl|wget|python|php|java|perl|ruby|go-http-client|httpclient|okhttp|apache-httpclient|libwww-perl|lwp-request|lwp-simple|mechanize|scrapy|selenium|phantomjs|headless|chrome-lighthouse|lighthouse|pagespeed|gtmetrix|webpagetest|pingdom|uptimerobot|monitor|uptime|availability|status|health|check|test|debug|development|staging|preview|beta|alpha|dev|stage|prod|production|live|demo|example|sample|fake|dummy|testbot|testcrawler|testspider|testscraper|testscraping|testcurl|testwget|testpython|testphp|testjava|testperl|testruby|testgo-http-client|testhttpclient|testokhttp|testapache-httpclient|testlibwww-perl|testlwp-request|testlwp-simple|testmechanize|testscrapy|testselenium|testphantomjs|testheadless|testchrome-lighthouse|testlighthouse|testpagespeed|testgtmetrix|testwebpagetest) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block spam patterns in URLs
+    RewriteCond %{REQUEST_URI} (viagra|cialis|casino|poker|loan|mortgage|debt|credit|insurance|pharmacy|medication|prescription|weight-loss|diet|supplement|vitamin|herbal|natural|organic|green|eco|environmental|renewable|solar|wind|energy|power|electric|gas|oil|fuel|petroleum|chemical|industrial|manufacturing|factory|plant|facility|warehouse|storage|logistics|shipping|delivery|transport|freight|cargo|container|trucking|hauling|moving|relocation) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block suspicious file extensions
+    RewriteCond %{REQUEST_URI} \.(php|asp|aspx|jsp|cgi|pl|py|rb|sh|exe|bat|cmd|com|pif|scr|vbs|js|jar|war|ear|dll|so|dylib|bin|msi|deb|rpm|pkg|app|ipa|apk)$ [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block access to sensitive files
+    RewriteRule ^(\.htaccess|\.htpasswd|\.env|\.git|\.svn|\.DS_Store|Thumbs\.db|web\.config|robots\.txt|sitemap\.xml)$ - [F,L]
+    
+    # Block access to backup files
+    RewriteRule \.(bak|backup|old|tmp|temp|log|sql|db|sqlite|sqlite3)$ - [F,L]
+</IfModule>
+
+# Rate limiting (basic implementation)
+<IfModule mod_ratelimit.c>
+    # Limit requests per IP
+    SetOutputFilter RATE_LIMIT
+    SetEnv rate-limit 400
 </IfModule>
 
 # Handle Next.js static export routing

@@ -1,40 +1,107 @@
-import { Metadata } from "next";
+"use client";
+
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
-export const metadata: Metadata = {
-  title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-  description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies. Stay updated with the latest trends.",
-  keywords: "dumpster rental blog, dumpster rental, dumpster rental near me, roll off dumpster, rolloff dumpster, waste management tips, construction cleanup guide, dumpster rental tips, waste disposal blog, Icon Dumpsters blog, Utah dumpster rental blog",
-  openGraph: {
-    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies.",
-    url: 'https://icondumpsters.com/blog',
-    images: [
-      {
-        url: '/images/dumpsters.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Dumpster Rental Blog - Tips and Guides',
-      },
-    ],
+// Blog post data for search functionality
+const blogPosts = [
+  {
+    id: "complete-dumpster-rental-guide-2025",
+    title: "Complete Dumpster Rental Guide 2025: Everything You Need to Know",
+    excerpt: "Master the essentials of dumpster rental with our comprehensive guide covering sizes, costs, permits, and best practices for 2025.",
+    category: "DUMPSTER RENTAL",
+    readTime: "8 min read",
+    image: "/images/dumpsters.jpeg",
+    fallbackImage: "/images/dumpsters.webp",
+    featured: true
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, dumpster sizes, and cost-saving strategies.",
-    images: ['/images/dumpsters.jpeg'],
+  {
+    id: "construction-waste-management-2025",
+    title: "Construction Waste Management 2025: Best Practices & Solutions",
+    excerpt: "Discover effective construction waste management strategies, recycling techniques, and compliance requirements for 2025.",
+    category: "CONSTRUCTION",
+    readTime: "6 min read",
+    image: "/images/dumpsterSmallBanner.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner.webp"
   },
-  alternates: {
-    canonical: '/blog',
+  {
+    id: "home-renovation-waste-disposal-guide",
+    title: "Home Renovation Waste Disposal: A Complete Guide",
+    excerpt: "Learn how to properly dispose of renovation waste, choose the right dumpster size, and stay compliant with local regulations.",
+    category: "HOME RENOVATION",
+    readTime: "7 min read",
+    image: "/images/dumpsterSmallBanner2.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner2.webp"
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  {
+    id: "commercial-dumpster-rental-business-solutions",
+    title: "Commercial Dumpster Rental: Business Solutions",
+    excerpt: "Explore commercial dumpster rental solutions for businesses, including multi-location services and waste management strategies.",
+    category: "COMMERCIAL",
+    readTime: "7 min read",
+    image: "/images/dumpsterSmallBanner.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner.webp"
+  }
+];
+
+// Metadata is handled in layout.tsx for client components
 
 export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscribeMessage, setSubscribeMessage] = useState("");
+
+  // Search functionality
+  useEffect(() => {
+    if (searchTerm.trim() === "") {
+      setFilteredPosts(blogPosts);
+    } else {
+      const filtered = blogPosts.filter(post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredPosts(filtered);
+    }
+  }, [searchTerm]);
+
+  // Handle subscribe form submission
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubscribing(true);
+    setSubscribeMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpzgwqgw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          subject: "Blog Newsletter Subscription",
+          message: `New blog newsletter subscription from: ${email}`
+        }),
+      });
+
+      if (response.ok) {
+        setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");
+        (e.currentTarget as HTMLFormElement).reset();
+      } else {
+        setSubscribeMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubscribeMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -54,6 +121,8 @@ export default function Blog() {
               <input 
                 type="text" 
                 placeholder="Search articles..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50 shadow-lg"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-all duration-200 shadow-md">
@@ -70,312 +139,170 @@ export default function Blog() {
           
           {/* Main Content Area */}
           <div className="xl:col-span-3">
-            {/* Featured Post */}
-            <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-12 hover:shadow-xl transition-all duration-300">
-              <div className="relative">
-                <div className="h-96 overflow-hidden">
-                  <ImageWithFallback 
-                    src="/images/dumpsters.jpeg" 
-                    alt="Complete Guide to Dumpster Rental" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                    fallbackSrc="/images/dumpsters.webp" 
-                  />
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-[#4e37a8] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    FEATURED
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-8">
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                  <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
-                    DUMPSTER RENTAL
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    8 min read
-                  </span>
-                  <span>•</span>
-                  <span>January 15, 2025</span>
-                </div>
-                
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                  Complete Guide to Dumpster Rental: Everything You Need to Know in 2025
-                </h2>
-                
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  A comprehensive guide to choosing the right dumpster size, understanding rental costs, 
-                  and maximizing efficiency for your construction or cleanup project. Learn the latest 
-                  industry standards and best practices for waste management.
+            {/* Search Results Count */}
+            {searchTerm && (
+              <div className="mb-6">
+                <p className="text-gray-600">
+                  Found {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} for "{searchTerm}"
                 </p>
-                
-                <Link 
-                  href="/complete-dumpster-rental-guide-2025" 
-                  className="inline-flex items-center gap-2 bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all duration-200 font-semibold shadow-md hover:shadow-lg"
-                >
-                  Read Full Article
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
               </div>
-            </article>
+            )}
 
-            {/* Blog Grid */}
+            {/* Featured Post */}
+            {filteredPosts.find(post => post.featured) && (
+              <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-12 hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <div className="h-96 overflow-hidden">
+                    <ImageWithFallback 
+                      src={filteredPosts.find(post => post.featured)?.image || "/images/dumpsters.jpeg"} 
+                      alt="Complete Guide to Dumpster Rental" 
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                      fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"} 
+                    />
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-[#4e37a8] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                      FEATURED
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
+                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
+                      {filteredPosts.find(post => post.featured)?.category}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                      </svg>
+                      {filteredPosts.find(post => post.featured)?.readTime}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                    {filteredPosts.find(post => post.featured)?.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                    {filteredPosts.find(post => post.featured)?.excerpt}
+                  </p>
+                  
+                  <Link 
+                    href={`/${filteredPosts.find(post => post.featured)?.id}`}
+                    className="inline-flex items-center gap-2 bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
+                  >
+                    Read Full Article
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </article>
+            )}
+
+            {/* Blog Posts Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Article 1 */}
-              <article className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative overflow-hidden">
-                  <div className="h-56">
-                    <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner.jpeg" 
-                      alt="Construction Waste Management" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc="/images/dumpsterSmallBanner.webp" 
-                    />
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      CONSTRUCTION
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-gray-500">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    6 min read
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#4e37a8] transition-colors">
-                    Construction Waste Management: Best Practices for 2025
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    Learn proven strategies for managing construction waste efficiently. From sorting 
-                    materials to choosing the right dumpster size, discover how to minimize costs and 
-                    environmental impact.
-                  </p>
-                  
-                  <Link 
-                    href="/construction-waste-management-2025" 
-                    className="inline-flex items-center gap-2 text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors group-hover:gap-3"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-
-              {/* Article 2 */}
-              <article className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative overflow-hidden">
-                  <div className="h-56">
-                    <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner2.jpeg" 
-                      alt="Home Renovation Waste Disposal" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc="/images/dumpsterSmallBanner2.webp" 
-                    />
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      RENOVATION
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-gray-500">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    7 min read
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#4e37a8] transition-colors">
-                    Home Renovation Waste Disposal: A Complete Guide
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    Planning a home renovation? Learn how to properly dispose of renovation waste, 
-                    choose the right dumpster size, and stay compliant with local regulations.
-                  </p>
-                  
-                  <Link 
-                    href="/home-renovation-waste-disposal-guide" 
-                    className="inline-flex items-center gap-2 text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors group-hover:gap-3"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-
-              {/* Article 3 */}
-              <article className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative overflow-hidden">
-                  <div className="h-56">
-                    <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner.jpeg" 
-                      alt="Commercial Dumpster Rental" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc="/images/dumpsterSmallBanner.webp" 
-                    />
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      COMMERCIAL
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-gray-500">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    7 min read
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#4e37a8] transition-colors">
-                    Commercial Dumpster Rental: Business Solutions
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    Optimize your business operations with professional commercial dumpster rental services. 
-                    From retail stores to construction sites, discover tailored waste management solutions.
-                  </p>
-                  
-                  <Link 
-                    href="/blog/commercial-dumpster-rental-business-solutions" 
-                    className="inline-flex items-center gap-2 text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors group-hover:gap-3"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-
-              {/* Article 4 */}
-              <article className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="relative overflow-hidden">
-                  <div className="h-56">
-                    <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner.jpeg" 
-                      alt="Home Renovation Waste Disposal" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc="/images/dumpsterSmallBanner.webp" 
-                    />
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      RENOVATION
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-gray-500">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    8 min read
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#4e37a8] transition-colors">
-                    Home Renovation Waste Disposal: A Complete Guide
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    Transform your home renovation project with proper waste disposal strategies. 
-                    Learn how to manage waste efficiently while saving money and protecting the environment.
-                  </p>
-                  
-                  <Link 
-                    href="/blog/home-renovation-waste-disposal-guide" 
-                    className="inline-flex items-center gap-2 text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors group-hover:gap-3"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
+              {filteredPosts
+                .filter(post => !post.featured)
+                .map((post) => (
+                  <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <div className="h-48 overflow-hidden">
+                      <ImageWithFallback 
+                        src={post.image} 
+                        alt={post.title} 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                        fallbackSrc={post.fallbackImage} 
+                      />
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
+                          {post.category}
+                        </span>
+                        <span className="flex items-center gap-1 text-sm text-gray-500">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                          </svg>
+                          {post.readTime}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight line-clamp-2">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      
+                      <Link 
+                        href={`/${post.id}`}
+                        className="inline-flex items-center gap-2 text-[#4e37a8] hover:text-purple-700 font-semibold transition-colors"
+                      >
+                        Read More
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </article>
+                ))}
             </div>
+
+            {/* No Results Message */}
+            {searchTerm && filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-gray-400 mb-4">
+                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No articles found</h3>
+                <p className="text-gray-600 mb-4">Try adjusting your search terms or browse all articles below.</p>
+                <button 
+                  onClick={() => setSearchTerm("")}
+                  className="bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+                >
+                  View All Articles
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Sidebar */}
           <aside className="xl:col-span-1 space-y-8">
             {/* Categories */}
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5 text-[#4e37a8]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z" />
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                 </svg>
                 Categories
               </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="flex justify-between items-center text-gray-700 hover:text-[#4e37a8] transition-colors py-2 px-3 rounded-lg hover:bg-purple-50">
-                    <span className="font-medium">Construction Waste</span>
-                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">1</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center text-gray-700 hover:text-[#4e37a8] transition-colors py-2 px-3 rounded-lg hover:bg-purple-50">
-                    <span className="font-medium">Home Renovation</span>
-                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">2</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center text-gray-700 hover:text-[#4e37a8] transition-colors py-2 px-3 rounded-lg hover:bg-purple-50">
-                    <span className="font-medium">Commercial</span>
-                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">1</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex justify-between items-center text-gray-700 hover:text-[#4e37a8] transition-colors py-2 px-3 rounded-lg hover:bg-purple-50">
-                    <span className="font-medium">Waste Management</span>
-                    <span className="bg-[#4e37a8] text-white px-2 py-1 rounded-full text-xs font-semibold">1</span>
-                  </a>
-                </li>
-              </ul>
+              <div className="space-y-2">
+                {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSearchTerm(category)}
+                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Recent Posts */}
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5 text-[#4e37a8]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
                 Recent Posts
               </h3>
               <div className="space-y-4">
-                <Link href="/construction-waste-management-2025" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
-                  <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow">
-                    <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Construction Waste Management" className="w-full h-full object-cover" fallbackSrc="/images/dumpsterSmallBanner.webp" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-[#4e37a8] transition-colors">
-                      Construction Waste Management: Best Practices for 2025
-                    </h4>
-                    <p className="text-xs text-gray-500">6 min read</p>
-                  </div>
-                </Link>
                 
                 <Link href="/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
                   <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow">
@@ -415,18 +342,31 @@ export default function Blog() {
               <p className="text-purple-100 text-sm mb-4 leading-relaxed">
                 Get the latest dumpster rental tips and industry insights delivered to your inbox.
               </p>
-              <form className="space-y-3">
+              
+              {subscribeMessage && (
+                <div className={`mb-4 p-3 rounded-lg text-sm ${
+                  subscribeMessage.includes('Thank you') 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-red-500 text-white'
+                }`}>
+                  {subscribeMessage}
+                </div>
+              )}
+              
+              <form onSubmit={handleSubscribe} className="space-y-3">
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Your email address" 
                   className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-opacity-50"
                   required
                 />
                 <button 
                   type="submit" 
-                  className="w-full bg-white text-[#4e37a8] py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold shadow-md"
+                  disabled={isSubscribing}
+                  className="w-full bg-white text-[#4e37a8] py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Subscribe
+                  {isSubscribing ? "Subscribing..." : "Subscribe"}
                 </button>
               </form>
             </div>
@@ -449,11 +389,11 @@ export default function Blog() {
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                   </div>
-                  <span className="text-gray-700 font-medium">(555) 123-4567</span>
+                  <span className="text-gray-700 font-medium">(801) 918-6000</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-[#4e37a8]" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-[#4e37a8]" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
