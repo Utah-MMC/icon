@@ -39,7 +39,7 @@ export default function Home() {
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-bold">
               <span className="text-gray-800">Roll-off Dumpster Rental</span>{" "}
-              <span className="text-[#4e37a8]">Services in Utah</span>
+              <span className="text-[#4e37a8]">Services in Salt Lake County</span>
             </h2>
             
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
