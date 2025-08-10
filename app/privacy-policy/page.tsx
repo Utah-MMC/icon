@@ -101,6 +101,16 @@ export default function PrivacyPolicy() {
               However, opting out of text messages may limit our ability to provide you with timely service updates.
             </p>
 
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <p className="text-green-800 font-semibold mb-2">Messaging Terms and Conditions</p>
+              <p className="text-green-700 text-sm mb-2">
+                By providing your phone number and agreeing to receive texts, you consent to receive text messages from Icon Dumpsters, 
+                from 801-918-6000 regarding account notification, customer care, delivery notification. Consent is not a condition of purchase. 
+                Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time or HELP for assistance. 
+                You can also contact us at 801-918-6000 or icondumpsters@gmail.com. Mobile opt-in information is never shared with third parties.
+              </p>
+            </div>
+
             <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Information Sharing</h2>
             <p className="text-gray-700 mb-4">
               We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
@@ -110,6 +120,14 @@ export default function PrivacyPolicy() {
               <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights and safety</li>
               <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred</li>
             </ul>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+              <p className="text-yellow-800 font-semibold mb-2">Data Sharing Restrictions</p>
+              <ul className="list-disc pl-6 text-yellow-700 text-sm">
+                <li>Customer data is not shared with 3rd parties for promotional or marketing purposes.</li>
+                <li>Mobile opt-in and consent are never shared with anyone for any purpose. Any information sharing that may be mentioned elsewhere in this policy excludes mobile opt-in data.</li>
+              </ul>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Data Security</h2>
             <p className="text-gray-700 mb-6">
@@ -161,6 +179,12 @@ export default function PrivacyPolicy() {
                 <strong>Note:</strong> This privacy policy is effective as of January 2025. By using our services, 
                 you acknowledge that you have read and understood this Privacy Policy and consent to the collection, 
                 use, and disclosure of your information as described herein.
+              </p>
+            </div>
+
+            <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400">
+              <p className="text-blue-800 text-sm">
+                <strong>Related Documents:</strong> Please also review our <a href="/terms-of-service" className="text-blue-600 underline font-medium">Terms of Service</a> for complete information about our rental agreements, customer responsibilities, and service terms.
               </p>
             </div>
           </div>
