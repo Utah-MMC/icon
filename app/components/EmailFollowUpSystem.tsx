@@ -137,6 +137,8 @@ export default function EmailFollowUpSystem() {
       (801) 918-6000
       icondumpsters@gmail.com
       https://icondumpsters.com
+      
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
     `;
   };
 
@@ -177,6 +179,8 @@ export default function EmailFollowUpSystem() {
       (801) 918-6000
       icondumpsters@gmail.com
       https://icondumpsters.com
+      
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
     `;
   };
 
@@ -206,6 +210,8 @@ export default function EmailFollowUpSystem() {
       (801) 918-6000
       icondumpsters@gmail.com
       https://icondumpsters.com
+      
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
     `;
   };
 

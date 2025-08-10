@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <p className="text-gray-700 mb-4">
-              <strong>Opt-Out:</strong> You may opt out of text messages at any time by replying "STOP" to any message or contacting us directly. 
+              <strong>Opt-Out:</strong> You may opt out of text messages at any time by replying "STOP", "CANCEL", or "QUIT" to any message or contacting us directly. 
               However, opting out of text messages may limit our ability to provide you with timely service updates.
             </p>
 
@@ -105,8 +105,9 @@ export default function PrivacyPolicy() {
               <p className="text-green-800 font-semibold mb-2">Messaging Terms and Conditions</p>
               <p className="text-green-700 text-sm mb-2">
                 By providing your phone number and agreeing to receive texts, you consent to receive text messages from Icon Dumpsters, 
-                from 801-918-6000 regarding account notification, customer care, delivery notification. Consent is not a condition of purchase. 
-                Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time or HELP for assistance. 
+                from 801-918-6000 regarding account notification, customer care, delivery notification. <strong>You will receive account alerts and promotional messages.</strong> 
+                Consent is not a condition of purchase. Message frequency varies. Message & data rates may apply. 
+                <strong>To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.</strong> 
                 You can also contact us at 801-918-6000 or icondumpsters@gmail.com. Mobile opt-in information is never shared with third parties.
               </p>
             </div>
@@ -226,6 +227,15 @@ export default function PrivacyPolicy() {
                 If you have any questions or concerns about this Privacy Policy or your data, please contact us at 
                 <a href="mailto:icondumpsters@gmail.com" className="text-green-600 underline font-medium"> icondumpsters@gmail.com</a> or 
                 <a href="tel:(801) 918-6000" className="text-green-600 underline font-medium"> 801-918-6000</a>.
+              </p>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+              <p className="text-red-800 font-semibold mb-2">Consumer Contact Information - Required for Compliance</p>
+              <p className="text-red-700 text-sm">
+                <strong>If you have any questions or concerns about this Privacy Policy or your data, please contact us at 
+                <a href="mailto:icondumpsters@gmail.com" className="text-red-600 underline font-medium"> icondumpsters@gmail.com</a> or 
+                <a href="tel:(801) 918-6000" className="text-red-600 underline font-medium"> 801-918-6000</a>.</strong>
               </p>
             </div>
 
