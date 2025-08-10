@@ -41,10 +41,11 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
+        type: 'image/png',
       },
     ],
     locale: 'en_US',
@@ -54,7 +55,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
     description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: [
+      {
+        url: '/images/og-image.png',
+        alt: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
+      },
+    ],
   },
   robots: {
     index: true,

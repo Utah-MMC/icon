@@ -13,6 +13,7 @@
     "convert-images": "node scripts/convert-to-webp.js"
   },
   "dependencies": {
+    "canvas": "^3.1.2",
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0"
