@@ -110,9 +110,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: lastMonth,
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     // Legal pages - Lower priority but important for compliance
     {

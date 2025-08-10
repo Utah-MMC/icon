@@ -221,6 +221,7 @@ export default function RootLayout({
                     </div>
                   </div>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+                  <a href="/faq" className="text-white hover:text-purple-200 transition-colors font-medium">FAQ</a>
                   <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>
                 </nav>
               <div className="flex items-center">
@@ -276,7 +277,7 @@ export default function RootLayout({
                 <h4 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Support</h4>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                  <li><a href="/faq" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Service Areas</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Get Quote</a></li>
                 </ul>
