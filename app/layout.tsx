@@ -229,6 +229,7 @@ export default function RootLayout({
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
                   <a href="/faq" className="text-white hover:text-purple-200 transition-colors font-medium">FAQ</a>
                   <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>
+                  <a href="/contact" className="text-white hover:text-purple-200 transition-colors font-medium">CONTACT</a>
                 </nav>
               <div className="flex items-center">
                 <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
@@ -282,7 +283,7 @@ export default function RootLayout({
               <div>
                 <h4 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Support</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                  <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
                   <li><a href="/faq" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Service Areas</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Get Quote</a></li>

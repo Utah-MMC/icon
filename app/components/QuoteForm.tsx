@@ -34,6 +34,7 @@ export default function QuoteForm() {
       deliveryDate: formData.get('deliveryDate'),
       pickupDate: formData.get('pickupDate'),
       additionalInfo: formData.get('additionalInfo'),
+      smsConsent: formData.get('smsConsent'),
     });
     
     // Basic validation
@@ -68,6 +69,7 @@ export default function QuoteForm() {
       formDataToSend.append('deliveryDate', formData.get('deliveryDate') as string);
       formDataToSend.append('pickupDate', formData.get('pickupDate') as string);
       formDataToSend.append('additionalInfo', formData.get('additionalInfo') as string);
+      formDataToSend.append('smsConsent', formData.get('smsConsent') as string);
 
       // Submit to Formspree - don't wait for response to avoid CORS issues
       fetch('https://formspree.io/f/xanblnyj', {
@@ -258,6 +260,24 @@ export default function QuoteForm() {
             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-[#4e37a8] text-white text-sm sm:text-base resize-none"
             placeholder="Tell us about your project, special requirements, or any questions you have..."
           ></textarea>
+        </div>
+
+        {/* SMS Consent Checkbox */}
+        <div className="bg-gray-700 p-4 rounded-lg">
+          <div className="flex items-start space-x-3">
+            <input 
+              type="checkbox" 
+              name="smsConsent"
+              id="smsConsent"
+              className="mt-1 text-[#4e37a8] focus:ring-[#4e37a8] rounded"
+              required
+            />
+            <label htmlFor="smsConsent" className="text-sm text-gray-300 leading-relaxed">
+              I agree to receive SMS messages from Icon Dumpsters regarding my quote request, service updates, and promotional offers. 
+              Message frequency varies. Message and data rates may apply. I can opt out at any time by replying STOP or calling (801) 918-6000. 
+              My mobile information will not be shared with third parties.
+            </label>
+          </div>
         </div>
         
         {/* reCAPTCHA */}
