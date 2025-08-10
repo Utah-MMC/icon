@@ -72,19 +72,19 @@ export default function PrivacyPolicy() {
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Text Message Communications and Consent</h2>
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-              <p className="text-blue-800 font-semibold mb-2">Important Notice About Text Messages</p>
-              <p className="text-blue-700 text-sm">
-                By providing your phone number and requesting our services, you consent to receive text messages from Icon Dumpsters 
-                through our Grasshopper phone system. These messages may include:
-              </p>
-              <ul className="list-disc pl-6 mt-2 text-blue-700 text-sm">
-                <li>Service confirmations and updates</li>
-                <li>Delivery and pickup notifications</li>
-                <li>Customer service communications</li>
-                <li>Marketing messages (with your explicit consent)</li>
-              </ul>
-            </div>
+                         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+               <p className="text-blue-800 font-semibold mb-2">Important Notice About Text Messages</p>
+               <p className="text-blue-700 text-sm">
+                 By providing your phone number on our website contact form at <a href="https://www.icondumpsters.com/contact/" className="text-blue-600 underline">https://www.icondumpsters.com/contact/</a> and checking the consent box, 
+                 you consent to receive text messages from Icon Dumpsters through our Grasshopper phone system. These messages include:
+               </p>
+               <ul className="list-disc pl-6 mt-2 text-blue-700 text-sm">
+                 <li>Quote confirmations</li>
+                 <li>Delivery updates</li>
+                 <li>Service reminders</li>
+                 <li>Promotional offers</li>
+               </ul>
+             </div>
 
             <p className="text-gray-700 mb-4">
               <strong>Consent for Text Messages:</strong> When you provide your phone number on our website contact form at 

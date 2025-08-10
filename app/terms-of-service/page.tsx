@@ -157,7 +157,7 @@ export default function TermsOfService() {
               By using our services, you consent to receive communications from us via:
             </p>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li>Phone calls and text messages (see our Privacy Policy for details)</li>
+              <li>Phone calls and text messages (quote confirmations, delivery updates, service reminders, and promotional offers)</li>
               <li>Email notifications and updates</li>
               <li>Service confirmations and reminders</li>
               <li>Emergency notifications when necessary</li>
