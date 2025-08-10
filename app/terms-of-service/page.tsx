@@ -169,9 +169,11 @@ export default function TermsOfService() {
                 By providing your phone number on our website contact form at <a href="https://www.icondumpsters.com/contact/" className="text-green-600 underline">https://www.icondumpsters.com/contact/</a> and checking the consent box, 
                 you consent to receive text messages from Icon Dumpsters from 801-918-6000 regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
                 <strong>You will receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS.</strong> 
+                <strong>You will receive promotional offers, account alerts, and service updates via SMS.</strong>
                 Consent is not a condition of purchase. Message frequency varies based on your service needs and promotions. Message & data rates may apply. 
                 <strong>To opt out at any time, consumers can text STOP to stop receiving messages.</strong> 
                 <strong>For assistance, text HELP to 801-918-6000.</strong> 
+                <strong>Text HELP for assistance.</strong>
                 You can also contact us at 801-918-6000 or icondumpsters@gmail.com. Mobile opt-in information is never shared with third parties.
               </p>
             </div>

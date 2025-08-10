@@ -197,13 +197,15 @@ export default function ContactPage() {
                you agree to receive SMS messages from Icon Dumpsters regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
                Message frequency varies based on your service needs and promotions. Message and data rates may apply.
              </p>
-            <div className="text-sm text-gray-600 space-y-2">
-              <p><strong>Message Types:</strong> Quote confirmations, delivery updates, service reminders, and promotional offers</p>
-              <p><strong>Message Frequency:</strong> Varies based on your service needs and promotions</p>
-              <p><strong>Opt-out:</strong> Reply STOP to any message or call (801) 918-6000</p>
-              <p><strong>Help:</strong> Reply HELP to any message or call (801) 918-6000</p>
-              <p><strong>Privacy:</strong> Your mobile information is never shared with third parties. View our <a href="/privacy-policy" className="text-[#4e37a8] hover:underline">Privacy Policy</a> and <a href="/terms-of-service" className="text-[#4e37a8] hover:underline">Terms of Service</a>.</p>
-            </div>
+                         <div className="text-sm text-gray-600 space-y-2">
+               <p><strong>Message Types:</strong> Quote confirmations, delivery updates, service reminders, and promotional offers</p>
+               <p><strong>Message Types:</strong> You will receive promotional offers, account alerts, and service updates via SMS</p>
+               <p><strong>Message Frequency:</strong> Varies based on your service needs and promotions</p>
+               <p><strong>Opt-out:</strong> Reply STOP to any message or call (801) 918-6000</p>
+               <p><strong>Help:</strong> Reply HELP to any message or call (801) 918-6000</p>
+               <p><strong>Help:</strong> Text HELP for assistance</p>
+               <p><strong>Privacy:</strong> Your mobile information is never shared with third parties. View our <a href="/privacy-policy" className="text-[#4e37a8] hover:underline">Privacy Policy</a> and <a href="/terms-of-service" className="text-[#4e37a8] hover:underline">Terms of Service</a>.</p>
+             </div>
           </div>
         </div>
       </div>
