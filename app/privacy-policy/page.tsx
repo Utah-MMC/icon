@@ -108,6 +108,7 @@ export default function PrivacyPolicy() {
                 from 801-918-6000 regarding account notification, customer care, delivery notification. <strong>You will receive account alerts and promotional messages.</strong> 
                 Consent is not a condition of purchase. Message frequency varies. Message & data rates may apply. 
                 <strong>To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.</strong> 
+                <strong>For help, text HELP to 801-918-6000.</strong> 
                 You can also contact us at 801-918-6000 or icondumpsters@gmail.com. Mobile opt-in information is never shared with third parties.
               </p>
             </div>
@@ -249,7 +250,7 @@ export default function PrivacyPolicy() {
 
             <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400">
               <p className="text-blue-800 text-sm">
-                <strong>Related Documents:</strong> Please also review our <a href="/terms-of-service" className="text-blue-600 underline font-medium">Terms of Service</a> for complete information about our rental agreements, customer responsibilities, and service terms.
+                <strong>Related Documents:</strong> For more information, please visit the Privacy Policy and Terms & Conditions at <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a> for complete information about our rental agreements, customer responsibilities, and service terms.
               </p>
             </div>
           </div>

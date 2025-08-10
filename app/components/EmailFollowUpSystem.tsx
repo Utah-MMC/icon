@@ -138,7 +138,7 @@ export default function EmailFollowUpSystem() {
       icondumpsters@gmail.com
       https://icondumpsters.com
       
-      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For help, text HELP to 801-918-6000.
     `;
   };
 
@@ -180,7 +180,7 @@ export default function EmailFollowUpSystem() {
       icondumpsters@gmail.com
       https://icondumpsters.com
       
-      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For help, text HELP to 801-918-6000.
     `;
   };
 
@@ -211,7 +211,7 @@ export default function EmailFollowUpSystem() {
       icondumpsters@gmail.com
       https://icondumpsters.com
       
-      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages.
+      To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For help, text HELP to 801-918-6000.
     `;
   };
 
