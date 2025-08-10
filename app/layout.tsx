@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import KPITracking from "./components/KPITracking";
 
 
 const geistSans = Geist({
@@ -109,6 +110,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <GoogleAnalytics />
+      <KPITracking />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
