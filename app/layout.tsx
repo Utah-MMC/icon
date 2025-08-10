@@ -169,7 +169,7 @@ export default function RootLayout({
                           {/* 15 Yard Dumpster */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpsters.jpeg" alt="15 Yard Dumpster" className="w-full h-24 object-cover" />
+                              <img src="/images/dumpsters.jpeg" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" className="w-full h-24 object-cover" />
                               <div className="p-3">
                                 <h4 className="font-semibold text-gray-800 text-sm">15 Yard Dumpsters</h4>
                                 <p className="text-xs text-gray-600">Ideal for medium projects</p>
@@ -180,7 +180,7 @@ export default function RootLayout({
                           {/* 20 Yard Dumpster */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpster500x500-1.jpeg" alt="20 Yard Dumpster" className="w-full h-24 object-cover" />
+                              <img src="/images/dumpster500x500-1.jpeg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental - Ideal for Medium Projects" className="w-full h-24 object-cover" />
                               <div className="p-3">
                                 <h4 className="font-semibold text-gray-800 text-sm">20 Yard Dumpsters</h4>
                                 <p className="text-xs text-gray-600">Great for large projects</p>
@@ -191,7 +191,7 @@ export default function RootLayout({
                           {/* 30 Yard Dumpster */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Dumpster" className="w-full h-24 object-cover" />
+                              <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental - Great for Large Projects" className="w-full h-24 object-cover" />
                               <div className="p-3">
                                 <h4 className="font-semibold text-gray-800 text-sm">30 Yard Dumpsters</h4>
                                 <p className="text-xs text-gray-600">For major projects</p>
@@ -202,7 +202,7 @@ export default function RootLayout({
                           {/* View All Sizes */}
                           <div className="group/item">
                             <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                              <img src="/images/dumpsterSmallBanner3.jpeg" alt="View All Dumpster Sizes" className="w-full h-24 object-cover" />
+                              <img src="/images/dumpsterSmallBanner3.jpeg" alt="Complete Dumpster Size Guide for Utah Dumpster Rental Services" className="w-full h-24 object-cover" />
                               <div className="p-3">
                                 <h4 className="font-semibold text-gray-800 text-sm">View All Dumpster Sizes</h4>
                                 <p className="text-xs text-gray-600">See complete selection</p>

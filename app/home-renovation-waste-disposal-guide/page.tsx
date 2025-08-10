@@ -149,7 +149,7 @@ export default function HomeRenovationWasteDisposal() {
               <ImageWithFallback
                 src="/images/dumpsterSmallBanner2.jpeg"
                 fallbackSrc="/images/dumpsterSmallBanner2.jpeg"
-                alt="Home renovation project with professional waste disposal and dumpster rental services"
+                alt="Utah Home Renovation Project with Professional Waste Disposal and Dumpster Rental Services"
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -180,7 +180,7 @@ export default function HomeRenovationWasteDisposal() {
                 <ImageWithFallback
                   src="/images/dumpster500x200-1.jpeg"
                   fallbackSrc="/images/dumpster500x200-1.jpeg"
-                  alt="Small dumpster perfect for home renovation waste disposal"
+                  alt="15 Yard Roll-off Dumpster for Utah Home Renovation Waste Disposal - Perfect for Small Projects"
                   className="w-full h-32 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Demolition Debris</h3>
@@ -204,7 +204,7 @@ export default function HomeRenovationWasteDisposal() {
                 <ImageWithFallback
                   src="/images/dumpster500x200-2.jpeg"
                   fallbackSrc="/images/dumpster500x200-2.jpeg"
-                  alt="Medium dumpster for larger home renovation projects"
+                  alt="20 Yard Roll-off Dumpster for Utah Home Renovation Projects - Ideal for Medium Projects"
                   className="w-full h-32 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Construction Materials</h3>
@@ -229,7 +229,7 @@ export default function HomeRenovationWasteDisposal() {
               <ImageWithFallback
                 src="/images/dumpster500x200-3.jpeg"
                 fallbackSrc="/images/dumpster500x200-3.jpeg"
-                alt="Large dumpster for major home renovation waste disposal"
+                alt="30 Yard Roll-off Dumpster for Utah Major Home Renovation Waste Disposal - Great for Large Projects"
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialty Waste</h3>

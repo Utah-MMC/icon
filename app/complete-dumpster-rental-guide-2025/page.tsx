@@ -98,7 +98,7 @@ export default function CompleteDumpsterRentalGuide() {
                 <ImageWithFallback
                   src="/images/dumpsterSmallBanner.jpeg"
                   fallbackSrc="/images/dumpsterSmallBanner.jpeg"
-                  alt="Professional dumpster rental services for construction and renovation projects"
+                  alt="Professional Utah Dumpster Rental Services for Construction and Renovation Projects - Roll-off Dumpsters"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
               </div>
@@ -121,7 +121,7 @@ export default function CompleteDumpsterRentalGuide() {
                   <ImageWithFallback
                     src="/images/dumpster500x200-1.jpeg"
                     fallbackSrc="/images/dumpster500x200-1.jpeg"
-                    alt="Small dumpster perfect for home renovation projects"
+                    alt="15 Yard Roll-off Dumpster for Utah Home Renovation Projects - Perfect for Small Projects"
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Small Dumpsters (10-15 yards)</h3>
@@ -145,7 +145,7 @@ export default function CompleteDumpsterRentalGuide() {
                   <ImageWithFallback
                     src="/images/dumpster500x200-2.jpeg"
                     fallbackSrc="/images/dumpster500x200-2.jpeg"
-                    alt="Medium dumpster perfect for larger renovation projects"
+                    alt="20 Yard Roll-off Dumpster for Utah Renovation Projects - Ideal for Medium Projects"
                     className="w-full h-32 object-cover rounded-lg mb-4"
                   />
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Medium Dumpsters (20-30 yards)</h3>
@@ -170,7 +170,7 @@ export default function CompleteDumpsterRentalGuide() {
                 <ImageWithFallback
                   src="/images/dumpster500x200-3.jpeg"
                   fallbackSrc="/images/dumpster500x200-3.jpeg"
-                  alt="Large dumpster for major construction and demolition projects"
+                  alt="30 Yard Roll-off Dumpster for Utah Construction and Demolition Projects - Great for Large Projects"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Large Dumpsters (40+ yards)</h3>

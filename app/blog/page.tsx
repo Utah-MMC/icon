@@ -119,7 +119,7 @@ export default function Blog() {
                   <div className="h-96 overflow-hidden relative">
                     <ImageWithFallback 
                       src={filteredPosts.find(post => post.featured)?.image || "/images/dumpsters.jpeg"} 
-                      alt="Complete Guide to Dumpster Rental" 
+                      alt="Complete Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
                       className="hover:scale-105 transition-transform duration-500" 
                       fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}
                       fill={true}
@@ -277,7 +277,7 @@ export default function Blog() {
                                      <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                      <ImageWithFallback 
                        src="/images/dumpsterSmallBanner2.jpeg" 
-                       alt="Home Renovation Waste Disposal" 
+                       alt="Home Renovation Waste Disposal Guide - Utah Dumpster Rental for Renovation Projects" 
                        className="object-cover" 
                        fallbackSrc="/images/dumpsterSmallBanner2.webp"
                        fill={true}
@@ -296,7 +296,7 @@ export default function Blog() {
                                      <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                      <ImageWithFallback 
                        src="/images/dumpsterSmallBanner.jpeg" 
-                       alt="Commercial Dumpster Rental" 
+                       alt="Commercial Dumpster Rental Business Solutions - Professional Utah Dumpster Services" 
                        className="object-cover" 
                        fallbackSrc="/images/dumpsterSmallBanner.webp"
                        fill={true}
