@@ -127,5 +127,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    // Customer rating and review system - Medium priority
+    {
+      url: `${baseUrl}/rating`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.5,
+    },
+    // Admin dashboard - Lower priority (internal use)
+    {
+      url: `${baseUrl}/admin`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.2,
+    },
   ]
 }
