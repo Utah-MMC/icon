@@ -4,6 +4,8 @@ import "./globals.css";
 import StructuredData from "./components/StructuredData";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import KPITracking from "./components/KPITracking";
+import CustomerRatingSystem from "./components/CustomerRatingSystem";
+import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
 
 
 const geistSans = Geist({
@@ -111,6 +113,8 @@ export default function RootLayout({
       </head>
       <GoogleAnalytics />
       <KPITracking />
+      <CustomerRatingSystem />
+      <EmailFollowUpSystem />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
