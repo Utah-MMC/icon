@@ -163,7 +163,44 @@ export default function TermsOfService() {
               <li>Emergency notifications when necessary</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">12. Dispute Resolution</h2>
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <p className="text-green-800 font-semibold mb-2">Messaging Terms and Conditions</p>
+              <p className="text-green-700 text-sm mb-2">
+                By providing your phone number and agreeing to receive texts, you consent to receive text messages from Icon Dumpsters, 
+                from 801-918-6000 regarding account notification, customer care, delivery notification. Consent is not a condition of purchase. 
+                Message frequency varies. Message & data rates may apply. You can reply STOP to unsubscribe at any time or HELP for assistance. 
+                You can also contact us at 801-918-6000 or icondumpsters@gmail.com. Mobile opt-in information is never shared with third parties.
+              </p>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">12. Data Sharing and Privacy</h2>
+            <p className="text-gray-700 mb-4">
+              We are committed to protecting your privacy and personal information. Our data sharing practices are as follows:
+            </p>
+            
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+              <p className="text-yellow-800 font-semibold mb-2">Data Sharing Restrictions</p>
+              <ul className="list-disc pl-6 text-yellow-700 text-sm">
+                <li>Customer data is not shared with 3rd parties for promotional or marketing purposes.</li>
+                <li>Mobile opt-in and consent are never shared with anyone for any purpose. Any information sharing that may be mentioned elsewhere in these terms excludes mobile opt-in data.</li>
+              </ul>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+              <p className="text-red-800 font-semibold mb-2">Data Transfer Commitment</p>
+              <p className="text-red-700 text-sm">
+                <strong>We do not transfer consumer data to any external organizations under any circumstances.</strong> 
+                Your personal information, including contact details, service history, and any other data collected, 
+                remains strictly within our organization and is never sold, leased, or transferred to external parties 
+                for any purpose, including marketing, advertising, or commercial use.
+              </p>
+            </div>
+
+            <p className="text-gray-700 mb-6">
+              For complete details about our privacy practices, please review our <a href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</a>.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">13. Dispute Resolution</h2>
             <p className="text-gray-700 mb-6">
               Any disputes arising from these terms or our services will be resolved through:
             </p>
@@ -173,13 +210,13 @@ export default function TermsOfService() {
               <li>Legal proceedings in Utah courts if necessary</li>
             </ol>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">13. Modifications to Terms</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">14. Modifications to Terms</h2>
             <p className="text-gray-700 mb-6">
               We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on our website. 
               Continued use of our services constitutes acceptance of modified terms.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">14. Contact Information</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">15. Contact Information</h2>
             <p className="text-gray-700 mb-4">
               For questions about these Terms of Service, please contact us:
             </p>

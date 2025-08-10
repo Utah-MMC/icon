@@ -129,10 +129,47 @@ export default function PrivacyPolicy() {
               </ul>
             </div>
 
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+              <p className="text-red-800 font-semibold mb-2">Data Transfer Commitment</p>
+              <p className="text-red-700 text-sm">
+                <strong>We do not transfer consumer data to any external organizations under any circumstances.</strong> 
+                Your personal information, including contact details, service history, and any other data collected, 
+                remains strictly within our organization and is never sold, leased, or transferred to external parties 
+                for any purpose, including marketing, advertising, or commercial use.
+              </p>
+            </div>
+
             <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Data Security</h2>
+            <p className="text-gray-700 mb-4">
+              We implement comprehensive security measures to protect your personal information against unauthorized access, 
+              alteration, disclosure, or destruction. Our data protection measures include:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-700">
+              <li><strong>Encryption:</strong> All sensitive data is encrypted both in transit and at rest</li>
+              <li><strong>Access Controls:</strong> Strict access controls limit who can view your information</li>
+              <li><strong>Secure Storage:</strong> Data is stored on secure, protected servers</li>
+              <li><strong>Regular Audits:</strong> We conduct regular security audits and assessments</li>
+              <li><strong>Employee Training:</strong> All staff are trained on data protection and privacy</li>
+              <li><strong>Incident Response:</strong> We have procedures in place for security incident response</li>
+              <li><strong>Physical Security:</strong> Our facilities are secured against unauthorized access</li>
+            </ul>
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <p className="text-green-800 font-semibold mb-2">Data Protection Measures</p>
+              <p className="text-green-700 text-sm">
+                We take the following steps to prevent unauthorized sharing of user data:
+              </p>
+              <ul className="list-disc pl-6 mt-2 text-green-700 text-sm">
+                <li>All data access is logged and monitored for suspicious activity</li>
+                <li>Multi-factor authentication is required for administrative access</li>
+                <li>Regular security updates and patches are applied to all systems</li>
+                <li>Data is backed up securely and tested regularly</li>
+                <li>We maintain strict confidentiality agreements with all employees</li>
+                <li>Third-party vendors are carefully vetted and bound by data protection agreements</li>
+              </ul>
+            </div>
             <p className="text-gray-700 mb-6">
-              We implement appropriate security measures to protect your personal information against unauthorized access, 
-              alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
+              However, no method of transmission over the internet is 100% secure. While we strive to protect your information, 
+              we cannot guarantee absolute security and encourage you to take appropriate precautions when sharing sensitive data.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Your Rights</h2>
@@ -172,6 +209,15 @@ export default function PrivacyPolicy() {
               <p className="text-gray-700 mb-2">Phone: (801) 918-6000</p>
               <p className="text-gray-700 mb-2">Email: icondumpsters@gmail.com</p>
               <p className="text-gray-700">Address: Utah, United States</p>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+              <p className="text-blue-800 font-semibold mb-2">Consumer Contact Information</p>
+              <p className="text-blue-700 text-sm">
+                <strong>Contact Us:</strong> If you have any questions about this Privacy Policy or our practices, please contact us at 
+                <a href="mailto:icondumpsters@gmail.com" className="text-blue-600 underline"> icondumpsters@gmail.com</a> or 
+                <a href="tel:(801) 918-6000" className="text-blue-600 underline"> (801) 918-6000</a>.
+              </p>
             </div>
 
             <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400">
