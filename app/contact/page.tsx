@@ -192,11 +192,11 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">SMS Messaging Consent</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              By providing your phone number and checking the consent box, you agree to receive SMS messages from Icon Dumpsters 
-              regarding your quote requests, service updates, and promotional offers. Message frequency varies. 
-              Message and data rates may apply.
-            </p>
+                         <p className="text-sm text-gray-600 mb-4">
+               By providing your phone number on our website contact form at <a href="https://www.icondumpsters.com/contact/" className="text-[#4e37a8] underline">https://www.icondumpsters.com/contact/</a> and checking the consent box, 
+               you agree to receive SMS messages from Icon Dumpsters regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
+               Message frequency varies based on your service needs and promotions. Message and data rates may apply.
+             </p>
             <div className="text-sm text-gray-600 space-y-2">
               <p><strong>Message Types:</strong> Quote confirmations, delivery updates, service reminders, and promotional offers</p>
               <p><strong>Message Frequency:</strong> Varies based on your service needs and promotions</p>
