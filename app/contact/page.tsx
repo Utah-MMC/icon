@@ -193,17 +193,15 @@ export default function ContactPage() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">SMS Messaging Consent</h3>
                          <p className="text-sm text-gray-600 mb-4">
-               By providing your phone number on our website contact form at <a href="https://www.icondumpsters.com/contact/" className="text-[#4e37a8] underline">https://www.icondumpsters.com/contact/</a> and checking the consent box, 
-               you agree to receive SMS messages from Icon Dumpsters regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
-               Message frequency varies based on your service needs and promotions. Message and data rates may apply.
+               By checking this box, you agree to receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS from Icon Dumpsters. 
+               Message frequency varies. Message and data rates may apply. For help, reply HELP. To opt out, reply STOP. 
+               We do not share your information with third parties. See our privacy policy at https://www.icondumpsters.com/privacy-policy and terms and conditions at https://www.icondumpsters.com/terms-of-service.
              </p>
                          <div className="text-sm text-gray-600 space-y-2">
                <p><strong>Message Types:</strong> Quote confirmations, delivery updates, service reminders, and promotional offers</p>
-               <p><strong>Message Types:</strong> You will receive promotional offers, account alerts, and service updates via SMS</p>
                <p><strong>Message Frequency:</strong> Varies based on your service needs and promotions</p>
                <p><strong>Opt-out:</strong> Reply STOP to any message or call (801) 918-6000</p>
                <p><strong>Help:</strong> Reply HELP to any message or call (801) 918-6000</p>
-               <p><strong>Help:</strong> Text HELP for assistance</p>
                <p><strong>Privacy:</strong> Your mobile information is never shared with third parties. View our <a href="/privacy-policy" className="text-[#4e37a8] hover:underline">Privacy Policy</a> and <a href="/terms-of-service" className="text-[#4e37a8] hover:underline">Terms of Service</a>.</p>
              </div>
           </div>

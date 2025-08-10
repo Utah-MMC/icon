@@ -273,9 +273,9 @@ export default function QuoteForm() {
               required
             />
             <label htmlFor="smsConsent" className="text-sm text-gray-300 leading-relaxed">
-              I agree to receive SMS messages from Icon Dumpsters regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
-              Message frequency varies based on your service needs and promotions. Message and data rates may apply. I can opt out at any time by replying STOP or calling (801) 918-6000. 
-              My mobile information will not be shared with third parties.
+              By checking this box, you agree to receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS from Icon Dumpsters. 
+              Message frequency varies. Message and data rates may apply. For help, reply HELP. To opt out, reply STOP. 
+              We do not share your information with third parties. See our privacy policy at https://www.icondumpsters.com/privacy-policy and terms and conditions at https://www.icondumpsters.com/terms-of-service.
             </label>
           </div>
         </div>

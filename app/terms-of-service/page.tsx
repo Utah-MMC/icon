@@ -205,12 +205,12 @@ export default function TermsOfService() {
               For complete details about our privacy practices, please review our <a href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</a>.
             </p>
             
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-              <p className="text-blue-800 font-semibold mb-2">Privacy Policy and Terms & Conditions</p>
-              <p className="text-blue-700 text-sm">
-                For more information, please visit the Privacy Policy and Terms & Conditions at: <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a>
-              </p>
-            </div>
+                         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+               <p className="text-blue-800 font-semibold mb-2">Privacy Policy and Terms & Conditions</p>
+               <p className="text-blue-700 text-sm">
+                 For more information, please visit the Privacy Policy at: <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://www.icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/terms-of-service/</a>
+               </p>
+             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">13. Dispute Resolution</h2>
             <p className="text-gray-700 mb-6">
@@ -245,10 +245,10 @@ export default function TermsOfService() {
                 you acknowledge that you have read, understood, and agree to be bound by these terms. 
                 Please also review our <a href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</a> for information about how we handle your data.
               </p>
-              <p className="text-blue-800 text-sm mt-2">
-                <strong>For more information, please visit the Privacy Policy and Terms & Conditions at:</strong> 
-                <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a>
-              </p>
+                             <p className="text-blue-800 text-sm mt-2">
+                 <strong>For more information, please visit the Privacy Policy at:</strong> 
+                 <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://www.icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/terms-of-service/</a>
+               </p>
             </div>
           </div>
         </div>
