@@ -199,6 +199,13 @@ export default function TermsOfService() {
             <p className="text-gray-700 mb-6">
               For complete details about our privacy practices, please review our <a href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</a>.
             </p>
+            
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+              <p className="text-blue-800 font-semibold mb-2">Privacy Policy Link</p>
+              <p className="text-blue-700 text-sm">
+                See our Privacy Policy for details: <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a>
+              </p>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">13. Dispute Resolution</h2>
             <p className="text-gray-700 mb-6">
@@ -232,6 +239,9 @@ export default function TermsOfService() {
                 <strong>Important:</strong> These Terms of Service are effective as of August 2025. By using our services, 
                 you acknowledge that you have read, understood, and agree to be bound by these terms. 
                 Please also review our <a href="/privacy-policy" className="text-blue-600 underline">Privacy Policy</a> for information about how we handle your data.
+              </p>
+              <p className="text-blue-800 text-sm mt-2">
+                <strong>Privacy Policy:</strong> See our Privacy Policy for details: <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a>
               </p>
             </div>
           </div>

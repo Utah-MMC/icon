@@ -220,6 +220,15 @@ export default function PrivacyPolicy() {
               </p>
             </div>
 
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <p className="text-green-800 font-semibold mb-2">Questions About Your Data</p>
+              <p className="text-green-700 text-sm">
+                If you have any questions or concerns about this Privacy Policy or your data, please contact us at 
+                <a href="mailto:icondumpsters@gmail.com" className="text-green-600 underline font-medium"> icondumpsters@gmail.com</a> or 
+                <a href="tel:(801) 918-6000" className="text-green-600 underline font-medium"> 801-918-6000</a>.
+              </p>
+            </div>
+
             <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400">
               <p className="text-yellow-800 text-sm">
                 <strong>Note:</strong> This privacy policy is effective as of January 2025. By using our services, 
