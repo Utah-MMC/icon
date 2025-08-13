@@ -77,31 +77,116 @@ export default function EmailFollowUpSystem() {
     return ratingData ? ratingData.rating : null;
   };
 
-  const sendRatingRequestEmail = (rental: CustomerRental) => {
-    const emailContent = generateRatingRequestEmail(rental);
-    
-    // In production, this would integrate with your email service
-    // For now, we'll simulate sending the email
-    console.log('Sending rating request email:', emailContent);
-    
-    // Update rental record
-    updateRentalFollowUp(rental.id, 'ratingRequest');
+  const sendRatingRequestEmail = async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'rating_request',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
+          }
+        })
+      });
+
+      const result = await response.json();
+      console.log('Rating request email result:', result);
+      
+      // Update rental record
+      updateRentalFollowUp(rental.id, 'ratingRequest');
+    } catch (error) {
+      console.error('Failed to send rating request email:', error);
+      // Fallback to console log
+      const emailContent = generateRatingRequestEmail(rental);
+      console.log('Sending rating request email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'ratingRequest');
+    }
   };
 
-  const sendReviewRequestEmail = (rental: CustomerRental) => {
-    const emailContent = generateReviewRequestEmail(rental);
-    
-    console.log('Sending review request email:', emailContent);
-    
-    updateRentalFollowUp(rental.id, 'reviewRequest');
+  const sendReviewRequestEmail = async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'review_request',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
+          }
+        })
+      });
+
+      const result = await response.json();
+      console.log('Review request email result:', result);
+      
+      updateRentalFollowUp(rental.id, 'reviewRequest');
+    } catch (error) {
+      console.error('Failed to send review request email:', error);
+      // Fallback to console log
+      const emailContent = generateReviewRequestEmail(rental);
+      console.log('Sending review request email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'reviewRequest');
+    }
   };
 
-  const sendReminderEmail = (rental: CustomerRental) => {
-    const emailContent = generateReminderEmail(rental);
-    
-    console.log('Sending reminder email:', emailContent);
-    
-    updateRentalFollowUp(rental.id, 'reminder');
+  const sendReminderEmail = async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'reminder',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
+          }
+        })
+      });
+
+      const result = await response.json();
+      console.log('Reminder email result:', result);
+      
+      updateRentalFollowUp(rental.id, 'reminder');
+    } catch (error) {
+      console.error('Failed to send reminder email:', error);
+      // Fallback to console log
+      const emailContent = generateReminderEmail(rental);
+      console.log('Sending reminder email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'reminder');
+    }
   };
 
   const generateRatingRequestEmail = (rental: CustomerRental) => {

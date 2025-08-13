@@ -11,7 +11,17 @@ export default function AdminDashboard() {
     revenue: 0,
     activeRentals: 0,
     totalDumpsters: 20,
-    customerSatisfaction: 0
+    customerSatisfaction: 0,
+    // New SEMrush and competitive data fields
+    googleReviews: 0,
+    googleRating: 5.0,
+    adSpend: 0,
+    costPerLead: 0,
+    organicKeywords: 0,
+    organicTraffic: 0,
+    domainAuthority: 0,
+    backlinks: 0,
+    marketPosition: 7
   });
 
   // Simple authentication (in production, use proper auth)
@@ -41,6 +51,22 @@ export default function AdminDashboard() {
       (window as any).updateKPI.rental(manualData.rentals, manualData.revenue);
       (window as any).updateKPI.utilization(manualData.activeRentals, manualData.totalDumpsters);
       (window as any).updateKPI.satisfaction(manualData.customerSatisfaction);
+      
+      // Save new competitive data to localStorage
+      const competitiveData = {
+        googleReviews: manualData.googleReviews,
+        googleRating: manualData.googleRating,
+        adSpend: manualData.adSpend,
+        costPerLead: manualData.costPerLead,
+        organicKeywords: manualData.organicKeywords,
+        organicTraffic: manualData.organicTraffic,
+        domainAuthority: manualData.domainAuthority,
+        backlinks: manualData.backlinks,
+        marketPosition: manualData.marketPosition
+      };
+      
+      localStorage.setItem('iconDumpstersCompetitiveData', JSON.stringify(competitiveData));
+      
       setShowManualEntry(false);
       alert('Data updated successfully!');
     }
@@ -166,6 +192,7 @@ export default function AdminDashboard() {
           <div className="bg-white shadow rounded-lg p-6 mb-6">
             <h3 className="text-lg font-medium text-gray-900 mb-4">Manual Data Entry</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Business Metrics */}
               <div>
                 <label className="block text-sm font-medium text-gray-700">Total Rentals</label>
                 <input
@@ -214,6 +241,98 @@ export default function AdminDashboard() {
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
                 />
               </div>
+              
+              {/* Google & Marketing Metrics */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Google Reviews</label>
+                <input
+                  type="number"
+                  value={manualData.googleReviews}
+                  onChange={(e) => setManualData({...manualData, googleReviews: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Google Rating (1-5)</label>
+                <input
+                  type="number"
+                  min="1"
+                  max="5"
+                  step="0.1"
+                  value={manualData.googleRating}
+                  onChange={(e) => setManualData({...manualData, googleRating: parseFloat(e.target.value) || 5.0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Ad Spend ($)</label>
+                <input
+                  type="number"
+                  value={manualData.adSpend}
+                  onChange={(e) => setManualData({...manualData, adSpend: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Cost Per Lead ($)</label>
+                <input
+                  type="number"
+                  value={manualData.costPerLead}
+                  onChange={(e) => setManualData({...manualData, costPerLead: parseFloat(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              
+              {/* SEO & Competitive Metrics */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Organic Keywords</label>
+                <input
+                  type="number"
+                  value={manualData.organicKeywords}
+                  onChange={(e) => setManualData({...manualData, organicKeywords: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Organic Traffic</label>
+                <input
+                  type="number"
+                  value={manualData.organicTraffic}
+                  onChange={(e) => setManualData({...manualData, organicTraffic: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Domain Authority (0-100)</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  value={manualData.domainAuthority}
+                  onChange={(e) => setManualData({...manualData, domainAuthority: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Backlinks</label>
+                <input
+                  type="number"
+                  value={manualData.backlinks}
+                  onChange={(e) => setManualData({...manualData, backlinks: parseInt(e.target.value) || 0})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Market Position (1-7)</label>
+                <input
+                  type="number"
+                  min="1"
+                  max="7"
+                  value={manualData.marketPosition}
+                  onChange={(e) => setManualData({...manualData, marketPosition: parseInt(e.target.value) || 7})}
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                />
+              </div>
               <div className="flex items-end">
                 <button
                   onClick={handleManualEntry}
@@ -247,10 +366,22 @@ export default function AdminDashboard() {
           <ul className="text-sm text-blue-700 space-y-1">
             <li>• <strong>Automatic Tracking:</strong> Quote requests and phone calls are tracked automatically</li>
             <li>• <strong>Manual Entry:</strong> Use the form above to update rental data, revenue, and customer satisfaction</li>
+            <li>• <strong>SEMrush Data:</strong> Add Google reviews, ad spend, SEO metrics, and competitive data</li>
             <li>• <strong>Export Data:</strong> Download your KPI data as a JSON file for analysis</li>
             <li>• <strong>Reset Data:</strong> Clear all monthly data (use at the beginning of each month)</li>
             <li>• <strong>Status Indicators:</strong> 🟢 On track, 🟡 Needs attention, 🔴 Below target</li>
           </ul>
+          
+          <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded">
+            <h5 className="text-sm font-medium text-green-800 mb-2">📊 New SEMrush Data Fields:</h5>
+            <ul className="text-sm text-green-700 space-y-1">
+              <li>• <strong>Google Reviews & Rating:</strong> Track your online reputation</li>
+              <li>• <strong>Ad Spend & Cost Per Lead:</strong> Monitor marketing efficiency</li>
+              <li>• <strong>Organic Keywords & Traffic:</strong> Track SEO performance</li>
+              <li>• <strong>Domain Authority & Backlinks:</strong> Monitor SEO strength</li>
+              <li>• <strong>Market Position:</strong> Your rank vs. 7 competitors (1=best, 7=worst)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

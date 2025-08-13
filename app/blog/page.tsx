@@ -8,9 +8,9 @@ import NewsletterSubscription from "../components/NewsletterSubscription";
 // Blog post data for search functionality
 const blogPosts = [
   {
-    id: "complete-dumpster-rental-guide-2025",
-    title: "Complete Dumpster Rental Guide 2025: Everything You Need to Know",
-    excerpt: "Master the essentials of dumpster rental with our comprehensive guide covering sizes, costs, permits, and best practices for 2025.",
+    id: "dumpster-rental-guide-2025",
+    title: "Dumpster Rental Guide 2025: How to Choose the Right Size, Price, and Service for Your Project",
+    excerpt: "Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable.",
     category: "DUMPSTER RENTAL",
     readTime: "8 min read",
     image: "/images/dumpsters.jpeg",
@@ -119,7 +119,7 @@ export default function Blog() {
                   <div className="h-96 overflow-hidden relative">
                     <ImageWithFallback 
                       src={filteredPosts.find(post => post.featured)?.image || "/images/dumpsters.jpeg"} 
-                      alt="Complete Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
+                      alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
                       className="hover:scale-105 transition-transform duration-500" 
                       fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}
                       fill={true}

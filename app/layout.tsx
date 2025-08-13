@@ -6,6 +6,8 @@ import GoogleAnalytics from "./components/GoogleAnalytics";
 import KPITracking from "./components/KPITracking";
 import CustomerRatingSystem from "./components/CustomerRatingSystem";
 import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
+import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
+import EnhancedHeader from "./components/EnhancedHeader";
 
 
 const geistSans = Geist({
@@ -116,6 +118,12 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Additional Open Graph tags for better Facebook compatibility */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content="Icon Dumpsters - Professional Dumpster Rental Services in Utah" />
       </head>
       <GoogleAnalytics />
       <KPITracking />
@@ -124,6 +132,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <CompetitiveKPITracking />
         {/* Top Bar - Purple Theme */}
         <div className="bg-[#4e37a8] text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

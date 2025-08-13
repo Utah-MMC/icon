@@ -13,7 +13,7 @@ Your KPI tracking system has been successfully integrated into your website. Her
    - All data is saved to your browser's local storage
 
 2. **Admin Dashboard**
-   - Access at: `https://yourdomain.com/admin`
+   - Access at: `https://icondumpsters.com/admin`
    - Password: `IconDumpsters2024!`
    - Real-time KPI display with status indicators
    - Manual data entry for rental information
@@ -32,7 +32,7 @@ Your KPI tracking system has been successfully integrated into your website. Her
 ## 🚀 How to Use Your KPI System
 
 ### Step 1: Access Your Dashboard
-1. Go to `https://yourdomain.com/admin`
+1. Go to `https://icondumpsters.com/admin`
 2. Enter password: `IconDumpsters2024!`
 3. You'll see your real-time KPI dashboard
 
