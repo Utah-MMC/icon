@@ -19,7 +19,7 @@ export default function DumpsterRentalGuide2025() {
         author="Icon Dumpsters"
         publishedDate="2025-01-20"
         modifiedDate="2025-01-20"
-        imageUrl="https://icondumpsters.com/images/dumpsters.jpeg"
+        imageUrl="https://icondumpsters.com/images/15-NEW-01.png"
         articleUrl="https://icondumpsters.com/dumpster-rental-guide-2025"
         category="DUMPSTER RENTAL"
         readTime="PT8M"
@@ -104,7 +104,7 @@ export default function DumpsterRentalGuide2025() {
           {/* Featured Image */}
           <div className="relative h-96 overflow-hidden rounded-xl mb-12">
             <ImageWithFallback 
-              src="/images/dumpsters.jpeg" 
+              src="/images/15-NEW-01.png" 
               alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
               className="object-cover" 
               fallbackSrc="/images/dumpsters.webp"

@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /test/
+Disallow: /test-email/
+Disallow: /test-formspree/
+Disallow: /test-og/
+Disallow: /test-security/
+
+# Allow important pages
+Allow: /about/
+Allow: /services/
+Allow: /dumpster-sizes/
+Allow: /blog/
+Allow: /contact/
+Allow: /faq/
+Allow: /privacy-policy/
+Allow: /terms-of-service/
+
+# Sitemap
+Sitemap: https://icondumpsters.com/sitemap.xml
+
+# Crawl-delay (optional - helps with server load)
+Crawl-delay: 1

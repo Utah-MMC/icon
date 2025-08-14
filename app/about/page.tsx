@@ -8,14 +8,21 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-100 to-gray-200 py-16 sm:py-24">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <ImageWithFallback 
+          src="/images/dumpsterSmallBanner5.jpeg" 
+          alt="About Icon Dumpsters - Professional Utah Dumpster Rental Services" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fallbackSrc="/images/dumpsterSmallBanner5.webp"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center sm:text-left">
-            <p className="text-sm sm:text-base text-gray-600 mb-2">Local & Family Operated Dumpster Company</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4e37a8] mb-6">
+                      <div className="text-center sm:text-left">
+            <p className="text-sm sm:text-base text-white mb-2">Local & Family Operated Dumpster Company</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               About Icon Dumpsters - Utah Dumpster Rental Services
             </h1>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-white max-w-4xl leading-relaxed">
               Icon Dumpsters was founded by a family with deep roots in pond service and landscaping. 
               With years of hands-on experience and a commitment to exceptional service, we set out to make image.png
               dumpster rentals more accessible, reliable, and affordable for homeowners and contractors throughout Utah.

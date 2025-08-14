@@ -16,12 +16,20 @@ export default function Services() {
       />
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 py-16">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <ImageWithFallback 
+          src="/images/dumpsterSmallBanner4.jpeg" 
+          alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fallbackSrc="/images/dumpsterSmallBanner4.webp"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-30"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Professional Dumpster Rental Services in Utah
           </h1>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Professional dumpster rental services in Utah with same-day delivery, competitive pricing, and reliable service.
           </p>
         </div>
@@ -144,10 +152,10 @@ export default function Services() {
             <div>
               <a href="/dumpster-sizes" className="block">
                               <ImageWithFallback 
-                src="/images/commercial.jpg" 
+                src="/images/dumpster500x500-2.jpeg" 
                 alt="Commercial Dumpster Rental Services in Utah" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                fallbackSrc="/images/dumpster500x500-1.webp"
+                fallbackSrc="/images/dumpster500x500-1.jpeg"
               />
               </a>
             </div>
@@ -194,10 +202,10 @@ export default function Services() {
             <div>
               <a href="/dumpster-sizes" className="block">
                               <ImageWithFallback 
-                src="/images/concrete.webp" 
+                src="/images/Lawn-Mower-Square-480x480.jpg" 
                 alt="Specialized Dumpster Rental Services in Utah" 
                 className="w-full h-80 object-cover rounded-lg shadow-lg hover:opacity-90 transition-opacity"
-                fallbackSrc="/images/Lawn-Mower-Square-480x480.jpg"
+                fallbackSrc="/images/dumpster500x500-1.jpeg"
                 />
               </a>
             </div>

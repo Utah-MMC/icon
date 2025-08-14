@@ -15,10 +15,10 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <ImageWithFallback 
-          src="/images/dumpsterSmallBanner3.jpeg" 
+          src="/images/dumpster500x200-1.jpeg" 
           alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
           className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner3.webp"
+          fallbackSrc="/images/dumpsterSmallBanner3.jpeg"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
         
@@ -28,6 +28,17 @@ export default function Home() {
           <a href="#quote-form" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
             Get A Quote
           </a>
+        </div>
+      </div>
+
+      {/* Quick Calculator Section - Added to top */}
+      <div className="bg-gray-50 py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#4e37a8] mb-2">Get Your Instant Quote</h2>
+            <p className="text-gray-600">Calculate your dumpster rental cost in seconds</p>
+          </div>
+          <DumpsterCalculator />
         </div>
       </div>
 
@@ -69,12 +80,12 @@ export default function Home() {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Dumpster Sizes</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <ImageWithFallback src="/images/dumpsters.jpeg" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover object-left rounded mb-2" fallbackSrc="/images/dumpsters.webp" />
+                  <ImageWithFallback src="/images/15-NEW-01.png" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover object-left rounded mb-2" fallbackSrc="/images/dumpsters.webp" />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">15 Yard Roll-off Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Perfect for small projects</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover rounded mb-2" fallbackSrc="/images/dumpster500x500-1.webp" />
+                  <ImageWithFallback src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover rounded mb-2" fallbackSrc="/images/dumpster500x500-1.webp" />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">20 Yard Roll-off Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Ideal for medium projects</p>
                 </div>
@@ -113,7 +124,7 @@ export default function Home() {
           {/* General Residential Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsters.webp" />
+              <ImageWithFallback src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Residential Dumpster Rental</h3>
@@ -127,7 +138,7 @@ export default function Home() {
           {/* Construction Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Construction Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.webp" />
+              <ImageWithFallback src="/images/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Construction Dumpster Rental</h3>
@@ -141,7 +152,7 @@ export default function Home() {
           {/* Concrete Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster5-500x500-1.webp" />
+              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Concrete Dumpster Rental</h3>
@@ -155,7 +166,7 @@ export default function Home() {
           {/* Roofing Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsterSmallBanner.jpeg" alt="Roofing Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner.webp" />
+              <ImageWithFallback src="/images/dumpster500x500-2.jpeg" alt="Roofing Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Roofing Dumpster Rental</h3>
@@ -169,7 +180,7 @@ export default function Home() {
           {/* Yard Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner2.webp" />
+              <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Yard Waste Dumpster Rental</h3>
@@ -183,7 +194,7 @@ export default function Home() {
           {/* Recyclable Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpsterSmallBanner3.webp" />
+              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Recyclable Waste Dumpster Rental</h3>
@@ -197,8 +208,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Dumpster Rental Cost Calculator Section */}
-      <DumpsterCalculator />
+
 
       {/* Popular Dumpster Sizes Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
@@ -207,7 +217,7 @@ export default function Home() {
           {/* Left Promotional Banner */}
           <div className="bg-[#4e37a8] text-white p-6 sm:p-8 rounded-lg relative overflow-hidden">
             <div className="absolute top-4 left-4 w-12 h-12 sm:w-16 sm:h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                              <ImageWithFallback src="/images/dumpster500x200-1.jpeg" alt="Roll-off Dumpster Truck for Utah Dumpster Rental" className="w-8 h-8 sm:w-12 sm:h-12 object-cover rounded" fallbackSrc="/images/dumpster500x200-1.webp" />
+                              <ImageWithFallback src="/images/dumpster500x200-1.webp" alt="Roll-off Dumpster Truck for Utah Dumpster Rental" className="w-8 h-8 sm:w-12 sm:h-12 object-cover rounded" fallbackSrc="/images/dumpsters.webp" />
             </div>
             <div className="text-center mt-6 sm:mt-8">
               <h2 className="text-xl sm:text-2xl font-bold mb-1">SEE OUR</h2>
@@ -224,7 +234,7 @@ export default function Home() {
           {/* 15 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">15 YARD ROLL-OFF DUMPSTER</h3>
-                            <ImageWithFallback src="/images/dumpster500x200-1.jpeg" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpster500x200-1.webp" />
+                            <ImageWithFallback src="/images/15-NEW-01.png" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpsters.webp" />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">
@@ -260,7 +270,7 @@ export default function Home() {
           {/* 20 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">20 YARD ROLL-OFF DUMPSTER</h3>
-                            <ImageWithFallback src="/images/dumpster500x200-2.jpeg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpster500x200-2.webp" />
+                            <ImageWithFallback src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpsters.webp" />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">
@@ -296,7 +306,7 @@ export default function Home() {
           {/* 30 Yard Dumpster Card */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">30 YARD ROLL-OFF DUMPSTER</h3>
-                            <ImageWithFallback src="/images/dumpster500x200-3.jpeg" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpster500x200-3.webp" />
+                            <ImageWithFallback src="/images/dumpster500x200-3.webp" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-24 sm:h-32 object-cover rounded mb-4" fallbackSrc="/images/dumpsters.webp" />
             
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-2">

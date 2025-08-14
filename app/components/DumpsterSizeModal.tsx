@@ -67,10 +67,10 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="w-12 h-12 sm:w-16 sm:h-16">
                         <ImageWithFallback 
-                          src="/images/dumpster500x200-1.jpeg" 
+                          src="/images/15-NEW-01.png" 
                           alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" 
                           className="w-full h-full object-cover rounded"
-                          fallbackSrc="/images/dumpster500x200-1.webp"
+                          fallbackSrc="/images/dumpsters.webp"
                         />
                       </div>
                       <div>

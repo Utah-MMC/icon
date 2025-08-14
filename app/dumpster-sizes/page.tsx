@@ -129,7 +129,7 @@ export default function DumpsterSizes() {
                 <tr className="bg-white">
                   <td className="border border-gray-300 px-6 py-4">
                     <div className="flex items-center">
-                      <ImageWithFallback src="/images/dumpsters.jpeg" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpsters.webp" />
+                      <ImageWithFallback src="/images/15-NEW-01.png" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpsters.webp" />
                       <span className="font-medium">15 Yard</span>
                     </div>
                   </td>
@@ -140,7 +140,7 @@ export default function DumpsterSizes() {
                 <tr className="bg-gray-50">
                   <td className="border border-gray-300 px-6 py-4">
                     <div className="flex items-center">
-                      <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster500x500-1.webp" />
+                      <ImageWithFallback src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster500x500-1.webp" />
                       <span className="font-medium">20 Yard</span>
                     </div>
                   </td>
@@ -203,10 +203,10 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/dumpster500x200-1.jpeg" 
+                            src="/images/15-NEW-01.png" 
                             alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" 
                             className="w-full h-full object-cover rounded"
-                            fallbackSrc="/images/dumpster500x200-1.webp"
+                            fallbackSrc="/images/dumpsters.webp"
                           />
                         </div>
                         <div>

@@ -13,7 +13,7 @@ const blogPosts = [
     excerpt: "Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable.",
     category: "DUMPSTER RENTAL",
     readTime: "8 min read",
-    image: "/images/dumpsters.jpeg",
+    image: "/images/15-NEW-01.png",
     fallbackImage: "/images/dumpsters.webp",
     featured: true
   },
@@ -69,13 +69,21 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-20">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <ImageWithFallback 
+          src="/images/dumpsterSmallBanner3.jpeg" 
+          alt="Icon Dumpsters Blog - Expert Insights on Dumpster Rental and Waste Management" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fallbackSrc="/images/dumpsterSmallBanner3.webp"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-30"></div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Icon Dumpsters Blog
             </h1>
-            <p className="text-xl md:text-2xl text-purple-100 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               Expert insights, tips, and guides on waste management, dumpster rental, and construction cleanup. 
               Stay updated with the latest industry trends and best practices.
             </p>
@@ -118,7 +126,7 @@ export default function Blog() {
                 <div className="relative">
                   <div className="h-96 overflow-hidden relative">
                     <ImageWithFallback 
-                      src={filteredPosts.find(post => post.featured)?.image || "/images/dumpsters.jpeg"} 
+                      src={filteredPosts.find(post => post.featured)?.image || "/images/15-NEW-01.png"} 
                       alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
                       className="hover:scale-105 transition-transform duration-500" 
                       fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}
