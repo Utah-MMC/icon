@@ -37,39 +37,6 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-        {/* Background image */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <ImageWithFallback 
-          src="/images/dumpsterSmallBanner2.jpeg" 
-          alt="Dumpster Rental FAQ - Common Questions and Answers for Utah Dumpster Rental Services" 
-          className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner2.webp"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Dumpster Rental FAQ</h1>
-          <p className="text-lg sm:text-xl mb-6">Get answers to your questions about dumpster rental in Utah</p>
-          <a href="#faq-content" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
-            View FAQ
-          </a>
-        </div>
-      </div>
-
-      {/* FAQ Content */}
-      <div id="faq-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Find answers to common questions about dumpster rental services in Utah. Can't find what you're looking for? Call us at (801) 918-6000.
-          </p>
-        </div>
-
   const faqData = [
     {
       category: "Dumpster Sizes & Selection",
@@ -193,6 +160,37 @@ export default function FAQPage() {
   ];
 
   return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+        {/* Background image */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <ImageWithFallback 
+          src="/images/dumpsterSmallBanner2.jpeg" 
+          alt="Dumpster Rental FAQ - Common Questions and Answers for Utah Dumpster Rental Services" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fallbackSrc="/images/dumpsterSmallBanner2.webp"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Dumpster Rental FAQ</h1>
+          <p className="text-lg sm:text-xl mb-6">Get answers to your questions about dumpster rental in Utah</p>
+          <a href="#faq-content" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
+            View FAQ
+          </a>
+        </div>
+      </div>
+
+      {/* FAQ Content */}
+      <div id="faq-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Find answers to common questions about dumpster rental services in Utah. Can't find what you're looking for? Call us at (801) 918-6000.
+          </p>
+        </div>
     <>
       <ArticleSchema
         title="Dumpster Rental FAQ - Common Questions & Answers"
