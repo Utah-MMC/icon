@@ -1,5 +1,8 @@
 'use client';
 
+import DumpsterCalculator from '../components/DumpsterCalculator';
+import QuoteForm from '../components/QuoteForm';
+
 export default function WestJordanPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -40,41 +43,52 @@ export default function WestJordanPage() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">
-                <li>• South Jordan</li>
-                <li>• Taylorsville</li>
-                <li>• Kearns</li>
-                <li>• West Valley City</li>
-                <li>• Riverton</li>
+                <li>• <a href="/murray" className="text-[#4e37a8] hover:underline">Murray</a></li>
+                <li>• <a href="/midvale" className="text-[#4e37a8] hover:underline">Midvale</a></li>
+                <li>• <a href="/sandy" className="text-[#4e37a8] hover:underline">Sandy</a></li>
+                <li>• <a href="/south-jordan" className="text-[#4e37a8] hover:underline">South Jordan</a></li>
+                <li>• <a href="/draper" className="text-[#4e37a8] hover:underline">Draper</a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="bg-green-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Popular West Jordan Projects</h2>
-          <p className="text-gray-600 mb-4">We serve a variety of projects in West Jordan:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Residential Projects:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Home renovations</li>
-                <li>• Garage cleanouts</li>
-                <li>• Yard waste removal</li>
-                <li>• Moving and estate cleanouts</li>
-                <li>• Basement finishing</li>
-              </ul>
+        <div className="bg-green-50 p-8 rounded-lg mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">West Jordan Dumpster Services</h2>
+          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in West Jordan:</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
+              <p className="text-gray-600 mb-3">15, 20, and 30 yard options</p>
+              <a href="/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">
+                View All Sizes →
+              </a>
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Commercial Projects:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Construction debris</li>
-                <li>• Office renovations</li>
-                <li>• Retail remodeling</li>
-                <li>• Property management</li>
-                <li>• Landscaping projects</li>
-              </ul>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
+              <p className="text-gray-600 mb-3">Competitive rates with no hidden fees</p>
+              <a href="#pricing" className="text-[#4e37a8] hover:underline font-medium">
+                Get Quote →
+              </a>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
+              <p className="text-gray-600 mb-3">Residential and commercial solutions</p>
+              <a href="/services" className="text-[#4e37a8] hover:underline font-medium">
+                Learn More →
+              </a>
             </div>
           </div>
+        </div>
+
+        {/* Dumpster Calculator Section */}
+        <div id="pricing" className="mb-12">
+          <DumpsterCalculator />
+        </div>
+
+        {/* Quote Form Section */}
+        <div className="mb-12">
+          <QuoteForm />
         </div>
       </div>
     </div>

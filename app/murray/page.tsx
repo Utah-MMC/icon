@@ -1,5 +1,8 @@
 'use client';
 
+import DumpsterCalculator from '../components/DumpsterCalculator';
+import QuoteForm from '../components/QuoteForm';
+
 export default function MurrayPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -42,15 +45,15 @@ export default function MurrayPage() {
               <ul className="space-y-1 text-gray-600">
                 <li>• <a href="/midvale" className="text-[#4e37a8] hover:underline">Midvale</a></li>
                 <li>• <a href="/sandy" className="text-[#4e37a8] hover:underline">Sandy</a></li>
-                <li>• South Salt Lake</li>
-                <li>• Taylorsville</li>
-                <li>• West Valley City</li>
+                <li>• <a href="/west-jordan" className="text-[#4e37a8] hover:underline">West Jordan</a></li>
+                <li>• <a href="/south-jordan" className="text-[#4e37a8] hover:underline">South Jordan</a></li>
+                <li>• <a href="/draper" className="text-[#4e37a8] hover:underline">Draper</a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="bg-green-50 p-8 rounded-lg mb-8">
+        <div className="bg-green-50 p-8 rounded-lg mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Murray Dumpster Services</h2>
           <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Murray:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -76,6 +79,16 @@ export default function MurrayPage() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Dumpster Calculator Section */}
+        <div id="pricing" className="mb-12">
+          <DumpsterCalculator />
+        </div>
+
+        {/* Quote Form Section */}
+        <div className="mb-12">
+          <QuoteForm />
         </div>
       </div>
     </div>
