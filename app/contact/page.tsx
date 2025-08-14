@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ImageWithFallback from "../components/ImageWithFallback";
 import QuoteForm from "../components/QuoteForm";
-import StructuredData from "../components/StructuredData";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,28 +27,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Icon Dumpsters - Utah Dumpster Rental Services",
-    "description": "Contact Icon Dumpsters for professional dumpster rental services in Utah. Get free quotes, schedule delivery, and learn about our roll-off dumpster options.",
-    "url": "https://www.icondumpsters.com/contact",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Icon Dumpsters",
-      "telephone": "+1-801-918-6000",
-      "email": "icondumpsters@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "UT",
-        "addressCountry": "US"
-      },
-      "serviceArea": {
-        "@type": "State",
-        "name": "Utah"
-      }
-    }
-  };
+
 
   return (
     <div className="min-h-screen">
@@ -208,7 +187,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <StructuredData data={structuredData} />
+      
     </div>
   );
 }
