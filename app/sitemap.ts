@@ -40,6 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Local service pages - High priority for local SEO
     {
+      url: `${baseUrl}/murray`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/midvale`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sandy`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/utah-dumpster-rental`,
       lastModified: lastWeek,
       changeFrequency: 'weekly',
