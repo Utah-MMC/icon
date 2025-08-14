@@ -7,12 +7,27 @@ export default function DumpsterCalculator() {
   // State for selected dumpster size
   const [selectedSize, setSelectedSize] = React.useState<string>('');
 
-  // Hub location coordinates (1515 Beck St, Salt Lake City, UT 84116)
-  const HUB_LOCATION = {
-    lat: 40.7589,
-    lng: -111.8911,
-    address: "1515 Beck St, Salt Lake City, UT 84116"
-  };
+  // Hub locations coordinates
+  const HUB_LOCATIONS = [
+    {
+      lat: 40.7589,
+      lng: -111.8911,
+      address: "1515 Beck St, Salt Lake City, UT 84116",
+      name: "North Hub"
+    },
+    {
+      lat: 40.6897,
+      lng: -111.8291,
+      address: "5911 S 1300 E, Salt Lake City, UT",
+      name: "South Hub"
+    },
+    {
+      lat: 40.7456,
+      lng: -111.8910,
+      address: "588 Gladiola St, Salt Lake City, UT 84104",
+      name: "Central Hub"
+    }
+  ];
 
   // Gas pricing constants
   const DIESEL_PRICE_PER_GALLON = 3.779;
@@ -36,6 +51,22 @@ export default function DumpsterCalculator() {
       Math.sin(dLon/2) * Math.sin(dLon/2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     return R * c;
+  };
+
+  // Function to find the closest hub to a given location
+  const findClosestHub = (customerLat: number, customerLng: number) => {
+    let closestHub = HUB_LOCATIONS[0];
+    let shortestDistance = calculateDistance(customerLat, customerLng, closestHub.lat, closestHub.lng);
+    
+    for (let i = 1; i < HUB_LOCATIONS.length; i++) {
+      const distance = calculateDistance(customerLat, customerLng, HUB_LOCATIONS[i].lat, HUB_LOCATIONS[i].lng);
+      if (distance < shortestDistance) {
+        shortestDistance = distance;
+        closestHub = HUB_LOCATIONS[i];
+      }
+    }
+    
+    return { hub: closestHub, distance: shortestDistance };
   };
 
   // Function to get coordinates from zip code using a comprehensive Utah mapping
@@ -191,33 +222,27 @@ export default function DumpsterCalculator() {
 
     // Function to calculate delivery surcharge (gas + labor)
   const calculateDeliverySurcharge = (distance: number, zipCode: string): { gasCost: number, laborCost: number, totalCost: number } => {
-    // Always include labor cost for all orders
     let gasCost = 0;
     let laborCost = 0;
     
     if (distance <= FREE_DELIVERY_RADIUS) {
-      // Within free delivery radius - no gas cost, but still labor cost
+      // Within free delivery radius - no surcharges
       gasCost = 0;
+      laborCost = 0;
     } else {
-      // Beyond free delivery radius - calculate gas cost
+      // Beyond free delivery radius - calculate both gas and labor costs
       const extraMiles = distance - FREE_DELIVERY_RADIUS;
-      const roundTripMiles = extraMiles * 2; // Delivery and pickup
+      const roundTripMiles = extraMiles * 2; // Delivery and pickup (both ways)
+      
+      // Calculate gas cost for round trip
       const gallonsNeeded = roundTripMiles / MILES_PER_GALLON;
       gasCost = gallonsNeeded * DIESEL_PRICE_PER_GALLON;
+      
+      // Calculate labor cost for round trip
+      const roundTripHours = (roundTripMiles) / AVERAGE_SPEED_MPH;
+      const totalLaborHours = roundTripHours + DROPOFF_TIME_HOURS + PICKUP_TIME_HOURS;
+      laborCost = totalLaborHours * DRIVER_RATE_PER_HOUR;
     }
-    
-    // Calculate labor cost based on location
-    const roundTripHours = distance > FREE_DELIVERY_RADIUS ? 
-      ((distance - FREE_DELIVERY_RADIUS) * 2) / AVERAGE_SPEED_MPH : 0;
-    
-    // Determine service hours based on location
-    let serviceHours = 2; // Default for other counties
-    if (zipCode.startsWith('840') || zipCode.startsWith('841')) {
-      serviceHours = 1; // Salt Lake County (840xx and 841xx zip codes)
-    }
-    
-    const totalLaborHours = roundTripHours + serviceHours;
-    laborCost = totalLaborHours * DRIVER_RATE_PER_HOUR;
     
     const totalCost = gasCost + laborCost;
     
@@ -240,20 +265,18 @@ export default function DumpsterCalculator() {
     let distance = 0;
     let deliverySurcharge = { gasCost: 0, laborCost: 0, totalCost: 0 };
     let distanceMessage = '';
+    let closestHubInfo = null;
 
     if (customerCoords) {
-      distance = calculateDistance(
-        HUB_LOCATION.lat, 
-        HUB_LOCATION.lng, 
-        customerCoords.lat, 
-        customerCoords.lng
-      );
+      // Find the closest hub to the customer
+      closestHubInfo = findClosestHub(customerCoords.lat, customerCoords.lng);
+      distance = closestHubInfo.distance;
       deliverySurcharge = calculateDeliverySurcharge(distance, zipCode);
       
       if (distance <= FREE_DELIVERY_RADIUS) {
-        distanceMessage = `📍 Free delivery within ${FREE_DELIVERY_RADIUS} miles (${distance.toFixed(1)} miles from hub)`;
+        distanceMessage = `📍 Free delivery within ${FREE_DELIVERY_RADIUS} miles (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
       } else {
-        distanceMessage = `🚛 Delivery surcharge for ${distance.toFixed(1)} miles from hub`;
+        distanceMessage = `🚛 Delivery surcharge for ${distance.toFixed(1)} miles from ${closestHubInfo.hub.name} (round trip)`;
       }
     } else {
       // Fallback for unknown zip codes - assume outside free delivery area
@@ -314,7 +337,7 @@ export default function DumpsterCalculator() {
         <div class="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border-2 border-green-200 shadow-md">
           <h4 class="text-lg font-bold text-green-800 mb-3">💰 Estimated Cost</h4>
           <div class="text-3xl font-bold text-green-600 mb-2">$${finalPrice.toLocaleString()}</div>
-          <p class="text-gray-600 mb-3">For ${size}-yard dumpster, ${duration} day${duration === '1' ? '' : 's'} in ${zipCode}</p>
+          <p class="text-gray-600 mb-3">For ${size}-yard dumpster, ${duration} day${duration === '1' ? '' : 's'} in ${zipCode}${closestHubInfo ? ` (serving from ${closestHubInfo.hub.name})` : ''}</p>
           
           <div class="mb-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
             <p class="text-sm text-blue-800 font-semibold">${distanceMessage}</p>
@@ -327,10 +350,10 @@ export default function DumpsterCalculator() {
                ${extraDays > 0 ? `<div>Additional days (${extraDays} × $${dailyRate}): $${extraCost.toLocaleString()}</div>` : ''}`
             }
                          ${deliverySurcharge.totalCost > 0 ? 
-               `<div class="text-orange-600 font-semibold">Delivery surcharge: +$${deliverySurcharge.totalCost.toLocaleString()}</div>
-                <div class="text-xs text-gray-500 ml-4">• Gas cost: +$${deliverySurcharge.gasCost.toLocaleString()}</div>
-                <div class="text-xs text-gray-500 ml-4">• Labor cost: +$${deliverySurcharge.laborCost.toLocaleString()}</div>` : 
-               `<div class="text-orange-600 font-semibold">Labor cost: +$${deliverySurcharge.laborCost.toLocaleString()}</div>`
+               `<div class="text-orange-600 font-semibold">Delivery surcharge (round trip): +$${deliverySurcharge.totalCost.toLocaleString()}</div>
+                <div class="text-xs text-gray-500 ml-4">• Gas cost (round trip): +$${deliverySurcharge.gasCost.toLocaleString()}</div>
+                <div class="text-xs text-gray-500 ml-4">• Labor cost (round trip): +$${deliverySurcharge.laborCost.toLocaleString()}</div>` : 
+               `<div class="text-green-600 font-semibold">✅ Free delivery within ${FREE_DELIVERY_RADIUS} miles</div>`
                }
             ${isVeteran ? `<div class="text-green-600 font-semibold">Veteran discount (10%): -$${veteranDiscount.toLocaleString()}</div>` : ''}
           </div>
@@ -386,7 +409,7 @@ export default function DumpsterCalculator() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-colors"
                 maxLength={5}
               />
-              <p className="text-xs text-gray-500 mt-1">Hub: 1515 Beck St, Salt Lake City, UT 84116</p>
+              <p className="text-xs text-gray-500 mt-1">Multiple hubs serving Utah - calculator finds closest location</p>
             </div>
             
             <div>
@@ -534,13 +557,14 @@ export default function DumpsterCalculator() {
           
           <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
             <h4 className="font-semibold text-yellow-800 mb-2">💡 How the Advanced Calculator Works</h4>
-                         <ul className="text-sm text-yellow-700 space-y-1">
+                                      <ul className="text-sm text-yellow-700 space-y-1">
+               <li>• <strong>Multiple Hubs:</strong> We have 3 locations serving Utah - calculator automatically finds the closest</li>
                <li>• <strong>1-Day Special:</strong> Discounted rates for same-day pickup projects</li>
                <li>• <strong>Standard Rates:</strong> Base prices include delivery, pickup, and disposal for 7 days</li>
                <li>• <strong>Extended Rentals:</strong> Additional days are charged at daily rates</li>
                <li>• <strong>Veteran Discount:</strong> 10% off for all veterans (thank you for your service!)</li>
-                               <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations beyond 10 miles from our hub</li>
-               <li>• <strong>Free Delivery:</strong> No gas surcharge within 10 miles of 1515 Beck St, Salt Lake City</li>
+                               <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations beyond 10 miles from our hub (round trip)</li>
+                <li>• <strong>Free Delivery:</strong> No surcharges within 10 miles of our closest hub location</li>
                                <li>• <strong>Weight-Based Pricing:</strong> $55 per ton charged after disposal facility weighing</li>
                <li>• <strong>Location Factors:</strong> Prices vary by location and availability</li>
                <li>• <strong>Prohibited Items:</strong> Additional charges may apply for restricted materials</li>
