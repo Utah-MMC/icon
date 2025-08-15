@@ -74,9 +74,27 @@ export default function EnhancedHeader() {
                       <a href="/south-jordan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         South Jordan
                       </a>
-                      <a href="/draper" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                        Draper
-                      </a>
+                                             <a href="/draper" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Draper
+                       </a>
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         Salt Lake City Areas
+                       </div>
+                       <a href="/rose-park" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Rose Park
+                       </a>
+                       <a href="/sugar-house" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Sugar House
+                       </a>
+                       <a href="/glendale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Glendale
+                       </a>
+                       <a href="/poplar-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Poplar Grove
+                       </a>
+                       <a href="/downtown-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Downtown Salt Lake
+                       </a>
                     </div>
                   </div>
                 )}
@@ -176,9 +194,27 @@ export default function EnhancedHeader() {
               <a href="/south-jordan" className="block text-gray-700 hover:text-[#4e37a8] py-1">
                 South Jordan
               </a>
-              <a href="/draper" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                Draper
-              </a>
+                             <a href="/draper" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Draper
+               </a>
+               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">
+                 Salt Lake City Areas
+               </div>
+               <a href="/rose-park" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Rose Park
+               </a>
+               <a href="/sugar-house" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Sugar House
+               </a>
+               <a href="/glendale" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Glendale
+               </a>
+               <a href="/poplar-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Poplar Grove
+               </a>
+               <a href="/downtown-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">
+                 Downtown Salt Lake
+               </a>
             </div>
             
             <a href="/blog" className="block text-gray-700 hover:text-[#4e37a8] py-2">

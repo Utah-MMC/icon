@@ -13,6 +13,11 @@ export default function WestJordanPage() {
         <p className="text-lg text-gray-600 mb-8">
           Professional dumpster rental services in West Jordan, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
         </p>
+
+        {/* Dumpster Calculator Section - Moved to Top */}
+        <div id="pricing" className="mb-12">
+          <DumpsterCalculator />
+        </div>
         
         <div className="bg-gray-50 p-8 rounded-lg mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in West Jordan?</h2>
@@ -79,11 +84,6 @@ export default function WestJordanPage() {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Dumpster Calculator Section */}
-        <div id="pricing" className="mb-12">
-          <DumpsterCalculator />
         </div>
 
         {/* Quote Form Section */}

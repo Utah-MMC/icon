@@ -69,12 +69,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/draper`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+         {
+       url: `${baseUrl}/draper`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
+     // Salt Lake City area pages - High priority for local SEO
+     {
+       url: `${baseUrl}/rose-park`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
+     {
+       url: `${baseUrl}/sugar-house`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
+     {
+       url: `${baseUrl}/glendale`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
+     {
+       url: `${baseUrl}/poplar-grove`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
+     {
+       url: `${baseUrl}/downtown-salt-lake`,
+       lastModified: currentDate,
+       changeFrequency: 'weekly',
+       priority: 0.9,
+     },
     {
       url: `${baseUrl}/utah-dumpster-rental`,
       lastModified: lastWeek,

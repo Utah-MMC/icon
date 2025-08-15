@@ -3,15 +3,15 @@
 import DumpsterCalculator from '../components/DumpsterCalculator';
 import QuoteForm from '../components/QuoteForm';
 
-export default function DraperPage() {
+export default function SugarHousePage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Draper, UT
+          Dumpster Rental Sugar House, UT
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-          Professional dumpster rental services in Draper, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
+          Professional dumpster rental services in Sugar House, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
         </p>
 
         {/* Dumpster Calculator Section - Moved to Top */}
@@ -20,47 +20,47 @@ export default function DraperPage() {
         </div>
         
         <div className="bg-gray-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Draper?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Sugar House?</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Draper and surrounding areas</li>
+            <li>Same-day delivery to Sugar House and surrounding areas</li>
             <li>Competitive pricing with no hidden fees</li>
             <li>Flexible rental periods (1-30 days)</li>
             <li>Professional customer service</li>
-            <li>Local knowledge of Draper regulations</li>
+            <li>Local knowledge of Sugar House regulations</li>
             <li>Multiple dumpster sizes available</li>
           </ul>
         </div>
 
         <div className="bg-blue-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Draper and surrounding communities:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Sugar House Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Sugar House and surrounding communities:</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Draper Areas:</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Sugar House Areas:</h3>
               <ul className="space-y-1 text-gray-600">
-                <li>• Downtown Draper</li>
-                <li>• Draper Heights</li>
-                <li>• Suncrest</li>
-                <li>• Draper East</li>
-                <li>• Draper West</li>
+                <li>• Sugar House Park</li>
+                <li>• Sugar House Business District</li>
+                <li>• Sugar House East</li>
+                <li>• Sugar House West</li>
+                <li>• Highland Park</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">
-                <li>• <a href="/murray" className="text-[#4e37a8] hover:underline">Murray</a></li>
-                <li>• <a href="/midvale" className="text-[#4e37a8] hover:underline">Midvale</a></li>
-                <li>• <a href="/sandy" className="text-[#4e37a8] hover:underline">Sandy</a></li>
-                <li>• <a href="/west-jordan" className="text-[#4e37a8] hover:underline">West Jordan</a></li>
-                <li>• <a href="/south-jordan" className="text-[#4e37a8] hover:underline">South Jordan</a></li>
+                <li>• <a href="/rose-park" className="text-[#4e37a8] hover:underline">Rose Park</a></li>
+                <li>• <a href="/glendale" className="text-[#4e37a8] hover:underline">Glendale</a></li>
+                <li>• <a href="/poplar-grove" className="text-[#4e37a8] hover:underline">Poplar Grove</a></li>
+                <li>• <a href="/fairpark" className="text-[#4e37a8] hover:underline">Fairpark</a></li>
+                <li>• <a href="/downtown-salt-lake" className="text-[#4e37a8] hover:underline">Downtown Salt Lake</a></li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="bg-green-50 p-8 rounded-lg mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Dumpster Services</h2>
-          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Draper:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Sugar House Dumpster Services</h2>
+          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Sugar House:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
