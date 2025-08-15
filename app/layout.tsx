@@ -21,9 +21,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-  description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Get reliable, affordable dumpster rentals from Icon Dumpsters. Call (801) 918-6000 for instant quotes.",
-  keywords: "dumpster rental, roll-off dumpster, dumpster rental near me, Utah dumpster rental, dumpster rental Utah, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, rolloff dumpster, Icon Dumpsters, Salt Lake City dumpster rental",
+  title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+  description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Call (801) 918-6000 for instant quotes.",
+  keywords: "Icon Dumpsters, dumpster rental, roll-off dumpster, dumpster rental near me, Utah dumpster rental, dumpster rental Utah, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, rolloff dumpster, Salt Lake City dumpster rental",
   authors: [{ name: "Icon Dumpsters" }],
   creator: "Icon Dumpsters",
   publisher: "Icon Dumpsters",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Get reliable, affordable dumpster rentals.",
+    title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+    description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
     url: 'https://icondumpsters.com',
     siteName: 'Icon Dumpsters',
     images: [
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Icon Dumpsters - Professional Dumpster Rental Services | Utah",
-    description: "Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
+    title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+    description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
     images: [
       {
         url: '/images/og-image.png',

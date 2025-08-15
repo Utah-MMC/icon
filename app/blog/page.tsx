@@ -1,9 +1,51 @@
-"use client";
-
+import { Metadata } from "next";
+import { useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import NewsletterSubscription from "../components/NewsletterSubscription";
+import BlogSearch from "../components/BlogSearch";
+
+export const metadata: Metadata = {
+  title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+  description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices. Stay updated with the latest trends.",
+  keywords: "dumpster rental blog, waste management tips, construction cleanup guide, dumpster rental insights, waste disposal blog, Icon Dumpsters blog",
+  openGraph: {
+    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices.",
+    url: 'https://icondumpsters.com/blog',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/15-NEW-01.png',
+        width: 1200,
+        height: 630,
+        alt: 'Icon Dumpsters Blog - Expert Insights on Dumpster Rental and Waste Management',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
+    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices.",
+    images: ['/images/15-NEW-01.png'],
+  },
+  alternates: {
+    canonical: '/blog',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 // Blog post data for search functionality
 const blogPosts = [
@@ -46,25 +88,8 @@ const blogPosts = [
   }
 ];
 
-// Metadata is handled in layout.tsx for client components
-
 export default function Blog() {
-  const [searchTerm, setSearchTerm] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-
-  // Search functionality
-  useEffect(() => {
-    if (searchTerm.trim() === "") {
-      setFilteredPosts(blogPosts);
-    } else {
-      const filtered = blogPosts.filter(post =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredPosts(filtered);
-    }
-  }, [searchTerm]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -89,18 +114,10 @@ export default function Blog() {
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-lg mx-auto relative">
-              <input 
-                type="text" 
-                placeholder="Search articles..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50 shadow-lg"
-              />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-all duration-200 shadow-md">
-                Search
-              </button>
-            </div>
+            <BlogSearch 
+              blogPosts={blogPosts} 
+              onSearchChange={setFilteredPosts} 
+            />
           </div>
         </div>
       </section>
@@ -112,10 +129,11 @@ export default function Blog() {
           {/* Main Content Area */}
           <div className="xl:col-span-3">
             {/* Search Results Count */}
-            {searchTerm && (
+            {filteredPosts.length !== blogPosts.length && (
               <div className="mb-6">
                 <p className="text-gray-600">
-                  Found {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} for "{searchTerm}"
+                  Found {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} 
+                  {filteredPosts.length < blogPosts.length && ' (filtered from search)'}
                 </p>
               </div>
             )}
