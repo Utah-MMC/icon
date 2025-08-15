@@ -78,7 +78,7 @@ export default function Home() {
             
             <div className="pt-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Dumpster Sizes</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <ImageWithFallback src="/images/15-NEW-01.png" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover object-left rounded mb-2" fallbackSrc="/images/dumpsters.webp" />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">15 Yard Roll-off Dumpster</h4>
@@ -93,6 +93,25 @@ export default function Home() {
                   <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover rounded mb-2" fallbackSrc="/images/dumpster5-500x500-1.webp" />
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">30 Yard Roll-off Dumpster</h4>
                   <p className="text-xs sm:text-sm text-gray-600">Great for large projects</p>
+                </div>
+              </div>
+              
+              {/* Specialized Dumpster Options */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <ImageWithFallback src="/images/15-NEW-01.png" alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover object-left rounded mb-2" fallbackSrc="/images/dumpsters.webp" />
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">10 Yard Clean Dirt Disposal</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">Perfect for dirt & soil projects</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <ImageWithFallback src="/images/dumpster500x200-2.jpeg" alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover rounded mb-2" fallbackSrc="/images/dumpster500x200-2.webp" />
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">10 Yard Mixed Load Disposal</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">4 tons included</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental" className="w-full h-20 object-cover rounded mb-2" fallbackSrc="/images/dumpster5-500x500-1.webp" />
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">12 Yard Concrete Disposal</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">Perfect for concrete projects</p>
                 </div>
               </div>
             </div>
