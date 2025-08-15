@@ -367,9 +367,9 @@ export default function DumpsterCalculator() {
       );
       
       if (isSaltLakeCounty(zipCode)) {
-        distanceMessage = `📍 Free delivery in Salt Lake County (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
+        distanceMessage = `📍 Salt Lake County location (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
       } else if (distance <= FREE_DELIVERY_RADIUS) {
-        distanceMessage = `📍 Free delivery within ${FREE_DELIVERY_RADIUS} miles (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
+        distanceMessage = `📍 Within ${FREE_DELIVERY_RADIUS} mile radius (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
       } else {
         const drivingTime = deliverySurcharge.drivingTime || 0;
         const drivingDistance = deliverySurcharge.drivingDistance || distance;
@@ -382,16 +382,17 @@ export default function DumpsterCalculator() {
       distanceMessage = `🚛 Delivery surcharge applied (zip code not in database)`;
     }
     
-    // Bundle pricing structure - Updated to match 30-yard pricing for new dumpsters
+    // Bundle pricing structure - All bundle prices ARE the total price (including pickup and dropoff)
     const bundlePrices = {
-      '15': 200,
-      '20': 250,
-      '30': 350,
-      '10-dirt': 350,      // Same as 30-yard
-      '10-mixed': 350,     // Same as 30-yard
-      '12-concrete': 350   // Same as 30-yard
+      '15': 300,  // Total bundle price
+      '20': 350,  // Total bundle price
+      '30': 375,  // Total bundle price for 7 days
+      '10-dirt': 375,      // Same as 30-yard
+      '10-mixed': 375,     // Same as 30-yard
+      '12-concrete': 375   // Same as 30-yard
     };
     
+    // Pickup and dropoff fees (for breakdown transparency only)
     const dropOffPrices = {
       '15': 75,
       '20': 75,
@@ -408,6 +409,16 @@ export default function DumpsterCalculator() {
       '10-dirt': 75,
       '10-mixed': 75,
       '12-concrete': 75
+    };
+    
+    // Calculate base rental portion for transparency breakdown
+    const basePrices = {
+      '15': bundlePrices['15'] - dropOffPrices['15'] - pickUpPrices['15'],
+      '20': bundlePrices['20'] - dropOffPrices['20'] - pickUpPrices['20'],
+      '30': bundlePrices['30'] - dropOffPrices['30'] - pickUpPrices['30'],
+      '10-dirt': bundlePrices['10-dirt'] - dropOffPrices['10-dirt'] - pickUpPrices['10-dirt'],
+      '10-mixed': bundlePrices['10-mixed'] - dropOffPrices['10-mixed'] - pickUpPrices['10-mixed'],
+      '12-concrete': bundlePrices['12-concrete'] - dropOffPrices['12-concrete'] - pickUpPrices['12-concrete']
     };
     
     const dailyRates = {
@@ -430,6 +441,7 @@ export default function DumpsterCalculator() {
     };
     
     const bundlePrice = bundlePrices[size as keyof typeof bundlePrices];
+    const basePrice = basePrices[size as keyof typeof basePrices];
     const dropOffPrice = dropOffPrices[size as keyof typeof dropOffPrices];
     const pickUpPrice = pickUpPrices[size as keyof typeof pickUpPrices];
     const dailyRate = dailyRates[size as keyof typeof dailyRates];
@@ -439,15 +451,34 @@ export default function DumpsterCalculator() {
     let extraDays = 0;
     let extraCost = 0;
     let distancePrice = deliverySurcharge.totalCost;
+    let days = 0;
     
     if (duration === '1') {
       // 1-day special pricing
       totalEstimate = oneDayPrice;
     } else {
-      // Bundle pricing for 7+ days
-      extraDays = Math.max(0, parseInt(duration) - 7);
-      extraCost = extraDays * dailyRate;
-      totalEstimate = bundlePrice + dropOffPrice + pickUpPrice + extraCost + distancePrice;
+      // Bundle pricing for 3+ days (includes pickup and dropoff)
+      days = parseInt(duration);
+      if (days === 30) {
+        // Special 30-day pricing
+        const thirtyDayPrices = {
+          '15': 500,
+          '20': 525,
+          '30': 600,
+          '10-dirt': 600,
+          '10-mixed': 600,
+          '12-concrete': 600
+        };
+        totalEstimate = thirtyDayPrices[size as keyof typeof thirtyDayPrices] + distancePrice;
+      } else if (days <= 7) {
+        // For 3-7 days, use bundle pricing
+        totalEstimate = bundlePrice + distancePrice;
+      } else {
+        // For 8-29 days, add extra days at daily rate
+        extraDays = days - 7;
+        extraCost = extraDays * dailyRate;
+        totalEstimate = bundlePrice + extraCost + distancePrice;
+      }
     }
     
     // Apply veteran discount (10%)
@@ -472,12 +503,25 @@ export default function DumpsterCalculator() {
               `<div>1-day special rate: $${oneDayPrice.toLocaleString()}</div>` :
               `<div class="font-semibold text-gray-700">📦 ${duration} Day Bundle Breakdown:</div>
                <div class="ml-4 space-y-1">
-                 <div>• 7 Day Bundle Price: $${bundlePrice.toLocaleString()}</div>
-                 <div>• Drop Off: $${dropOffPrice.toLocaleString()}</div>
-                 <div>• Pick Up: $${pickUpPrice.toLocaleString()}</div>
-                 ${extraDays > 0 ? `<div>• Additional Days (${extraDays} × $${dailyRate}): $${extraCost.toLocaleString()}</div>` : ''}
+                 ${days === 30 ? 
+                   `<div>• 30 Day Bundle Price: $${days === 30 ? (size === '15' ? '500' : size === '20' ? '525' : '600') : bundlePrice.toLocaleString()}</div>
+                    <div class="ml-4 text-xs text-gray-600">
+                      <div>• Base Rental: $${days === 30 ? (size === '15' ? '350' : size === '20' ? '375' : '450') : basePrice.toLocaleString()}</div>
+                      <div>• Pick Up: $${pickUpPrice.toLocaleString()}</div>
+                      <div>• Drop Off: $${dropOffPrice.toLocaleString()}</div>
+                    </div>
+                    <div>• Daily Rate: $${days === 30 ? (size === '15' ? '17' : size === '20' ? '18' : '20') : (basePrice / days).toFixed(0)}/day for ${days} days</div>` :
+                   `<div>• ${days <= 7 ? `${days} Day Bundle Price: $${bundlePrice.toLocaleString()}` : `7 Day Bundle Price: $${bundlePrice.toLocaleString()}`}</div>
+                    <div class="ml-4 text-xs text-gray-600">
+                      <div>• Base Rental: $${basePrice.toLocaleString()}</div>
+                      <div>• Pick Up: $${pickUpPrice.toLocaleString()}</div>
+                      <div>• Drop Off: $${dropOffPrice.toLocaleString()}</div>
+                    </div>
+                    ${days <= 7 ? `<div>• Daily Rate: $${(basePrice / days).toFixed(0)}/day for ${days} days</div>` : ''}
+                    ${extraDays > 0 ? `<div>• Additional Days (${extraDays} × $${dailyRate}): $${extraCost.toLocaleString()}</div>` : ''}`
+                 }
                  <div>• Distance Price: $${distancePrice.toLocaleString()}</div>
-                 <div class="font-semibold text-gray-800 border-t pt-1 mt-2">Total Cost: $${(bundlePrice + dropOffPrice + pickUpPrice + extraCost + distancePrice).toLocaleString()}</div>
+                 <div class="font-semibold text-gray-800 border-t pt-1 mt-2">Total Cost: $${totalEstimate.toLocaleString()}</div>
                </div>`
             }
             ${isVeteran ? `<div class="text-green-600 font-semibold">Veteran discount (10%): -$${veteranDiscount.toLocaleString()}</div>` : ''}
@@ -493,11 +537,24 @@ export default function DumpsterCalculator() {
             <p class="text-sm text-blue-800">
               <strong>Note:</strong> This is an estimate. Final price may vary based on location, weight, and specific requirements.
             </p>
+            ${days === 30 ? 
+              `<div class="mt-3 p-3 bg-orange-50 rounded-lg border border-orange-200">
+                <p class="text-sm text-orange-800">
+                  <strong>⚠️ Important:</strong> 30-day rentals require a minimum of 2 dumps during the rental period.
+                </p>
+              </div>` : ''
+            }
           </div>
           
                      <div class="mt-3 p-3 bg-orange-50 rounded-lg border border-orange-200">
              <p class="text-sm text-orange-800">
                <strong>⚖️ Tonnage billed separately after service is weighed at $55.00 per ton.</strong> This estimate does not include weight charges.
+             </p>
+           </div>
+           
+           <div class="mt-3 p-3 bg-red-50 rounded-lg border border-red-200">
+             <p class="text-sm text-red-800">
+               <strong>⚠️ Additional Charges:</strong> $25 per item for refrigerators, freezers, drinking water coolers, air conditioning units (must drain freon), mattresses/box springs, or tires.
              </p>
            </div>
           <div class="mt-4">
@@ -769,12 +826,14 @@ export default function DumpsterCalculator() {
                                       <ul className="text-sm text-yellow-700 space-y-1">
                <li>• <strong>Multiple Hubs:</strong> We have 3 locations serving Utah - calculator automatically finds the closest</li>
                <li>• <strong>1-Day Special:</strong> Discounted rates for same-day pickup projects</li>
-               <li>• <strong>7+ Day Bundles:</strong> Bundle pricing includes 7-day rental, separate drop-off and pick-up fees</li>
-               <li>• <strong>Extended Rentals:</strong> Additional days are charged at daily rates</li>
+               <li>• <strong>3-7 Day Bundles:</strong> Bundle pricing includes rental, pickup, and dropoff fees with daily rate breakdown</li>
+               <li>• <strong>Extended Rentals:</strong> Additional days beyond 7 are charged at daily rates</li>
+               <li>• <strong>30+ Day Rentals:</strong> Special pricing with 2-dump minimum requirement</li>
                <li>• <strong>Veteran Discount:</strong> 10% off for all veterans (thank you for your service!)</li>
                                <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations outside Salt Lake County and beyond 10 miles from our hub (round trip) with actual driving time calculation</li>
-                <li>• <strong>Free Delivery:</strong> No surcharges for Salt Lake County locations or within 10 miles of our closest hub location</li>
+                <li>• <strong>Location-Based Pricing:</strong> Salt Lake County locations and areas within 10 miles of our hubs have no additional surcharges</li>
                                <li>• <strong>Weight-Based Pricing:</strong> $55 per ton charged after disposal facility weighing</li>
+               <li>• <strong>Additional Item Charges:</strong> $25 per item for refrigerators, freezers, drinking water coolers, air conditioning units (must drain freon), mattresses/box springs, or tires</li>
                <li>• <strong>Location Factors:</strong> Prices vary by location and availability</li>
                <li>• <strong>Prohibited Items:</strong> Additional charges may apply for restricted materials</li>
              </ul>
