@@ -78,23 +78,56 @@ export default function EnhancedHeader() {
                          Draper
                        </a>
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
-                         Salt Lake City Areas
+                         Salt Lake County
                        </div>
-                       <a href="/rose-park" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                         Rose Park
-                       </a>
-                       <a href="/sugar-house" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                         Sugar House
-                       </a>
-                       <a href="/glendale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                         Glendale
-                       </a>
-                       <a href="/poplar-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                         Poplar Grove
-                       </a>
-                       <a href="/downtown-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                         Downtown Salt Lake
-                       </a>
+                       <a href="/west-valley-city" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">West Valley City</a>
+                       <a href="/taylorsville" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Taylorsville</a>
+                       <a href="/kearns" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Kearns</a>
+                       <a href="/magna" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Magna</a>
+                       <a href="/millcreek" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Millcreek</a>
+                       <a href="/holladay" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Holladay</a>
+                       <a href="/cottonwood-heights" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Cottonwood Heights</a>
+                       <a href="/south-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">South Salt Lake</a>
+                       <a href="/riverton" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Riverton</a>
+                       <a href="/herriman" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Herriman</a>
+                       <a href="/bluffdale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bluffdale</a>
+
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         Davis County
+                       </div>
+                       <a href="/bountiful" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bountiful</a>
+                       <a href="/north-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">North Salt Lake</a>
+                       <a href="/centerville" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Centerville</a>
+                       <a href="/farmington" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Farmington</a>
+                       <a href="/layton" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Layton</a>
+                       <a href="/woods-cross" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Woods Cross</a>
+                       <a href="/clearfield" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Clearfield</a>
+
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         Utah County
+                       </div>
+                       <a href="/lehi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Lehi</a>
+                       <a href="/american-fork" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">American Fork</a>
+                       <a href="/pleasant-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Pleasant Grove</a>
+                       <a href="/eagle-mountain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Eagle Mountain</a>
+                       <a href="/saratoga-springs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Saratoga Springs</a>
+                       <a href="/orem" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Orem</a>
+                       <a href="/provo" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Provo</a>
+
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         Summit & Tooele
+                       </div>
+                       <a href="/park-city" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Park City</a>
+                       <a href="/tooele" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Tooele</a>
+
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         SLC Neighborhoods
+                       </div>
+                       <a href="/rose-park" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Rose Park</a>
+                       <a href="/sugar-house" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Sugar House</a>
+                       <a href="/glendale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Glendale</a>
+                       <a href="/poplar-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Poplar Grove</a>
+                       <a href="/downtown-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Downtown Salt Lake</a>
                     </div>
                   </div>
                 )}
@@ -176,45 +209,43 @@ export default function EnhancedHeader() {
             
             {/* Mobile City Pages */}
             <div className="border-t border-gray-200 pt-2">
-              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                Service Areas
-              </div>
-              <a href="/murray" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                Murray
-              </a>
-              <a href="/midvale" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                Midvale
-              </a>
-              <a href="/sandy" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                Sandy
-              </a>
-              <a href="/west-jordan" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                West Jordan
-              </a>
-              <a href="/south-jordan" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                South Jordan
-              </a>
-                             <a href="/draper" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Draper
-               </a>
-               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">
-                 Salt Lake City Areas
-               </div>
-               <a href="/rose-park" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Rose Park
-               </a>
-               <a href="/sugar-house" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Sugar House
-               </a>
-               <a href="/glendale" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Glendale
-               </a>
-               <a href="/poplar-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Poplar Grove
-               </a>
-               <a href="/downtown-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">
-                 Downtown Salt Lake
-               </a>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Salt Lake County</div>
+              <a href="/west-valley-city" className="block text-gray-700 hover:text-[#4e37a8] py-1">West Valley City</a>
+              <a href="/taylorsville" className="block text-gray-700 hover:text-[#4e37a8] py-1">Taylorsville</a>
+              <a href="/kearns" className="block text-gray-700 hover:text-[#4e37a8] py-1">Kearns</a>
+              <a href="/magna" className="block text-gray-700 hover:text-[#4e37a8] py-1">Magna</a>
+              <a href="/millcreek" className="block text-gray-700 hover:text-[#4e37a8] py-1">Millcreek</a>
+              <a href="/holladay" className="block text-gray-700 hover:text-[#4e37a8] py-1">Holladay</a>
+              <a href="/cottonwood-heights" className="block text-gray-700 hover:text-[#4e37a8] py-1">Cottonwood Heights</a>
+              <a href="/south-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">South Salt Lake</a>
+              <a href="/riverton" className="block text-gray-700 hover:text-[#4e37a8] py-1">Riverton</a>
+              <a href="/herriman" className="block text-gray-700 hover:text-[#4e37a8] py-1">Herriman</a>
+              <a href="/bluffdale" className="block text-gray-700 hover:text-[#4e37a8] py-1">Bluffdale</a>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Davis County</div>
+              <a href="/bountiful" className="block text-gray-700 hover:text-[#4e37a8] py-1">Bountiful</a>
+              <a href="/north-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">North Salt Lake</a>
+              <a href="/centerville" className="block text-gray-700 hover:text-[#4e37a8] py-1">Centerville</a>
+              <a href="/farmington" className="block text-gray-700 hover:text-[#4e37a8] py-1">Farmington</a>
+              <a href="/layton" className="block text-gray-700 hover:text-[#4e37a8] py-1">Layton</a>
+              <a href="/woods-cross" className="block text-gray-700 hover:text-[#4e37a8] py-1">Woods Cross</a>
+              <a href="/clearfield" className="block text-gray-700 hover:text-[#4e37a8] py-1">Clearfield</a>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Utah County</div>
+              <a href="/lehi" className="block text-gray-700 hover:text-[#4e37a8] py-1">Lehi</a>
+              <a href="/american-fork" className="block text-gray-700 hover:text-[#4e37a8] py-1">American Fork</a>
+              <a href="/pleasant-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">Pleasant Grove</a>
+              <a href="/eagle-mountain" className="block text-gray-700 hover:text-[#4e37a8] py-1">Eagle Mountain</a>
+              <a href="/saratoga-springs" className="block text-gray-700 hover:text-[#4e37a8] py-1">Saratoga Springs</a>
+              <a href="/orem" className="block text-gray-700 hover:text-[#4e37a8] py-1">Orem</a>
+              <a href="/provo" className="block text-gray-700 hover:text-[#4e37a8] py-1">Provo</a>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Summit & Tooele</div>
+              <a href="/park-city" className="block text-gray-700 hover:text-[#4e37a8] py-1">Park City</a>
+              <a href="/tooele" className="block text-gray-700 hover:text-[#4e37a8] py-1">Tooele</a>
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">SLC Neighborhoods</div>
+              <a href="/rose-park" className="block text-gray-700 hover:text-[#4e37a8] py-1">Rose Park</a>
+              <a href="/sugar-house" className="block text-gray-700 hover:text-[#4e37a8] py-1">Sugar House</a>
+              <a href="/glendale" className="block text-gray-700 hover:text-[#4e37a8] py-1">Glendale</a>
+              <a href="/poplar-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">Poplar Grove</a>
+              <a href="/downtown-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">Downtown Salt Lake</a>
             </div>
             
             <a href="/blog" className="block text-gray-700 hover:text-[#4e37a8] py-2">
