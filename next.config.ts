@@ -10,10 +10,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Minimal configuration to avoid build issues
-  experimental: {
-    missingSuspenseWithCSRError: false,
-  },
+
 }
 
 export default nextConfig

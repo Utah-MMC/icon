@@ -1,51 +1,12 @@
-import { Metadata } from "next";
+"use client";
+
 import { useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import NewsletterSubscription from "../components/NewsletterSubscription";
 import BlogSearch from "../components/BlogSearch";
 
-export const metadata: Metadata = {
-  title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-  description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices. Stay updated with the latest trends.",
-  keywords: "dumpster rental blog, waste management tips, construction cleanup guide, dumpster rental insights, waste disposal blog, Icon Dumpsters blog",
-  openGraph: {
-    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices.",
-    url: 'https://icondumpsters.com/blog',
-    siteName: 'Icon Dumpsters',
-    images: [
-      {
-        url: '/images/15-NEW-01.png',
-        width: 1200,
-        height: 630,
-        alt: 'Icon Dumpsters Blog - Expert Insights on Dumpster Rental and Waste Management',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Dumpster Rental Blog - Tips, Guides & Industry Insights | Icon Dumpsters",
-    description: "Expert dumpster rental blog with tips, guides, and industry insights. Learn about waste management, construction cleanup, and dumpster rental best practices.",
-    images: ['/images/15-NEW-01.png'],
-  },
-  alternates: {
-    canonical: '/blog',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+
 
 // Blog post data for search functionality
 const blogPosts = [
@@ -246,24 +207,24 @@ export default function Blog() {
                 ))}
             </div>
 
-            {/* No Results Message */}
-            {searchTerm && filteredPosts.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No articles found</h3>
-                <p className="text-gray-600 mb-4">Try adjusting your search terms or browse all articles below.</p>
-                <button 
-                  onClick={() => setSearchTerm("")}
-                  className="bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold"
-                >
-                  View All Articles
-                </button>
-              </div>
-            )}
+                         {/* No Results Message */}
+             {filteredPosts.length === 0 && (
+               <div className="text-center py-12">
+                 <div className="text-gray-400 mb-4">
+                   <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                   </svg>
+                 </div>
+                 <h3 className="text-xl font-semibold text-gray-900 mb-2">No articles found</h3>
+                 <p className="text-gray-600 mb-4">Try adjusting your search terms or browse all articles below.</p>
+                 <button 
+                   onClick={() => setFilteredPosts(blogPosts)}
+                   className="bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+                 >
+                   View All Articles
+                 </button>
+               </div>
+             )}
           </div>
 
           {/* Sidebar */}
@@ -276,17 +237,20 @@ export default function Blog() {
                 </svg>
                 Categories
               </h3>
-              <div className="space-y-2">
-                {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSearchTerm(category)}
-                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+                             <div className="space-y-2">
+                 {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
+                   <button
+                     key={category}
+                     onClick={() => {
+                       const filtered = blogPosts.filter(post => post.category === category);
+                       setFilteredPosts(filtered);
+                     }}
+                     className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
+                   >
+                     {category}
+                   </button>
+                 ))}
+               </div>
             </div>
 
             {/* Recent Posts */}
