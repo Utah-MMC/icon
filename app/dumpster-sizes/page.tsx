@@ -4,8 +4,8 @@ import QuoteForm from "../components/QuoteForm";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-  description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing. Find the perfect size for your project. Call (801) 918-6000.",
-  keywords: "dumpster sizes, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, roll off dumpster, rolloff dumpster, dumpster rental, dumpster rental near me, roll off dumpster dimensions, dumpster weight limits, Utah dumpster rental sizes",
+  description: "Complete guide to dumpster sizes: 15, 20, 30 yard roll-off dumpsters plus specialized 10-yard dirt, 10-yard mixed load, and 12-yard concrete dumpsters. View dimensions, weight limits, and pricing. Find the perfect size for your project. Call (801) 918-6000.",
+  keywords: "dumpster sizes, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, 10 yard dirt dumpster, 10 yard mixed load dumpster, 12 yard concrete dumpster, roll off dumpster, rolloff dumpster, dumpster rental, dumpster rental near me, roll off dumpster dimensions, dumpster weight limits, Utah dumpster rental sizes, concrete disposal dumpster, dirt disposal dumpster",
   openGraph: {
     title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
     description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
@@ -268,6 +268,78 @@ export default function DumpsterSizes() {
                     <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">9 pickup truckloads</td>
                     <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Major renovations, construction projects, commercial work</td>
                   </tr>
+
+                  {/* 10 Yard Clean Dirt Disposal Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/15-NEW-01.png" 
+                            alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental - Perfect for Dirt and Soil Projects" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpsters.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">10 Yard Clean Dirt Disposal</h3>
+                          <p className="text-xs text-gray-600">Dirt & Soil Projects</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 8' wide x 2' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Flat Rate</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Clean dirt, soil, landscaping projects, garden waste</td>
+                  </tr>
+
+                  {/* 10 Yard Mixed Load Disposal Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/dumpster500x200-2.jpeg" 
+                            alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental - 4 Tons Included" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpster500x200-2.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">10 Yard Mixed Load Disposal</h3>
+                          <p className="text-xs text-gray-600">4 Tons Included</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 8' wide x 2' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4 tons included</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Mixed construction debris, concrete, dirt, general waste</td>
+                  </tr>
+
+                  {/* 12 Yard Concrete Disposal Dumpster */}
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="p-2 sm:p-4">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16">
+                          <ImageWithFallback 
+                            src="/images/dumpster5-500x500-1.jpeg" 
+                            alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental - Perfect for Concrete Projects" 
+                            className="w-full h-full object-cover rounded"
+                            fallbackSrc="/images/dumpster5-500x500-1.webp"
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">12 Yard Concrete Disposal</h3>
+                          <p className="text-xs text-gray-600">Concrete Projects</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 8' wide x 2' high</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Flat Rate</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">5 pickup truckloads</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Concrete, asphalt, brick, stone, heavy materials</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -289,6 +361,9 @@ export default function DumpsterSizes() {
                   <li>• 15 Yard: 1-2 tons included</li>
                   <li>• 20 Yard: 2-3 tons included</li>
                   <li>• 30 Yard: 2-4 tons included</li>
+                  <li>• 10 Yard Clean Dirt: Flat rate (no weight limit)</li>
+                  <li>• 10 Yard Mixed Load: 4 tons included</li>
+                  <li>• 12 Yard Concrete: Flat rate (no weight limit)</li>
                   <li>• Additional weight fees apply</li>
                 </ul>
               </div>

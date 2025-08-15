@@ -223,7 +223,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-6 text-center shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-2">15 Yard</h3>
               <p className="text-gray-600 mb-4">Ideal for medium projects</p>
@@ -238,6 +238,21 @@ export default function Services() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">30 Yard</h3>
               <p className="text-gray-600 mb-4">For major projects</p>
               <p className="text-2xl font-bold text-[#4e37a8]">$330</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">10 Yard Clean Dirt</h3>
+              <p className="text-gray-600 mb-4">Perfect for dirt & soil projects</p>
+              <p className="text-2xl font-bold text-[#4e37a8]">$350</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">10 Yard Mixed Load</h3>
+              <p className="text-gray-600 mb-4">4 tons included</p>
+              <p className="text-2xl font-bold text-[#4e37a8]">$325</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">12 Yard Concrete</h3>
+              <p className="text-gray-600 mb-4">Perfect for concrete projects</p>
+              <p className="text-2xl font-bold text-[#4e37a8]">$350</p>
             </div>
           </div>
 

@@ -201,7 +201,7 @@ export default function QuoteForm() {
         {/* Dumpster Size Selection */}
         <div>
           <label className="block text-sm font-medium mb-3">Dumpster Size</label>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <label className="flex items-center space-x-3 cursor-pointer">
               <input type="radio" name="dumpsterSize" value="15" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
               <span className="text-xs sm:text-sm">15 Yard Dumpster</span>
@@ -213,6 +213,18 @@ export default function QuoteForm() {
             <label className="flex items-center space-x-3 cursor-pointer">
               <input type="radio" name="dumpsterSize" value="30" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
               <span className="text-xs sm:text-sm">30 Yard Dumpster</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input type="radio" name="dumpsterSize" value="10-dirt" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <span className="text-xs sm:text-sm">10 Yard Clean Dirt</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input type="radio" name="dumpsterSize" value="10-mixed" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <span className="text-xs sm:text-sm">10 Yard Mixed Load</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input type="radio" name="dumpsterSize" value="12-concrete" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <span className="text-xs sm:text-sm">12 Yard Concrete</span>
             </label>
           </div>
         </div>

@@ -265,6 +265,25 @@ export default function DumpsterCalculator() {
     }
   };
 
+  // Function to check if zip code is in Salt Lake County
+  const isSaltLakeCounty = (zipCode: string): boolean => {
+    // Salt Lake County zip codes (84101-84199, excluding some outliers)
+    const saltLakeCountyZips = [
+      '84101', '84102', '84103', '84104', '84105', '84106', '84107', '84108', '84109',
+      '84111', '84112', '84113', '84114', '84115', '84116', '84117', '84118', '84119',
+      '84120', '84121', '84122', '84123', '84124', '84125', '84126', '84127', '84128',
+      '84129', '84130', '84131', '84132', '84133', '84134', '84135', '84136', '84137',
+      '84138', '84139', '84140', '84141', '84142', '84143', '84144', '84145', '84146',
+      '84147', '84148', '84149', '84150', '84151', '84152', '84153', '84154', '84155',
+      '84156', '84157', '84158', '84159', '84160', '84161', '84162', '84163', '84164',
+      '84165', '84166', '84167', '84168', '84169', '84170', '84171', '84172', '84173',
+      '84174', '84175', '84176', '84177', '84178', '84179', '84180', '84181', '84182',
+      '84183', '84184', '84185', '84186', '84187', '84188', '84189', '84190', '84191',
+      '84192', '84193', '84194', '84195', '84196', '84197', '84198', '84199'
+    ];
+    return saltLakeCountyZips.includes(zipCode);
+  };
+
   // Function to calculate delivery surcharge (gas + labor) with actual driving time
   const calculateDeliverySurcharge = async (distance: number, zipCode: string, customerLat?: number, customerLng?: number, hubLat?: number, hubLng?: number): Promise<{ gasCost: number, laborCost: number, totalCost: number, drivingTime?: number, drivingDistance?: number }> => {
     let gasCost = 0;
@@ -272,7 +291,11 @@ export default function DumpsterCalculator() {
     let drivingTime = 0;
     let drivingDistance = distance;
     
-    if (distance <= FREE_DELIVERY_RADIUS) {
+    // No surcharges for Salt Lake County locations
+    if (isSaltLakeCounty(zipCode)) {
+      gasCost = 0;
+      laborCost = 0;
+    } else if (distance <= FREE_DELIVERY_RADIUS) {
       // Within free delivery radius - no surcharges
       gasCost = 0;
       laborCost = 0;
@@ -343,7 +366,9 @@ export default function DumpsterCalculator() {
         closestHubInfo.hub.lng
       );
       
-      if (distance <= FREE_DELIVERY_RADIUS) {
+      if (isSaltLakeCounty(zipCode)) {
+        distanceMessage = `📍 Free delivery in Salt Lake County (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
+      } else if (distance <= FREE_DELIVERY_RADIUS) {
         distanceMessage = `📍 Free delivery within ${FREE_DELIVERY_RADIUS} miles (${distance.toFixed(1)} miles from ${closestHubInfo.hub.name})`;
       } else {
         const drivingTime = deliverySurcharge.drivingTime || 0;
@@ -357,36 +382,51 @@ export default function DumpsterCalculator() {
       distanceMessage = `🚛 Delivery surcharge applied (zip code not in database)`;
     }
     
-    // Bundle pricing structure
+    // Bundle pricing structure - Updated to match 30-yard pricing for new dumpsters
     const bundlePrices = {
       '15': 200,
       '20': 250,
-      '30': 350
+      '30': 350,
+      '10-dirt': 350,      // Same as 30-yard
+      '10-mixed': 350,     // Same as 30-yard
+      '12-concrete': 350   // Same as 30-yard
     };
     
     const dropOffPrices = {
       '15': 75,
       '20': 75,
-      '30': 75
+      '30': 75,
+      '10-dirt': 75,
+      '10-mixed': 75,
+      '12-concrete': 75
     };
     
     const pickUpPrices = {
       '15': 75,
       '20': 75,
-      '30': 75
+      '30': 75,
+      '10-dirt': 75,
+      '10-mixed': 75,
+      '12-concrete': 75
     };
     
     const dailyRates = {
       '15': 30,
       '20': 35,
-      '30': 40
+      '30': 40,
+      '10-dirt': 40,       // Same as 30-yard
+      '10-mixed': 40,      // Same as 30-yard
+      '12-concrete': 40    // Same as 30-yard
     };
     
-    // Special pricing for 1-day rentals
+    // Special pricing for 1-day rentals - Updated to match 30-yard pricing
     const oneDayPrices = {
       '15': 180,
       '20': 220,
-      '30': 280
+      '30': 280,
+      '10-dirt': 280,      // Same as 30-yard
+      '10-mixed': 280,     // Same as 30-yard
+      '12-concrete': 280   // Same as 30-yard
     };
     
     const bundlePrice = bundlePrices[size as keyof typeof bundlePrices];
@@ -501,7 +541,7 @@ export default function DumpsterCalculator() {
               <label htmlFor="dumpsterSize" className="block text-sm font-semibold text-gray-700 mb-2">
                 📦 Dumpster Size
               </label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2 mb-4">
                 <button
                   type="button"
                   onClick={() => {
@@ -581,6 +621,87 @@ export default function DumpsterCalculator() {
                 </button>
               </div>
               
+              {/* Specialized Dumpster Options */}
+              <div className="grid grid-cols-3 gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedSize('10-dirt');
+                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                    if (select) {
+                      select.value = '10-dirt';
+                      select.dispatchEvent(new Event('change'));
+                    }
+                  }}
+                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
+                    selectedSize === '10-dirt' 
+                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
+                      : 'border-gray-200 hover:border-[#4e37a8]'
+                  }`}
+                >
+                  <ImageWithFallback 
+                    src="/images/15-NEW-01.png" 
+                    alt="10 Yard Clean Dirt Disposal Dumpster" 
+                    className="w-full h-16 object-cover rounded mb-2" 
+                    fallbackSrc="/images/dumpsters.webp"
+                  />
+                  <div className="text-xs font-semibold text-gray-800">10 Yard Dirt</div>
+                  <div className="text-xs text-gray-500">Clean Dirt Only</div>
+                </button>
+                
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedSize('10-mixed');
+                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                    if (select) {
+                      select.value = '10-mixed';
+                      select.dispatchEvent(new Event('change'));
+                    }
+                  }}
+                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
+                    selectedSize === '10-mixed' 
+                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
+                      : 'border-gray-200 hover:border-[#4e37a8]'
+                  }`}
+                >
+                  <ImageWithFallback 
+                    src="/images/dumpster500x200-2.jpeg" 
+                    alt="10 Yard Mixed Load Disposal Dumpster" 
+                    className="w-full h-16 object-cover rounded mb-2" 
+                    fallbackSrc="/images/dumpster500x200-2.webp"
+                  />
+                  <div className="text-xs font-semibold text-gray-800">10 Yard Mixed</div>
+                  <div className="text-xs text-gray-500">4 Tons Included</div>
+                </button>
+                
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedSize('12-concrete');
+                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                    if (select) {
+                      select.value = '12-concrete';
+                      select.dispatchEvent(new Event('change'));
+                    }
+                  }}
+                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
+                    selectedSize === '12-concrete' 
+                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
+                      : 'border-gray-200 hover:border-[#4e37a8]'
+                  }`}
+                >
+                  <ImageWithFallback 
+                    src="/images/dumpster5-500x500-1.jpeg" 
+                    alt="12 Yard Concrete Disposal Dumpster" 
+                    className="w-full h-16 object-cover rounded mb-2" 
+                    fallbackSrc="/images/dumpster5-500x500-1.webp"
+                  />
+                  <div className="text-xs font-semibold text-gray-800">12 Yard Concrete</div>
+                  <div className="text-xs text-gray-500">Concrete Projects</div>
+                </button>
+              </div>
+              
               {/* Hidden select for form functionality */}
               <select
                 id="dumpsterSize"
@@ -590,6 +711,9 @@ export default function DumpsterCalculator() {
                 <option value="15">15 Yard</option>
                 <option value="20">20 Yard</option>
                 <option value="30">30 Yard</option>
+                <option value="10-dirt">10 Yard Clean Dirt</option>
+                <option value="10-mixed">10 Yard Mixed Load</option>
+                <option value="12-concrete">12 Yard Concrete</option>
               </select>
             </div>
             
@@ -648,8 +772,8 @@ export default function DumpsterCalculator() {
                <li>• <strong>7+ Day Bundles:</strong> Bundle pricing includes 7-day rental, separate drop-off and pick-up fees</li>
                <li>• <strong>Extended Rentals:</strong> Additional days are charged at daily rates</li>
                <li>• <strong>Veteran Discount:</strong> 10% off for all veterans (thank you for your service!)</li>
-                               <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations beyond 10 miles from our hub (round trip) with actual driving time calculation</li>
-                <li>• <strong>Free Delivery:</strong> No surcharges within 10 miles of our closest hub location</li>
+                               <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations outside Salt Lake County and beyond 10 miles from our hub (round trip) with actual driving time calculation</li>
+                <li>• <strong>Free Delivery:</strong> No surcharges for Salt Lake County locations or within 10 miles of our closest hub location</li>
                                <li>• <strong>Weight-Based Pricing:</strong> $55 per ton charged after disposal facility weighing</li>
                <li>• <strong>Location Factors:</strong> Prices vary by location and availability</li>
                <li>• <strong>Prohibited Items:</strong> Additional charges may apply for restricted materials</li>

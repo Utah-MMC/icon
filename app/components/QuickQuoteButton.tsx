@@ -5,6 +5,12 @@ import { useState } from 'react';
 interface QuickQuoteButtonProps {
   dumpsterSize: string;
   className?: string;
+  pricing?: {
+    [key: string]: {
+      price: number;
+      description: string;
+    };
+  };
 }
 
 export default function QuickQuoteButton({ dumpsterSize, className = '' }: QuickQuoteButtonProps) {

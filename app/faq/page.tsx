@@ -44,7 +44,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "What dumpster sizes do you offer?",
-          answer: "We offer three main dumpster sizes: 15-yard, 20-yard, and 30-yard roll-off dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects or major cleanouts."
+          answer: "We offer six dumpster options: 15-yard, 20-yard, and 30-yard roll-off dumpsters for general waste, plus specialized 10-yard clean dirt disposal, 10-yard mixed load disposal (4 tons included), and 12-yard concrete disposal dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects. Our specialized dumpsters are perfect for dirt, soil, concrete, and heavy material projects."
         },
         {
           question: "How do I choose the right dumpster size?",
@@ -70,6 +70,10 @@ export default function FAQPage() {
         {
           question: "Do you offer discounts for longer rentals?",
           answer: "Yes, we offer competitive rates for extended rentals. If you need a dumpster for more than 14 days, we can work with you on pricing. We also offer discounts for contractors and repeat customers. Call us to discuss your specific needs."
+        },
+        {
+          question: "Do you have specialized dumpsters for dirt and concrete?",
+          answer: "Yes! We offer specialized dumpsters for heavy materials: 10-yard clean dirt disposal (flat rate, no weight limit), 10-yard mixed load disposal (4 tons included), and 12-yard concrete disposal (flat rate, perfect for concrete, asphalt, brick, and stone). These are ideal for landscaping projects, concrete demolition, and heavy material disposal."
         }
       ]
     },
