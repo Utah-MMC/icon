@@ -141,68 +141,7 @@ export default function StructuredData() {
     ]
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What dumpster sizes do you offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer three main dumpster sizes: 15-yard, 20-yard, and 30-yard roll-off dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects or major cleanouts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does dumpster rental cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dumpster rental costs vary based on size, rental duration, and location. Our 15-yard dumpsters start around $300-400, 20-yard dumpsters around $400-500, and 30-yard dumpsters around $500-600. This typically includes delivery, pickup, and disposal fees."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How quickly can you deliver a dumpster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We typically offer same-day or next-day delivery for most areas in Utah. During peak season (spring and summer), we recommend booking 2-3 days in advance to ensure availability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need a permit for a dumpster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, no permit is needed if the dumpster is placed on private property (like your driveway). However, if you need to place the dumpster on a public street or sidewalk, you'll need a permit from your local city."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What areas do you serve in Utah?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We serve the entire Salt Lake Valley and surrounding areas including Salt Lake City, West Valley City, Sandy, West Jordan, Murray, Taylorsville, South Jordan, Riverton, Herriman, Draper, and many other Utah communities."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of waste can I put in the dumpster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We accept most types of construction and household waste including wood, drywall, concrete, metal, furniture, appliances (without Freon), carpet, tile, roofing materials, and general household junk. We also accept yard waste and tree branches."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I book a dumpster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Booking is easy! You can call us at (801) 918-6000, fill out our online quote form, or email us at icondumpsters@gmail.com. We'll ask about your project details, preferred delivery date, and location to provide you with an accurate quote."
-        }
-      }
-    ]
-  };
+
 
   return (
     <>
@@ -222,12 +161,6 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
         }}
       />
     </>
