@@ -38,6 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // Quote form page - High priority for lead generation
+    {
+      url: `${baseUrl}/freequote`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     // Local service pages - High priority for local SEO
     {
       url: `${baseUrl}/murray`,
