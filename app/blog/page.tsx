@@ -16,7 +16,7 @@ const blogPosts = [
     excerpt: "Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable.",
     category: "DUMPSTER RENTAL",
     readTime: "8 min read",
-    image: "/images/15-NEW-01.png",
+          image: "/images/IMG_0350.jpg",
     fallbackImage: "/images/dumpsters.webp",
     featured: true
   },
@@ -105,7 +105,7 @@ export default function Blog() {
                 <div className="relative">
                   <div className="h-96 overflow-hidden relative">
                     <ImageWithFallback 
-                      src={filteredPosts.find(post => post.featured)?.image || "/images/15-NEW-01.png"} 
+                      src={filteredPosts.find(post => post.featured)?.image || "/images/IMG_0350.jpg"} 
                       alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
                       className="hover:scale-105 transition-transform duration-500" 
                       fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}

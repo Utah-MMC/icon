@@ -178,7 +178,7 @@ export default function HomeRenovationWasteDisposal() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <ImageWithFallback
-                  src="/images/15-NEW-01.png"
+                  src="/images/IMG_0350.jpg"
                   fallbackSrc="/images/dumpsters.webp"
                   alt="15 Yard Roll-off Dumpster for Utah Home Renovation Waste Disposal - Perfect for Small Projects"
                   className="w-full h-32 object-cover rounded-lg mb-4"

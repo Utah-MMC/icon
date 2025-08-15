@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://icondumpsters.com/faq',
     images: [
       {
-        url: '/images/15-NEW-01.png',
+        url: '/images/IMG_0350.jpg',
         width: 1200,
         height: 630,
         alt: 'Dumpster Rental FAQ - Common Questions and Answers',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Dumpster Rental FAQ - Common Questions & Answers | Icon Dumpsters Utah",
     description: "Get answers to frequently asked questions about dumpster rental in Utah. Learn about sizes, pricing, permits, delivery, and more.",
-    images: ['/images/15-NEW-01.png'],
+          images: ['/images/IMG_0350.jpg'],
   },
   alternates: {
     canonical: '/faq',
@@ -172,7 +172,7 @@ export default function FAQPage() {
         author="Icon Dumpsters"
         publishedDate="2025-01-15"
         modifiedDate="2025-01-15"
-        imageUrl="https://icondumpsters.com/images/15-NEW-01.png"
+        imageUrl="https://icondumpsters.com/images/IMG_0350.jpg"
         articleUrl="https://icondumpsters.com/faq"
         category="FAQ"
         readTime="PT5M"

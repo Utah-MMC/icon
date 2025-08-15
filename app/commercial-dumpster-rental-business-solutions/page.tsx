@@ -170,7 +170,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <ImageWithFallback
-                  src="/images/15-NEW-01.png"
+                  src="/images/IMG_0350.jpg"
                   fallbackSrc="/images/dumpsters.webp"
                   alt="Small commercial dumpster perfect for retail stores and small businesses"
                   className="w-full h-32 object-cover rounded-lg mb-4"

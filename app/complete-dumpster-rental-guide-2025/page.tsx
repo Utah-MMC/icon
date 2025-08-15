@@ -19,7 +19,7 @@ export default function CompleteDumpsterRentalGuide() {
         author="Icon Dumpsters"
         publishedDate="2025-01-15"
         modifiedDate="2025-01-15"
-        imageUrl="https://icondumpsters.com/images/15-NEW-01.png"
+        imageUrl="https://icondumpsters.com/images/IMG_0350.jpg"
         articleUrl="https://icondumpsters.com/complete-dumpster-rental-guide-2025"
         category="DUMPSTER RENTAL"
         readTime="PT8M"
@@ -61,7 +61,7 @@ export default function CompleteDumpsterRentalGuide() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback 
-              src="/images/15-NEW-01.png" 
+                              src="/images/IMG_0350.jpg" 
               alt="Complete Dumpster Rental Guide 2025 - Professional dumpster rental services for construction and cleanup projects" 
               className="w-full h-96 object-cover rounded-lg shadow-lg" 
               fallbackSrc="/images/dumpsters.webp" 
@@ -119,7 +119,7 @@ export default function CompleteDumpsterRentalGuide() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                   <ImageWithFallback
-                    src="/images/15-NEW-01.png"
+                    src="/images/IMG_0350.jpg"
                     fallbackSrc="/images/dumpsters.webp"
                     alt="15 Yard Roll-off Dumpster for Utah Home Renovation Projects - Perfect for Small Projects"
                     className="w-full h-32 object-cover rounded-lg mb-4"

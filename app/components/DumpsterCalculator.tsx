@@ -571,192 +571,293 @@ export default function DumpsterCalculator() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
       <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#4e37a8] mb-4">Advanced Dumpster Rental Cost Calculator</h2>
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#4e37a8] to-purple-600 rounded-full mb-6">
+          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Advanced Dumpster Rental Cost Calculator</h2>
         <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
           Get an instant price estimate for your dumpster rental. Our advanced calculator includes special rates, veteran discounts, and accurate gas pricing.
         </p>
       </div>
       
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
-            <div>
-              <label htmlFor="zipCode" className="block text-sm font-semibold text-gray-700 mb-2">
+      <div className="max-w-5xl mx-auto">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl border border-gray-100 p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            {/* Zip Code Input */}
+            <div className="lg:col-span-1">
+              <label htmlFor="zipCode" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-2"></span>
                 📍 Zip Code
               </label>
               <input
                 type="text"
                 id="zipCode"
                 placeholder="Enter zip code"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm"
                 maxLength={5}
               />
-              <p className="text-xs text-gray-500 mt-1">Multiple hubs serving Utah - calculator finds closest location</p>
+              <p className="text-xs text-gray-500 mt-2">Multiple hubs serving Utah - calculator finds closest location</p>
             </div>
             
-            <div>
-              <label htmlFor="dumpsterSize" className="block text-sm font-semibold text-gray-700 mb-2">
+            {/* Dumpster Size Selection */}
+            <div className="lg:col-span-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-2"></span>
                 📦 Dumpster Size
               </label>
-              <div className="grid grid-cols-3 gap-2 mb-4">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('15');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '15';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '15' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/15-NEW-01.png" 
-                    alt="15 Yard Roll-off Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/15-NEW-01.png"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">15 Yard</div>
-                  <div className="text-xs text-gray-500">Small Projects</div>
-                </button>
-                
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('20');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '20';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '20' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" 
-                    alt="20 Yard Roll-off Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/dumpster500x500-2.jpeg"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">20 Yard</div>
-                  <div className="text-xs text-gray-500">Medium Projects</div>
-                </button>
-                
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('30');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '30';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '30' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/dumpster5-500x500-1.jpeg" 
-                    alt="30 Yard Roll-off Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/dumpster500x500-1.jpeg"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">30 Yard</div>
-                  <div className="text-xs text-gray-500">Large Projects</div>
-                </button>
+              
+              {/* Standard Dumpsters */}
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-600 mb-3">Standard Dumpsters</h4>
+                <div className="grid grid-cols-3 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('15');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '15';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '15' 
+                        ? 'border-[#4e37a8] bg-gradient-to-br from-blue-50 to-blue-100' 
+                        : 'border-gray-200 hover:border-[#4e37a8]'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-3 mb-3">
+                                                 <ImageWithFallback 
+                           src="/images/IMG_0350.jpg" 
+                           alt="15 Yard Roll-off Dumpster" 
+                           className="w-full h-24 object-contain object-center rounded-lg" 
+                           fallbackSrc="/images/IMG_0350.jpg"
+                         />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">15 Yard</div>
+                        <div className="text-xs text-gray-600 mb-2">Small Projects</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-[#4e37a8] font-semibold text-xs">Most Popular</span>
+                          <div className="w-6 h-6 bg-[#4e37a8] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('20');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '20';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '20' 
+                        ? 'border-green-500 bg-gradient-to-br from-green-50 to-green-100' 
+                        : 'border-gray-200 hover:border-green-500'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-3 mb-3">
+                                                 <ImageWithFallback 
+                           src="/images/IMG_0336.jpg" 
+                           alt="20 Yard Roll-off Dumpster" 
+                           className="w-full h-24 object-contain object-center rounded-lg" 
+                           fallbackSrc="/images/IMG_0336.jpg"
+                         />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">20 Yard</div>
+                        <div className="text-xs text-gray-600 mb-2">Medium Projects</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-green-600 font-semibold text-xs">Great Value</span>
+                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('30');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '30';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '30' 
+                        ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-purple-100' 
+                        : 'border-gray-200 hover:border-purple-500'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-3 mb-3">
+                        <ImageWithFallback 
+                          src="/images/dumpster5-500x500-1.jpeg" 
+                          alt="30 Yard Roll-off Dumpster" 
+                          className="w-full h-24 object-contain object-center rounded-lg" 
+                          fallbackSrc="/images/dumpster500x500-1.jpeg"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">30 Yard</div>
+                        <div className="text-xs text-gray-600 mb-2">Large Projects</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-purple-600 font-semibold text-xs">Large Capacity</span>
+                          <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
               </div>
               
               {/* Specialized Dumpster Options */}
-              <div className="grid grid-cols-3 gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('10-dirt');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '10-dirt';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '10-dirt' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/15-NEW-01.png" 
-                    alt="10 Yard Clean Dirt Disposal Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/dumpsters.webp"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">10 Yard Dirt</div>
-                  <div className="text-xs text-gray-500">Clean Dirt Only</div>
-                </button>
-                
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('10-mixed');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '10-mixed';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '10-mixed' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/dumpster500x200-2.jpeg" 
-                    alt="10 Yard Mixed Load Disposal Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/dumpster500x200-2.webp"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">10 Yard Mixed</div>
-                  <div className="text-xs text-gray-500">4 Tons Included</div>
-                </button>
-                
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedSize('12-concrete');
-                    const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
-                    if (select) {
-                      select.value = '12-concrete';
-                      select.dispatchEvent(new Event('change'));
-                    }
-                  }}
-                  className={`p-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#4e37a8] ${
-                    selectedSize === '12-concrete' 
-                      ? 'border-[#4e37a8] bg-[#4e37a8]/5' 
-                      : 'border-gray-200 hover:border-[#4e37a8]'
-                  }`}
-                >
-                  <ImageWithFallback 
-                    src="/images/dumpster5-500x500-1.jpeg" 
-                    alt="12 Yard Concrete Disposal Dumpster" 
-                    className="w-full h-16 object-cover rounded mb-2" 
-                    fallbackSrc="/images/dumpster5-500x500-1.webp"
-                  />
-                  <div className="text-xs font-semibold text-gray-800">12 Yard Concrete</div>
-                  <div className="text-xs text-gray-500">Concrete Projects</div>
-                </button>
+              <div>
+                <h4 className="text-sm font-medium text-gray-600 mb-3">Specialized Dumpsters</h4>
+                <div className="grid grid-cols-3 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('10-dirt');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '10-dirt';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '10-dirt' 
+                        ? 'border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100' 
+                        : 'border-gray-200 hover:border-orange-500'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-3 mb-3">
+                        <ImageWithFallback 
+                          src="/images/IMG_3190.jpg" 
+                          alt="10 Yard Clean Dirt Disposal Dumpster" 
+                          className="w-full h-24 object-contain object-center rounded-lg" 
+                          fallbackSrc="/images/IMG_3190.jpg"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">10 Yard Dirt</div>
+                        <div className="text-xs text-gray-600 mb-2">Clean Dirt Only</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-orange-600 font-semibold text-xs">Clean Dirt Only</span>
+                          <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('10-mixed');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '10-mixed';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '10-mixed' 
+                        ? 'border-red-500 bg-gradient-to-br from-red-50 to-red-100' 
+                        : 'border-gray-200 hover:border-red-500'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-3 mb-3">
+                        <ImageWithFallback 
+                          src="/images/IMG_3190.jpg" 
+                          alt="10 Yard Mixed Load Disposal Dumpster" 
+                          className="w-full h-24 object-contain object-center rounded-lg" 
+                          fallbackSrc="/images/IMG_3190.jpg"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">10 Yard Mixed</div>
+                        <div className="text-xs text-gray-600 mb-2">4 Tons Included</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-red-600 font-semibold text-xs">Mixed Load</span>
+                          <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedSize('12-concrete');
+                      const select = document.getElementById('dumpsterSize') as HTMLSelectElement;
+                      if (select) {
+                        select.value = '12-concrete';
+                        select.dispatchEvent(new Event('change'));
+                      }
+                    }}
+                    className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 overflow-hidden ${
+                      selectedSize === '12-concrete' 
+                        ? 'border-gray-500 bg-gradient-to-br from-gray-50 to-gray-100' 
+                        : 'border-gray-200 hover:border-gray-500'
+                    }`}
+                  >
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-3 mb-3">
+                        <ImageWithFallback 
+                          src="/images/IMG_3190.jpg" 
+                          alt="12 Yard Concrete Disposal Dumpster" 
+                          className="w-full h-24 object-contain object-center rounded-lg" 
+                          fallbackSrc="/images/IMG_3190.jpg"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-gray-900 text-sm mb-1">12 Yard Concrete</div>
+                        <div className="text-xs text-gray-600 mb-2">Concrete Projects</div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-gray-600 font-semibold text-xs">Heavy Duty</span>
+                          <div className="w-6 h-6 bg-gray-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
               </div>
               
               {/* Hidden select for form functionality */}
@@ -773,14 +874,18 @@ export default function DumpsterCalculator() {
                 <option value="12-concrete">12 Yard Concrete</option>
               </select>
             </div>
-            
+          </div>
+          
+          {/* Duration and Veteran Discount Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div>
-              <label htmlFor="duration" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="duration" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-2"></span>
                 ⏰ Duration (Days)
               </label>
               <select
                 id="duration"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm"
               >
                 <option value="">Select duration</option>
                 <option value="1">1 Day (Special Rate)</option>
@@ -791,52 +896,106 @@ export default function DumpsterCalculator() {
                 <option value="30">30 Days</option>
               </select>
             </div>
-          </div>
-          
-          {/* Veteran Discount Section */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
-            <div className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                id="veteranDiscount"
-                className="w-5 h-5 text-[#4e37a8] border-gray-300 rounded focus:ring-[#4e37a8] focus:ring-2"
-              />
-              <label htmlFor="veteranDiscount" className="text-sm font-semibold text-gray-700 flex items-center">
-                Yes, I am a veteran and would like to receive a 10% discount
-              </label>
+            
+            {/* Veteran Discount Section */}
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-4">
+              <div className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  id="veteranDiscount"
+                  className="w-5 h-5 text-[#4e37a8] border-gray-300 rounded focus:ring-[#4e37a8] focus:ring-2"
+                />
+                <label htmlFor="veteranDiscount" className="text-sm font-semibold text-gray-700 flex items-center">
+                  <svg className="w-4 h-4 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Veteran Discount (10%)
+                </label>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 ml-8">
+                We proudly support our veterans with special pricing on all dumpster rentals.
+              </p>
             </div>
-            <p className="text-xs text-gray-600 mt-2 ml-8">
-              We proudly support our veterans with special pricing on all dumpster rentals.
-            </p>
           </div>
           
-          <div className="text-center mb-6">
+          {/* Calculate Button */}
+          <div className="text-center mb-8">
             <button
-              className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-[#4e37a8] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+              className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
               onClick={handleCalculate}
             >
+              <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               Calculate Estimate
             </button>
           </div>
           
+          {/* Results Section */}
           <div id="calculatorResult" className="hidden"></div>
           
-          <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-            <h4 className="font-semibold text-yellow-800 mb-2">💡 How the Advanced Calculator Works</h4>
-                                      <ul className="text-sm text-yellow-700 space-y-1">
-               <li>• <strong>Multiple Hubs:</strong> We have 3 locations serving Utah - calculator automatically finds the closest</li>
-               <li>• <strong>1-Day Special:</strong> Discounted rates for same-day pickup projects</li>
-               <li>• <strong>3-7 Day Bundles:</strong> Bundle pricing includes rental, pickup, and dropoff fees with daily rate breakdown</li>
-               <li>• <strong>Extended Rentals:</strong> Additional days beyond 7 are charged at daily rates</li>
-               <li>• <strong>30+ Day Rentals:</strong> Special pricing with 2-dump minimum requirement</li>
-               <li>• <strong>Veteran Discount:</strong> 10% off for all veterans (thank you for your service!)</li>
-                               <li>• <strong>Delivery Surcharge:</strong> Gas + labor costs for locations outside Salt Lake County and beyond 10 miles from our hub (round trip) with actual driving time calculation</li>
-                <li>• <strong>Location-Based Pricing:</strong> Salt Lake County locations and areas within 10 miles of our hubs have no additional surcharges</li>
-                               <li>• <strong>Weight-Based Pricing:</strong> $55 per ton charged after disposal facility weighing</li>
-               <li>• <strong>Additional Item Charges:</strong> $25 per item for refrigerators, freezers, drinking water coolers, air conditioning units (must drain freon), mattresses/box springs, or tires</li>
-               <li>• <strong>Location Factors:</strong> Prices vary by location and availability</li>
-               <li>• <strong>Prohibited Items:</strong> Additional charges may apply for restricted materials</li>
-             </ul>
+          {/* How It Works Section */}
+          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl border border-yellow-200 p-6">
+            <h4 className="font-bold text-yellow-800 mb-4 flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+              💡 How the Advanced Calculator Works
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="text-sm text-yellow-700 space-y-2">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Multiple Hubs:</strong> We have 3 locations serving Utah - calculator automatically finds the closest</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>1-Day Special:</strong> Discounted rates for same-day pickup projects</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>3-7 Day Bundles:</strong> Bundle pricing includes rental, pickup, and dropoff fees with daily rate breakdown</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Extended Rentals:</strong> Additional days beyond 7 are charged at daily rates</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>30+ Day Rentals:</strong> Special pricing with 2-dump minimum requirement</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Veteran Discount:</strong> 10% off for all veterans (thank you for your service!)</span>
+                </li>
+              </ul>
+              <ul className="text-sm text-yellow-700 space-y-2">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Delivery Surcharge:</strong> Gas + labor costs for locations outside Salt Lake County and beyond 10 miles from our hub</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Location-Based Pricing:</strong> Salt Lake County locations and areas within 10 miles of our hubs have no additional surcharges</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Weight-Based Pricing:</strong> $55 per ton charged after disposal facility weighing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Additional Item Charges:</strong> $25 per item for refrigerators, freezers, drinking water coolers, air conditioning units (must drain freon), mattresses/box springs, or tires</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Location Factors:</strong> Prices vary by location and availability</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Prohibited Items:</strong> Additional charges may apply for restricted materials</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

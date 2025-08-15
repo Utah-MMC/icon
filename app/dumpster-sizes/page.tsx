@@ -106,61 +106,219 @@ export default function DumpsterSizes() {
             </p>
           </div>
           
-          {/* Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
-              <thead>
-                <tr className="bg-purple-50">
-                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold text-gray-900">
-                    Roll Off Size
-                  </th>
-                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold text-gray-900">
-                    Typical Dimensions
-                  </th>
-                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold text-gray-900">
-                    Typical Weight Limit
-                  </th>
-                  <th className="border border-gray-300 px-6 py-4 text-left font-semibold text-gray-900">
-                    Maximum Loading Level
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white">
-                  <td className="border border-gray-300 px-6 py-4">
-                    <div className="flex items-center">
-                      <ImageWithFallback src="/images/15-NEW-01.png" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpsters.webp" />
-                      <span className="font-medium">15 Yard</span>
+          {/* Modern Dumpster Sizes Table */}
+          <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl border border-gray-100 p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#4e37a8] rounded-full mb-4">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">All Dumpster Sizes & Specifications</h3>
+              <p className="text-gray-600">Complete overview of our standard and specialized dumpster options</p>
+            </div>
+
+            {/* Standard Dumpsters Section */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-3"></span>
+                Standard Dumpsters
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* 15 Yard */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/IMG_0350.jpg" 
+                        alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/dumpsters.webp" 
+                      />
                     </div>
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">12' x 8' x 6'</td>
-                  <td className="border border-gray-300 px-6 py-4">3 tons</td>
-                  <td className="border border-gray-300 px-6 py-4">Level with top</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-6 py-4">
-                    <div className="flex items-center">
-                      <ImageWithFallback src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster500x500-1.webp" />
-                      <span className="font-medium">20 Yard</span>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">15 Yard</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 12' x 8' x 6'</div>
+                      <div><strong>Weight Limit:</strong> 3 tons</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Small projects</div>
                     </div>
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">22' x 8' x 6'</td>
-                  <td className="border border-gray-300 px-6 py-4">4 tons</td>
-                  <td className="border border-gray-300 px-6 py-4">Level with top</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border border-gray-300 px-6 py-4">
-                    <div className="flex items-center">
-                      <ImageWithFallback src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" className="w-12 h-12 object-cover rounded mr-3" fallbackSrc="/images/dumpster5-500x500-1.webp" />
-                      <span className="font-medium">30 Yard</span>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-[#4e37a8] font-semibold">Most Popular</span>
+                      <div className="w-8 h-8 bg-[#4e37a8] rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
                     </div>
-                  </td>
-                  <td className="border border-gray-300 px-6 py-4">22' x 8' x 8'</td>
-                  <td className="border border-gray-300 px-6 py-4">6 tons</td>
-                  <td className="border border-gray-300 px-6 py-4">Level with top</td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </div>
+
+                {/* 20 Yard */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/IMG_0336.jpg" 
+                        alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/dumpster500x500-1.webp" 
+                      />
+                    </div>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">20 Yard</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 22' x 8' x 6'</div>
+                      <div><strong>Weight Limit:</strong> 4 tons</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Medium projects</div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-green-600 font-semibold">Great Value</span>
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 30 Yard */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/dumpster5-500x500-1.jpeg" 
+                        alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/dumpster5-500x500-1.webp" 
+                      />
+                    </div>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">30 Yard</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 22' x 8' x 8'</div>
+                      <div><strong>Weight Limit:</strong> 6 tons</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Large projects</div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-purple-600 font-semibold">Large Capacity</span>
+                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Specialized Dumpsters Section */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                Specialized Dumpsters
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* 10 Yard Dirt */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/IMG_3190.jpg" 
+                        alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/IMG_3190.jpg" 
+                      />
+                    </div>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">10 Yard Dirt</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 22' x 8' x 2'</div>
+                      <div><strong>Weight Limit:</strong> Flat rate</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Clean dirt & soil</div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-orange-600 font-semibold">Clean Dirt Only</span>
+                      <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 10 Yard Mixed */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/IMG_3190.jpg" 
+                        alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/IMG_3190.jpg" 
+                      />
+                    </div>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">10 Yard Mixed</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 22' x 8' x 2'</div>
+                      <div><strong>Weight Limit:</strong> 4 tons included</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Mixed loads</div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-red-600 font-semibold">4 Tons Included</span>
+                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 12 Yard Concrete */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                  <div className="p-6">
+                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 mb-4">
+                      <ImageWithFallback 
+                        src="/images/IMG_3190.jpg" 
+                        alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental" 
+                        className="w-full h-32 object-contain object-center rounded-lg" 
+                        fallbackSrc="/images/IMG_3190.jpg" 
+                      />
+                    </div>
+                    <h5 className="font-bold text-gray-900 text-lg mb-2">12 Yard Concrete</h5>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div><strong>Dimensions:</strong> 22' x 8' x 2'</div>
+                      <div><strong>Weight Limit:</strong> Flat rate</div>
+                      <div><strong>Loading:</strong> Level with top</div>
+                      <div><strong>Best For:</strong> Concrete projects</div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-gray-600 font-semibold">Heavy Duty</span>
+                      <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="mt-8 text-center">
+              <a href="/freequote" className="inline-flex items-center bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Get Your Free Quote
+              </a>
+            </div>
           </div>
           
           {/* Additional Notes */}
@@ -203,7 +361,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/15-NEW-01.png" 
+                            src="/images/IMG_0350.jpg" 
                             alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/dumpsters.webp"
@@ -275,10 +433,10 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/15-NEW-01.png" 
+                            src="/images/IMG_3190.jpg" 
                             alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental - Perfect for Dirt and Soil Projects" 
                             className="w-full h-full object-cover rounded"
-                            fallbackSrc="/images/dumpsters.webp"
+                            fallbackSrc="/images/IMG_3190.jpg"
                           />
                         </div>
                         <div>
@@ -299,10 +457,10 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/dumpster500x200-2.jpeg" 
+                            src="/images/IMG_3190.jpg" 
                             alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental - 4 Tons Included" 
                             className="w-full h-full object-cover rounded"
-                            fallbackSrc="/images/dumpster500x200-2.webp"
+                            fallbackSrc="/images/IMG_3190.jpg"
                           />
                         </div>
                         <div>
@@ -323,10 +481,10 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/dumpster5-500x500-1.jpeg" 
+                            src="/images/IMG_3190.jpg" 
                             alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental - Perfect for Concrete Projects" 
                             className="w-full h-full object-cover rounded"
-                            fallbackSrc="/images/dumpster5-500x500-1.webp"
+                            fallbackSrc="/images/IMG_3190.jpg"
                           />
                         </div>
                         <div>
