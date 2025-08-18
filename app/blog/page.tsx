@@ -21,6 +21,16 @@ const blogPosts = [
     featured: true
   },
   {
+    id: "dumpster-rentals-near-me-2025",
+    title: "Dumpster Rentals Near Me: Complete Guide to Finding Local Service",
+    excerpt: "Find reliable dumpster rentals near you with our comprehensive guide. Learn about pricing, delivery options, service areas, and how to choose the best local dumpster rental service for your project.",
+    category: "DUMPSTER RENTAL",
+    readTime: "10 min read",
+    image: "/images/dumpsterSmallBanner3.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner3.webp",
+    featured: true
+  },
+  {
     id: "construction-waste-management-2025",
     title: "Construction Waste Management 2025: Best Practices & Solutions",
     excerpt: "Discover effective construction waste management strategies, recycling techniques, and compliance requirements for 2025.",
