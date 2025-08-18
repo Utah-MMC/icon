@@ -8,6 +8,7 @@ import CustomerRatingSystem from "./components/CustomerRatingSystem";
 import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
 import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
 import EnhancedHeader from "./components/EnhancedHeader";
+import TawkToChat from "./components/TawkToChat";
 
 
 const geistSans = Geist({
@@ -264,6 +265,9 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+
+        {/* Live Chat Widget */}
+        <TawkToChat />
 
         {/* Footer - Purple Theme */}
         <footer className="bg-[#4e37a8] text-white">

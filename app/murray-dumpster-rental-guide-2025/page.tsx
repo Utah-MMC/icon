@@ -415,7 +415,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                           className="block bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors text-center font-semibold"
                         >
                           View Murray Services
-                        </Link>
+                </Link>
               </div>
                     </div>
                   </div>
@@ -500,7 +500,7 @@ export default function MurrayDumpsterRentalGuide2025() {
           </div>
         </div>
       </main>
-    </div>
+            </div>
     </>
   );
 }

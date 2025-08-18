@@ -415,7 +415,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                           className="block bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors text-center font-semibold"
                         >
                           View Salt Lake City Services
-                        </Link>
+                </Link>
               </div>
                     </div>
                   </div>
