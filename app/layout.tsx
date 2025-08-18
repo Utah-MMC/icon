@@ -267,9 +267,7 @@ export default function RootLayout({
         </main>
 
         {/* Live Chat Widget */}
-        {/* Temporarily disabled for debugging - causing crash
         <TawkToChat />
-        */}
 
         {/* Footer - Purple Theme */}
         <footer className="bg-[#4e37a8] text-white">
