@@ -547,5 +547,7 @@ export default function MidvaleDumpsterRentalGuide2025() {
                 </div>
               </div>
             </section>
+    </div>
+    </>
   );
 }

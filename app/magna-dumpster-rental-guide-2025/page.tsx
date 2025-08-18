@@ -547,5 +547,7 @@ export default function MagnaDumpsterRentalGuide2025() {
                 </div>
               </div>
             </section>
+    </div>
+    </>
   );
 }

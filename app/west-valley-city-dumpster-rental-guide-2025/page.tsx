@@ -547,5 +547,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                 </div>
               </div>
             </section>
+    </div>
+    </>
   );
 }

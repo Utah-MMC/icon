@@ -547,5 +547,7 @@ export default function SugarHouseDumpsterRentalGuide2025() {
                 </div>
               </div>
             </section>
+    </div>
+    </>
   );
 }
