@@ -73,6 +73,11 @@ export default function RoyPage() {
       cityName="roy"
       cityDisplayName="Roy"
       nearbyCities={nearbyCities}
+      historicalInfo="Roy, located near Hill Air Force Base, offers a strong military community and family-friendly environment. Our dumpster services support Roy's military and residential community."
+      landmarks="Hill Air Force Base, Roy City Hall, Roy Park"
+      localProjects="Supporting Roy's military community and residential projects"
+      neighborhoods="Roy Central, Roy East, Roy West"
+      localBusinesses="Preferred provider for Roy's military community and residential projects"
     />
   );
 }

@@ -73,6 +73,11 @@ export default function NorthSaltLakePage() {
       cityName="north-salt-lake"
       cityDisplayName="North Salt Lake"
       nearbyCities={nearbyCities}
+      historicalInfo="North Salt Lake, located along the Great Salt Lake, offers beautiful lake views and convenient access to downtown. Our dumpster services support North Salt Lake's lakeside community."
+      landmarks="Great Salt Lake, North Salt Lake City Hall, North Salt Lake Park"
+      localProjects="Supporting North Salt Lake's lakeside development and residential projects"
+      neighborhoods="North Salt Lake Central, North Salt Lake East, North Salt Lake West"
+      localBusinesses="Trusted by North Salt Lake's lakeside and residential developers"
     />
   );
 }

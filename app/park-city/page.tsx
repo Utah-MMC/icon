@@ -73,6 +73,11 @@ export default function ParkCityPage() {
       cityName="park-city"
       cityDisplayName="Park City"
       nearbyCities={nearbyCities}
+      historicalInfo="Park City, a historic mining town turned world-class ski destination, is home to the Sundance Film Festival and three world-class ski resorts. Our dumpster services support Park City's unique character."
+      landmarks="Park City Mountain Resort, Deer Valley, Sundance Film Festival, Historic Main Street"
+      localProjects="Supporting Park City's historic preservation and resort development"
+      neighborhoods="Park City Central, Park City East, Park City West"
+      localBusinesses="Trusted by Park City's luxury resort and historic preservation projects"
     />
   );
 }

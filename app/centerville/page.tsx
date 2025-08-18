@@ -73,6 +73,11 @@ export default function CentervillePage() {
       cityName="centerville"
       cityDisplayName="Centerville"
       nearbyCities={nearbyCities}
+      historicalInfo="Centerville, located in Davis County, offers beautiful mountain views and family-friendly communities. Our dumpster services support Centerville's development in the northern Salt Lake Valley."
+      landmarks="Centerville City Hall, Centerville Park, Mueller Park"
+      localProjects="Supporting Centerville's residential growth and community projects"
+      neighborhoods="Centerville Central, Centerville East, Centerville West"
+      localBusinesses="Trusted by Centerville's residential developers and community projects"
     />
   );
 }

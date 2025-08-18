@@ -73,6 +73,11 @@ export default function ProvoPage() {
       cityName="provo"
       cityDisplayName="Provo"
       nearbyCities={nearbyCities}
+      historicalInfo="Provo, home to Brigham Young University, is located along the beautiful Provo River and offers stunning mountain views. Our dumpster services support Provo's educational and residential growth."
+      landmarks="Brigham Young University, Provo River, Provo City Hall, Provo Canyon"
+      localProjects="Supporting BYU campus projects and Provo's residential development"
+      neighborhoods="BYU Campus, Provo Central, Provo East, Provo West"
+      localBusinesses="Preferred provider for BYU campus projects and Provo's residential development"
     />
   );
 }

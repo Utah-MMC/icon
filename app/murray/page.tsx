@@ -86,6 +86,45 @@ export default function MurrayPage() {
                 <li>• Murray West</li>
               </ul>
             </div>
+        {/* City-Specific Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Murray</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            Murray, established in 1903, is home to Murray Park - one of Utah's largest city parks - and the historic Murray Theater. Our dumpster services support Murray's growing residential and commercial development.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+              <p className="text-gray-600 text-sm">Murray Park, Murray Theater, Murray City Hall, Murray Parkway</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+              <p className="text-gray-600 text-sm">Recent projects include the Murray City Hall renovation and Murray Parkway development</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Murray Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Murray and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Murray Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Murray Central</li>
+                <li>• Murray East</li>
+                <li>• Murray West</li>
+                <li>• Murray North</li>
+                <li>• Murray South</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">Trusted by Murray's top contractors and construction companies</p>
+            </div>
+          </div>
+        </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">

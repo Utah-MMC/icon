@@ -73,6 +73,11 @@ export default function LehiPage() {
       cityName="lehi"
       cityDisplayName="Lehi"
       nearbyCities={nearbyCities}
+      historicalInfo="Lehi, home to Thanksgiving Point and the Lehi Roller Mills, is experiencing rapid growth in Utah County. Our dumpster services support Lehi's expanding community."
+      landmarks="Thanksgiving Point, Lehi Roller Mills, Lehi City Hall, Traverse Mountain"
+      localProjects="Supporting Lehi's Thanksgiving Point expansion and residential growth"
+      neighborhoods="Thanksgiving Point, Lehi Central, Lehi East, Lehi West, Traverse Mountain"
+      localBusinesses="Preferred provider for Lehi's Thanksgiving Point and residential projects"
     />
   );
 }

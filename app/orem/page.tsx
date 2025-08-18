@@ -73,6 +73,11 @@ export default function OremPage() {
       cityName="orem"
       cityDisplayName="Orem"
       nearbyCities={nearbyCities}
+      historicalInfo="Orem, known as 'Family City USA,' is home to Utah Valley University and offers beautiful mountain views. Our dumpster services support Orem's family-friendly community."
+      landmarks="Utah Valley University, Orem City Hall, University Place, Orem Park"
+      localProjects="Supporting UVU campus projects and Orem's family-oriented developments"
+      neighborhoods="UVU Campus, Orem Central, Orem East, Orem West"
+      localBusinesses="Trusted by UVU campus projects and Orem's family-oriented developers"
     />
   );
 }

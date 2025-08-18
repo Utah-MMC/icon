@@ -73,6 +73,11 @@ export default function TooelePage() {
       cityName="tooele"
       cityDisplayName="Tooele"
       nearbyCities={nearbyCities}
+      historicalInfo="Tooele, located in Tooele County, offers beautiful mountain views and a strong sense of community. Our dumpster services support Tooele's mountain community development."
+      landmarks="Tooele City Hall, Tooele Park, Oquirrh Mountains"
+      localProjects="Supporting Tooele's mountain community development and residential projects"
+      neighborhoods="Tooele Central, Tooele East, Tooele West"
+      localBusinesses="Preferred provider for Tooele's mountain community and residential projects"
     />
   );
 }

@@ -73,6 +73,11 @@ export default function EagleMountainPage() {
       cityName="eagle-mountain"
       cityDisplayName="Eagle Mountain"
       nearbyCities={nearbyCities}
+      historicalInfo="Eagle Mountain, one of Utah's fastest-growing cities, offers beautiful mountain views and family-friendly communities. Our dumpster services support Eagle Mountain's rapid growth."
+      landmarks="Eagle Mountain City Hall, Eagle Mountain Park, Cedar Valley"
+      localProjects="Supporting Eagle Mountain's residential expansion and community development"
+      neighborhoods="Eagle Mountain Central, Eagle Mountain East, Eagle Mountain West"
+      localBusinesses="Preferred provider for Eagle Mountain's residential and community projects"
     />
   );
 }

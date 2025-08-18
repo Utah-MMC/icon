@@ -86,6 +86,44 @@ export default function WestJordanPage() {
                 <li>• Jordan Landing</li>
               </ul>
             </div>
+        {/* City-Specific Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About West Jordan</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            West Jordan, named after the Jordan River, is home to the historic Gardner Village and Jordan Landing shopping center. We provide reliable dumpster services for West Jordan's diverse community.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+              <p className="text-gray-600 text-sm">Gardner Village, Jordan Landing, Jordan River Parkway, West Jordan City Hall</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+              <p className="text-gray-600 text-sm">Proud to serve West Jordan's community garden projects and Jordan Landing developments</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">West Jordan Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of West Jordan and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">West Jordan Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Jordan Landing</li>
+                <li>• West Jordan Central</li>
+                <li>• West Jordan East</li>
+                <li>• West Jordan West</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">Trusted partner for West Jordan's construction and renovation projects</p>
+            </div>
+          </div>
+        </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">

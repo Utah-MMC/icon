@@ -73,6 +73,11 @@ export default function PoplarGrovePage() {
       cityName="poplar-grove"
       cityDisplayName="Poplar Grove"
       nearbyCities={nearbyCities}
+      historicalInfo="Poplar Grove, a historic neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Poplar Grove's community growth."
+      landmarks="Poplar Grove City Hall, Poplar Grove Park, Jordan River"
+      localProjects="Supporting Poplar Grove's community development and residential projects"
+      neighborhoods="Poplar Grove Central, Poplar Grove East, Poplar Grove West"
+      localBusinesses="Preferred provider for Poplar Grove's community and residential projects"
     />
   );
 }

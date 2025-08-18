@@ -73,6 +73,11 @@ export default function MidvalePage() {
       cityName="midvale"
       cityDisplayName="Midvale"
       nearbyCities={nearbyCities}
+      historicalInfo="Midvale, centrally located in the Salt Lake Valley, is known for its convenient location and growing business community. Our dumpster services support Midvale's development projects."
+      landmarks="Midvale City Hall, Midvale Park, Historic Midvale Main Street"
+      localProjects="Supporting Midvale's Main Street revitalization and business development"
+      neighborhoods="Midvale Central, Midvale East, Midvale West"
+      localBusinesses="Preferred provider for Midvale's business and residential projects"
     />
   );
 }

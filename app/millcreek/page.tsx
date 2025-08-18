@@ -73,6 +73,11 @@ export default function MillcreekPage() {
       cityName="millcreek"
       cityDisplayName="Millcreek"
       nearbyCities={nearbyCities}
+      historicalInfo="Millcreek, named after the historic mill and creek, is a vibrant community in the Salt Lake Valley. Our dumpster services support Millcreek's residential and commercial growth."
+      landmarks="Millcreek City Hall, Millcreek Park, Historic Millcreek"
+      localProjects="Supporting Millcreek's community projects and residential development"
+      neighborhoods="Millcreek Central, Millcreek East, Millcreek West"
+      localBusinesses="Trusted by Millcreek's local contractors and developers"
     />
   );
 }

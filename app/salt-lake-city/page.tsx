@@ -82,6 +82,46 @@ export default function SaltLakeCityPage() {
                 <li>• Poplar Grove</li>
               </ul>
             </div>
+        {/* City-Specific Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Salt Lake City</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            Founded by Brigham Young in 1847, Salt Lake City is Utah's capital and home to Temple Square and the Utah State Capitol. Our dumpster services support the city's ongoing development.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+              <p className="text-gray-600 text-sm">Temple Square, Utah State Capitol, Liberty Park, The Gateway, Downtown</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+              <p className="text-gray-600 text-sm">Supporting downtown Salt Lake City renovations and Liberty Park improvements</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Salt Lake City Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Salt Lake City and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Salt Lake City Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Downtown</li>
+                <li>• Sugar House</li>
+                <li>• Rose Park</li>
+                <li>• Poplar Grove</li>
+                <li>• Glendale</li>
+                <li>• Fairpark</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">Preferred provider for downtown Salt Lake City construction projects</p>
+            </div>
+          </div>
+        </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">

@@ -73,6 +73,11 @@ export default function KearnsPage() {
       cityName="kearns"
       cityDisplayName="Kearns"
       nearbyCities={nearbyCities}
+      historicalInfo="Kearns, a diverse community in the Salt Lake Valley, offers a strong sense of community and convenient access to the valley. Our dumpster services support Kearns' community growth."
+      landmarks="Kearns City Hall, Kearns Park, Kearns High School"
+      localProjects="Supporting Kearns' community development and residential projects"
+      neighborhoods="Kearns Central, Kearns East, Kearns West"
+      localBusinesses="Preferred provider for Kearns' community and residential projects"
     />
   );
 }

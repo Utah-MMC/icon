@@ -73,6 +73,11 @@ export default function MagnaPage() {
       cityName="magna"
       cityDisplayName="Magna"
       nearbyCities={nearbyCities}
+      historicalInfo="Magna, a historic mining community in the Salt Lake Valley, offers a strong sense of history and community. Our dumpster services support Magna's historic preservation and growth."
+      landmarks="Magna City Hall, Magna Park, Historic Magna Main Street"
+      localProjects="Supporting Magna's historic preservation and community projects"
+      neighborhoods="Magna Central, Magna East, Magna West"
+      localBusinesses="Trusted by Magna's historic preservation and community projects"
     />
   );
 }

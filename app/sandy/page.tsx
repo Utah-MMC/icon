@@ -86,6 +86,45 @@ export default function SandyPage() {
                 <li>• Sandy Hills</li>
               </ul>
             </div>
+        {/* City-Specific Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Sandy</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            Sandy, the gateway to Little Cottonwood Canyon, serves as the access point to world-famous Alta and Snowbird ski resorts. Our dumpster services support Sandy's residential and commercial growth.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+              <p className="text-gray-600 text-sm">Little Cottonwood Canyon, Alta Ski Resort, Snowbird, Sandy City Hall</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+              <p className="text-gray-600 text-sm">Supporting Sandy's annual Harvest Festival cleanup and residential development projects</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Sandy Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Sandy and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Sandy Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Sandy Heights</li>
+                <li>• Bell Canyon</li>
+                <li>• White City</li>
+                <li>• Sandy Central</li>
+                <li>• Sandy East</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">Preferred dumpster provider for Sandy's residential development projects</p>
+            </div>
+          </div>
+        </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">

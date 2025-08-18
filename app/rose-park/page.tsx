@@ -73,6 +73,11 @@ export default function RoseParkPage() {
       cityName="rose-park"
       cityDisplayName="Rose Park"
       nearbyCities={nearbyCities}
+      historicalInfo="Rose Park, a diverse neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Rose Park's community growth."
+      landmarks="Rose Park City Hall, Rose Park Park, Jordan River"
+      localProjects="Supporting Rose Park's community development and residential projects"
+      neighborhoods="Rose Park Central, Rose Park East, Rose Park West"
+      localBusinesses="Preferred provider for Rose Park's community and residential projects"
     />
   );
 }

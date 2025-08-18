@@ -73,6 +73,11 @@ export default function SouthJordanPage() {
       cityName="south-jordan"
       cityDisplayName="South Jordan"
       nearbyCities={nearbyCities}
+      historicalInfo="South Jordan, part of the Salt Lake Valley, is known for its family-friendly communities and the South Jordan City Hall. We provide reliable dumpster services for South Jordan's growing population."
+      landmarks="South Jordan City Hall, South Jordan Parkway, Daybreak Community"
+      localProjects="Supporting South Jordan's Daybreak community development and park improvements"
+      neighborhoods="Daybreak, South Jordan Central, South Jordan East, South Jordan West"
+      localBusinesses="Preferred provider for South Jordan's residential and commercial projects"
     />
   );
 }

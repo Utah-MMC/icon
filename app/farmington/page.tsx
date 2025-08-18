@@ -73,6 +73,11 @@ export default function FarmingtonPage() {
       cityName="farmington"
       cityDisplayName="Farmington"
       nearbyCities={nearbyCities}
+      historicalInfo="Farmington, home to Lagoon Amusement Park, offers family entertainment and beautiful mountain views. Our dumpster services support Farmington's family-oriented community."
+      landmarks="Lagoon Amusement Park, Farmington City Hall, Farmington Park"
+      localProjects="Supporting Farmington's family entertainment and residential projects"
+      neighborhoods="Farmington Central, Farmington East, Farmington West"
+      localBusinesses="Preferred provider for Farmington's family entertainment and residential projects"
     />
   );
 }

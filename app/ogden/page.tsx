@@ -73,6 +73,11 @@ export default function OgdenPage() {
       cityName="ogden"
       cityDisplayName="Ogden"
       nearbyCities={nearbyCities}
+      historicalInfo="Ogden, Utah's historic railroad hub, is the gateway to Weber Canyon and home to Weber State University. Our dumpster services support Ogden's ongoing revitalization."
+      landmarks="Union Station, Weber State University, Ogden City Hall, Historic 25th Street"
+      localProjects="Supporting Ogden's historic 25th Street revitalization and university projects"
+      neighborhoods="Ogden Central, Ogden East, Ogden West, Weber State area"
+      localBusinesses="Trusted partner for Ogden's historic renovation and university projects"
     />
   );
 }

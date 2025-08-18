@@ -73,6 +73,11 @@ export default function DowntownSaltLakePage() {
       cityName="downtown-salt-lake"
       cityDisplayName="Downtown Salt Lake"
       nearbyCities={nearbyCities}
+      historicalInfo="Downtown Salt Lake City, the heart of Utah's capital, is home to Temple Square, the Utah State Capitol, and vibrant business district. Our dumpster services support downtown development."
+      landmarks="Temple Square, Utah State Capitol, The Gateway, Downtown Salt Lake"
+      localProjects="Supporting downtown Salt Lake City renovations and business development"
+      neighborhoods="Downtown Central, Downtown East, Downtown West"
+      localBusinesses="Preferred provider for downtown Salt Lake City construction and business projects"
     />
   );
 }

@@ -73,6 +73,11 @@ export default function SouthSaltLakePage() {
       cityName="south-salt-lake"
       cityDisplayName="South Salt Lake"
       nearbyCities={nearbyCities}
+      historicalInfo="South Salt Lake, centrally located in the Salt Lake Valley, offers convenient access to downtown and growing business opportunities. Our dumpster services support South Salt Lake's development."
+      landmarks="South Salt Lake City Hall, South Salt Lake Park, Central Valley"
+      localProjects="Supporting South Salt Lake's business development and community projects"
+      neighborhoods="South Salt Lake Central, South Salt Lake East, South Salt Lake West"
+      localBusinesses="Preferred provider for South Salt Lake's business and community projects"
     />
   );
 }

@@ -73,6 +73,11 @@ export default function BountifulPage() {
       cityName="bountiful"
       cityDisplayName="Bountiful"
       nearbyCities={nearbyCities}
+      historicalInfo="Bountiful, located at the base of the Wasatch Mountains, offers stunning mountain views and a strong sense of community. Our dumpster services support Bountiful's mountain community."
+      landmarks="Bountiful City Hall, Bountiful Park, Mueller Park"
+      localProjects="Supporting Bountiful's mountain community development and residential projects"
+      neighborhoods="Bountiful Central, Bountiful East, Bountiful West"
+      localBusinesses="Preferred provider for Bountiful's mountain community and residential projects"
     />
   );
 }

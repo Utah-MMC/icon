@@ -73,6 +73,11 @@ export default function TaylorsvillePage() {
       cityName="taylorsville"
       cityDisplayName="Taylorsville"
       nearbyCities={nearbyCities}
+      historicalInfo="Taylorsville, established in 1996, is a growing community in the Salt Lake Valley. Our dumpster services support Taylorsville's residential and commercial development."
+      landmarks="Taylorsville City Hall, Taylorsville Park, Valley Regional Park"
+      localProjects="Supporting Taylorsville's park improvements and residential development"
+      neighborhoods="Taylorsville Central, Taylorsville East, Taylorsville West"
+      localBusinesses="Trusted by Taylorsville's local contractors and developers"
     />
   );
 }

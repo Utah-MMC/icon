@@ -73,6 +73,11 @@ export default function SugarHousePage() {
       cityName="sugar-house"
       cityDisplayName="Sugar House"
       nearbyCities={nearbyCities}
+      historicalInfo="Sugar House, a historic neighborhood in Salt Lake City, is known for its eclectic shops, restaurants, and community feel. Our dumpster services support Sugar House's unique character."
+      landmarks="Sugar House Park, Sugar House City Hall, Historic Sugar House"
+      localProjects="Supporting Sugar House's historic preservation and community projects"
+      neighborhoods="Sugar House Central, Sugar House East, Sugar House West"
+      localBusinesses="Trusted by Sugar House's historic preservation and community projects"
     />
   );
 }

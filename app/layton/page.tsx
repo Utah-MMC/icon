@@ -73,6 +73,11 @@ export default function LaytonPage() {
       cityName="layton"
       cityDisplayName="Layton"
       nearbyCities={nearbyCities}
+      historicalInfo="Layton, located in Davis County, offers beautiful mountain views and growing residential communities. Our dumpster services support Layton's development in the northern Salt Lake Valley."
+      landmarks="Layton City Hall, Layton Park, Antelope Island"
+      localProjects="Supporting Layton's residential growth and community projects"
+      neighborhoods="Layton Central, Layton East, Layton West"
+      localBusinesses="Preferred provider for Layton's residential and community projects"
     />
   );
 }

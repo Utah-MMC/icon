@@ -73,6 +73,11 @@ export default function ClearfieldPage() {
       cityName="clearfield"
       cityDisplayName="Clearfield"
       nearbyCities={nearbyCities}
+      historicalInfo="Clearfield, located near Hill Air Force Base, offers a strong military community and beautiful mountain views. Our dumpster services support Clearfield's military and residential community."
+      landmarks="Hill Air Force Base, Clearfield City Hall, Clearfield Park"
+      localProjects="Supporting Clearfield's military community and residential projects"
+      neighborhoods="Clearfield Central, Clearfield East, Clearfield West"
+      localBusinesses="Trusted by Clearfield's military community and residential developers"
     />
   );
 }

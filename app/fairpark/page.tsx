@@ -73,6 +73,11 @@ export default function FairparkPage() {
       cityName="fairpark"
       cityDisplayName="Fairpark"
       nearbyCities={nearbyCities}
+      historicalInfo="Fairpark, home to the Utah State Fairgrounds, offers a unique blend of history and community in Salt Lake City. Our dumpster services support Fairpark's community growth."
+      landmarks="Utah State Fairgrounds, Fairpark City Hall, Fairpark Park"
+      localProjects="Supporting Fairpark's fairgrounds events and community projects"
+      neighborhoods="Fairpark Central, Fairpark East, Fairpark West"
+      localBusinesses="Preferred provider for Fairpark's fairgrounds and community projects"
     />
   );
 }

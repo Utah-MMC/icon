@@ -10,9 +10,23 @@ interface CityPageClientProps {
     name: string;
     href: string;
   }>;
+  historicalInfo?: string;
+  landmarks?: string;
+  localProjects?: string;
+  neighborhoods?: string;
+  localBusinesses?: string;
 }
 
-export default function CityPageClient({ cityName, cityDisplayName, nearbyCities }: CityPageClientProps) {
+export default function CityPageClient({ 
+  cityName, 
+  cityDisplayName, 
+  nearbyCities,
+  historicalInfo,
+  landmarks,
+  localProjects,
+  neighborhoods,
+  localBusinesses
+}: CityPageClientProps) {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -36,6 +50,28 @@ export default function CityPageClient({ cityName, cityDisplayName, nearbyCities
             <li>Multiple dumpster sizes available</li>
           </ul>
         </div>
+
+        {/* City-Specific Information */}
+        {historicalInfo && (
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">About {cityDisplayName}</h2>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              {historicalInfo}
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+                <p className="text-gray-600 text-sm">{landmarks}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+                <p className="text-gray-600 text-sm">{localProjects}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="bg-blue-50 p-8 rounded-lg mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{cityDisplayName} Service Areas</h2>
           <p className="text-gray-600 mb-4">We serve all of {cityDisplayName} and surrounding communities:</p>
@@ -43,11 +79,19 @@ export default function CityPageClient({ cityName, cityDisplayName, nearbyCities
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">{cityDisplayName} Areas:</h3>
               <ul className="space-y-1 text-gray-600">
-                <li>• {cityDisplayName} Central</li>
-                <li>• {cityDisplayName} East</li>
-                <li>• {cityDisplayName} West</li>
-                <li>• {cityDisplayName} North</li>
-                <li>• {cityDisplayName} South</li>
+                {neighborhoods ? (
+                  neighborhoods.split(', ').map((neighborhood, index) => (
+                    <li key={index}>• {neighborhood}</li>
+                  ))
+                ) : (
+                  <>
+                    <li>• {cityDisplayName} Central</li>
+                    <li>• {cityDisplayName} East</li>
+                    <li>• {cityDisplayName} West</li>
+                    <li>• {cityDisplayName} North</li>
+                    <li>• {cityDisplayName} South</li>
+                  </>
+                )}
               </ul>
             </div>
             <div>
@@ -59,6 +103,12 @@ export default function CityPageClient({ cityName, cityDisplayName, nearbyCities
               </ul>
             </div>
           </div>
+          {localBusinesses && (
+            <div className="mt-6">
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">{localBusinesses}</p>
+            </div>
+          )}
         </div>
         <div className="bg-green-50 p-8 rounded-lg mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{cityDisplayName} Dumpster Services</h2>

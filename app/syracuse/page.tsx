@@ -73,6 +73,11 @@ export default function SyracusePage() {
       cityName="syracuse"
       cityDisplayName="Syracuse"
       nearbyCities={nearbyCities}
+      historicalInfo="Syracuse, located along the Great Salt Lake, offers beautiful lake views and growing residential communities. Our dumpster services support Syracuse's lakeside development."
+      landmarks="Great Salt Lake, Syracuse City Hall, Syracuse Park"
+      localProjects="Supporting Syracuse's lakeside development and residential projects"
+      neighborhoods="Syracuse Central, Syracuse East, Syracuse West"
+      localBusinesses="Trusted by Syracuse's lakeside and residential developers"
     />
   );
 }

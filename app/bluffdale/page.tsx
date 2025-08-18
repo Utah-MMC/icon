@@ -73,6 +73,11 @@ export default function BluffdalePage() {
       cityName="bluffdale"
       cityDisplayName="Bluffdale"
       nearbyCities={nearbyCities}
+      historicalInfo="Bluffdale, located in the southwest Salt Lake Valley, offers beautiful mountain views and growing residential communities. Our dumpster services support Bluffdale's development."
+      landmarks="Bluffdale City Hall, Bluffdale Park, Point of the Mountain"
+      localProjects="Supporting Bluffdale's residential growth and community projects"
+      neighborhoods="Bluffdale Central, Bluffdale East, Bluffdale West"
+      localBusinesses="Trusted by Bluffdale's residential developers and community projects"
     />
   );
 }

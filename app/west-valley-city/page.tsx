@@ -73,6 +73,11 @@ export default function WestValleyCityPage() {
       cityName="west-valley-city"
       cityDisplayName="West Valley City"
       nearbyCities={nearbyCities}
+      historicalInfo="West Valley City, Utah's second-largest city, is home to the Maverik Center and the Utah Cultural Celebration Center. Our dumpster services support West Valley City's diverse community."
+      landmarks="Maverik Center, Utah Cultural Celebration Center, West Valley City Hall"
+      localProjects="Supporting West Valley City's cultural events and community projects"
+      neighborhoods="West Valley Central, West Valley East, West Valley West, Kearns area"
+      localBusinesses="Trusted partner for West Valley City's cultural and community projects"
     />
   );
 }

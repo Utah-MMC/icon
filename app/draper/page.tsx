@@ -86,6 +86,45 @@ export default function DraperPage() {
                 <li>• Draper West</li>
               </ul>
             </div>
+        {/* City-Specific Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Draper</h2>
+          <p className="text-gray-700 mb-4 leading-relaxed">
+            Draper, located at the base of the Wasatch Mountains, is known for its beautiful views and growing tech corridor. Our dumpster services support Draper's residential and commercial expansion.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
+              <p className="text-gray-600 text-sm">Point of the Mountain, Draper City Hall, Corner Canyon, Draper Park</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
+              <p className="text-gray-600 text-sm">Supporting Draper's tech corridor development and residential growth</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Draper and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Draper Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Suncrest</li>
+                <li>• Corner Canyon</li>
+                <li>• Draper Central</li>
+                <li>• Draper East</li>
+                <li>• Draper West</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
+              <p className="text-gray-600 text-sm">Trusted by Draper's growing tech companies and residential developers</p>
+            </div>
+          </div>
+        </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">

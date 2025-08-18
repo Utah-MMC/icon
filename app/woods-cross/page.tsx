@@ -73,6 +73,11 @@ export default function WoodsCrossPage() {
       cityName="woods-cross"
       cityDisplayName="Woods Cross"
       nearbyCities={nearbyCities}
+      historicalInfo="Woods Cross, a small community in Davis County, offers a close-knit community feel and beautiful mountain views. Our dumpster services support Woods Cross's community growth."
+      landmarks="Woods Cross City Hall, Woods Cross Park, Bountiful Peak"
+      localProjects="Supporting Woods Cross's community development and residential projects"
+      neighborhoods="Woods Cross Central, Woods Cross East, Woods Cross West"
+      localBusinesses="Preferred provider for Woods Cross's community and residential projects"
     />
   );
 }

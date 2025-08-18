@@ -73,6 +73,11 @@ export default function CottonwoodHeightsPage() {
       cityName="cottonwood-heights"
       cityDisplayName="Cottonwood Heights"
       nearbyCities={nearbyCities}
+      historicalInfo="Cottonwood Heights, nestled at the base of the Wasatch Mountains, offers stunning mountain views and easy access to Big Cottonwood Canyon. Our dumpster services support this beautiful community."
+      landmarks="Big Cottonwood Canyon, Cottonwood Heights City Hall, Butler Park"
+      localProjects="Supporting Cottonwood Heights' residential projects and canyon access improvements"
+      neighborhoods="Cottonwood Heights Central, Cottonwood Heights East, Cottonwood Heights West"
+      localBusinesses="Preferred provider for Cottonwood Heights' luxury home projects"
     />
   );
 }

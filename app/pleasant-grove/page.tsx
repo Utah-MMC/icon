@@ -73,6 +73,11 @@ export default function PleasantGrovePage() {
       cityName="pleasant-grove"
       cityDisplayName="Pleasant Grove"
       nearbyCities={nearbyCities}
+      historicalInfo="Pleasant Grove, known as 'Utah's City of Trees,' offers a beautiful, tree-lined community in Utah County. Our dumpster services support Pleasant Grove's natural beauty."
+      landmarks="Pleasant Grove City Hall, Grove Creek Canyon, Pleasant Grove Park"
+      localProjects="Supporting Pleasant Grove's tree preservation and residential projects"
+      neighborhoods="Pleasant Grove Central, Pleasant Grove East, Pleasant Grove West"
+      localBusinesses="Preferred provider for Pleasant Grove's tree-friendly development projects"
     />
   );
 }

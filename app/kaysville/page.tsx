@@ -73,6 +73,11 @@ export default function KaysvillePage() {
       cityName="kaysville"
       cityDisplayName="Kaysville"
       nearbyCities={nearbyCities}
+      historicalInfo="Kaysville, a family-friendly community in Davis County, offers beautiful mountain views and excellent schools. Our dumpster services support Kaysville's family-oriented development."
+      landmarks="Kaysville City Hall, Kaysville Park, Davis High School"
+      localProjects="Supporting Kaysville's family-oriented development and community projects"
+      neighborhoods="Kaysville Central, Kaysville East, Kaysville West"
+      localBusinesses="Trusted by Kaysville's family-oriented developers and community projects"
     />
   );
 }

@@ -73,6 +73,11 @@ export default function AmericanForkPage() {
       cityName="american-fork"
       cityDisplayName="American Fork"
       nearbyCities={nearbyCities}
+      historicalInfo="American Fork, located at the mouth of American Fork Canyon, offers stunning mountain views and outdoor recreation. Our dumpster services support American Fork's community growth."
+      landmarks="American Fork Canyon, American Fork City Hall, American Fork Park"
+      localProjects="Supporting American Fork's canyon access improvements and residential projects"
+      neighborhoods="American Fork Central, American Fork East, American Fork West"
+      localBusinesses="Trusted by American Fork's outdoor recreation and residential developers"
     />
   );
 }

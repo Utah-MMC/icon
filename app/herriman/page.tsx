@@ -73,6 +73,11 @@ export default function HerrimanPage() {
       cityName="herriman"
       cityDisplayName="Herriman"
       nearbyCities={nearbyCities}
+      historicalInfo="Herriman, located in the southwest Salt Lake Valley, offers beautiful mountain views and growing residential communities. Our dumpster services support Herriman's development."
+      landmarks="Herriman City Hall, Herriman Park, Rose Canyon"
+      localProjects="Supporting Herriman's residential growth and community projects"
+      neighborhoods="Herriman Central, Herriman East, Herriman West"
+      localBusinesses="Trusted by Herriman's residential developers and community projects"
     />
   );
 }

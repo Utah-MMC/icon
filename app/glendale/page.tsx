@@ -73,6 +73,11 @@ export default function GlendalePage() {
       cityName="glendale"
       cityDisplayName="Glendale"
       nearbyCities={nearbyCities}
+      historicalInfo="Glendale, a diverse neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Glendale's community growth."
+      landmarks="Glendale City Hall, Glendale Park, Jordan River"
+      localProjects="Supporting Glendale's community development and residential projects"
+      neighborhoods="Glendale Central, Glendale East, Glendale West"
+      localBusinesses="Preferred provider for Glendale's community and residential projects"
     />
   );
 }

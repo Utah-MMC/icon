@@ -73,6 +73,11 @@ export default function SaratogaSpringsPage() {
       cityName="saratoga-springs"
       cityDisplayName="Saratoga Springs"
       nearbyCities={nearbyCities}
+      historicalInfo="Saratoga Springs, located on the shores of Utah Lake, offers beautiful lake views and outdoor recreation. Our dumpster services support Saratoga Springs' lakeside community."
+      landmarks="Utah Lake, Saratoga Springs City Hall, Saratoga Springs Park"
+      localProjects="Supporting Saratoga Springs' lakeside development and residential growth"
+      neighborhoods="Saratoga Springs Central, Saratoga Springs East, Saratoga Springs West"
+      localBusinesses="Trusted by Saratoga Springs' lakeside and residential developers"
     />
   );
 }

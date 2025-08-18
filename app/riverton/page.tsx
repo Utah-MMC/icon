@@ -73,6 +73,11 @@ export default function RivertonPage() {
       cityName="riverton"
       cityDisplayName="Riverton"
       nearbyCities={nearbyCities}
+      historicalInfo="Riverton, located along the Jordan River, offers beautiful river views and family-friendly communities. Our dumpster services support Riverton's riverside development."
+      landmarks="Jordan River, Riverton City Hall, Riverton Park"
+      localProjects="Supporting Riverton's Jordan River Parkway improvements and residential projects"
+      neighborhoods="Riverton Central, Riverton East, Riverton West"
+      localBusinesses="Preferred provider for Riverton's riverside and residential projects"
     />
   );
 }
