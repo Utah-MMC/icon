@@ -99,35 +99,92 @@ export default function TawkToChat() {
             color: #ffffff !important;
           }
 
-          /* Hide "Powered by tawk.to" branding */
+          /* Aggressive hiding of "Powered by tawk.to" branding */
           .tawk-branding,
           .tawk-powered-by,
           [class*="tawk-powered"],
           [class*="tawk-branding"],
           div[style*="tawk-powered"],
-          div[style*="tawk-branding"] {
+          div[style*="tawk-branding"],
+          .tawk-footer,
+          .tawk-credit,
+          .tawk-attribution,
+          [class*="tawk-footer"],
+          [class*="tawk-credit"],
+          [class*="tawk-attribution"],
+          div:contains("Powered by tawk.to"),
+          div:contains("tawk.to"),
+          span:contains("Powered by tawk.to"),
+          span:contains("tawk.to"),
+          p:contains("Powered by tawk.to"),
+          p:contains("tawk.to"),
+          a:contains("tawk.to"),
+          *:contains("Powered by tawk.to"),
+          *:contains("tawk.to") {
             display: none !important;
             visibility: hidden !important;
             opacity: 0 !important;
             height: 0 !important;
             width: 0 !important;
             overflow: hidden !important;
+            position: absolute !important;
+            left: -9999px !important;
+            top: -9999px !important;
+            z-index: -9999 !important;
+            pointer-events: none !important;
+            clip: rect(0, 0, 0, 0) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            font-size: 0 !important;
+            line-height: 0 !important;
           }
 
-          /* Hide any element containing "Powered by tawk.to" text */
-          *:contains("Powered by tawk.to"),
-          *:contains("tawk.to") {
+          /* Target specific elements that might contain the branding */
+          .tawk-min-container > div:last-child,
+          .tawk-min-container > div:nth-last-child(1),
+          .tawk-min-container > div:nth-last-child(2) {
             display: none !important;
           }
 
-          /* Additional selectors to catch branding elements */
-          .tawk-footer,
-          .tawk-credit,
-          .tawk-attribution {
+          /* Hide any element with tawk branding text */
+          [data-testid*="tawk"],
+          [data-testid*="branding"],
+          [data-testid*="powered"] {
+            display: none !important;
+          }
+
+          /* Additional selectors for iframe content */
+          iframe[src*="tawk.to"] {
+            filter: hue-rotate(240deg) saturate(1.5) !important;
+          }
+
+          /* Hide branding in iframe content */
+          iframe[src*="tawk.to"] body *:contains("Powered by tawk.to"),
+          iframe[src*="tawk.to"] body *:contains("tawk.to") {
             display: none !important;
           }
         `;
         document.head.appendChild(style);
+
+        // Additional JavaScript to remove branding elements
+        const removeBranding = () => {
+          const elements = document.querySelectorAll('*');
+          elements.forEach(element => {
+            if (element.textContent && element.textContent.includes('Powered by tawk.to')) {
+              const htmlElement = element as HTMLElement;
+              htmlElement.style.display = 'none';
+              htmlElement.style.visibility = 'hidden';
+              htmlElement.style.opacity = '0';
+              htmlElement.style.height = '0';
+              htmlElement.style.width = '0';
+            }
+          });
+        };
+
+        // Run immediately and then periodically
+        removeBranding();
+        setInterval(removeBranding, 1000);
       } catch (error) {
         console.log('Tawk.to customization error:', error);
       }

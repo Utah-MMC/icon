@@ -1,7 +1,17 @@
 User-agent: *
 Allow: /
 
-# Disallow sensitive areas
+# Allow Google Search Console and other search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin and API areas
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
@@ -12,18 +22,5 @@ Disallow: /test-formspree/
 Disallow: /test-og/
 Disallow: /test-security/
 
-# Allow important pages
-Allow: /about/
-Allow: /services/
-Allow: /dumpster-sizes/
-Allow: /blog/
-Allow: /contact/
-Allow: /faq/
-Allow: /privacy-policy/
-Allow: /terms-of-service/
-
-# Sitemap
+# Sitemap location
 Sitemap: https://icondumpsters.com/sitemap.xml
-
-# Crawl-delay (optional - helps with server load)
-Crawl-delay: 1

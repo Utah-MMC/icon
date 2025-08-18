@@ -227,6 +227,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.2,
     },
+    // Inventory management - Lower priority (internal use)
+    {
+      url: `${baseUrl}/inventory`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.2,
+    },
     // Salt Lake County
     {
       url: `${baseUrl}/west-valley-city`,

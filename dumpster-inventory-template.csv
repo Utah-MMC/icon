@@ -1,0 +1,6 @@
+Dumpster ID,Size,Status,Customer Name,Customer Phone,Customer Email,Delivery Date,Expected Pickup Date,Location,Notes,Last Updated
+D001,15yd,Available,,,,,,,,2024-01-16
+D002,20yd,In Use,John Smith,801-555-0123,john@email.com,2024-01-15,2024-01-22,123 Main St Salt Lake City UT,Residential renovation,2024-01-16
+D003,30yd,Out for Delivery,Jane Doe,801-555-0456,jane@email.com,2024-01-16,2024-01-23,456 Oak Ave Sandy UT,Commercial project,2024-01-16
+D004,10yd,Maintenance,,,,,,,Needs repair - hydraulic issue,2024-01-16
+D005,15yd,Available,,,,,,,,2024-01-16
