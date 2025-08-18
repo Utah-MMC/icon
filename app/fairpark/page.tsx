@@ -1,83 +1,78 @@
-'use client';
+import { Metadata } from 'next';
 
-import DumpsterCalculator from '../components/DumpsterCalculator';
-import QuoteForm from '../components/QuoteForm';
+export const metadata: Metadata = {
+  title: "Fairpark Dumpster Rental - Professional Services in Fairpark, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Fairpark, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Fairpark dumpster rental, dumpster rental Fairpark UT, Fairpark Utah dumpster, roll-off dumpster Fairpark, construction dumpster Fairpark, waste management Fairpark",
+  openGraph: {
+    title: "Fairpark Dumpster Rental - Professional Services in Fairpark, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Fairpark, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/fairpark',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/Icon_Dumpsters_Final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fairpark Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Fairpark Dumpster Rental - Professional Services in Fairpark, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Fairpark, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/Icon_Dumpsters_Final.png'],
+  },
+  alternates: {
+    canonical: '/fairpark',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+import CityPageClient from '../components/CityPageClient';
 
 export default function FairparkPage() {
+  const nearbyCities = [
+  {
+    "name": "Salt Lake City",
+    "href": "/salt-lake-city"
+  },
+  {
+    "name": "Rose Park",
+    "href": "/rose-park"
+  },
+  {
+    "name": "Glendale",
+    "href": "/glendale"
+  },
+  {
+    "name": "Poplar Grove",
+    "href": "/poplar-grove"
+  },
+  {
+    "name": "North Salt Lake",
+    "href": "/north-salt-lake"
+  }
+];
+  
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Fairpark, UT
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Professional dumpster rental services in Fairpark, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
-        </p>
-        <div id="pricing" className="mb-12">
-          <DumpsterCalculator />
-        </div>
-        <div className="bg-gray-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Fairpark?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Fairpark and surrounding areas</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>Flexible rental periods (1-30 days)</li>
-            <li>Professional customer service</li>
-            <li>Local knowledge of Fairpark regulations</li>
-            <li>Multiple dumpster sizes available</li>
-          </ul>
-        </div>
-        <div className="bg-blue-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Fairpark Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Fairpark and surrounding communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Fairpark Areas:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Fairpark Central</li>
-                <li>• Fairpark East</li>
-                <li>• Fairpark West</li>
-                <li>• Fairpark North</li>
-                <li>• Fairpark South</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• <a href="/rose-park" className="text-[#4e37a8] hover:underline">Rose Park</a></li>
-                <li>• <a href="/poplar-grove" className="text-[#4e37a8] hover:underline">Poplar Grove</a></li>
-                <li>• <a href="/glendale" className="text-[#4e37a8] hover:underline">Glendale</a></li>
-                <li>• <a href="/downtown-salt-lake" className="text-[#4e37a8] hover:underline">Downtown Salt Lake</a></li>
-                <li>• <a href="/sugar-house" className="text-[#4e37a8] hover:underline">Sugar House</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="bg-green-50 p-8 rounded-lg mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Fairpark Dumpster Services</h2>
-          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Fairpark:</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
-              <p className="text-gray-600 mb-3">15, 20, and 30 yard options</p>
-              <a href="/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">View All Sizes →</a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
-              <p className="text-gray-600 mb-3">Competitive rates with no hidden fees</p>
-              <a href="#pricing" className="text-[#4e37a8] hover:underline font-medium">Get Quote →</a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
-              <p className="text-gray-600 mb-3">Residential and commercial solutions</p>
-              <a href="/services" className="text-[#4e37a8] hover:underline font-medium">Learn More →</a>
-            </div>
-          </div>
-        </div>
-        <div className="mb-12">
-          <QuoteForm />
-        </div>
-      </div>
-    </div>
+    <CityPageClient
+      cityName="fairpark"
+      cityDisplayName="Fairpark"
+      nearbyCities={nearbyCities}
+    />
   );
 }

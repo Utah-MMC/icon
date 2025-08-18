@@ -11,14 +11,217 @@ import BlogSearch from "../components/BlogSearch";
 // Blog post data for search functionality
 const blogPosts = [
   {
+    id: "demolition-dumpster-calculator",
+    title: "Demolition Dumpster Calculator: Calculate Your Project Needs & Costs",
+    excerpt: "Use our demolition dumpster calculator to estimate the right dumpster size, weight capacity, and rental costs for your demolition project. Get instant quotes for Utah demolition projects.",
+    category: "DEMOLITION",
+    readTime: "10 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp",
+    featured: true
+  },
+  {
+    id: "dumpster-calculator-for-concrete",
+    title: "Dumpster Calculator for Concrete: Estimate Concrete Disposal Costs",
+    excerpt: "Use our concrete dumpster calculator to estimate the right dumpster size and costs for concrete disposal. Calculate concrete weight, volume, and rental costs for Utah projects.",
+    category: "CONCRETE",
+    readTime: "8 min read",
+    image: "/images/concrete.webp",
+    fallbackImage: "/images/concrete.jpg",
+    featured: true
+  },
+  {
+    id: "roofing-dumpster-calculator",
+    title: "Roofing Dumpster Calculator: Calculate Roofing Waste Disposal Costs",
+    excerpt: "Use our roofing dumpster calculator to estimate the right dumpster size and costs for roofing waste disposal. Calculate roofing material weight, volume, and rental costs for Utah projects.",
+    category: "ROOFING",
+    readTime: "9 min read",
+    image: "/images/dumpsterSmallBanner4.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner4.webp",
+    featured: true
+  },
+  {
+    id: "dumpster-volume-calculator",
+    title: "Dumpster Volume Calculator: Calculate Dumpster Capacity & Dimensions",
+    excerpt: "Use our dumpster volume calculator to determine the right dumpster size for your project. Calculate dumpster dimensions, capacity, and volume requirements for Utah projects.",
+    category: "CALCULATOR",
+    readTime: "7 min read",
+    image: "/images/dumpster500x500-2.jpeg",
+    fallbackImage: "/images/dumpster500x500-2.webp"
+  },
+  {
+    id: "how-much-does-a-20-yard-dumpster-weight-empty",
+    title: "How Much Does a 20 Yard Dumpster Weigh Empty? Complete Weight Guide",
+    excerpt: "Learn how much a 20-yard dumpster weighs empty, its weight capacity, dimensions, and specifications. Get accurate weight information for 20-yard dumpster rentals in Utah.",
+    category: "DUMPSTER SPECS",
+    readTime: "6 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp"
+  },
+  {
+    id: "how-much-does-a-30-yard-dumpster-weight-empty",
+    title: "How Much Does a 30 Yard Dumpster Weigh Empty? Complete Weight Guide",
+    excerpt: "Learn how much a 30-yard dumpster weighs empty, its weight capacity, dimensions, and specifications. Get accurate weight information for 30-yard dumpster rentals in Utah.",
+    category: "DUMPSTER SPECS",
+    readTime: "6 min read",
+    image: "/images/dumpster500x500-2.jpeg",
+    fallbackImage: "/images/dumpster500x500-2.webp"
+  },
+  {
+    id: "how-much-does-a-15-yard-dumpster-weight-empty",
+    title: "How Much Does a 15 Yard Dumpster Weigh Empty? Complete Weight Guide",
+    excerpt: "Learn how much a 15-yard dumpster weighs empty, its weight capacity, dimensions, and specifications. Get accurate weight information for 15-yard dumpster rentals in Utah.",
+    category: "DUMPSTER SPECS",
+    readTime: "6 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp"
+  },
+  {
+    id: "concrete-debris-calculator",
+    title: "Concrete Debris Calculator: Calculate Concrete Waste & Disposal Costs",
+    excerpt: "Use our concrete debris calculator to estimate concrete waste volume, weight, and disposal costs. Calculate concrete debris for demolition and construction projects in Utah.",
+    category: "CONCRETE",
+    readTime: "8 min read",
+    image: "/images/concrete.webp",
+    fallbackImage: "/images/concrete.jpg"
+  },
+  {
+    id: "30-yard-dumpster-rental-calculator",
+    title: "30 Yard Dumpster Rental Calculator: Calculate Costs & Capacity",
+    excerpt: "Use our 30-yard dumpster rental calculator to estimate costs, capacity, and rental requirements. Calculate 30-yard dumpster rental costs for large projects in Utah.",
+    category: "DUMPSTER RENTAL",
+    readTime: "7 min read",
+    image: "/images/dumpster500x500-2.jpeg",
+    fallbackImage: "/images/dumpster500x500-2.webp"
+  },
+  {
     id: "dumpster-rental-guide-2025",
     title: "Dumpster Rental Guide 2025: How to Choose the Right Size, Price, and Service for Your Project",
     excerpt: "Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable.",
+    category: "GUIDE",
+    readTime: "12 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp",
+    featured: false
+  },
+  {
+    id: "murray-city-dumpster-rental",
+    title: "Murray City Dumpster Rental - Fast & Reliable Service",
+    excerpt: "Get reliable dumpster rental in Murray City, UT. Same-day delivery, competitive pricing, and excellent customer service. Call us today for your project!",
+    category: "LOCAL SERVICES",
+    readTime: "8 min read",
+    image: "/images/murray-city-dumpster-rental.jpg",
+    fallbackImage: "/images/murray-city-dumpster-rental.jpg",
+    featured: false
+  },
+  {
+    id: "cheapest-dumpster-rental-salt-lake-city",
+    title: "Cheapest Dumpster Rental Salt Lake City - Best Prices & Service",
+    excerpt: "Find the cheapest dumpster rental in Salt Lake City. Compare prices, get instant quotes, and enjoy reliable service. Save money on your waste removal project today!",
+    category: "PRICING",
+    readTime: "7 min read",
+    image: "/images/cheapest-dumpster-rental-salt-lake-city.jpg",
+    fallbackImage: "/images/cheapest-dumpster-rental-salt-lake-city.jpg",
+    featured: false
+  },
+  {
+    id: "murray-city-dumpster-program",
+    title: "Murray City Dumpster Program - Municipal Waste Services",
+    excerpt: "Learn about Murray City dumpster programs, municipal waste services, and how to participate in local waste management initiatives. Get information about city-sponsored dumpster services.",
+    category: "MUNICIPAL",
+    readTime: "9 min read",
+    image: "/images/murray-city-dumpster-program.jpg",
+    fallbackImage: "/images/murray-city-dumpster-program.jpg",
+    featured: false
+  },
+  {
+    id: "salt-lake-county-dumpster-rental",
+    title: "Salt Lake County Dumpster Rental - Complete Guide & Services",
+    excerpt: "Comprehensive guide to dumpster rental services throughout Salt Lake County. Find reliable waste removal solutions for all cities and communities in SLC County.",
+    category: "LOCAL SERVICES",
+    readTime: "10 min read",
+    image: "/images/salt-lake-county-dumpster-rental.jpg",
+    fallbackImage: "/images/salt-lake-county-dumpster-rental.jpg",
+    featured: false
+  },
+  {
+    id: "dumpster-rental-west-valley",
+    title: "West Valley Dumpster Rental - Fast & Reliable Service",
+    excerpt: "Get reliable dumpster rental in West Valley City, UT. Same-day delivery, competitive pricing, and excellent customer service. Call us today for your project!",
+    category: "LOCAL SERVICES",
+    readTime: "8 min read",
+    image: "/images/dumpster-rental-west-valley.jpg",
+    fallbackImage: "/images/dumpster-rental-west-valley.jpg",
+    featured: false
+  },
+  {
+    id: "salt-lake-county-dumpster-program",
+    title: "Salt Lake County Dumpster Program - Municipal Waste Services",
+    excerpt: "Learn about Salt Lake County dumpster programs, municipal waste services, and how to participate in local waste management initiatives. Get information about county-sponsored dumpster services.",
+    category: "MUNICIPAL",
+    readTime: "9 min read",
+    image: "/images/salt-lake-county-dumpster-program.jpg",
+    fallbackImage: "/images/salt-lake-county-dumpster-program.jpg",
+    featured: false
+  },
+  {
+    id: "dumpster-rental-magna",
+    title: "Magna Dumpster Rental - Fast & Reliable Service",
+    excerpt: "Get reliable dumpster rental in Magna, UT. Same-day delivery, competitive pricing, and excellent customer service. Call us today for your project!",
+    category: "LOCAL SERVICES",
+    readTime: "8 min read",
+    image: "/images/dumpster-rental-magna.jpg",
+    fallbackImage: "/images/dumpster-rental-magna.jpg",
+    featured: false
+  },
+  {
+    id: "dumpster-rental-sandy-utah",
+    title: "Sandy, Utah Dumpster Rental Services",
+    excerpt: "Everything you need to know about dumpster rental in Sandy, Utah, including local regulations and service options.",
+    category: "LOCAL SERVICES",
+    readTime: "8 min read",
+    image: "/images/dumpster-rental-sandy-utah.jpg",
+    fallbackImage: "/images/dumpster-rental-sandy-utah.jpg",
+    featured: false
+  },
+  {
+    id: "rental-dumpsters-near-me-prices",
+    title: "Rental Dumpsters Near Me Prices - Compare Local Rates",
+    excerpt: "Compare dumpster rental prices in your area and find the best deals for your waste removal project.",
+    category: "PRICING",
+    readTime: "6 min read",
+    image: "/images/rental-dumpsters-near-me-prices.jpg",
+    fallbackImage: "/images/rental-dumpsters-near-me-prices.jpg",
+    featured: false
+  },
+  {
+    id: "cheap-rental-dumpsters-near-me",
+    title: "Cheap Rental Dumpsters Near Me - Affordable Options",
+    excerpt: "Find affordable dumpster rental options in your local area with our comprehensive price guide.",
+    category: "PRICING",
+    readTime: "6 min read",
+    image: "/images/cheap-rental-dumpsters-near-me.jpg",
+    fallbackImage: "/images/cheap-rental-dumpsters-near-me.jpg",
+    featured: false
+  },
+  {
+    id: "free-rental-dumpsters-near-me",
+    title: "Free Rental Dumpsters Near Me - Available Programs",
+    excerpt: "Learn about free dumpster rental programs and services available in your local area.",
+    category: "PROGRAMS",
+    readTime: "5 min read",
+    image: "/images/free-rental-dumpsters-near-me.jpg",
+    fallbackImage: "/images/free-rental-dumpsters-near-me.jpg",
+    featured: false
+  },
+  {
+    id: "dumpster-rentals-near-me-2025",
+    title: "Dumpster Rentals Near Me: Complete Guide to Finding Local Service",
+    excerpt: "Find reliable dumpster rentals near you with our comprehensive guide. Learn about pricing, delivery options, service areas, and how to choose the best local dumpster rental service for your project.",
     category: "DUMPSTER RENTAL",
     readTime: "8 min read",
-          image: "/images/IMG_0350.jpg",
-    fallbackImage: "/images/dumpsters.webp",
-    featured: true
+    image: "/images/IMG_0350.jpg",
+    fallbackImage: "/images/dumpsters.webp"
   },
   {
     id: "dumpster-rentals-near-me-2025",
@@ -27,8 +230,7 @@ const blogPosts = [
     category: "DUMPSTER RENTAL",
     readTime: "10 min read",
     image: "/images/dumpsterSmallBanner3.jpeg",
-    fallbackImage: "/images/dumpsterSmallBanner3.webp",
-    featured: true
+    fallbackImage: "/images/dumpsterSmallBanner3.webp"
   },
   {
     id: "construction-waste-management-2025",

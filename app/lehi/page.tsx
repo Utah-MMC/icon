@@ -1,83 +1,78 @@
-'use client';
+import { Metadata } from 'next';
 
-import DumpsterCalculator from '../components/DumpsterCalculator';
-import QuoteForm from '../components/QuoteForm';
+export const metadata: Metadata = {
+  title: "Lehi Dumpster Rental - Professional Services in Lehi, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Lehi, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Lehi dumpster rental, dumpster rental Lehi UT, Lehi Utah dumpster, roll-off dumpster Lehi, construction dumpster Lehi, waste management Lehi",
+  openGraph: {
+    title: "Lehi Dumpster Rental - Professional Services in Lehi, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Lehi, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/lehi',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/Icon_Dumpsters_Final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lehi Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Lehi Dumpster Rental - Professional Services in Lehi, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Lehi, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/Icon_Dumpsters_Final.png'],
+  },
+  alternates: {
+    canonical: '/lehi',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+import CityPageClient from '../components/CityPageClient';
 
 export default function LehiPage() {
+  const nearbyCities = [
+  {
+    "name": "American Fork",
+    "href": "/american-fork"
+  },
+  {
+    "name": "Pleasant Grove",
+    "href": "/pleasant-grove"
+  },
+  {
+    "name": "Orem",
+    "href": "/orem"
+  },
+  {
+    "name": "Saratoga Springs",
+    "href": "/saratoga-springs"
+  },
+  {
+    "name": "Eagle Mountain",
+    "href": "/eagle-mountain"
+  }
+];
+  
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Lehi, UT
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Professional dumpster rental services in Lehi, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
-        </p>
-        <div id="pricing" className="mb-12">
-          <DumpsterCalculator />
-        </div>
-        <div className="bg-gray-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Lehi?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Lehi and surrounding areas</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>Flexible rental periods (1-30 days)</li>
-            <li>Professional customer service</li>
-            <li>Local knowledge of Lehi regulations</li>
-            <li>Multiple dumpster sizes available</li>
-          </ul>
-        </div>
-        <div className="bg-blue-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Lehi Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Lehi and surrounding communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Lehi Areas:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Traverse Mountain</li>
-                <li>• Thanksgiving Point</li>
-                <li>• Lehi Central</li>
-                <li>• Jordan Willows</li>
-                <li>• North Lehi</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• <a href="/american-fork" className="text-[#4e37a8] hover:underline">American Fork</a></li>
-                <li>• <a href="/eagle-mountain" className="text-[#4e37a8] hover:underline">Eagle Mountain</a></li>
-                <li>• <a href="/saratoga-springs" className="text-[#4e37a8] hover:underline">Saratoga Springs</a></li>
-                <li>• <a href="/pleasant-grove" className="text-[#4e37a8] hover:underline">Pleasant Grove</a></li>
-                <li>• <a href="/draper" className="text-[#4e37a8] hover:underline">Draper</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="bg-green-50 p-8 rounded-lg mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Lehi Dumpster Services</h2>
-          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Lehi:</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
-              <p className="text-gray-600 mb-3">15, 20, and 30 yard options</p>
-              <a href="/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">View All Sizes →</a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
-              <p className="text-gray-600 mb-3">Competitive rates with no hidden fees</p>
-              <a href="#pricing" className="text-[#4e37a8] hover:underline font-medium">Get Quote →</a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
-              <p className="text-gray-600 mb-3">Residential and commercial solutions</p>
-              <a href="/services" className="text-[#4e37a8] hover:underline font-medium">Learn More →</a>
-            </div>
-          </div>
-        </div>
-        <div className="mb-12">
-          <QuoteForm />
-        </div>
-      </div>
-    </div>
+    <CityPageClient
+      cityName="lehi"
+      cityDisplayName="Lehi"
+      nearbyCities={nearbyCities}
+    />
   );
 }

@@ -13,6 +13,7 @@ declare global {
 
 interface Dumpster {
   id: string;
+  binId: string;
   size: '10yd' | '15yd' | '20yd' | '30yd';
   status: 'Available' | 'Out for Delivery' | 'In Use' | 'Maintenance';
   customerName?: string;
@@ -44,11 +45,11 @@ export default function InventoryTracker() {
       } else {
         // Initialize with sample inventory
         const sampleDumpsters: Dumpster[] = [
-          { id: 'D001', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
-          { id: 'D002', size: '20yd', status: 'In Use', customerName: 'John Smith', deliveryDate: '2024-01-15', expectedPickupDate: '2024-01-22', location: '123 Main St, Salt Lake City', lastUpdated: new Date().toISOString() },
-          { id: 'D003', size: '30yd', status: 'Out for Delivery', customerName: 'Jane Doe', deliveryDate: '2024-01-16', expectedPickupDate: '2024-01-23', location: '456 Oak Ave, Sandy', lastUpdated: new Date().toISOString() },
-          { id: 'D004', size: '10yd', status: 'Maintenance', notes: 'Needs repair - hydraulic issue', lastUpdated: new Date().toISOString() },
-          { id: 'D005', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
+          { id: 'D001', binId: 'BIN-001', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
+          { id: 'D002', binId: 'BIN-002', size: '20yd', status: 'In Use', customerName: 'John Smith', deliveryDate: '2024-01-15', expectedPickupDate: '2024-01-22', location: '123 Main St, Salt Lake City', lastUpdated: new Date().toISOString() },
+          { id: 'D003', binId: 'BIN-003', size: '30yd', status: 'Out for Delivery', customerName: 'Jane Doe', deliveryDate: '2024-01-16', expectedPickupDate: '2024-01-23', location: '456 Oak Ave, Sandy', lastUpdated: new Date().toISOString() },
+          { id: 'D004', binId: 'BIN-004', size: '10yd', status: 'Maintenance', notes: 'Needs repair - hydraulic issue', lastUpdated: new Date().toISOString() },
+          { id: 'D005', binId: 'BIN-005', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
         ];
         console.log('Setting sample dumpsters:', sampleDumpsters);
         setDumpsters(sampleDumpsters);
@@ -93,6 +94,7 @@ export default function InventoryTracker() {
     const newDumpster: Dumpster = {
       ...dumpster,
       id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
+      binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
       lastUpdated: new Date().toISOString()
     };
     saveDumpsters([...dumpsters, newDumpster]);
@@ -232,6 +234,7 @@ export default function InventoryTracker() {
           <thead className="bg-gray-50">
             <tr>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bin ID</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Size</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer</th>
@@ -245,6 +248,7 @@ export default function InventoryTracker() {
             {filteredDumpsters.map((dumpster) => (
               <tr key={dumpster.id} className="hover:bg-gray-50">
                 <td className="px-4 py-3 text-sm font-medium text-gray-900">{dumpster.id}</td>
+                <td className="px-4 py-3 text-sm font-medium text-gray-900">{dumpster.binId}</td>
                 <td className="px-4 py-3">
                   <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getSizeColor(dumpster.size)}`}>
                     {dumpster.size}
@@ -320,6 +324,7 @@ export default function InventoryTracker() {
 // Add Dumpster Form Component
 function AddDumpsterForm({ onAdd, onCancel }: { onAdd: (dumpster: Omit<Dumpster, 'id' | 'lastUpdated'>) => void; onCancel: () => void }) {
   const [formData, setFormData] = useState({
+    binId: '',
     size: '15yd' as const,
     status: 'Available' as const,
     customerName: '',
@@ -337,6 +342,17 @@ function AddDumpsterForm({ onAdd, onCancel }: { onAdd: (dumpster: Omit<Dumpster,
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" data-inventory-form>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Bin ID</label>
+        <input
+          type="text"
+          value={formData.binId}
+          onChange={(e) => setFormData({ ...formData, binId: e.target.value })}
+          className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="e.g., BIN-001"
+        />
+      </div>
+
       <div>
         <label className="block text-sm font-medium text-gray-700">Size</label>
         <select
@@ -457,6 +473,7 @@ function EditDumpsterForm({
   onCancel: () => void; 
 }) {
   const [formData, setFormData] = useState({
+    binId: dumpster.binId || '',
     size: dumpster.size,
     status: dumpster.status,
     customerName: dumpster.customerName || '',
@@ -474,6 +491,17 @@ function EditDumpsterForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" data-inventory-form>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Bin ID</label>
+        <input
+          type="text"
+          value={formData.binId}
+          onChange={(e) => setFormData({ ...formData, binId: e.target.value })}
+          className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="e.g., BIN-001"
+        />
+      </div>
+
       <div>
         <label className="block text-sm font-medium text-gray-700">Size</label>
         <select

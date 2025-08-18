@@ -62,7 +62,7 @@ export default function ArticleSchema({
       "waste management",
       "construction waste",
       "Utah dumpster rental",
-      category.toLowerCase()
+      category?.toLowerCase() || "dumpster rental"
     ],
     "wordCount": Math.ceil(description.length / 5), // Rough estimate
     "timeRequired": readTime,
