@@ -9,7 +9,9 @@ import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
 import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
 import EnhancedHeader from "./components/EnhancedHeader";
 import TawkToChat from "./components/TawkToChat";
-
+import Footer from "./components/Footer";
+import CalculatorBanner from "./components/CalculatorBanner";
+import PromotionalBanner from "./components/PromotionalBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -266,69 +268,16 @@ export default function RootLayout({
           {children}
         </main>
 
+        {/* Promotional Banner - Added to all pages */}
+        <PromotionalBanner />
+
         {/* Live Chat Widget */}
         <TawkToChat />
 
-        {/* Footer - Purple Theme */}
-        <footer className="bg-[#4e37a8] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="col-span-1 md:col-span-2">
-                                  <div className="flex items-center space-x-3 mb-4">
-                    <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-10 w-auto" />
-                    <div>
-                      <h3 className="text-lg font-semibold">ICON DUMPSTERS</h3>
-                      <p className="text-sm text-gray-400">PROFESSIONAL DUMPSTER RENTAL SERVICES</p>
-                    </div>
-                  </div>
-                <p className="text-gray-400 mb-4">
-                  Professional dumpster rental services for construction, renovation, and waste management. 
-                  Serving local communities with reliable, affordable solutions and exceptional customer service.
-                </p>
-                <div className="flex space-x-4">
-                  <a href="https://www.facebook.com/p/Icon-Dumpsters-61557014799828/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Services</h4>
-                <ul className="space-y-2">
-                  <li><a href="/services" className="text-gray-400 hover:text-white transition-colors">Dumpster Rental</a></li>
-                  <li><a href="/services" className="text-gray-400 hover:text-white transition-colors">Waste Management</a></li>
-                  <li><a href="/services" className="text-gray-400 hover:text-white transition-colors">Construction Cleanup</a></li>
-                  <li><a href="/services" className="text-gray-400 hover:text-white transition-colors">Residential Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Support</h4>
-                <ul className="space-y-2">
-                  <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                  <li><a href="/faq" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Service Areas</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Get Quote</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-8 pt-8 border-t border-gray-700">
-              <div className="flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
-                <p>
-                  © 2025 Icon Dumpsters. All rights reserved. | (801) 918-6000
-                </p>
-                <div className="flex space-x-4 mt-2 sm:mt-0">
-                  <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
-                    Privacy Policy
-                  </a>
-                  <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">
-                    Terms of Service
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        {/* Calculator Banner - Added to all pages */}
+        <CalculatorBanner />
+
+        <Footer />
       </body>
     </html>
   );

@@ -5,42 +5,36 @@ import ReviewsCarousel from "./components/ReviewsCarousel";
 import CleanupSection from "./components/CleanupSection";
 import TrustSection from "./components/TrustSection";
 import QuickQuoteButton from "./components/QuickQuoteButton";
-import DumpsterCalculator from "./components/DumpsterCalculator";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+      <div className="relative">
         {/* Background image */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <ImageWithFallback 
-          src="/images/dumpster500x200-1.jpeg" 
-          alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
-          className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner3.jpeg"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
+        <div className="relative h-64 sm:h-80 lg:h-96">
+          <ImageWithFallback 
+            src="/images/dumpsterSmallBanner5.jpeg" 
+            alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
+            className="w-full h-full object-cover"
+            fallbackSrc="/images/dumpsterSmallBanner5.webp"
+          />
+        </div>
         
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4">
-                      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
-          <a href="#quote-form" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
-            Get A Quote
-          </a>
+        {/* Hero Content - Now below the image */}
+        <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-8 sm:py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
+              <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block">
+                Get A Quote
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Quick Calculator Section - Added to top */}
-      <div className="bg-gray-50 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#4e37a8] mb-2">Get Your Instant Quote</h2>
-            <p className="text-gray-600">Calculate your dumpster rental cost in seconds</p>
-          </div>
-          <DumpsterCalculator />
-        </div>
-      </div>
+
 
       {/* Dumpster Rental Service Section */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
@@ -511,9 +505,6 @@ export default function Home() {
 
       {/* Reviews Section */}
       <ReviewsCarousel />
-
-      {/* Cleanup Section */}
-      <CleanupSection />
     </div>
   );
 }

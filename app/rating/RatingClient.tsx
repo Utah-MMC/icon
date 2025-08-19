@@ -197,6 +197,19 @@ function RatingForm({ rentalData }: { rentalData: any }) {
     });
     localStorage.setItem('customerRatings', JSON.stringify(ratings));
 
+    // Send email notification
+    try {
+      await fetch('/api/send-review-notification', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ratingData),
+      });
+    } catch (error) {
+      console.error('Error sending review notification:', error);
+    }
+
     // Update KPI metrics
     if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
       const averageRating = ratings.reduce((sum: number, r: any) => sum + r.rating, 0) / ratings.length;
@@ -230,33 +243,66 @@ function RatingForm({ rentalData }: { rentalData: any }) {
           Your rating helps us continue providing excellent service to our customers.
         </p>
         
-        {rating >= 4 && (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-            <h4 className="text-lg font-semibold text-green-900 mb-2">
-              Share Your Experience!
-            </h4>
-            <p className="text-green-700 mb-4">
-              We're thrilled you had a great experience! Would you mind sharing it with others?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={() => window.open('https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuQIYRoj6G_6U7LMA', '_blank')}
-                className="bg-[#4285f4] text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
-              >
-                Leave Google Review
-              </button>
-              <button
-                onClick={() => window.open('https://www.yelp.com/writeareview/biz/icon-dumpsters-salt-lake-city', '_blank')}
-                className="bg-[#ff1a1a] text-white px-6 py-2 rounded-md hover:bg-red-600 transition-colors"
-              >
-                Leave Yelp Review
-              </button>
-            </div>
-            <p className="text-sm text-green-600 mt-3">
-              💡 Leave a review and get 10% off your next rental!
-            </p>
-          </div>
-        )}
+                 {rating >= 4 && (
+           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+             <h4 className="text-lg font-semibold text-green-900 mb-2">
+               Share Your Experience!
+             </h4>
+             <p className="text-green-700 mb-4">
+               We're thrilled you had a great experience! Would you mind sharing it with others?
+             </p>
+             
+             {/* Google Review Barcode Section */}
+             <div className="bg-white rounded-lg p-4 mb-4 border border-green-200">
+               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                 <div className="flex-1 text-center md:text-left">
+                   <h5 className="font-semibold text-gray-900 mb-2">Quick Google Review</h5>
+                   <p className="text-sm text-gray-600 mb-3">
+                     Scan this QR code with your phone to leave a Google review instantly!
+                   </p>
+                   <button
+                     onClick={() => {
+                       const searchUrl = 'https://www.google.com/search?q=Icon+Dumpsters+dumpster+rental+Salt+Lake+City+UT';
+                       window.open(searchUrl, '_blank');
+                       setTimeout(() => {
+                         alert('Please search for "Icon Dumpsters" on Google and click "Write a review" on our business listing.');
+                       }, 1000);
+                     }}
+                     className="bg-[#4285f4] text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors text-sm"
+                   >
+                     Or Click Here
+                   </button>
+                 </div>
+                 <div className="flex-shrink-0">
+                   <img 
+                     src="/google-review-barcode.png" 
+                     alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
+                     className="w-24 h-24 object-contain border border-gray-300 rounded-lg"
+                   />
+                 </div>
+               </div>
+             </div>
+             
+             {/* Other Review Options */}
+             <div className="flex flex-col sm:flex-row gap-3 justify-center">
+               <button
+                 onClick={() => window.open('https://www.yelp.com/writeareview/biz/icon-dumpsters-salt-lake-city', '_blank')}
+                 className="bg-[#ff1a1a] text-white px-6 py-2 rounded-md hover:bg-red-600 transition-colors"
+               >
+                 Leave Yelp Review
+               </button>
+               <button
+                 onClick={() => window.open('https://www.facebook.com/p/Icon-Dumpsters-61557014799828/', '_blank')}
+                 className="bg-[#1877f2] text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
+               >
+                 Leave Facebook Review
+               </button>
+             </div>
+             <p className="text-sm text-green-600 mt-3">
+               💡 Leave a review and get 10% off your next rental!
+             </p>
+           </div>
+         )}
         
         <a
           href="/"

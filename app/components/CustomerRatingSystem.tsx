@@ -98,6 +98,19 @@ export default function CustomerRatingSystem() {
     // Save rating data
     saveRatingData(ratingData);
 
+    // Send email notification
+    try {
+      await fetch('/api/send-review-notification', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ratingData),
+      });
+    } catch (error) {
+      console.error('Error sending review notification:', error);
+    }
+
     // Update KPI metrics
     updateKPIMetrics(ratingData);
 
