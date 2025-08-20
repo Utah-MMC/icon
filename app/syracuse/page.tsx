@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Syracuse Dumpster Rental - Professional Services in Syracuse, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Syracuse, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/syracuse',
+    url: 'https://www.icondumpsters.com/syracuse',
     siteName: 'Icon Dumpsters',
     images: [
       {

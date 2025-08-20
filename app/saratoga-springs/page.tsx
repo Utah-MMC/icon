@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Saratoga Springs Dumpster Rental - Professional Services in Saratoga Springs, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Saratoga Springs, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/saratoga-springs',
+    url: 'https://www.icondumpsters.com/saratoga-springs',
     siteName: 'Icon Dumpsters',
     images: [
       {

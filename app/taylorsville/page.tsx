@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Taylorsville Dumpster Rental - Professional Services in Taylorsville, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Taylorsville, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/taylorsville',
+    url: 'https://www.icondumpsters.com/taylorsville',
     siteName: 'Icon Dumpsters',
     images: [
       {

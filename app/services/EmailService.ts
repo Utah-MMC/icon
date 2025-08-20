@@ -239,7 +239,7 @@ export class EmailService {
             <p>Icon Dumpsters<br>
             (801) 918-6000<br>
             icondumpsters@gmail.com<br>
-            https://icondumpsters.com</p>
+            https://www.icondumpsters.com</p>
             <p>To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For assistance, text HELP to 801-918-6000.</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export class EmailService {
   }
 
   private generateRatingRequestEmailHTML(customerData: CustomerData): string {
-    const ratingUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://icondumpsters.com'}/rating?rental=${customerData.rentalId}`;
+    const ratingUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.icondumpsters.com'}/rating?rental=${customerData.rentalId}`;
 
     return `
       <!DOCTYPE html>
@@ -294,7 +294,7 @@ export class EmailService {
             <p>Icon Dumpsters<br>
             (801) 918-6000<br>
             icondumpsters@gmail.com<br>
-            https://icondumpsters.com</p>
+            https://www.icondumpsters.com</p>
             <p>To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For assistance, text HELP to 801-918-6000.</p>
           </div>
         </div>
@@ -304,7 +304,7 @@ export class EmailService {
   }
 
   private generateReminderEmailHTML(customerData: CustomerData): string {
-    const ratingUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://icondumpsters.com'}/rating?rental=${customerData.rentalId}`;
+    const ratingUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.icondumpsters.com'}/rating?rental=${customerData.rentalId}`;
 
     return `
       <!DOCTYPE html>
@@ -342,7 +342,7 @@ export class EmailService {
             <p>Icon Dumpsters<br>
             (801) 918-6000<br>
             icondumpsters@gmail.com<br>
-            https://icondumpsters.com</p>
+            https://www.icondumpsters.com</p>
             <p>To opt out at any time, consumers can text STOP or CANCEL or QUIT to stop receiving messages. For assistance, text HELP to 801-918-6000.</p>
           </div>
         </div>
@@ -384,7 +384,7 @@ export class EmailService {
             <p>Icon Dumpsters<br>
             (801) 918-6000<br>
             icondumpsters@gmail.com<br>
-            https://icondumpsters.com</p>
+            https://www.icondumpsters.com</p>
           </div>
         </div>
       </body>
@@ -425,7 +425,7 @@ export class EmailService {
             <p>Icon Dumpsters<br>
             (801) 918-6000<br>
             icondumpsters@gmail.com<br>
-            https://icondumpsters.com</p>
+            https://www.icondumpsters.com</p>
           </div>
         </div>
       </body>

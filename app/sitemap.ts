@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://icondumpsters.com'
+  const baseUrl = 'https://www.icondumpsters.com'
   
   // Define specific dates for better SEO
   const currentDate = new Date()

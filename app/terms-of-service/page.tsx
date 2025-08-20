@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms of Service | Icon Dumpsters Utah",
     description: "Terms of Service for Icon Dumpsters. Learn about our rental agreements and service terms.",
-    url: 'https://icondumpsters.com/terms-of-service',
+    url: 'https://www.icondumpsters.com/terms-of-service',
   },
   twitter: {
     card: 'summary',

@@ -20,7 +20,7 @@ export default function TestOGPage() {
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
             <h2 className="text-lg font-semibold text-blue-800 mb-2">Test Information</h2>
             <div className="text-blue-700 space-y-1">
-              <p><strong>Image URL:</strong> https://icondumpsters.com/images/og-image.png</p>
+              <p><strong>Image URL:</strong> https://www.icondumpsters.com/images/og-image.png</p>
               <p><strong>Dimensions:</strong> 1200x630 pixels</p>
               <p><strong>Format:</strong> PNG</p>
               <p><strong>Purpose:</strong> Social media sharing (Facebook, Twitter, LinkedIn)</p>
@@ -43,7 +43,7 @@ export default function TestOGPage() {
               <h3 className="text-lg font-semibold text-green-800 mb-2">To Test on Facebook:</h3>
               <ol className="text-green-700 space-y-1 list-decimal list-inside">
                 <li>Go to <a href="https://developers.facebook.com/tools/debug/" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">Facebook Sharing Debugger</a></li>
-                <li>Enter your website URL: <code className="bg-green-100 px-1 rounded">https://icondumpsters.com/</code></li>
+                <li>Enter your website URL: <code className="bg-green-100 px-1 rounded">https://www.icondumpsters.com/</code></li>
                 <li>Click "Debug" to see how it will appear when shared</li>
                 <li>If needed, click "Scrape Again" to refresh the cache</li>
               </ol>
@@ -53,7 +53,7 @@ export default function TestOGPage() {
               <h3 className="text-lg font-semibold text-blue-800 mb-2">To Test on Twitter:</h3>
               <ol className="text-blue-700 space-y-1 list-decimal list-inside">
                 <li>Go to <a href="https://cards-dev.twitter.com/validator" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Twitter Card Validator</a></li>
-                <li>Enter your website URL: <code className="bg-blue-100 px-1 rounded">https://icondumpsters.com/</code></li>
+                <li>Enter your website URL: <code className="bg-blue-100 px-1 rounded">https://www.icondumpsters.com/</code></li>
                 <li>Click "Preview card" to see how it will appear</li>
               </ol>
             </div>

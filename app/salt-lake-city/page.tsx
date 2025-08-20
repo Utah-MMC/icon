@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Salt Lake City Dumpster Rental - Professional Services in SLC, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Salt Lake City, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/salt-lake-city',
+    url: 'https://www.icondumpsters.com/salt-lake-city',
     siteName: 'Icon Dumpsters',
     images: [
       {

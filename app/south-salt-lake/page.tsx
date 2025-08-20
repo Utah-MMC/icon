@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "South Salt Lake Dumpster Rental - Professional Services in South Salt Lake, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in South Salt Lake, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/south-salt-lake',
+    url: 'https://www.icondumpsters.com/south-salt-lake',
     siteName: 'Icon Dumpsters',
     images: [
       {

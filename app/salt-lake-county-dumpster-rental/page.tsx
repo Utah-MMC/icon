@@ -50,7 +50,7 @@ export default function SaltLakeCountyDumpsterRentalPage() {
         publishedDate="2024-01-15"
         modifiedDate="2024-01-15"
         author="Icon Dumpsters"
-        articleUrl={`https://icondumpsters.com${pageUrl}`}
+        articleUrl={`https://www.icondumpsters.com${pageUrl}`}
         category="LOCAL SERVICES"
         readTime="10 min read"
       />

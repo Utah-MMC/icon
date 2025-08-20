@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "West Valley City Dumpster Rental - Professional Services in West Valley City, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in West Valley City, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/west-valley-city',
+    url: 'https://www.icondumpsters.com/west-valley-city',
     siteName: 'Icon Dumpsters',
     images: [
       {

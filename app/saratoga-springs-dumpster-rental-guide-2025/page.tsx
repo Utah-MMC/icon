@@ -14,8 +14,8 @@ export default function SaratogaSpringsDumpsterRentalGuide2025() {
         <meta property="og:title" content="Saratoga Springs Dumpster Rental Guide 2025 | Icon Dumpsters" />
         <meta property="og:description" content="Complete guide to dumpster rental in Saratoga Springs, Utah. Same-day delivery, competitive pricing, expert service. Get your free quote today!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://icondumpsters.com/saratoga-springs-dumpster-rental-guide-2025" />
-        <link rel="canonical" href="https://icondumpsters.com/saratoga-springs-dumpster-rental-guide-2025" />
+        <meta property="og:url" content="https://www.icondumpsters.com/saratoga-springs-dumpster-rental-guide-2025" />
+<link rel="canonical" href="https://www.icondumpsters.com/saratoga-springs-dumpster-rental-guide-2025" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

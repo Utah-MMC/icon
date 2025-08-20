@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "West Jordan Dumpster Rental - Professional Services in West Jordan, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in West Jordan, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/west-jordan',
+    url: 'https://www.icondumpsters.com/west-jordan',
     siteName: 'Icon Dumpsters',
     images: [
       {

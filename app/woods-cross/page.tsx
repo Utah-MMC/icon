@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Woods Cross Dumpster Rental - Professional Services in Woods Cross, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Woods Cross, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/woods-cross',
+    url: 'https://www.icondumpsters.com/woods-cross',
     siteName: 'Icon Dumpsters',
     images: [
       {

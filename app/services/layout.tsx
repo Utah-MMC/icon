@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental Services - Icon Dumpsters | Utah",
     description: "Professional dumpster rental services in Utah. Residential, commercial, and construction dumpster rentals. Same-day delivery, competitive pricing, and reliable service.",
-    url: 'https://icondumpsters.com/services',
+    url: 'https://www.icondumpsters.com/services',
     siteName: 'Icon Dumpsters',
     images: [
       {

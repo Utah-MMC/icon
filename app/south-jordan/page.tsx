@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "South Jordan Dumpster Rental - Professional Services in South Jordan, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in South Jordan, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/south-jordan',
+    url: 'https://www.icondumpsters.com/south-jordan',
     siteName: 'Icon Dumpsters',
     images: [
       {

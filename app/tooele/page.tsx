@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tooele Dumpster Rental - Professional Services in Tooele, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Tooele, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
-    url: 'https://icondumpsters.com/tooele',
+    url: 'https://www.icondumpsters.com/tooele',
     siteName: 'Icon Dumpsters',
     images: [
       {
