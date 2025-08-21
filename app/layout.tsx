@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://icondumpsters.com'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://icondumpsters.com',
   },
   openGraph: {
     title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
@@ -257,6 +257,7 @@ export default function RootLayout({
                     CALCULATOR
                   </a>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+                  <a href="/reviews" className="text-white hover:text-purple-200 transition-colors font-medium">REVIEWS</a>
                   <div className="relative group">
                     <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       ABOUT

@@ -5,6 +5,55 @@ import ReviewsCarousel from "./components/ReviewsCarousel";
 import CleanupSection from "./components/CleanupSection";
 import TrustSection from "./components/TrustSection";
 import QuickQuoteButton from "./components/QuickQuoteButton";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+  description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Call (801) 918-6000 for instant quotes.",
+  keywords: "Icon Dumpsters, dumpster rental, roll-off dumpster, dumpster rental near me, Utah dumpster rental, dumpster rental Utah, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, rolloff dumpster, Salt Lake City dumpster rental",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+    description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
+        type: 'image/png',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
+    description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available.",
+    images: [
+      {
+        url: '/images/og-image.png',
+        alt: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function Home() {
   return (
