@@ -175,7 +175,9 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-20">
               <div className="flex items-center">
-                                  <img src="/images/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-12 w-auto" />
+                <div className="bg-white p-2 rounded-lg shadow-sm">
+                  <img src="/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-12 w-auto" />
+                </div>
               </div>
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
@@ -247,6 +249,12 @@ export default function RootLayout({
                       </div>
                     </div>
                   </div>
+                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                    </svg>
+                    CALCULATOR
+                  </a>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
                   <a href="/faq" className="text-white hover:text-purple-200 transition-colors font-medium">FAQ</a>
                   <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>

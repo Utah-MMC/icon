@@ -264,12 +264,12 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">10 Yard Mixed</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 22' x 8' x 2'</div>
-                      <div><strong>Weight Limit:</strong> 4 tons included</div>
+                      <div><strong>Weight Limit:</strong> Standard weight allowance</div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Mixed loads</div>
                     </div>
                     <div className="mt-4 flex items-center justify-between">
-                      <span className="text-red-600 font-semibold">4 Tons Included</span>
+                      <span className="text-red-600 font-semibold">Mixed Load</span>
                       <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                         <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -458,19 +458,19 @@ export default function DumpsterSizes() {
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
                             src="/images/IMG_3190.jpg" 
-                            alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental - 4 Tons Included" 
+                            alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/IMG_3190.jpg"
                           />
                         </div>
                         <div>
                           <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">10 Yard Mixed Load Disposal</h3>
-                          <p className="text-xs text-gray-600">4 Tons Included</p>
+                          <p className="text-xs text-gray-600">Mixed Load</p>
                         </div>
                       </div>
                     </td>
                     <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">22' long x 8' wide x 2' high</td>
-                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4 tons included</td>
+                    <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Standard weight allowance</td>
                     <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">4 pickup truckloads</td>
                     <td className="p-2 sm:p-4 text-gray-700 text-xs sm:text-sm">Mixed construction debris, concrete, dirt, general waste</td>
                   </tr>
@@ -516,11 +516,11 @@ export default function DumpsterSizes() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Weight Limits</h4>
                 <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
-                  <li>• 15 Yard: 1-2 tons included</li>
-                  <li>• 20 Yard: 2-3 tons included</li>
-                  <li>• 30 Yard: 2-4 tons included</li>
+                  <li>• 15 Yard: Perfect for medium renovations</li>
+                  <li>• 20 Yard: Ideal for large home projects</li>
+                  <li>• 30 Yard: Best for major renovations</li>
                   <li>• 10 Yard Clean Dirt: Flat rate (no weight limit)</li>
-                  <li>• 10 Yard Mixed Load: 4 tons included</li>
+                  <li>• 10 Yard Mixed Load: Standard weight allowance</li>
                   <li>• 12 Yard Concrete: Flat rate (no weight limit)</li>
                   <li>• Additional weight fees apply</li>
                 </ul>

@@ -84,145 +84,228 @@ export default function DumpsterCalculatorPage() {
         {/* Call to Action Banner */}
         <CallToActionBanner />
 
-        {/* Weight Calculator Section */}
+        {/* Enhanced Tonnage Calculator Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Dumpster Weight Calculator
+                Advanced Tonnage Calculator
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Estimate the weight of your waste to avoid overweight charges and choose the right dumpster size.
+                Calculate the exact tonnage of your construction materials and waste to choose the perfect dumpster size and avoid overweight charges.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Weight Calculator Form */}
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Calculate Your Waste Weight</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Material Selection */}
+                <div className="lg:col-span-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                    </svg>
+                    Material Selection
+                  </h3>
+                  
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Concrete & Masonry</label>
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="number"
-                          id="concrete"
-                          placeholder="0"
-                          className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
-                        />
-                        <span className="text-sm text-gray-600">cubic yards</span>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-1">Weight: ~2.5 tons per cubic yard</p>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Select Material Type</label>
+                      <select 
+                        id="materialType"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                        onChange={() => {
+                          const materialType = (document.getElementById('materialType') as HTMLSelectElement)?.value;
+                          const unitWeightDiv = document.getElementById('unitWeight');
+                          if (unitWeightDiv) {
+                            const weights: { [key: string]: number } = {
+                              'concrete': 2.5,
+                              'asphalt': 2.0,
+                              'brick': 2.0,
+                              'crushed-stone': 2.7,
+                              'dirt': 1.5,
+                              'sand': 1.6,
+                              'gravel': 2.0,
+                              'construction-debris': 1.0,
+                              'wood': 0.5,
+                              'cardboard': 0.1,
+                              'metal': 3.0,
+                              'roofing': 1.2,
+                              'custom': 0
+                            };
+                            const weight = weights[materialType] || 0;
+                            unitWeightDiv.textContent = `${weight} tons/cubic yard`;
+                            (document.getElementById('customWeight') as HTMLInputElement).value = weight.toString();
+                          }
+                        }}
+                      >
+                        <option value="concrete">Concrete & Masonry</option>
+                        <option value="asphalt">Asphalt</option>
+                        <option value="brick">Brick & Stone</option>
+                        <option value="crushed-stone">Crushed Stone</option>
+                        <option value="dirt">Dirt & Soil</option>
+                        <option value="sand">Sand</option>
+                        <option value="gravel">Gravel</option>
+                        <option value="construction-debris">Construction Debris</option>
+                        <option value="wood">Wood & Lumber</option>
+                        <option value="cardboard">Cardboard & Paper</option>
+                        <option value="metal">Metal & Scrap</option>
+                        <option value="roofing">Roofing Materials</option>
+                        <option value="custom">Custom Weight</option>
+                      </select>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Dirt & Soil</label>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Unit Weight</label>
                       <div className="flex items-center space-x-2">
                         <input
                           type="number"
-                          id="dirt"
-                          placeholder="0"
+                          id="customWeight"
+                          placeholder="2.5"
+                          step="0.1"
                           className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
                         />
-                        <span className="text-sm text-gray-600">cubic yards</span>
+                        <span className="text-sm text-gray-600">tons/cu yd</span>
                       </div>
-                      <p className="text-xs text-gray-500 mt-1">Weight: ~1.5 tons per cubic yard</p>
+                      <p className="text-xs text-gray-500 mt-1">Current: <span id="unitWeight">2.5 tons/cubic yard</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dimensions Input */}
+                <div className="lg:col-span-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
+                    Dimensions
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Length</label>
+                      <div className="flex items-center space-x-2">
+                        <input
+                          type="number"
+                          id="length"
+                          placeholder="0"
+                          step="0.1"
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                        />
+                        <select 
+                          id="lengthUnit"
+                          className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                        >
+                          <option value="feet">feet</option>
+                          <option value="yards">yards</option>
+                          <option value="meters">meters</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Construction Debris</label>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Width</label>
                       <div className="flex items-center space-x-2">
                         <input
                           type="number"
-                          id="construction"
+                          id="width"
                           placeholder="0"
+                          step="0.1"
                           className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
                         />
-                        <span className="text-sm text-gray-600">cubic yards</span>
+                        <select 
+                          id="widthUnit"
+                          className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                        >
+                          <option value="feet">feet</option>
+                          <option value="yards">yards</option>
+                          <option value="meters">meters</option>
+                        </select>
                       </div>
-                      <p className="text-xs text-gray-500 mt-1">Weight: ~1.0 tons per cubic yard</p>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Wood & Lumber</label>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Depth</label>
                       <div className="flex items-center space-x-2">
                         <input
                           type="number"
-                          id="wood"
+                          id="depth"
                           placeholder="0"
+                          step="0.1"
                           className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
                         />
-                        <span className="text-sm text-gray-600">cubic yards</span>
+                        <select 
+                          id="depthUnit"
+                          className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                        >
+                          <option value="inches">inches</option>
+                          <option value="feet">feet</option>
+                          <option value="yards">yards</option>
+                          <option value="meters">meters</option>
+                        </select>
                       </div>
-                      <p className="text-xs text-gray-500 mt-1">Weight: ~0.5 tons per cubic yard</p>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Cardboard & Paper</label>
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="number"
-                          id="cardboard"
-                          placeholder="0"
-                          className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
-                        />
-                        <span className="text-sm text-gray-600">cubic yards</span>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-1">Weight: ~0.1 tons per cubic yard</p>
                     </div>
 
                     <button
                       onClick={() => {
-                        const concrete = parseFloat((document.getElementById('concrete') as HTMLInputElement)?.value || '0');
-                        const dirt = parseFloat((document.getElementById('dirt') as HTMLInputElement)?.value || '0');
-                        const construction = parseFloat((document.getElementById('construction') as HTMLInputElement)?.value || '0');
-                        const wood = parseFloat((document.getElementById('wood') as HTMLInputElement)?.value || '0');
-                        const cardboard = parseFloat((document.getElementById('cardboard') as HTMLInputElement)?.value || '0');
+                        const length = parseFloat((document.getElementById('length') as HTMLInputElement)?.value || '0');
+                        const width = parseFloat((document.getElementById('width') as HTMLInputElement)?.value || '0');
+                        const depth = parseFloat((document.getElementById('depth') as HTMLInputElement)?.value || '0');
+                        const unitWeight = parseFloat((document.getElementById('customWeight') as HTMLInputElement)?.value || '0');
+                        
+                        const lengthUnit = (document.getElementById('lengthUnit') as HTMLSelectElement)?.value;
+                        const widthUnit = (document.getElementById('widthUnit') as HTMLSelectElement)?.value;
+                        const depthUnit = (document.getElementById('depthUnit') as HTMLSelectElement)?.value;
 
-                        const totalWeight = (concrete * 2.5) + (dirt * 1.5) + (construction * 1.0) + (wood * 0.5) + (cardboard * 0.1);
-                        const totalVolume = concrete + dirt + construction + wood + cardboard;
+                        // Convert all to yards for calculation
+                        const lengthYards = lengthUnit === 'feet' ? length / 3 : lengthUnit === 'meters' ? length * 1.09361 : length;
+                        const widthYards = widthUnit === 'feet' ? width / 3 : widthUnit === 'meters' ? width * 1.09361 : width;
+                        const depthYards = depthUnit === 'inches' ? depth / 36 : depthUnit === 'feet' ? depth / 3 : depthUnit === 'meters' ? depth * 1.09361 : depth;
 
-                        const resultDiv = document.getElementById('weightResult');
+                        const volume = lengthYards * widthYards * depthYards;
+                        const tonnage = volume * unitWeight;
+
+                        const resultDiv = document.getElementById('tonnageResult');
                         if (resultDiv) {
                           resultDiv.innerHTML = `
-                            <div class="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border-2 border-green-200">
-                              <h4 class="text-lg font-bold text-green-800 mb-3">📊 Weight Calculation Results</h4>
+                            <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-lg border-2 border-purple-200">
+                              <h4 class="text-lg font-bold text-purple-800 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Tonnage Calculation Results
+                              </h4>
                               <div class="grid grid-cols-2 gap-4 mb-4">
-                                <div class="text-center">
-                                  <div class="text-2xl font-bold text-green-600">${totalWeight.toFixed(1)}</div>
+                                <div class="text-center bg-white p-3 rounded-lg">
+                                  <div class="text-2xl font-bold text-purple-600">${tonnage.toFixed(2)}</div>
                                   <div class="text-sm text-gray-600">Total Tons</div>
                                 </div>
-                                <div class="text-center">
-                                  <div class="text-2xl font-bold text-blue-600">${totalVolume.toFixed(1)}</div>
+                                <div class="text-center bg-white p-3 rounded-lg">
+                                  <div class="text-2xl font-bold text-blue-600">${volume.toFixed(2)}</div>
                                   <div class="text-sm text-gray-600">Cubic Yards</div>
                                 </div>
                               </div>
-                              <div class="space-y-2 text-sm">
+                              <div class="space-y-2 text-sm bg-white p-3 rounded-lg">
                                 <div class="flex justify-between">
-                                  <span>Concrete: ${(concrete * 2.5).toFixed(1)} tons</span>
-                                  <span>${concrete.toFixed(1)} cu yd</span>
+                                  <span class="font-medium">Dimensions:</span>
+                                  <span>${length} ${lengthUnit} × ${width} ${widthUnit} × ${depth} ${depthUnit}</span>
                                 </div>
                                 <div class="flex justify-between">
-                                  <span>Dirt: ${(dirt * 1.5).toFixed(1)} tons</span>
-                                  <span>${dirt.toFixed(1)} cu yd</span>
+                                  <span class="font-medium">Unit Weight:</span>
+                                  <span>${unitWeight} tons/cu yd</span>
                                 </div>
                                 <div class="flex justify-between">
-                                  <span>Construction: ${(construction * 1.0).toFixed(1)} tons</span>
-                                  <span>${construction.toFixed(1)} cu yd</span>
-                                </div>
-                                <div class="flex justify-between">
-                                  <span>Wood: ${(wood * 0.5).toFixed(1)} tons</span>
-                                  <span>${wood.toFixed(1)} cu yd</span>
-                                </div>
-                                <div class="flex justify-between">
-                                  <span>Cardboard: ${(cardboard * 0.1).toFixed(1)} tons</span>
-                                  <span>${cardboard.toFixed(1)} cu yd</span>
+                                  <span class="font-medium">Volume:</span>
+                                  <span>${volume.toFixed(2)} cubic yards</span>
                                 </div>
                               </div>
                               <div class="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
                                 <p class="text-sm text-yellow-800">
-                                  <strong>Recommendation:</strong> ${totalWeight <= 3 ? '15-yard dumpster' : totalWeight <= 4 ? '20-yard dumpster' : '30-yard dumpster'} would be appropriate for this weight.
+                                  <strong>Dumpster Recommendation:</strong> ${tonnage <= 3 ? '15-yard dumpster' : tonnage <= 4 ? '20-yard dumpster' : '30-yard dumpster'} would be appropriate for this weight.
+                                </p>
+                              </div>
+                              <div class="mt-3 p-3 bg-red-50 rounded-lg border border-red-200">
+                                <p class="text-sm text-red-800">
+                                  <strong>Note:</strong> Additional weight over dumpster limits is charged at $55 per ton.
                                 </p>
                               </div>
                             </div>
@@ -230,16 +313,24 @@ export default function DumpsterCalculatorPage() {
                           resultDiv.classList.remove('hidden');
                         }
                       }}
-                      className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 flex items-center justify-center"
                     >
-                      Calculate Weight
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                      </svg>
+                      Calculate Tonnage
                     </button>
                   </div>
                 </div>
 
-                {/* Weight Information */}
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Weight Limits & Guidelines</h3>
+                {/* Results and Information */}
+                <div className="lg:col-span-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                    Results & Guidelines
+                  </h3>
                   
                   <div className="space-y-4">
                     <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
@@ -261,7 +352,7 @@ export default function DumpsterCalculatorPage() {
                     </div>
 
                     <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                      <h4 className="font-semibold text-green-900 mb-2">Material Weight Guide</h4>
+                      <h4 className="font-semibold text-green-900 mb-2">Common Material Weights</h4>
                       <div className="space-y-1 text-sm text-green-800">
                         <div className="flex justify-between">
                           <span>Concrete:</span>
@@ -272,12 +363,16 @@ export default function DumpsterCalculatorPage() {
                           <span>2.0 tons/cu yd</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>Brick:</span>
-                          <span>2.0 tons/cu yd</span>
+                          <span>Crushed Stone:</span>
+                          <span>2.7 tons/cu yd</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Dirt/Soil:</span>
                           <span>1.5 tons/cu yd</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Sand:</span>
+                          <span>1.6 tons/cu yd</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Construction Debris:</span>
@@ -287,26 +382,22 @@ export default function DumpsterCalculatorPage() {
                           <span>Wood/Lumber:</span>
                           <span>0.5 tons/cu yd</span>
                         </div>
-                        <div className="flex justify-between">
-                          <span>Cardboard/Paper:</span>
-                          <span>0.1 tons/cu yd</span>
-                        </div>
                       </div>
                     </div>
 
                     <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                      <h4 className="font-semibold text-red-900 mb-2">Avoid Overweight Charges</h4>
+                      <h4 className="font-semibold text-red-900 mb-2">Overweight Charges</h4>
                       <ul className="text-sm text-red-800 space-y-1">
-                        <li>• Additional weight is charged at $55 per ton</li>
-                        <li>• Heavy materials can quickly reach limits</li>
-                        <li>• Consider material density when estimating</li>
-                        <li>• When in doubt, choose a larger dumpster</li>
+                        <li>• $55 per ton over limit</li>
+                        <li>• Weighed at disposal facility</li>
+                        <li>• Heavy materials add up quickly</li>
+                        <li>• Choose larger dumpster if unsure</li>
                       </ul>
                     </div>
                   </div>
 
-                  {/* Weight Calculation Result */}
-                  <div id="weightResult" className="hidden mt-6"></div>
+                  {/* Tonnage Calculation Result */}
+                  <div id="tonnageResult" className="hidden mt-6"></div>
                 </div>
               </div>
             </div>

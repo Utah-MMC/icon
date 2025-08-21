@@ -147,6 +147,10 @@ DNS changes take **5-15 minutes** to propagate. Check using:
 - [ ] **Check Vercel dashboard** - Status should change to "Valid"
 - [ ] **Test domain** - Visit `https://icondumpsters.com`
 
+Old Page Nameservers to Wordpress page
+NS1565.WEBSITEWELCOME.COM
+NS1566.WEBSITEWELCOME.COM
+
 ---
 
 ## 🎉 **Success!**

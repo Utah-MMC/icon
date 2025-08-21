@@ -50,7 +50,7 @@ export default function RatingClient() {
           <div className="flex justify-center items-center py-6">
             <img 
               className="h-12 w-auto" 
-              src="/images/Icon_Dumpsters_Final.png" 
+                              src="/Icon_Dumpsters_Final.png" 
               alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"
             />
           </div>

@@ -14,11 +14,13 @@ export default function EnhancedHeader() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <img 
-                src="/images/Icon_Dumpsters_Final.png" 
-                alt="Icon Dumpsters Logo" 
-                className="h-8 w-auto"
-              />
+              <div className="bg-white p-1 rounded-lg shadow-sm">
+                <img 
+                  src="/Icon_Dumpsters_Final.png" 
+                  alt="Icon Dumpsters Logo" 
+                  className="h-8 w-auto"
+                />
+              </div>
               <span className="ml-2 text-xl font-bold text-gray-900">
                 ICON <span className="text-[#4e37a8]">DUMPSTERS</span>
               </span>

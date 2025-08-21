@@ -94,7 +94,7 @@ export default function AdminDashboard() {
           <div>
             <img 
               className="mx-auto h-12 w-auto" 
-              src="/images/Icon_Dumpsters_Final.png" 
+                              src="/Icon_Dumpsters_Final.png" 
               alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -144,7 +144,7 @@ export default function AdminDashboard() {
             <div className="flex items-center">
               <img 
                 className="h-8 w-auto" 
-                src="/images/Icon_Dumpsters_Final.png" 
+                src="/Icon_Dumpsters_Final.png" 
                 alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"
               />
               <h1 className="ml-3 text-2xl font-bold text-white">

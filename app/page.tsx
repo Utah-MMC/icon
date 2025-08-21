@@ -13,9 +13,9 @@ export default function Home() {
       <div className="relative">
         {/* Background image */}
         <div className="relative h-64 sm:h-80 lg:h-96">
-          <ImageWithFallback 
+        <ImageWithFallback 
             src="/images/dumpsterSmallBanner5.jpeg" 
-            alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
+          alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
             className="w-full h-full object-cover"
             fallbackSrc="/images/dumpsterSmallBanner5.webp"
           />
@@ -25,237 +25,243 @@ export default function Home() {
         <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
+                      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
               <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block">
-                Get A Quote
-              </a>
-            </div>
-          </div>
+            Get A Quote
+          </a>
+        </div>
+      </div>
         </div>
       </div>
 
 
 
-      {/* Dumpster Rental Service Section */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
-        {/* Purple Gradient Wipe */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#4e37a8]/30 via-[#4e37a8]/15 to-purple-600/25 pointer-events-none"></div>
-        <div className="relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          
-          {/* Left Column - Information */}
-          <div className="space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold">
-              <span className="text-gray-800">Roll-off Dumpster Rental</span>{" "}
-              <span className="text-[#4e37a8]">Services in Salt Lake County</span>
+      {/* Revamped Dumpster Rental Service Section */}
+      <section className="relative bg-gradient-to-br from-gray-50 via-white to-purple-50 py-20 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full text-sm font-semibold text-purple-800 mb-6">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+              Professional Dumpster Rental Services
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent mb-6">
+              Our Roll-off Dumpster Rental Sizes
             </h2>
-            
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Looking for reliable dumpster rental services near you? We provide comprehensive roll-off dumpster rental solutions 
-              for all your needs. Whether you're renovating your home, cleaning up after a construction project, 
-              or need regular waste disposal, our team is here to help with professional Utah dumpster rental services.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Choose the perfect dumpster size for your project. All rentals include delivery, pickup, and landfill fees.
             </p>
-            
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              <strong>Icon Dumpsters</strong> is a professional dumpster rental company serving Utah communities. We offer 
-              instant estimates and handle various types of waste including household, construction, yard, 
-              recyclable, and concrete waste. Our roll-off dumpster sizes range from 15 to 30 yards to accommodate 
-              any project size. Call us today at <strong>(801) 918-6000</strong> for a free quote and 
-              professional dumpster rental service you can trust.
-            </p>
-            
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Don't let waste management become a headache. Call us or request a free quote to get an 
-              instant estimate for your project. Our experienced team will help you choose the right 
-              dumpster size and provide reliable delivery and pickup services.
-            </p>
-            
-            <div className="pt-6">
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl p-8 border border-gray-100">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-[#4e37a8] rounded-full mb-4">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                    </svg>
+          </div>
+
+          {/* Dumpster Size Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {/* 15 Yard Dumpster */}
+            <div className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+              <div className="p-8">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-xl">15</span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Choose Your Perfect Dumpster</h3>
-                  <p className="text-gray-600 text-sm sm:text-base">Select the right size for your project needs</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">15 Yard Roll-off Dumpster</h3>
+                </div>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Dimensions:</strong> 16 feet x 7 feet x 4 feet</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Capacity:</strong> Holds 15 cubic yards</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Weight:</strong> 1.5 tons</span>
+                  </div>
                 </div>
 
-                {/* Standard Dumpsters */}
-                <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                    <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-3"></span>
-                    Standard Dumpsters
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 mb-4">
-                                                <ImageWithFallback 
-                        src="/images/IMG_0350.jpg" 
-                        alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" 
-                        className="w-full h-32 object-contain object-center rounded-lg" 
-                        fallbackSrc="/images/dumpsters.webp" 
-                      />
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">15 Yard</h4>
-                        <p className="text-gray-600 text-sm mb-3">Perfect for small projects</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-[#4e37a8] font-semibold">Most Popular</span>
-                          <div className="w-8 h-8 bg-[#4e37a8] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
+                <a href="#quote-form" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-purple-600 hover:to-blue-500 transition-all duration-300 font-semibold text-center block transform hover:scale-105">
+                  Get Quick Quote
+                </a>
                           </div>
                         </div>
+
+            {/* 20 Yard Dumpster */}
+            <div className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-600"></div>
+              <div className="p-8">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-xl">20</span>
+                      </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">20 Yard Roll-off Dumpster</h3>
+                    </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Dimensions:</strong> 16 feet x 7 feet x 6 feet</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Capacity:</strong> Holds 20 cubic yards</span>
+                        </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                    <span><strong>Weight:</strong> 2 tons</span>
+                          </div>
+                        </div>
+                
+                <a href="#quote-form" className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-green-500 transition-all duration-300 font-semibold text-center block transform hover:scale-105">
+                  Get Quick Quote
+                </a>
                       </div>
                     </div>
 
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 mb-4">
-                                                <ImageWithFallback 
-                        src="/images/IMG_0336.jpg" 
-                        alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" 
-                        className="w-full h-32 object-contain object-center rounded-lg" 
-                        fallbackSrc="/images/dumpster500x500-1.webp" 
-                      />
+            {/* 30 Yard Dumpster */}
+            <div className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+              <div className="p-8">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-xl">30</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">30 Yard Roll-off Dumpster</h3>
                         </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">20 Yard</h4>
-                        <p className="text-gray-600 text-sm mb-3">Ideal for medium projects</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-green-600 font-semibold">Great Value</span>
-                          <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
+                    <span><strong>Dimensions:</strong> 22 feet x 7 feet x 6 feet</span>
                           </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Capacity:</strong> Holds 30 cubic yards</span>
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 mb-4">
-                          <ImageWithFallback 
-                            src="/images/dumpster5-500x500-1.jpeg" 
-                            alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" 
-                            className="w-full h-32 object-contain object-center rounded-lg" 
-                            fallbackSrc="/images/dumpster5-500x500-1.webp" 
-                          />
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">30 Yard</h4>
-                        <p className="text-gray-600 text-sm mb-3">Great for large projects</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-purple-600 font-semibold">Large Capacity</span>
-                          <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span><strong>Weight:</strong> 3 tons</span>
                   </div>
                 </div>
                 
-                {/* Specialized Dumpster Options */}
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                    Specialized Dumpsters
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4 mb-4">
-                          <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
-                            alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental" 
-                            className="w-full h-32 object-contain object-center rounded-lg" 
-                            fallbackSrc="/images/IMG_3190.jpg" 
-                          />
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">10 Yard Dirt</h4>
-                        <p className="text-gray-600 text-sm mb-3">Perfect for dirt & soil projects</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-orange-600 font-semibold">Clean Dirt Only</span>
-                          <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
-                          </div>
+                <a href="#quote-form" className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 px-6 rounded-lg hover:from-pink-600 hover:to-purple-500 transition-all duration-300 font-semibold text-center block transform hover:scale-105">
+                  Get Quick Quote
+                </a>
                         </div>
                       </div>
                     </div>
 
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-4 mb-4">
-                          <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
-                            alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" 
-                            className="w-full h-32 object-contain object-center rounded-lg" 
-                            fallbackSrc="/images/IMG_3190.jpg" 
-                          />
+          {/* Our Guarantee Section */}
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Guarantee</h3>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We're committed to providing the best dumpster rental experience in Utah
+            </p>
                         </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">10 Yard Mixed</h4>
-                        <p className="text-gray-600 text-sm mb-3">4 tons included</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-red-600 font-semibold">Mixed Load</span>
-                          <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+
+          {/* Guarantee Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 text-center border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
                             </svg>
                           </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Competitive Pricing</h4>
+              <p className="text-gray-600 leading-relaxed">
+                We offer the most competitive rates in Salt Lake County with no hidden fees or surprise charges.
+              </p>
                         </div>
+
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 text-center border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
                       </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">No Hidden Fees</h4>
+              <p className="text-gray-600 leading-relaxed">
+                What you see is what you pay. No delivery fees, pickup fees, or unexpected charges.
+              </p>
                     </div>
 
-                    <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                      <div className="p-6">
-                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 mb-4">
-                          <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
-                            alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental" 
-                            className="w-full h-32 object-contain object-center rounded-lg" 
-                            fallbackSrc="/images/IMG_3190.jpg" 
-                          />
-                        </div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-2">12 Yard Concrete</h4>
-                        <p className="text-gray-600 text-sm mb-3">Perfect for concrete projects</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-600 font-semibold">Heavy Duty</span>
-                          <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 text-center border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                             </svg>
                           </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Friendly, Live Help</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Our team is available 7 days a week to answer questions and provide expert guidance.
+              </p>
                         </div>
                       </div>
+
+          {/* Statistics Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">500+</div>
+              <div className="text-gray-600">Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24hr</div>
+              <div className="text-gray-600">Response Time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">15-30</div>
+              <div className="text-gray-600">Yard Dumpsters</div>
                     </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">7 Days</div>
+              <div className="text-gray-600">Service Available</div>
                   </div>
                 </div>
 
                 {/* Call to Action */}
                 <div className="text-center">
-                  <a href="/dumpster-sizes" className="inline-flex items-center bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    View All Sizes & Pricing
-                  </a>
-                </div>
-              </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Get your instant quote today and experience the difference
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-4 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Get Free Quote
+              </a>
+              <a href="tel:801-918-6000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-8 py-4 rounded-lg hover:bg-[#4e37a8] hover:text-white transition-all duration-300 font-semibold text-lg">
+                Call Now
+              </a>
             </div>
           </div>
-          
-          {/* Right Column - Quote Form */}
-          <QuoteForm />
         </div>
-        </div>
-      </div>
+      </section>
 
       {/* Cleanup Section */}
       <CleanupSection />

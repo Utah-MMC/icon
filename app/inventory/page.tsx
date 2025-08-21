@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'Dumpster Inventory Management - Track Your Fleet | Icon Dumpsters',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Dumpster Inventory Management - Track Your Fleet | Icon Dumpsters",
     description: "Manage your dumpster fleet with our comprehensive inventory tracking system. Monitor rentals, utilization rates, and fleet status in real-time.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/inventory',

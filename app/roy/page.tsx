@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'Roy Dumpster Rental - Icon Dumpsters',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Roy Dumpster Rental - Professional Services in Roy, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Roy, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/roy',

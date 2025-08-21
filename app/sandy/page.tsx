@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'Sandy Dumpster Rental - Icon Dumpsters',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Sandy Dumpster Rental - Professional Services in Sandy, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Sandy, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/sandy',

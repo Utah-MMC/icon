@@ -150,9 +150,9 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Weight Limits</h4>
               <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
-                <li>• 15 Yard: 1-2 tons included</li>
-                <li>• 20 Yard: 2-3 tons included</li>
-                <li>• 30 Yard: 2-4 tons included</li>
+                <li>• 15 Yard: Perfect for medium renovations</li>
+                <li>• 20 Yard: Ideal for large home projects</li>
+                <li>• 30 Yard: Best for major renovations</li>
                 <li>• Additional weight fees apply</li>
               </ul>
             </div>

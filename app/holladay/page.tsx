@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'Holladay Dumpster Rental - Professional Services in Holladay, UT | Icon Dumpsters',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Holladay Dumpster Rental - Professional Services in Holladay, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Holladay, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/holladay',

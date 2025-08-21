@@ -251,7 +251,7 @@ export default function KaysvilleDumpsterRentalGuide2025() {
                       <div className="bg-white border-2 border-red-200 p-6 rounded-lg">
                         <h4 className="text-xl font-bold text-red-900 mb-4">10-Yard Mixed Load</h4>
                         <p className="text-2xl font-bold text-gray-900 mb-2">$375</p>
-                        <p className="text-gray-600 mb-4">4 tons included</p>
+                        
                         <div className="mt-4 p-3 bg-red-50 rounded-lg">
                           <p className="text-sm text-red-800">
                             <strong>Bundle Pricing:</strong><br/>

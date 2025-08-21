@@ -44,7 +44,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "What dumpster sizes do you offer?",
-          answer: "We offer six dumpster options: 15-yard, 20-yard, and 30-yard roll-off dumpsters for general waste, plus specialized 10-yard clean dirt disposal, 10-yard mixed load disposal (4 tons included), and 12-yard concrete disposal dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects. Our specialized dumpsters are perfect for dirt, soil, concrete, and heavy material projects."
+          answer: "We offer six dumpster options: 15-yard, 20-yard, and 30-yard roll-off dumpsters for general waste, plus specialized 10-yard clean dirt disposal, 10-yard mixed load disposal (standard weight allowance), and 12-yard concrete disposal dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects. Our specialized dumpsters are perfect for dirt, soil, concrete, and heavy material projects."
         },
         {
           question: "How do I choose the right dumpster size?",
@@ -73,7 +73,7 @@ export default function FAQPage() {
         },
         {
           question: "Do you have specialized dumpsters for dirt and concrete?",
-          answer: "Yes! We offer specialized dumpsters for heavy materials: 10-yard clean dirt disposal (flat rate, no weight limit), 10-yard mixed load disposal (4 tons included), and 12-yard concrete disposal (flat rate, perfect for concrete, asphalt, brick, and stone). These are ideal for landscaping projects, concrete demolition, and heavy material disposal."
+          answer: "Yes! We offer specialized dumpsters for heavy materials: 10-yard clean dirt disposal (flat rate, no weight limit), 10-yard mixed load disposal (standard weight allowance), and 12-yard concrete disposal (flat rate, perfect for concrete, asphalt, brick, and stone). These are ideal for landscaping projects, concrete demolition, and heavy material disposal."
         }
       ]
     },

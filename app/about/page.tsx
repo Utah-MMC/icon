@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon_Dumpsters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'About Icon Dumpsters - Utah Dumpster Rental Services | Icon Dumpsters',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "About Icon Dumpsters - Utah Dumpster Rental Services | Icon Dumpsters",
     description: "Learn about Icon Dumpsters, a family-owned Utah dumpster rental company. From pond service to dumpster rentals, we serve Utah with reliability and integrity.",
-    images: ['/images/Icon_Dumpsters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/about',

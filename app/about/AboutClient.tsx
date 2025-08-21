@@ -52,7 +52,7 @@ export default function AboutClient() {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
               <ImageWithFallback 
-                src="/images/Icon_Dumpsters_Final.png" 
+                src="/Icon_Dumpsters_Final.png" 
                 alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" 
                 className="w-full h-full object-contain"
               />

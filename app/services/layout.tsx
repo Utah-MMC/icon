@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/images/Icon Dumpters_Final.png',
+        url: '/Icon_Dumpsters_Final.png',
         width: 1200,
         height: 630,
         alt: 'Icon Dumpsters - Professional Dumpster Rental Services',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Dumpster Rental Services - Icon Dumpsters | Utah",
     description: "Professional dumpster rental services in Utah. Residential, commercial, and construction dumpster rentals. Same-day delivery, competitive pricing, and reliable service.",
-    images: ['/images/Icon Dumpters_Final.png'],
+    images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
     canonical: '/services',
