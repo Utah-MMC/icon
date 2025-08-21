@@ -34,7 +34,18 @@ export default function Home() {
         </div>
       </div>
 
-
+      {/* Quote Form Section */}
+      <section id="quote-form" className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote Today</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Fill out the form below and we'll get back to you with a competitive quote for your dumpster rental needs.
+            </p>
+          </div>
+          <QuoteForm />
+        </div>
+      </section>
 
       {/* Revamped Dumpster Rental Service Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-purple-50 py-20 overflow-hidden">
@@ -226,38 +237,74 @@ export default function Home() {
                       </div>
 
           {/* Statistics Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">500+</div>
-              <div className="text-gray-600">Happy Customers</div>
+          <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl shadow-2xl p-8 mb-20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Why Choose Icon Dumpsters?</h3>
+              <p className="text-purple-100 text-lg">Trusted by hundreds of customers across Salt Lake County</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24hr</div>
-              <div className="text-gray-600">Response Time</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">15-30</div>
-              <div className="text-gray-600">Yard Dumpsters</div>
-                    </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">7 Days</div>
-              <div className="text-gray-600">Service Available</div>
-                  </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+                <div className="text-purple-100 font-medium">Happy Customers</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" />
+                  </svg>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">24hr</div>
+                <div className="text-purple-100 font-medium">Response Time</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                  </svg>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10-30</div>
+                <div className="text-purple-100 font-medium">Yard Dumpsters</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">7 Days</div>
+                <div className="text-purple-100 font-medium">Service Available</div>
+              </div>
+            </div>
+          </div>
 
-                {/* Call to Action */}
-                <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Get your instant quote today and experience the difference
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-4 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Get Free Quote
-              </a>
-              <a href="tel:801-918-6000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-8 py-4 rounded-lg hover:bg-[#4e37a8] hover:text-white transition-all duration-300 font-semibold text-lg">
-                Call Now
-              </a>
+          {/* Call to Action */}
+          <div className="bg-gradient-to-br from-gray-50 via-white to-purple-50 rounded-2xl shadow-xl p-8 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4e37a8] to-purple-600 bg-clip-text text-transparent mb-4">
+                Ready to Get Started?
+              </h3>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Get your instant quote today and experience the difference
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-4 rounded-xl hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Get Free Quote
+                </a>
+                <a href="tel:801-918-6000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-8 py-4 rounded-xl hover:bg-[#4e37a8] hover:text-white transition-all duration-300 font-semibold text-lg">
+                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  Call Now
+                </a>
+              </div>
             </div>
           </div>
         </div>

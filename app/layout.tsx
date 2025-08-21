@@ -182,6 +182,7 @@ export default function RootLayout({
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
                   <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICES</a>
+                  <a href="/estate-cleanout" className="text-white hover:text-purple-200 transition-colors font-medium">ESTATE CLEANOUT</a>
                   <div className="relative group">
                     <a href="/dumpster-sizes" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       DUMPSTER SIZES
@@ -256,9 +257,29 @@ export default function RootLayout({
                     CALCULATOR
                   </a>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
-                  <a href="/faq" className="text-white hover:text-purple-200 transition-colors font-medium">FAQ</a>
-                  <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium">ABOUT</a>
-                  <a href="/contact" className="text-white hover:text-purple-200 transition-colors font-medium">CONTACT</a>
+                  <div className="relative group">
+                    <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+                      ABOUT
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                    
+                    {/* About Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                      <div className="py-2">
+                        <a href="/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+                          About Us
+                        </a>
+                        <a href="/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+                          FAQ
+                        </a>
+                        <a href="/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+                          Contact
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </nav>
               <div className="flex items-center">
                 <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">

@@ -9,7 +9,7 @@ export default function MurrayDumpsterRentalGuide2025() {
     <>
       <Head>
         <title>Murray Dumpster Rental Guide 2025 | Best Prices & Same-Day Delivery | Icon Dumpsters</title>
-        <meta name="description" content="Complete Murray dumpster rental guide for 2025. Get same-day delivery, competitive pricing, and expert service. 15, 20, 30-yard dumpsters available. Free quotes!" />
+        <meta name="description" content="Complete Murray dumpster rental guide for 2025. Get same-day delivery, competitive pricing, and expert service. 10, 15, 20, 30-yard dumpsters available. Free quotes!" />
         <meta name="keywords" content="Murray dumpster rental, roll-off dumpster Murray, dumpster rental near me, Utah dumpster rental, Murray Utah dumpster, construction dumpster Murray, home renovation dumpster Murray" />
         <meta property="og:title" content="Murray Dumpster Rental Guide 2025 | Icon Dumpsters" />
         <meta property="og:description" content="Complete guide to dumpster rental in Murray, Utah. Same-day delivery, competitive pricing, expert service. Get your free quote today!" />
@@ -378,7 +378,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                           <span className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">2</span>
                           <div>
                             <h4 className="font-semibold text-gray-900">Choose your dumpster size and rental period</h4>
-                            <p className="text-gray-600 text-sm">Select from 15, 20, or 30-yard dumpsters</p>
+                            <p className="text-gray-600 text-sm">Select from 1015, 20, or 30-yard dumpsters</p>
                           </div>
                         </li>
                         <li className="flex items-start">
