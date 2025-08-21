@@ -257,7 +257,6 @@ export default function RootLayout({
                     CALCULATOR
                   </a>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
-                  <a href="/reviews" className="text-white hover:text-purple-200 transition-colors font-medium">REVIEWS</a>
                   <div className="relative group">
                     <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       ABOUT
@@ -271,6 +270,9 @@ export default function RootLayout({
                       <div className="py-2">
                         <a href="/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
                           About Us
+                        </a>
+                        <a href="/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+                          Reviews
                         </a>
                         <a href="/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
                           FAQ
