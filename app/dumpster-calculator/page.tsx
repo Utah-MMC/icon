@@ -85,29 +85,29 @@ export default function DumpsterCalculatorPage() {
         <CallToActionBanner />
 
         {/* Enhanced Tonnage Calculator Section */}
-        <section className="py-16 bg-white">
+        <section className="py-8 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Advanced Tonnage Calculator
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Calculate the exact tonnage of your construction materials and waste to choose the perfect dumpster size and avoid overweight charges.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Material Selection */}
                 <div className="lg:col-span-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <svg className="w-5 h-5 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
                     Material Selection
                   </h3>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">Select Material Type</label>
                       <select 
@@ -167,20 +167,23 @@ export default function DumpsterCalculatorPage() {
                         <span className="text-sm text-gray-600">tons/cu yd</span>
                       </div>
                       <p className="text-xs text-gray-500 mt-1">Current: <span id="unitWeight">2.5 tons/cubic yard</span></p>
+                      
+                      {/* Tonnage Calculation Result */}
+                      <div id="tonnageResult" className="hidden mt-3"></div>
                     </div>
                   </div>
                 </div>
 
                 {/* Dimensions Input */}
                 <div className="lg:col-span-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <svg className="w-5 h-5 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                     </svg>
                     Dimensions
                   </h3>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">Length</label>
                       <div className="flex items-center space-x-2">
@@ -325,17 +328,17 @@ export default function DumpsterCalculatorPage() {
 
                 {/* Results and Information */}
                 <div className="lg:col-span-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <svg className="w-6 h-6 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <svg className="w-5 h-5 text-[#4e37a8] mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
                     Results & Guidelines
                   </h3>
                   
-                  <div className="space-y-4">
-                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                      <h4 className="font-semibold text-blue-900 mb-2">Dumpster Weight Limits</h4>
-                      <div className="space-y-2 text-sm text-blue-800">
+                  <div className="space-y-3">
+                    <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-900 mb-1 text-sm">Dumpster Weight Limits</h4>
+                      <div className="space-y-1 text-xs text-blue-800">
                         <div className="flex justify-between">
                           <span>15-Yard Dumpster:</span>
                           <span className="font-semibold">3 tons</span>
@@ -351,9 +354,9 @@ export default function DumpsterCalculatorPage() {
                       </div>
                     </div>
 
-                    <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                      <h4 className="font-semibold text-green-900 mb-2">Common Material Weights</h4>
-                      <div className="space-y-1 text-sm text-green-800">
+                    <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+                      <h4 className="font-semibold text-green-900 mb-1 text-sm">Common Material Weights</h4>
+                      <div className="space-y-1 text-xs text-green-800">
                         <div className="flex justify-between">
                           <span>Concrete:</span>
                           <span>2.5 tons/cu yd</span>
@@ -385,9 +388,9 @@ export default function DumpsterCalculatorPage() {
                       </div>
                     </div>
 
-                    <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                      <h4 className="font-semibold text-red-900 mb-2">Overweight Charges</h4>
-                      <ul className="text-sm text-red-800 space-y-1">
+                    <div className="bg-red-50 p-3 rounded-lg border border-red-200">
+                      <h4 className="font-semibold text-red-900 mb-1 text-sm">Overweight Charges</h4>
+                      <ul className="text-xs text-red-800 space-y-1">
                         <li>• $55 per ton over limit</li>
                         <li>• Weighed at disposal facility</li>
                         <li>• Heavy materials add up quickly</li>
@@ -396,8 +399,7 @@ export default function DumpsterCalculatorPage() {
                     </div>
                   </div>
 
-                  {/* Tonnage Calculation Result */}
-                  <div id="tonnageResult" className="hidden mt-6"></div>
+
                 </div>
               </div>
             </div>
@@ -405,77 +407,77 @@ export default function DumpsterCalculatorPage() {
         </section>
 
         {/* How It Works Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-8 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 How Our Dumpster Calculator Works
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our advanced calculator provides accurate estimates by considering multiple factors that affect your final cost.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Location-Based Pricing</h3>
-                <p className="text-gray-600">Enter your zip code and our calculator automatically finds the nearest hub and calculates delivery distance and fees.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Location-Based Pricing</h3>
+                <p className="text-sm text-gray-600">Enter your zip code and our calculator automatically finds the nearest hub and calculates delivery distance and fees.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-green-100 text-green-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Weight Calculation</h3>
-                <p className="text-gray-600">Use our weight calculator to estimate your waste weight and avoid overweight charges that can add significant costs.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Weight Calculation</h3>
+                <p className="text-sm text-gray-600">Use our weight calculator to estimate your waste weight and avoid overweight charges that can add significant costs.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Transparent Pricing</h3>
-                <p className="text-gray-600">Get a detailed breakdown of all costs including base rental, delivery fees, and any additional charges.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+                <p className="text-sm text-gray-600">Get a detailed breakdown of all costs including base rental, delivery fees, and any additional charges.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Special Rates</h3>
-                <p className="text-gray-600">Access to 1-day special rates, veteran discounts, and bundle pricing for longer rentals.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Special Rates</h3>
+                <p className="text-sm text-gray-600">Access to 1-day special rates, veteran discounts, and bundle pricing for longer rentals.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-red-100 text-red-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Results</h3>
-                <p className="text-gray-600">Get immediate cost estimates with detailed breakdowns to help you make informed decisions.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Instant Results</h3>
+                <p className="text-sm text-gray-600">Get immediate cost estimates with detailed breakdowns to help you make informed decisions.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Guidance</h3>
-                <p className="text-gray-600">Our calculator helps you choose the right dumpster size and avoid common pitfalls like overweight charges.</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Expert Guidance</h3>
+                <p className="text-sm text-gray-600">Our calculator helps you choose the right dumpster size and avoid common pitfalls like overweight charges.</p>
               </div>
             </div>
           </div>

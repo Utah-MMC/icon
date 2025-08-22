@@ -9,7 +9,7 @@ import CustomerRatingSystem from "./components/CustomerRatingSystem";
 import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
 import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
 import EnhancedHeader from "./components/EnhancedHeader";
-import TawkToChat from "./components/TawkToChat";
+import ChatWidget from "./components/ChatWidget";
 import Footer from "./components/Footer";
 import ConditionalCalculatorBanner from "./components/ConditionalCalculatorBanner";
 import PromotionalBanner from "./components/PromotionalBanner";
@@ -324,7 +324,7 @@ export default function RootLayout({
         <PromotionalBanner />
 
         {/* Live Chat Widget */}
-        <TawkToChat />
+        <ChatWidget />
 
         {/* Calculator Banner - Only on calculator-related pages */}
         <ConditionalCalculatorBanner />

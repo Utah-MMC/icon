@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface ImageWithFallbackProps {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   className?: string;
-  fallbackSrc?: string;
+  fallbackSrc?: string | StaticImageData;
   priority?: boolean;
   sizes?: string;
   fill?: boolean;
@@ -22,7 +22,7 @@ export default function ImageWithFallback({
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   fill = false
 }: ImageWithFallbackProps) {
-  const [imgSrc, setImgSrc] = useState(src);
+  const [imgSrc, setImgSrc] = useState<string | StaticImageData>(src);
   const [hasError, setHasError] = useState(false);
   const defaultFallback = "/images/IMG_0350.jpg";
 
@@ -62,11 +62,12 @@ export default function ImageWithFallback({
     );
   }
 
-  // Otherwise, use regular img with lazy loading
+  // Otherwise, use regular img with lazy loading. Resolve StaticImageData to string path
+  const resolvedSrc = typeof imgSrc === 'string' ? imgSrc : imgSrc.src;
   return (
     <img 
-      src={imgSrc} 
-      alt={alt} 
+      src={resolvedSrc}
+      alt={alt}
       className={className}
       onError={handleError}
       loading="lazy"

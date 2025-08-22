@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
+import sizesHero from "../../images/Screenshot 2025-08-21 223011.png";
 import QuoteForm from "../components/QuoteForm";
 
 export const metadata: Metadata = {
@@ -81,10 +82,10 @@ export default function DumpsterSizes() {
         {/* Right Half - Dumpster Image */}
         <div className="relative overflow-hidden">
           <ImageWithFallback 
-            src="/images/dumpsterWithTruck.webp" 
+            src={sizesHero}
             alt="Roll-off Dumpsters for Utah Dumpster Rental Services" 
             className="w-full h-full object-cover"
-            fallbackSrc="/images/dumpsterWithTruck.webp"
+            fallbackSrc={sizesHero as unknown as string}
           />
           {/* Floating Orange Shapes */}
           <div className="absolute top-10 right-10 w-16 h-16 bg-orange-500 transform rotate-12 opacity-80"></div>
