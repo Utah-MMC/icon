@@ -7,6 +7,8 @@ interface EmailData {
   html: string;
   text?: string;
   from?: string;
+  bcc?: string | string[];
+  replyTo?: string;
 }
 
 interface CustomerData {
@@ -77,6 +79,8 @@ export class EmailService {
       const mailOptions = {
         from: emailData.from || `"Icon Dumpsters" <${securityConfig.email.user}>`,
         to: emailData.to,
+        bcc: emailData.bcc,
+        replyTo: emailData.replyTo,
         subject: emailData.subject,
         html: emailData.html,
         text: emailData.text || this.htmlToText(emailData.html),

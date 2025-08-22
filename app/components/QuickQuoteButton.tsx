@@ -26,7 +26,7 @@ export default function QuickQuoteButton({ dumpsterSize, className = '' }: Quick
       return;
     }
 
-    // Submit to Formspree
+    // Submit to internal API
     const formData = new FormData();
     formData.append('phone', phone);
     formData.append('zipCode', zipCode);
@@ -35,10 +35,9 @@ export default function QuickQuoteButton({ dumpsterSize, className = '' }: Quick
     formData.append('subject', `Quick Quote Request - ${dumpsterSize} Dumpster`);
 
     try {
-      await fetch('https://formspree.io/f/xanblnyj', {
+      await fetch('/api/lead', {
         method: 'POST',
-        body: formData,
-        mode: 'no-cors',
+        body: formData as any,
       });
       
       alert('Thank you! We\'ll call you within 30 minutes with your quote.');

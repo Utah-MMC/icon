@@ -71,11 +71,10 @@ export default function QuoteForm() {
       formDataToSend.append('additionalInfo', formData.get('additionalInfo') as string);
       formDataToSend.append('smsConsent', formData.get('smsConsent') as string);
 
-      // Submit to Formspree - don't wait for response to avoid CORS issues
-      fetch('https://formspree.io/f/xanblnyj', {
+      // Submit to internal API (can forward to CRM/email provider)
+      fetch('/api/lead', {
         method: 'POST',
-        body: formDataToSend,
-        mode: 'no-cors', // This prevents CORS issues
+        body: formDataToSend as any,
       }).then(() => {
         // Assume success if no error
         alert('Thank you! Your quote request has been submitted successfully.');

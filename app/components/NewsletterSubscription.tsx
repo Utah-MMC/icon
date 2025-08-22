@@ -19,37 +19,18 @@ export default function NewsletterSubscription({ className = "" }: NewsletterSub
     console.log('Starting newsletter subscription for:', email);
 
     try {
-      // Create form data for newsletter subscription
+      // Create form data for newsletter subscription (use internal API)
       const formData = new FormData();
       formData.append('email', email);
-      formData.append('_subject', 'Newsletter Subscription - Icon Dumpsters Blog');
-      formData.append('_replyto', email);
-      formData.append('message', `New newsletter subscription from: ${email}\n\nThis user has subscribed to the Icon Dumpsters blog newsletter.`);
+      formData.append('source', 'Newsletter Subscription');
+      formData.append('subject', 'Newsletter Subscription - Icon Dumpsters Blog');
 
-      console.log('Form data prepared, submitting to Formspree...');
+      console.log('Submitting subscription to internal /api/lead...');
 
-      // Submit to Formspree - try multiple approaches for better reliability
-      let response;
-      try {
-        // First try with no-cors
-        response = await fetch("https://formspree.io/f/mwpqaoqk", {
-          method: "POST",
-          body: formData,
-          mode: 'no-cors',
-        });
-        console.log('Formspree response received (no-cors):', response);
-      } catch (corsError) {
-        console.log('CORS error, trying alternative approach...');
-        // If no-cors fails, try a different approach
-        response = await fetch("https://formspree.io/f/mwpqaoqk", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams(formData as any),
-        });
-        console.log('Formspree response received (alternative):', response);
-      }
+      await fetch('/api/lead', {
+        method: 'POST',
+        body: formData as any,
+      });
 
       // Success - reset form and show message
       setSubscribeMessage("Thank you for subscribing! Check your email for confirmation.");

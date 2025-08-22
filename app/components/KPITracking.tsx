@@ -80,8 +80,8 @@ export default function KPITracking() {
 
       // Setup event listeners for tracking
       setupEventListeners() {
-        // Track quote form submissions
-        const quoteForm = document.querySelector('form[action*="formspree"]');
+        // Track quote form submissions (migrated from Formspree to internal API)
+        const quoteForm = document.querySelector('form[action*="/api/lead"], #quote-form form');
         if (quoteForm) {
           quoteForm.addEventListener('submit', () => {
             this.trackQuoteRequest();

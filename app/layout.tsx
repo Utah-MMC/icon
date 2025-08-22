@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import CookieConsent from "./components/CookieConsent";
 import KPITracking from "./components/KPITracking";
 import CustomerRatingSystem from "./components/CustomerRatingSystem";
 import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
@@ -12,6 +13,7 @@ import TawkToChat from "./components/TawkToChat";
 import Footer from "./components/Footer";
 import CalculatorBanner from "./components/CalculatorBanner";
 import PromotionalBanner from "./components/PromotionalBanner";
+import FacebookPixel from "./components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -116,6 +118,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);} 
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'functionality_storage': 'granted',
+                'security_storage': 'granted'
+              });
+            `,
+          }}
+        />
         <StructuredData />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         {/* Additional favicon links for better browser compatibility */}
@@ -132,6 +150,8 @@ export default function RootLayout({
         <meta property="og:image:alt" content="Icon Dumpsters - Professional Dumpster Rental Services in Utah" />
       </head>
       <GoogleAnalytics />
+      <FacebookPixel />
+      <CookieConsent />
       <KPITracking />
       <CustomerRatingSystem />
       <EmailFollowUpSystem />

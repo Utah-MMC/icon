@@ -12,5 +12,8 @@ NEXT_PUBLIC_SITE_URL=https://icon-dumpsters.vercel.app
 # Google Analytics
 NEXT_PUBLIC_GA_ID=G-TCJ2JFCZ1V
 
+# Facebook Pixel
+NEXT_PUBLIC_FB_PIXEL_ID=
+
 # Formspree (if needed)
 NEXT_PUBLIC_FORMSPREE_ID=your_formspree_id_here

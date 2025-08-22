@@ -26,26 +26,24 @@ export default function DumpsterCalculator() {
 
     const basePrice = basePrices[selectedSize as keyof typeof basePrices] || 350;
     const days = parseInt(selectedDuration);
+    const isThirtyDay = days === 30;
     let totalEstimate = basePrice;
 
-    if (days === 1) {
-      totalEstimate = basePrice * 0.7; // 30% discount for 1-day
-    } else if (days <= 7) {
-      totalEstimate = basePrice;
-      } else {
-      const extraDays = days - 7;
-      const dailyRate = Math.ceil(basePrice / 7);
-      totalEstimate = basePrice + (extraDays * dailyRate);
-    }
-
-    // Special 30-day pricing
-    if (days === 30) {
+    if (isThirtyDay) {
       const thirtyDayPrices = {
         '15': 500,
         '20': 525,
         '30': 600
       };
       totalEstimate = thirtyDayPrices[selectedSize as keyof typeof thirtyDayPrices] || 500;
+    } else if (days === 1) {
+      totalEstimate = basePrice * 0.7; // 30% discount for 1-day
+    } else if (days <= 7) {
+      totalEstimate = basePrice;
+    } else {
+      const extraDays = days - 7;
+      const dailyRate = Math.ceil(basePrice / 7);
+      totalEstimate = basePrice + (extraDays * dailyRate);
     }
 
     const veteranDiscount = isVeteran ? totalEstimate * 0.10 : 0;
@@ -63,11 +61,16 @@ export default function DumpsterCalculator() {
     } else {
       html += '<div class="font-semibold text-[#4e37a8]">📦 ' + selectedDuration + ' Day Bundle Breakdown:</div>';
       html += '<div class="ml-4 space-y-1">';
-      html += '<div>• Base Price: $' + basePrice.toLocaleString() + '</div>';
-      if (days > 7) {
-        const extraDays = days - 7;
-        const dailyRate = Math.ceil(basePrice / 7);
-        html += '<div>• Additional Days (' + extraDays + ' × $' + dailyRate + '): $' + (extraDays * dailyRate).toLocaleString() + '</div>';
+      if (isThirtyDay) {
+        // 30-day special pricing breakdown: show special rate only
+        html += '<div>• 30-Day Special Rate: $' + totalEstimate.toLocaleString() + '</div>';
+      } else {
+        html += '<div>• Base Price: $' + basePrice.toLocaleString() + '</div>';
+        if (days > 7) {
+          const extraDays = days - 7;
+          const dailyRate = Math.ceil(basePrice / 7);
+          html += '<div>• Additional Days (' + extraDays + ' × $' + dailyRate + '): $' + (extraDays * dailyRate).toLocaleString() + '</div>';
+        }
       }
       html += '<div class="font-semibold text-[#4e37a8] border-t pt-1 mt-2">Total Cost: $' + totalEstimate.toLocaleString() + '</div>';
       html += '</div>';
