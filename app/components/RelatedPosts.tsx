@@ -47,12 +47,12 @@ export default function RelatedPosts({ currentPostId, currentCategory, posts }: 
           {relatedPosts.map((post) => (
             <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Link href={`/${post.id}`} className="block">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
                   <ImageWithFallback
                     src={post.image}
                     fallbackSrc={post.fallbackImage}
                     alt={`${post.title} - Icon Dumpsters Blog`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">

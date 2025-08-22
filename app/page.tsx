@@ -59,14 +59,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative w-full">
         {/* Background image */}
-        <div className="relative h-64 sm:h-80 lg:h-96">
+        <div className="relative h-screen bg-[#4e37a8] flex items-center justify-center">
         <ImageWithFallback 
-            src="/images/dumpsterSmallBanner5.jpeg" 
-          alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters for Construction and Waste Management" 
+            src="/images/hero-main.png" 
+            alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
             className="w-full h-full object-cover"
-            fallbackSrc="/images/dumpsterSmallBanner5.webp"
+            fallbackSrc="/images/hero-main.png"
           />
         </div>
         

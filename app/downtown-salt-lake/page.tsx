@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function DowntownSaltLakePage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "Rose Park",
-    "href": "/rose-park"
-  },
-  {
-    "name": "Poplar Grove",
-    "href": "/poplar-grove"
-  },
-  {
-    "name": "Glendale",
-    "href": "/glendale"
-  },
-  {
-    "name": "Fairpark",
-    "href": "/fairpark"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="downtown-salt-lake"
-      cityDisplayName="Downtown Salt Lake"
-      nearbyCities={nearbyCities}
-      historicalInfo="Downtown Salt Lake City, the heart of Utah's capital, is home to Temple Square, the Utah State Capitol, and vibrant business district. Our dumpster services support downtown development."
-      landmarks="Temple Square, Utah State Capitol, The Gateway, Downtown Salt Lake"
-      localProjects="Supporting downtown Salt Lake City renovations and business development"
-      neighborhoods="Downtown Central, Downtown East, Downtown West"
-      localBusinesses="Preferred provider for downtown Salt Lake City construction and business projects"
+    <CityPageTemplate
+      city="Downtown Salt Lake, UT"
+      neighborhoods={["Downtown Central", "Temple Square", "The Gateway", "Capitol Hill"]}
+      nearbyLinks={[
+        { label: 'Salt Lake City', href: '/salt-lake-city' },
+        { label: 'Rose Park', href: '/rose-park' },
+        { label: 'Glendale', href: '/glendale' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpster500x200-4.webp', fallback: '/images/dumpster500x200-4.webp' },
+        { src: '/images/dumpsters2.webp', fallback: '/images/dumpsters2.webp' }
+      ]}
     />
   );
 }

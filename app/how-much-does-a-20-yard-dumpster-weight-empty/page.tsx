@@ -4,7 +4,7 @@ import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/Analytics";
 import ArticleSchema from "../components/ArticleSchema";
-import DumpsterCalculator from "../components/DumpsterCalculator";
+import CalculatorCTA from "../components/CalculatorCTA";
 import FAQSchema from "../components/FAQSchema";
 
 export default function TwentyYardDumpsterWeight() {
@@ -134,16 +134,8 @@ export default function TwentyYardDumpsterWeight() {
             />
           </div>
 
-          {/* Calculator Section */}
-          <section className="mb-16 bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Dumpster Weight Calculator</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Calculate dumpster weight and capacity for your project. Enter your project details below.
-              </p>
-            </div>
-            <DumpsterCalculator />
-          </section>
+          {/* Calculator CTA */}
+          <CalculatorCTA className="mb-16" />
 
           {/* Main Content */}
           <div className="prose prose-lg max-w-none">

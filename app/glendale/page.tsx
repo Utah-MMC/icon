@@ -42,42 +42,23 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function GlendalePage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "Rose Park",
-    "href": "/rose-park"
-  },
-  {
-    "name": "Poplar Grove",
-    "href": "/poplar-grove"
-  },
-  {
-    "name": "Fairpark",
-    "href": "/fairpark"
-  },
-  {
-    "name": "North Salt Lake",
-    "href": "/north-salt-lake"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="glendale"
-      cityDisplayName="Glendale"
-      nearbyCities={nearbyCities}
-      historicalInfo="Glendale, a diverse neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Glendale's community growth."
-      landmarks="Glendale City Hall, Glendale Park, Jordan River"
-      localProjects="Supporting Glendale's community development and residential projects"
-      neighborhoods="Glendale Central, Glendale East, Glendale West"
-      localBusinesses="Preferred provider for Glendale's community and residential projects"
+    <CityPageTemplate
+      city="Glendale, UT"
+      neighborhoods={["Glendale Central", "Jordan River", "Navajo", "Poplar Grove Border"]}
+      nearbyLinks={[
+        { label: 'Salt Lake City', href: '/salt-lake-city' },
+        { label: 'Rose Park', href: '/rose-park' },
+        { label: 'Poplar Grove', href: '/poplar-grove' },
+        { label: 'Fairpark', href: '/fairpark' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpsterSmallBanner4.jpeg', fallback: '/images/dumpsterSmallBanner4.webp' },
+        { src: '/images/dumpster500x200-1.jpeg', fallback: '/images/dumpster500x200-1.webp' }
+      ]}
     />
   );
 }

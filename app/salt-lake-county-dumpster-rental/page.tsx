@@ -4,7 +4,7 @@ import React from 'react';
 import Analytics from '../components/Analytics';
 import ArticleSchema from '../components/ArticleSchema';
 import FAQSchema from '../components/FAQSchema';
-import DumpsterCalculator from '../components/DumpsterCalculator';
+import CalculatorCTA from '../components/CalculatorCTA';
 import ImageWithFallback from '../components/ImageWithFallback';
 
 export default function SaltLakeCountyDumpsterRentalPage() {
@@ -107,13 +107,8 @@ export default function SaltLakeCountyDumpsterRentalPage() {
             </p>
           </section>
 
-          {/* Dumpster Calculator */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Calculate Your Salt Lake County Dumpster Needs
-            </h2>
-            <DumpsterCalculator />
-          </section>
+          {/* Calculator CTA */}
+          <CalculatorCTA className="mb-12" />
 
           {/* Coverage Areas */}
           <section className="mb-12">

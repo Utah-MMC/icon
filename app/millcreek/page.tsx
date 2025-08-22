@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function MillcreekPage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "Murray",
-    "href": "/murray"
-  },
-  {
-    "name": "Holladay",
-    "href": "/holladay"
-  },
-  {
-    "name": "Cottonwood Heights",
-    "href": "/cottonwood-heights"
-  },
-  {
-    "name": "Sugar House",
-    "href": "/sugar-house"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="millcreek"
-      cityDisplayName="Millcreek"
-      nearbyCities={nearbyCities}
-      historicalInfo="Millcreek, named after the historic mill and creek, is a vibrant community in the Salt Lake Valley. Our dumpster services support Millcreek's residential and commercial growth."
-      landmarks="Millcreek City Hall, Millcreek Park, Historic Millcreek"
-      localProjects="Supporting Millcreek's community projects and residential development"
-      neighborhoods="Millcreek Central, Millcreek East, Millcreek West"
-      localBusinesses="Trusted by Millcreek's local contractors and developers"
+    <CityPageTemplate
+      city="Millcreek, UT"
+      neighborhoods={["Canyon Rim", "East Millcreek", "Millcreek Heights", "Olympus Cove"]}
+      nearbyLinks={[
+        { label: 'Holladay', href: '/holladay' },
+        { label: 'Salt Lake City', href: '/salt-lake-city' },
+        { label: 'Murray', href: '/murray' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpster500x500-1.jpeg', fallback: '/images/dumpster500x500-1.webp' },
+        { src: '/images/dumpsterSmallBanner2.jpeg', fallback: '/images/dumpsterSmallBanner2.webp' }
+      ]}
     />
   );
 }

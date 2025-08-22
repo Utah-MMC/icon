@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function FairparkPage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "Rose Park",
-    "href": "/rose-park"
-  },
-  {
-    "name": "Glendale",
-    "href": "/glendale"
-  },
-  {
-    "name": "Poplar Grove",
-    "href": "/poplar-grove"
-  },
-  {
-    "name": "North Salt Lake",
-    "href": "/north-salt-lake"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="fairpark"
-      cityDisplayName="Fairpark"
-      nearbyCities={nearbyCities}
-      historicalInfo="Fairpark, home to the Utah State Fairgrounds, offers a unique blend of history and community in Salt Lake City. Our dumpster services support Fairpark's community growth."
-      landmarks="Utah State Fairgrounds, Fairpark City Hall, Fairpark Park"
-      localProjects="Supporting Fairpark's fairgrounds events and community projects"
-      neighborhoods="Fairpark Central, Fairpark East, Fairpark West"
-      localBusinesses="Preferred provider for Fairpark's fairgrounds and community projects"
+    <CityPageTemplate
+      city="Fairpark, UT"
+      neighborhoods={["Fairpark Central", "Utah State Fairpark", "North Temple", "Jordan River"]}
+      nearbyLinks={[
+        { label: 'Rose Park', href: '/rose-park' },
+        { label: 'Glendale', href: '/glendale' },
+        { label: 'Poplar Grove', href: '/poplar-grove' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpsterSmallBanner6.webp', fallback: '/images/dumpsterSmallBanner6.webp' },
+        { src: '/images/dumpster500x200-3.jpeg', fallback: '/images/dumpster500x200-3.webp' }
+      ]}
     />
   );
 }

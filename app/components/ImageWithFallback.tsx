@@ -24,12 +24,23 @@ export default function ImageWithFallback({
 }: ImageWithFallbackProps) {
   const [imgSrc, setImgSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
+  const defaultFallback = "/images/IMG_0350.jpg";
 
   const handleError = () => {
-    if (!hasError && fallbackSrc) {
-      setImgSrc(fallbackSrc);
-      setHasError(true);
+    if (hasError) {
+      // Already attempted fallback, use default site image
+      if (imgSrc !== defaultFallback) {
+        setImgSrc(defaultFallback);
+      }
+      return;
     }
+    // First failure: try provided fallback if present, else default
+    if (fallbackSrc && imgSrc !== fallbackSrc) {
+      setImgSrc(fallbackSrc);
+    } else {
+      setImgSrc(defaultFallback);
+    }
+    setHasError(true);
   };
 
   // If fill is true, use Next.js Image with fill
@@ -39,7 +50,7 @@ export default function ImageWithFallback({
         src={imgSrc}
         alt={alt}
         fill
-        className={`object-cover ${className}`}
+        className={className && className.length > 0 ? className : 'object-contain'}
         onError={handleError}
         sizes={sizes}
         priority={priority}

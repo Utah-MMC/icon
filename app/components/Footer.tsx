@@ -183,7 +183,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#4e37a8] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Search & Quick Links */}
           <div>
             <h4 className="text-white underline font-semibold mb-3">Find Your Location</h4>
@@ -229,6 +229,18 @@ export default function Footer() {
               <a href="/taylorsville" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
               <a href="/kearns" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
               <a href="/millcreek" className="text-purple-200 hover:text-white transition-colors">Millcreek</a>
+            </div>
+          </div>
+
+          {/* Helpful Links */}
+          <div>
+            <h4 className="text-white underline font-semibold mb-3">Helpful Links</h4>
+            <div className="grid grid-cols-1 gap-1 text-sm">
+              <a href="/dumpster-rental-guide-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
+              <a href="/dumpster-rentals-near-me-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
+              <a href="/construction-waste-management-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
+              <a href="/home-renovation-waste-disposal-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
+              <a href="/commercial-dumpster-rental-business-solutions" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
             </div>
           </div>
 

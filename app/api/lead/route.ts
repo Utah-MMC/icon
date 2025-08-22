@@ -38,8 +38,11 @@ export async function POST(request: NextRequest) {
     const additionalInfo = sanitize(data.additionalInfo);
     const source = sanitize(data.source || 'Website Quote Form');
 
+    const isNewsletter = /newsletter/i.test(source) || /newsletter/i.test(String(data.subject || ''));
     const subject = sanitize(
-      data.subject || `New Quote Request - ${dumpsterSize ? `${dumpsterSize} Yard` : 'Icon Dumpsters'}`
+      data.subject || (isNewsletter
+        ? 'New Newsletter Subscription - Icon Dumpsters'
+        : `New Quote Request - ${dumpsterSize ? `${dumpsterSize} Yard` : 'Icon Dumpsters'}`)
     );
 
     const submittedAt = new Date().toLocaleString();
@@ -62,7 +65,37 @@ export async function POST(request: NextRequest) {
         </tr>
       </table>`;
 
-    const html = `
+    const html = isNewsletter
+      ? `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>${subject}</title>
+        <style>
+          body { font-family: Arial, sans-serif; color: #111827; }
+          .container { max-width: 640px; margin: 0 auto; padding: 24px; }
+          h1 { color: #4e37a8; }
+          table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+          th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; }
+          th { background: #f3f4f6; width: 40%; }
+          .small { color: #6b7280; font-size: 12px; margin-top: 16px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1>New Newsletter Subscription</h1>
+          <p><strong>Source:</strong> ${source}</p>
+          <table>
+            <tr><th>Email</th><td><a href="mailto:${email}">${email}</a></td></tr>
+            <tr><th>Submitted At</th><td>${submittedAt}</td></tr>
+          </table>
+          <p class="small">${signature}</p>
+        </div>
+      </body>
+      </html>
+      `
+      : `
       <!DOCTYPE html>
       <html>
       <head>
@@ -99,7 +132,7 @@ export async function POST(request: NextRequest) {
         </div>
       </body>
       </html>
-    `;
+      `;
 
     // Send notification email
     const emailSent = await emailService.sendEmail({
@@ -111,8 +144,37 @@ export async function POST(request: NextRequest) {
 
     // Auto-reply to customer if email is provided
     if (email) {
-      const autoReplySubject = `We received your quote request - Icon Dumpsters`;
-      const autoReplyHtml = `
+      const autoReplySubject = isNewsletter
+        ? `Thanks for subscribing to Icon Dumpsters`
+        : `We received your quote request - Icon Dumpsters`;
+      const autoReplyHtml = isNewsletter
+        ? `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>${autoReplySubject}</title>
+          <style>
+            body { font-family: Arial, sans-serif; color: #111827; }
+            .container { max-width: 640px; margin: 0 auto; padding: 24px; }
+            h1 { color: #4e37a8; }
+            p { line-height: 1.6; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div style="text-align:center;margin-bottom:12px">
+              <img src="https://icondumpsters.com/Icon_Dumpsters_Final.png" width="96" height="96" alt="Icon Dumpsters - Utah dumpster rental" style="display:inline-block;border:0;outline:none;text-decoration:none;border-radius:12px" />
+            </div>
+            <h1>Thanks for subscribing!</h1>
+            <p>You're all set to receive dumpster rental tips, pricing updates, and local service news from Icon Dumpsters.</p>
+            <p>If you need a dumpster now, call us at <a href="tel:+18019186000" style="color:#4e37a8;text-decoration:underline">(801) 918-6000</a> and we'll get you scheduled fast.</p>
+            <p style="margin-top:16px;">${signature}</p>
+          </div>
+        </body>
+        </html>
+      `
+        : `
         <!DOCTYPE html>
         <html>
         <head>

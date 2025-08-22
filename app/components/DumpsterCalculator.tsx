@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function DumpsterCalculator() {
   const [zipCode, setZipCode] = useState('');
@@ -8,6 +8,12 @@ export default function DumpsterCalculator() {
   const [selectedDuration, setSelectedDuration] = useState('');
   const [isVeteran, setIsVeteran] = useState(false);
   const [result, setResult] = useState('');
+  const [showBookingQuestion, setShowBookingQuestion] = useState(false);
+  const [wantsBooking, setWantsBooking] = useState<boolean | null>(null);
+  const [contact, setContact] = useState('');
+  const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [contactError, setContactError] = useState('');
+  const [showCallPopup, setShowCallPopup] = useState(false);
 
   const handleCalculate = () => {
     if (!zipCode || !selectedSize || !selectedDuration) {
@@ -109,15 +115,30 @@ export default function DumpsterCalculator() {
     html += '</div>';
     
     html += '<div class="mt-4">';
-    html += '<a href="#quote-form" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
+    html += '<button id="exact-quote-btn" type="button" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
     html += 'Get Exact Quote';
-    html += '</a>';
+    html += '</button>';
     html += '</div>';
     
     html += '</div>';
     
     setResult(html);
+    // Trigger booking prompt
+    setShowBookingQuestion(true);
+    setWantsBooking(null);
+    setContact('');
+    setContactSubmitted(false);
+    setContactError('');
   };
+
+  // Attach click handler to dynamically rendered "Get Exact Quote" button
+  useEffect(() => {
+    const btn = document.getElementById('exact-quote-btn');
+    if (!btn) return;
+    const handler = () => setShowCallPopup(true);
+    btn.addEventListener('click', handler);
+    return () => btn.removeEventListener('click', handler);
+  }, [result]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -366,6 +387,78 @@ export default function DumpsterCalculator() {
             className="mt-8"
             dangerouslySetInnerHTML={{ __html: result }}
           />
+        )}
+
+        {/* Call Popup Modal */}
+        {showCallPopup && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/50" onClick={() => setShowCallPopup(false)}></div>
+            <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 w-11/12 max-w-md p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Call Us 24/7</h3>
+              <p className="text-gray-700 mb-4">Speak with an Icon expert now. We're here to help 24/7.</p>
+              <a href="tel:801-918-6000" className="block w-full text-center bg-[#4e37a8] text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-colors mb-3">Call (801) 918-6000</a>
+              <button onClick={() => setShowCallPopup(false)} className="w-full border border-gray-300 px-6 py-3 rounded-xl font-semibold text-gray-700 hover:bg-gray-50">Close</button>
+            </div>
+          </div>
+        )}
+
+        {/* Booking Prompt */}
+        {showBookingQuestion && (
+          <div className="mt-6 bg-white rounded-xl shadow border border-gray-200 p-6" id="book-now">
+            <h4 className="text-lg font-bold text-gray-900 mb-3">Would you like to book now?</h4>
+            {wantsBooking === null && (
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setWantsBooking(true)}
+                  className="bg-[#4e37a8] text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Yes, book now
+                </button>
+                <button
+                  onClick={() => setWantsBooking(false)}
+                  className="bg-gray-100 text-gray-800 px-5 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+                >
+                  Not now
+                </button>
+              </div>
+            )}
+
+            {wantsBooking === true && !contactSubmitted && (
+              <form
+                className="mt-4"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (!contact.trim()) {
+                    setContactError('Please enter your email or phone number.');
+                    return;
+                  }
+                  setContactError('');
+                  setContactSubmitted(true);
+                }}
+              >
+                <label htmlFor="contactInfo" className="block text-sm font-semibold text-gray-700 mb-2">Email or phone</label>
+                <input
+                  id="contactInfo"
+                  type="text"
+                  value={contact}
+                  onChange={(e) => setContact(e.target.value)}
+                  placeholder="you@example.com or (801) 555-1234"
+                  className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm"
+                />
+                {contactError && <p className="text-sm text-red-600 mt-2">{contactError}</p>}
+                <div className="mt-4 flex items-center gap-3">
+                  <button type="submit" className="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">Submit</button>
+                  <a href="tel:(801) 918-6000" className="text-[#4e37a8] hover:text-purple-700 font-semibold">Or call (801) 918-6000</a>
+                </div>
+              </form>
+            )}
+
+            {wantsBooking === true && contactSubmitted && (
+              <div className="mt-4 p-4 bg-purple-50 rounded-lg border border-[#4e37a8]/20">
+                <p className="text-sm text-[#4e37a8]"><strong>An Icon expert will get back to you, usually within 30 minutes.</strong> Or you can call us now at <a href="tel:(801) 918-6000" className="font-semibold">(801) 918-6000</a>.</p>
+              </div>
+            )}
+          </div>
         )}
           
           {/* How It Works Section */}

@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function PoplarGrovePage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "Rose Park",
-    "href": "/rose-park"
-  },
-  {
-    "name": "North Salt Lake",
-    "href": "/north-salt-lake"
-  },
-  {
-    "name": "Bountiful",
-    "href": "/bountiful"
-  },
-  {
-    "name": "Centerville",
-    "href": "/centerville"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="poplar-grove"
-      cityDisplayName="Poplar Grove"
-      nearbyCities={nearbyCities}
-      historicalInfo="Poplar Grove, a historic neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Poplar Grove's community growth."
-      landmarks="Poplar Grove City Hall, Poplar Grove Park, Jordan River"
-      localProjects="Supporting Poplar Grove's community development and residential projects"
-      neighborhoods="Poplar Grove Central, Poplar Grove East, Poplar Grove West"
-      localBusinesses="Preferred provider for Poplar Grove's community and residential projects"
+    <CityPageTemplate
+      city="Poplar Grove, UT"
+      neighborhoods={["Poplar Grove Central", "Glendale Border", "Navajo", "Jordan River"]}
+      nearbyLinks={[
+        { label: 'Glendale', href: '/glendale' },
+        { label: 'Salt Lake City', href: '/salt-lake-city' },
+        { label: 'Fairpark', href: '/fairpark' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpsterSmallBanner.jpeg', fallback: '/images/dumpsterSmallBanner.webp' },
+        { src: '/images/dumpster500x200-1.jpeg', fallback: '/images/dumpster500x200-1.webp' }
+      ]}
     />
   );
 }

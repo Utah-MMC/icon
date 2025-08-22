@@ -4,7 +4,7 @@ import React from 'react';
 import Analytics from '../components/Analytics';
 import ArticleSchema from '../components/ArticleSchema';
 import FAQSchema from '../components/FAQSchema';
-import DumpsterCalculator from '../components/DumpsterCalculator';
+import CalculatorCTA from '../components/CalculatorCTA';
 import ImageWithFallback from '../components/ImageWithFallback';
 
 export default function DumpsterRentalWestValleyPage() {
@@ -105,13 +105,8 @@ export default function DumpsterRentalWestValleyPage() {
             </p>
           </section>
 
-          {/* Dumpster Calculator */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Calculate Your West Valley City Dumpster Needs
-            </h2>
-            <DumpsterCalculator />
-          </section>
+          {/* Calculator CTA */}
+          <CalculatorCTA className="mb-12" />
 
           {/* Pricing Section */}
           <section className="mb-12">

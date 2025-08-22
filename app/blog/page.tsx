@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import NewsletterSubscription from "../components/NewsletterSubscription";
+import InternalLinks from "../components/InternalLinks";
 import BlogSearch from "../components/BlogSearch";
 
 
@@ -263,6 +264,29 @@ const blogPosts = [
 
 export default function Blog() {
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+  
+  // Randomized site-defaults for missing images
+  const randomDefaults = useMemo(
+    () => [
+      "/images/dumpsterSmallBanner3.jpeg",
+      "/images/dumpsterSmallBanner4.jpeg",
+      "/images/IMG_0350.jpg",
+      "/images/dumpster500x500-2.jpeg",
+      "/images/dumpsterWithTruck.jpeg"
+    ],
+    []
+  );
+  const pickRandomDefault = () => randomDefaults[Math.floor(Math.random() * randomDefaults.length)];
+  const varietyImages = useMemo(() => {
+    // Shuffle to keep variety stable per session
+    const pool = [...randomDefaults];
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    return pool;
+  }, [randomDefaults]);
+  const getVarietyImage = (index: number) => varietyImages[index % varietyImages.length];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -315,12 +339,12 @@ export default function Blog() {
             {filteredPosts.find(post => post.featured) && (
               <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-12 hover:shadow-xl transition-all duration-300">
                 <div className="relative">
-                  <div className="h-96 overflow-hidden relative">
+                  <div className="h-96 overflow-hidden relative bg-white flex items-center justify-center">
                     <ImageWithFallback 
-                      src={filteredPosts.find(post => post.featured)?.image || "/images/IMG_0350.jpg"} 
+                      src={filteredPosts.find(post => post.featured)?.image || pickRandomDefault()} 
                       alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
-                      className="hover:scale-105 transition-transform duration-500" 
-                      fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || "/images/dumpsters.webp"}
+                      className="object-contain hover:scale-105 transition-transform duration-500" 
+                      fallbackSrc={filteredPosts.find(post => post.featured)?.fallbackImage || pickRandomDefault()}
                       fill={true}
                       priority={true}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
@@ -371,18 +395,18 @@ export default function Blog() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {filteredPosts
                 .filter(post => !post.featured)
-                .map((post) => (
+                .map((post, idx) => (
                   <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
-                                         <div className="h-48 overflow-hidden relative">
-                       <ImageWithFallback 
-                         src={post.image} 
-                         alt={post.title} 
-                         className="hover:scale-105 transition-transform duration-500" 
-                         fallbackSrc={post.fallbackImage}
-                         fill={true}
-                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                       />
-                     </div>
+                    <div className="h-48 overflow-hidden relative bg-white flex items-center justify-center">
+                      <ImageWithFallback 
+                        src={getVarietyImage(idx)} 
+                        alt={post.title} 
+                        className="object-contain hover:scale-105 transition-transform duration-500" 
+                        fallbackSrc={getVarietyImage(idx + 1)}
+                        fill={true}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
                     
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3">
@@ -419,24 +443,24 @@ export default function Blog() {
                 ))}
             </div>
 
-                         {/* No Results Message */}
-             {filteredPosts.length === 0 && (
-               <div className="text-center py-12">
-                 <div className="text-gray-400 mb-4">
-                   <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                   </svg>
-                 </div>
-                 <h3 className="text-xl font-semibold text-gray-900 mb-2">No articles found</h3>
-                 <p className="text-gray-600 mb-4">Try adjusting your search terms or browse all articles below.</p>
-                 <button 
-                   onClick={() => setFilteredPosts(blogPosts)}
-                   className="bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold"
-                 >
-                   View All Articles
-                 </button>
-               </div>
-             )}
+            {/* No Results Message */}
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-gray-400 mb-4">
+                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No articles found</h3>
+                <p className="text-gray-600 mb-4">Try adjusting your search terms or browse all articles below.</p>
+                <button 
+                  onClick={() => setFilteredPosts(blogPosts)}
+                  className="bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+                >
+                  View All Articles
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Sidebar */}
@@ -449,20 +473,20 @@ export default function Blog() {
                 </svg>
                 Categories
               </h3>
-                             <div className="space-y-2">
-                 {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
-                   <button
-                     key={category}
-                     onClick={() => {
-                       const filtered = blogPosts.filter(post => post.category === category);
-                       setFilteredPosts(filtered);
-                     }}
-                     className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
-                   >
-                     {category}
-                   </button>
-                 ))}
-               </div>
+              <div className="space-y-2">
+                {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => {
+                      const filtered = blogPosts.filter(post => post.category === category);
+                      setFilteredPosts(filtered);
+                    }}
+                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Recent Posts */}
@@ -476,16 +500,16 @@ export default function Blog() {
               <div className="space-y-4">
                 
                 <Link href="/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
-                                     <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
-                     <ImageWithFallback 
-                       src="/images/dumpsterSmallBanner2.jpeg" 
-                       alt="Home Renovation Waste Disposal Guide - Utah Dumpster Rental for Renovation Projects" 
-                       className="object-cover" 
-                       fallbackSrc="/images/dumpsterSmallBanner2.webp"
-                       fill={true}
-                       sizes="64px"
-                     />
-                   </div>
+                  <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
+                    <ImageWithFallback 
+                      src="/images/dumpsterSmallBanner2.jpeg" 
+                      alt="Home Renovation Waste Disposal Guide - Utah Dumpster Rental for Renovation Projects" 
+                      className="object-cover" 
+                      fallbackSrc="/images/dumpsterSmallBanner2.webp"
+                      fill={true}
+                      sizes="64px"
+                    />
+                  </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-[#4e37a8] transition-colors">
                       Home Renovation Waste Disposal: A Complete Guide
@@ -495,16 +519,16 @@ export default function Blog() {
                 </Link>
                 
                 <Link href="/commercial-dumpster-rental-business-solutions" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
-                                     <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
-                     <ImageWithFallback 
-                       src="/images/dumpsterSmallBanner.jpeg" 
-                       alt="Commercial Dumpster Rental Business Solutions - Professional Utah Dumpster Services" 
-                       className="object-cover" 
-                       fallbackSrc="/images/dumpsterSmallBanner.webp"
-                       fill={true}
-                       sizes="64px"
-                     />
-                   </div>
+                  <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
+                    <ImageWithFallback 
+                      src="/images/dumpsterSmallBanner.jpeg" 
+                      alt="Commercial Dumpster Rental Business Solutions - Professional Utah Dumpster Services" 
+                      className="object-cover" 
+                      fallbackSrc="/images/dumpsterSmallBanner.webp"
+                      fill={true}
+                      sizes="64px"
+                    />
+                  </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-[#4e37a8] transition-colors">
                       Commercial Dumpster Rental: Business Solutions
@@ -559,6 +583,9 @@ export default function Blog() {
           </aside>
         </div>
       </div>
+    </div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <InternalLinks />
     </div>
   );
 }

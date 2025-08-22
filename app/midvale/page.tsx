@@ -42,42 +42,23 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function MidvalePage() {
-  const nearbyCities = [
-  {
-    "name": "Murray",
-    "href": "/murray"
-  },
-  {
-    "name": "Sandy",
-    "href": "/sandy"
-  },
-  {
-    "name": "West Jordan",
-    "href": "/west-jordan"
-  },
-  {
-    "name": "Taylorsville",
-    "href": "/taylorsville"
-  },
-  {
-    "name": "Cottonwood Heights",
-    "href": "/cottonwood-heights"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="midvale"
-      cityDisplayName="Midvale"
-      nearbyCities={nearbyCities}
-      historicalInfo="Midvale, centrally located in the Salt Lake Valley, is known for its convenient location and growing business community. Our dumpster services support Midvale's development projects."
-      landmarks="Midvale City Hall, Midvale Park, Historic Midvale Main Street"
-      localProjects="Supporting Midvale's Main Street revitalization and business development"
-      neighborhoods="Midvale Central, Midvale East, Midvale West"
-      localBusinesses="Preferred provider for Midvale's business and residential projects"
+    <CityPageTemplate
+      city="Midvale, UT"
+      neighborhoods={["Midvale Central", "Fort Union", "Union Park", "Bingham Junction"]}
+      nearbyLinks={[
+        { label: 'Murray', href: '/murray' },
+        { label: 'Sandy', href: '/sandy' },
+        { label: 'West Jordan', href: '/west-jordan' },
+        { label: 'Taylorsville', href: '/taylorsville' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpster500x500-2.jpeg', fallback: '/images/dumpster500x500-2.webp' },
+        { src: '/images/dumpsterSmallBanner6.webp', fallback: '/images/dumpsterSmallBanner6.webp' }
+      ]}
     />
   );
 }

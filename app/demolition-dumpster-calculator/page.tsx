@@ -146,7 +146,7 @@ export default function DemolitionDumpsterCalculator() {
           </section>
 
           {/* Main Content */}
-          <div className="prose prose-lg max-w-none">
+          <div className="prose max-w-none">
             <h2>Understanding Demolition Dumpster Requirements</h2>
             <p>
               Demolition projects require careful planning, especially when it comes to waste disposal. Unlike regular construction debris, 

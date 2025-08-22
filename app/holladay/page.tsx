@@ -42,8 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import HolladayClient from './HolladayClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function HolladayPage() {
-  return <HolladayClient />;
+  return (
+    <CityPageTemplate
+      city="Holladay, UT"
+      neighborhoods={["Olympus Hills", "Cottonwood", "Holladay Central", "Big Cottonwood"]}
+      nearbyLinks={[
+        { label: 'Millcreek', href: '/millcreek' },
+        { label: 'Murray', href: '/murray' },
+        { label: 'Cottonwood Heights', href: '/cottonwood-heights' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpsterSmallBanner2.jpeg', fallback: '/images/dumpsterSmallBanner2.webp' },
+        { src: '/images/IMG_0336.jpg', fallback: '/images/dumpsters.webp' }
+      ]}
+    />
+  );
 }

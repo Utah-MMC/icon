@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function RoseParkPage() {
-  const nearbyCities = [
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  },
-  {
-    "name": "North Salt Lake",
-    "href": "/north-salt-lake"
-  },
-  {
-    "name": "Bountiful",
-    "href": "/bountiful"
-  },
-  {
-    "name": "Centerville",
-    "href": "/centerville"
-  },
-  {
-    "name": "Farmington",
-    "href": "/farmington"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="rose-park"
-      cityDisplayName="Rose Park"
-      nearbyCities={nearbyCities}
-      historicalInfo="Rose Park, a diverse neighborhood in Salt Lake City, offers a strong sense of community and convenient access to downtown. Our dumpster services support Rose Park's community growth."
-      landmarks="Rose Park City Hall, Rose Park Park, Jordan River"
-      localProjects="Supporting Rose Park's community development and residential projects"
-      neighborhoods="Rose Park Central, Rose Park East, Rose Park West"
-      localBusinesses="Preferred provider for Rose Park's community and residential projects"
+    <CityPageTemplate
+      city="Rose Park, UT"
+      neighborhoods={["Rose Park Central", "Jordan River", "Fairpark Border", "North Temple"]}
+      nearbyLinks={[
+        { label: 'Salt Lake City', href: '/salt-lake-city' },
+        { label: 'North Salt Lake', href: '/north-salt-lake' },
+        { label: 'Bountiful', href: '/bountiful' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpsterSmallBanner3.jpeg', fallback: '/images/dumpsterSmallBanner3.webp' },
+        { src: '/images/dumpster500x500-2.jpeg', fallback: '/images/dumpster500x500-2.webp' }
+      ]}
     />
   );
 }

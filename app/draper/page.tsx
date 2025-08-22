@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import DumpsterCalculator from '../components/DumpsterCalculator';
+import CalculatorCTA from '../components/CalculatorCTA';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -55,9 +55,9 @@ export default function DraperPage() {
           Professional dumpster rental services in Draper, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
         </p>
 
-        {/* Dumpster Calculator Section - Moved to Top */}
+        {/* Calculator CTA */}
         <div id="pricing" className="mb-12">
-          <DumpsterCalculator />
+          <CalculatorCTA />
         </div>
         
         <div className="bg-gray-50 p-8 rounded-lg mb-8">

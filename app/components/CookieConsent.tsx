@@ -9,7 +9,7 @@ type ConsentPreferences = {
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
-  const [prefs, setPrefs] = useState<ConsentPreferences>({ analytics: false, ads: false });
+  const [prefs, setPrefs] = useState<ConsentPreferences>({ analytics: true, ads: true });
   const storageKey = 'cookie-consent-preferences-v1';
 
   useEffect(() => {

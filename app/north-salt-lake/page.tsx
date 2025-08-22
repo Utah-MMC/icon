@@ -42,42 +42,22 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageClient from '../components/CityPageClient';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export default function NorthSaltLakePage() {
-  const nearbyCities = [
-  {
-    "name": "Bountiful",
-    "href": "/bountiful"
-  },
-  {
-    "name": "Centerville",
-    "href": "/centerville"
-  },
-  {
-    "name": "Farmington",
-    "href": "/farmington"
-  },
-  {
-    "name": "Woods Cross",
-    "href": "/woods-cross"
-  },
-  {
-    "name": "Salt Lake City",
-    "href": "/salt-lake-city"
-  }
-];
-  
   return (
-    <CityPageClient
-      cityName="north-salt-lake"
-      cityDisplayName="North Salt Lake"
-      nearbyCities={nearbyCities}
-      historicalInfo="North Salt Lake, located along the Great Salt Lake, offers beautiful lake views and convenient access to downtown. Our dumpster services support North Salt Lake's lakeside community."
-      landmarks="Great Salt Lake, North Salt Lake City Hall, North Salt Lake Park"
-      localProjects="Supporting North Salt Lake's lakeside development and residential projects"
-      neighborhoods="North Salt Lake Central, North Salt Lake East, North Salt Lake West"
-      localBusinesses="Trusted by North Salt Lake's lakeside and residential developers"
+    <CityPageTemplate
+      city="North Salt Lake, UT"
+      neighborhoods={["Eaglewood", "Foxboro", "Downtown NSL", "Hatch Park"]}
+      nearbyLinks={[
+        { label: 'Bountiful', href: '/bountiful' },
+        { label: 'Woods Cross', href: '/woods-cross' },
+        { label: 'Salt Lake City', href: '/salt-lake-city' }
+      ]}
+      heroImages={[
+        { src: '/images/dumpster500x200-2.jpeg', fallback: '/images/dumpster500x200-2.webp' },
+        { src: '/images/dumpsters.jpeg', fallback: '/images/dumpsters.webp' }
+      ]}
     />
   );
 }
