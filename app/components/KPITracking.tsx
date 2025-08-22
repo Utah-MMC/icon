@@ -88,6 +88,14 @@ export default function KPITracking() {
           });
         }
 
+        // Track newsletter subscriptions as quote-equivalent leads
+        const newsletterForm = document.querySelector('#newsletter-form, form[action*="/api/lead"][data-type="newsletter"]');
+        if (newsletterForm) {
+          newsletterForm.addEventListener('submit', () => {
+            this.trackQuoteRequest();
+          });
+        }
+
         // Track phone number clicks
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         phoneLinks.forEach(link => {

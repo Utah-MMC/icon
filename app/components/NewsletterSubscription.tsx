@@ -67,7 +67,7 @@ export default function NewsletterSubscription({ className = "" }: NewsletterSub
         </div>
       )}
       
-      <form onSubmit={handleSubscribe} className="space-y-3">
+      <form id="newsletter-form" onSubmit={handleSubscribe} className="space-y-3">
         <input 
           type="email" 
           value={email}
