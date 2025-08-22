@@ -1,31 +1,4 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-
-export const metadata: Metadata = {
-  title: "Bountiful Dumpster Rental - Fast Service in Bountiful, UT | Icon Dumpsters",
-  description: "Reliable dumpster rental in Bountiful, Utah. Same-day delivery, transparent pricing, and friendly local service. 15-30 yard roll-off dumpsters.",
-  alternates: { canonical: '/bountiful' }
-};
-
-export default function BountifulPage() {
-  return (
-    <CityPageTemplate
-      city="Bountiful, UT"
-      neighborhoods={["Downtown Bountiful", "Val Verda", "Bountiful Heights", "Orchard"]}
-      nearbyLinks={[
-        { label: 'North Salt Lake', href: '/north-salt-lake' },
-        { label: 'Centerville', href: '/centerville' },
-        { label: 'Salt Lake City', href: '/salt-lake-city' }
-      ]}
-      heroImages={[
-        { src: '/images/dumpster500x500-1.jpeg', fallback: '/images/dumpster500x500-1.webp' },
-        { src: '/images/dumpsterSmallBanner3.jpeg', fallback: '/images/dumpsterSmallBanner3.webp' }
-      ]}
-    />
-  );
-}
-
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Bountiful Dumpster Rental - Professional Services in Bountiful, UT | Icon Dumpsters",

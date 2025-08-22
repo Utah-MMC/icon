@@ -1,31 +1,4 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-
-export const metadata: Metadata = {
-  title: "West Valley City Dumpster Rental - Fast Service in WVC, UT | Icon Dumpsters",
-  description: "Reliable dumpster rental in West Valley City, Utah. Same-day delivery, transparent pricing, and friendly local service. 15-30 yard roll-off dumpsters.",
-  alternates: { canonical: '/west-valley-city' }
-};
-
-export default function WestValleyCityPage() {
-  return (
-    <CityPageTemplate
-      city="West Valley City, UT"
-      neighborhoods={["Hunter", "Granger", "Chesterfield", "Redwood"]}
-      nearbyLinks={[
-        { label: 'Taylorsville', href: '/taylorsville' },
-        { label: 'West Jordan', href: '/west-jordan' },
-        { label: 'Salt Lake City', href: '/salt-lake-city' }
-      ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner3.jpeg', fallback: '/images/dumpsterSmallBanner3.webp' },
-        { src: '/images/dumpsters.jpeg', fallback: '/images/dumpsters.webp' }
-      ]}
-    />
-  );
-}
-
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "West Valley City Dumpster Rental - Professional Services in West Valley City, UT | Icon Dumpsters",

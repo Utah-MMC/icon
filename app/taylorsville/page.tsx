@@ -1,31 +1,4 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-
-export const metadata: Metadata = {
-  title: "Taylorsville Dumpster Rental - Fast Service in Taylorsville, UT | Icon Dumpsters",
-  description: "Reliable dumpster rental in Taylorsville, Utah. Same-day delivery, transparent pricing, and friendly local service. 15-30 yard roll-off dumpsters.",
-  alternates: { canonical: '/taylorsville' }
-};
-
-export default function TaylorsvillePage() {
-  return (
-    <CityPageTemplate
-      city="Taylorsville, UT"
-      neighborhoods={["Taylorsville Central", "Kearns Border", "Vista Park", "Valley Regional"]}
-      nearbyLinks={[
-        { label: 'West Valley City', href: '/west-valley-city' },
-        { label: 'Murray', href: '/murray' },
-        { label: 'West Jordan', href: '/west-jordan' }
-      ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner4.jpeg', fallback: '/images/dumpsterSmallBanner4.webp' },
-        { src: '/images/dumpster500x200-3.jpeg', fallback: '/images/dumpster500x200-3.webp' }
-      ]}
-    />
-  );
-}
-
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Taylorsville Dumpster Rental - Professional Services in Taylorsville, UT | Icon Dumpsters",
