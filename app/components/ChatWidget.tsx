@@ -12,7 +12,7 @@ type ChatMessage = {
   quickActions?: Array<{ label: string; action: string }>;
 };
 
-type ConversationStage = 'zip' | 'project' | 'cta';
+type ConversationStage = 'zip' | 'size' | 'project' | 'cta';
 type AgentStatus = { online: boolean; queueSize: number; etaMinutes: number };
 
 export default function ChatWidget() {
@@ -41,6 +41,7 @@ export default function ChatWidget() {
   const lastSendAtRef = useRef<number>(0);
   const [agentStatus, setAgentStatus] = useState<AgentStatus>({ online: true, queueSize: 0, etaMinutes: 2 });
   const [agentMode, setAgentMode] = useState<'bot' | 'waiting'>('bot');
+  const lastQuoteRef = useRef<{ zip: string; city: string; size: '15' | '20' | '30'; days: number; estimate: number } | null>(null);
 
   function handleQuickAction(action: string) {
     if (action === 'book_now') {
@@ -147,6 +148,37 @@ export default function ChatWidget() {
       listItems = [];
     }
     return <>{elements}</>;
+  }
+
+  // Light humanization layer to soften tone
+  function humanizeText(raw: string): string {
+    try {
+      const trimmed = raw.trim();
+      // Skip if already starts with a friendly opener or heading/bullets
+      if (/^(hi|hey|hello|perfect|great|nice|awesome|sure|absolutely|got it|sounds good)/i.test(trimmed) || /^[—•]/.test(trimmed)) {
+        return raw;
+      }
+      const openers = [
+        'Got it —',
+        'Sounds good —',
+        'Absolutely —',
+        'No problem —',
+        'Happy to help —',
+      ];
+      const opener = openers[Math.floor(Math.random() * openers.length)];
+      let t = `${opener} ${trimmed}`;
+      // Small contractions for a natural voice
+      t = t.replace(/\bdo not\b/gi, "don't")
+           .replace(/\bcan not\b/gi, "can't")
+           .replace(/\bwe will\b/gi, "we'll")
+           .replace(/\bwe are\b/gi, "we're")
+           .replace(/\byou are\b/gi, "you're")
+           .replace(/\bit is\b/gi, "it's")
+           .replace(/\bthat is\b/gi, "that's");
+      return t;
+    } catch {
+      return raw;
+    }
   }
 
   function clearLeadTimer() {
@@ -370,6 +402,21 @@ export default function ChatWidget() {
     if (zipGlobalMatch) {
       const fiveZip = zipGlobalMatch[1];
       setLead((prev) => ({ ...prev, zipCode: fiveZip }));
+      // If we already presented a booking summary, prefer concise CTA instead of repeating pricing
+      if (lastQuoteRef.current) {
+        const cityCta = zipToCity[fiveZip] || `ZIP ${fiveZip}`;
+        const q = lastQuoteRef.current;
+        const ctaMsg: ChatMessage = {
+          role: 'assistant',
+          content: humanizeText(`You\'re all set — ${cityCta}. To book your ${q.size} yd for ${q.days} day${q.days>1?'s':''} at $${q.estimate}, you can call ${chatKnowledge.contact.phone}, email ${chatKnowledge.contact.email}, or tap Talk to agent and we\'ll take it from here.`),
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, ctaMsg]);
+        setStage('cta');
+        setQuickReplies(['Talk to agent', 'quote']);
+        setQuickLinks([{ label: 'Call (801) 918-6000', url: 'tel:+18019186000' }, { label: 'Email us', url: 'mailto:icondumpsters@gmail.com' }]);
+        return;
+      }
       // If we already collected a quote (size + days), finalize and move to booking
       if (pendingQuote && pendingQuote.size && pendingQuote.days) {
         const size = pendingQuote.size;
@@ -385,9 +432,10 @@ export default function ChatWidget() {
         const cityFinal = zipToCity[fiveZip] || `ZIP ${fiveZip}`;
         const finalMsg: ChatMessage = {
           role: 'assistant',
-          content: `Perfect — ${cityFinal}. We serve that area.\n\nBooking summary:\n• ${size} yd for ${days} day${days>1?'s':''}\n• Estimated price: $${estimate}\n• Weight billed at $${chatKnowledge.pricing.weightPerTon}/ton after service\n\nReady to book now? Add your contact info and we’ll call you right back to finalize.`,
+          content: humanizeText(`Perfect — ${cityFinal}. We serve that area.\n\nBooking summary:\n• ${size} yd for ${days} day${days>1?'s':''}\n• Estimated price: $${estimate}\n• Weight billed at $${chatKnowledge.pricing.weightPerTon}/ton after service\n\nTo book now at this price, call ${chatKnowledge.contact.phone}, email ${chatKnowledge.contact.email}, or tap Talk to agent. If you prefer, add your contact info here and we\’ll call you right back.`),
           timestamp: new Date().toISOString(),
         };
+        lastQuoteRef.current = { zip: fiveZip, city: cityFinal, size, days, estimate };
         setMessages((prev) => [...prev, { ...finalMsg, quickActions: [{ label: 'Book Now', action: 'book_now' }] }]);
         setShowLeadForm(true);
         scheduleLeadForm(8000);
@@ -421,12 +469,12 @@ export default function ChatWidget() {
       const botMsg: ChatMessage = {
         role: 'assistant',
         content:
-          `${opener}\n\nHere\'s what we\'re looking at locally (3–7 days):\n• 15 yard — $${bundles['15'].bundle3to7}\n• 20 yard — $${bundles['20'].bundle3to7}\n• 30 yard — $${bundles['30'].bundle3to7}\n1‑Day deals: $${bundles['15'].oneDay}/$${bundles['20'].oneDay}/$${bundles['30'].oneDay}   •   30‑Day: $${bundles['15'].thirtyDay}/$${bundles['20'].thirtyDay}/$${bundles['30'].thirtyDay}\nWeight billed after pickup at $${chatKnowledge.pricing.weightPerTon}/ton.\n\nIf you tell me the size (15/20/30) or just say your days (1, 3, 7, 14, 30), I\'ll quote it right now.`,
+          humanizeText(`${opener}\n\nHere\'s what we\'re looking at locally (3–7 days):\n• 15 yard — $${bundles['15'].bundle3to7}\n• 20 yard — $${bundles['20'].bundle3to7}\n• 30 yard — $${bundles['30'].bundle3to7}\n1‑Day deals: $${bundles['15'].oneDay}/$${bundles['20'].oneDay}/$${bundles['30'].oneDay}   •   30‑Day: $${bundles['15'].thirtyDay}/$${bundles['20'].thirtyDay}/$${bundles['30'].thirtyDay}\nWeight billed after pickup at $${chatKnowledge.pricing.weightPerTon}/ton.\n\nWhat size do you prefer — 15, 20, or 30 yard?`),
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, botMsg]);
-      setStage('project');
-      setQuickReplies(['Home renovation', 'Construction', 'Landscaping', 'Concrete', 'Demolition', 'Other']);
+      setStage('size');
+      setQuickReplies(['15', '20', '30']);
       setQuickLinks([{ label: 'Open Calculator', url: '/dumpster-calculator' }]);
       try { (window as any).dataLayer?.push({ event: 'chat_flow_stage', stage: 'project' }); } catch {}
       return;
@@ -506,7 +554,7 @@ export default function ChatWidget() {
         setStage('zip');
         return;
       }
-      const m: ChatMessage = { role: 'assistant', content: 'Specialized options:\n• 10 yd Clean Dirt — flat‑rate for clean dirt/soil only\n• 10 yd Mixed — heavy mixed materials (priced accordingly)\n• 12 yd Concrete — flat‑rate for clean concrete/asphalt\n\nTell me which one and how many days (1, 3, 7, 14, 30).', timestamp: new Date().toISOString() };
+      const m: ChatMessage = { role: 'assistant', content: humanizeText('Specialized options:\n• 10 yd Clean Dirt — flat‑rate for clean dirt/soil only\n• 10 yd Mixed — heavy mixed materials (priced accordingly)\n• 12 yd Concrete — flat‑rate for clean concrete/asphalt\n\nTell me which one and how many days (1, 3, 7, 14, 30).'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, m]);
       return;
     }
@@ -539,7 +587,7 @@ export default function ChatWidget() {
         return;
       }
       // If they typed something else, gently reprompt
-      const reprompt: ChatMessage = { role: 'assistant', content: 'How many days did you need? You can say 1, 3, 7, 14, or 30 days.', timestamp: new Date().toISOString() };
+      const reprompt: ChatMessage = { role: 'assistant', content: humanizeText('How many days did you need? You can say 1, 3, 7, 14, or 30 days.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, reprompt]);
       return;
     }
@@ -614,8 +662,25 @@ export default function ChatWidget() {
         try { (window as any).dataLayer?.push({ event: 'chat_flow_stage', stage: 'project' }); } catch {}
         return;
       }
-      const botMsg: ChatMessage = { role: 'assistant', content: 'Could you share your 5‑digit zip code? That way I can give you the exact pricing for your area.', timestamp: new Date().toISOString() };
+      const botMsg: ChatMessage = { role: 'assistant', content: humanizeText('Could you share your 5‑digit zip code? That way I can give you the exact pricing for your area.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, botMsg]);
+      return;
+    }
+
+    if (stage === 'size') {
+      // Expect a size selection, then ask project type
+      const sizeMatch = /(15|20|30)(?:\s*-?\s*(yd|yard)s?)?/i.exec(lower);
+      if (sizeMatch) {
+        const size = sizeMatch[1] as '15'|'20'|'30';
+        setLead((prev) => ({ ...prev, dumpsterSize: size }));
+        const sizeConfirm: ChatMessage = { role: 'assistant', content: `Great — ${size} yard. What type of job is this?\n\nOptions:\n• Home renovation\n• Construction/cleanout\n• Landscaping/yard\n• Concrete/asphalt\n• Demolition\n• Roofing`, timestamp: new Date().toISOString() };
+        setMessages((prev) => [...prev, sizeConfirm]);
+        setStage('project');
+        setQuickReplies(['Home renovation', 'Construction', 'Landscaping', 'Concrete', 'Demolition', 'Roofing']);
+        return;
+      }
+      const reprompt: ChatMessage = { role: 'assistant', content: humanizeText('Which size do you prefer — 15, 20, or 30 yard?'), timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, reprompt]);
       return;
     }
 
@@ -701,7 +766,7 @@ export default function ChatWidget() {
         return;
       }
 
-      const prompt: ChatMessage = { role: 'assistant', content: 'No worries! Just let me know what kind of project you\'re working on: home renovation, construction/cleanout, landscaping, concrete/asphalt, demolition, or roofing.', timestamp: new Date().toISOString() };
+      const prompt: ChatMessage = { role: 'assistant', content: humanizeText('No worries! Just let me know what kind of project you\'re working on: home renovation, construction/cleanout, landscaping, concrete/asphalt, demolition, or roofing.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, prompt]);
       return;
     }
@@ -709,7 +774,7 @@ export default function ChatWidget() {
     // CTA stage: if they say quote or yes, show form; otherwise fallback to server reply
     if (stage === 'cta' && /(quote|yes|book|schedule|call|estimate)/i.test(lower)) {
       setShowLeadForm(true);
-      const prompt: ChatMessage = { role: 'assistant', content: 'Great — add your name and phone, and we’ll call you within 30 minutes. Prefer immediate help? Call (801) 918-6000.', timestamp: new Date().toISOString() };
+      const prompt: ChatMessage = { role: 'assistant', content: humanizeText('Great — add your name and phone, and we’ll call you within 30 minutes. Prefer immediate help? Call (801) 918-6000.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, prompt]);
       try { (window as any).dataLayer?.push({ event: 'chat_flow_stage', stage: 'cta_form' }); } catch {}
       return;
@@ -723,17 +788,17 @@ export default function ChatWidget() {
         return;
       }
       if (/price|pricing|cost|time|day|timeline|period/i.test(lower)) {
-        const m: ChatMessage = { role: 'assistant', content: 'Here\'s the deal on pricing and timeframes:\n• 1‑day special (saves you money)\n• 3–7 day standard bundles\n• 14‑ and 30‑day options\n• Weight charges: $55/ton\n\nWant an exact estimate? Check out our calculator: /dumpster-calculator', timestamp: new Date().toISOString() };
+        const m: ChatMessage = { role: 'assistant', content: humanizeText('Here\'s the deal on pricing and timeframes:\n• 1‑day special (saves you money)\n• 3–7 day standard bundles\n• 14‑ and 30‑day options\n• Weight charges: $55/ton\n\nWant an exact estimate? Check out our calculator: /dumpster-calculator'), timestamp: new Date().toISOString() };
         setMessages((prev) => [...prev, m]);
         return;
       }
       if (/bill|billing|charge|payment|card/i.test(lower)) {
-        const m: ChatMessage = { role: 'assistant', content: 'Here\'s how billing works:\n• We charge the base rental to your card when we drop it off\n• After pickup, we weigh the load at the disposal facility\n• Then we bill your card for the actual weight at $55/ton\n• You\'ll get a final receipt with the weight breakdown', timestamp: new Date().toISOString() };
+        const m: ChatMessage = { role: 'assistant', content: humanizeText('Here\'s how billing works:\n• We charge the base rental to your card when we drop it off\n• After pickup, we weigh the load at the disposal facility\n• Then we bill your card for the actual weight at $55/ton\n• You\'ll get a final receipt with the weight breakdown'), timestamp: new Date().toISOString() };
         setMessages((prev) => [...prev, m]);
         return;
       }
       if (/weight|ton|limit/i.test(lower)) {
-        const m: ChatMessage = { role: 'assistant', content: 'Weight billing: We do not include free tons. We drop the dumpster off empty, and after pickup the load is weighed at the disposal facility and billed at $55/ton.\n\nTypical project weights (not included, just estimates):\n• 15 yd ≈ 1.5–2 tons\n• 20 yd ≈ 2–3 tons\n• 30 yd ≈ 3–4 tons', timestamp: new Date().toISOString() };
+        const m: ChatMessage = { role: 'assistant', content: humanizeText('Weight billing: We do not include free tons. We drop the dumpster off empty, and after pickup the load is weighed at the disposal facility and billed at $55/ton.\n\nTypical project weights (not included, just estimates):\n• 15 yd ≈ 1.5–2 tons\n• 20 yd ≈ 2–3 tons\n• 30 yd ≈ 3–4 tons'), timestamp: new Date().toISOString() };
         setMessages((prev) => [...prev, m]);
         return;
       }
@@ -749,7 +814,7 @@ export default function ChatWidget() {
       });
       const data = await res.json();
       const replyText: string = data?.reply || "Got it! Want me to get you a quick quote? I just need your name, phone, zip, and what size you're thinking.";
-      const botMsg: ChatMessage = { role: 'assistant', content: replyText, timestamp: new Date().toISOString() };
+      const botMsg: ChatMessage = { role: 'assistant', content: humanizeText(replyText), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, botMsg]);
       try { (window as any).dataLayer?.push({ event: 'chat_message', role: 'assistant' }); } catch {}
       if (/quote|price|estimate|book|schedule/i.test(userText)) {
@@ -760,7 +825,7 @@ export default function ChatWidget() {
         setPendingQuote({});
       }
     } catch {
-      const botMsg: ChatMessage = { role: 'assistant', content: 'Oops, I\'m having a moment here. Mind trying that again? Or just give us a call at (801) 918-6000 and we\'ll get you sorted out.', timestamp: new Date().toISOString() };
+      const botMsg: ChatMessage = { role: 'assistant', content: humanizeText('Oops, I\'m having a moment here. Mind trying that again? Or just give us a call at (801) 918-6000 and we\'ll get you sorted out.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, botMsg]);
     } finally {
       setIsSubmitting(false);
@@ -1017,7 +1082,15 @@ export default function ChatWidget() {
                 onKeyDown={(e) => { if (e.key === 'Enter') sendMessage(); if (e.key === 'Escape') setIsOpen(false); }}
                 ref={inputRef}
                 className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4e37a8]"
-                placeholder={stage === 'zip' ? 'Enter your 5‑digit zip code' : stage === 'project' ? 'Type your project type (e.g., home renovation)' : 'Ask about pricing, timeframes, or say quote'}
+                placeholder={
+                  stage === 'zip'
+                    ? 'Enter your 5‑digit zip code'
+                    : stage === 'size'
+                    ? 'Choose a size: 15, 20, or 30'
+                    : stage === 'project'
+                    ? 'Type your project (home, construction, landscaping, concrete, demo, roofing)'
+                    : 'Ask about pricing, timeframes, or say quote'
+                }
               />
               <button
                 onClick={sendMessage}
