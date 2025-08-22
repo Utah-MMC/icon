@@ -13,6 +13,7 @@ type ChatMessage = {
 };
 
 type ConversationStage = 'zip' | 'project' | 'cta';
+type AgentStatus = { online: boolean; queueSize: number; etaMinutes: number };
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,8 @@ export default function ChatWidget() {
   const pageUrl = useMemo(() => (typeof window !== 'undefined' ? window.location.href : ''), []);
   const scrollRef = useRef<HTMLDivElement>(null);
   const lastMsgRef = useRef<HTMLDivElement | null>(null);
+  const openBtnRef = useRef<HTMLButtonElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [stage, setStage] = useState<ConversationStage>('zip');
   const [pendingQuote, setPendingQuote] = useState<{ size?: '15' | '20' | '30'; days?: number } | null>(null);
   const [quickReplies, setQuickReplies] = useState<string[]>([]);
@@ -34,6 +37,10 @@ export default function ChatWidget() {
   const logoSrc = '/Icon_Dumpsters_Final.png';
   const assistantCount = useMemo(() => messages.filter(m => m.role === 'assistant').length, [messages]);
   const smsVisible = useMemo(() => assistantCount >= 3 || (stage === 'cta' && assistantCount >= 2), [assistantCount, stage]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const lastSendAtRef = useRef<number>(0);
+  const [agentStatus, setAgentStatus] = useState<AgentStatus>({ online: true, queueSize: 0, etaMinutes: 2 });
+  const [agentMode, setAgentMode] = useState<'bot' | 'waiting'>('bot');
 
   function handleQuickAction(action: string) {
     if (action === 'book_now') {
@@ -173,6 +180,20 @@ export default function ChatWidget() {
 
     if (typeof window === 'undefined') return;
 
+    // Restore persisted chat state
+    try {
+      const stored = localStorage.getItem('icon_chat_state_v1');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed.messages)) setMessages(parsed.messages);
+        if (typeof parsed.isOpen === 'boolean') setIsOpen(parsed.isOpen);
+        if (parsed.stage) setStage(parsed.stage);
+        if (parsed.lead) setLead(parsed.lead);
+        if (parsed.pendingQuote) setPendingQuote(parsed.pendingQuote);
+        if (typeof parsed.unreadCount === 'number') setUnreadCount(parsed.unreadCount);
+      }
+    } catch {}
+
     // Session cap for auto-open
     const capKey = chatConfig.triggers.sessionCap.key;
     const now = Date.now();
@@ -262,6 +283,29 @@ export default function ChatWidget() {
     };
   }, []);
 
+  // Persist key chat state
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('icon_chat_state_v1', JSON.stringify({ messages, isOpen, stage, lead, pendingQuote, unreadCount }));
+    } catch {}
+  }, [messages, isOpen, stage, lead, pendingQuote, unreadCount]);
+
+  // Poll live agent status
+  useEffect(() => {
+    let cancelled = false;
+    const fetchStatus = async () => {
+      try {
+        const res = await fetch('/api/analytics', { method: 'GET' });
+        const data = await res.json();
+        if (!cancelled && data?.status) setAgentStatus(data.status);
+      } catch {}
+    };
+    fetchStatus();
+    const id = window.setInterval(fetchStatus, 20000);
+    return () => { cancelled = true; window.clearInterval(id); };
+  }, []);
+
   useEffect(() => {
     // Scroll so the most recent message's top aligns with the top of the viewport
     if (scrollRef.current && lastMsgRef.current) {
@@ -270,8 +314,46 @@ export default function ChatWidget() {
     }
   }, [messages, isOpen]);
 
+  // Focus management and ESC to close
+  useEffect(() => {
+    if (isOpen) {
+      // reset unread and focus input
+      setUnreadCount(0);
+      setTimeout(() => {
+        try { inputRef.current?.focus(); } catch {}
+      }, 50);
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false);
+          setTimeout(() => {
+            try { openBtnRef.current?.focus(); } catch {}
+          }, 50);
+        }
+      };
+      window.addEventListener('keydown', onKey);
+      return () => window.removeEventListener('keydown', onKey);
+    }
+  }, [isOpen]);
+
   async function sendMessage() {
     if (!input.trim() || isSubmitting) return;
+    const now = Date.now();
+    if (now - lastSendAtRef.current < 600) return; // brief cooldown to prevent accidental double sends
+    lastSendAtRef.current = now;
+    // Agent takeover gating
+    if (agentMode === 'waiting' && !/\b(bot|resume)\b/i.test(input)) {
+      const gateMsg: ChatMessage = { role: 'assistant', content: `A live agent is on the way (queue ${agentStatus.queueSize}, ETA ~${agentStatus.etaMinutes} min). Type "bot" to continue automated help or "cancel" to abort.`, timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, gateMsg]);
+      setInput('');
+      return;
+    }
+    if (agentMode === 'waiting' && /\b(cancel|bot|resume)\b/i.test(input)) {
+      setAgentMode('bot');
+      const resumeMsg: ChatMessage = { role: 'assistant', content: 'Okay — resuming automated assistance. You can say "talk to agent" anytime to connect back with our team.', timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, resumeMsg]);
+      setInput('');
+      return;
+    }
     const userText = input.trim();
     setInput('');
     const userMsg: ChatMessage = { role: 'user', content: userText, timestamp: new Date().toISOString() };
@@ -283,22 +365,89 @@ export default function ChatWidget() {
     const zipRegex = /\b(\d{5})(?:-\d{4})?\b/;
     const lower = userText.toLowerCase();
 
-    // Global command shortcuts
-    if (/(^|\b)(info|help|pricing|free\s*quote|freequote|breakdown|resources)(\b|$)/i.test(userText)) {
+    // Global ZIP detection (always acknowledge city/service)
+    const zipGlobalMatch = userText.match(zipRegex);
+    if (zipGlobalMatch) {
+      const fiveZip = zipGlobalMatch[1];
+      setLead((prev) => ({ ...prev, zipCode: fiveZip }));
+      // If we already collected a quote (size + days), finalize and move to booking
+      if (pendingQuote && pendingQuote.size && pendingQuote.days) {
+        const size = pendingQuote.size;
+        const days = pendingQuote.days;
+        const eb = chatKnowledge.pricing.exampleBundles.general;
+        const baseBySize: Record<'15' | '20' | '30', number> = { '15': eb['15'].bundle3to7, '20': eb['20'].bundle3to7, '30': eb['30'].bundle3to7 } as any;
+        const base = baseBySize[size];
+        let estimate = base;
+        if (days === 1) estimate = Math.round(base * (1 - chatKnowledge.pricing.oneDayDiscountRate));
+        else if (days <= 7) estimate = base;
+        else if (days === 14) estimate = Math.round(base * 1.5);
+        else if (days === 30) estimate = chatKnowledge.pricing.thirtyDay[size];
+        const cityFinal = zipToCity[fiveZip] || `ZIP ${fiveZip}`;
+        const finalMsg: ChatMessage = {
+          role: 'assistant',
+          content: `Perfect — ${cityFinal}. We serve that area.\n\nBooking summary:\n• ${size} yd for ${days} day${days>1?'s':''}\n• Estimated price: $${estimate}\n• Weight billed at $${chatKnowledge.pricing.weightPerTon}/ton after service\n\nReady to book now? Add your contact info and we’ll call you right back to finalize.`,
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, { ...finalMsg, quickActions: [{ label: 'Book Now', action: 'book_now' }] }]);
+        setShowLeadForm(true);
+        scheduleLeadForm(8000);
+        setStage('cta');
+        setPendingQuote(null);
+        return;
+      }
+      if (!isZipInSaltLakeCounty(fiveZip)) {
+        const outMsg: ChatMessage = {
+          role: 'assistant',
+          content:
+            'Hey, I see you\'re outside our main service area in Salt Lake County. No worries though! Give us a call at (801) 918-6000 and we can check if we can still help you out. Or you can use our calculator for a quick estimate: /dumpster-calculator',
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, outMsg]);
+        scheduleLeadForm();
+        setStage('cta');
+        return;
+      }
+      const bundles = chatKnowledge.pricing.exampleBundles.general;
+      const rawCity = zipToCity[fiveZip];
+      const city = rawCity || `ZIP ${fiveZip}`;
+      const cityOpeners = [
+        `${city}! We serve that area.`,
+        `We serve ${city}!`,
+        `${city}! We’re in that area all the time.`,
+        `${city}! Great area — you’re covered.`,
+        `Nice — ${city}. We serve that area.`
+      ];
+      const opener = cityOpeners[Math.floor(Math.random() * cityOpeners.length)];
+      const botMsg: ChatMessage = {
+        role: 'assistant',
+        content:
+          `${opener}\n\nHere\'s what we\'re looking at locally (3–7 days):\n• 15 yard — $${bundles['15'].bundle3to7}\n• 20 yard — $${bundles['20'].bundle3to7}\n• 30 yard — $${bundles['30'].bundle3to7}\n1‑Day deals: $${bundles['15'].oneDay}/$${bundles['20'].oneDay}/$${bundles['30'].oneDay}   •   30‑Day: $${bundles['15'].thirtyDay}/$${bundles['20'].thirtyDay}/$${bundles['30'].thirtyDay}\nWeight billed after pickup at $${chatKnowledge.pricing.weightPerTon}/ton.\n\nIf you tell me the size (15/20/30) or just say your days (1, 3, 7, 14, 30), I\'ll quote it right now.`,
+        timestamp: new Date().toISOString(),
+      };
+      setMessages((prev) => [...prev, botMsg]);
+      setStage('project');
+      setQuickReplies(['Home renovation', 'Construction', 'Landscaping', 'Concrete', 'Demolition', 'Other']);
+      setQuickLinks([{ label: 'Open Calculator', url: '/dumpster-calculator' }]);
+      try { (window as any).dataLayer?.push({ event: 'chat_flow_stage', stage: 'project' }); } catch {}
+      return;
+    }
+
+    // Global command shortcuts (always respond regardless of stage)
+    if (/(^|\b)(info|help|pricing|free\s*quote|freequote|breakdown|resources|billing)(\b|$)/i.test(userText)) {
       const eb = chatKnowledge.pricing.exampleBundles.general;
       const p10 = 250; // example for 10-yard general
       const d = chatKnowledge.pricing;
       const infoMsg: ChatMessage = {
         role: 'assistant',
         content:
-          `Hey! Here's the quick rundown on our dumpster options:\n\n— What we've got —\n• Check out our sizes: /dumpster-sizes\n• Crunch some numbers: /dumpster-calculator\n• Got questions? /faq\n• Want a quote? /freequote\n\n— Here's what you're looking at (3–7 days) —\n10‑Yard — $${p10}\n• Perfect for garage cleanouts\n• Small renovations\n• Yard waste\n• 7 days included\n\n15‑Yard — $${eb['15'].bundle3to7}\n• Bathroom remodels\n• Basement cleanouts\n• Roof jobs\n• 10 days included\n\n20‑Yard — $${eb['20'].bundle3to7}\n• Whole house projects\n• Big cleanouts\n• Commercial jobs\n• 14 days included\n\n30‑Yard — $${eb['30'].bundle3to7}\n• Major construction\n• Big demolition jobs\n• Large-scale cleanup\n• 14 days included\n\n— Cool extras —\n• 1‑day special (saves you money)\n• 30‑day rates: 15 $${d.thirtyDay['15']}, 20 $${d.thirtyDay['20']}, 30 $${d.thirtyDay['30']}\n• Weight charges at $${d.weightPerTon}/ton\n\nWhat sounds good to you? Just say "quote" and I'll get you set up, or give us a call at (801) 918-6000 if you want to chat with someone right now!`,
+          `Hey! Here's the quick rundown on our dumpster options:\n\n— What we've got —\n• Check out our sizes: /dumpster-sizes\n• Crunch some numbers: /dumpster-calculator\n• Got questions? /faq\n• Want a quote? /freequote\n\n— Here's what you're looking at (3–7 days) —\n10‑Yard — $${p10}\n• Perfect for garage cleanouts\n• Small renovations\n• Yard waste\n• 7 days included\n\n15‑Yard — $${eb['15'].bundle3to7}\n• Bathroom remodels\n• Basement cleanouts\n• Roof jobs\n• 10 days included\n\n20‑Yard — $${eb['20'].bundle3to7}\n• Whole house projects\n• Big cleanouts\n• Commercial jobs\n• 14 days included\n\n30‑Yard — $${eb['30'].bundle3to7}\n• Major construction\n• Big demolition jobs\n• Large-scale cleanup\n• 14 days included\n\n— Billing —\n• We drop off empty\n• After pickup, weight is billed at $${d.weightPerTon}/ton\n\nWhat sounds good to you? Just say "quote" and I'll get you set up, or give us a call at (801) 918-6000 if you want to chat with someone right now!`,
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, infoMsg]);
       setQuickReplies(['quote', 'prices', 'sizes', 'talk to agent']);
       setQuickLinks([
         { label: 'Sizes & Dimensions', url: '/dumpster-sizes' },
-        { label: 'Sizes & Dimensions', url: '/dumpster-sizes' },
+        { label: 'FAQ', url: '/faq' },
         { label: 'Free Quote', url: '/freequote' },
       ]);
       scheduleLeadForm();
@@ -307,7 +456,8 @@ export default function ChatWidget() {
     }
 
     // Conversational quote: detect size intent
-    const sizeIntent = /(10|12|15|20|30)\s*-?\s*(yd|yard)s?/i.exec(lower);
+    // Accept bare numbers like "30" or with units like "30 yd"
+    const sizeIntent = /(10|12|15|20|30)(?:\s*-?\s*(yd|yard)s?)?/i.exec(lower);
     if (!pendingQuote && sizeIntent) {
       const size = sizeIntent[1] as '15' | '20' | '30';
       if (size === '10' || size === '12') {
@@ -316,13 +466,52 @@ export default function ChatWidget() {
         setMessages((prev) => [...prev, steer]);
         return;
       }
+      // Provide instant default quote for 3–7 days, then ask for days
+      const eb = chatKnowledge.pricing.exampleBundles.general;
+      const baseBySize: Record<'15' | '20' | '30', number> = { '15': eb['15'].bundle3to7, '20': eb['20'].bundle3to7, '30': eb['30'].bundle3to7 } as any;
+      const estimate = baseBySize[size];
+      const instant: ChatMessage = { role: 'assistant', content: `For a ${size} yard, our typical 3–7 day price is about $${estimate}.\n\nIf you need a different length, tell me 1, 3, 7, 14, or 30 days and I\'ll adjust it. We drop off empty and bill weight after pickup at $${chatKnowledge.pricing.weightPerTon}/ton.`, timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, instant, { role: 'assistant', content: 'How many days do you need? (1, 3, 7, 14, or 30)', timestamp: new Date().toISOString() }]);
       setPendingQuote({ size });
-      setMessages((prev) => [...prev, { role: 'assistant', content: 'Sweet! How long do you think you\'ll need it? We\'ve got 1, 3, 7, 14, or 30 days - whatever works for your project.', timestamp: new Date().toISOString() }]);
-      setStage('project');
       return;
     }
 
-    // If we're expecting days
+    // Specialized shortcut flow (clean dirt, mixed, concrete)
+    if (!pendingQuote && /(clean\s*dirt|dirt only|concrete|cement|asphalt|mixed(\s*load)?|specialized)/i.test(userText)) {
+      // Clear any existing general size flow
+      if (pendingQuote) setPendingQuote(null);
+      const type = (() => {
+        if (/clean\s*dirt|dirt only/i.test(userText)) return 'cleanDirt10';
+        if (/concrete|cement|asphalt/i.test(userText)) return 'concrete12';
+        if (/mixed(\s*load)?/i.test(userText)) return 'mixed10';
+        return '';
+      })();
+      const daysMatch = /(30|14|7|3|1)\s*(day|days)?/i.exec(lower);
+      if (type && daysMatch) {
+        const days = Number(daysMatch[1]);
+        const sp = chatKnowledge.pricing.exampleBundles.specialized as any;
+        const base = sp[type].bundle3to7 as number;
+        let estimate = base;
+        if (days === 1) estimate = sp[type].oneDay;
+        else if (days <= 7) estimate = base;
+        else if (days === 14) estimate = Math.round(base * 1.5);
+        else if (days === 30) estimate = sp[type].thirtyDay;
+        const label = type === 'cleanDirt10' ? '10 yd Clean Dirt' : type === 'mixed10' ? '10 yd Mixed' : '12 yd Concrete';
+        const msg: ChatMessage = {
+          role: 'assistant',
+          content: `${label} for ${days} day${days>1?'s':''} is approximately $${estimate}.\n\nThis is specialized flat‑rate pricing for that material. What\'s your zip code so I can confirm scheduling?`,
+          timestamp: new Date().toISOString(),
+        };
+        setMessages((prev) => [...prev, msg]);
+        setStage('zip');
+        return;
+      }
+      const m: ChatMessage = { role: 'assistant', content: 'Specialized options:\n• 10 yd Clean Dirt — flat‑rate for clean dirt/soil only\n• 10 yd Mixed — heavy mixed materials (priced accordingly)\n• 12 yd Concrete — flat‑rate for clean concrete/asphalt\n\nTell me which one and how many days (1, 3, 7, 14, 30).', timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, m]);
+      return;
+    }
+
+    // If we're expecting days (general sizes)
     if (pendingQuote && pendingQuote.size && !pendingQuote.days) {
       const daysMatch = /(30|14|7|3|1)\s*(day|days)?/i.exec(lower);
       if (daysMatch) {
@@ -349,9 +538,17 @@ export default function ChatWidget() {
         setStage('zip');
         return;
       }
+      // If they typed something else, gently reprompt
+      const reprompt: ChatMessage = { role: 'assistant', content: 'How many days did you need? You can say 1, 3, 7, 14, or 30 days.', timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, reprompt]);
+      return;
     }
 
     if (stage === 'zip') {
+      // If the user is just chatting (hi/thanks/info), don't force zip; let server handle below
+      if (!/(\b\d{5}\b)/.test(userText) && /(hi|hello|hey|howdy|how are you|what's up|thanks|thank you|info|help)/i.test(lower)) {
+        // fall through to server reply at the end
+      }
       const zipMatch = userText.match(zipRegex);
       if (zipMatch) {
         const fiveZip = zipMatch[1];
@@ -368,7 +565,7 @@ export default function ChatWidget() {
           else if (days <= 7) estimate = base;
           else if (days === 14) estimate = Math.round(base * 1.5);
           else if (days === 30) estimate = chatKnowledge.pricing.thirtyDay[size];
-          const cityFinal = zipToCity[fiveZip] || 'your area';
+          const cityFinal = zipToCity[fiveZip] || `ZIP ${fiveZip}`;
           const finalMsg: ChatMessage = {
             role: 'assistant',
             content: `Perfect — ${cityFinal}.\n\nBooking summary:\n• ${size} yd for ${days} day${days>1?'s':''}\n• Estimated price: $${estimate}\n• Weight billed at $${chatKnowledge.pricing.weightPerTon}/ton after service\n\nReady to book now? Add your contact info and we’ll call you right back to finalize.`,
@@ -394,11 +591,20 @@ export default function ChatWidget() {
           return;
         }
         const bundles = chatKnowledge.pricing.exampleBundles.general;
-        const city = zipToCity[fiveZip] || 'your area';
+        const rawCity = zipToCity[fiveZip];
+        const city = rawCity || `ZIP ${fiveZip}`;
+        const cityOpeners = [
+          `${city}! Such a nice area — we serve that area.`,
+          `We serve ${city}! Beautiful area.`,
+          `${city}! We’re in that area all the time.`,
+          `${city}! Great area — you’re covered.`,
+          `Nice — ${city}. We serve that area.`
+        ];
+        const opener = cityOpeners[Math.floor(Math.random() * cityOpeners.length)];
         const botMsg: ChatMessage = {
           role: 'assistant',
           content:
-            `Got it! ${city} - nice area!\n\nHere\'s what we\'re looking at for your neck of the woods (3–7 days):\n• 15 yard — $${bundles['15'].bundle3to7}\n• 20 yard — $${bundles['20'].bundle3to7}\n• 30 yard — $${bundles['30'].bundle3to7}\n1‑Day deals: $${bundles['15'].oneDay}/$${bundles['20'].oneDay}/$${bundles['30'].oneDay}   •   30‑Day: $${bundles['15'].thirtyDay}/$${bundles['20'].thirtyDay}/$${bundles['30'].thirtyDay}\nWeight charges: $${chatKnowledge.pricing.weightPerTon}/ton\n\nWhat kind of project are you tackling?\n• Home renovation/remodel\n• Construction/cleanout\n• Landscaping/yard waste\n• Concrete/asphalt\n• Demolition\n• Other\n\nJust let me know what you\'re working on!`,
+            `${opener}\n\nHere\'s what we\'re looking at locally (3–7 days):\n• 15 yard — $${bundles['15'].bundle3to7}\n• 20 yard — $${bundles['20'].bundle3to7}\n• 30 yard — $${bundles['30'].bundle3to7}\n1‑Day deals: $${bundles['15'].oneDay}/$${bundles['20'].oneDay}/$${bundles['30'].oneDay}   •   30‑Day: $${bundles['15'].thirtyDay}/$${bundles['20'].thirtyDay}/$${bundles['30'].thirtyDay}\nWeight billed after pickup at $${chatKnowledge.pricing.weightPerTon}/ton.\n\nIf you tell me the size (15/20/30) or just say your days (1, 3, 7, 14, 30), I\'ll quote it right now.`,
           timestamp: new Date().toISOString(),
         };
         setMessages((prev) => [...prev, botMsg]);
@@ -527,13 +733,13 @@ export default function ChatWidget() {
         return;
       }
       if (/weight|ton|limit/i.test(lower)) {
-        const m: ChatMessage = { role: 'assistant', content: 'Weight limits: 15 yard ≈ 1.5–2 tons, 20 yard ≈ 2–3 tons, 30 yard ≈ 3–4 tons. If you go over, it\'s $55 per ton extra.', timestamp: new Date().toISOString() };
+        const m: ChatMessage = { role: 'assistant', content: 'Weight billing: We do not include free tons. We drop the dumpster off empty, and after pickup the load is weighed at the disposal facility and billed at $55/ton.\n\nTypical project weights (not included, just estimates):\n• 15 yd ≈ 1.5–2 tons\n• 20 yd ≈ 2–3 tons\n• 30 yd ≈ 3–4 tons', timestamp: new Date().toISOString() };
         setMessages((prev) => [...prev, m]);
         return;
       }
     }
 
-    // Fallback to server intelligence
+    // Fallback to server intelligence (handles general chat/FAQs gracefully)
     setIsSubmitting(true);
     try {
       const res = await fetch('/api/chat', {
@@ -564,7 +770,9 @@ export default function ChatWidget() {
   async function submitLead() {
     if (!lead.phone && !lead.email) return;
     const transcript = messages.slice(-50);
-    const payload = { action: 'lead', ...lead, pageUrl, transcript };
+    const normalizedPhone = (lead.phone || '').replace(/\D/g, '');
+    const normalizedZip = (lead.zipCode || '').replace(/\D/g, '').slice(0, 5);
+    const payload = { action: 'lead', ...lead, phone: normalizedPhone, zipCode: normalizedZip, pageUrl, transcript, sessionId, stage, pendingQuote };
     try {
       await fetch('/api/chat', {
         method: 'POST',
@@ -577,6 +785,20 @@ export default function ChatWidget() {
       ]);
       setShowLeadForm(false);
       try { (window as any).dataLayer?.push({ event: 'chat_lead' }); } catch {}
+    } catch {}
+  }
+
+  async function requestAgentHandoff() {
+    const transcript = messages.slice(-30);
+    setAgentMode('waiting');
+    try {
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'handoff_request', transcript, contact: { name: `${lead.firstName} ${lead.lastName}`.trim(), phone: lead.phone, email: lead.email } })
+      });
+      const msg: ChatMessage = { role: 'assistant', content: `Got it — connecting you to a live agent. Current queue: ${agentStatus.queueSize}. Estimated response ~${agentStatus.etaMinutes} minute${agentStatus.etaMinutes>1?'s':''}. You can keep this window open; we’ll reach out by phone/text. Type "bot" to keep chatting with the assistant.`, timestamp: new Date().toISOString() };
+      setMessages((prev) => [...prev, msg]);
     } catch {}
   }
 
@@ -600,6 +822,15 @@ export default function ChatWidget() {
     }
   }, [messages]);
 
+  // Increment unread when assistant replies while closed
+  useEffect(() => {
+    if (!messages.length) return;
+    const last = messages[messages.length - 1];
+    if (!isOpen && last.role === 'assistant') {
+      setUnreadCount((c) => c + 1);
+    }
+  }, [messages, isOpen]);
+
   // Email transcript automatically when chat is closed and we have contact info
   useEffect(() => {
     if (!isOpen) {
@@ -621,25 +852,38 @@ export default function ChatWidget() {
         <button
           aria-label="Open chat"
           onClick={() => setIsOpen(true)}
-          className="bg-[#4e37a8] text-white rounded-full shadow-lg px-4 py-3 hover:bg-purple-700 transition-colors"
+          ref={openBtnRef}
+          className="relative bg-[#4e37a8] text-white rounded-full shadow-lg px-4 py-3 hover:bg-purple-700 transition-colors"
         >
           Chat with us
+          {unreadCount > 0 && (
+            <span aria-hidden className="absolute -top-1 -right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-semibold shadow">{unreadCount > 9 ? '9+' : unreadCount}</span>
+          )}
         </button>
       )}
 
       {isOpen && (
-        <div className="w-80 sm:w-96 rounded-xl shadow-2xl overflow-hidden bg-white/95 backdrop-blur-sm ring-1 ring-purple-100">
+        <div role="dialog" aria-modal="true" aria-labelledby="icon-chat-title" className="w-80 sm:w-96 rounded-xl shadow-2xl overflow-hidden bg-white/95 backdrop-blur-sm ring-1 ring-purple-100">
           <div className="bg-gradient-to-r from-[#4e37a8] via-purple-600 to-indigo-600 text-white px-4 py-3 flex items-center justify-between">
-            <div className="font-semibold">Icon Dumpsters Chat</div>
+            <div id="icon-chat-title" className="font-semibold">Icon Dumpsters Chat</div>
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-2 bg-white/10 rounded-full px-2 py-1 text-[11px] sm:text-xs">
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
-                <span>Icon Expert is live now</span>
+                <span className={`w-2.5 h-2.5 rounded-full ${agentStatus.online ? (agentStatus.queueSize > 3 ? 'bg-yellow-300' : 'bg-green-400') : 'bg-gray-300'} ${agentStatus.online ? 'animate-pulse' : ''}`}></span>
+                <span>
+                  {agentStatus.online ? (agentStatus.queueSize > 0 ? `Live agent • Queue ${agentStatus.queueSize} • ETA ${agentStatus.etaMinutes}m` : 'Live agent • Available') : 'Live agent • Offline'}
+                </span>
               </span>
+              <button onClick={requestAgentHandoff} className="bg-white/10 hover:bg-white/20 text-white text-[11px] sm:text-xs px-2 py-1 rounded-full">Talk to agent</button>
               <button aria-label="Close chat" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white">✕</button>
             </div>
           </div>
-          <div ref={scrollRef} className="h-72 overflow-y-auto p-3 space-y-4 bg-gradient-to-b from-violet-50 via-white to-violet-50">
+          {agentMode === 'waiting' && (
+            <div className="px-3 py-2 text-xs bg-amber-50 text-amber-800 border-b border-amber-200 flex items-center justify-between">
+              <div>Connecting you to a live agent… Queue {agentStatus.queueSize}, ETA ~{agentStatus.etaMinutes}m. We’ll reach out by phone/text.</div>
+              <button onClick={() => setAgentMode('bot')} className="ml-2 underline">Cancel</button>
+            </div>
+          )}
+          <div ref={scrollRef} className="h-72 overflow-y-auto p-3 space-y-4 bg-gradient-to-b from-violet-50 via-white to-violet-50" aria-live="polite">
             {messages.map((m, i) => {
               if (m.role === 'assistant') {
                 return (
@@ -770,13 +1014,15 @@ export default function ChatWidget() {
               <input
                 value={input}
                 onChange={(e) => { setInput(e.target.value); clearLeadTimer(); }}
-                onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+                onKeyDown={(e) => { if (e.key === 'Enter') sendMessage(); if (e.key === 'Escape') setIsOpen(false); }}
+                ref={inputRef}
                 className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4e37a8]"
                 placeholder={stage === 'zip' ? 'Enter your 5‑digit zip code' : stage === 'project' ? 'Type your project type (e.g., home renovation)' : 'Ask about pricing, timeframes, or say quote'}
               />
               <button
                 onClick={sendMessage}
                 disabled={isSubmitting}
+                aria-label="Send message"
                 className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg text-sm hover:bg-purple-700 disabled:opacity-60"
               >
                 Send

@@ -53,7 +53,7 @@ function createAssistantReply(userText: string): string {
   } catch {}
 
   // Friendly small talk and general intent
-  if (/(^|\b)(hi|hello|hey|howdy|good (morning|afternoon|evening))\b/.test(text)) {
+  if (/(^|\b)(hi|hello|hey|howdy|good (morning|afternoon|evening)|help|info|resources)\b/.test(text)) {
     return (
       'Hi there! I\'m Icon\'s assistant — happy to help with dumpster sizes, pricing, delivery, or what\'s allowed.\n\n' +
       'Share your zip code to confirm availability, or say "quote" and I\'ll take your name and phone. You can also call (801) 918-6000.'
@@ -83,6 +83,29 @@ function createAssistantReply(userText: string): string {
       '• 20 yd — Basement cleanouts, small renovations\n' +
       '• 30 yd — Large cleanouts, home renovations\n\n' +
       'Reply 15/20/30 with your size, or say "quote" and I’ll take your name and phone for exact pricing. You can also call (801) 918-6000.'
+    );
+  }
+
+  // High-priority: size intent should lead into quote flow (ask for days)
+  const sizeMatch = text.match(/\b(10|12|15|20|30)(?:\s*-?\s*(yd|yard)?s?)?\b/);
+  if (sizeMatch) {
+    const size = sizeMatch[1];
+    if (size === '10' || size === '12') {
+      return (
+        'For heavy materials like clean dirt/concrete we use specialized 10/12 yard options. If that\'s what you need, say "specialized".\n\n' +
+        'Otherwise, for a quick quote on 15/20/30 yard, how many days do you need? Options: 1, 3, 7, 14, or 30 days.'
+      );
+    }
+    return (
+      `Great — ${size} yard. How many days do you need? Options: 1, 3, 7, 14, or 30 days.\n\n` +
+      'Weight billing note: We drop off empty and bill actual weight after pickup at $55/ton.'
+    );
+  }
+
+  // Specialized flow if user mentions specialized keywords
+  if (/(clean\s*dirt|dirt only|dirt dumpster|concrete|heavy duty|mixed load|10\s*yd|12\s*yd)/i.test(userText)) {
+    return (
+      'Specialized options:\n• 10 yd Clean Dirt — flat‑rate for clean dirt/soil only\n• 10 yd Mixed — heavy mixed materials (priced accordingly)\n• 12 yd Concrete — flat‑rate for clean concrete/asphalt\n\nWhich one would you like a quote for, and for how many days (1, 3, 7, 14, 30)?'
     );
   }
 
@@ -198,7 +221,7 @@ function createAssistantReply(userText: string): string {
     {
       test: /(weight|limit|ton|overage)/i,
       answer:
-        'Typical weight allowances:\n• 15 yd ≈ 1.5–2 tons\n• 20 yd ≈ 2–3 tons\n• 30 yd ≈ 3–4 tons\nOverage billed at $55/ton. What materials do you have?',
+        'Weight billing: We drop off the dumpster empty and there are no “free tons” included. After pickup, the load is weighed at the disposal facility and billed at $55/ton.\n\nTypical project weights (estimates, not included):\n• 15 yd ≈ 1.5–2 tons\n• 20 yd ≈ 2–3 tons\n• 30 yd ≈ 3–4 tons\nTell me your materials and I\'ll estimate.',
     },
     {
       test: /(cannot|not allowed|prohibit|hazard|paint|tires|mattress|appliance|refrigerator)/i,

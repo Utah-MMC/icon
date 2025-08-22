@@ -25,6 +25,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Reusable primary button style for consistent readable buttons site-wide */
+.btn-primary {
+  @apply inline-flex items-center bg-[#4e37a8] text-white hover:text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e37a8]/40;
+}
+
 /* Minimal typography rules for article content (replaces Tailwind Typography) */
 .prose {
   max-width: 65ch;
