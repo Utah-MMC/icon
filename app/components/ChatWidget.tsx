@@ -581,6 +581,27 @@ export default function ChatWidget() {
         } else if (days === 30) {
           estimate = chatKnowledge.pricing.thirtyDay[size];
         }
+        // If we already have a zip, skip asking again and go straight to booking CTA
+        if ((lead.zipCode || '').trim()) {
+          const fiveZip = (lead.zipCode || '').trim().slice(0,5);
+          if (!isZipInSaltLakeCounty(fiveZip)) {
+            const outMsg: ChatMessage = { role: 'assistant', content: humanizeText(`For ${size} yd over ${days} day${days>1?'s':''}, you\'re looking at about $${estimate}. It looks like you\'re outside our main Salt Lake County area — give us a quick call at ${chatKnowledge.contact.phone} and we\'ll confirm availability, or tap Talk to agent.`), timestamp: new Date().toISOString() };
+            setMessages((prev) => [...prev, outMsg]);
+            setStage('cta');
+            return;
+          }
+          const cityFinal = zipToCity[fiveZip] || `ZIP ${fiveZip}`;
+          const finalMsg: ChatMessage = {
+            role: 'assistant',
+            content: humanizeText(`Alright, here\'s what I\'ve got for you: ${size} yard for ${days} day${days>1?'s':''} in ${cityFinal} comes out to $${estimate}.\n\n• That covers delivery and pickup\n• Weight charges are $${chatKnowledge.pricing.weightPerTon}/ton after we weigh it\n\nWant to lock this in? Call ${chatKnowledge.contact.phone}, email ${chatKnowledge.contact.email}, tap Talk to agent, or add your info and we\'ll call you right back.`),
+            timestamp: new Date().toISOString(),
+          };
+          lastQuoteRef.current = { zip: fiveZip, city: cityFinal, size, days, estimate };
+          setMessages((prev) => [...prev, finalMsg]);
+          setShowLeadForm(true);
+          setStage('cta');
+          return;
+        }
         const quote = `Alright, here\'s what I\'ve got for you: ${size} yard for ${days} day${days>1?'s':''} in the Salt Lake area comes out to $${estimate}.\n\n• That covers delivery and pickup\n• Weight charges are $${chatKnowledge.pricing.weightPerTon}/ton after we weigh it\n\nWhat\'s your zip code so I can get this booked for you?`;
         setMessages((prev) => [...prev, { role: 'assistant', content: quote, timestamp: new Date().toISOString() }]);
         setStage('zip');
