@@ -9,6 +9,8 @@ import CustomerRatingSystem from "./components/CustomerRatingSystem";
 import EmailFollowUpSystem from "./components/EmailFollowUpSystem";
 import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
 import EnhancedHeader from "./components/EnhancedHeader";
+// removed direct track usage from server layout
+import AnalyticsDelegator from "./components/AnalyticsDelegator";
 import ChatWidget from "./components/ChatWidget";
 import Footer from "./components/Footer";
 import ConditionalCalculatorBanner from "./components/ConditionalCalculatorBanner";
@@ -159,6 +161,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <CompetitiveKPITracking />
+        <AnalyticsDelegator />
         {/* Top Bar - Purple Theme */}
         <div className="bg-[#4e37a8] text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,6 +205,8 @@ export default function RootLayout({
                               <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
                   <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICES</a>
+                  <a href="/locations" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICE AREA</a>
+                  <a href="/fees" className="text-white hover:text-purple-200 transition-colors font-medium">FEES</a>
                   <a href="/estate-cleanout" className="text-white hover:text-purple-200 transition-colors font-medium">ESTATE CLEANOUT</a>
                   <div className="relative group">
                     <a href="/dumpster-sizes" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
@@ -277,6 +282,9 @@ export default function RootLayout({
                     CALCULATOR
                   </a>
                   <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+                  <a href="/frequent-buyers" className="text-white hover:text-purple-200 transition-colors font-medium">FREQUENT BUYERS</a>
+                  <a href="/book" className="text-white hover:text-purple-200 transition-colors font-medium">BOOK NOW</a>
+                  <a href="/kpi-dashboard" className="text-white hover:text-purple-200 transition-colors font-medium">DASHBOARD</a>
                   <div className="relative group">
                     <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       ABOUT
@@ -305,7 +313,7 @@ export default function RootLayout({
                   </div>
                 </nav>
               <div className="flex items-center">
-                <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
+                <a href="#quote-form" data-analytics-type="cta" data-analytics-name="header_quote" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
                   <span>Get A Quote</span>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />

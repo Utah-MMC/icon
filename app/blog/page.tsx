@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
+import { track } from "../components/analytics";
 import NewsletterSubscription from "../components/NewsletterSubscription";
+import TextQuoteWidget from "../components/TextQuoteWidget";
 import InternalLinks from "../components/InternalLinks";
 import BlogSearch from "../components/BlogSearch";
 
@@ -380,6 +382,7 @@ export default function Blog() {
                   
                   <Link 
                     href={`/${filteredPosts.find(post => post.featured)?.id}`}
+                    onClick={() => { try { track('blog','featured_click',{ id: filteredPosts.find(post => post.featured)?.id }); } catch {} }}
                     className="inline-flex items-center gap-2 bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
                   >
                     Read Full Article
@@ -431,6 +434,7 @@ export default function Blog() {
                       
                       <Link 
                         href={`/${post.id}`}
+                        onClick={() => { try { track('blog','post_click',{ id: post.id, category: post.category }); } catch {} }}
                         className="inline-flex items-center gap-2 text-[#4e37a8] hover:text-purple-700 font-semibold transition-colors"
                       >
                         Read More
@@ -465,6 +469,7 @@ export default function Blog() {
 
           {/* Sidebar */}
           <aside className="xl:col-span-1 space-y-8">
+            <TextQuoteWidget />
             {/* Categories */}
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">

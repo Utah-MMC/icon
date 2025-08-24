@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { track } from './analytics';
 
 interface QuickQuoteButtonProps {
   dumpsterSize: string;
@@ -39,6 +40,7 @@ export default function QuickQuoteButton({ dumpsterSize, className = '' }: Quick
         method: 'POST',
         body: formData as any,
       });
+      try { track('form','quick_quote_submit',{ size: dumpsterSize, zip: zipCode }); } catch {}
       
       alert('Thank you! We\'ll call you within 30 minutes with your quote.');
       setShowModal(false);
@@ -52,7 +54,7 @@ export default function QuickQuoteButton({ dumpsterSize, className = '' }: Quick
   return (
     <>
       <button
-        onClick={() => setShowModal(true)}
+        onClick={() => { setShowModal(true); try { track('cta','quick_quote_open',{ size: dumpsterSize }); } catch {} }}
         className={`bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium ${className}`}
       >
         Get Quick Quote

@@ -5,6 +5,11 @@ import ReviewsCarousel from "./components/ReviewsCarousel";
 import CleanupSection from "./components/CleanupSection";
 import TrustSection from "./components/TrustSection";
 import QuickQuoteButton from "./components/QuickQuoteButton";
+import ThreeStepProcess from "./components/ThreeStepProcess";
+import FeesAndSurcharges from "./components/FeesAndSurcharges";
+import TextQuoteWidget from "./components/TextQuoteWidget";
+import AvailableTodayBadge from "./components/AvailableTodayBadge";
+import { track } from "./components/analytics";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -74,11 +79,16 @@ export default function Home() {
         <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-                      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
-              <a href="#quote-form" className="bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block">
-            Get A Quote
-          </a>
-        </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
+              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
+                <a href="#quote-form" data-analytics-type="cta" data-analytics-name="quote_hero" className="bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block">
+                  Get A Quote
+                </a>
+                <a href="/book" data-analytics-type="cta" data-analytics-name="book_hero" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium text-base sm:text-lg inline-block">
+                  Book Now
+                </a>
+              </div>
+            </div>
       </div>
         </div>
       </div>
@@ -362,6 +372,21 @@ export default function Home() {
       {/* Cleanup Section */}
       <CleanupSection />
 
+      {/* Three Step Process */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <ThreeStepProcess />
+      </div>
+
+      {/* Fees & Surcharges */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <FeesAndSurcharges />
+      </div>
+
+      {/* Text Quote Widget */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <TextQuoteWidget />
+      </div>
+
 
 
 
@@ -382,7 +407,10 @@ export default function Home() {
               <ImageWithFallback src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Residential Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Residential Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove residential household wastes during cleanouts, moves, or renovations.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
@@ -396,7 +424,10 @@ export default function Home() {
               <ImageWithFallback src="/images/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Construction Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Construction Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove construction debris, drywall, lumber, and building materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
@@ -410,7 +441,10 @@ export default function Home() {
               <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Concrete Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Concrete Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove concrete, asphalt, bricks, and other heavy construction materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
@@ -424,7 +458,10 @@ export default function Home() {
               <ImageWithFallback src="/images/dumpster500x500-2.jpeg" alt="Roofing Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Roofing Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Roofing Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster for roofing shingles, underlayment, and other roofing materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
@@ -438,7 +475,10 @@ export default function Home() {
               <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Yard Waste Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Yard Waste Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove yard waste, branches, leaves, and landscaping debris.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →
@@ -452,7 +492,10 @@ export default function Home() {
               <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
             </a>
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8] mb-3">Recyclable Waste Dumpster Rental</h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#4e37a8]">Recyclable Waste Dumpster Rental</h3>
+                <AvailableTodayBadge />
+              </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove recyclable materials, cardboard, paper, and plastic waste.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
                 Read More →

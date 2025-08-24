@@ -12,6 +12,10 @@ let cachedStatus: { online: boolean; queueSize: number; etaMinutes: number } = {
   etaMinutes: 2,
 };
 
+// Simple in-memory event store (per instance)
+type AnalyticEvent = { name: string; type: string; ts: number; meta?: any };
+const EVENTS: AnalyticEvent[] = [];
+
 export async function GET() {
   try {
     // Optionally refresh from upstream every 10s (mocked here)
@@ -20,7 +24,13 @@ export async function GET() {
       lastStatusUpdateAt = now;
       // keep existing mock values; in real impl pull from provider
     }
-    return NextResponse.json({ ok: true, status: cachedStatus });
+    // Aggregate simple 24h counters
+    const DAY = 24 * 60 * 60 * 1000;
+    const since = now - DAY;
+    const recent = EVENTS.filter(e => e.ts >= since);
+    const byType = recent.reduce<Record<string, number>>((acc, e) => { acc[e.type] = (acc[e.type] || 0) + 1; return acc; }, {});
+    const byName = recent.reduce<Record<string, number>>((acc, e) => { acc[e.name] = (acc[e.name] || 0) + 1; return acc; }, {});
+    return NextResponse.json({ ok: true, status: cachedStatus, counts: { byType, byName, total: recent.length } });
   } catch (e) {
     return NextResponse.json({ ok: false }, { status: 500 });
   }
@@ -48,8 +58,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: true });
     }
 
-    // In production, forward analytics elsewhere. Acknowledge receipt here.
-    return NextResponse.json({ ok: true });
+    // Store basic analytics event
+    if (body?.type) {
+      EVENTS.push({ name: String(body.name || body.type), type: String(body.type), ts: Date.now(), meta: body });
+      // truncate to last 10k events to cap memory
+      if (EVENTS.length > 10000) EVENTS.splice(0, EVENTS.length - 10000);
+      return NextResponse.json({ ok: true });
+    }
+    return NextResponse.json({ ok: false }, { status: 400 });
   } catch (error) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }

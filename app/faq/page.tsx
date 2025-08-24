@@ -38,17 +38,35 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  function renderWithLinks(text: string) {
+    const parts: (string | JSX.Element)[] = [];
+    const regex = /(\/[-a-zA-Z0-9\/]+)/g;
+    let lastIndex = 0;
+    let m: RegExpExecArray | null;
+    while ((m = regex.exec(text)) !== null) {
+      const [match] = m;
+      if (m.index > lastIndex) parts.push(text.slice(lastIndex, m.index));
+      parts.push(
+        <Link key={`${match}-${parts.length}`} href={match} className="text-[#4e37a8] hover:text-purple-700 font-semibold">
+          {match}
+        </Link>
+      );
+      lastIndex = m.index + match.length;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return <>{parts}</>;
+  }
   const faqData = [
     {
       category: "Dumpster Sizes & Selection",
       questions: [
         {
           question: "What dumpster sizes do you offer?",
-          answer: "We offer six dumpster options: 15-yard, 20-yard, and 30-yard roll-off dumpsters for general waste, plus specialized 10-yard clean dirt disposal, 10-yard mixed load disposal (standard weight allowance), and 12-yard concrete disposal dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects. Our specialized dumpsters are perfect for dirt, soil, concrete, and heavy material projects."
+          answer: "We offer six dumpster options: 15-yard, 20-yard, and 30-yard roll-off dumpsters for general waste, plus specialized 10-yard clean dirt disposal, 10-yard mixed load disposal (standard weight allowance), and 12-yard concrete disposal dumpsters. The 15-yard is perfect for small projects like garage cleanouts, the 20-yard is ideal for medium renovations, and the 30-yard is best for large construction projects. Our specialized dumpsters are perfect for dirt, soil, concrete, and heavy material projects. Learn more: /dumpster-sizes"
         },
         {
           question: "How do I choose the right dumpster size?",
-          answer: "Consider your project type and volume. A 15-yard dumpster holds about 3-4 pickup truck loads, a 20-yard holds 4-6 loads, and a 30-yard holds 6-8 loads. For reference, a 15-yard dumpster is about 12' x 8' x 4' high. Our team can help you choose the perfect size for your project."
+          answer: "Consider your project type and volume. A 15-yard dumpster holds about 3-4 pickup truck loads, a 20-yard holds 4-6 loads, and a 30-yard holds 6-8 loads. For reference, a 15-yard dumpster is about 12' x 8' x 4' high. Our team can help you choose the perfect size for your project. See /dumpster-sizes and /blog/how-to-choose-dumpster-size"
         },
         {
           question: "What are the dimensions of your dumpsters?",
@@ -61,7 +79,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "How much does dumpster rental cost?",
-          answer: "Dumpster rental costs vary based on size, rental duration, and location. Our 15-yard dumpsters start around $300-400, 20-yard dumpsters around $400-500, and 30-yard dumpsters around $500-600. This typically includes delivery, pickup, and disposal fees. Contact us for a free, no-obligation quote."
+          answer: "Dumpster rental costs vary based on size, rental duration, and location. Our 15-yard dumpsters start around $300-400, 20-yard dumpsters around $400-500, and 30-yard dumpsters around $500-600. This typically includes delivery, pickup, and disposal fees. Get an instant estimate: /dumpster-calculator or request a quote: /freequote"
         },
         {
           question: "Are there any hidden fees?",
@@ -99,7 +117,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "Do I need a permit for a dumpster?",
-          answer: "In most cases, no permit is needed if the dumpster is placed on private property (like your driveway). However, if you need to place the dumpster on a public street or sidewalk, you'll need a permit from your local city. We can help you determine if a permit is required and guide you through the process."
+          answer: "In most cases, no permit is needed if the dumpster is placed on private property (like your driveway). However, if you need to place the dumpster on a public street or sidewalk, you'll need a permit from your local city. We can help you determine if a permit is required and guide you through the process. Read more: /blog/utah-dumpster-permits-guide"
         },
         {
           question: "What are the weight limits for dumpsters?",
@@ -116,7 +134,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "What areas do you serve in Utah?",
-          answer: "We serve the entire Salt Lake Valley and surrounding areas including Salt Lake City, West Valley City, Sandy, West Jordan, Murray, Taylorsville, South Jordan, Riverton, Herriman, Draper, and many other Utah communities. Call us to confirm service availability in your specific location."
+          answer: "We serve the entire Salt Lake Valley and surrounding areas including Salt Lake City, West Valley City, Sandy, West Jordan, Murray, Taylorsville, South Jordan, Riverton, Herriman, Draper, and many other Utah communities. Call us to confirm service availability in your specific location. View all locations: /locations"
         },
         {
           question: "Do you offer weekend delivery?",
@@ -310,7 +328,7 @@ export default function FAQPage() {
                       </summary>
                       <div className="px-8 pb-6">
                         <p className="text-gray-600 leading-relaxed">
-                          {faq.answer}
+                          {renderWithLinks(faq.answer)}
                         </p>
                       </div>
                     </details>

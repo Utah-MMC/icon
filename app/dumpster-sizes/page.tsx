@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
 import sizesHero from "../../images/Screenshot 2025-08-21 223011.png";
 import QuoteForm from "../components/QuoteForm";
+import FeesAndSurcharges from "../components/FeesAndSurcharges";
+import AvailableTodayBadge from "../components/AvailableTodayBadge";
+import BookNowBanner from "../components/BookNowBanner";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
@@ -101,6 +104,7 @@ export default function DumpsterSizes() {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Roll Off Dumpster Sizes and Dimensions
             </h2>
+            <div className="flex items-center justify-center"><AvailableTodayBadge /></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Review the estimated dimensions and capacities of common roll off sizes to find the most 
               efficient and affordable fit for your project.
@@ -320,6 +324,15 @@ export default function DumpsterSizes() {
                 Get Your Free Quote
               </a>
             </div>
+          </div>
+
+          {/* Fees Table */}
+          <div className="mt-12">
+            <FeesAndSurcharges />
+          </div>
+
+          <div className="mt-12">
+            <BookNowBanner />
           </div>
           
           {/* Additional Notes */}

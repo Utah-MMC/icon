@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { track } from './analytics';
 
 export default function DumpsterCalculator() {
   const [zipCode, setZipCode] = useState('');
@@ -123,6 +124,7 @@ export default function DumpsterCalculator() {
     html += '</div>';
     
     setResult(html);
+    try { track('calculator','calculate',{ size: selectedSize, days: selectedDuration, zip: zipCode }); } catch {}
     // Trigger booking prompt
     setShowBookingQuestion(true);
     setWantsBooking(null);
@@ -135,7 +137,7 @@ export default function DumpsterCalculator() {
   useEffect(() => {
     const btn = document.getElementById('exact-quote-btn');
     if (!btn) return;
-    const handler = () => setShowCallPopup(true);
+    const handler = () => { try { track('cta','get_exact_quote'); } catch {} ; setShowCallPopup(true); };
     btn.addEventListener('click', handler);
     return () => btn.removeEventListener('click', handler);
   }, [result]);

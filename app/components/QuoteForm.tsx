@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ReCaptcha from './ReCaptcha';
+import { track } from './analytics';
 import Honeypot from './Honeypot';
 
 export default function QuoteForm() {
@@ -78,6 +79,7 @@ export default function QuoteForm() {
       }).then(() => {
         // Assume success if no error
         alert('Thank you! Your quote request has been submitted successfully. Please check your email.');
+        try { track('form','quote_submit'); } catch {}
         form.reset();
         setRecaptchaToken('');
       }).catch((error) => {

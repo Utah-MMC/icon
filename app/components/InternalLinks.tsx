@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { track } from './analytics';
 import { usePathname } from 'next/navigation';
 
 interface InternalLinksProps {
@@ -60,7 +61,7 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
           <h3 className="font-semibold text-gray-900 mb-2">Popular Services</h3>
           <ul className="space-y-2 text-gray-700">
             {services.map((l) => (
-              <li key={l.href}>• <Link href={l.href} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'services' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -68,7 +69,7 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
           <h3 className="font-semibold text-gray-900 mb-2">Helpful Guides</h3>
           <ul className="space-y-2 text-gray-700">
             {guides.map((l) => (
-              <li key={l.href}>• <Link href={l.href} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'guides' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -76,7 +77,7 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
           <h3 className="font-semibold text-gray-900 mb-2">Top Areas</h3>
           <ul className="space-y-2 text-gray-700">
             {areas.map((l) => (
-              <li key={l.href}>• <Link href={l.href} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'areas' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
         </div>

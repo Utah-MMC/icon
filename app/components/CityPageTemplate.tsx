@@ -6,6 +6,8 @@ import QuoteForm from './QuoteForm';
 import ImageWithFallback from './ImageWithFallback';
 import CalculatorCTA from './CalculatorCTA';
 import InternalLinks from './InternalLinks';
+import AvailableTodayBadge from './AvailableTodayBadge';
+import BookNowBanner from './BookNowBanner';
 
 interface CityPageTemplateProps {
   city: string;
@@ -124,7 +126,10 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
 
         {/* Pricing */}
         <section className="bg-white rounded-xl shadow-md p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">{cityShort} Dumpster Rental Pricing</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">{cityShort} Dumpster Rental Pricing</h2>
+            <AvailableTodayBadge />
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[ 
               { title: '10‑Yard Dumpster', price: 250, note: 'Perfect for small projects', bullets: ['Garage cleanup', 'Small renovation', 'Yard waste', '7‑day rental included'] },
@@ -213,12 +218,14 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
         <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center mb-10">
           <h2 className="text-3xl font-bold mb-2">Ready to Get Your Dumpster in {cityShort}?</h2>
           <p className="text-purple-100 mb-6">Get instant pricing or call (801) 918‑6000.</p>
-          <a href="#quote" className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
+          <a href="#quote" onClick={() => { try { (window as any).dataLayer?.push({ event:'cta_click', cta:'quote_city' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'cta', name:'quote_city' })}); } catch {} }} className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
         </section>
         <div id="quote" className="mb-12">
           <QuoteForm />
         </div>
         <InternalLinks className="mb-12" />
+
+        <BookNowBanner />
       </main>
     </div>
   );

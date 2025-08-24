@@ -183,7 +183,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#4e37a8] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Search & Quick Links */}
           <div>
             <h4 className="text-white underline font-semibold mb-3">Find Your Location</h4>
@@ -207,9 +207,9 @@ export default function Footer() {
               </button>
             </div>
             <div className="space-y-2 text-sm">
-              <a href="/locations" className="text-gray-300 hover:text-white transition-colors block">View All Locations</a>
-              <a href="/dumpster-sizes" className="text-gray-300 hover:text-white transition-colors block">Dumpster Sizes</a>
-              <a href="/dumpster-prices" className="text-gray-300 hover:text-white transition-colors block">Pricing</a>
+              <a href="/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_locations' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_locations' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">View All Locations</a>
+              <a href="/dumpster-sizes" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_sizes' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_sizes' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Dumpster Sizes</a>
+              <a href="/dumpster-prices" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_pricing' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_pricing' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Pricing</a>
             </div>
           </div>
 
@@ -236,11 +236,31 @@ export default function Footer() {
           <div>
             <h4 className="text-white underline font-semibold mb-3">Helpful Links</h4>
             <div className="grid grid-cols-1 gap-1 text-sm">
-              <a href="/dumpster-rental-guide-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
+              <a href="/dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
               <a href="/dumpster-rentals-near-me-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
               <a href="/construction-waste-management-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
               <a href="/home-renovation-waste-disposal-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
               <a href="/commercial-dumpster-rental-business-solutions" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
+              <a href="/fees" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_fees' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_fees' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Fees & Surcharges</a>
+              <a href="/frequent-buyers" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_frequent' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_frequent' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Frequent Buyers Program</a>
+              <a href="/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_service_area' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_service_area' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Service Area</a>
+            </div>
+          </div>
+
+          {/* Offices & Yards (NAP) */}
+          <div>
+            <h4 className="text-white underline font-semibold mb-3">Offices & Yards</h4>
+            <div className="space-y-2 text-sm">
+              <div>
+                <div className="text-purple-200">Salt Lake City Yard</div>
+                <div className="text-gray-300">Salt Lake City, UT</div>
+                <a href="tel:(801) 918-6000" onClick={() => { try { (window as any).dataLayer?.push({ event:'cta_click', cta:'footer_call' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'cta', name:'footer_call' })}); } catch {} }} className="text-white">(801) 918-6000</a>
+              </div>
+              <div>
+                <div className="text-purple-200">Millcreek Office</div>
+                <div className="text-gray-300">Millcreek, UT</div>
+                <a href="tel:(801) 918-6000" onClick={() => { try { (window as any).dataLayer?.push({ event:'cta_click', cta:'footer_call' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'cta', name:'footer_call' })}); } catch {} }} className="text-white">(801) 918-6000</a>
+              </div>
             </div>
           </div>
 
