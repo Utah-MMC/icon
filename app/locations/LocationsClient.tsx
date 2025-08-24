@@ -119,9 +119,7 @@ export default function LocationsClient() {
     return false;
   }
 
-  return (
-    <div>/* simplified placeholder to avoid long diff; UI preserved in earlier file */</div>
-  );
+  return <div className="min-h-screen bg-white" />;
 }
 
 
