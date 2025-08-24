@@ -206,8 +206,8 @@ export default function EstateCleanout() {
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>Fast turnaround times</strong> to help you get the property on the market quickly and maximize your sale price.
                   </p>
-                  <a href="#quote-form" className="btn-primary">
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <a href="#quote-form" className="inline-flex items-center gap-2 bg-[#4e37a8] px-5 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold shadow" style={{ color: '#ffffff' }}>
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     Get House Flipping Quote

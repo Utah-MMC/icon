@@ -11,6 +11,7 @@ export default function CleanupSection() {
       number: '01',
       title: 'Choose Your Perfect Dumpster Size',
       description: 'Select from our 15, 20, or 30 yard roll-off dumpsters based on your project needs.',
+      href: '/choose-dumpster-size',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
@@ -21,6 +22,7 @@ export default function CleanupSection() {
       number: '02',
       title: 'Schedule Delivery & Pickup',
       description: 'Tell us when and where you need your dumpster delivered in Utah.',
+      href: '/schedule-delivery-pickup',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
@@ -31,6 +33,7 @@ export default function CleanupSection() {
       number: '03',
       title: 'On-Time Dumpster Delivery',
       description: 'Your roll-off dumpster arrives exactly when scheduled, ready for your project.',
+      href: '/on-time-dumpster-delivery',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
@@ -41,6 +44,7 @@ export default function CleanupSection() {
       number: '04',
       title: 'Load Your Dumpster & Schedule Pickup',
       description: 'Fill your dumpster with construction debris, renovation waste, or cleanup materials.',
+      href: '/load-dumpster-and-schedule-pickup',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
@@ -51,6 +55,7 @@ export default function CleanupSection() {
       number: '05',
       title: 'Professional Waste Removal',
       description: 'Our team hauls away your filled dumpster and all waste materials on schedule.',
+      href: '/professional-waste-removal',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
@@ -62,6 +67,7 @@ export default function CleanupSection() {
       number: '06',
       title: 'Accurate Weight-Based Billing',
       description: 'Final billing based on actual dumpster weight - fair and transparent pricing.',
+      href: '/accurate-weight-based-billing',
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -140,9 +146,10 @@ export default function CleanupSection() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {steps.map((step, index) => (
-                <div 
+                <a 
                   key={index}
-                  className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                  href={step.href}
+                  className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 block"
                 >
                   {/* Step number background */}
                   <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
@@ -166,7 +173,7 @@ export default function CleanupSection() {
                   
                   {/* Hover effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-purple-700/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

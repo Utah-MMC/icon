@@ -122,34 +122,34 @@ export default function QuoteForm() {
     <div id="quote-form" className="w-full">
       {/* Form content will be styled by the parent container */}
       
-      <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl shadow-2xl p-8">
-        <form className="space-y-6" onSubmit={handleSubmit}>
+      <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-xl shadow-2xl p-6 md:p-8">
+        <form className="space-y-5" onSubmit={handleSubmit}>
         {/* Temporarily disabled honeypot for testing */}
         {/* <Honeypot onSpamDetected={handleSpamDetected} /> */}
         {/* Name Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               First Name
             </label>
             <input 
               type="text" 
               name="firstName"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
               placeholder="Enter your first name"
               required
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Last Name
             </label>
             <input 
               type="text" 
               name="lastName"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
               placeholder="Enter your last name"
               required
             />
@@ -157,29 +157,29 @@ export default function QuoteForm() {
         </div>
         
         {/* Contact Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Email Address
             </label>
             <input 
               type="email" 
               name="email"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
               placeholder="Enter your email address"
               required
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Phone Number
             </label>
             <input 
               type="tel" 
               name="phone"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
               placeholder="Enter your phone number"
               required
             />
@@ -187,26 +187,26 @@ export default function QuoteForm() {
         </div>
         
         {/* Location and Waste Type */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Zip Code
             </label>
             <input 
               type="text" 
               name="zipCode"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
               placeholder="Enter your zip code"
               required
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Waste Type
             </label>
-            <select name="wasteType" className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium" required>
+            <select name="wasteType" className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium" required>
               <option value="">Select Waste Type</option>
               <option value="Household Waste">Household Waste</option>
               <option value="Construction Debris">Construction Debris</option>
@@ -220,7 +220,7 @@ export default function QuoteForm() {
         
         {/* Dumpster Size Selection */}
         <div>
-          <label className="block text-sm font-semibold text-white mb-4 flex items-center">
+          <label className="block text-base font-semibold text-white mb-3 flex items-center">
             <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
             Dumpster Size
           </label>
@@ -253,9 +253,9 @@ export default function QuoteForm() {
         </div>
         
         {/* Date Selection */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Delivery Date
             </label>
@@ -263,7 +263,7 @@ export default function QuoteForm() {
               <input 
                 type="date" 
                 name="deliveryDate"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
                 required
                 min={new Date().toISOString().split('T')[0]} // Prevent past dates
               />
@@ -273,7 +273,7 @@ export default function QuoteForm() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+            <label className="block text-base font-semibold text-white mb-2 flex items-center">
               <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
               Pickup Date
             </label>
@@ -281,7 +281,7 @@ export default function QuoteForm() {
               <input 
                 type="date" 
                 name="pickupDate"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
                 required
                 min={new Date().toISOString().split('T')[0]} // Prevent past dates
               />
@@ -294,20 +294,20 @@ export default function QuoteForm() {
         
         {/* Additional Information */}
         <div>
-          <label className="block text-sm font-semibold text-white mb-3 flex items-center">
+          <label className="block text-base font-semibold text-white mb-2 flex items-center">
             <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
             Additional Information
           </label>
           <textarea 
             name="additionalInfo"
-            rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium resize-none placeholder-gray-500"
+            rows={3}
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium resize-none placeholder-gray-500"
             placeholder="Tell us about your project, special requirements, or any questions you have..."
           ></textarea>
         </div>
 
         {/* SMS Consent Checkbox */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-6">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-5">
           <div className="flex items-start space-x-4">
             <input 
               type="checkbox" 
@@ -336,7 +336,7 @@ export default function QuoteForm() {
         <button 
           type="submit" 
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white py-4 rounded-xl hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

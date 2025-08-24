@@ -5,6 +5,8 @@ import Link from "next/link";
 import Analytics from "../components/Analytics";
 import ArticleSchema from "../components/ArticleSchema";
 import FAQSchema from "../components/FAQSchema";
+import { useMemo, useState } from "react";
+import { zipToCity } from "../config/serviceAreas";
 
 export default function UtahDumpsterRentalLocations() {
   // Utah cities organized by region
@@ -65,7 +67,58 @@ export default function UtahDumpsterRentalLocations() {
     "Tooele County": [
       { name: "Tooele", url: "/tooele", guideUrl: "/tooel-dumpster-rental-guide-2025" }
     ]
-  };
+  } as const;
+
+  const [search, setSearch] = useState<string>("");
+  const [callbackPhone, setCallbackPhone] = useState<string>("");
+  const [callbackStatus, setCallbackStatus] = useState<'idle' | 'sent' | 'error'>("idle");
+
+  const zipMatchedCityNames = useMemo(() => {
+    const term = search.trim();
+    const isZipLike = /^\d{5}$/.test(term);
+    if (!isZipLike) return new Set<string>();
+    const lowerCaseMatches = new Set<string>();
+    Object.entries(zipToCity).forEach(([zip, city]) => {
+      if (zip.startsWith(term)) {
+        lowerCaseMatches.add(city.toLowerCase());
+      }
+    });
+    return lowerCaseMatches;
+  }, [search]);
+
+  const unknownZip = useMemo(() => {
+    const z = search.trim();
+    if (!/^\d{5}$/.test(z)) return false;
+    return !zipToCity[z];
+  }, [search]);
+
+  async function submitZipCallback() {
+    try {
+      const z = search.trim();
+      await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phone: callbackPhone,
+          zipCode: z,
+          source: 'locations-zip-callback',
+          subject: `Callback request for ZIP ${z}`,
+        }),
+      });
+      setCallbackStatus('sent');
+      setCallbackPhone('');
+    } catch {
+      setCallbackStatus('error');
+    }
+  }
+
+  function cityMatches(name: string): boolean {
+    const term = search.trim().toLowerCase();
+    if (!term) return true;
+    if (name.toLowerCase().includes(term)) return true;
+    if (zipMatchedCityNames.has(name.toLowerCase())) return true;
+    return false;
+  }
 
   return (
     <>
@@ -151,15 +204,28 @@ export default function UtahDumpsterRentalLocations() {
             <div className="mb-12 bg-white p-8 rounded-xl shadow-lg">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Find Your City</h3>
-                <p className="text-gray-600">Search for your city or browse by region below</p>
+                <p className="text-gray-600">Search by city name or ZIP code</p>
               </div>
               <div className="max-w-md mx-auto">
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Enter your city name..."
+                    placeholder="Enter city or ZIP..."
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
-                    id="citySearch"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        // If exactly one city matches, navigate to its page
+                        for (const [, cities] of Object.entries(utahCities)) {
+                          const filtered = (cities as any[]).filter(c => cityMatches(c.name));
+                          if (filtered.length === 1) {
+                            window.location.href = filtered[0].url;
+                            return;
+                          }
+                        }
+                      }
+                    }}
                   />
                   <div className="absolute right-3 top-3">
                     <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,20 +233,54 @@ export default function UtahDumpsterRentalLocations() {
                     </svg>
                   </div>
                 </div>
+                {unknownZip && (
+                  <div className="mt-4 p-4 border border-yellow-300 rounded-lg bg-yellow-50">
+                    <div className="text-sm text-yellow-800">
+                      We may still serve ZIP {search.trim()}. Talk to an expert now at
+                      {' '}
+                      <a href="tel:801-918-6000" className="font-semibold underline text-yellow-900">(801) 918-6000</a>
+                      {' '}or request a call back:
+                    </div>
+                    <div className="mt-3 flex flex-col sm:flex-row gap-2">
+                      <input
+                        type="tel"
+                        value={callbackPhone}
+                        onChange={(e) => setCallbackPhone(e.target.value)}
+                        placeholder="Your phone number"
+                        className="flex-1 border rounded-lg px-3 py-2"
+                      />
+                      <button
+                        onClick={submitZipCallback}
+                        className="px-4 py-2 rounded-lg bg-[#4e37a8] text-white"
+                      >
+                        Request Call
+                      </button>
+                    </div>
+                    {callbackStatus === 'sent' && (
+                      <div className="mt-2 text-sm text-green-700">Thanks! We’ll call you shortly.</div>
+                    )}
+                    {callbackStatus === 'error' && (
+                      <div className="mt-2 text-sm text-red-600">Something went wrong. Please call us directly.</div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Cities by Region */}
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-              {Object.entries(utahCities).map(([region, cities]) => (
+              {Object.entries(utahCities).map(([region, cities]) => {
+                const filteredCities = (cities as any[]).filter((city) => cityMatches(city.name));
+                if (search.trim() && filteredCities.length === 0) return null;
+                return (
                 <div key={region} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 p-6">
                     <h3 className="text-xl font-bold text-white">{region}</h3>
-                    <p className="text-purple-100 mt-1">{cities.length} cities served</p>
+                    <p className="text-purple-100 mt-1">{(search.trim() ? filteredCities.length : (cities as any[]).length)} cities served</p>
                   </div>
                   <div className="p-6">
                     <div className="space-y-3">
-                      {cities.map((city) => (
+                      {filteredCities.map((city) => (
                         <div key={city.name} className="city-item">
                           <div className="flex justify-between items-center">
                             <Link 
@@ -211,7 +311,7 @@ export default function UtahDumpsterRentalLocations() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
         </section>
@@ -338,27 +438,7 @@ export default function UtahDumpsterRentalLocations() {
         </section>
       </div>
 
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('citySearch');
-            const cityItems = document.querySelectorAll('.city-item');
-            
-            searchInput.addEventListener('input', function(e) {
-              const searchTerm = e.target.value.toLowerCase();
-              
-              cityItems.forEach(item => {
-                const cityName = item.querySelector('a').textContent.toLowerCase();
-                if (cityName.includes(searchTerm)) {
-                  item.style.display = 'block';
-                } else {
-                  item.style.display = 'none';
-                }
-              });
-            });
-          });
-        `
-      }} />
+      
     </>
   );
 }

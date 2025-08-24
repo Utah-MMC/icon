@@ -68,10 +68,10 @@ export default function Home() {
         {/* Background image */}
         <div className="relative h-screen bg-[#4e37a8] flex items-center justify-center">
         <ImageWithFallback 
-            src="/images/hero.png" 
+            src="/images/here-topaz-enhance-2x-remove-textai.jpeg" 
             alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
             className="w-full h-full object-cover"
-            fallbackSrc="/images/hero.png"
+            fallbackSrc="/images/here-topaz-enhance-2x-remove-textai.jpeg"
           />
         </div>
         
@@ -93,18 +93,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Quote Form Section */}
-      <section id="quote-form" className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote Today</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Fill out the form below and we'll get back to you with a competitive quote for your dumpster rental needs.
-            </p>
-          </div>
-          <QuoteForm />
-        </div>
-      </section>
+      {/* Our Guarantee Section moved to component below to avoid duplicates */}
+
 
       {/* Revamped Dumpster Rental Service Section */}
       <section className="relative bg-gradient-to-br from-gray-50 via-white to-purple-50 py-20 overflow-hidden">
@@ -341,31 +331,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="bg-gradient-to-br from-gray-50 via-white to-purple-50 rounded-2xl shadow-xl p-8 text-center">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4e37a8] to-purple-600 bg-clip-text text-transparent mb-4">
-                Ready to Get Started?
-              </h3>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Get your instant quote today and experience the difference
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-4 rounded-xl hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Get Free Quote
-                </a>
-                <a href="tel:801-918-6000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-8 py-4 rounded-xl hover:bg-[#4e37a8] hover:text-white transition-all duration-300 font-semibold text-lg">
-                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  Call Now
-                </a>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -519,7 +485,7 @@ export default function Home() {
               <span className="text-[#4e37a8]">Rental Sizes</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect dumpster size for your project. All rentals include delivery, pickup, and landfill fees.
+              Choose the perfect dumpster size for your project. All rentals include delivery and pickup. Landfill disposal is billed by weight at $55/ton — no weight is included.
             </p>
           </div>
 
@@ -552,12 +518,12 @@ export default function Home() {
                 
                 <div className="pb-3">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <span className="text-[#4e37a8] font-semibold">Weight pricing:</span>
                     <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">1.5 tons...</p>
+                  <p className="text-gray-700">$55/ton (no weight included)</p>
                 </div>
               </div>
               
@@ -591,12 +557,12 @@ export default function Home() {
                 
                 <div className="pb-3">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <span className="text-[#4e37a8] font-semibold">Weight pricing:</span>
                     <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">2 tons...</p>
+                  <p className="text-gray-700">$55/ton (no weight included)</p>
                 </div>
               </div>
               
@@ -630,12 +596,12 @@ export default function Home() {
                 
                 <div className="pb-3">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[#4e37a8] font-semibold">Weight:</span>
+                    <span className="text-[#4e37a8] font-semibold">Weight pricing:</span>
                     <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">3 tons...</p>
+                  <p className="text-gray-700">$55/ton (no weight included)</p>
                 </div>
               </div>
               
@@ -645,8 +611,46 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Trust Section */}
-      <TrustSection />
+      {/* Trust Section removed on home to avoid duplication */}
+
+      {/* Call to Action - moved further down */}
+      <section className="bg-gradient-to-br from-gray-50 via-white to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4e37a8] to-purple-600 bg-clip-text text-transparent mb-4">Ready to Get Started?</h3>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Get your instant quote today and experience the difference</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-4 rounded-xl hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Get Free Quote
+                </a>
+                <a href="tel:801-918-6000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-8 py-4 rounded-xl hover:bg-[#4e37a8] hover:text-white transition-all duration-300 font-semibold text-lg">
+                  <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form Section (relocated lower) */}
+      <section id="quote-form" className="bg-white py-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Get Your Free Quote Today</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Tell us a few details and we’ll send a competitive quote.
+            </p>
+          </div>
+          <QuoteForm />
+        </div>
+      </section>
 
       {/* Reviews Section */}
       <ReviewsCarousel />

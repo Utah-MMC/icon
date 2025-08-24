@@ -19,17 +19,65 @@ interface CityPageTemplateProps {
 
 export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, heroImages = [], showCalculator = false }: CityPageTemplateProps) {
   const cityShort = city.replace(', UT', '').replace('City of ', '');
+
+  // Deterministic pseudo-randomness per city to diversify layout/copy
+  function xfnv1a(str: string) {
+    let h = 2166136261 >>> 0;
+    for (let i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24);
+    }
+    return h >>> 0;
+  }
+  function mulberry32(a: number) {
+    return function () {
+      let t = (a += 0x6D2B79F5);
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  const rng = mulberry32(xfnv1a(cityShort));
+  const pick = <T,>(arr: T[]): T => arr[Math.floor(rng() * arr.length)] as T;
+  const shuffle = <T,>(arr: T[]): T[] => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
+  // Variant text/styles
+  const heroTitle = pick([
+    `Dumpster Rental ${cityShort}`,
+    `${cityShort} Dumpster Rentals`,
+    `Roll‑off Dumpster Rental ${cityShort}`,
+    `Rent a Dumpster in ${cityShort}`,
+  ]);
+  const heroSubtitle = pick([
+    'Same‑day delivery, transparent pricing, and friendly local service. 15, 20, and 30‑yard roll‑off dumpsters.',
+    'Fast, reliable dumpsters for any project with clear pricing and local pros.',
+    'From cleanouts to construction, get the right roll‑off size with honest pricing.',
+  ]);
+  const heroGradient = pick([
+    'from-[#4e37a8] via-purple-700 to-[#4e37a8]',
+    'from-purple-700 via-[#4e37a8] to-purple-700',
+    'from-indigo-600 via-purple-700 to-indigo-600',
+  ]);
+
+  const neighborhoodsShuffled = shuffle(neighborhoods);
+  const nearbyLinksShuffled = shuffle(nearbyLinks);
+  const gallerySwap = rng() > 0.5;
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-16">
+      <section className={`bg-gradient-to-br ${heroGradient} text-white py-16`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Dumpster Rental {cityShort}</h1>
-              <p className="text-purple-100 text-lg md:text-xl">
-                Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30‑yard roll‑off dumpsters.
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">{heroTitle}</h1>
+              <p className="text-purple-100 text-lg md:text-xl">{heroSubtitle}</p>
             </div>
             {heroImages[0] && (
               <div className="h-48 md:h-56 lg:h-64 relative rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center">
@@ -57,22 +105,22 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
         <section className="bg-white rounded-xl shadow-md p-8 mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-purple-50 p-6 rounded-lg">
+            <Link href="/same-day-delivery" className="bg-purple-50 p-6 rounded-lg block hover:ring-2 hover:ring-purple-300 transition-shadow">
               <h3 className="text-xl font-semibold text-purple-900 mb-2">🚚 Same‑Day Delivery</h3>
               <p className="text-gray-700">Fast delivery across {cityShort} and the valley.</p>
-            </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            </Link>
+            <Link href="/transparent-pricing" className="bg-blue-50 p-6 rounded-lg block hover:ring-2 hover:ring-blue-300 transition-shadow">
               <h3 className="text-xl font-semibold text-blue-900 mb-2">💰 Transparent Pricing</h3>
               <p className="text-gray-700">No hidden fees. Bundle pricing for 1‑day, 3‑7 days, and 30‑day rentals.</p>
-            </div>
-            <div className="bg-green-50 p-6 rounded-lg">
+            </Link>
+            <Link href="/local-pros" className="bg-green-50 p-6 rounded-lg block hover:ring-2 hover:ring-green-300 transition-shadow">
               <h3 className="text-xl font-semibold text-green-900 mb-2">👷 Local Pros</h3>
               <p className="text-gray-700">Experienced drivers and regulation know‑how.</p>
-            </div>
-            <div className="bg-orange-50 p-6 rounded-lg">
+            </Link>
+            <Link href="/responsible-disposal" className="bg-orange-50 p-6 rounded-lg block hover:ring-2 hover:ring-orange-300 transition-shadow">
               <h3 className="text-xl font-semibold text-orange-900 mb-2">♻️ Responsible Disposal</h3>
               <p className="text-gray-700">We recycle whenever possible.</p>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -83,13 +131,13 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Neighborhoods</h3>
               <ul className="space-y-1 text-gray-700">
-                {neighborhoods.map((n) => (<li key={n}>• {n}</li>))}
+                {neighborhoodsShuffled.map((n) => (<li key={n}>• {n}</li>))}
               </ul>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities</h3>
               <ul className="space-y-1 text-gray-700">
-                {nearbyLinks.map((l) => (
+                {nearbyLinksShuffled.map((l) => (
                   <li key={l.href}>• <Link href={l.href} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
                 ))}
               </ul>
@@ -100,24 +148,17 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
         {/* Visual Gallery: two images side by side to fill space */}
         <section className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="w-full h-64 md:h-80 lg:h-96 relative rounded-xl overflow-hidden shadow bg-white flex items-center justify-center">
-              <ImageWithFallback 
-                src={heroImages[0]?.src || '/images/IMG_0350.jpg'} 
-                fallbackSrc={heroImages[0]?.fallback || '/images/dumpsterWithTruck.jpeg'} 
-                alt={`${cityShort} dumpster rental Utah - roll-off dumpster near me`} 
-                fill 
-                className="object-contain" 
-              />
-            </div>
-            <div className="w-full h-64 md:h-80 lg:h-96 relative rounded-xl overflow-hidden shadow bg-white flex items-center justify-center">
-              <ImageWithFallback 
-                src={heroImages[1]?.src || '/images/dumpsterWithTruck.jpeg'} 
-                fallbackSrc={heroImages[1]?.fallback || '/images/dumpsters.webp'} 
-                alt={`${cityShort} roll-off dumpsters - Utah dumpster rental`} 
-                fill 
-                className="object-contain" 
-              />
-            </div>
+            {(!gallerySwap ? [0,1] : [1,0]).map((idx) => (
+              <div key={idx} className="w-full h-64 md:h-80 lg:h-96 relative rounded-xl overflow-hidden shadow bg-white flex items-center justify-center">
+                <ImageWithFallback 
+                  src={(heroImages[idx]?.src) || (idx === 0 ? '/images/IMG_0350.jpg' : '/images/dumpsterWithTruck.jpeg')} 
+                  fallbackSrc={(heroImages[idx]?.fallback) || (idx === 0 ? '/images/dumpsterWithTruck.jpeg' : '/images/dumpsters.webp')} 
+                  alt={`${cityShort} ${idx === 0 ? 'dumpster rental Utah - roll-off dumpster near me' : 'roll-off dumpsters - Utah dumpster rental'}`} 
+                  fill 
+                  className="object-contain" 
+                />
+              </div>
+            ))}
           </div>
         </section>
 

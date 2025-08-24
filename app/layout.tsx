@@ -11,8 +11,10 @@ import CompetitiveKPITracking from "./components/CompetitiveKPITracking";
 import EnhancedHeader from "./components/EnhancedHeader";
 // removed direct track usage from server layout
 import AnalyticsDelegator from "./components/AnalyticsDelegator";
+import AnalyticsBoot from "./components/AnalyticsBoot";
 import ChatWidget from "./components/ChatWidget";
 import Footer from "./components/Footer";
+import MobileNav from "./components/MobileNav";
 import ConditionalCalculatorBanner from "./components/ConditionalCalculatorBanner";
 import PromotionalBanner from "./components/PromotionalBanner";
 import FacebookPixel from "./components/FacebookPixel";
@@ -161,6 +163,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <CompetitiveKPITracking />
+        <AnalyticsBoot />
         <AnalyticsDelegator />
         {/* Top Bar - Purple Theme */}
         <div className="bg-[#4e37a8] text-white py-2">
@@ -196,21 +199,34 @@ export default function RootLayout({
         {/* Header/Navigation Bar - White */}
         <header className="bg-[#4e37a8] shadow-sm border-b border-purple-700 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
+            <div className="flex justify-between items-center h-16 relative">
               <div className="flex items-center">
-                <div className="bg-white p-2 rounded-lg shadow-sm">
+                <a href="/" aria-label="Home" className="bg-white p-2 rounded-lg shadow-sm">
                   <img src="/Icon_Dumpsters_Final.png" alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" className="h-12 w-auto" />
-                </div>
+                </a>
               </div>
-                              <nav className="hidden md:flex space-x-8">
-                  <a href="/" className="text-white hover:text-purple-200 transition-colors font-medium">HOME</a>
-                  <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICES</a>
-                  <a href="/locations" className="text-white hover:text-purple-200 transition-colors font-medium">SERVICE AREA</a>
-                  <a href="/fees" className="text-white hover:text-purple-200 transition-colors font-medium">FEES</a>
-                  <a href="/estate-cleanout" className="text-white hover:text-purple-200 transition-colors font-medium">ESTATE CLEANOUT</a>
+              {/* Desktop/Nav */}
+                              <nav className="hidden md:flex space-x-5">
+                  {/* Services Dropdown */}
+                  <div className="relative group">
+                    <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+                      SERVICES
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                      <div className="py-2">
+                        <a href="/services" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">All Services</a>
+                        <a href="/estate-cleanout" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Estate Cleanout</a>
+                        <a href="/fees" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Fees</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="/locations" className="text-white hover:text-purple-200 transition-colors font-medium">AREA</a>
                   <div className="relative group">
                     <a href="/dumpster-sizes" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
-                      DUMPSTER SIZES
+                      SIZES
                       <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
@@ -275,17 +291,16 @@ export default function RootLayout({
                       </div>
                     </div>
                   </div>
-                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center" aria-label="Calculator" title="Calculator">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
-                    CALCULATOR
+                    <span className="sr-only">Calculator</span>
                   </a>
-                  <a href="/blog" className="text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
-                  <a href="/frequent-buyers" className="text-white hover:text-purple-200 transition-colors font-medium">FREQUENT BUYERS</a>
-                  <a href="/book" className="text-white hover:text-purple-200 transition-colors font-medium">BOOK NOW</a>
-                  <a href="/kpi-dashboard" className="text-white hover:text-purple-200 transition-colors font-medium">DASHBOARD</a>
-                  <div className="relative group">
+                  <a href="/blog" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+                  <a href="/frequent-buyers" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BUYERS</a>
+                  <a href="/book" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BOOK</a>
+                  <div className="relative group hidden lg:block">
                     <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       ABOUT
                       <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -311,10 +326,33 @@ export default function RootLayout({
                       </div>
                     </div>
                   </div>
+                  {/* More menu for small/medium screens */}
+                  <div className="relative group lg:hidden">
+                    <button className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+                      MORE
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                    <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                      <div className="py-2">
+                        <a href="/blog" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Blog</a>
+                        <a href="/frequent-buyers" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Frequent Buyers</a>
+                        <a href="/book" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Book Now</a>
+                        <div className="border-t my-1"></div>
+                        <a href="/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">About Us</a>
+                        <a href="/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Reviews</a>
+                        <a href="/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">FAQ</a>
+                        <a href="/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Contact</a>
+                      </div>
+                    </div>
+                  </div>
                 </nav>
-              <div className="flex items-center">
+              {/* Mobile hamburger */}
+              <MobileNav />
+              <div className="hidden md:flex items-center">
                 <a href="#quote-form" data-analytics-type="cta" data-analytics-name="header_quote" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
-                  <span>Get A Quote</span>
+                  <span>Get Quote</span>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>

@@ -182,17 +182,18 @@ function handleZipCodeSearch() {
 export default function Footer() {
   return (
     <footer className="bg-[#4e37a8] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
           {/* Search & Quick Links */}
           <div>
-            <h4 className="text-white underline font-semibold mb-3">Find Your Location</h4>
-            <div className="flex space-x-2 mb-3">
+            <h4 className="text-white font-semibold mb-3">Find Your Location</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-2 mb-3">
               <input
                 type="text"
                 id="zipCodeInput"
                 placeholder="Enter Zip Code"
-                className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm text-gray-900"
+                aria-label="Zip code"
+                className="w-full sm:min-w-0 px-3 py-2 rounded text-sm text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/60"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     handleZipCodeSearch();
@@ -201,7 +202,7 @@ export default function Footer() {
               />
               <button 
                 onClick={handleZipCodeSearch}
-                className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
+                className="bg-green-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto"
               >
                 Search
               </button>
@@ -215,7 +216,7 @@ export default function Footer() {
 
           {/* Top Cities */}
           <div>
-            <h4 className="text-white underline font-semibold mb-3">Top Cities</h4>
+            <h4 className="text-white font-semibold mb-3">Top Cities</h4>
             <div className="grid grid-cols-2 gap-1 text-sm">
               <a href="/salt-lake-city" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
               <a href="/west-valley-city" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
@@ -234,7 +235,7 @@ export default function Footer() {
 
           {/* Helpful Links */}
           <div>
-            <h4 className="text-white underline font-semibold mb-3">Helpful Links</h4>
+            <h4 className="text-white font-semibold mb-3">Helpful Links</h4>
             <div className="grid grid-cols-1 gap-1 text-sm">
               <a href="/dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
               <a href="/dumpster-rentals-near-me-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
@@ -249,7 +250,7 @@ export default function Footer() {
 
           {/* Offices & Yards (NAP) */}
           <div>
-            <h4 className="text-white underline font-semibold mb-3">Offices & Yards</h4>
+            <h4 className="text-white font-semibold mb-3">Offices & Yards</h4>
             <div className="space-y-2 text-sm">
               <div>
                 <div className="text-purple-200">Salt Lake City Yard</div>
@@ -266,12 +267,12 @@ export default function Footer() {
 
           {/* Review & Contact */}
           <div>
-            <h4 className="text-white underline font-semibold mb-3">Leave a Review</h4>
-            <div className="text-center mb-4">
+            <h4 className="text-white font-semibold mb-3">Leave a Review</h4>
+            <div className="mb-4">
               <img 
                 src="/google-review-barcode.png" 
                 alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
-                className="w-16 h-16 object-contain border border-gray-300 rounded-lg mx-auto mb-2"
+                className="w-16 h-16 object-contain border border-gray-300 rounded-lg mb-2"
               />
               <p className="text-xs text-gray-300 mb-2">Scan for Google Review</p>
               <button
@@ -292,7 +293,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-6 pt-6 border-t border-gray-600">
+        <div className="mt-8 pt-6 border-t border-white/20">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-300">
               ©2025 Icon Dumpsters. All Rights Reserved | <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>

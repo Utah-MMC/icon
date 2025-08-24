@@ -78,29 +78,7 @@ export default function TrustSection() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-lg text-gray-600 mb-6">
-            Get your instant quote today and experience the difference
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#quote-form" 
-              className="bg-[#4e37a8] text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-lg"
-            >
-              Get Free Quote
-            </a>
-            <a 
-              href="tel:(801) 918-6000" 
-              className="bg-white text-[#4e37a8] border-2 border-[#4e37a8] px-8 py-3 rounded-lg hover:bg-[#4e37a8] hover:text-white transition-colors font-medium text-lg"
-            >
-              Call Now
-            </a>
-          </div>
-        </div>
+        {/* CTA handled on pages to avoid duplicates */}
       </div>
     </div>
   );

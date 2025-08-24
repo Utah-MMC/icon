@@ -8,6 +8,13 @@ export default function AnalyticsDelegator() {
     function handleClick(e: MouseEvent) {
       const target = e.target as HTMLElement | null;
       if (!target) return;
+      // tel: and mailto:
+      const a = target.closest('a[href^="tel:"],a[href^="mailto:"]') as HTMLAnchorElement | null;
+      if (a) {
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('tel:')) { try { track('cta','phone_click',{ href }); } catch {} }
+        if (href.startsWith('mailto:')) { try { track('cta','email_click',{ href }); } catch {} }
+      }
       const el = target.closest('[data-analytics-type]') as HTMLElement | null;
       if (!el) return;
       const type = el.getAttribute('data-analytics-type');

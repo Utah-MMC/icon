@@ -60,7 +60,7 @@ export default function SaltLakeCityPage() {
         { label: 'Fairpark', href: '/fairpark' }
       ]}
       heroImages={[
-        { src: '/images/dumpsterSmallBanner3.jpeg', fallback: '/images/dumpsterSmallBanner3.webp' },
+        { src: '/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp', fallback: '/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp' },
         { src: '/images/IMG_0350.jpg', fallback: '/images/dumpsters.webp' }
       ]}
     />
