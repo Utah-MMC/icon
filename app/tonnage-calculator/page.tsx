@@ -1,6 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Tonnage Calculator – Estimate Material Weights | Icon Dumpsters",
+  description: "Estimate tons from volume and material type to choose the right dumpster and avoid overweight charges. $55/ton billed after weighing.",
+  alternates: { canonical: "/tonnage-calculator" }
+};
 
 export default function TonnageCalculatorPage() {
   return (

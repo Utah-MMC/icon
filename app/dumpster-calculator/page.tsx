@@ -1,12 +1,17 @@
-"use client";
-
+import type { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/Analytics";
 import ArticleSchema from "../components/ArticleSchema";
 import FAQSchema from "../components/FAQSchema";
-import DumpsterCalculator from "../components/DumpsterCalculator";
 import CallToActionBanner from "../components/CallToActionBanner";
+import DumpsterCalculatorPageClient from "./DumpsterCalculatorPageClient";
+
+export const metadata: Metadata = {
+  title: "Dumpster Calculator – Costs, Weight, Delivery Fees | Icon Dumpsters",
+  description: "Calculate dumpster rental costs, weight estimates, and delivery fees for 15, 20, and 30‑yard dumpsters in Utah. Get an instant estimate.",
+  alternates: { canonical: "/dumpster-calculator" }
+};
 
 export default function DumpsterCalculatorPage() {
   return (
@@ -78,7 +83,7 @@ export default function DumpsterCalculatorPage() {
 
         {/* Calculator Section */}
         <section id="calculator" className="py-16 bg-gray-50">
-          <DumpsterCalculator />
+          <DumpsterCalculatorPageClient />
         </section>
 
         {/* Call to Action Banner */}
