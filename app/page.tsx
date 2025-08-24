@@ -63,10 +63,10 @@ export default function Home() {
         {/* Background image */}
         <div className="relative h-screen bg-[#4e37a8] flex items-center justify-center">
         <ImageWithFallback 
-            src="/images/hero-main.png" 
+            src="/images/hero.png" 
             alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
             className="w-full h-full object-cover"
-            fallbackSrc="/images/hero-main.png"
+            fallbackSrc="/images/hero.png"
           />
         </div>
         

@@ -254,57 +254,20 @@ export default function ChatWidget() {
     const timers: number[] = [];
     const disposers: Array<() => void> = [];
 
-    // Open immediately on load if configured (ignore cap)
-    if (chatConfig.triggers.openOnLoad) {
-      openWithGreeting('load');
-    } else {
-      // Time delay trigger
-      if (!isCapped && chatConfig.triggers.timeDelayMs > 0) {
-        const t = window.setTimeout(() => openWithGreeting('time_delay'), chatConfig.triggers.timeDelayMs);
-        timers.push(t);
-      }
-
-      // Scroll trigger
-      if (!isCapped && chatConfig.triggers.scrollPercent > 0) {
-        const onScroll = () => {
-          const doc = document.documentElement;
-          const maxScroll = doc.scrollHeight - window.innerHeight;
-          const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
-          if (percent >= chatConfig.triggers.scrollPercent) {
-            openWithGreeting('scroll');
-            window.removeEventListener('scroll', onScroll);
-          }
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        disposers.push(() => window.removeEventListener('scroll', onScroll));
-      }
-
-      // Exit-intent trigger
-      if (!isCapped && chatConfig.triggers.exitIntent) {
-        const onMouseOut = (e: MouseEvent) => {
-          if (!e.relatedTarget && (e as any).clientY <= 0) {
-            openWithGreeting('exit_intent');
-            window.removeEventListener('mouseout', onMouseOut);
-          }
-        };
-        window.addEventListener('mouseout', onMouseOut);
-        disposers.push(() => window.removeEventListener('mouseout', onMouseOut));
-      }
-
-      // Idle trigger
-      if (!isCapped && chatConfig.triggers.idleMs > 0) {
-        let idleTimer = window.setTimeout(() => openWithGreeting('idle'), chatConfig.triggers.idleMs);
-        const reset = () => {
-          window.clearTimeout(idleTimer);
-          idleTimer = window.setTimeout(() => openWithGreeting('idle'), chatConfig.triggers.idleMs);
-        };
-        const events: (keyof DocumentEventMap)[] = ['mousemove', 'keydown', 'scroll', 'touchstart'];
-        events.forEach((ev) => window.addEventListener(ev, reset, { passive: true } as any));
-        disposers.push(() => {
-          window.clearTimeout(idleTimer);
-          events.forEach((ev) => window.removeEventListener(ev, reset));
-        });
-      }
+    // Only open on near-bottom scroll (no load/time/exit/idle auto open)
+    if (!isCapped) {
+      const NEAR_BOTTOM_PERCENT = 90; // "almost the bottom"
+      const onScroll = () => {
+        const doc = document.documentElement;
+        const maxScroll = doc.scrollHeight - window.innerHeight;
+        const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+        if (percent >= NEAR_BOTTOM_PERCENT) {
+          openWithGreeting('scroll_bottom');
+          window.removeEventListener('scroll', onScroll);
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      disposers.push(() => window.removeEventListener('scroll', onScroll));
     }
 
     return () => {

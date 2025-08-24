@@ -77,7 +77,7 @@ export default function QuoteForm() {
         body: formDataToSend as any,
       }).then(() => {
         // Assume success if no error
-        alert('Thank you! Your quote request has been submitted successfully.');
+        alert('Thank you! Your quote request has been submitted successfully. Please check your email.');
         form.reset();
         setRecaptchaToken('');
       }).catch((error) => {
