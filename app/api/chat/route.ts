@@ -322,11 +322,25 @@ export async function POST(request: NextRequest) {
         const phone = sanitize(body.phone);
         const zipCode = sanitize(body.zipCode);
         const dumpsterSize = sanitize(body.dumpsterSize);
+        const leadType = sanitize((body.leadType as string) || '');
+        // Sell-house specific fields
+        const address = sanitize((body.address as string) || '');
+        const askingPrice = sanitize((body.askingPrice as string) || '');
+        const beds = sanitize((body.beds as string) || '');
+        const baths = sanitize((body.baths as string) || '');
+        const squareFeet = sanitize((body.squareFeet as string) || '');
+        const agentName = sanitize((body.agentName as string) || '');
+        const agentPhone = sanitize((body.agentPhone as string) || '');
+        const idealClosingDate = sanitize((body.idealClosingDate as string) || '');
+        const notes = sanitize((body.notes as string) || '');
+        const photosMeta = Array.isArray(body.photosMeta) ? body.photosMeta as any[] : [];
         const pageUrl = sanitize(body.pageUrl);
         const transcript: ChatMessage[] = Array.isArray(body.transcript) ? body.transcript : [];
 
         const submittedAt = new Date().toLocaleString();
-        const subject = `New Chat Lead - ${dumpsterSize ? `${dumpsterSize} Yard` : 'Icon Dumpsters'}`;
+        const subject = leadType === 'sell_house'
+          ? `New Sell House Lead - Icon Dumpsters`
+          : `New Chat Lead - ${dumpsterSize ? `${dumpsterSize} Yard` : 'Icon Dumpsters'}`;
 
         const signature = `
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:12px">
@@ -356,7 +370,21 @@ export async function POST(request: NextRequest) {
           `)
           .join('');
 
-        const html = `
+        const sellHouseBlock = leadType === 'sell_house' ? `
+              <h2 style="margin-top:24px;color:#4e37a8">Property Details</h2>
+              <table>
+                <tr><th>Address</th><td>${address}</td></tr>
+                <tr><th>Asking Price</th><td>${askingPrice ? `$${askingPrice}` : ''}</td></tr>
+                <tr><th>Beds / Baths</th><td>${beds || '-'} / ${baths || '-'}</td></tr>
+                <tr><th>Square Footage</th><td>${squareFeet}</td></tr>
+                <tr><th>Ideal Closing Date</th><td>${idealClosingDate}</td></tr>
+                <tr><th>Agent</th><td>${agentName} ${agentPhone ? `(${agentPhone})` : ''}</td></tr>
+                <tr><th>Notes</th><td>${notes}</td></tr>
+                <tr><th>Photos</th><td>${photosMeta && photosMeta.length ? photosMeta.map((p:any)=>`${p.name} (${Math.round((p.size||0)/1024)} KB)`).join('<br/>') : '—'}</td></tr>
+              </table>
+            ` : '';
+
+        const genericDetails = `
         <!DOCTYPE html>
         <html>
           <head>
@@ -374,16 +402,17 @@ export async function POST(request: NextRequest) {
           </head>
           <body>
             <div class="container">
-              <h1>New Chat Lead</h1>
+              <h1>${leadType === 'sell_house' ? 'New Sell House Lead' : 'New Chat Lead'}</h1>
               <table>
                 <tr><th>Name</th><td>${firstName} ${lastName}</td></tr>
                 <tr><th>Email</th><td>${email}</td></tr>
                 <tr><th>Phone</th><td>${phone}</td></tr>
-                <tr><th>Zip Code</th><td>${zipCode}</td></tr>
-                <tr><th>Dumpster Size</th><td>${dumpsterSize}</td></tr>
+                ${leadType === 'sell_house' ? '' : `<tr><th>Zip Code</th><td>${zipCode}</td></tr>`}
+                ${leadType === 'sell_house' ? '' : `<tr><th>Dumpster Size</th><td>${dumpsterSize}</td></tr>`}
                 <tr><th>Page URL</th><td>${pageUrl}</td></tr>
                 <tr><th>Submitted At</th><td>${submittedAt}</td></tr>
               </table>
+              ${sellHouseBlock}
               <h2 style="margin-top:24px;color:#4e37a8">Chat Transcript</h2>
               <table>
                 <tr>
@@ -402,7 +431,7 @@ export async function POST(request: NextRequest) {
           to: 'icondumpsters@gmail.com',
           bcc: 'icondumpsters@gmail.com',
           subject,
-          html,
+          html: genericDetails,
         });
 
         // Optional: send confirmation if email provided

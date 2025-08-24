@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { track } from './track';
 
 export default function DumpsterCalculator() {
@@ -8,6 +8,7 @@ export default function DumpsterCalculator() {
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedDuration, setSelectedDuration] = useState('');
   const [isVeteran, setIsVeteran] = useState(false);
+  const [rentalDate, setRentalDate] = useState('');
   const [result, setResult] = useState('');
   const [showBookingQuestion, setShowBookingQuestion] = useState(false);
   const [wantsBooking, setWantsBooking] = useState<boolean | null>(null);
@@ -15,6 +16,7 @@ export default function DumpsterCalculator() {
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [contactError, setContactError] = useState('');
   const [showCallPopup, setShowCallPopup] = useState(false);
+  const dateInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleCalculate = () => {
     if (!zipCode || !selectedSize || !selectedDuration) {
@@ -25,13 +27,15 @@ export default function DumpsterCalculator() {
     // Simple pricing calculation
     const basePrices = {
       '10': 250,
+      '12': 350,
       '15': 350,
       '20': 375,
       '30': 450,
       '40': 525
     };
 
-    const basePrice = basePrices[selectedSize as keyof typeof basePrices] || 350;
+    const pricingKey = (selectedSize === '10' || selectedSize === '12') ? '30' : selectedSize;
+    const basePrice = basePrices[pricingKey as keyof typeof basePrices] || 350;
     const days = parseInt(selectedDuration);
     const isThirtyDay = days === 30;
     let totalEstimate = basePrice;
@@ -42,10 +46,12 @@ export default function DumpsterCalculator() {
         '20': 525,
         '30': 600
       };
-      totalEstimate = thirtyDayPrices[selectedSize as keyof typeof thirtyDayPrices] || 500;
+      totalEstimate = thirtyDayPrices[pricingKey as keyof typeof thirtyDayPrices] || 600;
     } else if (days === 1) {
-      totalEstimate = basePrice * 0.7; // 30% discount for 1-day
+      // Special single‑day pricing
+      totalEstimate = basePrice * 0.7; // 30% discount for 1 day
     } else if (days <= 7) {
+      // Bundle pricing: 3–7 days cost the same as the 7‑day bundle
       totalEstimate = basePrice;
     } else {
       const extraDays = days - 7;
@@ -60,7 +66,7 @@ export default function DumpsterCalculator() {
     let html = '<div class="bg-gradient-to-br from-purple-50 to-[#4e37a8]/10 p-6 rounded-lg border-2 border-[#4e37a8]/20 shadow-md">';
     html += '<h4 class="text-lg font-bold text-[#4e37a8] mb-3">💰 Estimated Cost</h4>';
     html += '<div class="text-3xl font-bold text-[#4e37a8] mb-2">$' + finalPrice.toLocaleString() + '</div>';
-    html += '<p class="text-gray-600 mb-3">For ' + selectedSize + '-yard dumpster, ' + selectedDuration + ' day' + (selectedDuration === '1' ? '' : 's') + ' in ' + zipCode + '</p>';
+    html += '<p class="text-gray-600 mb-3">For ' + selectedSize + '-yard dumpster, ' + selectedDuration + ' day' + (selectedDuration === '1' ? '' : 's') + ' in ' + zipCode + (rentalDate ? (' on ' + rentalDate) : '') + '</p>';
     
     html += '<div class="text-sm text-gray-600 space-y-1">';
     if (selectedDuration === '1') {
@@ -83,6 +89,13 @@ export default function DumpsterCalculator() {
       html += '</div>';
     }
     
+    // Note for specialized dumpsters pricing
+    if (selectedSize === '10' || selectedSize === '12') {
+      html += '<div class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">';
+      html += '<p class="text-sm text-blue-800">Specialized dumpsters (dirt, concrete, mixed heavy loads) are priced at our 30‑yard rate due to handling and weight.</p>';
+      html += '</div>';
+    }
+
     if (isVeteran) {
       html += '<div class="text-[#4e37a8] font-semibold">Veteran discount (10%): -$' + veteranDiscount.toLocaleString() + '</div>';
     }
@@ -103,6 +116,12 @@ export default function DumpsterCalculator() {
     html += '</p>';
     html += '</div>';
     
+    if (days >= 2 && days <= 7) {
+      html += '<div class="mt-3 p-3 bg-green-50 rounded-lg border border-green-200">';
+      html += '<p class="text-sm text-green-800"><strong>Bundle Applied:</strong> 3–7 day bundle pricing — pay the same as a 7‑day rental.</p>';
+      html += '</div>';
+    }
+
     html += '<div class="mt-3 p-3 bg-purple-50 rounded-lg border border-[#4e37a8]/20">';
     html += '<p class="text-sm text-[#4e37a8]">';
     html += '<strong>⚖️ Tonnage billed separately after service is weighed at $55.00 per ton.</strong> This estimate does not include weight charges.';
@@ -174,7 +193,39 @@ export default function DumpsterCalculator() {
               />
               <p className="text-xs text-gray-500 mt-2">Multiple hubs serving Utah - calculator finds closest location</p>
             </div>
-            
+
+        {/* Preferred Delivery Date */}
+        <div className="max-w-md mx-auto mb-6">
+          <label htmlFor="preferredDate" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center">
+            <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-2"></span>
+            📅 Preferred Delivery Date
+          </label>
+          <div
+            className="w-full"
+            onClick={() => {
+              const el = dateInputRef.current;
+              if (!el) return;
+              try {
+                // Prefer showPicker when available
+                // @ts-ignore
+                if (typeof el.showPicker === 'function') { el.showPicker(); return; }
+              } catch {}
+              el.focus();
+              el.click();
+            }}
+          >
+            <input
+              ref={dateInputRef}
+              type="date"
+              id="preferredDate"
+              value={rentalDate}
+              onChange={(e) => setRentalDate(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm cursor-pointer"
+            />
+          </div>
+          <p className="text-xs text-gray-500 mt-2">Tap anywhere in the field to open the calendar.</p>
+        </div>
+
         {/* Specialized Dumpsters Section */}
         <div className="mb-8">
           <div className="flex items-center mb-4">
@@ -183,14 +234,21 @@ export default function DumpsterCalculator() {
                       </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* 10 Yard Dirt */}
-            <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+            <div
+              className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border overflow-hidden cursor-pointer ${selectedSize === '10' ? 'border-[#4e37a8]' : 'border-gray-200'}`}
+              onClick={() => setSelectedSize('10')}
+              role="button"
+              aria-label="Select 10 Yard Dirt"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedSize('10'); }}
+            >
               <div className="h-32 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                            </svg>
-                          </div>
-                        </div>
+                  </svg>
+                </div>
+              </div>
               <div className="p-4">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">10 Yard Dirt</h4>
                 <p className="text-sm text-gray-600 mb-3">Perfect for dirt & soil projects</p>
@@ -200,22 +258,29 @@ export default function DumpsterCalculator() {
                   </button>
                   <button className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </button>
-                          </div>
-                        </div>
+                </div>
+              </div>
             </div>
 
             {/* 10 Yard Mixed */}
-            <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+            <div
+              className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border overflow-hidden cursor-pointer ${selectedSize === '10' ? 'border-[#4e37a8]' : 'border-gray-200'}`}
+              onClick={() => setSelectedSize('10')}
+              role="button"
+              aria-label="Select 10 Yard Mixed"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedSize('10'); }}
+            >
               <div className="h-32 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
                 <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                   </svg>
-                      </div>
-                    </div>
+                </div>
+              </div>
               <div className="p-4">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">10 Yard Mixed</h4>
 
@@ -225,22 +290,29 @@ export default function DumpsterCalculator() {
                   </button>
                   <button className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </button>
                 </div>
                 </div>
               </div>
               
             {/* 12 Yard Concrete */}
-            <div className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+            <div
+              className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border overflow-hidden cursor-pointer ${selectedSize === '12' ? 'border-[#4e37a8]' : 'border-gray-200'}`}
+              onClick={() => setSelectedSize('12')}
+              role="button"
+              aria-label="Select 12 Yard Concrete"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedSize('12'); }}
+            >
               <div className="h-32 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                 <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                            </svg>
-                          </div>
-                        </div>
+                  </svg>
+                </div>
+              </div>
               <div className="p-4">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">12 Yard Concrete</h4>
                 <p className="text-sm text-gray-600 mb-3">Perfect for concrete projects</p>
@@ -250,8 +322,8 @@ export default function DumpsterCalculator() {
                   </button>
                   <button className="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </button>
                 </div>
                           </div>
@@ -269,7 +341,7 @@ export default function DumpsterCalculator() {
           {/* Standard Dumpsters */}
           <div className="mb-6">
             <h4 className="text-lg font-semibold text-gray-700 mb-4 text-center">Standard Dumpsters</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
                 { size: '15', color: 'blue', bgGradient: 'from-blue-100 to-blue-200', iconBg: 'bg-blue-500', description: 'Medium renovations' },
                 { size: '20', color: 'green', bgGradient: 'from-green-100 to-green-200', iconBg: 'bg-green-500', description: 'Large home projects' },
@@ -277,7 +349,7 @@ export default function DumpsterCalculator() {
               ].map((option) => (
                 <label
                   key={option.size}
-                  className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 overflow-hidden cursor-pointer ${
+                  className={`group bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border overflow-hidden cursor-pointer ${
                     selectedSize === option.size ? `border-[#4e37a8] bg-gradient-to-br ${option.bgGradient} shadow-xl` : 'border-gray-200 hover:border-purple-300'
                   }`}
                 >
@@ -289,15 +361,15 @@ export default function DumpsterCalculator() {
                     onChange={(e) => setSelectedSize(e.target.value)}
                     className="sr-only"
                   />
-                  <div className="p-4 text-center">
-                    <div className={`w-12 h-12 ${option.iconBg} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-white font-bold text-lg">{option.size}</span>
+                  <div className="p-3 text-center">
+                    <div className={`w-10 h-10 ${option.iconBg} rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                      <span className="text-white font-bold text-base">{option.size}</span>
                     </div>
-                    <div className="text-xl font-bold text-gray-900 mb-2">{option.size} Yard</div>
-                    <div className="text-xs text-gray-600 leading-relaxed">
+                    <div className="text-base font-bold text-gray-900 mb-1">{option.size} Yard</div>
+                    <div className="text-[11px] text-gray-600 leading-relaxed">
                       {option.description}
-                </div>
-              </div>
+                    </div>
+                  </div>
                 </label>
               ))}
             </div>
@@ -310,17 +382,17 @@ export default function DumpsterCalculator() {
             <div className="w-2 h-2 bg-[#4e37a8] rounded-full mr-3"></div>
             <h3 className="text-xl font-bold text-gray-900">⏱️ Select Rental Duration</h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {[
               { duration: '1', color: 'orange', bgGradient: 'from-orange-100 to-orange-200', iconBg: 'bg-orange-500', description: 'Same day pickup' },
-              { duration: '3', color: 'yellow', bgGradient: 'from-yellow-100 to-yellow-200', iconBg: 'bg-yellow-500', description: 'Short term rental' },
-              { duration: '7', color: 'blue', bgGradient: 'from-blue-100 to-blue-200', iconBg: 'bg-blue-500', description: 'Standard rental' },
+              { duration: '3', color: 'yellow', bgGradient: 'from-yellow-100 to-yellow-200', iconBg: 'bg-yellow-500', description: 'Bundle price (same as 7 days)' },
+              { duration: '7', color: 'blue', bgGradient: 'from-blue-100 to-blue-200', iconBg: 'bg-blue-500', description: '7‑day bundle (best value)' },
               { duration: '14', color: 'green', bgGradient: 'from-green-100 to-green-200', iconBg: 'bg-green-500', description: 'Extended rental' },
               { duration: '30', color: 'purple', bgGradient: 'from-purple-100 to-purple-200', iconBg: 'bg-purple-500', description: 'Long term rental' }
             ].map((option) => (
               <label
                 key={option.duration}
-                className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 overflow-hidden cursor-pointer ${
+                className={`group bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border overflow-hidden cursor-pointer ${
                   selectedDuration === option.duration ? `border-[#4e37a8] bg-gradient-to-br ${option.bgGradient} shadow-xl` : 'border-gray-200 hover:border-purple-300'
                 }`}
               >
@@ -332,20 +404,21 @@ export default function DumpsterCalculator() {
                   onChange={(e) => setSelectedDuration(e.target.value)}
                   className="sr-only"
                 />
-                <div className="p-4 text-center">
-                  <div className={`w-12 h-12 ${option.iconBg} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="p-3 text-center">
+                  <div className={`w-10 h-10 ${option.iconBg} rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300`}>
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <div className="text-xl font-bold text-gray-900 mb-2">{option.duration} Day{option.duration === '1' ? '' : 's'}</div>
-                  <div className="text-xs text-gray-600 leading-relaxed">
+                  <div className="text-base font-bold text-gray-900 mb-1">{option.duration} Day{option.duration === '1' ? '' : 's'}</div>
+                  <div className="text-[11px] text-gray-600 leading-relaxed">
                     {option.description}
                   </div>
                 </div>
               </label>
             ))}
           </div>
+          <p className="text-xs text-gray-500 mt-2 text-center">3–7 day rentals use the same bundled price. Save by choosing 7 days.</p>
             </div>
             
         {/* Veteran Discount */}
@@ -503,7 +576,7 @@ export default function DumpsterCalculator() {
             </div>
           </div>
 
-        {/* View All Sizes Button */}
+          {/* View All Sizes Button */}
         <div className="text-center mt-8">
           <button className="bg-[#4e37a8] text-white px-8 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">

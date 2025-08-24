@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ImageWithFallback from "../components/ImageWithFallback";
 import QuoteForm from "../components/QuoteForm";
+import PhoneModalLink from "../components/PhoneModalLink";
 
 import { Metadata } from "next";
 
@@ -36,10 +37,10 @@ export default function ContactPage() {
         {/* Background image */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <ImageWithFallback 
-          src="/images/dumpsterSmallBanner4.jpeg" 
-          alt="Contact Icon Dumpsters for Utah Dumpster Rental Services - Professional Roll-off Dumpster Solutions" 
+          src="/images/here-topaz-enhance-2x-remove-textai.jpeg" 
+          alt="Contact Icon Dumpsters - Get a fast quote for Utah dumpster rental"
           className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner4.webp"
+          fallbackSrc="/images/here-topaz-enhance-2x-remove-textai.jpeg"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
         
@@ -73,7 +74,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-lg text-[#4e37a8] font-semibold">(801) 918-6000</p>
+              <PhoneModalLink phone="(801) 918-6000" telHref="tel:+18019186000" className="text-lg text-[#4e37a8] font-semibold hover:underline" />
               <p className="text-gray-600">Available 7 days a week</p>
             </div>
 
@@ -85,7 +86,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-lg text-[#4e37a8] font-semibold">icondumpsters@gmail.com</p>
+              <a href="mailto:icondumpsters@gmail.com" className="text-lg text-[#4e37a8] font-semibold hover:underline">icondumpsters@gmail.com</a>
               <p className="text-gray-600">Quick response guaranteed</p>
             </div>
 

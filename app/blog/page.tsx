@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import { track } from "../components/track";
@@ -8,6 +8,7 @@ import NewsletterSubscription from "../components/NewsletterSubscription";
 import TextQuoteWidget from "../components/TextQuoteWidget";
 import InternalLinks from "../components/InternalLinks";
 import BlogSearch from "../components/BlogSearch";
+import { useSearchParams } from "next/navigation";
 
 
 
@@ -266,6 +267,18 @@ const blogPosts = [
 
 export default function Blog() {
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+  const searchParams = useSearchParams();
+  const categories = useMemo(() => Array.from(new Set(blogPosts.map((p) => p.category))), []);
+
+  // Sync with ?category= query param
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat && categories.includes(cat)) {
+      setFilteredPosts(blogPosts.filter((p) => p.category === cat));
+    } else {
+      setFilteredPosts(blogPosts);
+    }
+  }, [searchParams, categories]);
   
   // Randomized site-defaults for missing images
   const randomDefaults = useMemo(
@@ -479,17 +492,22 @@ export default function Blog() {
                 Categories
               </h3>
               <div className="space-y-2">
-                {Array.from(new Set(blogPosts.map(post => post.category))).map((category) => (
-                  <button
+                <Link
+                  href={`/blog`}
+                  onClick={() => setFilteredPosts(blogPosts)}
+                  className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm text-gray-700"
+                >
+                  All
+                </Link>
+                {categories.map((category) => (
+                  <Link
                     key={category}
-                    onClick={() => {
-                      const filtered = blogPosts.filter(post => post.category === category);
-                      setFilteredPosts(filtered);
-                    }}
-                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm"
+                    href={`/blog?category=${encodeURIComponent(category)}`}
+                    onClick={() => setFilteredPosts(blogPosts.filter(post => post.category === category))}
+                    className="block w-full text-left px-3 py-2 rounded-lg hover:bg-purple-50 hover:text-[#4e37a8] transition-colors text-sm text-gray-700"
                   >
                     {category}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
