@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, Suspense } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import { track } from "../components/track";
@@ -265,7 +265,7 @@ const blogPosts = [
   }
 ];
 
-export default function Blog() {
+function BlogContent() {
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const searchParams = useSearchParams();
   const categories = useMemo(() => Array.from(new Set(blogPosts.map((p) => p.category))), []);
@@ -610,5 +610,13 @@ export default function Blog() {
         <InternalLinks />
       </div>
     </div>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}> 
+      <BlogContent />
+    </Suspense>
   );
 }
