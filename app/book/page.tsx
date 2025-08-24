@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { Metadata } from 'next';
-import { track } from '../components/analytics';
+import { track } from '../components/track';
 
 export const metadata: Metadata = {
   title: 'Book Now | Icon Dumpsters',

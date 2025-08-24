@@ -9,7 +9,7 @@ import ThreeStepProcess from "./components/ThreeStepProcess";
 import FeesAndSurcharges from "./components/FeesAndSurcharges";
 import TextQuoteWidget from "./components/TextQuoteWidget";
 import AvailableTodayBadge from "./components/AvailableTodayBadge";
-import { track } from "./components/analytics";
+import { track } from "./components/track";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

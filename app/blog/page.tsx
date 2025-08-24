@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
-import { track } from "../components/analytics";
+import { track } from "../components/track";
 import NewsletterSubscription from "../components/NewsletterSubscription";
 import TextQuoteWidget from "../components/TextQuoteWidget";
 import InternalLinks from "../components/InternalLinks";
