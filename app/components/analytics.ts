@@ -6,7 +6,7 @@ export type AnalyticsPayload = {
   meta?: Record<string, any>;
 };
 
-export async function track(type: string, name: string, meta?: Record<string, any>) {
+export function track(type: string, name: string, meta?: Record<string, any>) {
   try {
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({ event: 'analytics', type, name, meta });
@@ -17,7 +17,7 @@ export async function track(type: string, name: string, meta?: Record<string, an
     window.dispatchEvent(new CustomEvent('analytics-event', { detail: { type, name, meta } }));
   } catch {}
   try {
-    await fetch('/api/analytics', {
+    fetch('/api/analytics', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ type, name, ...meta }),

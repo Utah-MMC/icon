@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { track } from '../components/track';
+import { track } from '../components/analytics';
 
 type Step = 1 | 2 | 3 | 4;
 

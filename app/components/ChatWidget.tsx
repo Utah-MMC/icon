@@ -459,7 +459,7 @@ export default function ChatWidget() {
       setQuickLinks([
         { label: 'Sizes & Dimensions', url: '/dumpster-sizes' },
         { label: 'FAQ', url: '/faq' },
-        { label: 'Free Quote', url: '/freequote' },
+        { label: 'Free Quote', url: '/free-quote' },
       ]);
       scheduleLeadForm();
       setStage('cta');
@@ -801,7 +801,7 @@ export default function ChatWidget() {
       const botMsg: ChatMessage = { role: 'assistant', content: humanizeText(replyText), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, botMsg]);
       try { (window as any).dataLayer?.push({ event: 'chat_message', role: 'assistant' }); } catch {}
-      if (/quote|price|estimate|book|schedule/i.test(userText)) {
+              if (/free-quote|freequote|quote|price|estimate|book|schedule/i.test(userText)) {
         setShowLeadForm(true);
       }
       // if reply indicates a quote flow ask days

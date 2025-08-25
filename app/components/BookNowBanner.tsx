@@ -1,5 +1,5 @@
 "use client";
-import { track } from './track';
+import { track } from './analytics';
 
 export default function BookNowBanner({ className = '' }: { className?: string }) {
   return (

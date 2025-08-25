@@ -2,7 +2,7 @@
 
 import FAQSchema from "../components/FAQSchema";
 import ArticleSchema from "../components/ArticleSchema";
-import Analytics from "../components/Analytics";
+import Analytics from "../components/PageAnalytics";
 import Link from "next/link";
 import DumpsterCalculator from "../components/DumpsterCalculator";
 

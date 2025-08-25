@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
-import Analytics from "../components/Analytics";
+import Analytics from "../components/PageAnalytics";
 import ArticleSchema from "../components/ArticleSchema";
 import FAQSchema from "../components/FAQSchema";
 import CallToActionBanner from "../components/CallToActionBanner";

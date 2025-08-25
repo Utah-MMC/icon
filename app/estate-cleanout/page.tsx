@@ -5,6 +5,7 @@ import ImageWithFallback from "../components/ImageWithFallback";
 import QuoteForm from "../components/QuoteForm";
 import TrustSection from "../components/TrustSection";
 import ReviewsCarousel from "../components/ReviewsCarousel";
+import BlogAuthor from "../components/BlogAuthor";
 
 export default function EstateCleanout() {
   return (
@@ -110,6 +111,12 @@ export default function EstateCleanout() {
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               We understand the emotional and logistical challenges associated with managing an inherited estate and are here to assist you in finding the best course of action for waste disposal and property clearing. With competitive pricing, prompt delivery, and compassionate service, Icon Dumpsters is dedicated to providing efficient and reliable solutions for your estate cleanout needs.
             </p>
+
+            {/* Author Section */}
+            <BlogAuthor 
+              publishDate="August 24, 2025"
+              readTime="8 min read"
+            />
 
             <div className="bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl p-6 mb-8">
               <h3 className="text-xl font-bold text-[#4e37a8] mb-4">What We Handle:</h3>

@@ -2,7 +2,7 @@
 
 import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
-import Analytics from "../components/Analytics";
+import Analytics from "../components/PageAnalytics";
 import ArticleSchema from "../components/ArticleSchema";
 
 export default function CompleteDumpsterRentalGuide() {

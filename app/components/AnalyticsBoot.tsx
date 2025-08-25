@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { track } from './track';
+import { track } from './analytics';
 
 export default function AnalyticsBoot() {
   useEffect(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
-import { track } from './track';
+import { track } from './analytics';
 
 export default function DumpsterCalculator() {
   const [zipCode, setZipCode] = useState('');
