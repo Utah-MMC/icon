@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Frequent Buyers Program | Icon Dumpsters',
@@ -10,9 +11,15 @@ export const metadata: Metadata = {
 export default function FrequentBuyers() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <PageHero
+        title="Frequent Buyers Program"
+        subtitle="Designed for contractors and repeat customers who rent multiple dumpsters throughout the year."
+        primaryCtaText="Enroll Now"
+        primaryCtaLink="/#quote-form"
+        secondaryCtaText="Call Us"
+        secondaryCtaLink="tel:(801) 918-6000"
+      />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Frequent Buyers Program</h1>
-        <p className="text-gray-700 mb-6">Designed for contractors and repeat customers who rent multiple dumpsters throughout the year.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div className="bg-white rounded-xl shadow border p-6">
             <h2 className="text-xl font-semibold mb-2">Member Benefits</h2>

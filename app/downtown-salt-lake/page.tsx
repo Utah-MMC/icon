@@ -54,10 +54,7 @@ export default function DowntownSaltLakePage() {
         { label: 'Rose Park', href: '/rose-park' },
         { label: 'Glendale', href: '/glendale' }
       ]}
-      heroImages={[
-        { src: '/images/dumpster500x200-4.webp', fallback: '/images/dumpster500x200-4.webp' },
-        { src: '/images/dumpsters2.webp', fallback: '/images/dumpsters2.webp' }
-      ]}
+
     />
   );
 }

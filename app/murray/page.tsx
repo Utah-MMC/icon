@@ -54,10 +54,7 @@ export default function MurrayPage() {
         { label: 'Taylorsville', href: '/taylorsville' },
         { label: 'Holladay', href: '/holladay' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner4.jpeg', fallback: '/images/dumpsterSmallBanner4.webp' },
-        { src: '/images/dumpsterWithTruck.jpeg', fallback: '/images/dumpsterWithTruck.webp' }
-      ]}
+
     />
   );
 }

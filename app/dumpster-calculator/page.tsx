@@ -6,6 +6,7 @@ import ArticleSchema from "../components/ArticleSchema";
 import FAQSchema from "../components/FAQSchema";
 import CallToActionBanner from "../components/CallToActionBanner";
 import DumpsterCalculatorPageClient from "./DumpsterCalculatorPageClient";
+import PageHero from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "Dumpster Calculator – Costs, Weight, Delivery Fees | Icon Dumpsters",
@@ -55,31 +56,14 @@ export default function DumpsterCalculatorPage() {
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Dumpster Calculator
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Calculate dumpster rental costs, weight limits, and delivery fees. Get instant estimates for your project.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="#calculator" 
-                className="bg-white text-[#4e37a8] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                START CALCULATING
-              </Link>
-              <a 
-                href="tel:(801) 918-6000" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
-              >
-                Call (801) 918-6000
-              </a>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Dumpster Calculator"
+          subtitle="Calculate dumpster rental costs, weight limits, and delivery fees. Get instant estimates for your project."
+          primaryCtaText="START CALCULATING"
+          primaryCtaLink="#calculator"
+          secondaryCtaText="Call (801) 918-6000"
+          secondaryCtaLink="tel:(801) 918-6000"
+        />
 
         {/* Calculator Section */}
         <section id="calculator" className="py-16 bg-gray-50">

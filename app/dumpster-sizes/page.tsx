@@ -5,6 +5,7 @@ import QuoteForm from "../components/QuoteForm";
 import FeesAndSurcharges from "../components/FeesAndSurcharges";
 import AvailableTodayBadge from "../components/AvailableTodayBadge";
 import BookNowBanner from "../components/BookNowBanner";
+import PageHero from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
@@ -41,61 +42,15 @@ export const metadata: Metadata = {
 export default function DumpsterSizes() {
   return (
     <div className="min-h-screen">
-      {/* Top Section - Dark Blue/Image Split */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-        {/* Left Half - Icon Dumpsters Purple Background */}
-        <div className="bg-[#4e37a8] text-white p-8 lg:p-12 flex flex-col justify-center">
-          <div className="max-w-lg">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Roll-off Dumpster Size Guide for Utah Dumpster Rental
-            </h1>
-            <p className="text-lg mb-8 leading-relaxed">
-              Find the right dumpster size to streamline your cleanup, whether you're clearing out a garage, 
-              renovating your home or managing a commercial construction site.
-            </p>
-            
-            {/* Call-to-Action Buttons */}
-            <div className="space-y-4">
-              <a 
-                href="#quote-form" 
-                className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium"
-              >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                </svg>
-                Get Started Pricing
-              </a>
-              <button 
-                className="inline-flex items-center bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
-              >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                (801) 918-6000
-              </button>
-            </div>
-            
-            {/* Breadcrumbs */}
-            <div className="mt-8 text-sm text-purple-200">
-              Home &gt; Dumpster Size &gt; Roll Off Dumpsters
-            </div>
-          </div>
-        </div>
-        
-        {/* Right Half - Dumpster Image */}
-        <div className="relative overflow-hidden">
-          <ImageWithFallback 
-            src={sizesHero}
-            alt="Roll-off Dumpsters for Utah Dumpster Rental Services" 
-            className="w-full h-full object-cover"
-            fallbackSrc={sizesHero as unknown as string}
-          />
-          {/* Floating Orange Shapes */}
-          <div className="absolute top-10 right-10 w-16 h-16 bg-orange-500 transform rotate-12 opacity-80"></div>
-          <div className="absolute top-32 left-8 w-12 h-12 bg-orange-400 transform -rotate-6 opacity-70"></div>
-          <div className="absolute bottom-20 right-20 w-20 h-8 bg-orange-500 transform rotate-45 opacity-90"></div>
-        </div>
-      </div>
+      {/* Hero Section */}
+      <PageHero
+        title="Roll-off Dumpster Size Guide for Utah Dumpster Rental"
+        subtitle="Find the right dumpster size to streamline your cleanup, whether you're clearing out a garage, renovating your home or managing a commercial construction site."
+        primaryCtaText="Get Started Pricing"
+        primaryCtaLink="#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:8019186000"
+      />
 
       {/* Middle Section - White Background with Table */}
       <div className="bg-white py-16">

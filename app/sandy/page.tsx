@@ -54,10 +54,7 @@ export default function SandyPage() {
         { label: 'Murray', href: '/murray' },
         { label: 'West Jordan', href: '/west-jordan' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner5.jpeg', fallback: '/images/dumpsterSmallBanner5.webp' },
-        { src: '/images/dumpsterWithTruck.jpeg', fallback: '/images/dumpsterWithTruck.webp' }
-      ]}
+
     />
   );
 }

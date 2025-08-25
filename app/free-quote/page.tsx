@@ -1,5 +1,7 @@
 import QuoteForm from '../components/QuoteForm';
 import { Metadata } from 'next';
+import Script from 'next/script';
+import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Free Dumpster Rental Quote | Icon Dumpsters Utah',
@@ -35,22 +37,37 @@ export const metadata: Metadata = {
 export default function FreeQuotePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#4e37a8] to-purple-600 text-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get Your Free Quote</h1>
-            <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">
-              Professional dumpster rental services in Utah with competitive pricing and reliable delivery
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Schema Markup for Service */}
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Dumpster Rental Quote Service",
+            "description": "Get a free, instant quote for dumpster rental in Utah. Professional waste management solutions with competitive pricing and reliable service.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Icon Dumpsters",
+              "url": "https://icondumpsters.com",
+              "logo": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png"
+            },
+            "serviceType": "Dumpster Rental",
+            "areaServed": {
+              "@type": "State",
+              "name": "Utah"
+            },
+            "url": "https://icondumpsters.com/free-quote"
+          })
+        }}
+      />
+             {/* Hero Section */}
+       <PageHero
+         title="Get Your Free Quote"
+         subtitle="Professional dumpster rental services in Utah with competitive pricing and reliable delivery"
+         showCta={false}
+       />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">

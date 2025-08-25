@@ -4,6 +4,7 @@ import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/PageAnalytics";
 import ArticleSchema from "../components/ArticleSchema";
+import PageHero from "../components/PageHero";
 
 export default function ConstructionWasteManagement() {
   return (
@@ -25,37 +26,38 @@ export default function ConstructionWasteManagement() {
         readTime="PT6M"
       />
       <div className="min-h-screen bg-gray-50">
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Breadcrumb */}
-        <nav className="mb-8" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-gray-600">
-            <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
-            <li><span className="mx-2">/</span></li>
-            <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
-            <li><span className="mx-2">/</span></li>
-            <li className="text-gray-900 font-medium">Construction Waste Management 2025</li>
-          </ol>
-        </nav>
+        <PageHero
+          title="Construction Waste Management: Best Practices for 2025"
+          subtitle="Learn proven strategies for managing construction waste efficiently. From sorting materials to choosing the right dumpster size, discover how to minimize costs and environmental impact while maintaining project timelines."
+          primaryCtaText="Get Free Quote"
+          primaryCtaLink="/free-quote"
+          secondaryCtaText="View Services"
+          secondaryCtaLink="/services"
+        />
+        
+        {/* Article Header */}
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Breadcrumb */}
+          <nav className="mb-8" aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-2 text-sm text-gray-600">
+              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><span className="mx-2">/</span></li>
+              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><span className="mx-2">/</span></li>
+              <li className="text-gray-900 font-medium">Construction Waste Management 2025</li>
+            </ol>
+          </nav>
 
-        {/* Article Meta */}
-        <header className="mb-12">
-          <div className="flex items-center gap-4 mb-6 text-sm text-gray-600">
-            <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">CONSTRUCTION</span>
-            <span>6 min read</span>
-            <span>•</span>
-            <span>January 20, 2025</span>
-            <span>•</span>
-            <span>By Icon Dumpsters Team</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Construction Waste Management: Best Practices for 2025
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-            Learn proven strategies for managing construction waste efficiently. From sorting materials to choosing 
-            the right dumpster size, discover how to minimize costs and environmental impact while maintaining 
-            project timelines.
-          </p>
+          {/* Article Meta */}
+          <header className="mb-12">
+            <div className="flex items-center gap-4 mb-6 text-sm text-gray-600">
+              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">CONSTRUCTION</span>
+              <span>6 min read</span>
+              <span>•</span>
+              <span>January 20, 2025</span>
+              <span>•</span>
+              <span>By Icon Dumpsters Team</span>
+            </div>
           
           {/* Social Sharing */}
           <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">

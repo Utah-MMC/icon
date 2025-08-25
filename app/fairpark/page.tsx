@@ -54,10 +54,7 @@ export default function FairparkPage() {
         { label: 'Glendale', href: '/glendale' },
         { label: 'Poplar Grove', href: '/poplar-grove' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner6.webp', fallback: '/images/dumpsterSmallBanner6.webp' },
-        { src: '/images/dumpster500x200-3.jpeg', fallback: '/images/dumpster500x200-3.webp' }
-      ]}
+
     />
   );
 }

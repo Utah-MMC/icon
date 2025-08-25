@@ -8,16 +8,16 @@ import CalculatorCTA from './CalculatorCTA';
 import InternalLinks from './InternalLinks';
 import AvailableTodayBadge from './AvailableTodayBadge';
 import BookNowBanner from './BookNowBanner';
+import PageHero from './PageHero';
 
 interface CityPageTemplateProps {
   city: string;
   neighborhoods: string[];
   nearbyLinks: { label: string; href: string }[];
-  heroImages?: { src: string; fallback?: string }[]; // 1-2 images
   showCalculator?: boolean;
 }
 
-export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, heroImages = [], showCalculator = false }: CityPageTemplateProps) {
+export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, showCalculator = false }: CityPageTemplateProps) {
   const cityShort = city.replace(', UT', '').replace('City of ', '');
 
   // Deterministic pseudo-randomness per city to diversify layout/copy
@@ -60,11 +60,6 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
     'Fast, reliable dumpsters for any project with clear pricing and local pros.',
     'From cleanouts to construction, get the right roll‑off size with honest pricing.',
   ]);
-  const heroGradient = pick([
-    'from-[#4e37a8] via-purple-700 to-[#4e37a8]',
-    'from-purple-700 via-[#4e37a8] to-purple-700',
-    'from-indigo-600 via-purple-700 to-indigo-600',
-  ]);
 
   const neighborhoodsShuffled = shuffle(neighborhoods);
   const nearbyLinksShuffled = shuffle(nearbyLinks);
@@ -72,21 +67,14 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <section className={`bg-gradient-to-br ${heroGradient} text-white py-16`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">{heroTitle}</h1>
-              <p className="text-purple-100 text-lg md:text-xl">{heroSubtitle}</p>
-            </div>
-            {heroImages[0] && (
-              <div className="h-48 md:h-56 lg:h-64 relative rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center">
-                <ImageWithFallback src={heroImages[0].src} fallbackSrc={heroImages[0].fallback} alt={`${cityShort} dumpster rental`} fill className="object-contain" />
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title={heroTitle}
+        subtitle={heroSubtitle}
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="/free-quote"
+        secondaryCtaText="View Pricing"
+        secondaryCtaLink="#pricing"
+      />
 
       {/* Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -151,8 +139,8 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
             {(!gallerySwap ? [0,1] : [1,0]).map((idx) => (
               <div key={idx} className="w-full h-64 md:h-80 lg:h-96 relative rounded-xl overflow-hidden shadow bg-white flex items-center justify-center">
                 <ImageWithFallback 
-                  src={(heroImages[idx]?.src) || (idx === 0 ? '/images/IMG_0350.jpg' : '/images/dumpsterWithTruck.jpeg')} 
-                  fallbackSrc={(heroImages[idx]?.fallback) || (idx === 0 ? '/images/dumpsterWithTruck.jpeg' : '/images/dumpsters.webp')} 
+                  src={idx === 0 ? '/images/IMG_0350.jpg' : '/images/dumpsterWithTruck.jpeg'} 
+                  fallbackSrc={idx === 0 ? '/images/dumpsterWithTruck.jpeg' : '/images/dumpsters.webp'} 
                   alt={`${cityShort} ${idx === 0 ? 'dumpster rental Utah - roll-off dumpster near me' : 'roll-off dumpsters - Utah dumpster rental'}`} 
                   fill 
                   className="object-contain" 
@@ -166,7 +154,7 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, her
         <CalculatorCTA className="mb-12" />
 
         {/* Pricing */}
-        <section className="bg-white rounded-xl shadow-md p-8 mb-12">
+        <section id="pricing" className="bg-white rounded-xl shadow-md p-8 mb-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">{cityShort} Dumpster Rental Pricing</h2>
             <AvailableTodayBadge />

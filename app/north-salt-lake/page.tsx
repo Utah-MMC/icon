@@ -54,10 +54,7 @@ export default function NorthSaltLakePage() {
         { label: 'Woods Cross', href: '/woods-cross' },
         { label: 'Salt Lake City', href: '/salt-lake-city' }
       ]}
-      heroImages={[
-        { src: '/images/dumpster500x200-2.jpeg', fallback: '/images/dumpster500x200-2.webp' },
-        { src: '/images/dumpsters.jpeg', fallback: '/images/dumpsters.webp' }
-      ]}
+
     />
   );
 }

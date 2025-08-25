@@ -3,6 +3,7 @@
 import ImageWithFallback from "../components/ImageWithFallback";
 import PhoneModal from "../components/PhoneModal";
 import { useState } from "react";
+import PageHero from "../components/PageHero";
 
 export default function ServicesClient() {
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
@@ -16,24 +17,11 @@ export default function ServicesClient() {
       />
 
       {/* Hero Banner */}
-      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 py-16">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <ImageWithFallback 
-          src="/images/dumpsterSmallBanner4.jpeg" 
-          alt="Professional Dumpster Rental Services in Utah - Roll-off Dumpsters" 
-          className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner4.webp"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Professional Dumpster Rental Services in Utah
-          </h1>
-          <p className="text-xl text-white max-w-3xl mx-auto">
-            Professional dumpster rental services in Utah with same-day delivery, competitive pricing, and reliable service.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Professional Dumpster Rental Services in Utah"
+        subtitle="Professional dumpster rental services in Utah with same-day delivery, competitive pricing, and reliable service."
+        showCta={false}
+      />
 
       {/* Breadcrumb */}
       <div className="bg-white py-4 border-b">

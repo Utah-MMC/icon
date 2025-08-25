@@ -59,10 +59,7 @@ export default function SaltLakeCityPage() {
         { label: 'Poplar Grove', href: '/poplar-grove' },
         { label: 'Fairpark', href: '/fairpark' }
       ]}
-      heroImages={[
-        { src: '/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp', fallback: '/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp' },
-        { src: '/images/IMG_0350.jpg', fallback: '/images/dumpsters.webp' }
-      ]}
+
     />
   );
 }

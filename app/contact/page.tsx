@@ -2,6 +2,7 @@ import Image from "next/image";
 import ImageWithFallback from "../components/ImageWithFallback";
 import QuoteForm from "../components/QuoteForm";
 import PhoneModalLink from "../components/PhoneModalLink";
+import PageHero from "../components/PageHero";
 
 import { Metadata } from "next";
 
@@ -33,26 +34,12 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#4e37a8] to-purple-700 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-        {/* Background image */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <ImageWithFallback 
-          src="/images/here-topaz-enhance-2x-remove-textai.jpeg" 
-          alt="Contact Icon Dumpsters - Get a fast quote for Utah dumpster rental"
-          className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/here-topaz-enhance-2x-remove-textai.jpeg"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-20"></div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Contact Icon Dumpsters</h1>
-          <p className="text-lg sm:text-xl mb-6">Get Your Free Quote Today</p>
-          <a href="#quote-form" className="bg-[#4e37a8] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-base sm:text-lg inline-block">
-            Request Quote
-          </a>
-        </div>
-      </div>
+      <PageHero
+        title="Contact Icon Dumpsters"
+        subtitle="Get Your Free Quote Today"
+        primaryCtaText="Request Quote"
+        primaryCtaLink="#quote-form"
+      />
 
       {/* Contact Information Section */}
       <div className="bg-gray-50 py-12">

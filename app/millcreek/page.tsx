@@ -54,10 +54,7 @@ export default function MillcreekPage() {
         { label: 'Salt Lake City', href: '/salt-lake-city' },
         { label: 'Murray', href: '/murray' }
       ]}
-      heroImages={[
-        { src: '/images/dumpster500x500-1.jpeg', fallback: '/images/dumpster500x500-1.webp' },
-        { src: '/images/dumpsterSmallBanner2.jpeg', fallback: '/images/dumpsterSmallBanner2.webp' }
-      ]}
+
     />
   );
 }

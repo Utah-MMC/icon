@@ -1,48 +1,20 @@
 
 import ImageWithFallback from '../components/ImageWithFallback';
 import QuoteForm from '../components/QuoteForm';
+import PageHero from '../components/PageHero';
 
 export default function AboutClient() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-100 to-gray-200 py-16 sm:py-24">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <ImageWithFallback 
-          src="/images/dumpsterSmallBanner5.jpeg" 
-          alt="About Icon Dumpsters - Professional Utah Dumpster Rental Services" 
-          className="absolute inset-0 w-full h-full object-cover"
-          fallbackSrc="/images/dumpsterSmallBanner5.webp"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black bg-opacity-30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <div className="text-center sm:text-left">
-            <p className="text-sm sm:text-base text-white mb-2">Local & Family Operated Dumpster Company</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              About Icon Dumpsters - Utah Dumpster Rental Services
-            </h1>
-            <p className="text-lg sm:text-xl text-white max-w-4xl leading-relaxed">
-              Icon Dumpsters was founded by a family with deep roots in pond service and landscaping. 
-              With years of hands-on experience and a commitment to exceptional service, we set out to make image.png
-              dumpster rentals more accessible, reliable, and affordable for homeowners and contractors throughout Utah.
-            </p>
-                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-               <a href="#quote-form" className="bg-[#4e37a8] hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
-                 </svg>
-                 GET FREE QUOTE
-               </a>
-               <button className="bg-[#4e37a8] hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                 </svg>
-                 (801) 918-6000
-               </button>
-             </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="About Icon Dumpsters - Utah Dumpster Rental Services"
+        subtitle="Icon Dumpsters was founded by a family with deep roots in pond service and landscaping. With years of hands-on experience and a commitment to exceptional service, we set out to make dumpster rentals more accessible, reliable, and affordable for homeowners and contractors throughout Utah."
+        primaryCtaText="GET FREE QUOTE"
+        primaryCtaLink="#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:8019186000"
+      />
 
       {/* Who We Are Section */}
       <section className="bg-[#4e37a8] text-white py-16 sm:py-24 relative">

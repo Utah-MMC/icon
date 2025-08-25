@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import Image from 'next/image'
 import BlogAuthor from '../components/BlogAuthor'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
     description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
     type: 'article',
-    url: 'https://iconmain.com/estimate-right-dumpster-size-home-cleanout',
+    url: 'https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout',
     images: [
       {
         url: '/images/blog/dumpster-size-estimation.jpg',
@@ -28,7 +29,10 @@ export const metadata: Metadata = {
     description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
     images: ['/images/blog/dumpster-size-estimation.jpg']
   },
-  robots: 'index, follow'
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout'
+  }
 }
 
 export default function DumpsterSizeEstimationGuide() {
@@ -44,7 +48,7 @@ export default function DumpsterSizeEstimationGuide() {
             "@type": "Article",
             "headline": "How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)",
             "description": "Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.",
-            "image": "https://iconmain.com/images/blog/dumpster-size-estimation.jpg",
+            "image": "https://icondumpsters.com/images/blog/dumpster-size-estimation.jpg",
             "author": {
               "@type": "Organization",
               "name": "Icon Dumpsters"
@@ -54,14 +58,14 @@ export default function DumpsterSizeEstimationGuide() {
               "name": "Icon Dumpsters",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://iconmain.com/images/Icon_Dumpsters_Final.png"
+                "url": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png"
               }
             },
                          "datePublished": "2025-08-24",
              "dateModified": "2025-08-24",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://iconmain.com/estimate-right-dumpster-size-home-cleanout"
+              "@id": "https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout"
             }
           })
         }}
@@ -137,47 +141,13 @@ export default function DumpsterSizeEstimationGuide() {
         }}
       />
 
-      {/* Hero Section with Main Image */}
-      <section className="relative bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                How to Estimate the Right Dumpster Size for a Home Cleanout Project
-              </h1>
-              <p className="text-xl text-purple-100 leading-relaxed mb-8">
-                Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate 
-                dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                 <Link 
-                   href="/free-quote" 
-                   className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                 >
-                   Get Free Quote
-                 </Link>
-                <Link 
-                  href="#faq" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition-colors"
-                >
-                  View FAQ
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/images/Icon_Dumpsters_Final.png"
-                alt="Icon Dumpsters - Professional Dumpster Rental Services"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+             {/* Hero Section */}
+       <PageHero
+         title="How to Estimate the Right Dumpster Size for a Home Cleanout Project"
+         subtitle="Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending."
+         secondaryCtaText="View FAQ"
+         secondaryCtaLink="#faq"
+       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Table of Contents */}

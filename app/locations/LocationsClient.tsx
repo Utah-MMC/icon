@@ -5,6 +5,7 @@ import Link from "next/link";
 import Analytics from "../components/PageAnalytics";
 import ArticleSchema from "../components/ArticleSchema";
 import FAQSchema from "../components/FAQSchema";
+import PageHero from "../components/PageHero";
 import { useMemo, useState } from "react";
 import { zipToCity } from "../config/serviceAreas";
 
@@ -119,7 +120,19 @@ export default function LocationsClient() {
     return false;
   }
 
-  return <div className="min-h-screen bg-white" />;
+  return (
+    <div className="min-h-screen bg-white">
+      <PageHero
+        title="Utah Dumpster Rental Locations"
+        subtitle="Find dumpster rental services across Utah: Salt Lake City, Utah County, Davis County, Weber, Summit, Tooele and more. Same‑day delivery, transparent pricing."
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="/free-quote"
+        secondaryCtaText="Call Us"
+        secondaryCtaLink="tel:(801) 918-6000"
+      />
+      {/* Content will be added here */}
+    </div>
+  );
 }
 
 

@@ -54,10 +54,7 @@ export default function WestJordanPage() {
         { label: 'West Valley City', href: '/west-valley-city' },
         { label: 'Midvale', href: '/midvale' }
       ]}
-      heroImages={[
-        { src: '/images/dumpster500x200-2.jpeg', fallback: '/images/dumpster500x200-2.webp' },
-        { src: '/images/IMG_3190.jpg', fallback: '/images/dumpsters.webp' }
-      ]}
+
     />
   );
 }

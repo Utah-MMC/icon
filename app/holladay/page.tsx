@@ -54,10 +54,7 @@ export default function HolladayPage() {
         { label: 'Murray', href: '/murray' },
         { label: 'Cottonwood Heights', href: '/cottonwood-heights' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner2.jpeg', fallback: '/images/dumpsterSmallBanner2.webp' },
-        { src: '/images/IMG_0336.jpg', fallback: '/images/dumpsters.webp' }
-      ]}
+
     />
   );
 }

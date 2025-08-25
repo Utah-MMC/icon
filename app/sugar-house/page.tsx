@@ -54,10 +54,7 @@ export default function SugarHousePage() {
         { label: 'Millcreek', href: '/millcreek' },
         { label: 'Holladay', href: '/holladay' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner2.jpeg', fallback: '/images/dumpsterSmallBanner2.webp' },
-        { src: '/images/dumpster500x500-1.jpeg', fallback: '/images/dumpster500x500-1.webp' }
-      ]}
+
     />
   );
 }

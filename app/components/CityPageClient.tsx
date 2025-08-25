@@ -45,10 +45,6 @@ export default function CityPageClient({
       city={`${cityDisplayName}, UT`}
       neighborhoods={neighborhoodsArray}
       nearbyLinks={nearbyLinks}
-      heroImages={[
-        { src: '/images/IMG_0350.jpg', fallback: '/images/dumpsterWithTruck.jpeg' },
-        { src: '/images/dumpsterWithTruck.jpeg', fallback: '/images/dumpsters.webp' },
-      ]}
       showCalculator={showCalculator}
     />
   );

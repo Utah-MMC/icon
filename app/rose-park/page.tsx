@@ -54,10 +54,7 @@ export default function RoseParkPage() {
         { label: 'North Salt Lake', href: '/north-salt-lake' },
         { label: 'Bountiful', href: '/bountiful' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner3.jpeg', fallback: '/images/dumpsterSmallBanner3.webp' },
-        { src: '/images/dumpster500x500-2.jpeg', fallback: '/images/dumpster500x500-2.webp' }
-      ]}
+
     />
   );
 }

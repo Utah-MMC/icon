@@ -4,6 +4,7 @@ import ImageWithFallback from "../components/ImageWithFallback";
 import Link from "next/link";
 import Analytics from "../components/PageAnalytics";
 import ArticleSchema from "../components/ArticleSchema";
+import PageHero from "../components/PageHero";
 
 export default function DumpsterRentalGuide2025() {
   return (
@@ -25,6 +26,15 @@ export default function DumpsterRentalGuide2025() {
         readTime="PT8M"
       />
       <div className="min-h-screen bg-white">
+        <PageHero
+          title="Dumpster Rental Guide 2025: How to Choose the Right Size, Price, and Service for Your Project"
+          subtitle="Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable."
+          primaryCtaText="Get Free Quote"
+          primaryCtaLink="/free-quote"
+          secondaryCtaText="View Pricing"
+          secondaryCtaLink="/dumpster-sizes"
+        />
+        
         {/* Article Header */}
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Breadcrumb */}
@@ -46,13 +56,6 @@ export default function DumpsterRentalGuide2025() {
               <span>•</span>
               <span>January 20, 2025</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Dumpster Rental Guide 2025: How to Choose the Right Size, Price, and Service for Your Project
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Learn everything you need to know about dumpster rental in 2025 — from choosing the right size and understanding costs 
-              to avoiding hidden fees. Get expert tips to make your next cleanup easy and affordable.
-            </p>
             
             {/* Social Sharing */}
             <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-200">

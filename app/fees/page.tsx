@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FeesAndSurcharges from '../components/FeesAndSurcharges';
+import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Fees & Surcharges | Icon Dumpsters',
@@ -11,9 +12,15 @@ export const metadata: Metadata = {
 export default function FeesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <PageHero
+        title="Fees & Surcharges"
+        subtitle="We keep pricing simple and transparent. Below are the typical weight rates and item fees. Call us with any questions at (801) 918‑6000."
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="/free-quote"
+        secondaryCtaText="Call Now"
+        secondaryCtaLink="tel:(801) 918-6000"
+      />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Fees & Surcharges</h1>
-        <p className="text-gray-600 mb-8">We keep pricing simple and transparent. Below are the typical weight rates and item fees. Call us with any questions at <a href="tel:801-918-6000" className="text-[#4e37a8] underline">(801) 918‑6000</a>.</p>
         <FeesAndSurcharges />
       </div>
     </div>

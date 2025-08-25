@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import PageHero from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Icon Dumpsters Utah",
@@ -26,16 +27,11 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-[#4e37a8] text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Privacy Policy
-          </h1>
-          <p className="text-lg text-purple-200">
-            Last updated: August 2025
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Privacy Policy"
+        subtitle="Last updated: August 2025"
+        showCta={false}
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-lg shadow-lg p-8">

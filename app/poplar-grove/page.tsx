@@ -54,10 +54,7 @@ export default function PoplarGrovePage() {
         { label: 'Salt Lake City', href: '/salt-lake-city' },
         { label: 'Fairpark', href: '/fairpark' }
       ]}
-      heroImages={[
-        { src: '/images/dumpsterSmallBanner.jpeg', fallback: '/images/dumpsterSmallBanner.webp' },
-        { src: '/images/dumpster500x200-1.jpeg', fallback: '/images/dumpster500x200-1.webp' }
-      ]}
+
     />
   );
 }

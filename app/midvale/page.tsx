@@ -55,10 +55,7 @@ export default function MidvalePage() {
         { label: 'West Jordan', href: '/west-jordan' },
         { label: 'Taylorsville', href: '/taylorsville' }
       ]}
-      heroImages={[
-        { src: '/images/dumpster500x500-2.jpeg', fallback: '/images/dumpster500x500-2.webp' },
-        { src: '/images/dumpsterSmallBanner6.webp', fallback: '/images/dumpsterSmallBanner6.webp' }
-      ]}
+
     />
   );
 }
