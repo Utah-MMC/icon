@@ -130,7 +130,155 @@ export default function LocationsClient() {
         secondaryCtaText="Call Us"
         secondaryCtaLink="tel:(801) 918-6000"
       />
-      {/* Content will be added here */}
+
+      {/* Schema Markup */}
+      <ArticleSchema
+        title="Utah Dumpster Rental Locations | Icon Dumpsters"
+        description="Find dumpster rental services across Utah: Salt Lake City, Utah County, Davis County, Weber, Summit, Tooele and more. Same‑day delivery, transparent pricing."
+        author="Icon Dumpsters"
+        publishedDate="2024-01-01"
+        modifiedDate="2024-12-19"
+        imageUrl="https://icondumpsters.com/images/utah-dumpster-rental-locations.jpg"
+        articleUrl="https://icondumpsters.com/locations"
+        category="Dumpster Rental Locations"
+        readTime="5 min read"
+      />
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Search Section */}
+        <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white mb-12">
+          <h2 className="text-3xl font-bold mb-4">Find Your Location</h2>
+          <p className="text-purple-100 mb-6">Search by city name or ZIP code to find dumpster rental services in your area.</p>
+          
+          <div className="max-w-md">
+            <input
+              type="text"
+              placeholder="Enter city name or ZIP code..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+          </div>
+
+          {unknownZip && (
+            <div className="mt-4 p-4 bg-yellow-100 text-yellow-800 rounded-lg">
+              <p className="font-semibold mb-2">We don't currently serve this ZIP code, but we're expanding!</p>
+              <p className="text-sm mb-3">Enter your phone number and we'll notify you when we start serving your area.</p>
+              <div className="flex gap-2">
+                <input
+                  type="tel"
+                  placeholder="Your phone number"
+                  value={callbackPhone}
+                  onChange={(e) => setCallbackPhone(e.target.value)}
+                  className="flex-1 px-3 py-2 rounded text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                />
+                <button
+                  onClick={submitZipCallback}
+                  disabled={callbackStatus === 'sent' || !callbackPhone.trim()}
+                  className="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 disabled:opacity-50"
+                >
+                  {callbackStatus === 'sent' ? 'Submitted!' : 'Notify Me'}
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+
+        {/* Cities by Region */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Utah Dumpster Rental Locations</h2>
+          
+          {Object.entries(utahCities).map(([region, cities]) => {
+            const filteredCities = cities.filter(city => cityMatches(city.name));
+            if (filteredCities.length === 0) return null;
+            
+            return (
+              <div key={region} className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">{region}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {filteredCities.map((city) => (
+                    <div key={city.name} className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <Link href={city.url} className="block">
+                        <h4 className="text-lg font-semibold text-[#4e37a8] hover:text-purple-700 mb-2">
+                          {city.name}
+                        </h4>
+                        <p className="text-gray-600 text-sm mb-3">Dumpster rental services in {city.name}</p>
+                        <div className="flex gap-2">
+                          <Link 
+                            href={city.url}
+                            className="text-sm bg-[#4e37a8] text-white px-3 py-1 rounded hover:bg-purple-700 transition-colors"
+                          >
+                            Get Quote
+                          </Link>
+                          {city.guideUrl && (
+                            <Link 
+                              href={city.guideUrl}
+                              className="text-sm border border-[#4e37a8] text-[#4e37a8] px-3 py-1 rounded hover:bg-[#4e37a8] hover:text-white transition-colors"
+                            >
+                              Guide
+                            </Link>
+                          )}
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </section>
+
+        {/* Service Coverage */}
+        <section className="bg-gray-50 rounded-xl p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Service Coverage Areas</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Primary Service Areas</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• <strong>Salt Lake Valley:</strong> Salt Lake City, West Valley City, Sandy, West Jordan, Murray</li>
+                <li>• <strong>Utah County:</strong> Provo, Orem, Lehi, American Fork, Pleasant Grove</li>
+                <li>• <strong>Davis County:</strong> Layton, Bountiful, Clearfield, Centerville, Kaysville</li>
+                <li>• <strong>Weber County:</strong> Ogden and surrounding areas</li>
+                <li>• <strong>Summit County:</strong> Park City and nearby communities</li>
+                <li>• <strong>Tooele County:</strong> Tooele and surrounding areas</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Service Features</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• <strong>Same-Day Delivery:</strong> Available in most areas when ordered before 2 PM</li>
+                <li>• <strong>Flexible Scheduling:</strong> Choose delivery and pickup times that work for you</li>
+                <li>• <strong>Multiple Sizes:</strong> 10, 15, 20, and 30-yard dumpsters available</li>
+                <li>• <strong>Transparent Pricing:</strong> No hidden fees, clear bundle pricing</li>
+                <li>• <strong>Local Expertise:</strong> Knowledge of local regulations and permit requirements</li>
+                <li>• <strong>Responsive Support:</strong> Quick response times for all service areas</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-purple-100 mb-6">Get a free quote for your project, no matter where you're located in Utah.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/free-quote" 
+              className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Get Free Quote
+            </Link>
+            <Link 
+              href="tel:8019186000" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
+            >
+              Call (801) 918-6000
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <Analytics />
     </div>
   );
 }
