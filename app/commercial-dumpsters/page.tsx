@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Icon Dumpsters",
     images: [
       {
-        url: "https://icondumpsters.com/images/dumpsterSmallBanner6.jpeg",
+        url: "https://icondumpsters.com/iconmain/images/dumpsterSmallBanner6.jpeg",
         width: 1200,
         height: 630,
         alt: "Commercial Dumpster Rental Services in Utah"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commercial Dumpster Rental Utah | Business & Construction Waste Management",
     description: "Professional commercial dumpster rental services in Utah. Construction waste management and business dumpster solutions.",
-    images: ["https://icondumpsters.com/images/dumpsterSmallBanner6.jpeg"]
+    images: ["https://icondumpsters.com/iconmain/images/dumpsterSmallBanner6.jpeg"]
   }
 };
 
@@ -57,7 +57,7 @@ export default function CommercialDumpstersPage() {
         author="Icon Dumpsters"
         publishedDate="2024-01-01"
         modifiedDate="2024-12-19"
-        imageUrl="https://icondumpsters.com/images/dumpsterSmallBanner6.jpeg"
+        imageUrl="https://icondumpsters.com/iconmain/images/dumpsterSmallBanner6.jpeg"
         articleUrl="https://icondumpsters.com/commercial-dumpsters"
         category="Commercial Waste Management"
         readTime="8 min read"
@@ -96,10 +96,10 @@ export default function CommercialDumpstersPage() {
             </div>
             <div className="relative">
               <ImageWithFallback 
-                src="/images/dumpsterSmallBanner6.jpeg" 
+                src="/iconmain/images/dumpsterSmallBanner6.jpeg" 
                 alt="Commercial Dumpster Rental Services in Utah"
                 className="rounded-lg shadow-2xl"
-                fallbackSrc="/images/dumpsterSmallBanner6.jpeg"
+                fallbackSrc="/iconmain/images/dumpsterSmallBanner6.jpeg"
                 width={600}
                 height={400}
                 priority={true}
