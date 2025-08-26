@@ -40,7 +40,7 @@ export default function EnhancedHeader() {
                   onMouseLeave={() => setIsDumpsterSizesMenuOpen(false)}
                   className="text-gray-700 hover:text-[#4e37a8] transition-colors flex items-center"
                 >
-                  Dumpster Sizes
+                  SIZES
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -264,9 +264,9 @@ export default function EnhancedHeader() {
               Services
             </a>
             
-                         {/* Mobile Dumpster Sizes */}
+                         {/* Mobile SIZES */}
              <div className="border-t border-gray-200 pt-2">
-               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Specialized Dumpsters</div>
+               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">SIZES - Specialized Dumpsters</div>
                <a href="/dumpster-sizes#10-yard-dirt" className="block text-gray-700 hover:text-[#4e37a8] py-1">10 Yard Dirt</a>
                <a href="/dumpster-sizes#10-yard-mixed" className="block text-gray-700 hover:text-[#4e37a8] py-1">10 Yard Mixed</a>
                <a href="/dumpster-sizes#12-yard-concrete" className="block text-gray-700 hover:text-[#4e37a8] py-1">12 Yard Concrete</a>
