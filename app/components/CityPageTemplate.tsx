@@ -95,19 +95,19 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
           <p className="text-gray-600 mb-6">When you need reliable dumpster rental services in {cityShort}, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of {cityShort}'s unique needs makes us the preferred choice for residents and businesses alike.</p>
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/same-day-delivery" className="bg-purple-50 p-6 rounded-lg block hover:ring-2 hover:ring-purple-300 transition-shadow">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">🚚 Same‑Day Delivery</h3>
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Same-Day Delivery</h3>
               <p className="text-gray-700">Fast delivery across {cityShort} and the valley. Our local drivers know the area's traffic patterns and can navigate efficiently to get your dumpster delivered when you need it most.</p>
             </Link>
             <Link href="/transparent-pricing" className="bg-blue-50 p-6 rounded-lg block hover:ring-2 hover:ring-blue-300 transition-shadow">
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">💰 Transparent Pricing</h3>
-              <p className="text-gray-700">No hidden fees or surprise charges. Our bundle pricing for 1‑day, 3‑7 days, and 30‑day rentals gives you flexibility and cost certainty for your {cityShort} project.</p>
+              <h3 className="text-xl font-semibold text-blue-900 mb-2">Transparent Pricing</h3>
+              <p className="text-gray-700">No hidden fees or surprise charges. Our bundle pricing for 1-day, 3-7 days, and 30-day rentals gives you flexibility and cost certainty for your {cityShort} project.</p>
             </Link>
             <Link href="/local-pros" className="bg-green-50 p-6 rounded-lg block hover:ring-2 hover:ring-green-300 transition-shadow">
-              <h3 className="text-xl font-semibold text-green-900 mb-2">👷 Local Pros</h3>
+              <h3 className="text-xl font-semibold text-green-900 mb-2">Local Pros</h3>
               <p className="text-gray-700">Our experienced drivers and staff understand {cityShort}'s regulations, permit requirements, and local nuances. We're your neighbors, serving our community with pride.</p>
             </Link>
             <Link href="/responsible-disposal" className="bg-orange-50 p-6 rounded-lg block hover:ring-2 hover:ring-orange-300 transition-shadow">
-              <h3 className="text-xl font-semibold text-orange-900 mb-2">♻️ Responsible Disposal</h3>
+              <h3 className="text-xl font-semibold text-orange-900 mb-2">Responsible Disposal</h3>
               <p className="text-gray-700">We recycle whenever possible and partner with local facilities to ensure environmentally responsible waste management for {cityShort} and surrounding areas.</p>
             </Link>
           </div>
@@ -190,10 +190,10 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[ 
-              { title: '10‑Yard Dumpster', price: 250, note: 'Perfect for small projects', bullets: ['Garage cleanup', 'Small renovation', 'Yard waste', '7‑day rental included'] },
-              { title: '15‑Yard Dumpster', price: 300, note: 'Ideal for medium projects', bullets: ['Bathroom renovation', 'Basement cleanup', 'Roof replacement', '10‑day rental included'] },
-              { title: '20‑Yard Dumpster', price: 350, note: 'Great for large projects', bullets: ['Whole‑home renovation', 'Commercial cleanup', 'Large demolition', '14‑day rental included'] },
-              { title: '30‑Yard Dumpster', price: 450, note: 'For major projects', bullets: ['Commercial construction', 'Major demo', 'Large‑scale cleanup', '14‑day rental included'] }
+              { title: '10-Yard Dumpster', price: 250, note: 'Perfect for small projects', bullets: ['Garage cleanup', 'Small renovation', 'Yard waste', '7-day rental included'] },
+              { title: '15-Yard Dumpster', price: 300, note: 'Ideal for medium projects', bullets: ['Bathroom renovation', 'Basement cleanup', 'Roof replacement', '10-day rental included'] },
+              { title: '20-Yard Dumpster', price: 350, note: 'Great for large projects', bullets: ['Whole-home renovation', 'Commercial cleanup', 'Large demolition', '14-day rental included'] },
+              { title: '30-Yard Dumpster', price: 450, note: 'For major projects', bullets: ['Commercial construction', 'Major demo', 'Large-scale cleanup', '14-day rental included'] }
             ].map((card) => (
               <div key={card.title} className="bg-white p-6 rounded-lg shadow border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{card.title}</h3>
@@ -213,9 +213,9 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
           <div className="bg-white p-6 rounded-lg border">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Regulations</h3>
             <ul className="text-gray-700 space-y-2 mb-6">
-              <li>• Dumpsters cannot block sidewalks, driveways, or rights‑of‑way</li>
+              <li>• Dumpsters cannot block sidewalks, driveways, or rights-of-way</li>
               <li>• Street placement may require a city permit</li>
-              <li>• Typical rental periods range from 7–30 days</li>
+              <li>• Typical rental periods range from 7-30 days</li>
               <li>• Cover may be required to prevent debris from blowing</li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Accepted Materials</h3>
@@ -325,7 +325,7 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { 
-                title: '15‑Yard', 
+                title: '15-Yard', 
                 description: 'Perfect for small to medium projects',
                 items: ['Small cleanouts', 'Bathroom remodels', 'Yard debris', 'Garage organization', 'Minor renovations'],
                 capacity: '15 cubic yards',
@@ -333,7 +333,7 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
                 weightLimit: '3 tons'
               },
               { 
-                title: '20‑Yard', 
+                title: '20-Yard', 
                 description: 'Ideal for medium to large projects',
                 items: ['Kitchen remodels', 'Roofing projects', 'Medium renovations', 'Basement finishing', 'Office cleanouts'],
                 capacity: '20 cubic yards',
@@ -341,9 +341,9 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
                 weightLimit: '4 tons'
               },
               { 
-                title: '30‑Yard', 
+                title: '30-Yard', 
                 description: 'Best for major projects',
-                items: ['Whole‑home cleanouts', 'Construction & demo', 'Commercial projects', 'Large renovations', 'Multi-room remodels'],
+                items: ['Whole-home cleanouts', 'Construction & demo', 'Commercial projects', 'Large renovations', 'Multi-room remodels'],
                 capacity: '30 cubic yards',
                 dimensions: '12\' x 8\' x 6\'',
                 weightLimit: '6 tons'
@@ -405,8 +405,8 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
                 a: `Dumpster rental pricing in ${cityShort} varies based on size, rental duration, and project type. Our transparent pricing structure starts at $250 for 10-yard dumpsters and goes up to $450 for 30-yard containers. All prices include delivery, pickup, and disposal fees. We offer bundle pricing for different rental periods (1-day, 3-7 days, 30 days) to give you the best value for your ${cityShort} project. Contact us for a personalized quote based on your specific needs.`
               },
               { 
-                q: 'Do you offer same‑day delivery in the area?', 
-                a: `Yes, we provide same‑day delivery throughout ${cityShort} when you call before 2 PM. Our local drivers are familiar with the area's traffic patterns and can navigate efficiently to get your dumpster delivered quickly. Same-day service is subject to availability and is perfect for urgent projects or last-minute cleanup needs in ${cityShort}.`
+                q: 'Do you offer same-day delivery in the area?', 
+                a: `Yes, we provide same-day delivery throughout ${cityShort} when you call before 2 PM. Our local drivers are familiar with the area's traffic patterns and can navigate efficiently to get your dumpster delivered quickly. Same-day service is subject to availability and is perfect for urgent projects or last-minute cleanup needs in ${cityShort}.`
               },
               { 
                 q: 'What dumpster sizes are available for my project?', 
@@ -436,7 +436,7 @@ export default function CityPageTemplate({ city, neighborhoods, nearbyLinks, sho
         {/* CTA & Quote */}
         <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center mb-10">
           <h2 className="text-3xl font-bold mb-2">Ready to Get Your Dumpster in {cityShort}?</h2>
-          <p className="text-purple-100 mb-6">Get instant pricing or call (801) 918‑6000.</p>
+          <p className="text-purple-100 mb-6">Get instant pricing or call (801) 918-6000.</p>
           <a href="#quote" onClick={() => { try { (window as any).dataLayer?.push({ event:'cta_click', cta:'quote_city' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'cta', name:'quote_city' })}); } catch {} }} className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
         </section>
         <div id="quote" className="mb-12">
