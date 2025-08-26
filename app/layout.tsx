@@ -140,6 +140,8 @@ export default function RootLayout({
         />
         <StructuredData />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        {/* Ahrefs Analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="ctDHetXbMmD8XDhk/vJMcQ" async></script>
         {/* Additional favicon links for better browser compatibility */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
