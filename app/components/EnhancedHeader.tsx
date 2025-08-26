@@ -6,6 +6,7 @@ import PhoneModal from './PhoneModal';
 export default function EnhancedHeader() {
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
   const [isCityMenuOpen, setIsCityMenuOpen] = useState(false);
+  const [isDumpsterSizesMenuOpen, setIsDumpsterSizesMenuOpen] = useState(false);
 
   return (
     <>
@@ -31,9 +32,69 @@ export default function EnhancedHeader() {
               <a href="#services" className="text-gray-700 hover:text-[#4e37a8] transition-colors">
                 Services
               </a>
-              <a href="#dumpster-sizes" className="text-gray-700 hover:text-[#4e37a8] transition-colors">
-                Dumpster Sizes
-              </a>
+              
+              {/* Dumpster Sizes Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setIsDumpsterSizesMenuOpen(true)}
+                  onMouseLeave={() => setIsDumpsterSizesMenuOpen(false)}
+                  className="text-gray-700 hover:text-[#4e37a8] transition-colors flex items-center"
+                >
+                  Dumpster Sizes
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                                 {isDumpsterSizesMenuOpen && (
+                   <div
+                     onMouseEnter={() => setIsDumpsterSizesMenuOpen(true)}
+                     onMouseLeave={() => setIsDumpsterSizesMenuOpen(false)}
+                     className="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                   >
+                     <div className="py-2">
+                       {/* Specialized Dumpsters */}
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                         Specialized Dumpsters
+                       </div>
+                       <a href="/dumpster-sizes#10-yard-dirt" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">10 Yard Dirt</div>
+                         <div className="text-xs text-gray-500">Perfect for dirt & soil projects</div>
+                       </a>
+                       <a href="/dumpster-sizes#10-yard-mixed" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">10 Yard Mixed</div>
+                         <div className="text-xs text-gray-500">Mixed heavy loads</div>
+                       </a>
+                       <a href="/dumpster-sizes#12-yard-concrete" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">12 Yard Concrete</div>
+                         <div className="text-xs text-gray-500">Perfect for concrete projects</div>
+                       </a>
+                       
+                       {/* Standard Dumpsters */}
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                         Standard Dumpsters
+                       </div>
+                       <a href="/dumpster-sizes#15-yard" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">15 Yard Dumpsters</div>
+                         <div className="text-xs text-gray-500">Ideal for medium projects</div>
+                       </a>
+                       <a href="/dumpster-sizes#20-yard" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">20 Yard Dumpsters</div>
+                         <div className="text-xs text-gray-500">Great for large projects</div>
+                       </a>
+                       <a href="/dumpster-sizes#30-yard" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         <div className="font-semibold">30 Yard Dumpsters</div>
+                         <div className="text-xs text-gray-500">For major projects</div>
+                       </a>
+                       <a href="/dumpster-sizes" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         <div className="font-semibold">View All Dumpster Sizes</div>
+                         <div className="text-xs text-gray-500">See complete selection</div>
+                       </a>
+                     </div>
+                   </div>
+                 )}
+              </div>
+              
               <a href="#pricing" className="text-gray-700 hover:text-[#4e37a8] transition-colors">
                 Pricing
               </a>
@@ -202,9 +263,20 @@ export default function EnhancedHeader() {
             <a href="#services" className="block text-gray-700 hover:text-[#4e37a8] py-2">
               Services
             </a>
-            <a href="#dumpster-sizes" className="block text-gray-700 hover:text-[#4e37a8] py-2">
-              Dumpster Sizes
-            </a>
+            
+                         {/* Mobile Dumpster Sizes */}
+             <div className="border-t border-gray-200 pt-2">
+               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Specialized Dumpsters</div>
+               <a href="/dumpster-sizes#10-yard-dirt" className="block text-gray-700 hover:text-[#4e37a8] py-1">10 Yard Dirt</a>
+               <a href="/dumpster-sizes#10-yard-mixed" className="block text-gray-700 hover:text-[#4e37a8] py-1">10 Yard Mixed</a>
+               <a href="/dumpster-sizes#12-yard-concrete" className="block text-gray-700 hover:text-[#4e37a8] py-1">12 Yard Concrete</a>
+               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Standard Dumpsters</div>
+               <a href="/dumpster-sizes#15-yard" className="block text-gray-700 hover:text-[#4e37a8] py-1">15 Yard Dumpsters</a>
+               <a href="/dumpster-sizes#20-yard" className="block text-gray-700 hover:text-[#4e37a8] py-1">20 Yard Dumpsters</a>
+               <a href="/dumpster-sizes#30-yard" className="block text-gray-700 hover:text-[#4e37a8] py-1">30 Yard Dumpsters</a>
+               <a href="/dumpster-sizes" className="block text-gray-700 hover:text-[#4e37a8] py-1">View All Dumpster Sizes</a>
+             </div>
+            
             <a href="#pricing" className="block text-gray-700 hover:text-[#4e37a8] py-2">
               Pricing
             </a>
