@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import BlogSEO from '../components/BlogSEO';
 import FAQSchema from '../components/FAQSchema';
-import ImageWithFallback from '../components/ImageWithFallback';
 
 export const metadata: Metadata = {
   title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips | Icon Dumpsters",
@@ -447,20 +447,21 @@ export default function RolloffDumpsterGuide2025() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <Link href="/estimate-right-dumpster-size-home-cleanout" className="block">
-                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                    <ImageWithFallback
-                      src="/images/blog/dumpster-size-estimation.jpg"
-                      fallbackSrc="/images/blog/dumpster-size-estimation.jpg"
-                      alt="How to Estimate the Right Dumpster Size for a Home Cleanout Project - Icon Dumpsters Blog"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        GUIDES
-                      </span>
-                    </div>
-                  </div>
+                                 <Link href="/estimate-right-dumpster-size-home-cleanout" className="block">
+                   <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                     <Image
+                       src="/images/blog/dumpster-size-estimation.jpg"
+                       alt="How to Estimate the Right Dumpster Size for a Home Cleanout Project - Icon Dumpsters Blog"
+                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                       fill
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                     />
+                     <div className="absolute top-4 left-4">
+                       <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                         GUIDES
+                       </span>
+                     </div>
+                   </div>
                   
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
@@ -487,21 +488,22 @@ export default function RolloffDumpsterGuide2025() {
                 </Link>
               </article>
 
-              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <Link href="/home-renovation-waste-disposal-guide" className="block">
-                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                    <ImageWithFallback
-                      src="/images/dumpsterSmallBanner2.jpeg"
-                      fallbackSrc="/images/dumpsterSmallBanner2.webp"
-                      alt="Home Renovation Waste Disposal Guide - Icon Dumpsters Blog"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        RENOVATION
-                      </span>
-                    </div>
-                  </div>
+                             <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                 <Link href="/home-renovation-waste-disposal-guide" className="block">
+                   <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                     <Image
+                       src="/images/dumpsterSmallBanner2.jpeg"
+                       alt="Home Renovation Waste Disposal Guide - Icon Dumpsters Blog"
+                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                       fill
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                     />
+                     <div className="absolute top-4 left-4">
+                       <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                         RENOVATION
+                       </span>
+                     </div>
+                   </div>
                   
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
@@ -528,21 +530,22 @@ export default function RolloffDumpsterGuide2025() {
                 </Link>
               </article>
 
-              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <Link href="/commercial-dumpster-rental-business-solutions" className="block">
-                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                    <ImageWithFallback
-                      src="/images/dumpsterSmallBanner.jpeg"
-                      fallbackSrc="/images/dumpsterSmallBanner.webp"
-                      alt="Commercial Dumpster Rental Business Solutions - Icon Dumpsters Blog"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        COMMERCIAL
-                      </span>
-                    </div>
-                  </div>
+                             <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                 <Link href="/commercial-dumpster-rental-business-solutions" className="block">
+                   <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                     <Image
+                       src="/images/dumpsterSmallBanner.jpeg"
+                       alt="Commercial Dumpster Rental Business Solutions - Icon Dumpsters Blog"
+                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                       fill
+                       sizes="(max-width: 768px) 100vw, 50vw"
+                     />
+                     <div className="absolute top-4 left-4">
+                       <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                         COMMERCIAL
+                       </span>
+                     </div>
+                   </div>
                   
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
