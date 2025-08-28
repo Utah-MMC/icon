@@ -171,6 +171,22 @@ export default function RolloffDumpsterGuide2025() {
               </p>
             </div>
 
+            {/* Image 1: After Introduction */}
+            <div className="my-12">
+              <div className="relative">
+                <Image
+                  src="/images/dumpster500x500-1.jpeg"
+                  alt="Professional rolloff dumpster delivery service - Icon Dumpsters"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg">
+                  <p className="text-sm font-semibold">Professional rolloff dumpster delivery service</p>
+                </div>
+              </div>
+            </div>
+
             {/* What Is a Rolloff Dumpster & How It Works */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">What Is a Rolloff Dumpster & How It Works</h2>
@@ -223,6 +239,22 @@ export default function RolloffDumpsterGuide2025() {
                 If you're torn between two sizes, I use the "two-size test." If you're even slightly worried about space and the debris is not super dense, it's often cheaper to upsize than to pay a second haul fee.
               </p>
             </section>
+
+            {/* Image 2: After Sizes Section */}
+            <div className="my-12">
+              <div className="relative">
+                <Image
+                  src="/images/dumpster500x500-2.jpeg"
+                  alt="Different dumpster sizes comparison - Choose the right size for your project"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg">
+                  <p className="text-sm font-semibold">Choose the right size for your project needs</p>
+                </div>
+              </div>
+            </div>
 
             {/* What Fits: Materials, Weight Limits & Overage Fees */}
             <section className="mb-12">
@@ -282,6 +314,22 @@ export default function RolloffDumpsterGuide2025() {
               </p>
             </section>
 
+            {/* Image 3: After Placement Section */}
+            <div className="my-12">
+              <div className="relative">
+                <Image
+                  src="/images/dumpsterSmallBanner.jpeg"
+                  alt="Dumpster placement and site preparation - Proper site preparation ensures smooth delivery"
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg">
+                  <p className="text-sm font-semibold">Proper site preparation ensures smooth delivery</p>
+                </div>
+              </div>
+            </div>
+
             {/* How to Choose the Right Size */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Choose the Right Size (Decision Framework)</h2>
@@ -336,6 +384,22 @@ export default function RolloffDumpsterGuide2025() {
                 </ol>
               </div>
             </section>
+
+            {/* Image 4: After Loading Process */}
+            <div className="my-12">
+              <div className="relative">
+                <Image
+                  src="/images/dumpsterSmallBanner2.jpeg"
+                  alt="Construction debris being loaded into dumpster - Efficient loading maximizes space utilization"
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg">
+                  <p className="text-sm font-semibold">Efficient loading maximizes space utilization</p>
+                </div>
+              </div>
+            </div>
 
             {/* Residential vs. Construction */}
             <section className="mb-12">
@@ -408,6 +472,22 @@ export default function RolloffDumpsterGuide2025() {
                 Finally, the permit scramble. I've called the city day-of and gotten lucky, but I've also eaten a fine because the inspector happened to roll by. Two days of planning saves two hundred bucks. Write it on a sticky note: call city, call HOA, breathe.
               </p>
             </section>
+
+            {/* Image 5: Before Conclusion */}
+            <div className="my-12">
+              <div className="relative">
+                <Image
+                  src="/images/dumpsterSmallBanner4.jpeg"
+                  alt="Dumpster pickup and removal service - Timely pickup keeps your project on schedule"
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded-lg">
+                  <p className="text-sm font-semibold">Timely pickup keeps your project on schedule</p>
+                </div>
+              </div>
+            </div>
 
             {/* Conclusion */}
             <section className="mb-12">

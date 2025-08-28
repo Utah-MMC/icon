@@ -57,7 +57,41 @@ import { useSearchParams } from "next/navigation";
     text: "Get Free Quote",
     link: "/#quote-form",
     color: "green" // green, blue, purple, orange
-  }
+  },
+  
+  // BLOG POST CONTENT IMAGES (4-5 images per post):
+  contentImages: [
+    {
+      src: "/images/dumpster500x500-1.jpeg",
+      alt: "Rolloff dumpster being delivered to construction site",
+      caption: "Professional rolloff dumpster delivery service",
+      position: "after-intro" // after-intro, after-section-1, after-section-2, etc.
+    },
+    {
+      src: "/images/dumpster500x500-2.jpeg", 
+      alt: "Different dumpster sizes comparison",
+      caption: "Choose the right size for your project needs",
+      position: "after-sizes"
+    },
+    {
+      src: "/images/dumpsterSmallBanner.jpeg",
+      alt: "Dumpster placement and site preparation",
+      caption: "Proper site preparation ensures smooth delivery",
+      position: "after-placement"
+    },
+    {
+      src: "/images/dumpsterSmallBanner2.jpeg",
+      alt: "Construction debris being loaded into dumpster",
+      caption: "Efficient loading maximizes space utilization",
+      position: "after-loading"
+    },
+    {
+      src: "/images/dumpsterSmallBanner4.jpeg",
+      alt: "Dumpster pickup and removal service",
+      caption: "Timely pickup keeps your project on schedule",
+      position: "after-pickup"
+    }
+  ]
 }
 
 🎯 SEO REQUIREMENTS:
@@ -175,7 +209,39 @@ const blogPosts = [
       text: "Get Free Quote",
       link: "/#quote-form",
       color: "green"
-    }
+    },
+    contentImages: [
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Professional rolloff dumpster delivery service",
+        caption: "Professional rolloff dumpster delivery service",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Different dumpster sizes comparison",
+        caption: "Choose the right size for your project needs",
+        position: "after-sizes"
+      },
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Dumpster placement and site preparation",
+        caption: "Proper site preparation ensures smooth delivery",
+        position: "after-placement"
+      },
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Construction debris being loaded into dumpster",
+        caption: "Efficient loading maximizes space utilization",
+        position: "after-loading"
+      },
+      {
+        src: "/images/dumpsterSmallBanner4.jpeg",
+        alt: "Dumpster pickup and removal service",
+        caption: "Timely pickup keeps your project on schedule",
+        position: "after-pickup"
+      }
+    ]
   },
   {
     id: "dumpster-volume-calculator",
@@ -270,7 +336,33 @@ const blogPosts = [
       text: "Get Renovation Quote",
       link: "/#quote-form",
       color: "orange"
-    }
+    },
+    contentImages: [
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Home renovation waste disposal",
+        caption: "Proper waste management for renovation projects",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Renovation debris in dumpster",
+        caption: "Organized disposal of construction materials",
+        position: "after-planning"
+      },
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Renovation site with dumpster",
+        caption: "Convenient on-site waste management",
+        position: "after-process"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Renovation cleanup completion",
+        caption: "Clean project completion with proper disposal",
+        position: "after-completion"
+      }
+    ]
   },
   {
     id: "commercial-dumpster-rental-business-solutions",
