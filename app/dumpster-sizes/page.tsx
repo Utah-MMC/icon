@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import ImageWithFallback from "../components/ImageWithFallback";
 import sizesHero from "../../images/Screenshot 2025-08-21 223011.png";
 import QuoteForm from "../components/QuoteForm";
