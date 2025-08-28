@@ -63,8 +63,8 @@ export async function POST(request: NextRequest) {
         
       case 'add':
         const newDumpster = data;
-        const dumpsterId = inventoryService.addDumpster(newDumpster);
-        return NextResponse.json({ success: true, id: dumpsterId });
+        const newDumpsterId = inventoryService.addDumpster(newDumpster);
+        return NextResponse.json({ success: true, id: newDumpsterId });
         
       case 'remove':
         const { id } = data;
