@@ -106,7 +106,18 @@ const faqData = [
 export default function RolloffDumpsterGuide2025() {
   return (
     <>
-      <BlogSEO blogData={blogData} />
+      <BlogSEO 
+        title={blogData.title}
+        description={blogData.description}
+        canonicalUrl={blogData.canonicalUrl}
+        publishedDate={blogData.publishedDate}
+        modifiedDate={blogData.modifiedDate}
+        author={blogData.author}
+        category={blogData.category}
+        readTime={blogData.readTime}
+        featuredImage={blogData.featuredImage}
+        keywords={blogData.keywords}
+      />
       <FAQSchema faqData={faqData} />
       
       <article className="min-h-screen bg-white">
