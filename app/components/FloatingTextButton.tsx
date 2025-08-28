@@ -58,6 +58,7 @@ export default function FloatingTextButton() {
     <>
              {/* Floating Text Button */}
        <button
+         id="floating-text-button"
          onClick={() => setShowForm(true)}
          className="fixed bottom-32 right-4 z-30 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
          aria-label="Text us for a quote"

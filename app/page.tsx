@@ -651,21 +651,15 @@ export default function Home() {
               Get instant quotes and schedule delivery via text message. We'll respond within 30 minutes!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => {
-                  // Trigger the floating text button
-                  const floatingButton = document.querySelector('[aria-label="Text us for a quote"]') as HTMLButtonElement;
-                  if (floatingButton) {
-                    floatingButton.click();
-                  }
-                }}
-                className="bg-white text-green-600 px-8 py-4 rounded-xl hover:bg-green-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              <a 
+                href="#floating-text-button"
+                className="bg-white text-green-600 px-8 py-4 rounded-xl hover:bg-green-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
               >
-                <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                 </svg>
                 Text Us Now
-              </button>
+              </a>
               <a 
                 href="sms:+18019186000?body=Hi! I need a dumpster quote."
                 className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold text-lg"
