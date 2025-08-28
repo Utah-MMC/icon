@@ -299,20 +299,229 @@ export default function RolloffDumpsterGuide2025() {
             </section>
 
             {/* Permits, HOA Rules & Street Placement */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Permits, HOA Rules & Street Placement</h2>
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Permits, HOA Rules & Street Placement</h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Permits are not exciting until your neighbor asks the city why a giant metal box is camping on the curb. Been there. Many cities require a right-of-way permit if a rolloff sits on the street. Driveway placement usually avoids permits, but HOAs sometimes have their own rules—hours, visibility, even color (seriously).
-              </p>
-              
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                On a roof job, I learned to call the city's public works office first. They told me street permits could take 1–3 business days, and they wanted reflective cones at both ends and a night-time flasher. Easy prep, avoid a fine.
-              </p>
-              
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                HOAs: I've seen restrictions like "no visible dumpsters over weekends," or "must be covered when not in use." One board wanted it behind a privacy screen—so we tucked it behind a hedge and used plywood for the sightline. Document approvals in case a board member changes their mind mid-week.
-              </p>
+              {/* Overview */}
+              <div className="bg-blue-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">📋 Understanding Permits & Regulations</h3>
+                <p className="text-lg text-blue-800 leading-relaxed mb-4">
+                  <strong>Permits become "exciting" when your neighbor questions why a giant metal box is camping on the curb.</strong> Been there, done that! Understanding local regulations can save you fines and headaches.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">🏠 Driveway Placement:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• Usually avoids permit requirements</li>
+                      <li>• More convenient for loading</li>
+                      <li>• Better security and access</li>
+                      <li>• May require HOA approval</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">🛣️ Street Placement:</h4>
+                    <ul className="text-blue-800 space-y-1 text-sm">
+                      <li>• Often requires right-of-way permit</li>
+                      <li>• May need safety equipment</li>
+                      <li>• Subject to time restrictions</li>
+                      <li>• Must follow city guidelines</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* City Permits */}
+              <div className="bg-yellow-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-yellow-900 mb-4">🏛️ City Permits & Requirements</h3>
+                <p className="text-lg text-yellow-800 leading-relaxed mb-4">
+                  <strong>Always call your city's public works office first!</strong> I learned this lesson during a roof job when I discovered street permits could take 1-3 business days to process.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-900 mb-3">📞 What to Ask Your City:</h4>
+                    <ul className="text-yellow-800 space-y-2">
+                      <li>• Permit requirements for street placement</li>
+                      <li>• Processing time for applications</li>
+                      <li>• Required safety equipment</li>
+                      <li>• Time restrictions and limitations</li>
+                      <li>• Fees and application process</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-900 mb-3">⚠️ Common Requirements:</h4>
+                    <ul className="text-yellow-800 space-y-2">
+                      <li>• Reflective cones at both ends</li>
+                      <li>• Night-time flasher or lighting</li>
+                      <li>• Maximum placement duration</li>
+                      <li>• Distance from intersections</li>
+                      <li>• Traffic flow considerations</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-yellow-100 p-4 rounded-lg mt-4">
+                  <p className="text-yellow-900 font-semibold">
+                    💡 <strong>Pro Tip:</strong> Apply for permits early! Processing can take 1-3 business days, and you don't want to delay your project start date.
+                  </p>
+                </div>
+              </div>
+
+              {/* HOA Rules */}
+              <div className="bg-green-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-green-900 mb-4">🏘️ HOA Rules & Restrictions</h3>
+                <p className="text-lg text-green-800 leading-relaxed mb-4">
+                  <strong>Homeowners Associations can be more restrictive than city regulations.</strong> I've seen rules about visibility, hours, and even dumpster colors!
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-3">📋 Common HOA Restrictions:</h4>
+                    <ul className="text-green-800 space-y-2">
+                      <li>• No visible dumpsters over weekends</li>
+                      <li>• Must be covered when not in use</li>
+                      <li>• Limited placement hours</li>
+                      <li>• Specific color requirements</li>
+                      <li>• Distance from property lines</li>
+                      <li>• Maximum placement duration</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-3">✅ Compliance Solutions:</h4>
+                    <ul className="text-green-800 space-y-2">
+                      <li>• Use privacy screens or hedges</li>
+                      <li>• Schedule deliveries midweek</li>
+                      <li>• Request covered dumpsters</li>
+                      <li>• Place behind existing structures</li>
+                      <li>• Use plywood barriers</li>
+                      <li>• Coordinate with HOA board</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-green-100 p-4 rounded-lg mt-4">
+                  <p className="text-green-900">
+                    <strong>💡 Real Experience:</strong> One HOA required the dumpster to be hidden behind a privacy screen. We tucked it behind a hedge and used plywood for the sightline—problem solved!
+                  </p>
+                </div>
+              </div>
+
+              {/* Documentation */}
+              <div className="bg-purple-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-purple-900 mb-4">📄 Documentation & Approval Process</h3>
+                <p className="text-lg text-purple-800 leading-relaxed mb-4">
+                  <strong>Always document your approvals!</strong> Board members can change their minds, and having written permission protects you from unexpected issues.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-900 mb-3">📝 What to Document:</h4>
+                    <ul className="text-purple-800 space-y-2">
+                      <li>• Written HOA approval</li>
+                      <li>• City permit numbers</li>
+                      <li>• Placement location details</li>
+                      <li>• Duration and dates</li>
+                      <li>• Contact person names</li>
+                      <li>• Any special conditions</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-900 mb-3">📱 Communication Tips:</h4>
+                    <ul className="text-purple-800 space-y-2">
+                      <li>• Get approvals in writing</li>
+                      <li>• Email follow-ups for calls</li>
+                      <li>• Take photos of placement</li>
+                      <li>• Keep contact information handy</li>
+                      <li>• Notify neighbors in advance</li>
+                      <li>• Have backup plans ready</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-purple-100 p-4 rounded-lg mt-4">
+                  <p className="text-purple-900">
+                    <strong>💡 Pro Tip:</strong> Send a courtesy email to your immediate neighbors before the dumpster arrives. It prevents complaints and builds goodwill!
+                  </p>
+                </div>
+              </div>
+
+              {/* Safety & Compliance */}
+              <div className="bg-orange-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-orange-900 mb-4">🛡️ Safety & Compliance Checklist</h3>
+                <p className="text-lg text-orange-800 leading-relaxed mb-4">
+                  <strong>Safety first!</strong> Following proper procedures keeps everyone safe and avoids legal issues.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-orange-900 mb-3">✅ Pre-Delivery Checklist:</h4>
+                    <ul className="text-orange-800 space-y-2">
+                      <li>• Permits obtained and posted</li>
+                      <li>• HOA approval documented</li>
+                      <li>• Safety equipment ready</li>
+                      <li>• Site properly prepared</li>
+                      <li>• Neighbors notified</li>
+                      <li>• Emergency contacts available</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-orange-900 mb-3">⚠️ During Placement:</h4>
+                    <ul className="text-orange-800 space-y-2">
+                      <li>• Maintain proper lighting</li>
+                      <li>• Keep safety cones in place</li>
+                      <li>• Monitor for damage</li>
+                      <li>• Secure loose items</li>
+                      <li>• Follow time restrictions</li>
+                      <li>• Report issues immediately</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-orange-100 p-4 rounded-lg mt-4">
+                  <p className="text-orange-900">
+                    <strong>💡 Safety Reminder:</strong> Always ensure proper lighting and visibility, especially for street placements. It's not just about compliance—it's about safety!
+                  </p>
+                </div>
+              </div>
+
+              {/* Cost Considerations */}
+              <div className="bg-red-50 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-red-900 mb-4">💰 Cost Considerations & Fees</h3>
+                <p className="text-lg text-red-800 leading-relaxed mb-4">
+                  <strong>Permits and compliance can add to your project costs.</strong> Factor these into your budget to avoid surprises.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-900 mb-3">💸 Potential Additional Costs:</h4>
+                    <ul className="text-red-800 space-y-2">
+                      <li>• City permit fees ($25-$200)</li>
+                      <li>• HOA application fees</li>
+                      <li>• Safety equipment rental</li>
+                      <li>• Extended permit periods</li>
+                      <li>• Late application fees</li>
+                      <li>• Violation fines</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-900 mb-3">💡 Cost-Saving Tips:</h4>
+                    <ul className="text-red-800 space-y-2">
+                      <li>• Apply for permits early</li>
+                      <li>• Use driveway placement when possible</li>
+                      <li>• Coordinate with neighbors</li>
+                      <li>• Minimize placement duration</li>
+                      <li>• Bundle multiple projects</li>
+                      <li>• Check for seasonal discounts</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="bg-red-100 p-4 rounded-lg mt-4">
+                  <p className="text-red-900 font-semibold">
+                    💰 <strong>Budget Tip:</strong> Always include permit costs in your project budget. It's better to overestimate than to be caught off guard by unexpected fees!
+                  </p>
+                </div>
+              </div>
             </section>
 
             {/* Image 3: After Placement Section */}
