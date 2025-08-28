@@ -85,6 +85,16 @@ const blogPosts = [
 
   // REGULAR POSTS (add new posts here)
   {
+    id: "rolloff-dumpster-guide-2025",
+    title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips",
+    excerpt: "Complete guide to rolloff dumpster rental including sizes, pricing, permits, weight limits, and pro tips. Learn how to choose the right dumpster and avoid costly mistakes.",
+    category: "GUIDES",
+    readTime: "15 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp",
+    featured: true
+  },
+  {
     id: "dumpster-volume-calculator",
     title: "Dumpster Volume Calculator: Calculate Dumpster Capacity & Dimensions",
     excerpt: "Use our dumpster volume calculator to determine the right dumpster size for your project. Calculate dumpster dimensions, capacity, and volume requirements for Utah projects.",
