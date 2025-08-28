@@ -167,7 +167,8 @@ export default function RolloffDumpsterGuide2025() {
                 Here's the plan: I'll demystify rolloff dumpster sizes (10–40 yard), talk transparent pricing, and cover permits, weight limits, and what not to toss. 
                 We'll walk through the rental process step-by-step and compare alternatives like junk removal or bag dumpsters. 
                 With construction-and-demolition (C&D) debris piling up by the millions of tons each year, smarter disposal isn't just convenient—it's responsible. 
-                Stick with me and you'll rent with confidence, keep your driveway intact, and skip those "whoops" charges!
+                Stick with me and you'll rent with confidence, keep your driveway intact, and skip those "whoops" charges! 
+                If you need help calculating the right size for your specific project, check out our <Link href="/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size calculator</Link> for instant estimates.
               </p>
             </div>
 
@@ -200,7 +201,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Rolloffs shine on remodeling, roofing, estate cleanouts, yard overhauls, and light demolition. They're different from front-load dumpsters (the kind behind restaurants) that are mostly for ongoing commercial trash with lids and scheduled pickups. A rolloff is temporary, open-top, and designed for bulky or heavy debris. You can keep it for a standard rental period—usually 7 days in my area—but extensions are common. If you fill it early, a "swap-out" (dump & return) keeps your project moving. That was a lifesaver during a deck demo when we underestimated how many joists were rotten and oversized.
+                Rolloffs shine on remodeling, roofing, estate cleanouts, yard overhauls, and light demolition. They're different from front-load dumpsters (the kind behind restaurants) that are mostly for ongoing commercial trash with lids and scheduled pickups. A rolloff is temporary, open-top, and designed for bulky or heavy debris. You can keep it for a standard rental period—usually 7 days in my area—but extensions are common. If you fill it early, a "swap-out" (dump & return) keeps your project moving. That was a lifesaver during a deck demo when we underestimated how many joists were rotten and oversized. For home renovation projects specifically, our <Link href="/home-renovation-waste-disposal-guide" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">home renovation waste disposal guide</Link> covers everything you need to know about managing construction debris.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -236,7 +237,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                If you're torn between two sizes, I use the "two-size test." If you're even slightly worried about space and the debris is not super dense, it's often cheaper to upsize than to pay a second haul fee.
+                If you're torn between two sizes, I use the "two-size test." If you're even slightly worried about space and the debris is not super dense, it's often cheaper to upsize than to pay a second haul fee. For more detailed size guidance, check out our <Link href="/estimate-right-dumpster-size-home-cleanout" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size estimation guide</Link> which includes specific examples and scenarios.
               </p>
             </section>
 
@@ -265,11 +266,11 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Common debris is straightforward: lumber, drywall, flooring, cabinets, trim, furniture, yard waste, and packaging. Roof tear-offs are common too, but shingles are dense—20–30 pounds per bundle adds up. I like to layer light materials between heavy chunks to keep the load level and within axle limits, not just for safety but to avoid "heaping" above the rim.
+                Common debris is straightforward: lumber, drywall, flooring, cabinets, trim, furniture, yard waste, and packaging. Roof tear-offs are common too, but shingles are dense—20–30 pounds per bundle adds up. I like to layer light materials between heavy chunks to keep the load level and within axle limits, not just for safety but to avoid "heaping" above the rim. For roofing projects specifically, our <Link href="/roofing-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">roofing dumpster calculator</Link> helps estimate the exact size and weight you'll need.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Dense materials (concrete, dirt, brick, rock) are a different game. Many haulers require a dedicated container for clean concrete or clean dirt, and they'll cap fill height at half to keep legal road weights. I've used a 10-yard for broken sidewalk and still hit weight faster than volume.
+                Dense materials (concrete, dirt, brick, rock) are a different game. Many haulers require a dedicated container for clean concrete or clean dirt, and they'll cap fill height at half to keep legal road weights. I've used a 10-yard for broken sidewalk and still hit weight faster than volume. For concrete disposal projects, use our <Link href="/dumpster-calculator-for-concrete" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete dumpster calculator</Link> to get accurate estimates for concrete weight and volume.
               </p>
               
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
@@ -289,7 +290,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Flat-rate shines when debris is mixed or you're unsure of weight. During a kitchen and bath combo, the flat-rate 20-yard with 3 tons included gave me peace of mind. On the flip side, when I did a garage cleanout of mostly cardboard, old shelving, and a few trash bags, the base + per-ton saved money because the load was light but bulky.
+                Flat-rate shines when debris is mixed or you're unsure of weight. During a kitchen and bath combo, the flat-rate 20-yard with 3 tons included gave me peace of mind. On the flip side, when I did a garage cleanout of mostly cardboard, old shelving, and a few trash bags, the base + per-ton saved money because the load was light but bulky. To get an instant quote for your project, try our <Link href="/dumpster-volume-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster volume calculator</Link> which provides real-time pricing based on your specific needs.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -410,7 +411,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                On construction sites, the container is a tool on the schedule. Contractors want predictable pulls, diversion reporting, and bins staged close to work areas. I label bins by material when we're chasing recycling credits—wood here, metal there, cardboard by the gate. Crews rotate loads daily, and the foreman keeps an eye out for contamination.
+                On construction sites, the container is a tool on the schedule. Contractors want predictable pulls, diversion reporting, and bins staged close to work areas. I label bins by material when we're chasing recycling credits—wood here, metal there, cardboard by the gate. Crews rotate loads daily, and the foreman keeps an eye out for contamination. For commercial projects, our <Link href="/commercial-dumpster-rental-business-solutions" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">commercial dumpster rental solutions</Link> provide specialized services for businesses and construction companies.
               </p>
             </section>
 
@@ -427,7 +428,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Don't sleep on donation and resale. Before a kitchen demo, we listed the old but solid cabinets and the farmhouse sink online. A local guy picked them up, and that space never touched the dumpster. Habitat-style stores are great for doors, lighting, and gently used fixtures.
+                Don't sleep on donation and resale. Before a kitchen demo, we listed the old but solid cabinets and the farmhouse sink online. A local guy picked them up, and that space never touched the dumpster. Habitat-style stores are great for doors, lighting, and gently used fixtures. For demolition projects, our <Link href="/demolition-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">demolition dumpster calculator</Link> helps estimate the right size and weight capacity for your demolition debris.
               </p>
             </section>
 
@@ -498,7 +499,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I know this stuff can seem dull, but a boring dumpster experience is a beautiful thing. Pick your size, protect the driveway, label what goes where, and take five minutes to ask about restricted items. And if you've learned a tip the hard way (we all have!), drop it in the comments so the next person saves a buck and a headache.
+                I know this stuff can seem dull, but a boring dumpster experience is a beautiful thing. Pick your size, protect the driveway, label what goes where, and take five minutes to ask about restricted items. And if you've learned a tip the hard way (we all have!), drop it in the comments so the next person saves a buck and a headache. Ready to get started? Use our <Link href="/30-yard-dumpster-rental-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">30-yard dumpster rental calculator</Link> for large projects or check out our <Link href="/concrete-debris-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete debris calculator</Link> for specialized concrete disposal needs.
               </p>
             </section>
 
