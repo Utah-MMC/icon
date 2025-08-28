@@ -68,10 +68,10 @@ export default function Home() {
         {/* Background image */}
         <div className="relative h-screen bg-[#4e37a8] flex items-center justify-center">
         <ImageWithFallback 
-            src="/images/here-topaz-enhance-2x-remove-textai.jpeg" 
+            src="/images/hero-image.jpeg" 
             alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
             className="w-full h-full object-cover"
-            fallbackSrc="/images/here-topaz-enhance-2x-remove-textai.jpeg"
+            fallbackSrc="/images/hero-image.jpeg"
           />
         </div>
         
