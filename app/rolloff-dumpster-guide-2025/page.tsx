@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import BlogSEO from '../components/BlogSEO';
 import FAQSchema from '../components/FAQSchema';
-import RelatedPosts from '../components/RelatedPosts';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 export const metadata: Metadata = {
   title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips | Icon Dumpsters",
@@ -433,10 +434,155 @@ export default function RolloffDumpsterGuide2025() {
         </div>
 
         {/* Related Posts */}
-        <RelatedPosts 
-          currentPostId="rolloff-dumpster-guide-2025"
-          category="GUIDES"
-        />
+        <section className="bg-gray-50 py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Related Articles
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Continue learning with these related articles on dumpster rental and waste management.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Link href="/estimate-right-dumpster-size-home-cleanout" className="block">
+                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                    <ImageWithFallback
+                      src="/images/blog/dumpster-size-estimation.jpg"
+                      fallbackSrc="/images/blog/dumpster-size-estimation.jpg"
+                      alt="How to Estimate the Right Dumpster Size for a Home Cleanout Project - Icon Dumpsters Blog"
+                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        GUIDES
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <span>12 min read</span>
+                      <span>•</span>
+                      <span>GUIDES</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 hover:text-[#4e37a8] transition-colors">
+                      How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)
+                    </h3>
+                    
+                    <p className="text-gray-600 line-clamp-3 mb-4">
+                      Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.
+                    </p>
+                    
+                    <div className="flex items-center text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
+                      Read More
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </article>
+
+              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Link href="/home-renovation-waste-disposal-guide" className="block">
+                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                    <ImageWithFallback
+                      src="/images/dumpsterSmallBanner2.jpeg"
+                      fallbackSrc="/images/dumpsterSmallBanner2.webp"
+                      alt="Home Renovation Waste Disposal Guide - Icon Dumpsters Blog"
+                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        RENOVATION
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <span>7 min read</span>
+                      <span>•</span>
+                      <span>RENOVATION</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 hover:text-[#4e37a8] transition-colors">
+                      Home Renovation Waste Disposal: A Complete Guide
+                    </h3>
+                    
+                    <p className="text-gray-600 line-clamp-3 mb-4">
+                      Learn how to properly dispose of renovation waste, choose the right dumpster size, and manage construction debris for your home renovation project in Utah.
+                    </p>
+                    
+                    <div className="flex items-center text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
+                      Read More
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </article>
+
+              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Link href="/commercial-dumpster-rental-business-solutions" className="block">
+                  <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
+                    <ImageWithFallback
+                      src="/images/dumpsterSmallBanner.jpeg"
+                      fallbackSrc="/images/dumpsterSmallBanner.webp"
+                      alt="Commercial Dumpster Rental Business Solutions - Icon Dumpsters Blog"
+                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#4e37a8] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        COMMERCIAL
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <span>7 min read</span>
+                      <span>•</span>
+                      <span>COMMERCIAL</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 hover:text-[#4e37a8] transition-colors">
+                      Commercial Dumpster Rental: Business Solutions
+                    </h3>
+                    
+                    <p className="text-gray-600 line-clamp-3 mb-4">
+                      Professional dumpster rental solutions for businesses, construction companies, and commercial projects. Reliable waste management services across Utah.
+                    </p>
+                    
+                    <div className="flex items-center text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
+                      Read More
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </article>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                href="/blog" 
+                className="inline-flex items-center px-8 py-3 bg-[#4e37a8] text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
+              >
+                View All Articles
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
       </article>
     </>
   );
