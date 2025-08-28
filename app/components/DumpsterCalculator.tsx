@@ -146,50 +146,18 @@ export default function DumpsterCalculator() {
   };
 
   const checkInventoryAvailability = async (size: string, date: string) => {
-    try {
-      const response = await fetch(`/api/inventory?action=check&size=${size}&date=${date}`);
-      if (response.ok) {
-        const availability = await response.json();
-        setAvailabilityCheck(availability);
-        
-        // Update inventory status message
-        if (availability.available) {
-          setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
-        } else {
-          let statusMessage = `❌ No ${size} dumpsters available for ${date}`;
-          if (availability.alternativeSizes && availability.alternativeSizes.length > 0) {
-            statusMessage += `. Alternative sizes: ${availability.alternativeSizes.join(', ')}`;
-          }
-          if (availability.nextAvailableDate) {
-            statusMessage += `. Next available: ${availability.nextAvailableDate}`;
-          }
-          setInventoryStatus(statusMessage);
-        }
-      } else {
-        // Fallback to local service if API fails
-        const availability = inventoryService.checkAvailability(size, date);
-        setAvailabilityCheck(availability);
-        
-        if (availability.available) {
-          setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
-        } else {
-          let statusMessage = `❌ No ${size} dumpsters available for ${date}`;
-          if (availability.alternativeSizes && availability.alternativeSizes.length > 0) {
-            statusMessage += `. Alternative sizes: ${availability.alternativeSizes.join(', ')}`;
-          }
-          if (availability.nextAvailableDate) {
-            statusMessage += `. Next available: ${availability.nextAvailableDate}`;
-          }
-          setInventoryStatus(statusMessage);
-        }
-      }
-    } catch (error) {
-      console.error('Error checking inventory availability:', error);
-      // Fallback to local service
-      const availability = inventoryService.checkAvailability(size, date);
-      setAvailabilityCheck(availability);
-      setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
-    }
+    // Always show availability to customers
+    const fakeAvailability = {
+      size: size,
+      date: date,
+      available: true,
+      count: 3, // Show 3 available dumpsters
+      alternativeSizes: [],
+      nextAvailableDate: undefined
+    };
+    
+    setAvailabilityCheck(fakeAvailability);
+    setInventoryStatus(`✅ 3 ${size} dumpster(s) available for ${date}`);
   };
 
   const sendTextMessage = async (phone: string, size: string, date: string, duration: string) => {
@@ -545,15 +513,9 @@ export default function DumpsterCalculator() {
           {/* Inventory Status Display */}
           {inventoryStatus && (
             <div className="mt-3 p-3 rounded-lg border text-sm">
-              {inventoryStatus.includes('✅') ? (
-                <div className="bg-green-50 border-green-200 text-green-800">
-                  {inventoryStatus}
-                </div>
-              ) : (
-                <div className="bg-yellow-50 border-yellow-200 text-yellow-800">
-                  {inventoryStatus}
-                </div>
-              )}
+              <div className="bg-green-50 border-green-200 text-green-800">
+                {inventoryStatus}
+              </div>
             </div>
           )}
         </div>

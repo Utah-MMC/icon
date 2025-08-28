@@ -111,3 +111,68 @@ body {
     linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* Hero image responsive utilities */
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  .hero-text {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-text {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-text {
+    font-size: clamp(3rem, 3vw, 4rem);
+  }
+}
+
+/* Ensure proper aspect ratio on smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    max-height: 80vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-section {
+    min-height: 70vh;
+    max-height: 90vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-section {
+    min-height: 80vh;
+    max-height: 100vh;
+  }
+}
+
+/* Hero background image */
+.hero-background {
+  background-image: url('/images/dumpsterWithTruck.jpeg?v=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4e37a8;
+}

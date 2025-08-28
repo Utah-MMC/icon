@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImageWithFallback from "./components/ImageWithFallback";
 import QuoteForm from "./components/QuoteForm";
 import ReviewsCarousel from "./components/ReviewsCarousel";
 import CleanupSection from "./components/CleanupSection";
@@ -65,31 +64,51 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative w-full">
-        {/* Background image */}
-        <div className="relative h-screen bg-[#4e37a8] flex items-center justify-center">
-        <ImageWithFallback 
-            src="/images/hero-image.jpeg" 
-            alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
-            className="w-full h-full object-cover"
-            fallbackSrc="/images/hero-image.jpeg"
-          />
-        </div>
-        
-        {/* Hero Content - Now below the image */}
-        <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-8 sm:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Background image with responsive design */}
+        <div 
+          className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] xl:min-h-screen flex items-center justify-center overflow-hidden bg-[#4e37a8]"
+        >
+          <div className="absolute inset-0" style={{zIndex: 1}}>
+            <img 
+              src="/images/Screenshot 2025-08-27 203417.png" 
+              alt="Icon Dumpsters truck and roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
+              className="w-full h-full object-cover object-center"
+              style={{display: 'block', minHeight: '100%'}}
+            />
+          </div>
+          
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          
+          {/* Hero Content - Overlaid on image */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
             <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Professional Dumpster Rental Services in Salt Lake County</h1>
-              <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
-                <a href="#quote-form" data-analytics-type="cta" data-analytics-name="quote_hero" className="bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block">
+              <h1 className="hero-text font-bold mb-4 sm:mb-6 text-white drop-shadow-lg leading-tight">
+                Professional Dumpster Rental Services in Salt Lake County
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto drop-shadow-md">
+                Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 flex-wrap">
+                <a 
+                  href="#quote-form" 
+                  data-analytics-type="cta" 
+                  data-analytics-name="quote_hero" 
+                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
                   Get A Quote
                 </a>
-                <a href="/book" data-analytics-type="cta" data-analytics-name="book_hero" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium text-base sm:text-lg inline-block">
+                <a 
+                  href="/book" 
+                  data-analytics-type="cta" 
+                  data-analytics-name="book_hero" 
+                  className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium text-base sm:text-lg inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
                   Book Now
                 </a>
               </div>
             </div>
-      </div>
+          </div>
         </div>
       </div>
 
@@ -370,7 +389,7 @@ export default function Home() {
           {/* General Residential Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
+              <Image src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -387,7 +406,7 @@ export default function Home() {
           {/* Construction Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
+              <Image src="/images/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -404,7 +423,7 @@ export default function Home() {
           {/* Concrete Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
+              <Image src="/images/dumpster500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -421,7 +440,7 @@ export default function Home() {
           {/* Roofing Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpster500x500-2.jpeg" alt="Roofing Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
+              <Image src="/images/dumpster500x500-2.jpeg" alt="Roofing Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -438,7 +457,7 @@ export default function Home() {
           {/* Yard Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-1.jpeg" />
+              <Image src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -455,7 +474,7 @@ export default function Home() {
           {/* Recyclable Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="/services" className="block">
-              <ImageWithFallback src="/images/dumpster500x500-1.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" fallbackSrc="/images/dumpster500x500-2.jpeg" />
+              <Image src="/images/dumpster500x500-1.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
