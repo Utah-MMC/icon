@@ -13,7 +13,7 @@ import { useSearchParams } from "next/navigation";
 // Blog post data for search functionality
 
 /*
-📝 BLOG POST TEMPLATE - Copy this structure for new posts:
+📝 ENHANCED BLOG POST TEMPLATE - Copy this structure for new posts:
 
 {
   id: "your-post-url-slug",
@@ -23,7 +23,41 @@ import { useSearchParams } from "next/navigation";
   readTime: "X min read",
   image: "/images/your-image.jpg",
   fallbackImage: "/images/your-image.webp",
-  featured: false // Set to true for featured posts (shows in featured section)
+  featured: false, // Set to true for featured posts (shows in featured section)
+  
+  // NEW ENHANCED FIELDS:
+  heroImage: "/images/hero-image.jpg", // Large hero image for post header
+  heroImageAlt: "Descriptive alt text for hero image",
+  bannerColor: "purple", // Choose from: purple, blue, green, orange, red
+  highlightBoxes: [
+    {
+      title: "Key Takeaway 1",
+      content: "Important point or tip",
+      icon: "💡" // Emoji or icon
+    },
+    {
+      title: "Key Takeaway 2", 
+      content: "Another important point",
+      icon: "⚡"
+    }
+  ],
+  stats: [
+    {
+      label: "Average Cost",
+      value: "$300-500",
+      description: "Typical dumpster rental cost"
+    },
+    {
+      label: "Delivery Time",
+      value: "Same Day",
+      description: "Available in most areas"
+    }
+  ],
+  ctaButton: {
+    text: "Get Free Quote",
+    link: "/#quote-form",
+    color: "green" // green, blue, purple, orange
+  }
 }
 
 🎯 SEO REQUIREMENTS:
@@ -38,6 +72,13 @@ import { useSearchParams } from "next/navigation";
 2. Replace all placeholder text with your content
 3. Add to the blogPosts array below (keep featured posts at top)
 4. Save and test
+
+🎨 VISUAL ENHANCEMENTS:
+- Hero images for better visual appeal
+- Highlight boxes for key takeaways
+- Statistics boxes for important data
+- Color-coded banners and CTAs
+- Professional styling throughout
 */
 
 const blogPosts = [
@@ -92,7 +133,49 @@ const blogPosts = [
     readTime: "15 min read",
     image: "/images/dumpster500x500-1.jpeg",
     fallbackImage: "/images/dumpster500x500-1.webp",
-    featured: true
+    featured: true,
+    heroImage: "/images/dumpster500x500-1.jpeg",
+    heroImageAlt: "Rolloff Dumpster Guide 2025 - Complete Guide to Dumpster Rental",
+    bannerColor: "purple",
+    highlightBoxes: [
+      {
+        title: "Size Selection",
+        content: "Choose the right dumpster size to avoid costly overage fees",
+        icon: "📏"
+      },
+      {
+        title: "Cost Savings",
+        content: "Learn how to get the best rates and avoid hidden fees",
+        icon: "💰"
+      },
+      {
+        title: "Permit Requirements",
+        content: "Understand local regulations and permit requirements",
+        icon: "📋"
+      }
+    ],
+    stats: [
+      {
+        label: "Average Cost",
+        value: "$200-700",
+        description: "Depending on size and location"
+      },
+      {
+        label: "Delivery Time",
+        value: "Same Day",
+        description: "Available in most areas"
+      },
+      {
+        label: "Rental Period",
+        value: "7-14 Days",
+        description: "Standard rental period"
+      }
+    ],
+    ctaButton: {
+      text: "Get Free Quote",
+      link: "/#quote-form",
+      color: "green"
+    }
   },
   {
     id: "dumpster-volume-calculator",
@@ -155,7 +238,39 @@ const blogPosts = [
     category: "RENOVATION",
     readTime: "7 min read",
     image: "/images/dumpsterSmallBanner2.jpeg",
-    fallbackImage: "/images/dumpsterSmallBanner2.webp"
+    fallbackImage: "/images/dumpsterSmallBanner2.webp",
+    heroImage: "/images/dumpsterSmallBanner2.jpeg",
+    heroImageAlt: "Home Renovation Waste Disposal Guide - Utah Dumpster Rental",
+    bannerColor: "orange",
+    highlightBoxes: [
+      {
+        title: "Waste Planning",
+        content: "Plan your waste disposal before starting renovation",
+        icon: "📋"
+      },
+      {
+        title: "Size Selection",
+        content: "Choose the right dumpster size for your project",
+        icon: "📏"
+      }
+    ],
+    stats: [
+      {
+        label: "Typical Cost",
+        value: "$300-600",
+        description: "For renovation projects"
+      },
+      {
+        label: "Delivery",
+        value: "Same Day",
+        description: "Available in Utah"
+      }
+    ],
+    ctaButton: {
+      text: "Get Renovation Quote",
+      link: "/#quote-form",
+      color: "orange"
+    }
   },
   {
     id: "commercial-dumpster-rental-business-solutions",
@@ -255,35 +370,107 @@ function BlogContent() {
 
             {/* Featured Posts */}
             {filteredPosts.filter(post => post.featured).length > 0 && (
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Articles</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="mb-12">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">Featured Articles</h2>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {filteredPosts.filter(post => post.featured).map((post) => (
-                    <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+                    <article key={post.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <Link href={`/${post.id}`} className="block">
-                        <div className="relative h-48 overflow-hidden">
+                        {/* Hero Image */}
+                        <div className="relative h-64 overflow-hidden">
                           <ImageWithFallback 
-                            src={post.image} 
-                            alt={post.title}
+                            src={post.heroImage || post.image} 
+                            alt={post.heroImageAlt || post.title}
                             className="object-cover w-full h-full"
                             fallbackSrc={post.fallbackImage}
                             fill={true}
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
-                        </div>
-                        <div className="p-6">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
+                          {/* Category Badge */}
+                          <div className="absolute top-4 left-4">
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold text-white shadow-lg ${
+                              post.bannerColor === 'purple' ? 'bg-purple-600' :
+                              post.bannerColor === 'blue' ? 'bg-blue-600' :
+                              post.bannerColor === 'green' ? 'bg-green-600' :
+                              post.bannerColor === 'orange' ? 'bg-orange-600' :
+                              post.bannerColor === 'red' ? 'bg-red-600' :
+                              'bg-purple-600'
+                            }`}>
                               {post.category}
                             </span>
-                            <span className="text-gray-500 text-xs">{post.readTime}</span>
                           </div>
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                          {/* Read Time Badge */}
+                          <div className="absolute top-4 right-4">
+                            <span className="bg-black bg-opacity-50 text-white px-2 py-1 rounded-full text-xs font-medium">
+                              {post.readTime}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <div className="p-8">
+                          {/* Title */}
+                          <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2 hover:text-purple-600 transition-colors">
                             {post.title}
                           </h3>
-                          <p className="text-gray-600 text-sm line-clamp-3">
+                          
+                          {/* Excerpt */}
+                          <p className="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
                             {post.excerpt}
                           </p>
+                          
+                          {/* Highlight Boxes */}
+                          {post.highlightBoxes && post.highlightBoxes.length > 0 && (
+                            <div className="grid grid-cols-1 gap-3 mb-6">
+                              {post.highlightBoxes.slice(0, 2).map((highlight, index) => (
+                                <div key={index} className="bg-gray-50 rounded-lg p-3 border-l-4 border-purple-500">
+                                  <div className="flex items-start gap-3">
+                                    <span className="text-lg">{highlight.icon}</span>
+                                    <div>
+                                      <h4 className="font-semibold text-gray-900 text-sm">{highlight.title}</h4>
+                                      <p className="text-gray-600 text-xs">{highlight.content}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          
+                          {/* Stats */}
+                          {post.stats && post.stats.length > 0 && (
+                            <div className="grid grid-cols-2 gap-4 mb-6">
+                              {post.stats.slice(0, 2).map((stat, index) => (
+                                <div key={index} className="text-center">
+                                  <div className="text-lg font-bold text-purple-600">{stat.value}</div>
+                                  <div className="text-xs text-gray-500">{stat.label}</div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          
+                          {/* CTA Button */}
+                          {post.ctaButton && (
+                            <div className="flex justify-center">
+                              <span className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors ${
+                                post.ctaButton.color === 'green' ? 'bg-green-500 hover:bg-green-600' :
+                                post.ctaButton.color === 'blue' ? 'bg-blue-500 hover:bg-blue-600' :
+                                post.ctaButton.color === 'purple' ? 'bg-purple-500 hover:bg-purple-600' :
+                                post.ctaButton.color === 'orange' ? 'bg-orange-500 hover:bg-orange-600' :
+                                'bg-green-500 hover:bg-green-600'
+                              }`}>
+                                {post.ctaButton.text}
+                                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </span>
+                            </div>
+                          )}
                         </div>
                       </Link>
                     </article>
@@ -294,14 +481,21 @@ function BlogContent() {
 
             {/* All Posts */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                {selectedCategory === "ALL" ? "All Articles" : `${selectedCategory} Articles`}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-6 h-6 bg-gradient-to-r from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {selectedCategory === "ALL" ? "All Articles" : `${selectedCategory} Articles`}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+                  <article key={post.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <Link href={`/${post.id}`} className="block">
-                      <div className="relative h-48 overflow-hidden">
+                      <div className="relative h-56 overflow-hidden">
                         <ImageWithFallback 
                           src={post.image} 
                           alt={post.title}
@@ -310,20 +504,45 @@ function BlogContent() {
                           fill={true}
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                      </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
+                        {/* Category Badge */}
+                        <div className="absolute top-3 left-3">
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold text-white shadow-md ${
+                            post.bannerColor === 'purple' ? 'bg-purple-600' :
+                            post.bannerColor === 'blue' ? 'bg-blue-600' :
+                            post.bannerColor === 'green' ? 'bg-green-600' :
+                            post.bannerColor === 'orange' ? 'bg-orange-600' :
+                            post.bannerColor === 'red' ? 'bg-red-600' :
+                            'bg-purple-600'
+                          }`}>
                             {post.category}
                           </span>
-                          <span className="text-gray-500 text-xs">{post.readTime}</span>
                         </div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                        {/* Read Time Badge */}
+                        <div className="absolute top-3 right-3">
+                          <span className="bg-black bg-opacity-50 text-white px-2 py-1 rounded-full text-xs font-medium">
+                            {post.readTime}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 hover:text-purple-600 transition-colors">
                           {post.title}
                         </h3>
-                        <p className="text-gray-600 text-sm line-clamp-3">
+                        <p className="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
                           {post.excerpt}
                         </p>
+                        
+                        {/* Quick Stats (if available) */}
+                        {post.stats && post.stats.length > 0 && (
+                          <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+                            {post.stats.slice(0, 2).map((stat, index) => (
+                              <div key={index} className="text-center">
+                                <div className="text-sm font-bold text-purple-600">{stat.value}</div>
+                                <div className="text-xs text-gray-500">{stat.label}</div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </Link>
                   </article>
@@ -454,5 +673,6 @@ export default function BlogClient() {
     </Suspense>
   );
 }
+
 
 
