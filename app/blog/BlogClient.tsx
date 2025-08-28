@@ -11,7 +11,37 @@ import BlogSearch from "../components/BlogSearch";
 import { useSearchParams } from "next/navigation";
 
 // Blog post data for search functionality
+
+/*
+📝 BLOG POST TEMPLATE - Copy this structure for new posts:
+
+{
+  id: "your-post-url-slug",
+  title: "Your SEO-Optimized Title Here (50-60 characters)",
+  excerpt: "Compelling description with primary keyword naturally integrated. Should be 150-160 characters and include your main keyword.",
+  category: "CATEGORY_NAME", // Choose from: DEMOLITION, CONCRETE, ROOFING, CALCULATOR, DUMPSTER SPECS, DUMPSTER RENTAL, RENOVATION, COMMERCIAL, GUIDES
+  readTime: "X min read",
+  image: "/images/your-image.jpg",
+  fallbackImage: "/images/your-image.webp",
+  featured: false // Set to true for featured posts (shows in featured section)
+}
+
+🎯 SEO REQUIREMENTS:
+- Title: 50-60 characters, include primary keyword
+- Excerpt: 150-160 characters, compelling and keyword-rich
+- Category: Use existing categories for consistency
+- Images: Provide both .jpg and .webp versions
+- Featured: Only set to true for high-value posts
+
+📋 QUICK ADD INSTRUCTIONS:
+1. Copy the template above
+2. Replace all placeholder text with your content
+3. Add to the blogPosts array below (keep featured posts at top)
+4. Save and test
+*/
+
 const blogPosts = [
+  // FEATURED POSTS (keep at top)
   {
     id: "demolition-dumpster-calculator",
     title: "Demolition Dumpster Calculator: Calculate Your Project Needs & Costs",
@@ -42,6 +72,18 @@ const blogPosts = [
     fallbackImage: "/images/dumpsterSmallBanner4.webp",
     featured: true
   },
+  {
+    id: "estimate-right-dumpster-size-home-cleanout",
+    title: "How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)",
+    excerpt: "Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.",
+    category: "GUIDES",
+    readTime: "12 min read",
+    image: "/images/blog/dumpster-size-estimation.jpg",
+    fallbackImage: "/images/blog/dumpster-size-estimation.jpg",
+    featured: true
+  },
+
+  // REGULAR POSTS (add new posts here)
   {
     id: "dumpster-volume-calculator",
     title: "Dumpster Volume Calculator: Calculate Dumpster Capacity & Dimensions",
@@ -113,16 +155,6 @@ const blogPosts = [
     readTime: "7 min read",
     image: "/images/dumpsterSmallBanner.jpeg",
     fallbackImage: "/images/dumpsterSmallBanner.webp"
-  },
-  {
-    id: "estimate-right-dumpster-size-home-cleanout",
-    title: "How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)",
-    excerpt: "Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.",
-    category: "GUIDES",
-    readTime: "12 min read",
-    image: "/images/blog/dumpster-size-estimation.jpg",
-    fallbackImage: "/images/blog/dumpster-size-estimation.jpg",
-    featured: true
   }
 ];
 
