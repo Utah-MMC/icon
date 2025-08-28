@@ -118,7 +118,7 @@ export default function RolloffDumpsterGuide2025() {
         featuredImage={blogData.featuredImage}
         keywords={blogData.keywords}
       />
-      <FAQSchema faqData={faqData} />
+      <FAQSchema faqs={faqData} pageUrl="https://icondumpsters.com/rolloff-dumpster-guide-2025" />
       
       <article className="min-h-screen bg-white">
         {/* Hero Section */}
