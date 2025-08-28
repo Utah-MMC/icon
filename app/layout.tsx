@@ -18,6 +18,7 @@ import MobileNav from "./components/MobileNav";
 import ConditionalCalculatorBanner from "./components/ConditionalCalculatorBanner";
 import PromotionalBanner from "./components/PromotionalBanner";
 import FacebookPixel from "./components/FacebookPixel";
+import FloatingTextButton from "./components/FloatingTextButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -373,6 +374,9 @@ export default function RootLayout({
 
         {/* Live Chat Widget */}
         <ChatWidget />
+
+        {/* Floating Text Button */}
+        <FloatingTextButton />
 
         {/* Calculator Banner - Only on calculator-related pages */}
         <ConditionalCalculatorBanner />

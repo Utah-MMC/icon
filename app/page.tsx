@@ -639,6 +639,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Text Us Section */}
+      <section className="bg-gradient-to-r from-green-500 to-green-600 text-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-6">
+            <svg className="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+            </svg>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Prefer to Text?</h2>
+            <p className="text-xl text-green-100 mb-6">
+              Get instant quotes and schedule delivery via text message. We'll respond within 30 minutes!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => {
+                  // Trigger the floating text button
+                  const floatingButton = document.querySelector('[aria-label="Text us for a quote"]') as HTMLButtonElement;
+                  if (floatingButton) {
+                    floatingButton.click();
+                  }
+                }}
+                className="bg-white text-green-600 px-8 py-4 rounded-xl hover:bg-green-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+                Text Us Now
+              </button>
+              <a 
+                href="sms:+18019186000?body=Hi! I need a dumpster quote."
+                className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold text-lg"
+              >
+                <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+                Text (801) 918-6000
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Form Section (relocated lower) */}
       <section id="quote-form" className="bg-white py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

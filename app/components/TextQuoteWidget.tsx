@@ -15,13 +15,36 @@ export default function TextQuoteWidget({ className = '' }: { className?: string
     if (!name || !phone) return;
     setIsSubmitting(true);
     try {
+      // Send lead to email system
       await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName: name, phone, additionalInfo: `Text quote request. Address: ${address}`, source: 'TextQuoteWidget' }),
       });
+      
+      // Send immediate text message
+      const message = `Hi ${name}! Thanks for your text quote request. An Icon expert will text you within 30 minutes with your personalized dumpster quote and to schedule delivery. Reply STOP to opt out.`;
+      
+      await fetch('/api/sms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phone: phone.replace(/\D/g, ''),
+          message,
+          transcript: [
+            {
+              role: 'system',
+              content: `Text quote request from ${name}. Address: ${address || 'Not provided'}`
+            }
+          ]
+        })
+      });
+      
       try { track('form','text_quote_submit'); } catch {}
       setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting text quote request:', error);
+      alert('There was an error sending your request. Please call us at (801) 918-6000.');
     } finally {
       setIsSubmitting(false);
     }

@@ -15,8 +15,40 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Phone required' }, { status: 400 });
     }
 
-    // Placeholder: integrate Twilio or SMS provider here
-    // For now, email the request so the team can text the user manually
+    // Try to send SMS via Twilio if configured
+    const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+    const twilioAuthToken = process.env.TWILIO_AUTH_TOKEN;
+    const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+    
+    if (twilioAccountSid && twilioAuthToken && twilioPhoneNumber) {
+      try {
+        // Send SMS via Twilio
+        const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${twilioAccountSid}/Messages.json`;
+        const twilioResponse = await fetch(twilioUrl, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Basic ${Buffer.from(`${twilioAccountSid}:${twilioAuthToken}`).toString('base64')}`,
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            To: `+1${phone}`,
+            From: twilioPhoneNumber,
+            Body: message,
+          }),
+        });
+
+        if (twilioResponse.ok) {
+          console.log('SMS sent successfully via Twilio');
+          return NextResponse.json({ ok: true, method: 'twilio' });
+        } else {
+          console.error('Twilio SMS failed:', await twilioResponse.text());
+        }
+      } catch (twilioError) {
+        console.error('Twilio SMS error:', twilioError);
+      }
+    }
+
+    // Fallback: Email the request so the team can text the user manually
     const subject = `SMS Request from Chat: ${phone}`;
     const html = `
       <div style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;padding:16px;">

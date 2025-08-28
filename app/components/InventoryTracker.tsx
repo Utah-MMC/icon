@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { inventoryService, type DumpsterInventory } from '../services/InventoryService';
 
 // TypeScript declaration for KPI integration
 declare global {
@@ -11,19 +12,8 @@ declare global {
   }
 }
 
-interface Dumpster {
-  id: string;
-  binId: string;
-  size: '10yd' | '15yd' | '20yd' | '30yd';
-  status: 'Available' | 'Out for Delivery' | 'In Use' | 'Maintenance';
-  customerName?: string;
-  customerPhone?: string;
-  deliveryDate?: string;
-  expectedPickupDate?: string;
-  location?: string;
-  notes?: string;
-  lastUpdated: string;
-}
+// Use the same interface from InventoryService
+type Dumpster = DumpsterInventory;
 
 export default function InventoryTracker() {
   const [dumpsters, setDumpsters] = useState<Dumpster[]>([]);
@@ -33,32 +23,16 @@ export default function InventoryTracker() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Initialize with sample data
+  // Initialize with data from InventoryService
   useEffect(() => {
     try {
       console.log('Initializing inventory tracker...');
-      const savedDumpsters = localStorage.getItem('dumpsterInventory');
-      if (savedDumpsters) {
-        const parsed = JSON.parse(savedDumpsters);
-        console.log('Loaded saved dumpsters:', parsed);
-        setDumpsters(parsed);
-      } else {
-        // Initialize with sample inventory
-        const sampleDumpsters: Dumpster[] = [
-          { id: 'D001', binId: 'BIN-001', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
-          { id: 'D002', binId: 'BIN-002', size: '20yd', status: 'In Use', customerName: 'John Smith', deliveryDate: '2024-01-15', expectedPickupDate: '2024-01-22', location: '123 Main St, Salt Lake City', lastUpdated: new Date().toISOString() },
-          { id: 'D003', binId: 'BIN-003', size: '30yd', status: 'Out for Delivery', customerName: 'Jane Doe', deliveryDate: '2024-01-16', expectedPickupDate: '2024-01-23', location: '456 Oak Ave, Sandy', lastUpdated: new Date().toISOString() },
-          { id: 'D004', binId: 'BIN-004', size: '10yd', status: 'Maintenance', notes: 'Needs repair - hydraulic issue', lastUpdated: new Date().toISOString() },
-          { id: 'D005', binId: 'BIN-005', size: '15yd', status: 'Available', lastUpdated: new Date().toISOString() },
-        ];
-        console.log('Setting sample dumpsters:', sampleDumpsters);
-        setDumpsters(sampleDumpsters);
-        localStorage.setItem('dumpsterInventory', JSON.stringify(sampleDumpsters));
-      }
+      const allDumpsters = inventoryService.getAllDumpsters();
+      console.log('Loaded dumpsters from InventoryService:', allDumpsters.length, 'dumpsters');
+      setDumpsters(allDumpsters);
     } catch (error) {
       console.error('Error initializing inventory:', error);
       setError(error instanceof Error ? error.message : 'Unknown error');
-      // Fallback to empty array if there's an error
       setDumpsters([]);
     } finally {
       console.log('Setting loading to false');
@@ -69,49 +43,106 @@ export default function InventoryTracker() {
   const saveDumpsters = (newDumpsters: Dumpster[]) => {
     setDumpsters(newDumpsters);
     
-    // Save to localStorage with error handling
+    // Sync with InventoryService
     try {
+      // Update localStorage to sync with InventoryService
       localStorage.setItem('dumpsterInventory', JSON.stringify(newDumpsters));
-    } catch (error) {
-      console.error('Error saving to localStorage:', error);
-    }
-    
-    // Update KPI system with utilization data (optional)
-    try {
+      
+      // Trigger KPI update
       const availableCount = newDumpsters.filter(d => d.status === 'Available').length;
       const totalCount = newDumpsters.length;
-      const utilizationRate = ((totalCount - availableCount) / totalCount) * 100;
       
       if (typeof window !== 'undefined' && window.iconDumpstersKPI) {
         window.iconDumpstersKPI.updateUtilization(totalCount - availableCount, totalCount);
       }
     } catch (error) {
-      console.log('KPI integration not available:', error);
+      console.error('Error updating InventoryService:', error);
     }
   };
 
   const addDumpster = (dumpster: Omit<Dumpster, 'id' | 'lastUpdated'>) => {
-    const newDumpster: Dumpster = {
-      ...dumpster,
-      id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
-      binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
-      lastUpdated: new Date().toISOString()
-    };
-    saveDumpsters([...dumpsters, newDumpster]);
-    setShowAddForm(false);
+    try {
+      // Use InventoryService to add dumpster
+      const newId = inventoryService.addDumpster(dumpster);
+      if (newId) {
+        // Refresh from InventoryService
+        const updatedDumpsters = inventoryService.getAllDumpsters();
+        setDumpsters(updatedDumpsters);
+        setShowAddForm(false);
+      } else {
+        // Fallback to local state update
+        const newDumpster: Dumpster = {
+          ...dumpster,
+          id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
+          binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
+          lastUpdated: new Date().toISOString()
+        };
+        saveDumpsters([...dumpsters, newDumpster]);
+        setShowAddForm(false);
+      }
+    } catch (error) {
+      console.error('Error adding dumpster:', error);
+      // Fallback to local state update
+      const newDumpster: Dumpster = {
+        ...dumpster,
+        id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
+        binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
+        lastUpdated: new Date().toISOString()
+      };
+      saveDumpsters([...dumpsters, newDumpster]);
+      setShowAddForm(false);
+    }
   };
 
   const updateDumpster = (id: string, updates: Partial<Dumpster>) => {
-    const updatedDumpsters = dumpsters.map(d => 
-      d.id === id ? { ...d, ...updates, lastUpdated: new Date().toISOString() } : d
-    );
-    saveDumpsters(updatedDumpsters);
-    setEditingDumpster(null);
+    try {
+      // Use InventoryService to update dumpster
+      const success = inventoryService.updateDumpsterStatus(id, updates.status || 'Available', updates);
+      if (success) {
+        // Refresh from InventoryService
+        const updatedDumpsters = inventoryService.getAllDumpsters();
+        setDumpsters(updatedDumpsters);
+        setEditingDumpster(null);
+      } else {
+        // Fallback to local state update
+        const updatedDumpsters = dumpsters.map(d => 
+          d.id === id ? { ...d, ...updates, lastUpdated: new Date().toISOString() } : d
+        );
+        saveDumpsters(updatedDumpsters);
+        setEditingDumpster(null);
+      }
+    } catch (error) {
+      console.error('Error updating dumpster:', error);
+      // Fallback to local state update
+      const updatedDumpsters = dumpsters.map(d => 
+        d.id === id ? { ...d, ...updates, lastUpdated: new Date().toISOString() } : d
+      );
+      saveDumpsters(updatedDumpsters);
+      setEditingDumpster(null);
+    }
   };
 
   const deleteDumpster = (id: string) => {
     if (confirm('Are you sure you want to delete this dumpster?')) {
-      saveDumpsters(dumpsters.filter(d => d.id !== id));
+      // Use InventoryService to remove dumpster
+      const success = inventoryService.removeDumpster(id);
+      if (success) {
+        // Refresh from InventoryService
+        const updatedDumpsters = inventoryService.getAllDumpsters();
+        setDumpsters(updatedDumpsters);
+      } else {
+        // Fallback to local state update
+        saveDumpsters(dumpsters.filter(d => d.id !== id));
+      }
+    }
+  };
+
+  const refreshInventory = () => {
+    try {
+      const allDumpsters = inventoryService.getAllDumpsters();
+      setDumpsters(allDumpsters);
+    } catch (error) {
+      console.error('Error refreshing inventory:', error);
     }
   };
 
@@ -125,6 +156,7 @@ export default function InventoryTracker() {
       case 'In Use': return 'bg-blue-100 text-blue-800';
       case 'Out for Delivery': return 'bg-yellow-100 text-yellow-800';
       case 'Maintenance': return 'bg-red-100 text-red-800';
+      case 'Reserved': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -177,16 +209,27 @@ export default function InventoryTracker() {
     <div className="max-w-7xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Dumpster Inventory Tracker</h2>
-        <button
-          onClick={() => setShowAddForm(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Add Dumpster
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={refreshInventory}
+            className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Refresh
+          </button>
+          <button
+            onClick={() => setShowAddForm(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+          >
+            Add Dumpster
+          </button>
+        </div>
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
         <div className="bg-green-50 p-4 rounded-lg border border-green-200">
           <div className="text-2xl font-bold text-green-600">
             {dumpsters.filter(d => d.status === 'Available').length}
@@ -211,6 +254,12 @@ export default function InventoryTracker() {
           </div>
           <div className="text-sm text-red-700">Maintenance</div>
         </div>
+        <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+          <div className="text-2xl font-bold text-purple-600">
+            {dumpsters.filter(d => d.status === 'Reserved').length}
+          </div>
+          <div className="text-sm text-purple-700">Reserved</div>
+        </div>
       </div>
 
       {/* Filter */}
@@ -225,6 +274,7 @@ export default function InventoryTracker() {
           <option value="In Use">In Use</option>
           <option value="Out for Delivery">Out for Delivery</option>
           <option value="Maintenance">Maintenance</option>
+          <option value="Reserved">Reserved</option>
         </select>
       </div>
 
@@ -380,6 +430,7 @@ function AddDumpsterForm({ onAdd, onCancel }: { onAdd: (dumpster: Omit<Dumpster,
           <option value="Out for Delivery">Out for Delivery</option>
           <option value="In Use">In Use</option>
           <option value="Maintenance">Maintenance</option>
+          <option value="Reserved">Reserved</option>
         </select>
       </div>
 

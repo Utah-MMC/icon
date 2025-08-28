@@ -50,12 +50,6 @@ export default function DumpsterCalculatorPageClient() {
       <section className="py-16 bg-gray-50">
         <DumpsterCalculator />
       </section>
-
-      <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link href="/tonnage-calculator" className="inline-block bg-[#4e37a8] text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700">Open Tonnage Calculator</Link>
-        </div>
-      </section>
     </>
   );
 }

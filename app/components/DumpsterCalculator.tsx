@@ -2,6 +2,54 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { track } from './analytics';
+import { inventoryService, type AvailabilityCheck } from '../services/InventoryService';
+
+// Calendar utility functions
+const isWeekend = (date: Date): boolean => {
+  const day = date.getDay();
+  return day === 0 || day === 6; // Sunday = 0, Saturday = 6
+};
+
+const isBusinessDay = (date: Date): boolean => {
+  return !isWeekend(date);
+};
+
+const getNextBusinessDay = (date: Date): Date => {
+  const nextDay = new Date(date);
+  nextDay.setDate(nextDay.getDate() + 1);
+  
+  while (isWeekend(nextDay)) {
+    nextDay.setDate(nextDay.getDate() + 1);
+  }
+  
+  return nextDay;
+};
+
+const getAvailableDeliveryDates = (startDate: Date, count: number = 14): Date[] => {
+  const availableDates: Date[] = [];
+  const currentDate = new Date(startDate);
+  
+  for (let i = 0; i < count; i++) {
+    if (isBusinessDay(currentDate)) {
+      availableDates.push(new Date(currentDate));
+    }
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+  
+  return availableDates;
+};
+
+const formatDateForDisplay = (date: Date): string => {
+  return date.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric'
+  });
+};
+
+const formatDateForInput = (date: Date): string => {
+  return date.toISOString().split('T')[0];
+};
 
 export default function DumpsterCalculator() {
   const [zipCode, setZipCode] = useState('');
@@ -16,7 +64,187 @@ export default function DumpsterCalculator() {
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [contactError, setContactError] = useState('');
   const [showCallPopup, setShowCallPopup] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [availableDates, setAvailableDates] = useState<Date[]>([]);
+  const [selectedDateIndex, setSelectedDateIndex] = useState<number>(-1);
+  const [availabilityCheck, setAvailabilityCheck] = useState<AvailabilityCheck | null>(null);
+  const [inventoryStatus, setInventoryStatus] = useState<string>('');
+  const [reservedDumpsterId, setReservedDumpsterId] = useState<string | null>(null);
   const dateInputRef = useRef<HTMLInputElement | null>(null);
+  const calendarRef = useRef<HTMLDivElement | null>(null);
+
+  // Initialize available dates when component mounts
+  useEffect(() => {
+    const today = new Date();
+    const dates = getAvailableDeliveryDates(today, 21); // Show 3 weeks of available dates
+    setAvailableDates(dates);
+    
+    // Set default to next business day
+    if (dates.length > 0) {
+      setRentalDate(formatDateForInput(dates[0]));
+      setSelectedDateIndex(0);
+    }
+  }, []);
+
+  // Handle click outside calendar to close it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (calendarRef.current && !calendarRef.current.contains(event.target as Node)) {
+        setShowCalendar(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Cleanup effect to return reserved dumpster when component unmounts or user doesn't complete booking
+  useEffect(() => {
+    return () => {
+      // Return reserved dumpster to inventory when component unmounts
+      if (reservedDumpsterId) {
+        try {
+          fetch('/api/inventory', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              action: 'update',
+              dumpsterId: reservedDumpsterId,
+              status: 'Available'
+            })
+          }).catch(error => {
+            console.error('Error returning dumpster to inventory:', error);
+          });
+        } catch (error) {
+          console.error('Error returning dumpster to inventory:', error);
+        }
+      }
+    };
+  }, [reservedDumpsterId]);
+
+  const handleDateSelect = (date: Date, index: number) => {
+    setRentalDate(formatDateForInput(date));
+    setSelectedDateIndex(index);
+    setShowCalendar(false);
+    
+    // Update the input field
+    if (dateInputRef.current) {
+      dateInputRef.current.value = formatDateForInput(date);
+    }
+    
+    // Check inventory availability when date is selected
+    if (selectedSize) {
+      checkInventoryAvailability(selectedSize, formatDateForInput(date));
+    }
+  };
+
+  const handleCalendarToggle = () => {
+    setShowCalendar(!showCalendar);
+  };
+
+  const checkInventoryAvailability = async (size: string, date: string) => {
+    try {
+      const response = await fetch(`/api/inventory?action=check&size=${size}&date=${date}`);
+      if (response.ok) {
+        const availability = await response.json();
+        setAvailabilityCheck(availability);
+        
+        // Update inventory status message
+        if (availability.available) {
+          setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
+        } else {
+          let statusMessage = `❌ No ${size} dumpsters available for ${date}`;
+          if (availability.alternativeSizes && availability.alternativeSizes.length > 0) {
+            statusMessage += `. Alternative sizes: ${availability.alternativeSizes.join(', ')}`;
+          }
+          if (availability.nextAvailableDate) {
+            statusMessage += `. Next available: ${availability.nextAvailableDate}`;
+          }
+          setInventoryStatus(statusMessage);
+        }
+      } else {
+        // Fallback to local service if API fails
+        const availability = inventoryService.checkAvailability(size, date);
+        setAvailabilityCheck(availability);
+        
+        if (availability.available) {
+          setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
+        } else {
+          let statusMessage = `❌ No ${size} dumpsters available for ${date}`;
+          if (availability.alternativeSizes && availability.alternativeSizes.length > 0) {
+            statusMessage += `. Alternative sizes: ${availability.alternativeSizes.join(', ')}`;
+          }
+          if (availability.nextAvailableDate) {
+            statusMessage += `. Next available: ${availability.nextAvailableDate}`;
+          }
+          setInventoryStatus(statusMessage);
+        }
+      }
+    } catch (error) {
+      console.error('Error checking inventory availability:', error);
+      // Fallback to local service
+      const availability = inventoryService.checkAvailability(size, date);
+      setAvailabilityCheck(availability);
+      setInventoryStatus(`✅ ${availability.count} ${size} dumpster(s) available for ${date}`);
+    }
+  };
+
+  const sendTextMessage = async (phone: string, size: string, date: string, duration: string) => {
+    try {
+      const message = `Hi! Thanks for your ${size} dumpster quote for ${date} (${duration} days). An Icon expert will text you within 30 minutes with your exact pricing and to schedule delivery. Reply STOP to opt out.`;
+      
+      const response = await fetch('/api/sms', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          phone: phone.replace(/\D/g, ''),
+          message,
+          transcript: [
+            {
+              role: 'system',
+              content: `Dumpster calculator quote: ${size} dumpster, ${date}, ${duration} days`
+            }
+          ]
+        })
+      });
+
+      if (response.ok) {
+        alert('Text message sent! We\'ll text you within 5 minutes with your exact quote and to schedule delivery.');
+        setContactSubmitted(true);
+      } else {
+        alert('Text message failed to send. Please call us at (801) 918-6000.');
+      }
+    } catch (error) {
+      console.error('Error sending text message:', error);
+      alert('Text message failed to send. Please call us at (801) 918-6000.');
+    }
+  };
+
+  const getDeliveryAvailability = (selectedDate: string): string => {
+    if (!selectedDate) return '';
+    
+    const date = new Date(selectedDate);
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    if (date.toDateString() === today.toDateString()) {
+      const hour = today.getHours();
+      if (hour < 15) { // Before 3 PM
+        return 'Same-day delivery available (8 AM-3 PM)';
+      } else {
+        return 'Same-day delivery unavailable (call for next-day)';
+      }
+    } else if (date.toDateString() === tomorrow.toDateString()) {
+      return 'Next-day delivery available (8-11 AM or 12-3 PM)';
+    } else {
+      return 'Standard delivery available (8-11 AM or 12-3 PM)';
+    }
+  };
 
   const handleCalculate = () => {
     if (!zipCode || !selectedSize || !selectedDuration) {
@@ -67,6 +295,28 @@ export default function DumpsterCalculator() {
     html += '<h4 class="text-lg font-bold text-[#4e37a8] mb-3">💰 Estimated Cost</h4>';
     html += '<div class="text-3xl font-bold text-[#4e37a8] mb-2">$' + finalPrice.toLocaleString() + '</div>';
     html += '<p class="text-gray-600 mb-3">For ' + selectedSize + '-yard dumpster, ' + selectedDuration + ' day' + (selectedDuration === '1' ? '' : 's') + ' in ' + zipCode + (rentalDate ? (' on ' + rentalDate) : '') + '</p>';
+    
+    // Add inventory availability info
+    if (availabilityCheck) {
+      if (availabilityCheck.available) {
+        html += '<div class="text-sm text-green-600 mb-3 font-semibold">✅ ' + availabilityCheck.count + ' ' + selectedSize + '-yard dumpster(s) available for ' + rentalDate + '</div>';
+      } else {
+        html += '<div class="text-sm text-yellow-600 mb-3 font-semibold">⚠️ No ' + selectedSize + '-yard dumpsters available for ' + rentalDate;
+        if (availabilityCheck.alternativeSizes && availabilityCheck.alternativeSizes.length > 0) {
+          html += '. Alternative sizes: ' + availabilityCheck.alternativeSizes.join(', ');
+        }
+        if (availabilityCheck.nextAvailableDate) {
+          html += '. Next available: ' + availabilityCheck.nextAvailableDate;
+        }
+        html += '</div>';
+      }
+    }
+    
+    // Add delivery availability info
+    if (rentalDate) {
+      const availability = getDeliveryAvailability(rentalDate);
+      html += '<div class="text-sm text-blue-600 mb-3 font-semibold">📅 ' + availability + '</div>';
+    }
     
     html += '<div class="text-sm text-gray-600 space-y-1">';
     if (selectedDuration === '1') {
@@ -135,16 +385,23 @@ export default function DumpsterCalculator() {
     html += '</div>';
     
     html += '<div class="mt-4">';
-    html += '<button id="exact-quote-btn" type="button" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
-    html += 'Get Exact Quote';
-    html += '</button>';
+    if (availabilityCheck && availabilityCheck.available) {
+      html += '<button id="exact-quote-btn" type="button" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
+      html += 'Get Exact Quote';
+      html += '</button>';
+    } else {
+      html += '<button id="exact-quote-btn" type="button" class="bg-gray-400 text-white px-6 py-2 rounded-lg font-semibold cursor-not-allowed" disabled>';
+      html += 'Check Availability First';
+      html += '</button>';
+    }
     html += '</div>';
     
     html += '</div>';
     
     setResult(html);
-    try { track('calculator','calculate',{ size: selectedSize, days: selectedDuration, zip: zipCode }); } catch {}
-    // Trigger booking prompt
+    try { track('calculator','calculate',{ size: selectedSize, days: selectedDuration, zip: zipCode, date: rentalDate }); } catch {}
+    
+    // Always show booking question first, regardless of availability
     setShowBookingQuestion(true);
     setWantsBooking(null);
     setContact('');
@@ -194,36 +451,110 @@ export default function DumpsterCalculator() {
               <p className="text-xs text-gray-500 mt-2">Multiple hubs serving Utah - calculator finds closest location</p>
             </div>
 
-        {/* Preferred Delivery Date */}
+        {/* Enhanced Delivery Date Selection */}
         <div className="max-w-md mx-auto mb-6">
           <label htmlFor="preferredDate" className="block text-sm font-semibold text-gray-700 mb-3 flex items-center">
             <span className="w-2 h-2 bg-[#4e37a8] rounded-full mr-2"></span>
             📅 Preferred Delivery Date
           </label>
-          <div
-            className="w-full"
-            onClick={() => {
-              const el = dateInputRef.current;
-              if (!el) return;
-              try {
-                // Prefer showPicker when available
-                // @ts-ignore
-                if (typeof el.showPicker === 'function') { el.showPicker(); return; }
-              } catch {}
-              el.focus();
-              el.click();
-            }}
-          >
-            <input
-              ref={dateInputRef}
-              type="date"
-              id="preferredDate"
-              value={rentalDate}
-              onChange={(e) => setRentalDate(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm cursor-pointer"
-            />
+          <div className="relative">
+            <div
+              className="w-full cursor-pointer"
+              onClick={handleCalendarToggle}
+            >
+              <input
+                ref={dateInputRef}
+                type="text"
+                id="preferredDate"
+                value={rentalDate ? formatDateForDisplay(new Date(rentalDate)) : ''}
+                readOnly
+                placeholder="Select delivery date"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm cursor-pointer bg-white"
+              />
+              <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+              </svg>
+            </div>
+            
+            {/* Enhanced Calendar Dropdown */}
+            {showCalendar && (
+              <div 
+                ref={calendarRef}
+                className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-xl max-h-80 overflow-y-auto"
+              >
+                <div className="p-4 border-b border-gray-100">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Available Delivery Dates</h4>
+                  <p className="text-xs text-gray-600">We deliver Monday-Friday, excluding holidays</p>
+                </div>
+                <div className="p-2">
+                  {availableDates.map((date, index) => {
+                    const isToday = date.toDateString() === new Date().toDateString();
+                    const isSelected = index === selectedDateIndex;
+                    const availability = getDeliveryAvailability(formatDateForInput(date));
+                    
+                    return (
+                      <div
+                        key={index}
+                        onClick={() => handleDateSelect(date, index)}
+                        className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                          isSelected 
+                            ? 'bg-[#4e37a8] text-white' 
+                            : 'hover:bg-gray-50 border border-transparent hover:border-gray-200'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className={`font-semibold ${isSelected ? 'text-white' : 'text-gray-900'}`}>
+                              {formatDateForDisplay(date)}
+                              {isToday && (
+                                <span className={`ml-2 px-2 py-1 rounded-full text-xs ${
+                                  isSelected ? 'bg-white text-[#4e37a8]' : 'bg-[#4e37a8] text-white'
+                                }`}>
+                                  Today
+                                </span>
+                              )}
+                            </div>
+                            <div className={`text-xs mt-1 ${
+                              isSelected ? 'text-purple-100' : 'text-gray-600'
+                            }`}>
+                              {availability}
+                            </div>
+                          </div>
+                          <svg className={`w-4 h-4 ${isSelected ? 'text-white' : 'text-gray-400'}`} fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                                 <div className="p-3 border-t border-gray-100 bg-gray-50">
+                   <p className="text-xs text-gray-600">
+                     <strong>Delivery Windows:</strong><br/>
+                     • Same-day: 8 AM-3 PM (if ordered before 3 PM)<br/>
+                     • Next-day: 8-11 AM or 12-3 PM<br/>
+                     • Standard: 8-11 AM or 12-3 PM
+                   </p>
+                 </div>
+              </div>
+            )}
           </div>
-          <p className="text-xs text-gray-500 mt-2">Tap anywhere in the field to open the calendar.</p>
+          <p className="text-xs text-gray-500 mt-2">Tap to select your preferred delivery date</p>
+          
+          {/* Inventory Status Display */}
+          {inventoryStatus && (
+            <div className="mt-3 p-3 rounded-lg border text-sm">
+              {inventoryStatus.includes('✅') ? (
+                <div className="bg-green-50 border-green-200 text-green-800">
+                  {inventoryStatus}
+                </div>
+              ) : (
+                <div className="bg-yellow-50 border-yellow-200 text-yellow-800">
+                  {inventoryStatus}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Specialized Dumpsters Section */}
@@ -358,7 +689,13 @@ export default function DumpsterCalculator() {
                     name="dumpsterSize"
                     value={option.size}
                     checked={selectedSize === option.size}
-                    onChange={(e) => setSelectedSize(e.target.value)}
+                    onChange={(e) => {
+                      setSelectedSize(e.target.value);
+                      // Check inventory availability when size is selected
+                      if (rentalDate) {
+                        checkInventoryAvailability(e.target.value, rentalDate);
+                      }
+                    }}
                     className="sr-only"
                   />
                   <div className="p-3 text-center">
@@ -481,7 +818,7 @@ export default function DumpsterCalculator() {
         {showBookingQuestion && (
           <div className="mt-6 bg-white rounded-xl shadow border border-gray-200 p-6" id="book-now">
             <h4 className="text-lg font-bold text-gray-900 mb-3">Would you like to book now?</h4>
-            {wantsBooking === null && (
+            {(wantsBooking === null || wantsBooking === false) && !contactSubmitted && (
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setWantsBooking(true)}
@@ -490,7 +827,27 @@ export default function DumpsterCalculator() {
                   Yes, book now
                 </button>
                 <button
-                  onClick={() => setWantsBooking(false)}
+                  onClick={() => {
+                    setWantsBooking(false);
+                    setShowBookingQuestion(false);
+                    // Return reserved dumpster to inventory if user doesn't want to book
+                    if (reservedDumpsterId) {
+                      fetch('/api/inventory', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                          action: 'update',
+                          dumpsterId: reservedDumpsterId,
+                          status: 'Available'
+                        })
+                      }).catch(error => {
+                        console.error('Error returning dumpster to inventory:', error);
+                      });
+                      setReservedDumpsterId(null);
+                    }
+                  }}
                   className="bg-gray-100 text-gray-800 px-5 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
                 >
                   Not now
@@ -501,7 +858,7 @@ export default function DumpsterCalculator() {
             {wantsBooking === true && !contactSubmitted && (
               <form
                 className="mt-4"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
                   if (!contact.trim()) {
                     setContactError('Please enter your email or phone number.');
@@ -509,6 +866,38 @@ export default function DumpsterCalculator() {
                   }
                   setContactError('');
                   setContactSubmitted(true);
+                  
+                  // Reserve dumpster if available
+                  if (availabilityCheck && availabilityCheck.available && selectedSize && rentalDate && selectedDuration) {
+                    try {
+                      const response = await fetch('/api/inventory', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                          action: 'reserve',
+                          size: selectedSize,
+                          customerName: contact.split('@')[0], // Use email prefix as name
+                          deliveryDate: rentalDate,
+                          duration: parseInt(selectedDuration)
+                        })
+                      });
+                      
+                      if (response.ok) {
+                        const result = await response.json();
+                        if (result.success) {
+                          console.log('Dumpster reserved successfully');
+                          // Store the reserved dumpster ID for cleanup
+                          if (result.dumpsterId) {
+                            setReservedDumpsterId(result.dumpsterId);
+                          }
+                        }
+                      }
+                    } catch (error) {
+                      console.error('Error reserving dumpster:', error);
+                    }
+                  }
                 }}
               >
                 <label htmlFor="contactInfo" className="block text-sm font-semibold text-gray-700 mb-2">Email or phone</label>
@@ -521,16 +910,42 @@ export default function DumpsterCalculator() {
                   className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm"
                 />
                 {contactError && <p className="text-sm text-red-600 mt-2">{contactError}</p>}
-                <div className="mt-4 flex items-center gap-3">
+                <div className="mt-4 flex flex-col sm:flex-row items-center gap-3">
                   <button type="submit" className="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">Submit</button>
-                  <a href="tel:(801) 918-6000" className="text-[#4e37a8] hover:text-purple-700 font-semibold">Or call (801) 918-6000</a>
+                  <div className="flex items-center gap-3 text-sm">
+                    <a href="tel:(801) 918-6000" className="text-[#4e37a8] hover:text-purple-700 font-semibold">Or call (801) 918-6000</a>
+                    <span className="text-gray-400">|</span>
+                    <button 
+                      type="button"
+                      onClick={() => {
+                        if (contact && contact.includes('@')) {
+                          // If it's an email, show message about texting
+                          alert('Please enter your phone number to receive text messages. We\'ll text you within 5 minutes!');
+                        } else if (contact && contact.replace(/\D/g, '').length >= 10) {
+                          // If it's a phone number, send text
+                          sendTextMessage(contact, selectedSize, rentalDate, selectedDuration);
+                        } else {
+                          alert('Please enter a valid phone number to receive text messages.');
+                        }
+                      }}
+                      className="text-[#4e37a8] hover:text-purple-700 font-semibold"
+                    >
+                      Or text us
+                    </button>
+                  </div>
                 </div>
               </form>
             )}
 
             {wantsBooking === true && contactSubmitted && (
               <div className="mt-4 p-4 bg-purple-50 rounded-lg border border-[#4e37a8]/20">
-                <p className="text-sm text-[#4e37a8]"><strong>An Icon expert will get back to you, usually within 30 minutes.</strong> Or you can call us now at <a href="tel:(801) 918-6000" className="font-semibold">(801) 918-6000</a>.</p>
+                <p className="text-sm text-[#4e37a8]">
+                  <strong>An Icon expert will get back to you, usually within 30 minutes.</strong> 
+                  {availabilityCheck && availabilityCheck.available && (
+                    <span> We'll also reserve a {selectedSize}-yard dumpster for {rentalDate}.</span>
+                  )}
+                  Or you can call us now at <a href="tel:(801) 918-6000" className="font-semibold">(801) 918-6000</a>.
+                </p>
               </div>
             )}
           </div>

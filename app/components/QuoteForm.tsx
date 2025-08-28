@@ -73,19 +73,49 @@ export default function QuoteForm() {
       formDataToSend.append('smsConsent', formData.get('smsConsent') as string);
 
       // Submit to internal API (can forward to CRM/email provider)
-      fetch('/api/lead', {
+      const leadResponse = await fetch('/api/lead', {
         method: 'POST',
         body: formDataToSend as any,
-      }).then(() => {
-        // Assume success if no error
-        alert('Thank you! Your quote request has been submitted successfully. Please check your email.');
+      });
+
+      if (leadResponse.ok) {
+        // Send text message if SMS consent was given
+        const smsConsent = formData.get('smsConsent') as string;
+        if (smsConsent) {
+          const firstName = formData.get('firstName') as string;
+          const dumpsterSize = formData.get('dumpsterSize') as string;
+          const deliveryDate = formData.get('deliveryDate') as string;
+          
+          const message = `Hi ${firstName}! Thanks for your ${dumpsterSize} dumpster quote request for ${deliveryDate}. An Icon expert will text you within 30 minutes with your exact pricing and to schedule delivery. Reply STOP to opt out.`;
+          
+          try {
+            await fetch('/api/sms', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                phone: phone.replace(/\D/g, ''),
+                message,
+                transcript: [
+                  {
+                    role: 'system',
+                    content: `Quote form submission: ${firstName}, ${dumpsterSize} dumpster, ${deliveryDate}`
+                  }
+                ]
+              })
+            });
+          } catch (smsError) {
+            console.error('SMS sending failed:', smsError);
+            // Don't fail the whole form if SMS fails
+          }
+        }
+        
+        alert('Thank you! Your quote request has been submitted successfully. Please check your email and phone for updates.');
         try { track('form','quote_submit'); } catch {}
         form.reset();
         setRecaptchaToken('');
-      }).catch((error) => {
-        console.error('Form submission error:', error);
-        alert('There was an error submitting your request. Please try again.');
-      });
+      } else {
+        throw new Error('Lead submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       alert('There was an error submitting your request. Please try again.');
@@ -119,94 +149,66 @@ export default function QuoteForm() {
   };
 
   return (
-    <div id="quote-form" className="w-full">
-      {/* Form content will be styled by the parent container */}
-      
-      <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-xl shadow-2xl p-6 md:p-8">
-        <form className="space-y-5" onSubmit={handleSubmit}>
+    <div id="quote-form" className="w-full max-w-md mx-auto">
+      <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-xl shadow-2xl p-4 md:p-6">
+        <form className="space-y-4" onSubmit={handleSubmit}>
         {/* Temporarily disabled honeypot for testing */}
         {/* <Honeypot onSpamDetected={handleSpamDetected} /> */}
         {/* Name Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-3">
           <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-              First Name
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
+              Full Name
             </label>
             <input 
               type="text" 
               name="firstName"
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
-              placeholder="Enter your first name"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-              Last Name
-            </label>
-            <input 
-              type="text" 
-              name="lastName"
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
-              placeholder="Enter your last name"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
+              placeholder="Your full name"
               required
             />
           </div>
         </div>
         
         {/* Contact Fields */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-3">
           <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-              Email Address
-            </label>
-            <input 
-              type="email" 
-              name="email"
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
-              placeholder="Enter your email address"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
               Phone Number
             </label>
             <input 
               type="tel" 
               name="phone"
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
-              placeholder="Enter your phone number"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
+              placeholder="(801) 555-1234"
               required
             />
           </div>
         </div>
         
         {/* Location and Waste Type */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-3">
           <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
               Zip Code
             </label>
             <input 
               type="text" 
               name="zipCode"
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium placeholder-gray-500"
-              placeholder="Enter your zip code"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
+              placeholder="84101"
               required
             />
           </div>
           <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
               Waste Type
             </label>
-            <select name="wasteType" className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium" required>
+            <select name="wasteType" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm" required>
               <option value="">Select Waste Type</option>
               <option value="Household Waste">Household Waste</option>
               <option value="Construction Debris">Construction Debris</option>
@@ -220,72 +222,54 @@ export default function QuoteForm() {
         
         {/* Dumpster Size Selection */}
         <div>
-          <label className="block text-base font-semibold text-white mb-3 flex items-center">
-            <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+          <label className="block text-sm font-semibold text-white mb-2 flex items-center">
+            <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
             Dumpster Size
           </label>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+          <div className="grid grid-cols-1 gap-2">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="15" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">15 Yard Dumpster</span>
+              <span className="text-xs font-medium text-gray-900">15 Yard Dumpster</span>
             </label>
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="20" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">20 Yard Dumpster</span>
+              <span className="text-xs font-medium text-gray-900">20 Yard Dumpster</span>
             </label>
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="30" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">30 Yard Dumpster</span>
+              <span className="text-xs font-medium text-gray-900">30 Yard Dumpster</span>
             </label>
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="10-dirt" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">10 Yard Clean Dirt</span>
+              <span className="text-xs font-medium text-gray-900">10 Yard Clean Dirt</span>
             </label>
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="10-mixed" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">10 Yard Mixed Load</span>
+              <span className="text-xs font-medium text-gray-900">10 Yard Mixed Load</span>
             </label>
-            <label className="flex items-center space-x-3 cursor-pointer p-3 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
+            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
               <input type="radio" name="dumpsterSize" value="12-concrete" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-sm font-medium text-gray-900">12 Yard Concrete</span>
+              <span className="text-xs font-medium text-gray-900">12 Yard Concrete</span>
             </label>
           </div>
         </div>
         
         {/* Date Selection */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-3">
           <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
               Delivery Date
             </label>
             <div className="relative">
               <input 
                 type="date" 
                 name="deliveryDate"
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm cursor-pointer"
                 required
                 min={new Date().toISOString().split('T')[0]} // Prevent past dates
               />
-              <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-            </div>
-          </div>
-          <div>
-            <label className="block text-base font-semibold text-white mb-2 flex items-center">
-              <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-              Pickup Date
-            </label>
-            <div className="relative">
-              <input 
-                type="date" 
-                name="pickupDate"
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium cursor-pointer"
-                required
-                min={new Date().toISOString().split('T')[0]} // Prevent past dates
-              />
-              <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
             </div>
@@ -294,32 +278,30 @@ export default function QuoteForm() {
         
         {/* Additional Information */}
         <div>
-          <label className="block text-base font-semibold text-white mb-2 flex items-center">
-            <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+          <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+            <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
             Additional Information
           </label>
           <textarea 
             name="additionalInfo"
-            rows={3}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-base font-medium resize-none placeholder-gray-500"
-            placeholder="Tell us about your project, special requirements, or any questions you have..."
+            rows={2}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm resize-none placeholder-gray-500"
+            placeholder="Tell us about your project..."
           ></textarea>
         </div>
 
         {/* SMS Consent Checkbox */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-5">
-          <div className="flex items-start space-x-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-3">
+          <div className="flex items-start space-x-3">
             <input 
               type="checkbox" 
               name="smsConsent"
               id="smsConsent"
-              className="mt-1 text-white focus:ring-white rounded"
+              className="mt-0.5 text-white focus:ring-white rounded"
               required
             />
-            <label htmlFor="smsConsent" className="text-sm text-white leading-relaxed">
-              By checking this box, you agree to receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS from Icon Dumpsters. 
-              Message frequency varies. Message and data rates may apply. For help, reply HELP. To opt out, reply STOP. 
-              We do not share your information with third parties. See our privacy policy at https://www.icondumpsters.com/privacy-policy and terms and conditions at https://www.icondumpsters.com/terms-of-service.
+            <label htmlFor="smsConsent" className="text-xs text-white leading-relaxed">
+              I agree to receive quote confirmations and updates via SMS. Message & data rates may apply. Reply STOP to opt out.
             </label>
           </div>
         </div>
@@ -336,9 +318,9 @@ export default function QuoteForm() {
         <button 
           type="submit" 
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white py-2.5 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
-          <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
