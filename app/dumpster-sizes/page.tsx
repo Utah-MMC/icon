@@ -99,7 +99,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">15 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 12' x 8' x 6'</div>
-                      <div><strong>Weight Limit:</strong> 3 tons</div>
+                      <div><strong>Weight Limit:</strong> 3 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Small projects</div>
                     </div>
@@ -128,7 +128,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">20 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 22' x 8' x 6'</div>
-                      <div><strong>Weight Limit:</strong> 4 tons</div>
+                      <div><strong>Weight Limit:</strong> 4 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Medium projects</div>
                     </div>
@@ -157,7 +157,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">30 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 22' x 8' x 8'</div>
-                      <div><strong>Weight Limit:</strong> 6 tons</div>
+                      <div><strong>Weight Limit:</strong> 6 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Large projects</div>
                     </div>

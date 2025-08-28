@@ -233,7 +233,7 @@ export default function RolloffDumpsterGuide2025() {
               </div>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                A note on weight capacity: sizes don't guarantee tonnage. Some companies bundle 1–3 tons with a 10–20 yard and 4–6 tons with larger bins, but it varies by market and debris. Dense stuff like concrete or dirt belongs in smaller containers to stay within axle limits.
+                A note on weight capacity: sizes don't guarantee tonnage. Some companies bundle 1–3 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with a 10–20 yard and 4–6 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with larger bins, but it varies by market and debris. Dense stuff like concrete or dirt belongs in smaller containers to stay within axle limits.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -275,9 +275,9 @@ export default function RolloffDumpsterGuide2025() {
               
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
                 <h4 className="font-semibold text-yellow-800 mb-2">Pro Tip:</h4>
-                <p className="text-yellow-700">
-                  Avoiding overage fees is part art, part discipline: Break down furniture and boxes to fill voids evenly. Keep debris below the rim so it can be tarped. Don't mix dirt, rock, or concrete with general trash—use a dedicated bin. Cover the container before rain if possible; water weight is sneaky.
-                </p>
+                                 <p className="text-yellow-700">
+                   Avoiding overage fees is part art, part discipline: Break down furniture and boxes to fill voids evenly. Keep debris below the rim so it can be tarped. Don't mix dirt, rock, or concrete with general trash—use a dedicated bin. Cover the container before rain if possible; water weight is sneaky. Use our <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tonnage calculator</Link> to estimate your project weight and avoid surprises.
+                 </p>
               </div>
             </section>
 

@@ -245,7 +245,7 @@ export default function DumpsterVolumeCalculator() {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Weight (Tons)</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Weight (<Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">Tons</Link>)</h4>
                 <ul className="text-gray-700 space-y-2">
                   <li>• Measures the weight the dumpster can hold</li>
                   <li>• Important for heavy, dense materials</li>

@@ -4,11 +4,6 @@ import { usePathname } from 'next/navigation';
 import CalculatorBanner from './CalculatorBanner';
 
 const ALLOWED_PREFIXES = [
-  '/dumpster-calculator',
-  '/demolition-dumpster-calculator',
-  '/dumpster-calculator-for-concrete',
-  '/30-yard-dumpster-rental-calculator',
-  '/dumpster-volume-calculator',
 ];
 
 export default function ConditionalCalculatorBanner() {
