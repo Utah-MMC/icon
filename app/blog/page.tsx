@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "dumpster permits",
     "waste management best practices"
   ],
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "https://icondumpsters.com/blog" },
   openGraph: {
     title: "Icon Dumpsters Blog - Expert Waste Management Insights & Tips",
     description: "Expert insights, tips, and guides on waste management, dumpster rental, and construction cleanup. Learn about dumpster sizes, costs, permits, and best practices.",

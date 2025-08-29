@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/Icon_Dumpsters_Final.png'],
   },
   alternates: {
-    canonical: '/about',
+    canonical: 'https://icondumpsters.com/about',
   },
   robots: {
     index: true,

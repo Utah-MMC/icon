@@ -1,22 +1,22 @@
-import { Metadata } from 'next';
-import CalculatorCTA from '../components/CalculatorCTA';
+﻿import type { Metadata } from 'next';
+import Link from 'next/link';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: "Draper Dumpster Rental - Professional Services in Draper, UT | Icon Dumpsters",
-  description: "Get reliable dumpster rental in Draper, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  title: "Draper Dumpster Rental - Professional Dumpster Services in Draper, UT | (801) 918-6000",
+  description: "Professional dumpster rental services in Draper, Utah. Fast delivery, competitive pricing, and reliable waste management solutions. Call (801) 918-6000 for instant quotes.",
   keywords: "Draper dumpster rental, dumpster rental Draper UT, Draper Utah dumpster, roll-off dumpster Draper, construction dumpster Draper, waste management Draper",
   openGraph: {
-    title: "Draper Dumpster Rental - Professional Services in Draper, UT | Icon Dumpsters",
-    description: "Get reliable dumpster rental in Draper, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    title: "Draper Dumpster Rental - Professional Dumpster Services in Draper, UT | (801) 918-6000",
+    description: "Professional dumpster rental services in Draper, Utah. Fast delivery, competitive pricing, and reliable waste management solutions.",
     url: 'https://icondumpsters.com/draper',
     siteName: 'Icon Dumpsters',
     images: [
       {
-        url: '/Icon_Dumpsters_Final.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Draper Dumpster Rental - Icon Dumpsters',
+        alt: 'Draper Dumpster Rental - Professional Dumpster Services in Draper, UT',
       },
     ],
     locale: 'en_US',
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Draper Dumpster Rental - Professional Services in Draper, UT | Icon Dumpsters",
-    description: "Get reliable dumpster rental in Draper, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
-    images: ['/Icon_Dumpsters_Final.png'],
+    title: "Draper Dumpster Rental - Professional Dumpster Services in Draper, UT | (801) 918-6000",
+    description: "Professional dumpster rental services in Draper, Utah. Fast delivery, competitive pricing, and reliable waste management solutions.",
+    images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: '/draper',
+    canonical: 'https://icondumpsters.com/draper',
   },
   robots: {
     index: true,
@@ -42,135 +42,178 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'geo.region': 'US-UT',
+    'geo.placename': 'Draper, Utah',
+    'geo.position': '40.7608;-111.8910',
+    'ICBM': '40.7608, -111.8910',
+  },
 };
 
 export default function DraperPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Draper Dumpster Rental
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional dumpster rental services in Draper, Utah. Fast delivery, competitive pricing, and reliable waste management solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:801-918-6000" 
+                className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                ðŸ“ž Call (801) 918-6000
+              </a>
+              <a 
+                href="#quote-form" 
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
+              >
+                Get Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Draper, UT
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Professional dumpster rental services in Draper, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
-        </p>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Left Column - Main Content */}
+          <div className="lg:col-span-2">
+            {/* Service Overview */}
+            <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Draper</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Icon Dumpsters provides reliable dumpster rental services throughout Draper, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ  Residential Projects</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>â€¢ Home renovations and remodeling</li>
+                    <li>â€¢ Basement cleanouts</li>
+                    <li>â€¢ Garage organization</li>
+                    <li>â€¢ Yard waste removal</li>
+                    <li>â€¢ Estate cleanouts</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ¢ Commercial Projects</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>â€¢ Construction and demolition</li>
+                    <li>â€¢ Office renovations</li>
+                    <li>â€¢ Retail store cleanouts</li>
+                    <li>â€¢ Industrial waste removal</li>
+                    <li>â€¢ Event cleanup</li>
+                  </ul>
+                </div>
+              </div>
 
-        {/* Calculator CTA */}
-        <div id="pricing" className="mb-12">
-          <CalculatorCTA />
-        </div>
-        
-        <div className="bg-gray-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Draper?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Draper and surrounding areas</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>Flexible rental periods (1-30 days)</li>
-            <li>Professional customer service</li>
-            <li>Local knowledge of Draper regulations</li>
-            <li>Multiple dumpster sizes available</li>
-          </ul>
-        </div>
+              <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">ðŸ  Need a Permit?</h3>
+                <p className="text-gray-700 mb-4">
+                  Contact Draper for permit requirements and applications. We can help guide you through the process.
+                </p>
+                <a 
+                  href="tel:801-576-6500" 
+                  className="text-blue-600 hover:text-blue-800 font-semibold"
+                >
+                  Draper: (801-576-6500)
+                </a>
+              </div>
+            </section>
 
-        <div className="bg-blue-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Draper and surrounding communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Draper Areas:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Downtown Draper</li>
-                <li>• Draper Heights</li>
-                <li>• Suncrest</li>
-                <li>• Draper East</li>
-                <li>• Draper West</li>
-              </ul>
-            </div>
-        {/* City-Specific Information */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">About Draper</h2>
-          <p className="text-gray-700 mb-4 leading-relaxed">
-            Draper, located at the base of the Wasatch Mountains, is known for its beautiful views and growing tech corridor. Our dumpster services support Draper's residential and commercial expansion.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Local Landmarks</h3>
-              <p className="text-gray-600 text-sm">Point of the Mountain, Draper City Hall, Corner Canyon, Draper Park</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Recent Projects</h3>
-              <p className="text-gray-600 text-sm">Supporting Draper's tech corridor development and residential growth</p>
+            {/* Dumpster Sizes */}
+            <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="border border-gray-200 rounded-lg p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
+                  <p className="text-gray-600 mb-4">Perfect for small to medium projects</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>â€¢ Kitchen remodel</li>
+                    <li>â€¢ Bathroom renovation</li>
+                    <li>â€¢ Garage cleanout</li>
+                    <li>â€¢ Small construction</li>
+                  </ul>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">20 Yard Dumpster</h3>
+                  <p className="text-gray-600 mb-4">Great for medium to large projects</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>â€¢ Full home renovation</li>
+                    <li>â€¢ Large construction</li>
+                    <li>â€¢ Commercial projects</li>
+                    <li>â€¢ Major cleanouts</li>
+                  </ul>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-6 text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">30 Yard Dumpster</h3>
+                  <p className="text-gray-600 mb-4">For major projects and construction</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>â€¢ Large construction</li>
+                    <li>â€¢ Commercial demolition</li>
+                    <li>â€¢ Major renovations</li>
+                    <li>â€¢ Industrial projects</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Detailed Guide Link */}
+            <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Draper Dumpster Rental Guide</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Get detailed information about dumpster rental in Draper, including pricing, regulations, permit requirements, and more.
+              </p>
+              <Link 
+                href="/draper-dumpster-rental-guide-2025"
+                className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
+              >
+                ðŸ“– Read Complete Guide â†’
+              </Link>
+            </section>
+          </div>
+
+          {/* Right Column - Quote Form */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <QuoteForm />
             </div>
           </div>
-        </div>
-
-        <div className="bg-green-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Draper and surrounding communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Draper Areas:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Suncrest</li>
-                <li>• Corner Canyon</li>
-                <li>• Draper Central</li>
-                <li>• Draper East</li>
-                <li>• Draper West</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Local Partnerships:</h3>
-              <p className="text-gray-600 text-sm">Trusted by Draper's growing tech companies and residential developers</p>
-            </div>
-          </div>
-        </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• <a href="/murray" className="text-[#4e37a8] hover:underline">Murray</a></li>
-                <li>• <a href="/midvale" className="text-[#4e37a8] hover:underline">Midvale</a></li>
-                <li>• <a href="/sandy" className="text-[#4e37a8] hover:underline">Sandy</a></li>
-                <li>• <a href="/west-jordan" className="text-[#4e37a8] hover:underline">West Jordan</a></li>
-                <li>• <a href="/south-jordan" className="text-[#4e37a8] hover:underline">South Jordan</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-green-50 p-8 rounded-lg mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Draper Dumpster Services</h2>
-          <p className="text-gray-600 mb-4">Explore our comprehensive dumpster rental services in Draper:</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
-              <p className="text-gray-600 mb-3">15, 20, and 30 yard options</p>
-              <a href="/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">
-                View All Sizes →
-              </a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
-              <p className="text-gray-600 mb-3">Competitive rates with no hidden fees</p>
-              <a href="#pricing" className="text-[#4e37a8] hover:underline font-medium">
-                Get Quote →
-              </a>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
-              <p className="text-gray-600 mb-3">Residential and commercial solutions</p>
-              <a href="/services" className="text-[#4e37a8] hover:underline font-medium">
-                Learn More →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Quote Form Section */}
-        <div className="mb-12">
-          <QuoteForm />
         </div>
       </div>
+
+      {/* CTA Section */}
+      <section className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Get your Draper dumpster rental quote today. Fast delivery, competitive pricing, and professional service.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:801-918-6000" 
+              className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
+            >
+              ðŸ“ž Call Now: (801) 918-6000
+            </a>
+            <a 
+              href="#quote-form" 
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
+            >
+              Get Free Quote
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

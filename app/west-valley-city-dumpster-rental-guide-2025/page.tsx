@@ -280,7 +280,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
 
                   {/* Additional Charges */}
                   <div className="mt-8 bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Additional Charges</h3>
+                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">⚠️ Additional Charges</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-yellow-800 mb-2">Weight-Based Pricing</h4>
@@ -303,7 +303,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠  Residential Projects</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Home renovations and remodeling</li>
                         <li>• Garage and basement cleanouts</li>
@@ -314,7 +314,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Commercial Projects</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Commercial Projects</h3>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Construction and demolition projects</li>
                         <li>• Commercial property cleanouts</li>
@@ -335,7 +335,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                   </p>
                   
                   <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-6">
-                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Important Regulations</h3>
+                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">⚠️ Important Regulations</h3>
                     <ul className="space-y-3 text-gray-700">
                       <li><strong>Street Placement:</strong> Permits may be required for street placement. Contact West Valley City for permit information.</li>
                       <li><strong>Restricted Materials:</strong> Hazardous materials, electronics, and certain chemicals are not allowed.</li>
@@ -346,7 +346,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                   </div>
                   
                   <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠“ž Need a Permit?</h3>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
                     <p className="text-gray-700 mb-4">
                       Contact West Valley City for permit requirements and applications. We can help guide you through the process.
                     </p>
@@ -365,7 +365,7 @@ export default function WestValleyCityDumpsterRentalGuide2025() {
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠“‹ Simple 4-Step Process</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Simple 4-Step Process</h3>
                       <ol className="space-y-4">
                         <li className="flex items-start">
                           <span className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">1</span>

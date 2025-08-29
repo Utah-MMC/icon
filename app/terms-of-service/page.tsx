@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: "Terms of Service for Icon Dumpsters. Learn about our rental agreements and service terms.",
   },
   alternates: {
-    canonical: '/terms-of-service',
+    canonical: 'https://icondumpsters.com/terms-of-service',
   },
   robots: {
     index: true,

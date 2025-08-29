@@ -40,7 +40,14 @@ export default function TextQuoteWidget({ className = '' }: { className?: string
         })
       });
       
-      try { track('form','text_quote_submit'); } catch {}
+              try { 
+          track('form','text_quote_submit', {
+            sessionId: sessionStorage.getItem('sessionId') || 'unknown',
+            utm: JSON.parse(sessionStorage.getItem('utm') || '{}'),
+            path: window.location.pathname,
+            referrer: document.referrer
+          }); 
+        } catch {}
       setSubmitted(true);
     } catch (error) {
       console.error('Error submitting text quote request:', error);

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     images: ['/images/dumpsterWithTruck.webp'],
   },
   alternates: {
-    canonical: '/dumpster-sizes',
+    canonical: 'https://icondumpsters.com/dumpster-sizes',
   },
   robots: {
     index: true,

@@ -45,6 +45,17 @@ export default function FloatingTextButton() {
         })
       });
       
+      // Track the form submission
+      try { 
+        const { track } = await import('./analytics');
+        track('form','floating_text_submit', {
+          sessionId: sessionStorage.getItem('sessionId') || 'unknown',
+          utm: JSON.parse(sessionStorage.getItem('utm') || '{}'),
+          path: window.location.pathname,
+          referrer: document.referrer
+        }); 
+      } catch {}
+      
       setSubmitted(true);
     } catch (error) {
       console.error('Error submitting text request:', error);

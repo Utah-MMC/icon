@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Contact Icon Dumpsters for professional dumpster rental services in Utah. Get free quotes and reliable service.",
   },
   alternates: {
-    canonical: "https://www.icondumpsters.com/contact",
+    canonical: "https://icondumpsters.com/contact",
   },
 };
 

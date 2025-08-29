@@ -23,4 +23,4 @@ Disallow: /test-og/
 Disallow: /test-security/
 
 # Sitemap location
-Sitemap: https://www.icondumpsters.com/sitemap.xml
+Sitemap: https://icondumpsters.com/sitemap.xml

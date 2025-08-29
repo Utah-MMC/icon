@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -170,23 +170,23 @@ export default function BluffdaleDumpsterRentalGuide2025() {
                   <div className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">What You'll Learn:</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• How to find the best dumpster rental near you</li>
-                      <li>• Pricing comparison and cost-saving tips</li>
-                      <li>• Same-day delivery options and availability</li>
-                      <li>• Local service areas and coverage</li>
-                      <li>• What can and cannot go in your dumpster</li>
-                      <li>• Rental process and timeline</li>
+                      <li>â€¢ How to find the best dumpster rental near you</li>
+                      <li>â€¢ Pricing comparison and cost-saving tips</li>
+                      <li>â€¢ Same-day delivery options and availability</li>
+                      <li>â€¢ Local service areas and coverage</li>
+                      <li>â€¢ What can and cannot go in your dumpster</li>
+                      <li>â€¢ Rental process and timeline</li>
                     </ul>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Why Choose Local Service:</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• Faster delivery times</li>
-                      <li>• Local knowledge and expertise</li>
-                      <li>• Better customer service</li>
-                      <li>• Understanding of local regulations</li>
-                      <li>• Competitive local pricing</li>
-                      <li>• Reliable pickup and disposal</li>
+                      <li>â€¢ Faster delivery times</li>
+                      <li>â€¢ Local knowledge and expertise</li>
+                      <li>â€¢ Better customer service</li>
+                      <li>â€¢ Understanding of local regulations</li>
+                      <li>â€¢ Competitive local pricing</li>
+                      <li>â€¢ Reliable pickup and disposal</li>
                     </ul>
                   </div>
                 </div>
@@ -205,3 +205,4 @@ export default function BluffdaleDumpsterRentalGuide2025() {
     </>
   );
 }
+

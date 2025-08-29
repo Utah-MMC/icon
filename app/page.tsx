@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import QuoteForm from "./components/QuoteForm";
 import ReviewsCarousel from "./components/ReviewsCarousel";
 import CleanupSection from "./components/CleanupSection";
@@ -10,13 +10,14 @@ import TextQuoteWidget from "./components/TextQuoteWidget";
 import AvailableTodayBadge from "./components/AvailableTodayBadge";
 import { track } from "./components/analytics";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
   description: "Icon Dumpsters specializes in residential-friendly dumpster rentals, offering a seamless and efficient solution for waste management. Professional dumpster rental services in Utah for construction, renovation, and waste management. 15-30 yard roll-off dumpsters available. Call (801) 918-6000 for instant quotes.",
   keywords: "Icon Dumpsters, dumpster rental, roll-off dumpster, dumpster rental near me, Utah dumpster rental, dumpster rental Utah, construction dumpster, waste management, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, rolloff dumpster, Salt Lake City dumpster rental",
   alternates: {
-    canonical: '/',
+    canonical: 'https://icondumpsters.com',
   },
   openGraph: {
     title: "Icon Dumpsters - Professional Dumpster Rental Services in Utah | (801) 918-6000",
@@ -57,11 +58,89 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'geo.region': 'US-UT',
+    'geo.placename': 'Utah',
+    'geo.position': '40.7608;-111.8910',
+    'ICBM': '40.7608, -111.8910',
+  },
 };
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Structured Data for Local Business */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Icon Dumpsters",
+            "description": "Professional dumpster rental services in Utah. Residential, commercial, and construction dumpster rentals with same-day delivery.",
+            "url": "https://icondumpsters.com",
+            "telephone": "+1-801-918-6000",
+            "email": "icondumpsters@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "UT",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.7608,
+              "longitude": -111.8910
+            },
+            "openingHours": "Mo-Su 00:00-23:59",
+            "priceRange": "$$",
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.7608,
+                "longitude": -111.8910
+              },
+              "geoRadius": "50000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Dumpster Rental Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "15 Yard Dumpster Rental",
+                    "description": "16 feet x 7 feet x 4 feet dumpster for small to medium projects"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "20 Yard Dumpster Rental",
+                    "description": "16 feet x 7 feet x 6 feet dumpster for medium projects"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "30 Yard Dumpster Rental",
+                    "description": "22 feet x 7 feet x 6 feet dumpster for large projects"
+                  }
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "500"
+            }
+          })
+        }}
+      />
       {/* Hero Section */}
       <div className="relative w-full">
         {/* Background image with responsive design */}
@@ -84,7 +163,7 @@ export default function Home() {
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
             <div className="text-center">
               <h1 className="hero-text font-bold mb-4 sm:mb-6 text-white drop-shadow-lg leading-tight">
-                Professional Dumpster Rental Services in Salt Lake County
+                Icon Dumpsters - Professional Dumpster Rental Services in Utah
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto drop-shadow-md">
                 Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
@@ -378,9 +457,9 @@ export default function Home() {
       {/* Our Services Section */}
       <div id="our-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4e37a8] mb-4">Our Services</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4e37a8] mb-4">Dumpster Rental Services in Utah</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Professional waste management solutions for all your needs. From residential cleanouts to large construction projects.
+            Professional waste management solutions for all your needs. From residential cleanouts to large construction projects. Icon Dumpsters provides reliable dumpster rental services throughout Utah with same-day delivery and competitive pricing.
           </p>
         </div>
 
@@ -398,7 +477,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove residential household wastes during cleanouts, moves, or renovations.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -415,7 +494,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove construction debris, drywall, lumber, and building materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -432,7 +511,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove concrete, asphalt, bricks, and other heavy construction materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -449,7 +528,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster for roofing shingles, underlayment, and other roofing materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -466,7 +545,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove yard waste, branches, leaves, and landscaping debris.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -483,7 +562,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove recyclable materials, cardboard, paper, and plastic waste.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More →
+                Read More â†’
               </a>
             </div>
           </div>
@@ -504,7 +583,7 @@ export default function Home() {
               <span className="text-[#4e37a8]">Rental Sizes</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect dumpster size for your project. All rentals include delivery and pickup. Landfill disposal is billed by weight at $55/ton — no weight is included.
+              Choose the perfect dumpster size for your project. All rentals include delivery and pickup. Landfill disposal is billed by weight at $55/ton â€” no weight is included.
             </p>
           </div>
 
@@ -699,10 +778,160 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Get Your Free Quote Today</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tell us a few details and we’ll send a competitive quote.
+              Tell us a few details and weâ€™ll send a competitive quote.
             </p>
           </div>
           <QuoteForm />
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Dumpster Rental Service Areas in Utah</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Icon Dumpsters provides professional dumpster rental services throughout Utah. From Salt Lake City to Provo, we deliver reliable waste management solutions to homeowners and businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+            <a href="/salt-lake-city" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Salt Lake City</h3>
+            </a>
+            <a href="/murray" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Murray</h3>
+            </a>
+            <a href="/sandy" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Sandy</h3>
+            </a>
+            <a href="/west-jordan" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">West Jordan</h3>
+            </a>
+            <a href="/south-jordan" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">South Jordan</h3>
+            </a>
+            <a href="/draper" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Draper</h3>
+            </a>
+            <a href="/lehi" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Lehi</h3>
+            </a>
+            <a href="/orem" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Orem</h3>
+            </a>
+            <a href="/provo" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Provo</h3>
+            </a>
+            <a href="/ogden" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Ogden</h3>
+            </a>
+            <a href="/layton" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Layton</h3>
+            </a>
+            <a href="/clearfield" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Clearfield</h3>
+            </a>
+            <a href="/roy" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Roy</h3>
+            </a>
+            <a href="/syracuse" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Syracuse</h3>
+            </a>
+            <a href="/kaysville" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Kaysville</h3>
+            </a>
+            <a href="/farmington" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Farmington</h3>
+            </a>
+            <a href="/centerville" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Centerville</h3>
+            </a>
+            <a href="/bountiful" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Bountiful</h3>
+            </a>
+            <a href="/north-salt-lake" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">North Salt Lake</h3>
+            </a>
+            <a href="/woods-cross" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Woods Cross</h3>
+            </a>
+            <a href="/millcreek" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Millcreek</h3>
+            </a>
+            <a href="/holladay" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Holladay</h3>
+            </a>
+            <a href="/cottonwood-heights" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Cottonwood Heights</h3>
+            </a>
+            <a href="/midvale" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Midvale</h3>
+            </a>
+            <a href="/taylorsville" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Taylorsville</h3>
+            </a>
+            <a href="/kearns" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Kearns</h3>
+            </a>
+            <a href="/magna" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Magna</h3>
+            </a>
+            <a href="/south-salt-lake" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">South Salt Lake</h3>
+            </a>
+            <a href="/sugar-house" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Sugar House</h3>
+            </a>
+            <a href="/downtown-salt-lake" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Downtown Salt Lake</h3>
+            </a>
+            <a href="/fairpark" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Fairpark</h3>
+            </a>
+            <a href="/poplar-grove" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Poplar Grove</h3>
+            </a>
+            <a href="/glendale" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Glendale</h3>
+            </a>
+            <a href="/riverton" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Riverton</h3>
+            </a>
+            <a href="/herriman" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Herriman</h3>
+            </a>
+            <a href="/saratoga-springs" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Saratoga Springs</h3>
+            </a>
+            <a href="/eagle-mountain" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Eagle Mountain</h3>
+            </a>
+            <a href="/pleasant-grove" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Pleasant Grove</h3>
+            </a>
+            <a href="/american-fork" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">American Fork</h3>
+            </a>
+            <a href="/bluffdale" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Bluffdale</h3>
+            </a>
+            <a href="/park-city" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Park City</h3>
+            </a>
+            <a href="/tooele" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold text-[#4e37a8]">Tooele</h3>
+            </a>
+          </div>
+          
+          <div className="text-center">
+            <a href="/services" className="inline-flex items-center px-6 py-3 bg-[#4e37a8] text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
+              View All Services
+              <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -711,3 +940,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -83,6 +83,14 @@ export default function GlendaleDumpsterRentalGuide2025() {
                 {/* Why Choose Section */}
                 <section id="why-choose">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Icon Dumpsters in Glendale?</h2>
+                  {/* Hero Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0350.jpg" 
+                      alt="Professional dumpster rental services in GLENDALE - Icon Dumpsters delivering reliable waste management solutions" 
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   <p className="text-lg text-gray-700 mb-6">
                     Glendale residents and businesses trust Icon Dumpsters for reliable, affordable dumpster rental services. 
                     We've been serving the Salt Lake Valley for years, providing exceptional customer service and competitive pricing.
@@ -90,19 +98,19 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="bg-purple-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-purple-900 mb-3">🚚 Same-Day Delivery</h3>
+                      <h3 className="text-xl font-semibold text-purple-900 mb-3">ðŸšš Same-Day Delivery</h3>
                       <p className="text-gray-700">Get your dumpster delivered the same day you order, even on weekends and holidays.</p>
                     </div>
                     <div className="bg-blue-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-blue-900 mb-3">💰 Competitive Pricing</h3>
+                      <h3 className="text-xl font-semibold text-blue-900 mb-3">ðŸ’° Competitive Pricing</h3>
                       <p className="text-gray-700">Transparent pricing with no hidden fees. Get the best value for your money.</p>
                     </div>
                     <div className="bg-green-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-green-900 mb-3">👨‍🔧 Expert Service</h3>
+                      <h3 className="text-xl font-semibold text-green-900 mb-3">ðŸ‘¨â€ðŸ”§ Expert Service</h3>
                       <p className="text-gray-700">Our experienced team ensures proper placement and timely pickup.</p>
                     </div>
                     <div className="bg-orange-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-orange-900 mb-3">🌱 Eco-Friendly</h3>
+                      <h3 className="text-xl font-semibold text-orange-900 mb-3">ðŸŒ± Eco-Friendly</h3>
                       <p className="text-gray-700">We recycle and dispose of waste responsibly, protecting Glendale's environment.</p>
                     </div>
                   </div>
@@ -114,6 +122,14 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     We serve all of Glendale and surrounding communities, ensuring convenient access to dumpster rental services throughout the area.
                   </p>
+                  {/* Service Areas Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/dumpsterSmallBanner3.jpeg" 
+                      alt="GLENDALE dumpster rental service areas - Icon Dumpsters serving all areas of GLENDALE and surrounding communities" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-3 gap-4 mb-8">
                     <div className="bg-white border border-gray-200 p-4 rounded-lg">
@@ -149,6 +165,14 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Choose from our range of dumpster sizes to fit your project needs. All prices include delivery, pickup, and disposal fees.
                   </p>
+                  {/* Dumpster Sizes Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0336.jpg" 
+                      alt="GLENDALE dumpster rental sizes - 15 yard, 20 yard, and 30 yard roll-off dumpsters available for GLENDALE projects" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-white border-2 border-purple-200 p-6 rounded-lg">
@@ -156,17 +180,17 @@ export default function GlendaleDumpsterRentalGuide2025() {
                       <p className="text-3xl font-bold text-gray-900 mb-2">$300</p>
                       <p className="text-gray-600 mb-4">Perfect for small projects</p>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• Small home cleanouts</li>
-                        <li>• Minor renovations</li>
-                        <li>• Garage cleanouts</li>
-                        <li>• Yard waste removal</li>
+                        <li>â€¢ Small home cleanouts</li>
+                        <li>â€¢ Minor renovations</li>
+                        <li>â€¢ Garage cleanouts</li>
+                        <li>â€¢ Yard waste removal</li>
                       </ul>
                       <div className="mt-4 p-3 bg-purple-50 rounded-lg">
                         <p className="text-sm text-purple-800">
                           <strong>Bundle Pricing:</strong><br/>
-                          • 3-7 Days: $300<br/>
-                          • 1 Day Special: $180<br/>
-                          • 30 Days: $500
+                          â€¢ 3-7 Days: $300<br/>
+                          â€¢ 1 Day Special: $180<br/>
+                          â€¢ 30 Days: $500
                         </p>
                       </div>
                       <Link 
@@ -182,17 +206,17 @@ export default function GlendaleDumpsterRentalGuide2025() {
                       <p className="text-3xl font-bold text-gray-900 mb-2">$350</p>
                       <p className="text-gray-600 mb-4">Most popular choice</p>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• Medium-sized projects</li>
-                        <li>• Construction debris</li>
-                        <li>• Kitchen renovations</li>
-                        <li>• Bathroom remodels</li>
+                        <li>â€¢ Medium-sized projects</li>
+                        <li>â€¢ Construction debris</li>
+                        <li>â€¢ Kitchen renovations</li>
+                        <li>â€¢ Bathroom remodels</li>
                       </ul>
                       <div className="mt-4 p-3 bg-blue-50 rounded-lg">
                         <p className="text-sm text-blue-800">
                           <strong>Bundle Pricing:</strong><br/>
-                          • 3-7 Days: $350<br/>
-                          • 1 Day Special: $220<br/>
-                          • 30 Days: $525
+                          â€¢ 3-7 Days: $350<br/>
+                          â€¢ 1 Day Special: $220<br/>
+                          â€¢ 30 Days: $525
                         </p>
                       </div>
                       <Link 
@@ -208,17 +232,17 @@ export default function GlendaleDumpsterRentalGuide2025() {
                       <p className="text-3xl font-bold text-gray-900 mb-2">$375</p>
                       <p className="text-gray-600 mb-4">For large projects</p>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• Large construction projects</li>
-                        <li>• Major cleanouts</li>
-                        <li>• Commercial projects</li>
-                        <li>• Demolition debris</li>
+                        <li>â€¢ Large construction projects</li>
+                        <li>â€¢ Major cleanouts</li>
+                        <li>â€¢ Commercial projects</li>
+                        <li>â€¢ Demolition debris</li>
                       </ul>
                       <div className="mt-4 p-3 bg-green-50 rounded-lg">
                         <p className="text-sm text-green-800">
                           <strong>Bundle Pricing:</strong><br/>
-                          • 3-7 Days: $375<br/>
-                          • 1 Day Special: $280<br/>
-                          • 30 Days: $600
+                          â€¢ 3-7 Days: $375<br/>
+                          â€¢ 1 Day Special: $280<br/>
+                          â€¢ 30 Days: $600
                         </p>
                       </div>
                       <Link 
@@ -241,9 +265,9 @@ export default function GlendaleDumpsterRentalGuide2025() {
                         <div className="mt-4 p-3 bg-orange-50 rounded-lg">
                           <p className="text-sm text-orange-800">
                             <strong>Bundle Pricing:</strong><br/>
-                            • 3-7 Days: $375<br/>
-                            • 1 Day Special: $280<br/>
-                            • 30 Days: $600
+                            â€¢ 3-7 Days: $375<br/>
+                            â€¢ 1 Day Special: $280<br/>
+                            â€¢ 30 Days: $600
                           </p>
                         </div>
                       </div>
@@ -255,9 +279,9 @@ export default function GlendaleDumpsterRentalGuide2025() {
                         <div className="mt-4 p-3 bg-red-50 rounded-lg">
                           <p className="text-sm text-red-800">
                             <strong>Bundle Pricing:</strong><br/>
-                            • 3-7 Days: $375<br/>
-                            • 1 Day Special: $280<br/>
-                            • 30 Days: $600
+                            â€¢ 3-7 Days: $375<br/>
+                            â€¢ 1 Day Special: $280<br/>
+                            â€¢ 30 Days: $600
                           </p>
                         </div>
                       </div>
@@ -269,9 +293,9 @@ export default function GlendaleDumpsterRentalGuide2025() {
                         <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                           <p className="text-sm text-gray-800">
                             <strong>Bundle Pricing:</strong><br/>
-                            • 3-7 Days: $375<br/>
-                            • 1 Day Special: $280<br/>
-                            • 30 Days: $600
+                            â€¢ 3-7 Days: $375<br/>
+                            â€¢ 1 Day Special: $280<br/>
+                            â€¢ 30 Days: $600
                           </p>
                         </div>
                       </div>
@@ -280,7 +304,7 @@ export default function GlendaleDumpsterRentalGuide2025() {
 
                   {/* Additional Charges */}
                   <div className="mt-8 bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Additional Charges</h3>
+                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">Ã¢Å¡Â Ã¯Â¸Â Additional Charges</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-yellow-800 mb-2">Weight-Based Pricing</h4>
@@ -300,28 +324,36 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Our dumpsters are used for various projects throughout Glendale, from residential cleanouts to commercial construction.
                   </p>
+                  {/* Common Uses Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/dumpster5-500x500-1.jpeg" 
+                      alt="GLENDALE dumpster rental common uses - residential cleanouts, commercial construction, home renovations, and waste management projects" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠  Residential Projects</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ ÂÂ  Residential Projects</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• Home renovations and remodeling</li>
-                        <li>• Garage and basement cleanouts</li>
-                        <li>• Estate sales and moving cleanouts</li>
-                        <li>• Yard waste and landscaping cleanup</li>
-                        <li>• Roof replacement debris</li>
-                        <li>• Furniture and appliance disposal</li>
+                        <li>â€¢ Home renovations and remodeling</li>
+                        <li>â€¢ Garage and basement cleanouts</li>
+                        <li>â€¢ Estate sales and moving cleanouts</li>
+                        <li>â€¢ Yard waste and landscaping cleanup</li>
+                        <li>â€¢ Roof replacement debris</li>
+                        <li>â€¢ Furniture and appliance disposal</li>
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Commercial Projects</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ ÂÂ¢ Commercial Projects</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• Construction and demolition projects</li>
-                        <li>• Commercial property cleanouts</li>
-                        <li>• Office renovations</li>
-                        <li>• Retail space remodeling</li>
-                        <li>• Industrial waste disposal</li>
-                        <li>• Construction site cleanup</li>
+                        <li>â€¢ Construction and demolition projects</li>
+                        <li>â€¢ Commercial property cleanouts</li>
+                        <li>â€¢ Office renovations</li>
+                        <li>â€¢ Retail space remodeling</li>
+                        <li>â€¢ Industrial waste disposal</li>
+                        <li>â€¢ Construction site cleanup</li>
                       </ul>
                     </div>
                   </div>
@@ -335,7 +367,7 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   </p>
                   
                   <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-6">
-                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Important Regulations</h3>
+                    <h3 className="text-xl font-semibold text-yellow-900 mb-4">Ã¢Å¡Â Ã¯Â¸Â Important Regulations</h3>
                     <ul className="space-y-3 text-gray-700">
                       <li><strong>Street Placement:</strong> Permits may be required for street placement. Contact Glendale for permit information.</li>
                       <li><strong>Restricted Materials:</strong> Hazardous materials, electronics, and certain chemicals are not allowed.</li>
@@ -346,7 +378,7 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   </div>
                   
                   <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠“ž Need a Permit?</h3>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-4">ðŸ â€œÅ¾ Need a Permit?</h3>
                     <p className="text-gray-700 mb-4">
                       Contact Glendale for permit requirements and applications. We can help guide you through the process.
                     </p>
@@ -362,10 +394,18 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Getting a dumpster rental in Glendale is easy with our streamlined process.
                   </p>
+                  {/* How to Get Started Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0350.jpg" 
+                      alt="GLENDALE dumpster rental process - easy 4-step process to get your dumpster rental in GLENDALE, Utah" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠“‹ Simple 4-Step Process</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ â€œâ€¹ Simple 4-Step Process</h3>
                       <ol className="space-y-4">
                         <li className="flex items-start">
                           <span className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">1</span>
@@ -399,7 +439,7 @@ export default function GlendaleDumpsterRentalGuide2025() {
                     </div>
                     
                     <div className="bg-gradient-to-br from-purple-600 to-blue-600 text-white p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold mb-4">🚀 Ready to Get Started?</h3>
+                      <h3 className="text-xl font-semibold mb-4">ðŸš€ Ready to Get Started?</h3>
                       <p className="mb-6">
                         Get your free quote today and experience the best dumpster rental service in Glendale!
                       </p>
@@ -516,23 +556,23 @@ export default function GlendaleDumpsterRentalGuide2025() {
                   <div className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">What You'll Learn:</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• How to find the best dumpster rental near you</li>
-                      <li>• Pricing comparison and cost-saving tips</li>
-                      <li>• Same-day delivery options and availability</li>
-                      <li>• Local service areas and coverage</li>
-                      <li>• What can and cannot go in your dumpster</li>
-                      <li>• Rental process and timeline</li>
+                      <li>â€¢ How to find the best dumpster rental near you</li>
+                      <li>â€¢ Pricing comparison and cost-saving tips</li>
+                      <li>â€¢ Same-day delivery options and availability</li>
+                      <li>â€¢ Local service areas and coverage</li>
+                      <li>â€¢ What can and cannot go in your dumpster</li>
+                      <li>â€¢ Rental process and timeline</li>
                     </ul>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Why Choose Local Service:</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• Faster delivery times</li>
-                      <li>• Local knowledge and expertise</li>
-                      <li>• Better customer service</li>
-                      <li>• Understanding of local regulations</li>
-                      <li>• Competitive local pricing</li>
-                      <li>• Reliable pickup and disposal</li>
+                      <li>â€¢ Faster delivery times</li>
+                      <li>â€¢ Local knowledge and expertise</li>
+                      <li>â€¢ Better customer service</li>
+                      <li>â€¢ Understanding of local regulations</li>
+                      <li>â€¢ Competitive local pricing</li>
+                      <li>â€¢ Reliable pickup and disposal</li>
                     </ul>
                   </div>
                 </div>
@@ -551,3 +591,4 @@ export default function GlendaleDumpsterRentalGuide2025() {
     </>
   );
 }
+

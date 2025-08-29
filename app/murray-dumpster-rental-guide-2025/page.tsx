@@ -83,6 +83,16 @@ export default function MurrayDumpsterRentalGuide2025() {
                 {/* Why Choose Section */}
                 <section id="why-choose">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Icon Dumpsters in Murray?</h2>
+                  
+                  {/* Hero Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0350.jpg" 
+                      alt="Professional dumpster rental services in Murray, Utah - Icon Dumpsters delivering reliable waste management solutions" 
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                  
                   <p className="text-lg text-gray-700 mb-6">
                 Murray residents and businesses trust Icon Dumpsters for reliable, affordable dumpster rental services. 
                     We've been serving the Salt Lake Valley for years, providing exceptional customer service and competitive pricing.
@@ -114,6 +124,15 @@ export default function MurrayDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     We serve all of Murray and surrounding communities, ensuring convenient access to dumpster rental services throughout the area.
                   </p>
+                  
+                  {/* Service Areas Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/dumpsterSmallBanner3.jpeg" 
+                      alt="Murray dumpster rental service areas - Icon Dumpsters serving Murray Central, Murray East, Murray West, Murray North, Murray South and surrounding communities" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-3 gap-4 mb-8">
                     <div className="bg-white border border-gray-200 p-4 rounded-lg">
@@ -149,6 +168,15 @@ export default function MurrayDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Choose from our range of dumpster sizes to fit your project needs. All prices include delivery, pickup, and disposal fees.
                   </p>
+                  
+                  {/* Dumpster Sizes Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0336.jpg" 
+                      alt="Murray dumpster rental sizes - 15 yard, 20 yard, and 30 yard roll-off dumpsters available for Murray projects" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-white border-2 border-purple-200 p-6 rounded-lg">
@@ -301,6 +329,15 @@ export default function MurrayDumpsterRentalGuide2025() {
                     Our dumpsters are used for various projects throughout Murray, from residential cleanouts to commercial construction.
                   </p>
                   
+                  {/* Common Uses Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/dumpster5-500x500-1.jpeg" 
+                      alt="Murray dumpster rental common uses - residential cleanouts, commercial construction, home renovations, and waste management projects" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                  
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
@@ -346,7 +383,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   </div>
                   
                   <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-blue-900 mb-4">📞 Need a Permit?</h3>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
                     <p className="text-gray-700 mb-4">
                       Contact Murray City for permit requirements and applications. We can help guide you through the process.
                     </p>
@@ -362,6 +399,15 @@ export default function MurrayDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Getting a dumpster rental in Murray is easy with our streamlined process.
                   </p>
+                  
+                  {/* How to Get Started Image */}
+                  <div className="mb-8">
+                    <img 
+                      src="/images/IMG_0350.jpg" 
+                      alt="Murray dumpster rental process - easy 4-step process to get your dumpster rental in Murray, Utah" 
+                      className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div>

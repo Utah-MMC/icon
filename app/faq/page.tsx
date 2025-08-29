@@ -29,7 +29,7 @@ export const metadata: Metadata = {
           images: ['/images/IMG_0350.jpg'],
   },
   alternates: {
-    canonical: '/faq',
+    canonical: 'https://icondumpsters.com/faq',
   },
   robots: {
     index: true,

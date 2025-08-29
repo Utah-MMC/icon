@@ -155,7 +155,15 @@ export default function BookClient() {
                 disabled={!canNext3}
                 onClick={async () => {
                   try {
-                    track('form', 'book_submit', { size, delivery, pickup });
+                    track('form', 'book_submit', { 
+                      size, 
+                      delivery, 
+                      pickup,
+                      sessionId: sessionStorage.getItem('sessionId') || 'unknown',
+                      utm: JSON.parse(sessionStorage.getItem('utm') || '{}'),
+                      path: window.location.pathname,
+                      referrer: document.referrer
+                    });
                   } catch {}
                   await submit();
                 }}

@@ -110,7 +110,17 @@ export default function QuoteForm() {
         }
         
         alert('Thank you! Your quote request has been submitted successfully. Please check your email and phone for updates.');
-        try { track('form','quote_submit'); } catch {}
+        try { 
+          track('form','quote_submit', {
+            formType: 'quote',
+            dumpsterSize,
+            deliveryDate,
+            sessionId: sessionStorage.getItem('sessionId') || 'unknown',
+            utm: JSON.parse(sessionStorage.getItem('utm') || '{}'),
+            path: window.location.pathname,
+            referrer: document.referrer
+          }); 
+        } catch {}
         form.reset();
         setRecaptchaToken('');
       } else {
