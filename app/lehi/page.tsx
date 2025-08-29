@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -91,7 +92,15 @@ export default function LehiPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Lehi</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Icon Dumpsters provides reliable dumpster rental services throughout Lehi, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
-              </p>
+              </p>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Lehi, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -132,7 +141,15 @@ export default function LehiPage() {
 
             {/* Dumpster Sizes */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>                
+                {/* Dumpster Sizes Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    alt="Available dumpster sizes for Lehi dumpster rental - 15, 20, and 30 yard options" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
@@ -172,13 +189,81 @@ export default function LehiPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Lehi Dumpster Rental Guide</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Get detailed information about dumpster rental in Lehi, including pricing, regulations, permit requirements, and more.
-              </p>
+              </p>                
+                {/* Guide Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0336.jpg" 
+                    alt="Complete Lehi dumpster rental guide with pricing and regulations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Lehi, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <Link 
                 href="/lehi-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
                 ðŸ“– Read Complete Guide â†’
-              </Link>
+              </Link>              {/* Local Lehi Landmarks & Attractions */}
+              <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Lehi Landmarks & Attractions</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Lehi is home to several popular attractions and landmarks. Whether you're working on a project near these areas or just exploring the city, we're here to help with your dumpster rental needs.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ›ï¸ Popular Lehi Attractions</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="https://thanksgivingpoint.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Thanksgiving Point</a></strong> - <a href="https://www.google.com/maps/search/3003 N Thanksgiving Way" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">3003 N Thanksgiving Way</a></li>
+                        <li>â€¢ <strong><a href="https://www.lehirollermills.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Lehi Roller Mills</a></strong> - <a href="https://www.google.com/maps/search/833 E Main St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">833 E Main St</a></li>
+                        <li>â€¢ <strong><a href="https://www.hutchingsmuseum.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Hutchings Museum</a></strong> - <a href="https://www.google.com/maps/search/55 N Center St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">55 N Center St</a></li>
+                        <li>â€¢ <strong><a href="https://www.lehi-ut.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Lehi City Hall</a></strong> - <a href="https://www.google.com/maps/search/153 N 100 E" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">153 N 100 E</a></li>
+                        <li>â€¢ <strong><a href="https://www.lehi-ut.gov/library/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Lehi Library</a></strong> - <a href="https://www.google.com/maps/search/120 N Center St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">120 N Center St</a></li>
+                        <li>â€¢ <strong><a href="https://www.google.com/maps/place/Traverse+Mountain/@40.6669,-111.8878,15z" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Traverse Mountain</a></strong> - <a href="https://www.google.com/maps/search/Traverse Mountain Blvd" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">Traverse Mountain Blvd</a></li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ¢ Lehi Business Districts</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="/commercial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
+                        <li>â€¢ <strong><a href="/government-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                        <li>â€¢ <strong><a href="/industrial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Lehi</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-purple-900 mb-4">ðŸšš Dumpster Rental Near Lehi Attractions</h3>
+                  <p className="text-gray-700 mb-4">
+                    We provide dumpster rental services throughout Lehi, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Near Lehi Parks</h4>
+                      <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
+                      <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
+                      <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </section>
           </div>
 
@@ -217,3 +302,8 @@ export default function LehiPage() {
     </div>
   );
 }
+
+
+
+
+

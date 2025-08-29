@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -53,33 +54,14 @@ export const metadata: Metadata = {
 export default function SandyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Sandy Dumpster Rental
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Professional dumpster rental services in Sandy, Utah. Fast delivery, competitive pricing, and reliable waste management solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:801-918-6000" 
-                className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                ðŸ“ž Call (801) 918-6000
-              </a>
-              <a 
-                href="#quote-form" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
-              >
-                Get Free Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero 
+        title="Sandy Dumpster Rental"
+        subtitle="Professional dumpster rental services in Sandy, Utah. Fast delivery, competitive pricing, and reliable waste management solutions."
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:801-918-6000"
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -91,7 +73,15 @@ export default function SandyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Sandy</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Icon Dumpsters provides reliable dumpster rental services throughout Sandy, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
-              </p>
+              </p>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Sandy, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -132,7 +122,15 @@ export default function SandyPage() {
 
             {/* Dumpster Sizes */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>                
+                {/* Dumpster Sizes Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    alt="Available dumpster sizes for Sandy dumpster rental - 15, 20, and 30 yard options" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
@@ -172,13 +170,81 @@ export default function SandyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Sandy Dumpster Rental Guide</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Get detailed information about dumpster rental in Sandy, including pricing, regulations, permit requirements, and more.
-              </p>
+              </p>                
+                {/* Guide Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0336.jpg" 
+                    alt="Complete Sandy dumpster rental guide with pricing and regulations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Sandy, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <Link 
                 href="/sandy-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
                 ðŸ“– Read Complete Guide â†’
-              </Link>
+              </Link>              {/* Local Sandy Landmarks & Attractions */}
+              <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Sandy Landmarks & Attractions</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Sandy is home to several popular attractions and landmarks. Whether you're working on a project near these areas or just exploring the city, we're here to help with your dumpster rental needs.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ›ï¸ Popular Sandy Attractions</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="https://www.southtownecenter.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">South Towne Center</a></strong> - <a href="https://www.google.com/maps/search/10450 S State St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">10450 S State St</a></li>
+                        <li>â€¢ <strong><a href="https://www.sandy.utah.gov/amphitheater" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Sandy Amphitheater</a></strong> - <a href="https://www.google.com/maps/search/1245 E 9400 S" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">1245 E 9400 S</a></li>
+                        <li>â€¢ <strong><a href="https://slco.org/parks/dimple-dell/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Dimple Dell Regional Park</a></strong> - <a href="https://www.google.com/maps/search/700 E 10600 S" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">700 E 10600 S</a></li>
+                        <li>â€¢ <strong><a href="https://www.sandy.utah.gov/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Sandy City Hall</a></strong> - <a href="https://www.google.com/maps/search/10000 Centennial Pkwy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">10000 Centennial Pkwy</a></li>
+                        <li>â€¢ <strong><a href="https://www.sandy.utah.gov/library" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Sandy Library</a></strong> - <a href="https://www.google.com/maps/search/10100 S Petunia Way" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">10100 S Petunia Way</a></li>
+                        <li>â€¢ <strong><a href="https://www.google.com/maps/place/Bell+Canyon+Trailhead/@40.6669,-111.8878,15z" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Bell Canyon Trailhead</a></strong> - <a href="https://www.google.com/maps/search/10245 S Wasatch Blvd" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">10245 S Wasatch Blvd</a></li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ¢ Sandy Business Districts</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="/commercial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Sandy Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
+                        <li>â€¢ <strong><a href="/government-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Sandy East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Sandy West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                        <li>â€¢ <strong><a href="/industrial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Sandy South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Sandy North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Sandy</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-purple-900 mb-4">ðŸšš Dumpster Rental Near Sandy Attractions</h3>
+                  <p className="text-gray-700 mb-4">
+                    We provide dumpster rental services throughout Sandy, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Near Sandy Parks</h4>
+                      <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
+                      <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
+                      <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </section>
           </div>
 
@@ -217,3 +283,8 @@ export default function SandyPage() {
     </div>
   );
 }
+
+
+
+
+

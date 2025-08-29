@@ -1,5 +1,6 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -202,6 +203,15 @@ export default function MurrayPage() {
                   Icon Dumpsters provides reliable dumpster rental services throughout Murray, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
                 </p>
                 
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Murray, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                
                 {/* Local Murray Information */}
                 <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
                   <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 About Murray, Utah</h3>
@@ -269,6 +279,16 @@ export default function MurrayPage() {
               {/* Dumpster Sizes */}
               <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+                
+                {/* Dumpster Sizes Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    alt="Available dumpster sizes for Murray dumpster rental - 15, 20, and 30 yard options" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="border border-gray-200 rounded-lg p-6 text-center">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
@@ -309,6 +329,16 @@ export default function MurrayPage() {
                 <p className="text-lg text-gray-700 mb-6">
                   Get detailed information about dumpster rental in Murray, including pricing, regulations, permit requirements, and more.
                 </p>
+                
+                {/* Guide Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0336.jpg" 
+                    alt="Complete Murray dumpster rental guide with pricing and regulations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                
                 <Link 
                   href="/murray-dumpster-rental-guide-2025"
                   className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
@@ -323,6 +353,15 @@ export default function MurrayPage() {
                 <p className="text-lg text-gray-700 mb-6">
                   Murray is home to several popular attractions and landmarks. Whether you're working on a project near these areas or just exploring the city, we're here to help with your dumpster rental needs.
                 </p>
+                
+                {/* Landmarks Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/dumpster5-500x500-1.jpeg" 
+                    alt="Murray landmarks and attractions - dumpster rental services near popular locations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-6 rounded-lg">
@@ -374,6 +413,16 @@ export default function MurrayPage() {
               {/* Local Murray FAQ Section */}
               <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Murray Dumpster Rental FAQ</h2>
+                
+                {/* FAQ Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Murray dumpster rental FAQ - common questions and answers" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                
                 <div className="space-y-6">
                   <div className="border border-gray-200 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Do I need a permit for dumpster rental in Murray?</h3>
@@ -442,3 +491,8 @@ export default function MurrayPage() {
     </>
   );
 }
+
+
+
+
+

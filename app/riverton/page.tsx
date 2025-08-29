@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -91,7 +92,15 @@ export default function RivertonPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Riverton</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Icon Dumpsters provides reliable dumpster rental services throughout Riverton, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
-              </p>
+              </p>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Riverton, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -132,7 +141,15 @@ export default function RivertonPage() {
 
             {/* Dumpster Sizes */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>                
+                {/* Dumpster Sizes Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    alt="Available dumpster sizes for Riverton dumpster rental - 15, 20, and 30 yard options" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
@@ -172,7 +189,23 @@ export default function RivertonPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Riverton Dumpster Rental Guide</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Get detailed information about dumpster rental in Riverton, including pricing, regulations, permit requirements, and more.
-              </p>
+              </p>                
+                {/* Guide Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0336.jpg" 
+                    alt="Complete Riverton dumpster rental guide with pricing and regulations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Riverton, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <Link 
                 href="/riverton-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
@@ -217,3 +250,7 @@ export default function RivertonPage() {
     </div>
   );
 }
+
+
+
+

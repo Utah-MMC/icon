@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -91,7 +92,15 @@ export default function OremPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Orem</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Icon Dumpsters provides reliable dumpster rental services throughout Orem, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
-              </p>
+              </p>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Orem, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -132,7 +141,15 @@ export default function OremPage() {
 
             {/* Dumpster Sizes */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>                
+                {/* Dumpster Sizes Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    alt="Available dumpster sizes for Orem dumpster rental - 15, 20, and 30 yard options" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
@@ -172,13 +189,81 @@ export default function OremPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Orem Dumpster Rental Guide</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Get detailed information about dumpster rental in Orem, including pricing, regulations, permit requirements, and more.
-              </p>
+              </p>                
+                {/* Guide Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/IMG_0336.jpg" 
+                    alt="Complete Orem dumpster rental guide with pricing and regulations" 
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                </div>                
+                {/* Hero Image */}
+                <div className="mb-8">
+                  <img 
+                    src="/images/IMG_0350.jpg" 
+                    alt="Professional dumpster rental services in Orem, Utah - Icon Dumpsters" 
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               <Link 
                 href="/orem-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
                 ðŸ“– Read Complete Guide â†’
-              </Link>
+              </Link>              {/* Local Orem Landmarks & Attractions */}
+              <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Orem Landmarks & Attractions</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Orem is home to several popular attractions and landmarks. Whether you're working on a project near these areas or just exploring the city, we're here to help with your dumpster rental needs.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ›ï¸ Popular Orem Attractions</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="https://www.uvu.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Utah Valley University</a></strong> - <a href="https://www.google.com/maps/search/800 W University Pkwy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">800 W University Pkwy</a></li>
+                        <li>â€¢ <strong><a href="https://www.universityplaceorem.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">University Place</a></strong> - <a href="https://www.google.com/maps/search/575 E University Pkwy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">575 E University Pkwy</a></li>
+                        <li>â€¢ <strong><a href="https://www.scera.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">SCERA Center</a></strong> - <a href="https://www.google.com/maps/search/745 S State St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">745 S State St</a></li>
+                        <li>â€¢ <strong><a href="https://www.orem.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Orem City Hall</a></strong> - <a href="https://www.google.com/maps/search/56 N State St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">56 N State St</a></li>
+                        <li>â€¢ <strong><a href="https://www.orem.org/library/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Orem Library</a></strong> - <a href="https://www.google.com/maps/search/58 N State St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">58 N State St</a></li>
+                        <li>â€¢ <strong><a href="https://www.cascadegolf.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Cascade Golf Course</a></strong> - <a href="https://www.google.com/maps/search/1441 E 800 N" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">1441 E 800 N</a></li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ¢ Orem Business Districts</h3>
+                    <ul className="space-y-2 text-gray-700">
+                        <li>â€¢ <strong><a href="/commercial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Orem Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
+                        <li>â€¢ <strong><a href="/government-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Orem East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Orem West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                        <li>â€¢ <strong><a href="/industrial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Orem South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Orem North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
+                        <li>â€¢ <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Orem</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-purple-900 mb-4">ðŸšš Dumpster Rental Near Orem Attractions</h3>
+                  <p className="text-gray-700 mb-4">
+                    We provide dumpster rental services throughout Orem, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Near Orem Parks</h4>
+                      <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
+                      <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
+                      <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </section>
           </div>
 
@@ -217,3 +302,8 @@ export default function OremPage() {
     </div>
   );
 }
+
+
+
+
+

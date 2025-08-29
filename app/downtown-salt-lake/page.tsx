@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import PageHero from '../components/PageHero';
 import QuoteForm from '../components/QuoteForm';
 
 export const metadata: Metadata = {
@@ -53,33 +54,14 @@ export const metadata: Metadata = {
 export default function DowntownSaltLakePage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Downtown Salt Lake Dumpster Rental
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Professional dumpster rental services in Downtown Salt Lake, Utah. Fast delivery, competitive pricing, and reliable waste management solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:801-918-6000" 
-                className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                ðŸ“ž Call (801) 918-6000
-              </a>
-              <a 
-                href="#quote-form" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
-              >
-                Get Free Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero 
+        title="Downtown Salt Lake Dumpster Rental"
+        subtitle="Professional dumpster rental services in Downtown Salt Lake, Utah. Fast delivery, competitive pricing, and reliable waste management solutions."
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:801-918-6000"
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -93,31 +75,40 @@ export default function DowntownSaltLakePage() {
                 Icon Dumpsters provides reliable dumpster rental services throughout Downtown Salt Lake, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.
               </p>
               
+              {/* Hero Image */}
+              <div className="mb-8">
+                <img 
+                  src="/images/IMG_0350.jpg" 
+                  alt="Professional dumpster rental services in Downtown Salt Lake, Utah - Icon Dumpsters" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ  Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>â€¢ Home renovations and remodeling</li>
-                    <li>â€¢ Basement cleanouts</li>
-                    <li>â€¢ Garage organization</li>
-                    <li>â€¢ Yard waste removal</li>
-                    <li>â€¢ Estate cleanouts</li>
+                    <li>• Home renovations and remodeling</li>
+                    <li>• Basement cleanouts</li>
+                    <li>• Garage organization</li>
+                    <li>• Yard waste removal</li>
+                    <li>• Estate cleanouts</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">ðŸ¢ Commercial Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 Commercial Projects</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>â€¢ Construction and demolition</li>
-                    <li>â€¢ Office renovations</li>
-                    <li>â€¢ Retail store cleanouts</li>
-                    <li>â€¢ Industrial waste removal</li>
-                    <li>â€¢ Event cleanup</li>
+                    <li>• Construction and demolition</li>
+                    <li>• Office renovations</li>
+                    <li>• Retail store cleanouts</li>
+                    <li>• Industrial waste removal</li>
+                    <li>• Event cleanup</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">ðŸ  Need a Permit?</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
                 <p className="text-gray-700 mb-4">
                   Contact Downtown Salt Lake for permit requirements and applications. We can help guide you through the process.
                 </p>
@@ -125,7 +116,7 @@ export default function DowntownSaltLakePage() {
                   href="tel:801-535-6000" 
                   className="text-blue-600 hover:text-blue-800 font-semibold"
                 >
-                  Downtown Salt Lake: (801-535-6000)
+                  Downtown Salt Lake: (801) 535-6000
                 </a>
               </div>
             </section>
@@ -133,35 +124,45 @@ export default function DowntownSaltLakePage() {
             {/* Dumpster Sizes */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
+              
+              {/* Dumpster Sizes Image */}
+              <div className="mb-8">
+                <img 
+                  src="/images/dumpsterSmallBanner3.jpeg" 
+                  alt="Available dumpster sizes for Downtown Salt Lake dumpster rental - 15, 20, and 30 yard options" 
+                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">15 Yard Dumpster</h3>
                   <p className="text-gray-600 mb-4">Perfect for small to medium projects</p>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>â€¢ Kitchen remodel</li>
-                    <li>â€¢ Bathroom renovation</li>
-                    <li>â€¢ Garage cleanout</li>
-                    <li>â€¢ Small construction</li>
+                    <li>• Kitchen remodel</li>
+                    <li>• Bathroom renovation</li>
+                    <li>• Garage cleanout</li>
+                    <li>• Small construction</li>
                   </ul>
                 </div>
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">20 Yard Dumpster</h3>
                   <p className="text-gray-600 mb-4">Great for medium to large projects</p>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>â€¢ Full home renovation</li>
-                    <li>â€¢ Large construction</li>
-                    <li>â€¢ Commercial projects</li>
-                    <li>â€¢ Major cleanouts</li>
+                    <li>• Full home renovation</li>
+                    <li>• Large construction</li>
+                    <li>• Commercial projects</li>
+                    <li>• Major cleanouts</li>
                   </ul>
                 </div>
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">30 Yard Dumpster</h3>
                   <p className="text-gray-600 mb-4">For major projects and construction</p>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>â€¢ Large construction</li>
-                    <li>â€¢ Commercial demolition</li>
-                    <li>â€¢ Major renovations</li>
-                    <li>â€¢ Industrial projects</li>
+                    <li>• Large construction</li>
+                    <li>• Commercial demolition</li>
+                    <li>• Major renovations</li>
+                    <li>• Industrial projects</li>
                   </ul>
                 </div>
               </div>
@@ -173,11 +174,21 @@ export default function DowntownSaltLakePage() {
               <p className="text-lg text-gray-700 mb-6">
                 Get detailed information about dumpster rental in Downtown Salt Lake, including pricing, regulations, permit requirements, and more.
               </p>
+              
+              {/* Guide Image */}
+              <div className="mb-6">
+                <img 
+                  src="/images/IMG_0336.jpg" 
+                  alt="Complete Downtown Salt Lake dumpster rental guide with pricing and regulations" 
+                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              
               <Link 
                 href="/downtown-salt-lake-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                ðŸ“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>
             </section>
           </div>
@@ -203,7 +214,7 @@ export default function DowntownSaltLakePage() {
               href="tel:801-918-6000" 
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
             >
-              ðŸ“ž Call Now: (801) 918-6000
+              📞 Call Now: (801) 918-6000
             </a>
             <a 
               href="#quote-form" 
@@ -217,3 +228,7 @@ export default function DowntownSaltLakePage() {
     </div>
   );
 }
+
+
+
+
