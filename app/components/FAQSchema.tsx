@@ -85,3 +85,38 @@ export const homeRenovationFAQs = [
     answer: "Clear the delivery area of vehicles and obstacles. Ensure there's enough space for the truck to maneuver. The area should be level and accessible. We'll contact you before delivery to confirm the location and any special requirements."
   }
 ];
+
+export const residentialWasteFAQs = [
+  {
+    question: "What size dumpster do I need for my home project?",
+    answer: "Dumpster size depends on your project type and scope. For garage cleanouts, 15 yards is usually sufficient. For kitchen remodels, 20 yards is common. For major renovations, 30 yards may be needed. Contact us for a free consultation to determine the right size for your specific project."
+  },
+  {
+    question: "How much does residential dumpster rental cost?",
+    answer: "Residential dumpster rental costs vary by size, location, and rental duration. 15-yard dumpsters typically cost $200-400, 20-yard dumpsters $300-500, and 30-yard dumpsters $400-700. Prices include delivery, pickup, and disposal fees. We offer competitive pricing for homeowners."
+  },
+  {
+    question: "Do I need a permit for a residential dumpster?",
+    answer: "Permit requirements vary by location and placement. If placing on your private property (driveway, yard), permits are usually not required. If placing on the street, you'll need a permit from your city. We can help you determine permit requirements and assist with the application process."
+  },
+  {
+    question: "How long can I keep the dumpster for my home project?",
+    answer: "Most residential dumpster rentals include 7-14 days of rental time. Extended rentals are available for longer projects. We offer flexible rental periods to accommodate your project timeline. Contact us to discuss your specific needs and we'll create a rental schedule that works for you."
+  },
+  {
+    question: "What types of waste can I put in a residential dumpster?",
+    answer: "Residential dumpsters can accept most household items, furniture, appliances, construction debris, yard waste, and general trash. Prohibited items include hazardous materials, chemicals, tires, batteries, and medical waste. Contact us for a complete list of acceptable and prohibited items for your specific project."
+  },
+  {
+    question: "Do you offer same-day delivery for residential projects?",
+    answer: "Yes, we offer same-day delivery throughout Utah when available. Call us early in the day to check availability and schedule same-day service. We understand that residential projects often have urgent timelines and we do our best to accommodate your needs."
+  },
+  {
+    question: "Can I place the dumpster on my driveway?",
+    answer: "Yes, you can typically place the dumpster on your driveway. This is often the preferred location as it doesn't require a permit and is easily accessible. Make sure the area is clear of vehicles and obstacles before delivery. We'll work with you to find the best placement option."
+  },
+  {
+    question: "What if I need to extend my rental period?",
+    answer: "We offer flexible rental periods and can extend your rental if needed. Simply contact us before your scheduled pickup date and we'll arrange for an extension. Additional fees may apply for extended rentals, but we'll always be transparent about costs."
+  }
+];

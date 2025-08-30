@@ -284,15 +284,15 @@ export default function CityPageTemplate({
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Near {cityName} Parks</h4>
-                    <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
             </div>
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
-                    <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                    <p className="text-gray-600">Convenient for <a href="/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
               </div>
               <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                    <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                    <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
               </div>
             </div>
           </div>

@@ -80,32 +80,32 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Draper Central',
         description: 'Major retail and dining',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
       {
         name: 'Draper East',
         description: 'Government and civic center',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
       {
         name: 'Draper West',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
       {
         name: 'Draper South',
         description: 'Industrial and commercial',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
       {
         name: 'Draper North',
         description: 'Growing residential area',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
       {
         name: 'Downtown Draper',
         description: 'Established neighborhoods',
-        link: '/dumpster-rental',
+        link: '/draper',
       },
     ],
     permitInfo: {
@@ -194,32 +194,32 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Downtown Salt Lake',
         description: 'Business and government center',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
       {
         name: 'Sugar House',
         description: 'Shopping and entertainment district',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
       {
         name: 'The Avenues',
         description: 'Historic residential area',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
       {
         name: 'University District',
         description: 'University of Utah area',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
       {
         name: 'Central City',
         description: 'Mixed residential and commercial',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
       {
         name: 'East Bench',
         description: 'Upscale residential neighborhoods',
-        link: '/dumpster-rental',
+        link: '/salt-lake-city',
       },
     ],
     permitInfo: {
@@ -304,22 +304,22 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Murray Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/murray',
       },
       {
         name: 'Murray East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/murray',
       },
       {
         name: 'Murray West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/murray',
       },
       {
         name: 'Murray South',
         description: 'Growing residential area',
-        link: '/dumpster-rental',
+        link: '/murray',
       },
     ],
     permitInfo: {
@@ -398,17 +398,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Sandy Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/sandy',
       },
       {
         name: 'Sandy East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/sandy',
       },
       {
         name: 'Sandy West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/sandy',
       },
     ],
     permitInfo: {
@@ -482,17 +482,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'West Jordan Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/west-jordan',
       },
       {
         name: 'West Jordan East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/west-jordan',
       },
       {
         name: 'West Jordan West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/west-jordan',
       },
     ],
     permitInfo: {
@@ -561,17 +561,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'American Fork Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/american-fork',
       },
       {
         name: 'American Fork East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/american-fork',
       },
       {
         name: 'American Fork West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/american-fork',
       },
     ],
     permitInfo: {
@@ -640,17 +640,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Bountiful Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/bountiful',
       },
       {
         name: 'Bountiful East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/bountiful',
       },
       {
         name: 'Bountiful West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/bountiful',
       },
     ],
     permitInfo: {
@@ -719,17 +719,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Centerville Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/centerville',
       },
       {
         name: 'Centerville East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/centerville',
       },
       {
         name: 'Centerville West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/centerville',
       },
     ],
     permitInfo: {
@@ -798,17 +798,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Clearfield Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/clearfield',
       },
       {
         name: 'Clearfield East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/clearfield',
       },
       {
         name: 'Clearfield West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/clearfield',
       },
     ],
     permitInfo: {
@@ -877,17 +877,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Cottonwood Heights Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/cottonwood-heights',
       },
       {
         name: 'Cottonwood Heights East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/cottonwood-heights',
       },
       {
         name: 'Cottonwood Heights West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/cottonwood-heights',
       },
     ],
     permitInfo: {
@@ -956,17 +956,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Downtown Salt Lake Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/downtown-salt-lake',
       },
       {
         name: 'Downtown Salt Lake East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/downtown-salt-lake',
       },
       {
         name: 'Downtown Salt Lake West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/downtown-salt-lake',
       },
     ],
     permitInfo: {
@@ -1035,17 +1035,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Eagle Mountain Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/eagle-mountain',
       },
       {
         name: 'Eagle Mountain East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/eagle-mountain',
       },
       {
         name: 'Eagle Mountain West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/eagle-mountain',
       },
     ],
     permitInfo: {
@@ -1114,17 +1114,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Fairpark Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/fairpark',
       },
       {
         name: 'Fairpark East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/fairpark',
       },
       {
         name: 'Fairpark West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/fairpark',
       },
     ],
     permitInfo: {
@@ -1193,17 +1193,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Farmington Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/farmington',
       },
       {
         name: 'Farmington East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/farmington',
       },
       {
         name: 'Farmington West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/farmington',
       },
     ],
     permitInfo: {
@@ -1272,17 +1272,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Glendale Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/glendale',
       },
       {
         name: 'Glendale East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/glendale',
       },
       {
         name: 'Glendale West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/glendale',
       },
     ],
     permitInfo: {
@@ -1351,17 +1351,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Herriman Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/herriman',
       },
       {
         name: 'Herriman East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/herriman',
       },
       {
         name: 'Herriman West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/herriman',
       },
     ],
     permitInfo: {
@@ -1430,17 +1430,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Holladay Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/holladay',
       },
       {
         name: 'Holladay East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/holladay',
       },
       {
         name: 'Holladay West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/holladay',
       },
     ],
     permitInfo: {
@@ -1509,17 +1509,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Kaysville Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/kaysville',
       },
       {
         name: 'Kaysville East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/kaysville',
       },
       {
         name: 'Kaysville West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/kaysville',
       },
     ],
     permitInfo: {
@@ -1588,17 +1588,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Kearns Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/kearns',
       },
       {
         name: 'Kearns East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/kearns',
       },
       {
         name: 'Kearns West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/kearns',
       },
     ],
     permitInfo: {
@@ -1667,17 +1667,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Layton Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/layton',
       },
       {
         name: 'Layton East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/layton',
       },
       {
         name: 'Layton West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/layton',
       },
     ],
     permitInfo: {
@@ -1746,17 +1746,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Lehi Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/lehi',
       },
       {
         name: 'Lehi East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/lehi',
       },
       {
         name: 'Lehi West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/lehi',
       },
     ],
     permitInfo: {
@@ -1825,17 +1825,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Magna Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/magna',
       },
       {
         name: 'Magna East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/magna',
       },
       {
         name: 'Magna West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/magna',
       },
     ],
     permitInfo: {
@@ -1904,17 +1904,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Midvale Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/midvale',
       },
       {
         name: 'Midvale East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/midvale',
       },
       {
         name: 'Midvale West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/midvale',
       },
     ],
     permitInfo: {
@@ -1983,17 +1983,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Millcreek Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/millcreek',
       },
       {
         name: 'Millcreek East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/millcreek',
       },
       {
         name: 'Millcreek West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/millcreek',
       },
     ],
     permitInfo: {
@@ -2062,17 +2062,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'North Salt Lake Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/north-salt-lake',
       },
       {
         name: 'North Salt Lake East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/north-salt-lake',
       },
       {
         name: 'North Salt Lake West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/north-salt-lake',
       },
     ],
     permitInfo: {
@@ -2141,17 +2141,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Ogden Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/ogden',
       },
       {
         name: 'Ogden East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/ogden',
       },
       {
         name: 'Ogden West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/ogden',
       },
     ],
     permitInfo: {
@@ -2220,17 +2220,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Orem Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/orem',
       },
       {
         name: 'Orem East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/orem',
       },
       {
         name: 'Orem West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/orem',
       },
     ],
     permitInfo: {
@@ -2299,17 +2299,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Park City Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/park-city',
       },
       {
         name: 'Park City East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/park-city',
       },
       {
         name: 'Park City West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/park-city',
       },
     ],
     permitInfo: {
@@ -2378,17 +2378,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Pleasant Grove Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/pleasant-grove',
       },
       {
         name: 'Pleasant Grove East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/pleasant-grove',
       },
       {
         name: 'Pleasant Grove West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/pleasant-grove',
       },
     ],
     permitInfo: {
@@ -2457,17 +2457,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Poplar Grove Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/poplar-grove',
       },
       {
         name: 'Poplar Grove East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/poplar-grove',
       },
       {
         name: 'Poplar Grove West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/poplar-grove',
       },
     ],
     permitInfo: {
@@ -2536,17 +2536,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Provo Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/provo',
       },
       {
         name: 'Provo East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/provo',
       },
       {
         name: 'Provo West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/provo',
       },
     ],
     permitInfo: {
@@ -2615,17 +2615,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Riverton Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/riverton',
       },
       {
         name: 'Riverton East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/riverton',
       },
       {
         name: 'Riverton West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/riverton',
       },
     ],
     permitInfo: {
@@ -2694,17 +2694,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Roy Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/roy',
       },
       {
         name: 'Roy East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/roy',
       },
       {
         name: 'Roy West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/roy',
       },
     ],
     permitInfo: {
@@ -2773,17 +2773,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Saratoga Springs Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/saratoga-springs',
       },
       {
         name: 'Saratoga Springs East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/saratoga-springs',
       },
       {
         name: 'Saratoga Springs West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/saratoga-springs',
       },
     ],
     permitInfo: {
@@ -2852,17 +2852,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'South Jordan Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/south-jordan',
       },
       {
         name: 'South Jordan East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/south-jordan',
       },
       {
         name: 'South Jordan West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/south-jordan',
       },
     ],
     permitInfo: {
@@ -2931,17 +2931,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'South Salt Lake Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/south-salt-lake',
       },
       {
         name: 'South Salt Lake East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/south-salt-lake',
       },
       {
         name: 'South Salt Lake West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/south-salt-lake',
       },
     ],
     permitInfo: {
@@ -3010,17 +3010,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Sugar House Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/sugar-house',
       },
       {
         name: 'Sugar House East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/sugar-house',
       },
       {
         name: 'Sugar House West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/sugar-house',
       },
     ],
     permitInfo: {
@@ -3089,17 +3089,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Syracuse Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/syracuse',
       },
       {
         name: 'Syracuse East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/syracuse',
       },
       {
         name: 'Syracuse West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/syracuse',
       },
     ],
     permitInfo: {
@@ -3168,17 +3168,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Taylorsville Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/taylorsville',
       },
       {
         name: 'Taylorsville East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/taylorsville',
       },
       {
         name: 'Taylorsville West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/taylorsville',
       },
     ],
     permitInfo: {
@@ -3247,17 +3247,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Tooele Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/tooele',
       },
       {
         name: 'Tooele East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/tooele',
       },
       {
         name: 'Tooele West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/tooele',
       },
     ],
     permitInfo: {
@@ -3326,17 +3326,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'West Valley City Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/west-valley-city',
       },
       {
         name: 'West Valley City East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/west-valley-city',
       },
       {
         name: 'West Valley City West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/west-valley-city',
       },
     ],
     permitInfo: {
@@ -3405,17 +3405,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Woods Cross Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/woods-cross',
       },
       {
         name: 'Woods Cross East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/woods-cross',
       },
       {
         name: 'Woods Cross West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/woods-cross',
       },
     ],
     permitInfo: {
@@ -3484,17 +3484,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Bluffdale Central',
         description: 'Major retail and dining district',
-        link: '/dumpster-rental',
+        link: '/bluffdale',
       },
       {
         name: 'Bluffdale East',
         description: 'Residential and commercial mix',
-        link: '/dumpster-rental',
+        link: '/bluffdale',
       },
       {
         name: 'Bluffdale West',
         description: 'Industrial and commercial area',
-        link: '/dumpster-rental',
+        link: '/bluffdale',
       },
     ],
     permitInfo: {
