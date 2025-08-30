@@ -76,13 +76,7 @@ export default function DowntownSaltLakePage() {
               </p>
               
               {/* Hero Image */}
-              <div className="mb-8">
-                <img 
-                  src="/images/IMG_0350.jpg" 
-                  alt="Professional dumpster rental services in Downtown Salt Lake, Utah - Icon Dumpsters" 
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -108,7 +102,7 @@ export default function DowntownSaltLakePage() {
               </div>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠Need a Permit?</h3>
                 <p className="text-gray-700 mb-4">
                   Contact Downtown Salt Lake for permit requirements and applications. We can help guide you through the process.
                 </p>
@@ -126,13 +120,7 @@ export default function DowntownSaltLakePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
               
               {/* Dumpster Sizes Image */}
-              <div className="mb-8">
-                <img 
-                  src="/images/dumpsterSmallBanner3.jpeg" 
-                  alt="Available dumpster sizes for Downtown Salt Lake dumpster rental - 15, 20, and 30 yard options" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
@@ -176,13 +164,7 @@ export default function DowntownSaltLakePage() {
               </p>
               
               {/* Guide Image */}
-              <div className="mb-6">
-                <img 
-                  src="/images/IMG_0336.jpg" 
-                  alt="Complete Downtown Salt Lake dumpster rental guide with pricing and regulations" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <Link 
                 href="/downtown-salt-lake-dumpster-rental-guide-2025"

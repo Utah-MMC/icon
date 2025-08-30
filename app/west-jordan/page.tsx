@@ -76,13 +76,7 @@ export default function WestJordanPage() {
               </p>
               
               {/* Hero Image */}
-              <div className="mb-8">
-                <img 
-                  src="/images/IMG_0350.jpg" 
-                  alt="Professional dumpster rental services in West Jordan, Utah - Icon Dumpsters" 
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
@@ -108,7 +102,7 @@ export default function WestJordanPage() {
               </div>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠Need a Permit?</h3>
                 <p className="text-gray-700 mb-4">
                   Contact West Jordan City for permit requirements and applications. We can help guide you through the process.
                 </p>
@@ -126,13 +120,7 @@ export default function WestJordanPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Available Dumpster Sizes</h2>
               
               {/* Dumpster Sizes Image */}
-              <div className="mb-8">
-                <img 
-                  src="/images/dumpsterSmallBanner3.jpeg" 
-                  alt="Available dumpster sizes for West Jordan dumpster rental - 15, 20, and 30 yard options" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6 text-center">
@@ -176,13 +164,7 @@ export default function WestJordanPage() {
               </p>
               
               {/* Guide Image */}
-              <div className="mb-6">
-                <img 
-                  src="/images/IMG_0336.jpg" 
-                  alt="Complete West Jordan dumpster rental guide with pricing and regulations" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <Link 
                 href="/west-jordan-dumpster-rental-guide-2025"
@@ -200,13 +182,7 @@ export default function WestJordanPage() {
               </p>
               
               {/* Landmarks Image */}
-              <div className="mb-6">
-                <img 
-                  src="/images/dumpster5-500x500-1.jpeg" 
-                  alt="West Jordan landmarks and attractions - dumpster rental services near popular locations" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
-              </div>
+              
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -223,12 +199,12 @@ export default function WestJordanPage() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 West Jordan Business Districts</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• <strong><a href="/commercial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
-                    <li>• <strong><a href="/government-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
-                    <li>• <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
-                    <li>• <strong><a href="/industrial-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
-                    <li>• <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
-                    <li>• <strong><a href="/residential-dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown West Jordan</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">West Jordan North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
+                    <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown West Jordan</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>
                   </ul>
                 </div>
               </div>
@@ -262,10 +238,7 @@ export default function WestJordanPage() {
               {/* FAQ Image */}
               <div className="mb-6">
                 <img 
-                  src="/images/IMG_0350.jpg" 
-                  alt="West Jordan dumpster rental FAQ - common questions and answers" 
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
-                />
+                  
               </div>
               
               <div className="space-y-6">

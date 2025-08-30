@@ -119,11 +119,7 @@ export default function CompleteDumpsterRentalGuide() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                   <ImageWithFallback
-                    src="/images/IMG_0350.jpg"
-                    fallbackSrc="/images/dumpsters.webp"
-                    alt="15 Yard Roll-off Dumpster for Utah Home Renovation Projects - Perfect for Small Projects"
-                    className="w-full h-32 object-cover rounded-lg mb-4"
-                  />
+                    
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Small Dumpsters (10-15 yards)</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">

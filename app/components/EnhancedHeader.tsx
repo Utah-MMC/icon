@@ -7,6 +7,7 @@ export default function EnhancedHeader() {
   const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
   const [isCityMenuOpen, setIsCityMenuOpen] = useState(false);
   const [isDumpsterSizesMenuOpen, setIsDumpsterSizesMenuOpen] = useState(false);
+  const [isFrequentBuyersMenuOpen, setIsFrequentBuyersMenuOpen] = useState(false);
 
   return (
     <>
@@ -196,9 +197,35 @@ export default function EnhancedHeader() {
                 )}
               </div>
               
-              <a href="/blog" className="text-gray-700 hover:text-[#4e37a8] transition-colors">
-                Blog
-              </a>
+              {/* Frequent Buyers Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setIsFrequentBuyersMenuOpen(true)}
+                  onMouseLeave={() => setIsFrequentBuyersMenuOpen(false)}
+                  className="text-gray-700 hover:text-[#4e37a8] transition-colors flex items-center"
+                >
+                  BUYERS
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isFrequentBuyersMenuOpen && (
+                  <div
+                    onMouseEnter={() => setIsFrequentBuyersMenuOpen(true)}
+                    onMouseLeave={() => setIsFrequentBuyersMenuOpen(false)}
+                    className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                  >
+                    <div className="py-2">
+                      <a href="/frequent-buyers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                        Frequent Buyers Program
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+
             </nav>
 
             {/* Contact Info & CTAs */}
@@ -322,8 +349,8 @@ export default function EnhancedHeader() {
               <a href="/downtown-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">Downtown Salt Lake</a>
             </div>
             
-            <a href="/blog" className="block text-gray-700 hover:text-[#4e37a8] py-2">
-              Blog
+            <a href="/frequent-buyers" className="block text-gray-700 hover:text-[#4e37a8] py-2">
+              Frequent Buyers Program
             </a>
             <div className="pt-2 border-t border-gray-200">
               <a 

@@ -194,9 +194,7 @@ export default function RootLayout({
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="/kpi-dashboard" className="text-white hover:text-purple-200 transition-colors text-sm font-medium" title="Analytics Dashboard">
-                  📊 Dashboard
-                </a>
+
               </div>
             </div>
           </div>
@@ -213,6 +211,9 @@ export default function RootLayout({
               </div>
               {/* Desktop/Nav */}
                               <nav className="hidden md:flex space-x-5">
+                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium">
+                    Calculator
+                  </a>
                   {/* Services Dropdown */}
                   <div className="relative group">
                     <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
@@ -303,7 +304,7 @@ export default function RootLayout({
                     </svg>
                     <span className="sr-only">Calculator</span>
                   </a>
-                  <a href="/blog" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BLOG</a>
+
                   <a href="/frequent-buyers" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BUYERS</a>
                   <a href="/book" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BOOK</a>
                   <div className="relative group hidden lg:block">
@@ -342,7 +343,7 @@ export default function RootLayout({
                     </button>
                     <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
                       <div className="py-2">
-                        <a href="/blog" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Blog</a>
+
                         <a href="/frequent-buyers" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Frequent Buyers</a>
                         <a href="/book" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Book Now</a>
                         <div className="border-t my-1"></div>

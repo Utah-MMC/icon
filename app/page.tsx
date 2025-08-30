@@ -163,7 +163,7 @@ export default function Home() {
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
             <div className="text-center">
               <h1 className="hero-text font-bold mb-4 sm:mb-6 text-white drop-shadow-lg leading-tight">
-                Icon Dumpsters - Professional Dumpster Rental Services in Utah
+                <span className="text-[#4e37a8]">Icon Dumpsters</span> - Professional Dumpster Rental Services in Utah
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto drop-shadow-md">
                 Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
