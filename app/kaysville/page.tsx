@@ -91,7 +91,7 @@ export default function KaysvillePage() {
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Services in Kaysville</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Icon Dumpsters provides reliable <a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">dumpster rental services</a> throughout Kaysville, Utah. Whether you're tackling a <a href="/home-renovation-dumpster-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation</a>, <a href="/construction-dumpster-rental-guide" className="text-blue-600 hover:text-blue-800 underline">construction project</a>, or <a href="/residential-cleanup-guide" className="text-blue-600 hover:text-blue-800 underline">major cleanup</a>, we have the right <a href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</a> for your needs.
+                Icon Dumpsters provides reliable <a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">dumpster rental services</a> throughout Kaysville, Utah. Whether you're tackling a <a href="/home-renovation-dumpster-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation</a>, <a href="/construction-dumpster-rental-guide" className="text-blue-600 hover:text-blue-800 underline">construction project</a>, or major cleanup, we have the right <a href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</a> for your needs.
               </p>                
                 {/* Hero Image */}
                 
@@ -112,8 +112,8 @@ export default function KaysvillePage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>• <a href="/construction-dumpster-rental-guide" className="text-blue-600 hover:text-blue-800 underline">Construction and demolition</a></li>
                     <li>• <a href="/office-renovation-guide" className="text-blue-600 hover:text-blue-800 underline">Office renovations</a></li>
-                    <li>• <a href="/retail-renovation-dumpster-guide" className="text-blue-600 hover:text-blue-800 underline">Retail store cleanouts</a></li>
-                    <li>• <a href="/industrial-waste-management" className="text-blue-600 hover:text-blue-800 underline">Industrial waste removal</a></li>
+                    <li>• Retail store cleanouts</li>
+                    <li>• Industrial waste removal</li>
                     <li>• <a href="/event-cleanup-guide" className="text-blue-600 hover:text-blue-800 underline">Event cleanup</a></li>
                   </ul>
                 </div>
@@ -209,12 +209,12 @@ export default function KaysvillePage() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 Kaysville Business Districts</h3>
                   <ul className="space-y-2 text-gray-700">
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville Main Street</a></strong> - <a href="/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Historic downtown area</a></li>
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville Civic Center</a></strong> - <a href="/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic buildings</a></li>
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville East</a></strong> - <a href="/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential neighborhoods</a></li>
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville West</a></strong> - <a href="/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Commercial and light industrial</a></li>
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville South</a></strong> - <a href="/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
-                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville North</a></strong> - <a href="/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville Main Street</a></strong> - Historic downtown area</li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville Civic Center</a></strong> - Government and civic buildings</li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville East</a></strong> - Residential neighborhoods</li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville West</a></strong> - Commercial and light industrial</li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville South</a></strong> - Growing residential area</li>
+                      <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Kaysville North</a></strong> - Established neighborhoods</li>
                   </ul>
                 </div>
               </div>
@@ -227,15 +227,15 @@ export default function KaysvillePage() {
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Near Kaysville Parks</h4>
-                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
-                    <p className="text-gray-600">Convenient for <a href="/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                    <p className="text-gray-600">Convenient for retail and restaurant renovation projects</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                    <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                    <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and residential cleanouts</p>
                   </div>
                 </div>
               </div>

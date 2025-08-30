@@ -210,12 +210,12 @@ export default function LehiPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Lehi Business Districts</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Lehi</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>                    </ul>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi Central</a></strong> - Major retail and dining</li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi East</a></strong> - Government and civic center</li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi West</a></strong> - <a href="/dumpster-rental" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi South</a></strong> - Industrial and commercial</li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Lehi North</a></strong> - Growing residential area</li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Lehi</a></strong> - Established neighborhoods</li>                    </ul>
                   </div>
                 </div>
                 
@@ -227,15 +227,15 @@ export default function LehiPage() {
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Near Lehi Parks</h4>
-                      <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                      <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
-                      <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                      <p className="text-gray-600">Convenient for retail and restaurant renovation projects</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                      <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                      <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
                     </div>
                   </div>
                 </div>

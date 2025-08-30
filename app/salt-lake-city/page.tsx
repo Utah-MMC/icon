@@ -214,12 +214,12 @@ export default function SaltLakeCityPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Salt Lake City Business Districts</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City Central</a></strong> - <a href="/blog/retail-renovation-dumpster-guide" className="text-gray-500 hover:text-gray-700">Major retail and dining</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City East</a></strong> - <a href="/blog/government-project-dumpster-rental" className="text-gray-500 hover:text-gray-700">Government and civic center</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City West</a></strong> - <a href="/blog/residential-cleanup-guide" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City South</a></strong> - <a href="/blog/industrial-waste-management" className="text-gray-500 hover:text-gray-700">Industrial and commercial</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City North</a></strong> - <a href="/blog/new-construction-dumpster-guide" className="text-gray-500 hover:text-gray-700">Growing residential area</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Salt Lake City</a></strong> - <a href="/blog/established-neighborhood-renovation" className="text-gray-500 hover:text-gray-700">Established neighborhoods</a></li>                    </ul>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City Central</a></strong> - <span className="text-gray-500">Major retail and dining</span></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City East</a></strong> - <span className="text-gray-500">Government and civic center</span></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City West</a></strong> - <span className="text-gray-500">Residential and commercial mix</span></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City South</a></strong> - <span className="text-gray-500">Industrial and commercial</span></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City North</a></strong> - <span className="text-gray-500">Growing residential area</span></li>
+                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Salt Lake City</a></strong> - <span className="text-gray-500">Established neighborhoods</span></li>                    </ul>
                   </div>
                 </div>
                 
@@ -231,15 +231,15 @@ export default function SaltLakeCityPage() {
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Near Salt Lake City Parks</h4>
-                      <p className="text-gray-600">Perfect for <a href="/blog/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/blog/community-event-cleanup" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                      <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
-                      <p className="text-gray-600">Convenient for <a href="/blog/retail-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                      <p className="text-gray-600">Convenient for <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                      <p className="text-gray-600">Ideal for <a href="/blog/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/blog/residential-cleanup-guide" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                      <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
                     </div>
                   </div>
                 </div>

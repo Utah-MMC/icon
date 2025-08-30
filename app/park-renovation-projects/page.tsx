@@ -302,7 +302,7 @@ export default function ParkRenovationProjectsPage() {
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/community-event-cleanup" className="group">
+            <Link href="/dumpster-rental" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                   Community Event Cleanup: Complete Guide

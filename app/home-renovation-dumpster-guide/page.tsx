@@ -302,13 +302,13 @@ export default function HomeRenovationDumpsterGuidePage() {
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/residential-cleanup-guide" className="group">
+            <Link href="/dumpster-rental" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
-                  Residential Cleanup Guide
+                  Dumpster Rental Services
                 </h3>
                 <p className="text-gray-600">
-                  Complete guide to residential cleanup and waste management for homeowners.
+                  Professional dumpster rental services for all your waste management needs.
                 </p>
               </div>
             </Link>
