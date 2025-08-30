@@ -66,7 +66,7 @@ export default function FAQPage() {
         },
         {
           question: "How do I choose the right dumpster size?",
-          answer: "Consider your project type and volume. A 15-yard dumpster holds about 3-4 pickup truck loads, a 20-yard holds 4-6 loads, and a 30-yard holds 6-8 loads. For reference, a 15-yard dumpster is about 12' x 8' x 4' high. Our team can help you choose the perfect size for your project. See /dumpster-sizes and /blog/how-to-choose-dumpster-size"
+          answer: "Consider your project type and volume. A 15-yard dumpster holds about 3-4 pickup truck loads, a 20-yard holds 4-6 loads, and a 30-yard holds 6-8 loads. For reference, a 15-yard dumpster is about 12' x 8' x 4' high. Our team can help you choose the perfect size for your project. See /dumpster-sizes and /how-to-choose-dumpster-size"
         },
         {
           question: "What are the dimensions of your dumpsters?",
@@ -117,7 +117,7 @@ export default function FAQPage() {
       questions: [
         {
           question: "Do I need a permit for a dumpster?",
-          answer: "In most cases, no permit is needed if the dumpster is placed on private property (like your driveway). However, if you need to place the dumpster on a public street or sidewalk, you'll need a permit from your local city. We can help you determine if a permit is required and guide you through the process. Read more: /blog/utah-dumpster-permits-guide"
+          answer: "In most cases, no permit is needed if the dumpster is placed on private property (like your driveway). However, if you need to place the dumpster on a public street or sidewalk, you'll need a permit from your local city. We can help you determine if a permit is required and guide you through the process. Read more: /utah-dumpster-permits-guide"
         },
         {
           question: "What are the weight limits for dumpsters?",
