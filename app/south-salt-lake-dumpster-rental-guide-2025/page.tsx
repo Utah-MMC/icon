@@ -372,8 +372,7 @@ export default function SouthSaltLakeDumpsterRentalGuide2025() {
                   </p>
                   {/* How to Get Started Image */}
                   <div className="mb-8">
-                    <img 
-                      
+                    {/* Image placeholder - removed incomplete img tag */}
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">

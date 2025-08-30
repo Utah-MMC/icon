@@ -179,12 +179,6 @@ export default function SouthSaltLakePage() {
                 Get detailed information about dumpster rental in South Salt Lake, including pricing, regulations, permit requirements, and more.
               </p>                
                 {/* Guide Image */}
-                                
-                {/* Hero Image */}
-                <div className="mb-8">
-                  <img 
-                    
-                </div>
               <Link 
                 href="/south-salt-lake-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"

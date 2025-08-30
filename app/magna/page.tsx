@@ -182,8 +182,7 @@ export default function MagnaPage() {
                                 
                 {/* Hero Image */}
                 <div className="mb-8">
-                  <img 
-                    
+                  {/* Image placeholder - removed incomplete img tag */}
                 </div>
               <Link 
                 href="/magna-dumpster-rental-guide-2025"

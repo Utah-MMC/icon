@@ -180,11 +180,7 @@ export default function BountifulPage() {
               </p>                
                 {/* Guide Image */}
                                 
-                {/* Hero Image */}
-                <div className="mb-8">
-                  <img 
-                    
-                </div>
+
               <Link 
                 href="/bountiful-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"

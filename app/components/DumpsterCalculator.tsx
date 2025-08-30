@@ -355,9 +355,9 @@ export default function DumpsterCalculator() {
     
     html += '<div class="mt-4">';
     if (availabilityCheck && availabilityCheck.available) {
-      html += '<button id="exact-quote-btn" type="button" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
-      html += 'Get Exact Quote';
-      html += '</button>';
+    html += '<button id="exact-quote-btn" type="button" class="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">';
+    html += 'Get Exact Quote';
+    html += '</button>';
     } else {
       html += '<button id="exact-quote-btn" type="button" class="bg-gray-400 text-white px-6 py-2 rounded-lg font-semibold cursor-not-allowed" disabled>';
       html += 'Check Availability First';
@@ -430,11 +430,11 @@ export default function DumpsterCalculator() {
             <div
               className="w-full cursor-pointer"
               onClick={handleCalendarToggle}
-            >
-              <input
-                ref={dateInputRef}
+          >
+            <input
+              ref={dateInputRef}
                 type="text"
-                id="preferredDate"
+              id="preferredDate"
                 value={rentalDate ? formatDateForDisplay(new Date(rentalDate)) : ''}
                 readOnly
                 placeholder="Select delivery date"
@@ -876,7 +876,7 @@ export default function DumpsterCalculator() {
                 <div className="mt-4 flex flex-col sm:flex-row items-center gap-3">
                   <button type="submit" className="bg-[#4e37a8] text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">Submit</button>
                   <div className="flex items-center gap-3 text-sm">
-                    <a href="tel:(801) 918-6000" className="text-[#4e37a8] hover:text-purple-700 font-semibold">Or call (801) 918-6000</a>
+                  <a href="tel:(801) 918-6000" className="text-[#4e37a8] hover:text-purple-700 font-semibold">Or call (801) 918-6000</a>
                     <span className="text-gray-400">|</span>
                     <button 
                       type="button"

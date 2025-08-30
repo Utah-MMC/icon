@@ -9,6 +9,7 @@ export default function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string>('');
   const [spamDetected, setSpamDetected] = useState(false);
+  const [showDirtConcreteOptions, setShowDirtConcreteOptions] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -238,30 +239,89 @@ export default function QuoteForm() {
           </label>
           <div className="grid grid-cols-1 gap-2">
             <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="15" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <input 
+                type="radio" 
+                name="dumpsterSize" 
+                value="15" 
+                className="text-[#4e37a8] focus:ring-[#4e37a8]" 
+                required 
+                onChange={() => setShowDirtConcreteOptions(false)}
+              />
               <span className="text-xs font-medium text-gray-900">15 Yard Dumpster</span>
             </label>
             <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="20" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <input 
+                type="radio" 
+                name="dumpsterSize" 
+                value="20" 
+                className="text-[#4e37a8] focus:ring-[#4e37a8]" 
+                required 
+                onChange={() => setShowDirtConcreteOptions(false)}
+              />
               <span className="text-xs font-medium text-gray-900">20 Yard Dumpster</span>
             </label>
             <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="30" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
+              <input 
+                type="radio" 
+                name="dumpsterSize" 
+                value="30" 
+                className="text-[#4e37a8] focus:ring-[#4e37a8]" 
+                required 
+                onChange={() => setShowDirtConcreteOptions(false)}
+              />
               <span className="text-xs font-medium text-gray-900">30 Yard Dumpster</span>
             </label>
             <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="10-dirt" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-xs font-medium text-gray-900">10 Yard Clean Dirt</span>
-            </label>
-            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="10-mixed" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-xs font-medium text-gray-900">10 Yard Mixed Load</span>
-            </label>
-            <label className="flex items-center space-x-2 cursor-pointer p-2 border border-gray-200 rounded-lg hover:border-[#4e37a8] hover:bg-[#4e37a8]/5 transition-all duration-300">
-              <input type="radio" name="dumpsterSize" value="12-concrete" className="text-[#4e37a8] focus:ring-[#4e37a8]" required />
-              <span className="text-xs font-medium text-gray-900">12 Yard Concrete</span>
+              <input 
+                type="radio" 
+                name="dumpsterSize" 
+                value="dirt-concrete" 
+                className="text-[#4e37a8] focus:ring-[#4e37a8]" 
+                required 
+                onChange={() => setShowDirtConcreteOptions(true)}
+              />
+              <span className="text-xs font-medium text-gray-900">Dirt/Concrete</span>
             </label>
           </div>
+          
+          {/* Dirt/Concrete Options Popup */}
+          {showDirtConcreteOptions && (
+            <div className="mt-3 p-3 bg-white rounded-lg border-2 border-[#4e37a8] shadow-lg">
+              <p className="text-xs font-semibold text-gray-700 mb-2">Select your dirt/concrete option:</p>
+              <div className="grid grid-cols-1 gap-2">
+                <label className="flex items-center space-x-2 cursor-pointer p-2 bg-[#4e37a8] text-white rounded-lg border border-white transition-all duration-300">
+                  <input 
+                    type="radio" 
+                    name="dumpsterSize" 
+                    value="10-dirt" 
+                    className="text-white focus:ring-white" 
+                    required 
+                  />
+                  <span className="text-xs font-medium">10 Yard Clean Dirt</span>
+                </label>
+                <label className="flex items-center space-x-2 cursor-pointer p-2 bg-[#4e37a8] text-white rounded-lg border border-white transition-all duration-300">
+                  <input 
+                    type="radio" 
+                    name="dumpsterSize" 
+                    value="10-mixed" 
+                    className="text-white focus:ring-white" 
+                    required 
+                  />
+                  <span className="text-xs font-medium">10 Yard Mixed Load</span>
+                </label>
+                <label className="flex items-center space-x-2 cursor-pointer p-2 bg-[#4e37a8] text-white rounded-lg border border-white transition-all duration-300">
+                  <input 
+                    type="radio" 
+                    name="dumpsterSize" 
+                    value="12-concrete" 
+                    className="text-white focus:ring-white" 
+                    required 
+                  />
+                  <span className="text-xs font-medium">12 Yard Concrete</span>
+                </label>
+              </div>
+            </div>
+          )}
         </div>
         
         {/* Date Selection */}

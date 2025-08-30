@@ -3,7 +3,7 @@ export default function FeesAndSurcharges() {
     { label: 'Weight (post‑pickup)', value: '$55/ton' },
     { label: 'Mattress / Box Spring', value: '$25 each' },
     { label: 'Fridge / Freezer (drain freon)', value: '$25 each' },
-    { label: 'Tires', value: '$8 each' },
+    { label: 'Tires', value: '$25 each' },
   ];
   return (
     <section className="bg-white rounded-2xl shadow-md border border-gray-100 p-8">
