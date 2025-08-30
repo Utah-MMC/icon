@@ -210,12 +210,12 @@ export default function ProvoPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Provo Business Districts</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Provo Central</a></strong> - Major retail and dining</li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Provo East</a></strong> - Government and civic center</li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Provo West</a></strong> - <a href="/dumpster-rental" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Provo South</a></strong> - Industrial and commercial</li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Provo North</a></strong> - Growing residential area</li>
-                        <li>• <strong><a href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">Downtown Provo</a></strong> - Established neighborhoods</li>                    </ul>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Provo Central</a></strong> - Major retail and dining</li>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Provo East</a></strong> - Government and civic center</li>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Provo West</a></strong> - <a href="/" className="text-gray-500 hover:text-gray-700">Residential and commercial mix</a></li>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Provo South</a></strong> - Industrial and commercial</li>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Provo North</a></strong> - Growing residential area</li>
+                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Downtown Provo</a></strong> - Established neighborhoods</li>                    </ul>
                   </div>
                 </div>
                 
@@ -227,7 +227,7 @@ export default function ProvoPage() {
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Near Provo Parks</h4>
-                      <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                      <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
@@ -235,7 +235,7 @@ export default function ProvoPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                      <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                      <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
                     </div>
                   </div>
                 </div>

@@ -284,7 +284,7 @@ export default function CityPageTemplate({
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Near {cityName} Parks</h4>
-                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/dumpster-rental" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
             </div>
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>

@@ -183,7 +183,7 @@ export default function RetailRenovationDumpsterGuidePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Considerations for Retail Renovations</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Retail renovation projects often have tight budgets and timelines. Understanding the costs associated with <Link href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
+                Retail renovation projects often have tight budgets and timelines. Understanding the costs associated with <Link href="/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
               </p>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">

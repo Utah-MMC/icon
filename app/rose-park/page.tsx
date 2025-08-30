@@ -77,12 +77,12 @@ export default function RoseParkPage() {
         {
           name: "Redwood Road Corridor",
           description: "Major retail and commercial area",
-          link: "/dumpster-rental"
+          link: "/"
         },
         {
           name: "North Temple Area",
           description: "Mixed residential and commercial",
-          link: "/dumpster-rental"
+          link: "/"
         }
       ]}
       permitInfo={{

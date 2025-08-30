@@ -183,7 +183,7 @@ export default function ParkRenovationProjectsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Considerations for Park Renovation Projects</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Park renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="/dumpster-rental" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
+                Park renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
               </p>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
@@ -302,7 +302,7 @@ export default function ParkRenovationProjectsPage() {
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/dumpster-rental" className="group">
+            <Link href="/" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                   Community Event Cleanup: Complete Guide

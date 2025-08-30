@@ -99,12 +99,12 @@ export default function CityPageClient({
     {
       name: `${cityDisplayName} Central`,
       description: "Major retail and commercial area",
-      link: "/dumpster-rental"
+      link: "/"
     },
     {
       name: `${cityDisplayName} Business District`,
       description: "Mixed residential and commercial",
-      link: "/dumpster-rental"
+      link: "/"
     }
   ];
 
