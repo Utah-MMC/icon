@@ -370,10 +370,10 @@ export default function DowntownSaltLakeDumpsterRentalGuide2025() {
                   <p className="text-lg text-gray-700 mb-6">
                     Getting a dumpster rental in Downtown Salt Lake is easy with our streamlined process.
                   </p>
-                  {/* How to Get Started Image */}
-                  <div className="mb-8">
-                    <!-- Image placeholder - removed incomplete img tag -->
-                  </div>
+                                      {/* How to Get Started Image */}
+                    <div className="mb-8">
+                      {/* Image placeholder - removed incomplete img tag */}
+                    </div>
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div>
