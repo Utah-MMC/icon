@@ -182,8 +182,7 @@ export default function ClearfieldPage() {
                                 
                 {/* Hero Image */}
                 <div className="mb-8">
-                  <img 
-                    
+                  <!-- Image placeholder - removed incomplete img tag -->
                 </div>
               <Link 
                 href="/clearfield-dumpster-rental-guide-2025"
