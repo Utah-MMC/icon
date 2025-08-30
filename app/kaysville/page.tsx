@@ -98,7 +98,7 @@ export default function KaysvillePage() {
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>• <a href="/home-renovation-dumpster-guide" className="text-blue-600 hover:text-blue-800 underline">Home renovations and remodeling</a></li>
                     <li>• <a href="/basement-cleanout-guide" className="text-blue-600 hover:text-blue-800 underline">Basement cleanouts</a></li>

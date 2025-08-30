@@ -477,7 +477,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove residential household wastes during cleanouts, moves, or renovations.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>
@@ -494,7 +494,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove construction debris, drywall, lumber, and building materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>
@@ -511,7 +511,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove concrete, asphalt, bricks, and other heavy construction materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>
@@ -528,7 +528,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster for roofing shingles, underlayment, and other roofing materials.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>
@@ -545,7 +545,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove yard waste, branches, leaves, and landscaping debris.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>
@@ -562,7 +562,7 @@ export default function Home() {
               </div>
               <p className="text-sm sm:text-base text-gray-600 mb-4">Rent a roll-off dumpster to remove recyclable materials, cardboard, paper, and plastic waste.</p>
               <a href="/services" className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors text-sm sm:text-base">
-                Read More â†’
+                Read More →
               </a>
             </div>
           </div>

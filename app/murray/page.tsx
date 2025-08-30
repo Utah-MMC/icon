@@ -214,7 +214,7 @@ export default function MurrayPage() {
                 
                 {/* Local Murray Information */}
                 <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
-                  <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 About Murray, Utah</h3>
+                  <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠About Murray, Utah</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-blue-800 mb-2">Murray City Facts</h4>
@@ -241,7 +241,7 @@ export default function MurrayPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
                     <ul className="space-y-2 text-gray-700">
                       <li>• Home renovations and remodeling</li>
                       <li>• Basement cleanouts</li>
@@ -263,7 +263,7 @@ export default function MurrayPage() {
                 </div>
 
                 <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠 Need a Permit?</h3>
+                  <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠Need a Permit?</h3>
                   <p className="text-gray-700 mb-4">
                     Contact Murray City for permit requirements and applications. We can help guide you through the process.
                   </p>

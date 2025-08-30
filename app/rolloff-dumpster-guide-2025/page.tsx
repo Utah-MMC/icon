@@ -310,7 +310,7 @@ export default function RolloffDumpsterGuide2025() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-blue-900 mb-2">🏠 Driveway Placement:</h4>
+                    <h4 className="font-semibold text-blue-900 mb-2">🏠Driveway Placement:</h4>
                     <ul className="text-blue-800 space-y-1 text-sm">
                       <li>• Usually avoids permit requirements</li>
                       <li>• More convenient for loading</li>

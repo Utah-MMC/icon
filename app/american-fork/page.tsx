@@ -98,7 +98,7 @@ export default function AmericanForkPage() {
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>• Home renovations and remodeling</li>
                     <li>• Basement cleanouts</li>
@@ -186,7 +186,7 @@ export default function AmericanForkPage() {
                 href="/american-fork-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                🏠“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>
             </section>
           </div>

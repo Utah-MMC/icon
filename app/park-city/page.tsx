@@ -69,7 +69,7 @@ export default function ParkCityPage() {
                 href="tel:801-918-6000" 
                 className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
-                🏠“ž Call (801) 918-6000
+                📞 Call (801) 918-6000
               </a>
               <a 
                 href="#quote-form" 
@@ -187,7 +187,7 @@ export default function ParkCityPage() {
                 href="/park-city-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                🏠“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>
             </section>
           </div>
@@ -213,7 +213,7 @@ export default function ParkCityPage() {
               href="tel:801-918-6000" 
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
             >
-              🏠“ž Call Now: (801) 918-6000
+              📞 Call Now: (801) 918-6000
             </a>
             <a 
               href="#quote-form" 

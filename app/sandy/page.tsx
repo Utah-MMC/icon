@@ -79,7 +79,7 @@ export default function SandyPage() {
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠  Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>• Home renovations and remodeling</li>
                     <li>• Basement cleanouts</li>
@@ -89,7 +89,7 @@ export default function SandyPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Commercial Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Commercial Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>• Construction and demolition</li>
                     <li>• Office renovations</li>
@@ -101,7 +101,7 @@ export default function SandyPage() {
               </div>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠  Need a Permit?</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">🏠Need a Permit?</h3>
                 <p className="text-gray-700 mb-4">
                   Contact Sandy for permit requirements and applications. We can help guide you through the process.
                 </p>
@@ -168,7 +168,7 @@ export default function SandyPage() {
                 href="/sandy-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                🏠“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>              {/* Local Sandy Landmarks & Attractions */}
               <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Sandy Landmarks & Attractions</h2>
@@ -178,7 +178,7 @@ export default function SandyPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠🏛️ï¸ Popular Sandy Attractions</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Popular Sandy Attractions</h3>
                     <ul className="space-y-2 text-gray-700">
                         <li>• <strong><a href="https://www.southtownecenter.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">South Towne Center</a></strong> - <a href="https://www.google.com/maps/search/10450 S State St" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">10450 S State St</a></li>
                         <li>• <strong><a href="https://www.sandy.utah.gov/amphitheater" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Sandy Amphitheater</a></strong> - <a href="https://www.google.com/maps/search/1245 E 9400 S" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">1245 E 9400 S</a></li>
@@ -189,7 +189,7 @@ export default function SandyPage() {
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠¢ Sandy Business Districts</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Sandy Business Districts</h3>
                     <ul className="space-y-2 text-gray-700">
                         <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Sandy Central</a></strong> - Major retail and dining</li>
                         <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Sandy East</a></strong> - Government and civic center</li>
@@ -246,7 +246,7 @@ export default function SandyPage() {
               href="tel:801-918-6000" 
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
             >
-              🏠“ž Call Now: (801) 918-6000
+              📞 Call Now: (801) 918-6000
             </a>
             <a 
               href="#quote-form" 

@@ -85,7 +85,7 @@ export default function HomeRenovationDumpsterGuidePage() {
               </p>
 
               <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg mb-8">
-                <h3 className="text-xl font-semibold text-purple-900 mb-4">🏠 Common Home Renovation Waste Types</h3>
+                <h3 className="text-xl font-semibold text-purple-900 mb-4">🏠Common Home Renovation Waste Types</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Interior Materials</h4>

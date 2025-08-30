@@ -187,7 +187,7 @@ export default function OremPage() {
                 href="/orem-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                🏠“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>              {/* Local Orem Landmarks & Attractions */}
               <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Orem Landmarks & Attractions</h2>
@@ -265,7 +265,7 @@ export default function OremPage() {
               href="tel:801-918-6000" 
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
             >
-              🏠“ž Call Now: (801) 918-6000
+              📞 Call Now: (801) 918-6000
             </a>
             <a 
               href="#quote-form" 

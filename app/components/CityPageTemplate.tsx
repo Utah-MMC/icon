@@ -146,7 +146,7 @@ export default function CityPageTemplate({
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     {contentSections.residentialServices.map((service, index) => (
                       <li key={index}>• {service}</li>

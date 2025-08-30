@@ -185,7 +185,7 @@ export default function CentervillePage() {
                 href="/centerville-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
-                🏠“– Read Complete Guide â†’
+                📖 Read Complete Guide →
               </Link>
             </section>
           </div>
@@ -211,7 +211,7 @@ export default function CentervillePage() {
               href="tel:801-918-6000" 
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
             >
-              🏠“ž Call Now: (801) 918-6000
+              📞 Call Now: (801) 918-6000
             </a>
             <a 
               href="#quote-form" 
