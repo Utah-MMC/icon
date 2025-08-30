@@ -269,7 +269,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Leave a Review</h4>
             <div className="mb-4">
-              <img 
+              <img
                 src="/google-review-barcode.png" 
                 alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
                 className="w-16 h-16 object-contain border border-gray-300 rounded-lg mb-2"

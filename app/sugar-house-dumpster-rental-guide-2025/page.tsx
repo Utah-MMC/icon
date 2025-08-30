@@ -372,9 +372,7 @@ export default function SugarHouseDumpsterRentalGuide2025() {
                   </p>
                   {/* How to Get Started Image */}
                   <div className="mb-8">
-                    <img 
-                      
-                  </div>
+                    </div>
                   
                   <div className="grid md:grid-cols-2 gap-8 mb-8">
                     <div>

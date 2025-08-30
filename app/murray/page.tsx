@@ -205,7 +205,7 @@ export default function MurrayPage() {
                 
                 {/* Hero Image */}
                 <div className="mb-8">
-                  <img 
+                  <img
                     src="/images/IMG_0350.jpg" 
                     alt="Professional dumpster rental services in Murray, Utah - Icon Dumpsters" 
                     className="w-full h-64 object-cover rounded-lg shadow-md"
@@ -282,7 +282,7 @@ export default function MurrayPage() {
                 
                 {/* Dumpster Sizes Image */}
                 <div className="mb-8">
-                  <img 
+                  <img
                     src="/images/dumpsterSmallBanner3.jpeg" 
                     alt="Available dumpster sizes for Murray dumpster rental - 15, 20, and 30 yard options" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"
@@ -332,7 +332,7 @@ export default function MurrayPage() {
                 
                 {/* Guide Image */}
                 <div className="mb-6">
-                  <img 
+                  <img
                     src="/images/IMG_0336.jpg" 
                     alt="Complete Murray dumpster rental guide with pricing and regulations" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"
@@ -356,7 +356,7 @@ export default function MurrayPage() {
                 
                 {/* Landmarks Image */}
                 <div className="mb-6">
-                  <img 
+                  <img
                     src="/images/dumpster5-500x500-1.jpeg" 
                     alt="Murray landmarks and attractions - dumpster rental services near popular locations" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"
@@ -416,7 +416,7 @@ export default function MurrayPage() {
                 
                 {/* FAQ Image */}
                 <div className="mb-6">
-                  <img 
+                  <img
                     src="/images/IMG_0350.jpg" 
                     alt="Murray dumpster rental FAQ - common questions and answers" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"

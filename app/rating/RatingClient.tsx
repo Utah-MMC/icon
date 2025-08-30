@@ -48,9 +48,9 @@ export default function RatingClient() {
       <div className="bg-[#4e37a8] shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center py-6">
-            <img 
+            <img
               className="h-12 w-auto" 
-                              src="/Icon_Dumpsters_Final.png" 
+              src="/Icon_Dumpsters_Final.png" 
               alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"
             />
           </div>
@@ -273,13 +273,13 @@ function RatingForm({ rentalData }: { rentalData: any }) {
                      Or Click Here
                    </button>
                  </div>
-                 <div className="flex-shrink-0">
-                   <img 
-                     src="/google-review-barcode.png" 
-                     alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
-                     className="w-24 h-24 object-contain border border-gray-300 rounded-lg"
-                   />
-                 </div>
+                                   <div className="flex-shrink-0">
+                    <img
+                      src="/google-review-barcode.png" 
+                      alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
+                      className="w-24 h-24 object-contain border border-gray-300 rounded-lg"
+                    />
+                  </div>
                </div>
              </div>
              

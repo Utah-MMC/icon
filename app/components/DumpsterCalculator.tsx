@@ -433,13 +433,13 @@ export default function DumpsterCalculator() {
           >
             <input
               ref={dateInputRef}
-                type="text"
+              type="text"
               id="preferredDate"
-                value={rentalDate ? formatDateForDisplay(new Date(rentalDate)) : ''}
-                readOnly
-                placeholder="Select delivery date"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm cursor-pointer bg-white"
-              />
+              value={rentalDate ? formatDateForDisplay(new Date(rentalDate)) : ''}
+              readOnly
+              placeholder="Select delivery date"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm cursor-pointer bg-white"
+            />
               <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>

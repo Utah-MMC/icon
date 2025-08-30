@@ -17,7 +17,6 @@ export default function EnhancedHeader() {
             {/* Logo */}
             <div className="flex items-center">
               <div className="bg-white p-1 rounded-lg shadow-sm">
-                <img 
                   src="/Icon_Dumpsters_Final.png" 
                   alt="Icon Dumpsters Logo" 
                   className="h-8 w-auto"

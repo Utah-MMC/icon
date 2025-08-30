@@ -133,9 +133,9 @@ export function AdminDashboard() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img 
+            <img
               className="mx-auto h-12 w-auto" 
-                              src="/Icon_Dumpsters_Final.png" 
+              src="/Icon_Dumpsters_Final.png" 
               alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -183,7 +183,7 @@ export function AdminDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <img 
+              <img
                 className="h-8 w-auto" 
                 src="/Icon_Dumpsters_Final.png" 
                 alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah"

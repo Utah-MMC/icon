@@ -65,7 +65,7 @@ export default function ImageWithFallback({
   // Otherwise, use regular img with lazy loading. Resolve StaticImageData to string path
   const resolvedSrc = typeof imgSrc === 'string' ? imgSrc : imgSrc.src;
   return (
-    <img 
+    <img
       src={resolvedSrc}
       alt={alt}
       className={className}

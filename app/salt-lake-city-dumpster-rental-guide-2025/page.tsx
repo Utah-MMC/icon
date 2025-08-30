@@ -85,7 +85,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Icon Dumpsters in Salt Lake City?</h2>
                   {/* Hero Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0350.jpg" 
                       alt="Professional dumpster rental services in SALT LAKE CITY - Icon Dumpsters delivering reliable waste management solutions" 
                       className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
@@ -124,7 +124,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                   </p>
                   {/* Service Areas Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/dumpsterSmallBanner3.jpeg" 
                       alt="SALT LAKE CITY dumpster rental service areas - Icon Dumpsters serving all areas of SALT LAKE CITY and surrounding communities" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -167,7 +167,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                   </p>
                   {/* Dumpster Sizes Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0336.jpg" 
                       alt="SALT LAKE CITY dumpster rental sizes - 15 yard, 20 yard, and 30 yard roll-off dumpsters available for SALT LAKE CITY projects" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -326,7 +326,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                   </p>
                   {/* Common Uses Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/dumpster5-500x500-1.jpeg" 
                       alt="SALT LAKE CITY dumpster rental common uses - residential cleanouts, commercial construction, home renovations, and waste management projects" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -396,7 +396,7 @@ export default function SaltLakeCityDumpsterRentalGuide2025() {
                   </p>
                   {/* How to Get Started Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0350.jpg" 
                       alt="SALT LAKE CITY dumpster rental process - easy 4-step process to get your dumpster rental in SALT LAKE CITY, Utah" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"

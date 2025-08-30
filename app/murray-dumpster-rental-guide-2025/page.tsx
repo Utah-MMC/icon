@@ -86,7 +86,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   
                   {/* Hero Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0350.jpg" 
                       alt="Professional dumpster rental services in Murray, Utah - Icon Dumpsters delivering reliable waste management solutions" 
                       className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
@@ -127,7 +127,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   
                   {/* Service Areas Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/dumpsterSmallBanner3.jpeg" 
                       alt="Murray dumpster rental service areas - Icon Dumpsters serving Murray Central, Murray East, Murray West, Murray North, Murray South and surrounding communities" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -171,7 +171,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   
                   {/* Dumpster Sizes Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0336.jpg" 
                       alt="Murray dumpster rental sizes - 15 yard, 20 yard, and 30 yard roll-off dumpsters available for Murray projects" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -331,7 +331,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   
                   {/* Common Uses Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/dumpster5-500x500-1.jpeg" 
                       alt="Murray dumpster rental common uses - residential cleanouts, commercial construction, home renovations, and waste management projects" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
@@ -402,7 +402,7 @@ export default function MurrayDumpsterRentalGuide2025() {
                   
                   {/* How to Get Started Image */}
                   <div className="mb-8">
-                    <img 
+                    <img
                       src="/images/IMG_0350.jpg" 
                       alt="Murray dumpster rental process - easy 4-step process to get your dumpster rental in Murray, Utah" 
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
