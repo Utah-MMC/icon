@@ -135,12 +135,9 @@ export default function MurrayDumpsterRentalPage() {
         <p>Landmarks: {cityData.landmarks.length}</p>
       </div>
       
-      <button 
-        onClick={() => console.log('Button clicked!')}
-        className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-xl"
-      >
-        Click to Test Console
-      </button>
+      <div className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-xl text-center">
+        Test Button (Static)
+      </div>
     </div>
   );
 }
