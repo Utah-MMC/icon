@@ -1,9 +1,3 @@
-'use client';
-
-import Image from "next/image";
-import ImageWithFallback from "../components/ImageWithFallback";
-import DumpsterCalculator from "../components/DumpsterCalculator";
-import QuoteForm from "../components/QuoteForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
