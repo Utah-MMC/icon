@@ -16,6 +16,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  // Validate that slug array exists and has the right length
+  if (!params.slug || params.slug.length < 2) {
+    return {
+      title: 'City Not Found',
+    };
+  }
+
   const citySlug = params.slug[0]; // First part is the city
   const cityData = getCityData(citySlug);
   
@@ -74,6 +81,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default function CityPage({ params }: PageProps) {
+  // Validate that slug array exists and has the right length
+  if (!params.slug || params.slug.length < 2) {
+    notFound();
+  }
+
   const citySlug = params.slug[0]; // First part is the city
   const cityData = getCityData(citySlug);
   
