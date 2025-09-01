@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Murray Dumpster Rental - Professional Dumpster Services in Murray, UT | (801-918-6000)',
@@ -49,30 +50,107 @@ export const metadata: Metadata = {
 };
 
 export default function MurrayDumpsterRental() {
-  console.log('Murray page is rendering...');
+  console.log('🎯 MURRAY PAGE IS RENDERING FROM murray-dumpster-rental-guide-2025/page.tsx');
   
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-4xl font-bold text-blue-600 mb-6">Murray Page Test</h1>
-      
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-        <h2 className="text-2xl font-bold mb-4">Template Import Test</h2>
-        <p className="text-lg mb-4">This page should show the CityPageTemplate content.</p>
-        
-        <div className="bg-blue-100 p-4 rounded">
-          <h3 className="font-bold">Debug Info:</h3>
-          <p>City: Murray, UT</p>
-          <p>Phone: 801-918-6000</p>
-          <p>Status: Testing template import</p>
-        </div>
-      </div>
+  const cityData = {
+    cityName: 'Murray',
+    citySlug: 'murray',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Murray City Hall',
+        address: '5025 S State St, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/',
+      },
+      {
+        name: 'Murray Park',
+        address: '296 E Murray Park Ave, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/parks/murray-park/',
+      },
+      {
+        name: 'Murray Library',
+        address: '166 E 5300 S, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/library/',
+      },
+      {
+        name: 'Murray Theater',
+        address: '4959 S State St, Murray, UT 84107',
+        url: 'https://www.murraytheater.com/',
+      },
+      {
+        name: 'Murray Golf Course',
+        address: '5600 S 900 E, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/golf/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Murray Central',
+        description: 'Major retail and dining district',
+        link: '/murray',
+      },
+      {
+        name: 'Murray East',
+        description: 'Residential and commercial mix',
+        link: '/murray',
+      },
+      {
+        name: 'Murray West',
+        description: 'Industrial and commercial area',
+        link: '/murray',
+      },
+      {
+        name: 'Murray South',
+        description: 'Growing residential area',
+        link: '/murray',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Murray',
+      phoneNumber: '801-264-2660',
+      requirements: 'Contact Murray for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Murray, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Murray, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Murray\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Murray is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Murray, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  };
 
-      <div className="bg-yellow-100 p-4 rounded">
-        <h3 className="font-bold">Next Steps:</h3>
-        <p>1. Check browser console for any errors</p>
-        <p>2. Verify the template is being imported</p>
-        <p>3. Check if there are build errors</p>
-      </div>
-    </div>
-  );
+  return <CityPageTemplate {...cityData} />;
 }
