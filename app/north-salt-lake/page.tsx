@@ -12,55 +12,55 @@ export default function NorthSaltLakePage() {
       landmarks={[
         {
                 "name": "North Salt Lake City Park",
-                "address": "200 N 200 W, North Salt Lake, UT 84054"
+                "address": "200 N 200 W, North Salt Lake, UT 84054",
+                "url": "https://www.nslcity.org/parks-recreation/"
         },
         {
                 "name": "North Salt Lake Library",
-                "address": "200 N 200 W, North Salt Lake, UT 84054"
+                "address": "200 N 200 W, North Salt Lake, UT 84054",
+                "url": "https://slcolibrary.org/location/north-salt-lake/"
         },
         {
                 "name": "North Salt Lake Historic District",
-                "address": "Main St, North Salt Lake, UT 84054"
+                "address": "Main St, North Salt Lake, UT 84054",
+                "url": "https://www.nslcity.org/community/history/"
         },
         {
                 "name": "North Salt Lake Cemetery",
-                "address": "200 N 200 W, North Salt Lake, UT 84054"
+                "address": "200 N 200 W, North Salt Lake, UT 84054",
+                "url": "https://www.nslcity.org/cemetery/"
         },
         {
                 "name": "North Salt Lake Golf Course",
-                "address": "200 N 200 W, North Salt Lake, UT 84054"
+                "address": "200 N 200 W, North Salt Lake, UT 84054",
+                "url": "https://www.nslcity.org/parks-recreation/golf-course/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "North Salt Lake Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "North Salt Lake State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "North Salt Lake City Center",
+                "description": "City government and services",
+                "link": "/north-salt-lake-dumpster-rental-guide-2025"
         },
         {
                 "name": "North Salt Lake East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "North Salt Lake West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "North Salt Lake South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "North Salt Lake Business District",
+                "description": "Mixed commercial area",
+                "link": "/north-salt-lake-dumpster-rental-guide-2025"
         },
         {
-                "name": "North Salt Lake North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "North Salt Lake Industrial Park",
+                "description": "Industrial and manufacturing",
+                "link": "/commercial-dumpsters"
         }
 ]}
       permitInfo={{

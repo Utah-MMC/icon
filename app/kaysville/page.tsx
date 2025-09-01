@@ -12,55 +12,55 @@ export default function KaysvillePage() {
       landmarks={[
         {
                 "name": "Kaysville City Park",
-                "address": "200 W Center St, Kaysville, UT 84037"
+                "address": "200 W Center St, Kaysville, UT 84037",
+                "url": "https://www.kaysville.gov/parks-recreation/"
         },
         {
                 "name": "Kaysville Library",
-                "address": "215 N Fairfield Rd, Kaysville, UT 84037"
+                "address": "215 N Fairfield Rd, Kaysville, UT 84037",
+                "url": "https://slcolibrary.org/location/kaysville/"
         },
         {
                 "name": "Kaysville Historic District",
-                "address": "Main St, Kaysville, UT 84037"
+                "address": "Main St, Kaysville, UT 84037",
+                "url": "https://www.kaysville.gov/community/history/"
         },
         {
                 "name": "Kaysville Cemetery",
-                "address": "200 W Center St, Kaysville, UT 84037"
+                "address": "200 W Center St, Kaysville, UT 84037",
+                "url": "https://www.kaysville.gov/cemetery/"
         },
         {
                 "name": "Kaysville Golf Course",
-                "address": "200 W Center St, Kaysville, UT 84037"
+                "address": "200 W Center St, Kaysville, UT 84037",
+                "url": "https://www.kaysville.gov/parks-recreation/golf-course/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Kaysville Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Kaysville Civic Center",
-                "description": "Government and civic buildings",
-                "link": "/"
+                "name": "Kaysville Town Center",
+                "description": "City government and services",
+                "link": "/kaysville-dumpster-rental-guide-2025"
         },
         {
                 "name": "Kaysville East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Kaysville West",
-                "description": "Commercial and light industrial",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Kaysville South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Kaysville Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/kaysville-dumpster-rental-guide-2025"
         },
         {
-                "name": "Kaysville North",
-                "description": "Established neighborhoods",
-                "link": "/"
+                "name": "Kaysville Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

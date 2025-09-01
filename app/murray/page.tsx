@@ -1,125 +1,55 @@
-import CityPageTemplate from '../components/CityPageTemplate';
+'use client';
 
 export default function MurrayPage() {
   return (
-    <CityPageTemplate
-      cityName="Murray"
-      citySlug="murray"
-      state="Utah"
-      phoneNumber="801-918-6000"
-      latitude="40.6669"
-      longitude="-111.8878"
-      landmarks={[
-        {
-                "name": "Murray City Park",
-                "address": "296 E Murray Park Ave, Murray, UT 84107"
-        },
-        {
-                "name": "Murray Library",
-                "address": "166 E 5300 S, Murray, UT 84107"
-        },
-        {
-                "name": "Murray Historic District",
-                "address": "Main St, Murray, UT 84107"
-        },
-        {
-                "name": "Murray Cemetery",
-                "address": "296 E Murray Park Ave, Murray, UT 84107"
-        },
-        {
-                "name": "Murray Golf Course",
-                "address": "296 E Murray Park Ave, Murray, UT 84107"
-        }
-]}
-      businessDistricts={[
-        {
-                "name": "Murray Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Murray State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
-        },
-        {
-                "name": "Murray East",
-                "description": "Residential neighborhoods",
-                "link": "/"
-        },
-        {
-                "name": "Murray West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Murray South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Murray North",
-                "description": "Established communities",
-                "link": "/"
-        }
-]}
-      permitInfo={{
-        cityName: "Murray",
-        phoneNumber: "801-264-2660",
-        requirements: "Contact Murray for permit requirements and applications. We can help guide you through the process."
-      }}
-      contentSections={{
-        overview: "Icon Dumpsters provides reliable dumpster rental services throughout Murray, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.",
-        residentialServices: [
-          "Home renovations and remodeling",
-          "Basement cleanouts",
-          "Garage organization",
-          "Yard waste removal",
-          "Estate cleanouts"
-        ],
-        commercialServices: [
-          "Construction and demolition",
-          "Office renovations",
-          "Retail store cleanouts",
-          "Industrial waste removal",
-          "Event cleanup"
-        ],
-        whyChooseUs: "Icon Dumpsters is your trusted partner for dumpster rental in Murray. We understand the unique needs of this community and provide reliable, professional service for all your waste management needs.",
-        dumpsterSizes: [
-          {
-            size: "15 Yard",
-            description: "Perfect for small to medium projects",
-            useCases: [
-              "Kitchen remodel",
-              "Bathroom renovation",
-              "Garage cleanout",
-              "Small construction"
-            ]
-          },
-          {
-            size: "20 Yard",
-            description: "Great for medium to large projects",
-            useCases: [
-              "Full home renovation",
-              "Large construction",
-              "Commercial projects",
-              "Major cleanouts"
-            ]
-          },
-          {
-            size: "30 Yard",
-            description: "For major projects and construction",
-            useCases: [
-              "Large construction",
-              "Commercial demolition",
-              "Major renovations",
-              "Industrial projects"
-            ]
-          }
-        ],
-        localInfo: "Murray is a vibrant community in Utah known for its beautiful surroundings and strong community spirit. From residential neighborhoods to commercial districts, Murray offers a great place to live and work.",
-        serviceAreas: "We provide dumpster rental services throughout Murray and surrounding areas. Our service area covers residential neighborhoods, commercial districts, and industrial areas to meet all your waste management needs."
-      }}
-    />
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Dumpster Rental Murray, UT
+        </h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Professional dumpster rental services in Murray, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
+        </p>
+        
+        <div className="bg-gray-50 p-8 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Murray?</h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Same-day delivery to Murray and surrounding areas</li>
+            <li>Competitive pricing with no hidden fees</li>
+            <li>Flexible rental periods (1-30 days)</li>
+            <li>Professional customer service</li>
+            <li>Local knowledge of Murray regulations</li>
+            <li>Multiple dumpster sizes available</li>
+          </ul>
+        </div>
+
+        <div className="bg-blue-50 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Murray Service Areas</h2>
+          <p className="text-gray-600 mb-4">We serve all of Murray and surrounding communities:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Murray Areas:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Downtown Murray</li>
+                <li>• Murray Park Area</li>
+                <li>• Murray Highlands</li>
+                <li>• Murray East</li>
+                <li>• Murray West</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
+              <ul className="space-y-1 text-gray-600">
+                <li>• Midvale</li>
+                <li>• Sandy</li>
+                <li>• South Salt Lake</li>
+                <li>• Taylorsville</li>
+                <li>• West Valley City</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

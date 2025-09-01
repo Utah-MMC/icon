@@ -583,7 +583,7 @@ export default function Home() {
               <span className="text-[#4e37a8]">Rental Sizes</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect dumpster size for your project. All rentals include delivery and pickup. Landfill disposal is billed by weight at $55/ton â€” no weight is included.
+              Choose the perfect dumpster size for your project. All rentals include delivery and pickup. Landfill disposal is billed by weight at $55/ton "” no weight is included.
             </p>
           </div>
 
@@ -778,7 +778,7 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Get Your Free Quote Today</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tell us a few details and weâ€™ll send a competitive quote.
+              Tell us a few details and we"™ll send a competitive quote.
             </p>
           </div>
           <QuoteForm />

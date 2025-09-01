@@ -3303,6 +3303,85 @@ export const cityData: Record<string, CityData> = {
       serviceAreas: 'We provide dumpster rental services throughout Tooele, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
     },
   },
+  'tooel': {
+    cityName: 'Tooele',
+    citySlug: 'tooel',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.5308',
+    longitude: '-112.2983',
+    landmarks: [
+      {
+        name: 'Tooele City Hall',
+        address: 'City Hall Address',
+        url: 'https://www.tooele.utah.gov/',
+      },
+      {
+        name: 'Tooele Park',
+        address: 'Local Park Address',
+        url: 'https://www.google.com/maps/search/Tooele%20Park',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Tooele Central',
+        description: 'Major retail and dining district',
+        link: '/tooel',
+      },
+      {
+        name: 'Tooele East',
+        description: 'Residential and commercial mix',
+        link: '/tooel',
+      },
+      {
+        name: 'Tooele West',
+        description: 'Industrial and commercial area',
+        link: '/tooel',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Tooele',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Tooele for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Tooele, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Tooele, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Tooele\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Tooele is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Tooele, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
   'west-valley-city': {
     cityName: 'West Valley City',
     citySlug: 'west-valley-city',
@@ -3461,6 +3540,273 @@ export const cityData: Record<string, CityData> = {
       serviceAreas: 'We provide dumpster rental services throughout Woods Cross, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
     },
   },
+  'spanish-fork': {
+    cityName: 'Spanish Fork',
+    citySlug: 'spanish-fork',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.1149',
+    longitude: '-111.6549',
+    landmarks: [
+      {
+        name: 'Spanish Fork City Hall',
+        address: '40 S Main St',
+        url: 'https://www.spanishfork.org/',
+      },
+      {
+        name: 'Spanish Fork Library',
+        address: '49 S Main St',
+        url: 'https://www.spanishfork.org/departments/library',
+      },
+      {
+        name: 'Spanish Fork Sports Park',
+        address: '295 Volunteer Dr',
+        url: 'https://www.spanishfork.org/departments/parks-recreation',
+      },
+      {
+        name: 'Spanish Fork River Trail',
+        address: 'Along Spanish Fork River',
+        url: 'https://www.google.com/maps/search/Spanish%20Fork%20River%20Trail',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Spanish Fork Central',
+        description: 'Major retail and dining district',
+        link: '/spanish-fork',
+      },
+      {
+        name: 'Spanish Fork East',
+        description: 'Residential and commercial mix',
+        link: '/spanish-fork',
+      },
+      {
+        name: 'Spanish Fork West',
+        description: 'Industrial and commercial area',
+        link: '/spanish-fork',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Spanish Fork',
+      phoneNumber: '801-804-4500',
+      requirements: 'Contact Spanish Fork for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Spanish Fork, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Spanish Fork, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Spanish Fork\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Spanish Fork is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Spanish Fork, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'springville': {
+    cityName: 'Springville',
+    citySlug: 'springville',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.1652',
+    longitude: '-111.6107',
+    landmarks: [
+      {
+        name: 'Springville City Hall',
+        address: '110 S Main St',
+        url: 'https://www.springville.org/',
+      },
+      {
+        name: 'Springville Museum of Art',
+        address: '126 E 400 S',
+        url: 'https://www.sma.nebo.edu/',
+      },
+      {
+        name: 'Springville Library',
+        address: '45 S Main St',
+        url: 'https://www.springville.org/departments/library',
+      },
+      {
+        name: 'Springville High School',
+        address: '1205 E 900 S',
+        url: 'https://www.nebo.edu/shs',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Springville Central',
+        description: 'Major retail and dining district',
+        link: '/springville',
+      },
+      {
+        name: 'Springville East',
+        description: 'Residential and commercial mix',
+        link: '/springville',
+      },
+      {
+        name: 'Springville West',
+        description: 'Industrial and commercial area',
+        link: '/springville',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Springville',
+      phoneNumber: '801-489-2700',
+      requirements: 'Contact Springville for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Springville, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Springville, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Springville\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Springville is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Springville, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'lindon': {
+    cityName: 'Lindon',
+    citySlug: 'lindon',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.3433',
+    longitude: '-111.7208',
+    landmarks: [
+      {
+        name: 'Lindon City Hall',
+        address: '100 N State St',
+        url: 'https://www.lindoncity.org/',
+      },
+      {
+        name: 'Lindon City Park',
+        address: '200 N State St',
+        url: 'https://www.lindoncity.org/departments/parks-recreation',
+      },
+      {
+        name: 'Lindon Library',
+        address: '25 W Main St',
+        url: 'https://www.lindoncity.org/departments/library',
+      },
+      {
+        name: 'Lindon Golf Course',
+        address: '1080 N 1200 E',
+        url: 'https://www.lindongolf.com/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Lindon Central',
+        description: 'Major retail and dining district',
+        link: '/lindon',
+      },
+      {
+        name: 'Lindon East',
+        description: 'Residential and commercial mix',
+        link: '/lindon',
+      },
+      {
+        name: 'Lindon West',
+        description: 'Industrial and commercial area',
+        link: '/lindon',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Lindon',
+      phoneNumber: '801-785-5043',
+      requirements: 'Contact Lindon for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Lindon, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Lindon, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Lindon\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Lindon is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Lindon, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
   'bluffdale': {
     cityName: 'Bluffdale',
     citySlug: 'bluffdale',
@@ -3538,6 +3884,357 @@ export const cityData: Record<string, CityData> = {
       ],
       localInfo: 'Bluffdale is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
       serviceAreas: 'We provide dumpster rental services throughout Bluffdale, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  // Add missing cities that were skipped
+  'tooele': {
+    cityName: 'Tooele',
+    citySlug: 'tooele',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.5308',
+    longitude: '-112.2983',
+    landmarks: [
+      {
+        name: 'Tooele City Hall',
+        address: 'City Hall Address',
+        url: 'https://www.tooele.utah.gov/',
+      },
+      {
+        name: 'Tooele Park',
+        address: 'Local Park Address',
+        url: 'https://www.google.com/maps/search/Tooele%20Park',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Tooele Central',
+        description: 'Major retail and dining district',
+        link: '/tooele',
+      },
+      {
+        name: 'Tooele East',
+        description: 'Residential and commercial mix',
+        link: '/tooele',
+      },
+      {
+        name: 'Tooele West',
+        description: 'Industrial and commercial area',
+        link: '/tooele',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Tooele',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Tooele for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Tooele, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Tooele, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Tooele\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Tooele is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Tooele, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  // Add other missing cities that were skipped
+  'cheapestsalt-lake-city': {
+    cityName: 'Salt Lake City',
+    citySlug: 'cheapestsalt-lake-city',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Temple Square',
+        address: '50 W North Temple, Salt Lake City, UT 84150',
+        url: 'https://www.templesquare.com/',
+      },
+      {
+        name: 'Utah State Capitol',
+        address: '350 State St, Salt Lake City, UT 84103',
+        url: 'https://utahstatecapitol.utah.gov/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Downtown Salt Lake City',
+        description: 'Central business district with offices, restaurants, and entertainment',
+        link: '/cheapestsalt-lake-city',
+      },
+      {
+        name: 'Sugar House',
+        description: 'Historic shopping district with local businesses and restaurants',
+        link: '/cheapestsalt-lake-city',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Salt Lake City',
+      phoneNumber: '801-535-6000',
+      requirements: 'Contact Salt Lake City for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Salt Lake City, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Salt Lake City, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Salt Lake City\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Salt Lake City is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Salt Lake City, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'commercialbusiness-solutions': {
+    cityName: 'Commercial Business Solutions',
+    citySlug: 'commercialbusiness-solutions',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Business District',
+        address: 'Commercial Area',
+        url: 'https://www.google.com/maps/search/commercial+business+area',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Commercial Central',
+        description: 'Major business and industrial district',
+        link: '/commercialbusiness-solutions',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Commercial Business Solutions',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact local authorities for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services for commercial and business projects throughout Utah. Whether you\'re tackling a construction project, renovation, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Commercial renovations and remodeling',
+        'Office cleanouts',
+        'Retail space organization',
+        'Industrial waste removal',
+        'Business cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services for your commercial project, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of business needs makes us the preferred choice for companies and contractors alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Office remodel', 'Retail renovation', 'Small construction', 'Business cleanout'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full business renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Our commercial business solutions are available throughout Utah. Whether you\'re working on a project in a business district or industrial area, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services for commercial and business projects throughout Utah, including all major business districts and industrial areas. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'complete': {
+    cityName: 'Complete Dumpster Rental Guide',
+    citySlug: 'complete',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Utah State',
+        address: 'Statewide Service',
+        url: 'https://www.utah.gov/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Statewide Coverage',
+        description: 'Complete coverage across all Utah cities and counties',
+        link: '/complete',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Complete Dumpster Rental Guide',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact local authorities for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Utah. This complete guide covers everything you need to know about dumpster rental, from choosing the right size to understanding local regulations.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+        'Moving and relocation',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+        'Property management',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services anywhere in Utah, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and statewide coverage makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'This complete guide covers dumpster rental services across all of Utah, from the major cities to rural areas. Whether you\'re working on a project in Salt Lake City, Provo, Ogden, or anywhere else in the state, we\'re here to help.',
+      serviceAreas: 'We provide dumpster rental services throughout Utah, including all major cities, suburbs, and rural areas. Our statewide coverage and same-day delivery ensure you get your dumpster when and where you need it, no matter where your project is located.',
+    },
+  },
+  'utahlocations': {
+    cityName: 'Utah Dumpster Rental Locations',
+    citySlug: 'utahlocations',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Utah State',
+        address: 'Statewide Service',
+        url: 'https://www.utah.gov/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Statewide Coverage',
+        description: 'Complete coverage across all Utah cities and counties',
+        link: '/utahlocations',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Utah Dumpster Rental Locations',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact local authorities for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services at multiple locations throughout Utah. Find the nearest location to your project and get fast, reliable service with competitive pricing.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+        'Moving and relocation',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+        'Property management',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services at any of our Utah locations, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and multiple service locations makes us the preferred choice for residents and businesses throughout the state.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Our Utah dumpster rental locations are strategically placed to serve communities throughout the state. Whether you\'re in the Salt Lake Valley, Utah County, Davis County, or anywhere else in Utah, we have a location near you.',
+      serviceAreas: 'We provide dumpster rental services at multiple locations throughout Utah, ensuring convenient access for all our customers. Our strategic placement and same-day delivery ensure you get your dumpster when and where you need it, no matter which location serves your area.',
     },
   },
   // Continue with more cities...

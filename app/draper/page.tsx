@@ -22,47 +22,45 @@ export default function DraperPage() {
         },
         {
                 "name": "Draper City Park",
-                "address": "12500 S 1300 E, Draper, UT 84020"
+                "address": "12500 S 1300 E, Draper, UT 84020",
+                "url": "https://www.draperutah.gov/parks-recreation/"
         },
         {
                 "name": "Corner Canyon",
-                "address": "Corner Canyon Rd, Draper, UT 84020"
+                "address": "Corner Canyon Rd, Draper, UT 84020",
+                "url": "https://www.draperutah.gov/parks-recreation/trails/"
         },
         {
                 "name": "Draper Library",
-                "address": "1136 E Pioneer Rd, Draper, UT 84020"
+                "address": "1136 E Pioneer Rd, Draper, UT 84020",
+                "url": "https://slcolibrary.org/location/draper/"
         }
 ]}
       businessDistricts={[
         {
                 "name": "Draper Town Center",
                 "description": "City government and services",
-                "link": "/"
-        },
-        {
-                "name": "Pioneer Crossing",
-                "description": "Major retail and commercial center",
-                "link": "/"
+                "link": "/draper-dumpster-rental-guide-2025"
         },
         {
                 "name": "Draper East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Draper West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Draper South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Draper Business District",
+                "description": "Mixed commercial area",
+                "link": "/draper-dumpster-rental-guide-2025"
         },
         {
-                "name": "Draper North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Corner Canyon",
+                "description": "Outdoor recreation area",
+                "link": "/park-renovation-projects"
         }
 ]}
       permitInfo={{

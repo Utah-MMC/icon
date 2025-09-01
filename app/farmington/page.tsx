@@ -12,55 +12,55 @@ export default function FarmingtonPage() {
       landmarks={[
         {
                 "name": "Farmington Bay Waterfowl Management Area",
-                "address": "1325 W Glover Ln, Farmington, UT 84025"
+                "address": "1325 W Glover Ln, Farmington, UT 84025",
+                "url": "https://wildlife.utah.gov/waterfowl-management-areas/farmington-bay.html"
         },
         {
                 "name": "Farmington City Park",
-                "address": "200 S 200 W, Farmington, UT 84025"
+                "address": "200 S 200 W, Farmington, UT 84025",
+                "url": "https://www.farmington.utah.gov/parks-recreation/"
         },
         {
                 "name": "Farmington Library",
-                "address": "200 S 200 W, Farmington, UT 84025"
+                "address": "200 S 200 W, Farmington, UT 84025",
+                "url": "https://slcolibrary.org/location/farmington/"
         },
         {
                 "name": "Farmington Historic District",
-                "address": "Main St, Farmington, UT 84025"
+                "address": "Main St, Farmington, UT 84025",
+                "url": "https://www.farmington.utah.gov/community/history/"
         },
         {
                 "name": "Farmington Cemetery",
-                "address": "200 S 200 W, Farmington, UT 84025"
+                "address": "200 S 200 W, Farmington, UT 84025",
+                "url": "https://www.farmington.utah.gov/cemetery/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Farmington Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Farmington State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Farmington Town Center",
+                "description": "City government and services",
+                "link": "/farmington-dumpster-rental-guide-2025"
         },
         {
                 "name": "Farmington East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Farmington West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Farmington South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Farmington Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/farmington-dumpster-rental-guide-2025"
         },
         {
-                "name": "Farmington North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Farmington Bay",
+                "description": "Outdoor recreation area",
+                "link": "/park-renovation-projects"
         }
 ]}
       permitInfo={{

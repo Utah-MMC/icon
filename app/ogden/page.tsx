@@ -17,51 +17,50 @@ export default function OgdenPage() {
         },
         {
                 "name": "Ogden City Park",
-                "address": "343 E 25th St, Ogden, UT 84401"
+                "address": "343 E 25th St, Ogden, UT 84401",
+                "url": "https://www.ogdencity.com/parks-recreation/"
         },
         {
                 "name": "Ogden Library",
-                "address": "2464 Jefferson Ave, Ogden, UT 84401"
+                "address": "2464 Jefferson Ave, Ogden, UT 84401",
+                "url": "https://slcolibrary.org/location/ogden/"
         },
         {
                 "name": "Ogden Historic District",
-                "address": "Main St, Ogden, UT 84401"
+                "address": "Main St, Ogden, UT 84401",
+                "url": "https://www.ogdencity.com/community/history/"
         },
         {
                 "name": "Ogden Cemetery",
-                "address": "343 E 25th St, Ogden, UT 84401"
+                "address": "343 E 25th St, Ogden, UT 84401",
+                "url": "https://www.ogdencity.com/cemetery/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Ogden Main Street",
+                "name": "Ogden Downtown",
                 "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Ogden State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "link": "/ogden-dumpster-rental-guide-2025"
         },
         {
                 "name": "Ogden East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Ogden West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Ogden South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Ogden Business District",
+                "description": "Mixed commercial area",
+                "link": "/ogden-dumpster-rental-guide-2025"
         },
         {
-                "name": "Ogden North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Ogden Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

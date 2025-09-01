@@ -54,15 +54,17 @@ export default function PageHero({
             )}
           </div>
           <div className="relative flex justify-center lg:justify-end">
-            <Image
-              src="/images/Icon_Dumpsters_Final.png"
-              alt="Icon Dumpsters - Professional Dumpster Rental Services"
-              width={600}
-              height={400}
-              className="w-full max-w-md lg:max-w-lg rounded-lg shadow-2xl"
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-            />
+            <div className="bg-white rounded-lg shadow-2xl p-4 w-full max-w-md lg:max-w-lg">
+              <Image
+                src="/images/Icon_Dumpsters_Final.png"
+                alt="Icon Dumpsters - Professional Dumpster Rental Services"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-lg"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              />
+            </div>
           </div>
         </div>
       </div>

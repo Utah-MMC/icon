@@ -12,55 +12,55 @@ export default function CottonwoodHeightsPage() {
       landmarks={[
         {
                 "name": "Big Cottonwood Canyon",
-                "address": "Big Cottonwood Canyon, Cottonwood Heights, UT 84121"
+                "address": "Big Cottonwood Canyon, Cottonwood Heights, UT 84121",
+                "url": "https://www.fs.usda.gov/recarea/uwcnf/recarea/?recid=9876"
         },
         {
                 "name": "Cottonwood Heights City Hall",
-                "address": "2277 E Bengal Blvd, Cottonwood Heights, UT 84121"
+                "address": "2277 E Bengal Blvd, Cottonwood Heights, UT 84121",
+                "url": "https://www.cottonwoodheights.utah.gov/"
         },
         {
                 "name": "Cottonwood Heights Library",
-                "address": "2277 E Bengal Blvd, Cottonwood Heights, UT 84121"
+                "address": "2277 E Bengal Blvd, Cottonwood Heights, UT 84121",
+                "url": "https://slcolibrary.org/location/cottonwood-heights/"
         },
         {
                 "name": "Cottonwood Heights Park",
-                "address": "7500 S 2700 E, Cottonwood Heights, UT 84121"
+                "address": "7500 S 2700 E, Cottonwood Heights, UT 84121",
+                "url": "https://www.cottonwoodheights.utah.gov/parks-recreation/"
         },
         {
                 "name": "Fortune Ridge",
-                "address": "Fortune Ridge Dr, Cottonwood Heights, UT 84121"
+                "address": "Fortune Ridge Dr, Cottonwood Heights, UT 84121",
+                "url": "https://www.cottonwoodheights.utah.gov/community/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Cottonwood Heights Center",
+                "name": "Cottonwood Heights Town Center",
                 "description": "City government and services",
-                "link": "/"
-        },
-        {
-                "name": "Fortune Ridge",
-                "description": "Residential and light commercial",
-                "link": "/"
+                "link": "/cottonwood-heights-dumpster-rental-guide-2025"
         },
         {
                 "name": "Cottonwood Heights East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Cottonwood Heights West",
                 "description": "Commercial and residential mix",
-                "link": "/"
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Cottonwood Heights South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Cottonwood Heights Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/cottonwood-heights-dumpster-rental-guide-2025"
         },
         {
-                "name": "Cottonwood Heights North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Fortune Ridge",
+                "description": "Upscale residential area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

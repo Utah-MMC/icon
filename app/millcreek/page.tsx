@@ -12,55 +12,60 @@ export default function MillcreekPage() {
       landmarks={[
         {
                 "name": "Millcreek Canyon",
-                "address": "Millcreek Canyon, Millcreek, UT 84109"
+                "address": "Millcreek Canyon, Millcreek, UT 84109",
+                "url": "https://www.fs.usda.gov/recarea/uwcnf/recarea/?recid=9877"
         },
         {
                 "name": "Millcreek City Hall",
-                "address": "3330 S 1300 E, Millcreek, UT 84106"
+                "address": "3330 S 1300 E, Millcreek, UT 84106",
+                "url": "https://www.millcreek.us/"
         },
         {
                 "name": "Millcreek Library",
-                "address": "2266 E Evergreen Ave, Millcreek, UT 84109"
+                "address": "2266 E Evergreen Ave, Millcreek, UT 84109",
+                "url": "https://slcolibrary.org/location/millcreek/"
         },
         {
                 "name": "Millcreek Park",
-                "address": "3330 S 1300 E, Millcreek, UT 84106"
+                "address": "3330 S 1300 E, Millcreek, UT 84106",
+                "url": "https://www.millcreek.us/parks-recreation/"
         },
         {
                 "name": "Millcreek Historic District",
-                "address": "Main St, Millcreek, UT 84109"
+                "address": "Main St, Millcreek, UT 84109",
+                "url": "https://www.millcreek.us/community/history/"
         }
 ]}
       businessDistricts={[
         {
                 "name": "Millcreek Town Center",
                 "description": "City government and services",
-                "link": "/"
+                "link": "/millcreek-dumpster-rental-guide-2025"
         },
         {
                 "name": "Millcreek East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Millcreek West",
                 "description": "Commercial and residential mix",
-                "link": "/"
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Millcreek South",
                 "description": "Growing residential area",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Millcreek North",
                 "description": "Established communities",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Millcreek Business District",
                 "description": "Mixed residential and commercial",
-                "link": "/"
+                "link": "/millcreek-dumpster-rental-guide-2025"
         }
 ]}
       permitInfo={{

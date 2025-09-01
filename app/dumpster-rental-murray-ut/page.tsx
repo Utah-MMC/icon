@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import InternalLinks from '../components/InternalLinks';
-import QuoteForm from '../components/QuoteForm';
-import ImageWithFallback from '../components/ImageWithFallback';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Murray, UT | Same‑Day Delivery | Icon Dumpsters',
@@ -19,50 +17,130 @@ export const metadata: Metadata = {
 };
 
 export default function MurrayDumpsterRentalPage() {
+  // TEST: This should be very obvious if this file is being served
+  console.log('🎯 MURRAY PAGE IS RENDERING FROM dumpster-rental-murray-ut/page.tsx');
+  
+  const cityData = {
+    cityName: 'Murray',
+    citySlug: 'murray',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7608',
+    longitude: '-111.8910',
+    landmarks: [
+      {
+        name: 'Murray City Hall',
+        address: '5025 S State St, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/',
+      },
+      {
+        name: 'Murray Park',
+        address: '296 E Murray Park Ave, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/parks/murray-park/',
+      },
+      {
+        name: 'Murray Library',
+        address: '166 E 5300 S, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/library/',
+      },
+      {
+        name: 'Murray Theater',
+        address: '4959 S State St, Murray, UT 84107',
+        url: 'https://www.murraytheater.com/',
+      },
+      {
+        name: 'Murray Golf Course',
+        address: '5600 S 900 E, Murray, UT 84107',
+        url: 'https://www.murray.utah.gov/parks-recreation/golf/',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Murray Central',
+        description: 'Major retail and dining district',
+        link: '/murray',
+      },
+      {
+        name: 'Murray East',
+        description: 'Residential and commercial mix',
+        link: '/murray',
+      },
+      {
+        name: 'Murray West',
+        description: 'Industrial and commercial area',
+        link: '/murray',
+      },
+      {
+        name: 'Murray South',
+        description: 'Growing residential area',
+        link: '/murray',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Murray',
+      phoneNumber: '801-264-2660',
+      requirements: 'Contact Murray for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Murray, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Murray, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Murray\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: ['Kitchen remodel', 'Bathroom renovation', 'Garage cleanout', 'Small construction'],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: ['Full home renovation', 'Large construction', 'Commercial projects', 'Major cleanouts'],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
+        },
+      ],
+      localInfo: 'Murray is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Murray, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  };
+
+  // TEST: Return a very obvious test page first
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Dumpster Rental Murray, UT</h1>
-              <p className="text-purple-100 text-lg md:text-xl">Same‑day delivery, transparent pricing, and friendly local service. 15, 20, and 30‑yard roll‑off dumpsters.</p>
-            </div>
-            <div className="h-48 md:h-56 lg:h-64 relative rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center">
-              <ImageWithFallback src="/images/IMG_0350.jpg" fallbackSrc="/images/dumpsterWithTruck.jpeg" alt="Murray dumpster rental" fill className="object-contain" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <section className="bg-white rounded-xl shadow-md p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Dumpster Sizes & Pricing</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: '15‑Yard', bullets: ['Garage cleanouts', 'Yard debris', 'Small renovations'] },
-              { title: '20‑Yard', bullets: ['Kitchen remodels', 'Roofing projects', 'Medium renovations'] },
-              { title: '30‑Yard', bullets: ['Construction & demo', 'Large cleanouts', 'Commercial projects'] },
-            ].map((c) => (
-              <div key={c.title} className="border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{c.title}</h3>
-                <ul className="text-gray-700 space-y-1">
-                  {c.bullets.map((i) => (<li key={i}>• {i}</li>))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 text-sm text-gray-600">Weight billed after pickup at $55/ton. Call <a className="text-[#4e37a8] underline" href="tel:801-918-6000">(801) 918‑6000</a> for exact pricing.</div>
-        </section>
-        <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center mb-10">
-          <h2 className="text-3xl font-bold mb-2">Ready to Get Your Dumpster in Murray?</h2>
-          <p className="text-purple-100 mb-6">Get instant pricing or call (801) 918‑6000.</p>
-          <a href="#quote" className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
-        </section>
-        <div id="quote" className="mb-12">
-          <QuoteForm />
-        </div>
-        <InternalLinks className="mb-12" />
-      </main>
+    <div className="min-h-screen bg-red-500 text-white p-8">
+      <h1 className="text-6xl font-bold mb-6">🎯 TEST PAGE WORKING!</h1>
+      <p className="text-2xl mb-4">This is the dumpster-rental-murray-ut/page.tsx file</p>
+      <p className="text-xl mb-8">If you see this, the routing is working correctly!</p>
+      
+      <div className="bg-white text-black p-6 rounded-lg">
+        <h2 className="text-2xl font-bold mb-4">City Data:</h2>
+        <p>City: {cityData.cityName}</p>
+        <p>State: {cityData.state}</p>
+        <p>Phone: {cityData.phoneNumber}</p>
+        <p>Landmarks: {cityData.landmarks.length}</p>
+      </div>
+      
+      <button 
+        onClick={() => console.log('Button clicked!')}
+        className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-xl"
+      >
+        Click to Test Console
+      </button>
     </div>
   );
 }

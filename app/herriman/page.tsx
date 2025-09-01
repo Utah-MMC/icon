@@ -12,55 +12,55 @@ export default function HerrimanPage() {
       landmarks={[
         {
                 "name": "Herriman City Park",
-                "address": "13011 S Pioneer St, Herriman, UT 84096"
+                "address": "13011 S Pioneer St, Herriman, UT 84096",
+                "url": "https://www.herriman.org/parks-recreation/"
         },
         {
                 "name": "Herriman Library",
-                "address": "13011 S Pioneer St, Herriman, UT 84096"
+                "address": "13011 S Pioneer St, Herriman, UT 84096",
+                "url": "https://slcolibrary.org/location/herriman/"
         },
         {
                 "name": "Herriman Golf Course",
-                "address": "13011 S Pioneer St, Herriman, UT 84096"
+                "address": "13011 S Pioneer St, Herriman, UT 84096",
+                "url": "https://www.herriman.org/parks-recreation/golf-course/"
         },
         {
                 "name": "Herriman Cemetery",
-                "address": "13011 S Pioneer St, Herriman, UT 84096"
+                "address": "13011 S Pioneer St, Herriman, UT 84096",
+                "url": "https://www.herriman.org/cemetery/"
         },
         {
                 "name": "Herriman City Hall",
-                "address": "13011 S Pioneer St, Herriman, UT 84096"
+                "address": "13011 S Pioneer St, Herriman, UT 84096",
+                "url": "https://www.herriman.org/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Herriman Town Center",
+                "name": "Herriman City Center",
                 "description": "City government and services",
-                "link": "/"
+                "link": "/herriman-dumpster-rental-guide-2025"
         },
         {
                 "name": "Herriman East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Herriman West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Herriman South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Herriman North",
-                "description": "Established communities",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Herriman Business District",
                 "description": "Mixed residential and commercial",
-                "link": "/"
+                "link": "/herriman-dumpster-rental-guide-2025"
+        },
+        {
+                "name": "Herriman North",
+                "description": "Growing residential area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

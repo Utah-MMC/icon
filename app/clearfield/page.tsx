@@ -12,55 +12,55 @@ export default function ClearfieldPage() {
       landmarks={[
         {
                 "name": "Clearfield City Park",
-                "address": "200 S State St, Clearfield, UT 84015"
+                "address": "200 S State St, Clearfield, UT 84015",
+                "url": "https://www.clearfieldcity.org/parks-recreation/"
         },
         {
                 "name": "Clearfield Library",
-                "address": "80 S Center St, Clearfield, UT 84015"
+                "address": "80 S Center St, Clearfield, UT 84015",
+                "url": "https://slcolibrary.org/location/clearfield/"
         },
         {
                 "name": "Clearfield Aquatic Center",
-                "address": "825 S State St, Clearfield, UT 84015"
+                "address": "825 S State St, Clearfield, UT 84015",
+                "url": "https://www.clearfieldcity.org/parks-recreation/aquatic-center/"
         },
         {
                 "name": "Clearfield Golf Course",
-                "address": "825 S State St, Clearfield, UT 84015"
+                "address": "825 S State St, Clearfield, UT 84015",
+                "url": "https://www.clearfieldcity.org/parks-recreation/golf-course/"
         },
         {
                 "name": "Clearfield Cemetery",
-                "address": "1050 S State St, Clearfield, UT 84015"
+                "address": "1050 S State St, Clearfield, UT 84015",
+                "url": "https://www.clearfieldcity.org/cemetery/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Clearfield Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Clearfield State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Clearfield City Center",
+                "description": "City government and services",
+                "link": "/clearfield-dumpster-rental-guide-2025"
         },
         {
                 "name": "Clearfield East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Clearfield West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Clearfield South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Clearfield Business District",
+                "description": "Mixed commercial area",
+                "link": "/clearfield-dumpster-rental-guide-2025"
         },
         {
-                "name": "Clearfield North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Clearfield Industrial Park",
+                "description": "Industrial and manufacturing",
+                "link": "/commercial-dumpsters"
         }
 ]}
       permitInfo={{

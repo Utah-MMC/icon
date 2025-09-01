@@ -12,55 +12,55 @@ export default function LaytonPage() {
       landmarks={[
         {
                 "name": "Layton City Park",
-                "address": "437 N Wasatch Dr, Layton, UT 84041"
+                "address": "437 N Wasatch Dr, Layton, UT 84041",
+                "url": "https://www.laytoncity.org/parks-recreation/"
         },
         {
                 "name": "Layton Library",
-                "address": "155 N Wasatch Dr, Layton, UT 84041"
+                "address": "155 N Wasatch Dr, Layton, UT 84041",
+                "url": "https://slcolibrary.org/location/layton/"
         },
         {
                 "name": "Layton Historic District",
-                "address": "Main St, Layton, UT 84041"
+                "address": "Main St, Layton, UT 84041",
+                "url": "https://www.laytoncity.org/community/history/"
         },
         {
                 "name": "Layton Cemetery",
-                "address": "437 N Wasatch Dr, Layton, UT 84041"
+                "address": "437 N Wasatch Dr, Layton, UT 84041",
+                "url": "https://www.laytoncity.org/cemetery/"
         },
         {
                 "name": "Layton Golf Course",
-                "address": "437 N Wasatch Dr, Layton, UT 84041"
+                "address": "437 N Wasatch Dr, Layton, UT 84041",
+                "url": "https://www.laytoncity.org/parks-recreation/golf-course/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Layton Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Layton Hills Mall",
-                "description": "Major retail and commercial center",
-                "link": "/"
+                "name": "Layton City Center",
+                "description": "City government and services",
+                "link": "/layton-dumpster-rental-guide-2025"
         },
         {
                 "name": "Layton East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Layton West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Layton South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Layton Business District",
+                "description": "Mixed commercial area",
+                "link": "/layton-dumpster-rental-guide-2025"
         },
         {
-                "name": "Layton North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Layton Hills Mall",
+                "description": "Shopping and retail center",
+                "link": "/retail-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

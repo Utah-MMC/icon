@@ -17,51 +17,50 @@ export default function BountifulPage() {
         },
         {
                 "name": "Bountiful City Park",
-                "address": "400 N 200 W, Bountiful, UT 84010"
+                "address": "400 N 200 W, Bountiful, UT 84010",
+                "url": "https://www.bountifulutah.gov/parks-recreation/"
         },
         {
                 "name": "Bountiful Ridge Golf Course",
-                "address": "1350 N 400 E, Bountiful, UT 84010"
+                "address": "1350 N 400 E, Bountiful, UT 84010",
+                "url": "https://www.bountifulridgegolf.com/"
         },
         {
                 "name": "Bountiful Library",
-                "address": "725 S Main St, Bountiful, UT 84010"
+                "address": "725 S Main St, Bountiful, UT 84010",
+                "url": "https://slcolibrary.org/location/bountiful/"
         },
         {
                 "name": "Bountiful Historic District",
-                "address": "Main St, Bountiful, UT 84010"
+                "address": "Main St, Bountiful, UT 84010",
+                "url": "https://www.bountifulutah.gov/community/history/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Bountiful Main Street",
+                "name": "Bountiful Downtown",
                 "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Bountiful Boulevard",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "link": "/bountiful-dumpster-rental-guide-2025"
         },
         {
                 "name": "Bountiful East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Bountiful West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Bountiful South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Bountiful Business District",
+                "description": "Mixed commercial area",
+                "link": "/bountiful-dumpster-rental-guide-2025"
         },
         {
-                "name": "Bountiful North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Bountiful Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

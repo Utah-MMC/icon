@@ -12,55 +12,55 @@ export default function KearnsPage() {
       landmarks={[
         {
                 "name": "Kearns Oquirrh Park Fitness Center",
-                "address": "5624 S 4800 W, Kearns, UT 84118"
+                "address": "5624 S 4800 W, Kearns, UT 84118",
+                "url": "https://www.slco.org/parks/kearns-oquirrh-park-fitness-center/"
         },
         {
                 "name": "Kearns Library",
-                "address": "5350 S 4220 W, Kearns, UT 84118"
+                "address": "5350 S 4220 W, Kearns, UT 84118",
+                "url": "https://slcolibrary.org/location/kearns/"
         },
         {
                 "name": "Kearns Park",
-                "address": "5624 S 4800 W, Kearns, UT 84118"
+                "address": "5624 S 4800 W, Kearns, UT 84118",
+                "url": "https://www.slco.org/parks/kearns-oquirrh-park/"
         },
         {
                 "name": "Kearns Historic District",
-                "address": "Main St, Kearns, UT 84118"
+                "address": "Main St, Kearns, UT 84118",
+                "url": "https://www.slco.org/planning/historic-preservation/"
         },
         {
                 "name": "Kearns Cemetery",
-                "address": "5624 S 4800 W, Kearns, UT 84118"
+                "address": "5624 S 4800 W, Kearns, UT 84118",
+                "url": "https://www.slco.org/cemetery/"
         }
 ]}
       businessDistricts={[
         {
                 "name": "Kearns Town Center",
                 "description": "City government and services",
-                "link": "/"
+                "link": "/kearns-dumpster-rental-guide-2025"
         },
         {
                 "name": "Kearns East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Kearns West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Kearns South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Kearns North",
-                "description": "Established communities",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Kearns Business District",
                 "description": "Mixed residential and commercial",
-                "link": "/"
+                "link": "/kearns-dumpster-rental-guide-2025"
+        },
+        {
+                "name": "Kearns Oquirrh Park",
+                "description": "Recreation and fitness center",
+                "link": "/park-renovation-projects"
         }
 ]}
       permitInfo={{

@@ -17,51 +17,50 @@ export default function LehiPage() {
         },
         {
                 "name": "Lehi City Park",
-                "address": "100 N Center St, Lehi, UT 84043"
+                "address": "100 N Center St, Lehi, UT 84043",
+                "url": "https://www.lehi-ut.gov/parks-recreation/"
         },
         {
                 "name": "Lehi Library",
-                "address": "120 N Center St, Lehi, UT 84043"
+                "address": "120 N Center St, Lehi, UT 84043",
+                "url": "https://slcolibrary.org/location/lehi/"
         },
         {
                 "name": "Lehi Historic District",
-                "address": "Main St, Lehi, UT 84043"
+                "address": "Main St, Lehi, UT 84043",
+                "url": "https://www.lehi-ut.gov/community/history/"
         },
         {
                 "name": "Lehi Cemetery",
-                "address": "100 N Center St, Lehi, UT 84043"
+                "address": "100 N Center St, Lehi, UT 84043",
+                "url": "https://www.lehi-ut.gov/cemetery/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Lehi Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Thanksgiving Point",
-                "description": "Major retail and entertainment center",
-                "link": "/"
+                "name": "Lehi City Center",
+                "description": "City government and services",
+                "link": "/lehi-dumpster-rental-guide-2025"
         },
         {
                 "name": "Lehi East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Lehi West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Lehi South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Lehi Business District",
+                "description": "Mixed commercial area",
+                "link": "/lehi-dumpster-rental-guide-2025"
         },
         {
-                "name": "Lehi North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Thanksgiving Point",
+                "description": "Entertainment and attractions",
+                "link": "/commercial-dumpsters"
         }
 ]}
       permitInfo={{

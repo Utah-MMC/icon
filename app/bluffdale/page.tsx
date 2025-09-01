@@ -12,55 +12,55 @@ export default function BluffdalePage() {
       landmarks={[
         {
                 "name": "Bluffdale City Park",
-                "address": "2400 W 14400 S, Bluffdale, UT 84065"
+                "address": "2400 W 14400 S, Bluffdale, UT 84065",
+                "url": "https://www.bluffdale.com/parks-recreation/"
         },
         {
                 "name": "Jordan River Parkway",
-                "address": "Jordan River Parkway Trail, Bluffdale, UT 84065"
+                "address": "Jordan River Parkway Trail, Bluffdale, UT 84065",
+                "url": "https://www.slc.gov/parks/parks-division/jordan-river-parkway/"
         },
         {
                 "name": "Camp Williams",
-                "address": "17800 Camp Williams Rd, Bluffdale, UT 84065"
+                "address": "17800 Camp Williams Rd, Bluffdale, UT 84065",
+                "url": "https://ut.ng.mil/Installations/Camp-Williams/"
         },
         {
                 "name": "Bluffdale Cemetery",
-                "address": "14229 S Redwood Rd, Bluffdale, UT 84065"
+                "address": "14229 S Redwood Rd, Bluffdale, UT 84065",
+                "url": "https://www.bluffdale.com/cemetery/"
         },
         {
                 "name": "Bluffdale Library",
-                "address": "14350 S Redwood Rd, Bluffdale, UT 84065"
+                "address": "14350 S Redwood Rd, Bluffdale, UT 84065",
+                "url": "https://slcolibrary.org/location/bluffdale/"
         }
 ]}
       businessDistricts={[
         {
                 "name": "Bluffdale Town Center",
                 "description": "City government and services",
-                "link": "/"
-        },
-        {
-                "name": "Redwood Road Corridor",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "link": "/bluffdale-dumpster-rental-guide-2025"
         },
         {
                 "name": "Bluffdale East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Bluffdale West",
-                "description": "Agricultural and residential",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Bluffdale South",
                 "description": "Growing residential area",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
-                "name": "Bluffdale North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Bluffdale Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/bluffdale-dumpster-rental-guide-2025"
         }
 ]}
       permitInfo={{

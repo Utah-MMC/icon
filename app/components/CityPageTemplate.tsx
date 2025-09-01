@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import QuoteForm from './QuoteForm';
 
 interface CityPageTemplateProps {
@@ -53,84 +54,63 @@ export default function CityPageTemplate({
   contentSections
 }: CityPageTemplateProps) {
   
-  // Generate metadata dynamically
-  const metadata: Metadata = {
-    title: `${cityName} Dumpster Rental - Professional Dumpster Services in ${cityName}, ${state} | (${phoneNumber})`,
-    description: `Professional dumpster rental services in ${cityName}, ${state}. Fast delivery, competitive pricing, and reliable waste management solutions. Call ${phoneNumber} for instant quotes.`,
-    keywords: `${cityName} dumpster rental, dumpster rental ${cityName} ${state}, ${cityName} ${state} dumpster, roll-off dumpster ${cityName}, construction dumpster ${cityName}, waste management ${cityName}`,
-    openGraph: {
-      title: `${cityName} Dumpster Rental - Professional Dumpster Services in ${cityName}, ${state} | (${phoneNumber})`,
-      description: `Professional dumpster rental services in ${cityName}, ${state}. Fast delivery, competitive pricing, and reliable waste management solutions.`,
-      url: `https://icondumpsters.com/${citySlug}`,
-      siteName: 'Icon Dumpsters',
-      images: [
-        {
-          url: '/images/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: `${cityName} Dumpster Rental - Professional Dumpster Services in ${cityName}, ${state}`,
-        },
-      ],
-      locale: 'en_US',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${cityName} Dumpster Rental - Professional Dumpster Services in ${cityName}, ${state} | (${phoneNumber})`,
-      description: `Professional dumpster rental services in ${cityName}, ${state}. Fast delivery, competitive pricing, and reliable waste management solutions.`,
-      images: ['/images/og-image.png'],
-    },
-    alternates: {
-      canonical: `https://icondumpsters.com/${citySlug}`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    other: {
-      'geo.region': 'US-UT',
-      'geo.placename': `${cityName}, ${state}`,
-      'geo.position': `${latitude};${longitude}`,
-      'ICBM': `${latitude}, ${longitude}`,
-    },
-  };
+  // Debug logging
+  console.log('CityPageTemplate rendering with:', {
+    cityName,
+    citySlug,
+    state,
+    phoneNumber,
+    landmarks: landmarks?.length,
+    businessDistricts: businessDistricts?.length,
+    contentSections: Object.keys(contentSections || {})
+  });
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#4e37a8] to-purple-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {cityName} Dumpster Rental
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Professional dumpster rental services in {cityName}, {state}. Fast delivery, competitive pricing, and reliable waste management solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href={`tel:${phoneNumber}`}
-                className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Call {phoneNumber}
-              </a>
-              <a 
-                href="#quote-form" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
-              >
-                Get Free Quote
-              </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                {cityName} Dumpster Rental
+              </h1>
+              <p className="text-xl md:text-2xl mb-8">
+                Same-day delivery, transparent pricing, and friendly local service.
+              </p>
+              <p className="text-lg mb-8 text-purple-100">
+                15, 20, and 30-yard roll-off dumpsters.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a 
+                  href={`tel:${phoneNumber}`}
+                  className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+                >
+                  Call {phoneNumber}
+                </a>
+                <a 
+                  href="#quote-form" 
+                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
+                >
+                  Get Free Quote
+                </a>
+              </div>
+            </div>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="bg-white rounded-lg shadow-2xl p-4 w-full max-w-md lg:max-w-lg">
+                <Image
+                  src="/images/Icon_Dumpsters_Final.png"
+                  alt="Icon Dumpsters - Professional Dumpster Rental Services"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
+              </div>
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -146,7 +126,7 @@ export default function CityPageTemplate({
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠Residential Projects</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
                   <ul className="space-y-2 text-gray-700">
                     {contentSections.residentialServices.map((service, index) => (
                       <li key={index}>• {service}</li>

@@ -12,55 +12,55 @@ export default function EagleMountainPage() {
       landmarks={[
         {
                 "name": "Eagle Mountain City Park",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005"
+                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
+                "url": "https://www.eaglemountaincity.org/parks-recreation/"
         },
         {
                 "name": "Eagle Mountain Library",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005"
+                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
+                "url": "https://slcolibrary.org/location/eagle-mountain/"
         },
         {
                 "name": "Eagle Mountain Golf Course",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005"
+                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
+                "url": "https://www.eaglemountaincity.org/parks-recreation/golf-course/"
         },
         {
                 "name": "Eagle Mountain Cemetery",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005"
+                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
+                "url": "https://www.eaglemountaincity.org/cemetery/"
         },
         {
                 "name": "Eagle Mountain City Hall",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005"
+                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
+                "url": "https://www.eaglemountaincity.org/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Eagle Mountain Town Center",
+                "name": "Eagle Mountain City Center",
                 "description": "City government and services",
-                "link": "/"
+                "link": "/eagle-mountain-dumpster-rental-guide-2025"
         },
         {
                 "name": "Eagle Mountain East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Eagle Mountain West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Eagle Mountain South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Eagle Mountain North",
-                "description": "Established communities",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Eagle Mountain Business District",
                 "description": "Mixed residential and commercial",
-                "link": "/"
+                "link": "/eagle-mountain-dumpster-rental-guide-2025"
+        },
+        {
+                "name": "Eagle Mountain North",
+                "description": "Growing residential area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

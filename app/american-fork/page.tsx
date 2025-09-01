@@ -17,7 +17,8 @@ export default function AmericanForkPage() {
         },
         {
                 "name": "American Fork Canyon",
-                "address": "American Fork Canyon, UT 84003"
+                "address": "American Fork Canyon, UT 84003",
+                "url": "https://www.fs.usda.gov/recarea/uwcnf/recarea/?recid=9875"
         },
         {
                 "name": "Utah Lake State Park",
@@ -26,7 +27,8 @@ export default function AmericanForkPage() {
         },
         {
                 "name": "Mountain View Corridor",
-                "address": "Mountain View Corridor, American Fork, UT 84003"
+                "address": "Mountain View Corridor, American Fork, UT 84003",
+                "url": "https://www.udot.utah.gov/connect/mountain-view-corridor/"
         },
         {
                 "name": "American Fork Library",
@@ -36,34 +38,29 @@ export default function AmericanForkPage() {
 ]}
       businessDistricts={[
         {
-                "name": "American Fork Main Street",
+                "name": "American Fork Downtown",
                 "description": "Historic downtown area",
-                "link": "/"
+                "link": "/american-fork-dumpster-rental-guide-2025"
         },
         {
-                "name": "Mountain View Corridor",
-                "description": "Major retail and commercial center",
-                "link": "/"
+                "name": "American Fork Canyon",
+                "description": "Outdoor recreation area",
+                "link": "/park-renovation-projects"
         },
         {
                 "name": "American Fork East",
-                "description": "Residential and light commercial",
-                "link": "/"
+                "description": "Residential neighborhoods",
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "American Fork West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "American Fork South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "American Fork North",
-                "description": "Established neighborhoods",
-                "link": "/"
+                "name": "American Fork Business District",
+                "description": "Mixed commercial area",
+                "link": "/american-fork-dumpster-rental-guide-2025"
         }
 ]}
       permitInfo={{

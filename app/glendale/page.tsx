@@ -12,55 +12,55 @@ export default function GlendalePage() {
       landmarks={[
         {
                 "name": "Glendale Park",
-                "address": "Glendale Park, Salt Lake City, UT 84104"
+                "address": "Glendale Park, Salt Lake City, UT 84104",
+                "url": "https://www.slc.gov/parks/parks-division/parks/glendale/"
         },
         {
                 "name": "Glendale Library",
-                "address": "1375 S 900 W, Salt Lake City, UT 84104"
+                "address": "1375 S 900 W, Salt Lake City, UT 84104",
+                "url": "https://slcolibrary.org/location/glendale/"
         },
         {
                 "name": "Glendale Golf Course",
-                "address": "Glendale Golf Course, Salt Lake City, UT 84104"
+                "address": "Glendale Golf Course, Salt Lake City, UT 84104",
+                "url": "https://www.slc.gov/parks/parks-division/golf-courses/glendale-golf-course/"
         },
         {
                 "name": "Glendale Cemetery",
-                "address": "Glendale Cemetery, Salt Lake City, UT 84104"
+                "address": "Glendale Cemetery, Salt Lake City, UT 84104",
+                "url": "https://www.slc.gov/cemetery/"
         },
         {
                 "name": "Glendale Historic District",
-                "address": "Glendale Area, Salt Lake City, UT 84104"
+                "address": "Glendale Area, Salt Lake City, UT 84104",
+                "url": "https://www.slc.gov/planning/historic-preservation/historic-districts/glendale/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Glendale Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Glendale State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Glendale District",
+                "description": "Historic neighborhood area",
+                "link": "/glendale-dumpster-rental-guide-2025"
         },
         {
                 "name": "Glendale East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Glendale West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Glendale South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Glendale Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/glendale-dumpster-rental-guide-2025"
         },
         {
-                "name": "Glendale North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Glendale Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

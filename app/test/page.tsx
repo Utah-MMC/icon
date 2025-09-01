@@ -1,26 +1,13 @@
 export default function TestPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-green-600 mb-4">✅ Deployment Successful!</h1>
-        <p className="text-xl text-gray-600 mb-8">The Icon Dumpsters website is working correctly.</p>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Site Status</h2>
-          <ul className="text-left space-y-2 text-gray-600">
-            <li>✅ Next.js 15.4.6 - Working</li>
-            <li>✅ Image Components - Fixed</li>
-            <li>✅ Form Handling - Fixed</li>
-            <li>✅ Error Boundaries - Implemented</li>
-            <li>✅ Custom Error Pages - Added</li>
-            <li>✅ Health Check API - Available</li>
-          </ul>
-        </div>
-        <a 
-          href="/" 
-          className="mt-6 inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
-        >
-          Go to Homepage
-        </a>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Test Page
+        </h1>
+        <p className="text-lg text-gray-600">
+          This is a test page to verify Next.js routing works.
+        </p>
       </div>
     </div>
   );

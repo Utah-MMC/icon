@@ -12,55 +12,55 @@ export default function HolladayPage() {
       landmarks={[
         {
                 "name": "Holladay City Park",
-                "address": "4580 S 2300 E, Holladay, UT 84117"
+                "address": "4580 S 2300 E, Holladay, UT 84117",
+                "url": "https://www.cityofholladay.com/parks-recreation/"
         },
         {
                 "name": "Holladay Library",
-                "address": "2150 E Murray Holladay Rd, Holladay, UT 84117"
+                "address": "2150 E Murray Holladay Rd, Holladay, UT 84117",
+                "url": "https://slcolibrary.org/location/holladay/"
         },
         {
                 "name": "Holladay Golf Course",
-                "address": "4580 S 2300 E, Holladay, UT 84117"
+                "address": "4580 S 2300 E, Holladay, UT 84117",
+                "url": "https://www.cityofholladay.com/parks-recreation/golf-course/"
         },
         {
                 "name": "Holladay Cemetery",
-                "address": "4580 S 2300 E, Holladay, UT 84117"
+                "address": "4580 S 2300 E, Holladay, UT 84117",
+                "url": "https://www.cityofholladay.com/cemetery/"
         },
         {
                 "name": "Holladay Historic District",
-                "address": "Main St, Holladay, UT 84117"
+                "address": "Main St, Holladay, UT 84117",
+                "url": "https://www.cityofholladay.com/community/history/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Holladay Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Holladay State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Holladay Town Center",
+                "description": "City government and services",
+                "link": "/holladay-dumpster-rental-guide-2025"
         },
         {
                 "name": "Holladay East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Holladay West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Holladay South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Holladay Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/holladay-dumpster-rental-guide-2025"
         },
         {
-                "name": "Holladay North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Holladay Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

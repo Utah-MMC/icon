@@ -12,55 +12,55 @@ export default function MagnaPage() {
       landmarks={[
         {
                 "name": "Magna City Park",
-                "address": "8952 W 2700 S, Magna, UT 84044"
+                "address": "8952 W 2700 S, Magna, UT 84044",
+                "url": "https://www.slco.org/parks/magna-park/"
         },
         {
                 "name": "Magna Library",
-                "address": "2675 S 8950 W, Magna, UT 84044"
+                "address": "2675 S 8950 W, Magna, UT 84044",
+                "url": "https://slcolibrary.org/location/magna/"
         },
         {
                 "name": "Magna Historic District",
-                "address": "Main St, Magna, UT 84044"
+                "address": "Main St, Magna, UT 84044",
+                "url": "https://www.slco.org/planning/historic-preservation/"
         },
         {
                 "name": "Magna Cemetery",
-                "address": "8952 W 2700 S, Magna, UT 84044"
+                "address": "8952 W 2700 S, Magna, UT 84044",
+                "url": "https://www.slco.org/cemetery/"
         },
         {
                 "name": "Magna Golf Course",
-                "address": "8952 W 2700 S, Magna, UT 84044"
+                "address": "8952 W 2700 S, Magna, UT 84044",
+                "url": "https://www.slco.org/parks/golf-courses/"
         }
 ]}
       businessDistricts={[
         {
                 "name": "Magna Town Center",
                 "description": "City government and services",
-                "link": "/"
+                "link": "/magna-dumpster-rental-guide-2025"
         },
         {
                 "name": "Magna East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Magna West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Magna South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Magna North",
-                "description": "Established communities",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
                 "name": "Magna Business District",
-                "description": "Mixed residential and commercial",
-                "link": "/"
+                "description": "Mixed commercial area",
+                "link": "/magna-dumpster-rental-guide-2025"
+        },
+        {
+                "name": "Magna Industrial Park",
+                "description": "Industrial and manufacturing",
+                "link": "/commercial-dumpsters"
         }
 ]}
       permitInfo={{

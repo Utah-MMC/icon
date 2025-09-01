@@ -17,51 +17,50 @@ export default function FairparkPage() {
         },
         {
                 "name": "Fairpark Golf Course",
-                "address": "155 N 1000 W, Salt Lake City, UT 84116"
+                "address": "155 N 1000 W, Salt Lake City, UT 84116",
+                "url": "https://www.slc.gov/parks/parks-division/golf-courses/fairpark-golf-course/"
         },
         {
                 "name": "Fairpark Library",
-                "address": "155 N 1000 W, Salt Lake City, UT 84116"
+                "address": "155 N 1000 W, Salt Lake City, UT 84116",
+                "url": "https://slcolibrary.org/location/fairpark/"
         },
         {
                 "name": "Fairpark Park",
-                "address": "155 N 1000 W, Salt Lake City, UT 84116"
+                "address": "155 N 1000 W, Salt Lake City, UT 84116",
+                "url": "https://www.slc.gov/parks/parks-division/parks/fairpark/"
         },
         {
                 "name": "Fairpark Historic District",
-                "address": "Fairpark Area, Salt Lake City, UT 84116"
+                "address": "Fairpark Area, Salt Lake City, UT 84116",
+                "url": "https://www.slc.gov/planning/historic-preservation/historic-districts/fairpark/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Fairpark Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Fairpark State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Fairpark District",
+                "description": "Historic fairgrounds area",
+                "link": "/fairpark-dumpster-rental-guide-2025"
         },
         {
                 "name": "Fairpark East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Fairpark West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and industrial",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Fairpark South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Fairpark Business District",
+                "description": "Mixed commercial area",
+                "link": "/fairpark-dumpster-rental-guide-2025"
         },
         {
-                "name": "Fairpark North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Utah State Fairpark",
+                "description": "Event and entertainment venue",
+                "link": "/commercial-dumpsters"
         }
 ]}
       permitInfo={{

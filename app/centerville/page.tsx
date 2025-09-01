@@ -12,55 +12,55 @@ export default function CentervillePage() {
       landmarks={[
         {
                 "name": "Centerville City Park",
-                "address": "650 N 400 W, Centerville, UT 84014"
+                "address": "650 N 400 W, Centerville, UT 84014",
+                "url": "https://www.centervilleutah.gov/parks-recreation/"
         },
         {
                 "name": "Centerville Library",
-                "address": "45 S 400 E, Centerville, UT 84014"
+                "address": "45 S 400 E, Centerville, UT 84014",
+                "url": "https://slcolibrary.org/location/centerville/"
         },
         {
                 "name": "Centerville Historic District",
-                "address": "Main St, Centerville, UT 84014"
+                "address": "Main St, Centerville, UT 84014",
+                "url": "https://www.centervilleutah.gov/community/history/"
         },
         {
                 "name": "Centerville Golf Course",
-                "address": "650 N 400 W, Centerville, UT 84014"
+                "address": "650 N 400 W, Centerville, UT 84014",
+                "url": "https://www.centervilleutah.gov/parks-recreation/golf-course/"
         },
         {
                 "name": "Centerville Cemetery",
-                "address": "650 E 400 S, Centerville, UT 84014"
+                "address": "650 E 400 S, Centerville, UT 84014",
+                "url": "https://www.centervilleutah.gov/cemetery/"
         }
 ]}
       businessDistricts={[
         {
-                "name": "Centerville Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Centerville Boulevard",
-                "description": "Major retail and commercial",
-                "link": "/"
+                "name": "Centerville Town Center",
+                "description": "City government and services",
+                "link": "/centerville-dumpster-rental-guide-2025"
         },
         {
                 "name": "Centerville East",
                 "description": "Residential neighborhoods",
-                "link": "/"
+                "link": "/home-renovation-dumpster-guide"
         },
         {
                 "name": "Centerville West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
+                "description": "Commercial and residential mix",
+                "link": "/commercial-dumpsters"
         },
         {
-                "name": "Centerville South",
-                "description": "Growing residential area",
-                "link": "/"
+                "name": "Centerville Business District",
+                "description": "Mixed residential and commercial",
+                "link": "/centerville-dumpster-rental-guide-2025"
         },
         {
-                "name": "Centerville North",
-                "description": "Established communities",
-                "link": "/"
+                "name": "Centerville Historic District",
+                "description": "Historic preservation area",
+                "link": "/home-renovation-dumpster-guide"
         }
 ]}
       permitInfo={{

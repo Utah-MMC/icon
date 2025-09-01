@@ -1,125 +1,55 @@
-import CityPageTemplate from '../components/CityPageTemplate';
+'use client';
+
+import Image from "next/image";
+import ImageWithFallback from "../components/ImageWithFallback";
+import DumpsterCalculator from "../components/DumpsterCalculator";
+import QuoteForm from "../components/QuoteForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dumpster Rental Midvale, UT | Icon Dumpsters - Same Day Delivery",
+  description: "Professional dumpster rental in Midvale, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters. Serving Midvale and Salt Lake County. Call (801) 918-6000 for free quote!",
+  keywords: "dumpster rental midvale ut, midvale dumpster rental, roll-off dumpster midvale, construction dumpster midvale utah, midvale waste disposal, dumpster rental near me midvale",
+  openGraph: {
+    title: "Dumpster Rental Midvale, UT | Icon Dumpsters",
+    description: "Professional dumpster rental services in Midvale, Utah. Same-day delivery, competitive pricing, and reliable service.",
+    url: "https://www.icondumpsters.com/midvale",
+    siteName: "Icon Dumpsters",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dumpster Rental Midvale, UT | Icon Dumpsters",
+    description: "Professional dumpster rental services in Midvale, Utah. Same-day delivery and competitive pricing.",
+  },
+  alternates: {
+    canonical: "https://www.icondumpsters.com/midvale",
+  },
+};
 
 export default function MidvalePage() {
   return (
-    <CityPageTemplate
-      cityName="Midvale"
-      citySlug="midvale"
-      state="Utah"
-      phoneNumber="801-918-6000"
-      latitude="40.6111"
-      longitude="-111.8996"
-      landmarks={[
-        {
-                "name": "Midvale City Park",
-                "address": "455 W 7500 S, Midvale, UT 84047"
-        },
-        {
-                "name": "Midvale Library",
-                "address": "455 W 7500 S, Midvale, UT 84047"
-        },
-        {
-                "name": "Midvale Historic District",
-                "address": "Main St, Midvale, UT 84047"
-        },
-        {
-                "name": "Midvale Cemetery",
-                "address": "455 W 7500 S, Midvale, UT 84047"
-        },
-        {
-                "name": "Midvale Golf Course",
-                "address": "455 W 7500 S, Midvale, UT 84047"
-        }
-]}
-      businessDistricts={[
-        {
-                "name": "Midvale Main Street",
-                "description": "Historic downtown area",
-                "link": "/"
-        },
-        {
-                "name": "Midvale State Street",
-                "description": "Major retail and commercial",
-                "link": "/"
-        },
-        {
-                "name": "Midvale East",
-                "description": "Residential neighborhoods",
-                "link": "/"
-        },
-        {
-                "name": "Midvale West",
-                "description": "Industrial and commercial mix",
-                "link": "/"
-        },
-        {
-                "name": "Midvale South",
-                "description": "Growing residential area",
-                "link": "/"
-        },
-        {
-                "name": "Midvale North",
-                "description": "Established communities",
-                "link": "/"
-        }
-]}
-      permitInfo={{
-        cityName: "Midvale",
-        phoneNumber: "801-567-7200",
-        requirements: "Contact Midvale for permit requirements and applications. We can help guide you through the process."
-      }}
-      contentSections={{
-        overview: "Icon Dumpsters provides reliable dumpster rental services throughout Midvale, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.",
-        residentialServices: [
-          "Home renovations and remodeling",
-          "Basement cleanouts",
-          "Garage organization",
-          "Yard waste removal",
-          "Estate cleanouts"
-        ],
-        commercialServices: [
-          "Construction and demolition",
-          "Office renovations",
-          "Retail store cleanouts",
-          "Industrial waste removal",
-          "Event cleanup"
-        ],
-        whyChooseUs: "Icon Dumpsters is your trusted partner for dumpster rental in Midvale. We understand the unique needs of this community and provide reliable, professional service for all your waste management needs.",
-        dumpsterSizes: [
-          {
-            size: "15 Yard",
-            description: "Perfect for small to medium projects",
-            useCases: [
-              "Kitchen remodel",
-              "Bathroom renovation",
-              "Garage cleanout",
-              "Small construction"
-            ]
-          },
-          {
-            size: "20 Yard",
-            description: "Great for medium to large projects",
-            useCases: [
-              "Full home renovation",
-              "Large construction",
-              "Commercial projects",
-              "Major cleanouts"
-            ]
-          },
-          {
-            size: "30 Yard",
-            description: "For major projects and construction",
-            useCases: [
-              "Large construction",
-              "Commercial demolition",
-              "Major renovations",
-              "Industrial projects"
-            ]
-          }
-        ],
-        localInfo: "Midvale is a vibrant community in Utah known for its beautiful surroundings and strong community spirit. From residential neighborhoods to commercial districts, Midvale offers a great place to live and work.",
-        serviceAreas: "We provide dumpster rental services throughout Midvale and surrounding areas. Our service area covers residential neighborhoods, commercial districts, and industrial areas to meet all your waste management needs."
-      }}
-    />
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Dumpster Rental Midvale, UT
+        </h1>
+        <p className="text-lg text-gray-600">
+          Professional dumpster rental services in Midvale, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
+        </p>
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Midvale?</h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>Same-day delivery to Midvale and surrounding areas</li>
+            <li>Competitive pricing with no hidden fees</li>
+            <li>Flexible rental periods (1-30 days)</li>
+            <li>Professional customer service</li>
+            <li>Local knowledge of Midvale regulations</li>
+            <li>Multiple dumpster sizes available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 }
