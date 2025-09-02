@@ -10,7 +10,6 @@ import TextQuoteWidget from "./components/TextQuoteWidget";
 import AvailableTodayBadge from "./components/AvailableTodayBadge";
 import { track } from "./components/analytics";
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
@@ -30,78 +29,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Structured Data for Local Business */}
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Icon Dumpsters",
-            "description": "Professional dumpster rental services in Utah. Residential, commercial, and construction dumpster rentals with same-day delivery.",
-            "url": "https://icondumpsters.com",
-            "telephone": "+1-801-918-6000",
-            "email": "icondumpsters@gmail.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressRegion": "UT",
-              "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 40.7608,
-              "longitude": -111.8910
-            },
-            "openingHours": "Mo-Su 00:00-23:59",
-            "priceRange": "$$",
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 40.7608,
-                "longitude": -111.8910
-              },
-              "geoRadius": "50000"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Dumpster Rental Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "15 Yard Dumpster Rental",
-                    "description": "16 feet x 7 feet x 4 feet dumpster for small to medium projects"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "20 Yard Dumpster Rental",
-                    "description": "16 feet x 7 feet x 6 feet dumpster for medium projects"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "30 Yard Dumpster Rental",
-                    "description": "22 feet x 7 feet x 6 feet dumpster for large projects"
-                  }
-                }
-              ]
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "500"
-            }
-          })
-        }}
-      />
+      {/* Note: Structured data is handled globally by the StructuredData component in layout.tsx */}
       {/* Hero Section */}
       <div className="relative w-full">
         {/* Background image with responsive design */}

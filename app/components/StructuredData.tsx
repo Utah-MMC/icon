@@ -7,13 +7,13 @@ export default function StructuredData() {
     "alternateName": "Icon Dumpster Rental",
     "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. Offering 15-30 yard roll-off dumpsters with reliable, affordable service. Serving Salt Lake City, Sandy, Murray, West Jordan, and 40+ Utah cities.",
     "url": "https://www.icondumpsters.com",
-    "logo": {
-      "@type": "ImageObject",
-              "url": "https://www.icondumpsters.com/Icon_Dumpsters_Final.png",
-      "width": 1200,
-      "height": 630
-    },
-            "image": "https://www.icondumpsters.com/Icon_Dumpsters_Final.png",
+         "logo": {
+       "@type": "ImageObject",
+       "url": "https://www.icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
+       "width": 1200,
+       "height": 630
+     },
+     "image": "https://www.icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
     "telephone": "+1-801-918-6000",
     "email": "icondumpsters@gmail.com",
     "address": {
@@ -259,45 +259,8 @@ export default function StructuredData() {
     ]
   };
 
-  // Local Business FAQ Schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What dumpster size do I need for my project?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "15-yard dumpsters are perfect for small renovations and garage cleanouts. 20-yard dumpsters work well for larger renovations and construction projects. 30-yard dumpsters are ideal for major construction and demolition projects. Call us at (801) 918-6000 for personalized recommendations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does dumpster rental cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our dumpster rental prices start at $299 for 15-yard dumpsters, $399 for 20-yard dumpsters, and $499 for 30-yard dumpsters. Prices include delivery, pickup, and disposal fees. Contact us for a free quote specific to your project."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer same-day delivery?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we offer same-day delivery for most areas in Utah. We serve Salt Lake City, Sandy, Murray, West Jordan, and 40+ other cities. Call us early in the day to ensure same-day delivery availability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What areas do you serve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We serve the entire Salt Lake Valley including Salt Lake City, Sandy, Murray, West Jordan, South Jordan, Draper, Riverton, Herriman, Taylorsville, West Valley City, and many more Utah cities within a 50-mile radius."
-        }
-      }
-    ]
-  };
+  // Note: FAQ schemas are handled by individual pages using the FAQSchema component
+  // to avoid duplicate FAQPage schemas
 
   return (
     <>
@@ -319,12 +282,7 @@ export default function StructuredData() {
           __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
+
     </>
   );
 }
