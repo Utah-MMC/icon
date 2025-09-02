@@ -228,13 +228,25 @@ export default function RootLayout({
                         <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
                           Service Types
                         </div>
-                        <a href="/services?type=residential" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
-                          <div className="font-semibold">Residential Services</div>
+                        <a href="/services/residential-dumpster-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+                          <div className="font-semibold">Residential Dumpster Rentals</div>
                           <div className="text-xs text-gray-500">Home projects & renovations</div>
                         </a>
-                        <a href="/services?type=commercial" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
-                          <div className="font-semibold">Commercial Services</div>
-                          <div className="text-xs text-gray-500">Business & construction projects</div>
+                        <a href="/services/construction-dumpster-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+                          <div className="font-semibold">Construction Dumpster Rentals</div>
+                          <div className="text-xs text-gray-500">Construction & remodeling projects</div>
+                        </a>
+                        <a href="/services/garbage-junk-bin-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+                          <div className="font-semibold">Garbage & Junk Bin Rentals</div>
+                          <div className="text-xs text-gray-500">Clutter removal & cleanouts</div>
+                        </a>
+                        <a href="/services/yard-waste-debris-bin-rental" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+                          <div className="font-semibold">Yard Waste & Debris Bin Rental</div>
+                          <div className="text-xs text-gray-500">Landscaping & outdoor cleanup</div>
+                        </a>
+                        <a href="/services/downsizing-dumpster-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+                          <div className="font-semibold">Downsizing Dumpster Rentals</div>
+                          <div className="text-xs text-gray-500">Moving & decluttering projects</div>
                         </a>
                         <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
                           Specialized Services
@@ -376,7 +388,6 @@ export default function RootLayout({
                   </a>
 
                   <a href="/frequent-buyers" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BUYERS</a>
-                  <a href="/book" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BOOK</a>
                   <div className="relative group hidden lg:block">
                     <a href="/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
                       ABOUT
@@ -427,7 +438,15 @@ export default function RootLayout({
                 </nav>
               {/* Mobile hamburger */}
               <MobileNav />
-              <div className="hidden md:flex items-center">
+              <div className="hidden md:flex items-center space-x-3">
+                {/* BOOK NOW Button - Positioned in the red circle area */}
+                <a 
+                  href="/book"
+                  className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-bold text-sm border-2 border-[#4e37a8] shadow-md"
+                >
+                  BOOK NOW
+                </a>
+                
                 <a href="#quote-form" data-analytics-type="cta" data-analytics-name="header_quote" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
                   <span>Get Quote</span>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">

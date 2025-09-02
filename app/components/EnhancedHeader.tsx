@@ -61,13 +61,25 @@ export default function EnhancedHeader() {
                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
                         Service Types
                       </div>
-                      <a href="/services?type=residential" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
-                        <div className="font-semibold">Residential Services</div>
+                      <a href="/services/residential-dumpster-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Residential Dumpster Rentals</div>
                         <div className="text-xs text-gray-500">Home projects & renovations</div>
                       </a>
-                      <a href="/services?type=commercial" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
-                        <div className="font-semibold">Commercial Services</div>
-                        <div className="text-xs text-gray-500">Business & construction projects</div>
+                      <a href="/services/construction-dumpster-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Construction Dumpster Rentals</div>
+                        <div className="text-xs text-gray-500">Construction & remodeling projects</div>
+                      </a>
+                      <a href="/services/garbage-junk-bin-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Garbage & Junk Bin Rentals</div>
+                        <div className="text-xs text-gray-500">Clutter removal & cleanouts</div>
+                      </a>
+                      <a href="/services/yard-waste-debris-bin-rental" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Yard Waste & Debris Bin Rental</div>
+                        <div className="text-xs text-gray-500">Landscaping & outdoor cleanup</div>
+                      </a>
+                      <a href="/services/downsizing-dumpster-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                        <div className="font-semibold">Downsizing Dumpster Rentals</div>
+                        <div className="text-xs text-gray-500">Moving & decluttering projects</div>
                       </a>
                     </div>
                   </div>
@@ -297,6 +309,16 @@ export default function EnhancedHeader() {
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
               </button>
+
+              {/* BOOK NOW Button - Positioned in the red circle area */}
+              <div className="hidden sm:block">
+                <a 
+                  href="/book"
+                  className="bg-white text-[#4e37a8] px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors font-bold text-sm border-2 border-[#4e37a8] shadow-md"
+                >
+                  BOOK NOW
+                </a>
+              </div>
 
               {/* CTA Buttons */}
               <div className="hidden sm:flex items-center space-x-3">

@@ -153,7 +153,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error starting automated tracking:', error);
     }
-  }, []);
+  }, [setupCompetitiveMonitoring]);
 
   const trackReviewRequests = () => {
     try {

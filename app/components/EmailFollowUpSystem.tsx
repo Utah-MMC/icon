@@ -68,7 +68,7 @@ export default function EmailFollowUpSystem() {
     const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
     
     return () => clearInterval(interval);
-  }, []);
+  }, [checkForFollowUps]);
 
   const getCustomerRentals = (): CustomerRental[] => {
     const rentals = localStorage.getItem('customerRentals');
