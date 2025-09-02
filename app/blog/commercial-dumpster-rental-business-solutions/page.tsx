@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn about waste management strategies, cost optimization, and compliance requirements for commercial projects.',
     images: ['/images/commercial-dumpster-rental.jpg']
   },
-  canonical: 'https://iconmain.com/commercial-dumpster-rental-business-solutions',
+  alternates: {
+    canonical: 'https://iconmain.com/commercial-dumpster-rental-business-solutions'
+  },
   robots: 'index, follow'
 }
 

@@ -19,10 +19,13 @@ export default function LindonDumpsterRental() {
       <ArticleSchema
         title="Dumpster Rental Lindon: Professional Waste Disposal Services"
         description="Professional dumpster rental services in Lindon, UT. Get same-day delivery, competitive pricing, and reliable waste disposal solutions."
-        publishedTime="2025-01-15T08:00:00.000Z"
-        modifiedTime="2025-01-15T08:00:00.000Z"
-        authorName="Lindon Dumpster Rental Team"
+        publishedDate="2025-01-15T08:00:00.000Z"
+        modifiedDate="2025-01-15T08:00:00.000Z"
+        author="Lindon Dumpster Rental Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/lindon"
+        category="DUMPSTER RENTAL"
+        readTime="8 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

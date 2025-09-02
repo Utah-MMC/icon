@@ -3,7 +3,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { track } from './analytics';
-import { inventoryService, type AvailabilityCheck } from '../services/InventoryService';
+import { inventoryService } from '../lib/InventoryService';
+
+// Types
+interface AvailabilityCheck {
+  available: boolean;
+  count: number;
+  alternativeSizes?: string[];
+  nextAvailableDate?: string;
+}
 
 // Calendar utility functions
 const isWeekend = (date: Date): boolean => {

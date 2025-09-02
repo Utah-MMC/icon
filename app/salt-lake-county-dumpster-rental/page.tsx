@@ -42,7 +42,7 @@ export default function SaltLakeCountyDumpsterRentalPage() {
 
   return (
     <>
-      <Analytics />
+      <Analytics pageName="Salt Lake County Dumpster Rental" pageType="page" />
       <ArticleSchema
         title={pageTitle}
         description={pageDescription}

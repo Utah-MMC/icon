@@ -3,45 +3,35 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "Home Renovation Dumpster Guide: Complete Waste Management for House Remodels | Icon Dumpsters",
-  description: "Essential guide for home renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for house remodels.",
-  keywords: "home renovation dumpster guide, house remodel waste management, residential renovation dumpster, home construction dumpster rental, house renovation waste disposal",
-  openGraph: {
-    title: "Home Renovation Dumpster Guide: Complete Waste Management for House Remodels | Icon Dumpsters",
-    description: "Essential guide for home renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for house remodels.",
-    url: 'https://icondumpsters.com/home-renovation-dumpster-guide',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Home Renovation Dumpster Guide | Utah Renovation Waste Management",
+  "description": "Complete guide to dumpster rental for home renovations in Utah. Learn about sizes, permits, and waste disposal for renovation projects.",
+  "keywords": [
+    "home renovation dumpster",
+    "renovation waste management",
+    "utah renovation dumpster",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/home-renovation-dumpster-guide"
+  },
+  "openGraph": {
+    "title": "Home Renovation Dumpster Guide | Utah Renovation Waste Management",
+    "description": "Complete guide to dumpster rental for home renovations in Utah. Learn about sizes, permits, and waste disposal for renovation projects.",
+    "url": "https://icondumpsters.com/home-renovation-dumpster-guide",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Home Renovation Dumpster Guide: Complete Waste Management for House Remodels',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Home Renovation Dumpster Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'article',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Home Renovation Dumpster Guide: Complete Waste Management for House Remodels | Icon Dumpsters",
-    description: "Essential guide for home renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for house remodels.",
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/home-renovation-dumpster-guide',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function HomeRenovationDumpsterGuidePage() {

@@ -1,20 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { inventoryService } from '../../../services/InventoryService';
+import { inventoryService } from '../../../lib/InventoryService';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   try {
-    const status = inventoryService.getInventoryStatus();
-    const allDumpsters = inventoryService.getAllDumpsters();
-    const availableSizes = inventoryService.getAvailableSizes();
+    const allItems = inventoryService.getAllItems();
     
     return NextResponse.json({
       success: true,
-      status,
-      totalDumpsters: allDumpsters.length,
-      availableSizes,
-      sampleDumpster: allDumpsters[0] || null
+      totalItems: allItems.length,
+      items: allItems,
+      sampleItem: allItems[0] || null
     });
   } catch (error) {
     console.error('Inventory test error:', error);

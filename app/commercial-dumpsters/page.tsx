@@ -100,8 +100,6 @@ export default function CommercialDumpstersPage() {
                 alt="Commercial Dumpster Rental Services in Utah"
                 className="rounded-lg shadow-2xl"
                 fallbackSrc="/iconmain/images/dumpsterSmallBanner6.jpeg"
-                width={600}
-                height={400}
                 priority={true}
               />
             </div>

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { emailService } from '../../services/EmailService';
+import { emailService } from '../../lib/EmailService';
 import { securityUtils } from '../../config/security';
 
 export const dynamic = 'force-dynamic';
@@ -135,12 +135,12 @@ export async function POST(request: NextRequest) {
       `;
 
     // Send notification email
-    const emailSent = await emailService.sendEmail({
-      to: 'icondumpsters@gmail.com',
-      bcc: 'icondumpsters@gmail.com',
+    const emailSent = await emailService.sendEmail(
+      'icondumpsters@gmail.com',
       subject,
-      html,
-    });
+      '',
+      html
+    );
 
     // Auto-reply to customer if email is provided
     if (email) {
@@ -209,12 +209,12 @@ export async function POST(request: NextRequest) {
         </html>
       `;
 
-      await emailService.sendEmail({
-        to: email,
-        subject: autoReplySubject,
-        html: autoReplyHtml,
-        replyTo: 'icondumpsters@gmail.com',
-      });
+      await emailService.sendEmail(
+        email,
+        autoReplySubject,
+        '',
+        autoReplyHtml
+      );
     }
 
     return NextResponse.json({ ok: true, emailed: emailSent });

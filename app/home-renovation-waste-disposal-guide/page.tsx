@@ -1,9 +1,11 @@
 "use client";
 
-import ImageWithFallback from '../components/ImageWithFallback'
-import Link from 'next/link'
-import Analytics from '../components/AnalyticsComponent'
-import ArticleSchema from '../components/ArticleSchema'
+import ImageWithFallback from '../components/ImageWithFallback';
+import Link from 'next/link';
+import Analytics from '../components/AnalyticsComponent';
+import ArticleSchema from '../components/ArticleSchema';
+
+
 
 export default function HomeRenovationWasteDisposal() {
   return (

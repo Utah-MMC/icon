@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import CalculatorBanner from './CalculatorBanner';
 
-const ALLOWED_PREFIXES = [
+const ALLOWED_PREFIXES: string[] = [
 ];
 
 export default function ConditionalCalculatorBanner() {

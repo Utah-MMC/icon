@@ -42,15 +42,17 @@ export default function DumpsterRentalMagnaPage() {
 
   return (
     <>
-      <Analytics />
+      <Analytics pageName="Magna Dumpster Rental" pageType="page" />
       <ArticleSchema
         title={pageTitle}
         description={pageDescription}
         imageUrl="/images/dumpster-rental-magna.jpg"
-        datePublished="2024-01-15"
-        dateModified="2024-01-15"
-        authorName="Icon Dumpsters"
-        pageUrl={pageUrl}
+        publishedDate="2024-01-15T08:00:00.000Z"
+        modifiedDate="2024-01-15T08:00:00.000Z"
+        author="Icon Dumpsters"
+        articleUrl={pageUrl}
+        category="DUMPSTER RENTAL"
+        readTime="8 min read"
       />
       <FAQSchema faqs={faqs} pageUrl={pageUrl} />
 

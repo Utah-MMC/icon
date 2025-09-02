@@ -7,25 +7,18 @@ import PageHero from "../components/PageHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Icon Dumpsters - Utah Dumpster Rental Services | Get Free Quote",
-  description: "Contact Icon Dumpsters for professional dumpster rental services in Utah. Get free quotes, schedule delivery, and learn about our roll-off dumpster options. Call (801) 918-6000 today!",
-  keywords: "dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, contact dumpster rental, free quote dumpster",
+  title: 'Contact Icon Dumpsters - Get Your Free Quote Today',
+  description: 'Contact Icon Dumpsters for professional dumpster rental services in Utah. Get a free quote, schedule delivery, or speak with our waste management experts.',
+  keywords: ['contact icon dumpsters', 'dumpster rental quote', 'utah waste management contact', 'free dumpster quote'],
+  alternates: { canonical: '/contact' },
   openGraph: {
-    title: "Contact Icon Dumpsters - Utah Dumpster Rental Services",
-    description: "Contact Icon Dumpsters for professional dumpster rental services in Utah. Get free quotes and reliable service.",
-    url: "https://www.icondumpsters.com/contact",
-    siteName: "Icon Dumpsters",
-    locale: "en_US",
-    type: "website",
+    title: 'Contact Icon Dumpsters - Get Your Free Quote Today',
+    description: 'Contact Icon Dumpsters for professional dumpster rental services in Utah. Get a free quote today.',
+    url: 'https://icondumpsters.com/contact',
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: 'Contact Icon Dumpsters - Utah Dumpster Rental' }],
+    type: 'website'
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Icon Dumpsters - Utah Dumpster Rental Services",
-    description: "Contact Icon Dumpsters for professional dumpster rental services in Utah. Get free quotes and reliable service.",
-  },
-  alternates: {
-    canonical: "https://icondumpsters.com/contact",
-  },
+  robots: { index: true, follow: true }
 };
 
 export default function ContactPage() {

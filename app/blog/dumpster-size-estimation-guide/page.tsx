@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
     images: ['/images/dumpster-size-estimation.jpg']
   },
-  canonical: 'https://iconmain.com/dumpster-size-estimation-guide',
+  alternates: {
+    canonical: 'https://iconmain.com/dumpster-size-estimation-guide'
+  },
   robots: 'index, follow'
 }
 

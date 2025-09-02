@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Sugar House Dumpster Rental - Professional Dumpster Services in Sugar House, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Sugar House, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Sugar House dumpster rental, dumpster rental Sugar House UT, Sugar House UT dumpster, roll-off dumpster Sugar House, construction dumpster Sugar House, waste management Sugar House',
-  openGraph: {
-    title: 'Sugar House Dumpster Rental - Professional Dumpster Services in Sugar House, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Sugar House, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/sugar-house',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Sugar House Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Sugar House dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Sugar House dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/sugar-house-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Sugar House Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Sugar House dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/sugar-house-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Sugar House Dumpster Rental - Professional Dumpster Services in Sugar House, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Sugar House Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sugar House Dumpster Rental - Professional Dumpster Services in Sugar House, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Sugar House, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/sugar-house',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Sugar House, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function SugarHouseDumpsterRental() {

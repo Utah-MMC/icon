@@ -19,10 +19,13 @@ export default function SpringvilleDumpsterRental() {
       <ArticleSchema
         title="Dumpster Rental Springville: Professional Waste Disposal Services"
         description="Professional dumpster rental services in Springville, UT. Get same-day delivery, competitive pricing, and reliable waste disposal solutions."
-        publishedTime="2025-01-15T08:00:00.000Z"
-        modifiedTime="2025-01-15T08:00:00.000Z"
-        authorName="Springville Dumpster Rental Team"
+        publishedDate="2025-01-15T08:00:00.000Z"
+        modifiedDate="2025-01-15T08:00:00.000Z"
+        author="Springville Dumpster Rental Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/springville"
+        category="DUMPSTER RENTAL"
+        readTime="8 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

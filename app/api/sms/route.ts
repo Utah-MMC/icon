@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { emailService } from '../../services/EmailService';
+import { emailService } from '../../lib/EmailService';
 import { securityUtils } from '../../config/security';
 
 export const dynamic = 'force-dynamic';
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
       </div>
     `;
 
-    await emailService.sendEmail({ to: 'icondumpsters@gmail.com', subject, html, bcc: 'icondumpsters@gmail.com' });
+    await emailService.sendEmail('icondumpsters@gmail.com', subject, '', html);
 
     return NextResponse.json({ ok: true });
   } catch (e) {

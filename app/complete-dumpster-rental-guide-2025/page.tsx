@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Complete Dumpster Rental Guide Dumpster Rental - Professional Dumpster Services in Complete Dumpster Rental Guide, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Complete Dumpster Rental Guide, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Complete Dumpster Rental Guide dumpster rental, dumpster rental Complete Dumpster Rental Guide UT, Complete Dumpster Rental Guide UT dumpster, roll-off dumpster Complete Dumpster Rental Guide, construction dumpster Complete Dumpster Rental Guide, waste management Complete Dumpster Rental Guide',
-  openGraph: {
-    title: 'Complete Dumpster Rental Guide Dumpster Rental - Professional Dumpster Services in Complete Dumpster Rental Guide, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Complete Dumpster Rental Guide, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/complete',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Complete Dumpster Rental Guide 2025 | Utah Waste Management Tips",
+  "description": "Complete guide to dumpster rental in Utah. Learn about sizes, pricing, permits, and best practices for waste management in 2025.",
+  "keywords": [
+    "dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/complete-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Complete Dumpster Rental Guide 2025 | Utah Waste Management Tips",
+    "description": "Complete guide to dumpster rental in Utah. Learn about sizes, pricing, permits, and best practices for waste management in 2025.",
+    "url": "https://icondumpsters.com/complete-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Complete Dumpster Rental Guide Dumpster Rental - Professional Dumpster Services in Complete Dumpster Rental Guide, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Complete Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Complete Dumpster Rental Guide Dumpster Rental - Professional Dumpster Services in Complete Dumpster Rental Guide, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Complete Dumpster Rental Guide, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/complete',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Complete Dumpster Rental Guide, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function CompleteDumpsterRentalGuideDumpsterRental() {

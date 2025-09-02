@@ -21,10 +21,13 @@ export default function DumpsterRentalCostGuide() {
       <ArticleSchema
         title="How Much Does It Cost to Rent a Dumpster? Complete Pricing Guide 2025"
         description="Comprehensive guide to dumpster rental costs and pricing factors. Learn about different pricing models, size considerations, and how to get the best value for your project."
-        publishedTime="2025-03-27T08:00:00.000Z"
-        modifiedTime="2025-03-27T08:00:00.000Z"
-        authorName="Icon Dumpsters Team"
+        publishedDate="2025-03-27T08:00:00.000Z"
+        modifiedDate="2025-03-27T08:00:00.000Z"
+        author="Icon Dumpsters Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/blog/cost-to-rent-a-dumpster"
+        category="DUMPSTER RENTAL"
+        readTime="8 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { inventoryService } from '../../services/InventoryService';
+import { inventoryService } from '../../lib/InventoryService';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,26 +9,21 @@ export async function GET(request: NextRequest) {
     const action = searchParams.get('action');
     
     switch (action) {
-      case 'status':
-        const status = inventoryService.getInventoryStatus();
-        return NextResponse.json(status);
+      case 'items':
+        const allItems = inventoryService.getAllItems();
+        return NextResponse.json(allItems);
         
-      case 'available':
-        const availableSizes = inventoryService.getAvailableSizes();
-        return NextResponse.json(availableSizes);
-        
-      case 'check':
-        const size = searchParams.get('size');
-        const date = searchParams.get('date');
-        if (!size || !date) {
-          return NextResponse.json({ error: 'Size and date are required' }, { status: 400 });
+      case 'search':
+        const query = searchParams.get('q');
+        if (!query) {
+          return NextResponse.json({ error: 'Query parameter is required' }, { status: 400 });
         }
-        const availability = inventoryService.checkAvailability(size, date);
-        return NextResponse.json(availability);
+        const searchResults = inventoryService.searchItems(query);
+        return NextResponse.json(searchResults);
         
       default:
-        const allDumpsters = inventoryService.getAllDumpsters();
-        return NextResponse.json(allDumpsters);
+        const defaultItems = inventoryService.getAllItems();
+        return NextResponse.json(defaultItems);
     }
   } catch (error) {
     console.error('Inventory API error:', error);
@@ -42,37 +37,28 @@ export async function POST(request: NextRequest) {
     const { action, ...data } = body;
     
     switch (action) {
-             case 'reserve':
-         const { size, customerName, deliveryDate, duration } = data;
-         if (!size || !customerName || !deliveryDate || !duration) {
-           return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
-         }
-         const reserved = inventoryService.reserveDumpster(size, customerName, deliveryDate, duration);
-         if (reserved.success) {
-           return NextResponse.json({ success: true, dumpsterId: reserved.dumpsterId });
-         }
-         return NextResponse.json({ success: false });
+      case 'add':
+        const newItem = inventoryService.addItem(data);
+        return NextResponse.json({ success: true, item: newItem });
         
       case 'update':
-        const { dumpsterId, status, customerData } = data;
-        if (!dumpsterId || !status) {
-          return NextResponse.json({ error: 'Dumpster ID and status are required' }, { status: 400 });
-        }
-        const updated = inventoryService.updateDumpsterStatus(dumpsterId, status, customerData);
-        return NextResponse.json({ success: updated });
-        
-      case 'add':
-        const newDumpster = data;
-        const newDumpsterId = inventoryService.addDumpster(newDumpster);
-        return NextResponse.json({ success: true, id: newDumpsterId });
-        
-      case 'remove':
-        const { id } = data;
+        const { id, ...updates } = data;
         if (!id) {
-          return NextResponse.json({ error: 'Dumpster ID is required' }, { status: 400 });
+          return NextResponse.json({ error: 'Item ID is required' }, { status: 400 });
         }
-        const removed = inventoryService.removeDumpster(id);
-        return NextResponse.json({ success: removed });
+        const updated = inventoryService.updateItem(id, updates);
+        if (updated) {
+          return NextResponse.json({ success: true, item: updated });
+        }
+        return NextResponse.json({ success: false, error: 'Item not found' }, { status: 404 });
+        
+      case 'delete':
+        const { id: deleteId } = data;
+        if (!deleteId) {
+          return NextResponse.json({ error: 'Item ID is required' }, { status: 400 });
+        }
+        const deleted = inventoryService.deleteItem(deleteId);
+        return NextResponse.json({ success: deleted });
         
       default:
         return NextResponse.json({ error: 'Invalid action' }, { status: 400 });

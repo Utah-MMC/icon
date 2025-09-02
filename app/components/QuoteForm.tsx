@@ -114,8 +114,8 @@ export default function QuoteForm() {
         try { 
           track('form','quote_submit', {
             formType: 'quote',
-            dumpsterSize,
-            deliveryDate,
+            dumpsterSize: formData.get('dumpsterSize') as string,
+            deliveryDate: formData.get('deliveryDate') as string,
             sessionId: sessionStorage.getItem('sessionId') || 'unknown',
             utm: JSON.parse(sessionStorage.getItem('utm') || '{}'),
             path: window.location.pathname,

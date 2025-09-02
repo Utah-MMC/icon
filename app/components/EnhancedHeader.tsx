@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import PhoneModal from './PhoneModal';
 
 export default function EnhancedHeader() {
@@ -17,9 +18,12 @@ export default function EnhancedHeader() {
             {/* Logo */}
             <div className="flex items-center">
               <div className="bg-white p-1 rounded-lg shadow-sm">
+                <Image
                   src="/Icon_Dumpsters_Final.png" 
                   alt="Icon Dumpsters Logo" 
                   className="h-8 w-auto"
+                  width={32}
+                  height={32}
                 />
               </div>
               <span className="ml-2 text-xl font-bold text-gray-900">

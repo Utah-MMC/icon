@@ -25,13 +25,8 @@ export default function PromotionalBanner() {
               <ImageWithFallback
                 src="/result.png"
                 alt="Icon Dumpsters - Professional Utah Dumpster Rental Services"
-                width={400}
-                height={200}
                 className="object-contain rounded-lg shadow-xl"
-                style={{
-                  maxHeight: '200px',
-                  width: 'auto'
-                }}
+                fallbackSrc="/images/IMG_0350.jpg"
               />
             </div>
           </div>

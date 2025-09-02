@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Farmington Dumpster Rental - Professional Dumpster Services in Farmington, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Farmington, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Farmington dumpster rental, dumpster rental Farmington UT, Farmington UT dumpster, roll-off dumpster Farmington, construction dumpster Farmington, waste management Farmington',
-  openGraph: {
-    title: 'Farmington Dumpster Rental - Professional Dumpster Services in Farmington, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Farmington, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/farmington',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Farmington Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Farmington dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Farmington dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/farmington-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Farmington Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Farmington dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/farmington-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Farmington Dumpster Rental - Professional Dumpster Services in Farmington, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Farmington Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Farmington Dumpster Rental - Professional Dumpster Services in Farmington, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Farmington, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/farmington',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Farmington, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function FarmingtonDumpsterRental() {

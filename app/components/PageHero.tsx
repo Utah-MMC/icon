@@ -22,6 +22,7 @@ export default function PageHero({
   secondaryCtaLink,
   showCta = true
 }: PageHeroProps) {
+
   return (
     <section className="relative bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -38,14 +39,14 @@ export default function PageHero({
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link 
                   href={primaryCtaLink} 
-                  className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-700 px-6 py-4 rounded-lg font-bold text-base hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 text-center min-w-[220px] max-w-[280px] leading-tight"
                 >
                   {primaryCtaText}
                 </Link>
                 {secondaryCtaText && secondaryCtaLink && (
                   <Link 
                     href={secondaryCtaLink} 
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition-colors"
+                    className="border-2 border-white text-white px-6 py-4 rounded-lg font-bold text-base hover:bg-white hover:text-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 text-center min-w-[220px] max-w-[280px] leading-tight"
                   >
                     {secondaryCtaText}
                   </Link>
@@ -56,7 +57,7 @@ export default function PageHero({
           <div className="relative flex justify-center lg:justify-end">
             <div className="bg-white rounded-lg shadow-2xl p-4 w-full max-w-md lg:max-w-lg">
               <Image
-                src="/images/Icon_Dumpsters_Final.png"
+                src="/images/IconDumpsters_Logo_Vector_Pantone266purple.png"
                 alt="Icon Dumpsters - Professional Dumpster Rental Services"
                 width={600}
                 height={400}

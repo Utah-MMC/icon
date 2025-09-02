@@ -42,15 +42,17 @@ export default function MurrayCityDumpsterProgramPage() {
 
   return (
     <>
-      <Analytics />
+      <Analytics pageName="Murray City Dumpster Program" pageType="page" />
       <ArticleSchema
         title={pageTitle}
         description={pageDescription}
         imageUrl="/images/murray-city-dumpster-program.jpg"
-        datePublished="2024-01-15"
-        dateModified="2024-01-15"
-        authorName="Icon Dumpsters"
-        pageUrl={pageUrl}
+        publishedDate="2024-01-15T08:00:00.000Z"
+        modifiedDate="2024-01-15T08:00:00.000Z"
+        author="Icon Dumpsters"
+        articleUrl={pageUrl}
+        category="DUMPSTER RENTAL"
+        readTime="8 min read"
       />
       <FAQSchema faqs={faqs} pageUrl={pageUrl} />
 

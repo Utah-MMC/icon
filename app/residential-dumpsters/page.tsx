@@ -19,10 +19,13 @@ export default function ResidentialDumpstersPage() {
       <ArticleSchema
         title="Residential Dumpster Rental: Complete Home Waste Management Solutions"
         description="Professional residential dumpster rental services for home projects, cleanouts, and renovations. Learn about our comprehensive waste management solutions for homeowners."
-        publishedTime="2025-01-15T08:00:00.000Z"
-        modifiedTime="2025-01-15T08:00:00.000Z"
-        authorName="Icon Dumpsters Team"
+        publishedDate="2025-01-15T08:00:00.000Z"
+        modifiedDate="2025-01-15T08:00:00.000Z"
+        author="Icon Dumpsters Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/residential-dumpsters"
+        category="DUMPSTER RENTAL"
+        readTime="10 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

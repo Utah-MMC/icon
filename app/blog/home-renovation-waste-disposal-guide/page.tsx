@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective disposal strategies for your renovation project.',
     images: ['/images/home-renovation-waste-disposal.jpg']
   },
-  canonical: 'https://iconmain.com/home-renovation-waste-disposal-guide',
+  alternates: {
+    canonical: 'https://iconmain.com/home-renovation-waste-disposal-guide'
+  },
   robots: 'index, follow'
 }
 

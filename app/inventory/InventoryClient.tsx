@@ -2,7 +2,7 @@
 'use client';
 
 import InventoryTracker from '../components/InventoryTracker';
-import { inventoryService } from '../services/InventoryService';
+import { inventoryService } from '../lib/InventoryService';
 import { useState, useEffect } from 'react';
 
 export default function InventoryClient() {

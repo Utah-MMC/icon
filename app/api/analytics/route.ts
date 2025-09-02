@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { emailService } from '../../services/EmailService';
+import { emailService } from '../../lib/EmailService';
 import path from 'path';
 import fs from 'fs/promises';
 
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
           <pre style="white-space:pre-wrap;background:#f7f7fb;border:1px solid #e5e7eb;padding:12px;border-radius:8px;">${transcript.map((m: any) => `${m.timestamp || ''} [${m.role}] ${m.content}`).join('\n')}</pre>
         </div>
       `;
-      try { await emailService.sendEmail({ to: 'icondumpsters@gmail.com', subject, html, bcc: 'icondumpsters@gmail.com' }); } catch {}
+      try { await emailService.sendEmail('icondumpsters@gmail.com', subject, '', html); } catch {}
       return NextResponse.json({ ok: true });
     }
 

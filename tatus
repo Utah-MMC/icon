@@ -1,0 +1,8 @@
+[33m5972400[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix Murray page build error by removing onClick handler for server-side rendering
+[33m15bf845[m Fix slug validation error in dumpster-rental-[[...slug]] page - add proper array length checks
+[33maa48909[m Fix import paths in dumpster-rental-[[...slug]] page - correct from ../../../ to ../
+[33m049063b[m sdfsdfdsf
+[33mcf1134b[m sdfsdfsd
+[33m7f657a4[m Fix build errors: remove conflicting 'use client' directives and fix import paths
+[33m3d41740[m sdfdsfds
+[33m3a7e1b8[m sdfsdfsdf

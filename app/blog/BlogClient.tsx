@@ -7,7 +7,7 @@ import Link from "next/link";
 import NewsletterSubscription from "../components/NewsletterSubscription";
 import TextQuoteWidget from "../components/TextQuoteWidget";
 import InternalLinks from "../components/InternalLinks";
-import BlogSearch from "../components/BlogSearch";
+
 import { useSearchParams } from "next/navigation";
 
 // Blog post data for search functionality
@@ -451,13 +451,20 @@ function BlogContent() {
           <div className="lg:col-span-2">
             {/* Search and Filter */}
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6 mb-8">
-              <BlogSearch 
-                searchTerm={searchTerm}
-                onSearchChange={setSearchTerm}
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onCategoryChange={setSelectedCategory}
-              />
+              <div className="max-w-lg mx-auto relative">
+                <input 
+                  type="text" 
+                  placeholder="Search articles..." 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50 shadow-lg"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-all duration-200 shadow-md">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* Featured Posts */}

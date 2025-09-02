@@ -27,13 +27,9 @@ export default function CallToActionBanner() {
               <ImageWithFallback
                 src="/result.png"
                 alt="Icon Dumpsters roll-off dumpster rental in Utah"
-                width={300}
-                height={200}
+
                 className="object-contain rounded-lg shadow-lg"
-                style={{
-                  maxHeight: '180px',
-                  width: 'auto'
-                }}
+
               />
             </div>
           </div>

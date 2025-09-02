@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Saratoga Springs Dumpster Rental - Professional Dumpster Services in Saratoga Springs, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Saratoga Springs, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Saratoga Springs dumpster rental, dumpster rental Saratoga Springs UT, Saratoga Springs UT dumpster, roll-off dumpster Saratoga Springs, construction dumpster Saratoga Springs, waste management Saratoga Springs',
-  openGraph: {
-    title: 'Saratoga Springs Dumpster Rental - Professional Dumpster Services in Saratoga Springs, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Saratoga Springs, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/saratoga-springs',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Saratoga Springs Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Saratoga Springs dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Saratoga Springs dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/saratoga-springs-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Saratoga Springs Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Saratoga Springs dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/saratoga-springs-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Saratoga Springs Dumpster Rental - Professional Dumpster Services in Saratoga Springs, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Saratoga Springs Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Saratoga Springs Dumpster Rental - Professional Dumpster Services in Saratoga Springs, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Saratoga Springs, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/saratoga-springs',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Saratoga Springs, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function SaratogaSpringsDumpsterRental() {

@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Glendale Dumpster Rental - Professional Dumpster Services in Glendale, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Glendale, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Glendale dumpster rental, dumpster rental Glendale UT, Glendale UT dumpster, roll-off dumpster Glendale, construction dumpster Glendale, waste management Glendale',
-  openGraph: {
-    title: 'Glendale Dumpster Rental - Professional Dumpster Services in Glendale, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Glendale, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/glendale',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Glendale Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Glendale dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Glendale dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/glendale-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Glendale Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Glendale dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/glendale-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Glendale Dumpster Rental - Professional Dumpster Services in Glendale, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Glendale Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Glendale Dumpster Rental - Professional Dumpster Services in Glendale, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Glendale, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/glendale',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Glendale, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function GlendaleDumpsterRental() {

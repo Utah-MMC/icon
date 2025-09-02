@@ -19,10 +19,13 @@ export default function ConstructionDumpstersPage() {
       <ArticleSchema
         title="Construction Dumpster Rental: Professional Waste Management Solutions"
         description="Professional construction dumpster rental services for commercial and residential projects. Learn about our comprehensive waste management solutions."
-        publishedTime="2025-01-15T08:00:00.000Z"
-        modifiedTime="2025-01-15T08:00:00.000Z"
-        authorName="Icon Dumpsters Team"
+        publishedDate="2025-01-15T08:00:00.000Z"
+        modifiedDate="2025-01-15T08:00:00.000Z"
+        author="Icon Dumpsters Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/construction-dumpsters"
+        category="CONSTRUCTION"
+        readTime="10 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">

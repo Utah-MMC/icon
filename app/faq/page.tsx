@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function FAQPage() {
   function renderWithLinks(text: string) {
-    const parts: (string | JSX.Element)[] = [];
+    const parts: (string | React.ReactElement)[] = [];
     const regex = /(\/[-a-zA-Z0-9\/]+)/g;
     let lastIndex = 0;
     let m: RegExpExecArray | null;

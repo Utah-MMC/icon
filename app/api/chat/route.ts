@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { emailService } from '../../services/EmailService';
+import { emailService } from '../../lib/EmailService';
 import { chatKnowledge } from '../../config/chatKnowledge';
 import { securityUtils } from '../../config/security';
 
@@ -427,26 +427,26 @@ export async function POST(request: NextRequest) {
           </body>
         </html>`;
 
-        await emailService.sendEmail({
-          to: 'icondumpsters@gmail.com',
-          bcc: 'icondumpsters@gmail.com',
+        await emailService.sendEmail(
+          'icondumpsters@gmail.com',
           subject,
-          html: genericDetails,
-        });
+          '',
+          genericDetails
+        );
 
         // Optional: send confirmation if email provided
         if (email) {
-          await emailService.sendEmail({
-            to: email,
-            subject: 'We received your chat – Icon Dumpsters',
-            html: `
+          await emailService.sendEmail(
+            email,
+            'We received your chat – Icon Dumpsters',
+            '',
+            `
             <div style="font-family:Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;">
               <h1 style="color:#4e37a8;">Thanks for chatting with Icon Dumpsters</h1>
               <p>We have your details and will follow up shortly. For immediate help, call <a href="tel:+18019186000" style="color:#4e37a8;text-decoration:underline">(801) 918-6000</a>.</p>
               ${signature}
-            </div>`,
-            replyTo: 'icondumpsters@gmail.com',
-          });
+            </div>`
+          );
         }
 
         return NextResponse.json({ ok: true });

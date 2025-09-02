@@ -3,45 +3,35 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "Retail Renovation Dumpster Guide: Complete Waste Management for Store Remodels | Icon Dumpsters",
-  description: "Essential guide for retail renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for store remodels.",
-  keywords: "retail renovation dumpster guide, store remodel waste management, retail construction dumpster, commercial renovation dumpster rental, store renovation waste disposal",
-  openGraph: {
-    title: "Retail Renovation Dumpster Guide: Complete Waste Management for Store Remodels | Icon Dumpsters",
-    description: "Essential guide for retail renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for store remodels.",
-    url: 'https://icondumpsters.com/retail-renovation-dumpster-guide',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Retail Renovation Dumpster Guide | Commercial Waste Management Utah",
+  "description": "Complete guide to dumpster rental for retail renovations in Utah. Learn about commercial waste management and disposal solutions.",
+  "keywords": [
+    "retail renovation dumpster",
+    "commercial waste management",
+    "utah retail renovation",
+    "business waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/retail-renovation-dumpster-guide"
+  },
+  "openGraph": {
+    "title": "Retail Renovation Dumpster Guide | Commercial Waste Management Utah",
+    "description": "Complete guide to dumpster rental for retail renovations in Utah. Learn about commercial waste management and disposal solutions.",
+    "url": "https://icondumpsters.com/retail-renovation-dumpster-guide",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Retail Renovation Dumpster Guide: Complete Waste Management for Store Remodels',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Retail Renovation Dumpster Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'article',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Retail Renovation Dumpster Guide: Complete Waste Management for Store Remodels | Icon Dumpsters",
-    description: "Essential guide for retail renovation projects and dumpster rental needs. Learn about waste management, permits, and choosing the right dumpster size for store remodels.",
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/retail-renovation-dumpster-guide',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function RetailRenovationDumpsterGuidePage() {

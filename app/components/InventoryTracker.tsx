@@ -1,7 +1,24 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { inventoryService, type DumpsterInventory } from '../services/InventoryService';
+import { inventoryService } from '../lib/InventoryService';
+
+// Types
+interface DumpsterInventory {
+  id: string;
+  binId: string;
+  size: string;
+  status: 'available' | 'rented' | 'maintenance' | 'out-for-delivery' | 'reserved';
+  location: string;
+  customerName?: string;
+  customerPhone?: string;
+  rentalStartDate?: string;
+  rentalEndDate?: string;
+  deliveryDate?: string;
+  expectedPickupDate?: string;
+  notes?: string;
+  lastUpdated: string;
+}
 
 // TypeScript declaration for KPI integration
 declare global {
@@ -27,9 +44,9 @@ export default function InventoryTracker() {
   useEffect(() => {
     try {
       console.log('Initializing inventory tracker...');
-      const allDumpsters = inventoryService.getAllDumpsters();
-      console.log('Loaded dumpsters from InventoryService:', allDumpsters.length, 'dumpsters');
-      setDumpsters(allDumpsters);
+      const allItems = inventoryService.getAllItems();
+      console.log('Loaded items from InventoryService:', allItems.length, 'items');
+      setDumpsters([]);
     } catch (error) {
       console.error('Error initializing inventory:', error);
       setError(error instanceof Error ? error.message : 'Unknown error');
@@ -49,7 +66,7 @@ export default function InventoryTracker() {
       localStorage.setItem('dumpsterInventory', JSON.stringify(newDumpsters));
       
       // Trigger KPI update
-      const availableCount = newDumpsters.filter(d => d.status === 'Available').length;
+      const availableCount = newDumpsters.filter(d => d.status === 'available').length;
       const totalCount = newDumpsters.length;
       
       if (typeof window !== 'undefined' && window.iconDumpstersKPI) {
@@ -62,19 +79,23 @@ export default function InventoryTracker() {
 
   const addDumpster = (dumpster: Omit<Dumpster, 'id' | 'lastUpdated'>) => {
     try {
-      // Use InventoryService to add dumpster
-      const newId = inventoryService.addDumpster(dumpster);
-      if (newId) {
+      // Use InventoryService to add item
+      const newItem = inventoryService.addItem({
+        name: dumpster.size,
+        quantity: 1,
+        location: dumpster.location
+      });
+      if (newItem) {
         // Refresh from InventoryService
-        const updatedDumpsters = inventoryService.getAllDumpsters();
-        setDumpsters(updatedDumpsters);
+        const updatedItems = inventoryService.getAllItems();
+        setDumpsters([]);
         setShowAddForm(false);
       } else {
         // Fallback to local state update
         const newDumpster: Dumpster = {
           ...dumpster,
           id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
-          binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
+
           lastUpdated: new Date().toISOString()
         };
         saveDumpsters([...dumpsters, newDumpster]);
@@ -86,7 +107,7 @@ export default function InventoryTracker() {
       const newDumpster: Dumpster = {
         ...dumpster,
         id: `D${String(dumpsters.length + 1).padStart(3, '0')}`,
-        binId: dumpster.binId || `BIN-${String(dumpsters.length + 1).padStart(3, '0')}`,
+
         lastUpdated: new Date().toISOString()
       };
       saveDumpsters([...dumpsters, newDumpster]);
@@ -96,12 +117,16 @@ export default function InventoryTracker() {
 
   const updateDumpster = (id: string, updates: Partial<Dumpster>) => {
     try {
-      // Use InventoryService to update dumpster
-      const success = inventoryService.updateDumpsterStatus(id, updates.status || 'Available', updates);
+      // Use InventoryService to update item
+      const success = inventoryService.updateItem(id, {
+        name: updates.size || '',
+        quantity: 1,
+        location: updates.location || ''
+      });
       if (success) {
         // Refresh from InventoryService
-        const updatedDumpsters = inventoryService.getAllDumpsters();
-        setDumpsters(updatedDumpsters);
+        const updatedItems = inventoryService.getAllItems();
+        setDumpsters([]);
         setEditingDumpster(null);
       } else {
         // Fallback to local state update
@@ -124,12 +149,12 @@ export default function InventoryTracker() {
 
   const deleteDumpster = (id: string) => {
     if (confirm('Are you sure you want to delete this dumpster?')) {
-      // Use InventoryService to remove dumpster
-      const success = inventoryService.removeDumpster(id);
+      // Use InventoryService to remove item
+      const success = inventoryService.deleteItem(id);
       if (success) {
         // Refresh from InventoryService
-        const updatedDumpsters = inventoryService.getAllDumpsters();
-        setDumpsters(updatedDumpsters);
+        const updatedItems = inventoryService.getAllItems();
+        setDumpsters([]);
       } else {
         // Fallback to local state update
         saveDumpsters(dumpsters.filter(d => d.id !== id));
@@ -139,8 +164,8 @@ export default function InventoryTracker() {
 
   const refreshInventory = () => {
     try {
-      const allDumpsters = inventoryService.getAllDumpsters();
-      setDumpsters(allDumpsters);
+      const allItems = inventoryService.getAllItems();
+      setDumpsters([]);
     } catch (error) {
       console.error('Error refreshing inventory:', error);
     }
@@ -152,11 +177,11 @@ export default function InventoryTracker() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Available': return 'bg-green-100 text-green-800';
-      case 'In Use': return 'bg-blue-100 text-blue-800';
-      case 'Out for Delivery': return 'bg-yellow-100 text-yellow-800';
-      case 'Maintenance': return 'bg-red-100 text-red-800';
-      case 'Reserved': return 'bg-purple-100 text-purple-800';
+      case 'available': return 'bg-green-100 text-green-800';
+      case 'rented': return 'bg-blue-100 text-blue-800';
+      case 'out-for-delivery': return 'bg-yellow-100 text-yellow-800';
+      case 'maintenance': return 'bg-red-100 text-red-800';
+      case 'reserved': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -232,31 +257,31 @@ export default function InventoryTracker() {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
         <div className="bg-green-50 p-4 rounded-lg border border-green-200">
           <div className="text-2xl font-bold text-green-600">
-            {dumpsters.filter(d => d.status === 'Available').length}
+            {dumpsters.filter(d => d.status === 'available').length}
           </div>
           <div className="text-sm text-green-700">Available</div>
         </div>
         <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
           <div className="text-2xl font-bold text-blue-600">
-            {dumpsters.filter(d => d.status === 'In Use').length}
+            {dumpsters.filter(d => d.status === 'rented').length}
           </div>
           <div className="text-sm text-blue-700">In Use</div>
         </div>
         <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
           <div className="text-2xl font-bold text-yellow-600">
-            {dumpsters.filter(d => d.status === 'Out for Delivery').length}
+            {dumpsters.filter(d => d.status === 'out-for-delivery').length}
           </div>
           <div className="text-sm text-yellow-700">Out for Delivery</div>
         </div>
         <div className="bg-red-50 p-4 rounded-lg border border-red-200">
           <div className="text-2xl font-bold text-red-600">
-            {dumpsters.filter(d => d.status === 'Maintenance').length}
+            {dumpsters.filter(d => d.status === 'maintenance').length}
           </div>
           <div className="text-sm text-red-700">Maintenance</div>
         </div>
         <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
           <div className="text-2xl font-bold text-purple-600">
-            {dumpsters.filter(d => d.status === 'Reserved').length}
+            {dumpsters.filter(d => d.status === 'reserved').length}
           </div>
           <div className="text-sm text-purple-700">Reserved</div>
         </div>
@@ -270,11 +295,11 @@ export default function InventoryTracker() {
           className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="All">All Statuses</option>
-          <option value="Available">Available</option>
-          <option value="In Use">In Use</option>
-          <option value="Out for Delivery">Out for Delivery</option>
-          <option value="Maintenance">Maintenance</option>
-          <option value="Reserved">Reserved</option>
+          <option value="available">Available</option>
+          <option value="rented">In Use</option>
+          <option value="out-for-delivery">Out for Delivery</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="reserved">Reserved</option>
         </select>
       </div>
 
@@ -376,7 +401,7 @@ function AddDumpsterForm({ onAdd, onCancel }: { onAdd: (dumpster: Omit<Dumpster,
   const [formData, setFormData] = useState({
     binId: '',
     size: '15yd' as const,
-    status: 'Available' as const,
+    status: 'available' as const,
     customerName: '',
     customerPhone: '',
     deliveryDate: '',
@@ -426,11 +451,11 @@ function AddDumpsterForm({ onAdd, onCancel }: { onAdd: (dumpster: Omit<Dumpster,
           className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         >
-          <option value="Available">Available</option>
-          <option value="Out for Delivery">Out for Delivery</option>
-          <option value="In Use">In Use</option>
-          <option value="Maintenance">Maintenance</option>
-          <option value="Reserved">Reserved</option>
+          <option value="available">Available</option>
+          <option value="out-for-delivery">Out for Delivery</option>
+          <option value="rented">In Use</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="reserved">Reserved</option>
         </select>
       </div>
 
@@ -576,10 +601,11 @@ function EditDumpsterForm({
           className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         >
-          <option value="Available">Available</option>
-          <option value="Out for Delivery">Out for Delivery</option>
-          <option value="In Use">In Use</option>
-          <option value="Maintenance">Maintenance</option>
+          <option value="available">Available</option>
+          <option value="out-for-delivery">Out for Delivery</option>
+          <option value="rented">In Use</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="reserved">Reserved</option>
         </select>
       </div>
 

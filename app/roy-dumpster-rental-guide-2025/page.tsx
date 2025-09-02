@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Roy Dumpster Rental - Professional Dumpster Services in Roy, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Roy, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Roy dumpster rental, dumpster rental Roy UT, Roy UT dumpster, roll-off dumpster Roy, construction dumpster Roy, waste management Roy',
-  openGraph: {
-    title: 'Roy Dumpster Rental - Professional Dumpster Services in Roy, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Roy, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/roy',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Roy Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Roy dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Roy dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/roy-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Roy Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Roy dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/roy-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Roy Dumpster Rental - Professional Dumpster Services in Roy, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Roy Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Roy Dumpster Rental - Professional Dumpster Services in Roy, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Roy, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/roy',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Roy, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function RoyDumpsterRental() {

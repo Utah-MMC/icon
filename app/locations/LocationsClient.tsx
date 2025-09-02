@@ -67,7 +67,21 @@ export default function LocationsClient() {
     "Tooele County": [
       { name: "Tooele", url: "/tooele", guideUrl: "/tooel-dumpster-rental-guide-2025" }
     ]
-  } as const;
+  };
+
+  // Type for cities with optional guideUrl
+  type CityWithOptionalGuide = {
+    name: string;
+    url: string;
+    guideUrl?: string;
+  };
+
+  // Type for the cities object
+  type UtahCitiesType = {
+    [key: string]: CityWithOptionalGuide[];
+  };
+
+  const utahCitiesTyped: UtahCitiesType = utahCities;
 
   const [search, setSearch] = useState<string>("");
   const [callbackPhone, setCallbackPhone] = useState<string>("");
@@ -188,7 +202,7 @@ export default function LocationsClient() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Utah Dumpster Rental Locations</h2>
           
-          {Object.entries(utahCities).map(([region, cities]) => {
+          {Object.entries(utahCitiesTyped).map(([region, cities]) => {
             const filteredCities = cities.filter(city => cityMatches(city.name));
             if (filteredCities.length === 0) return null;
             
@@ -278,7 +292,7 @@ export default function LocationsClient() {
         </section>
       </main>
 
-      <Analytics />
+      <Analytics pageName="Utah Dumpster Rental Locations" pageType="page" />
     </div>
   );
 }

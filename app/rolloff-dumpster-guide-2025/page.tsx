@@ -5,35 +5,35 @@ import BlogSEO from '../components/BlogSEO';
 import FAQSchema from '../components/FAQSchema';
 
 export const metadata: Metadata = {
-  title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips | Icon Dumpsters",
-  description: "Complete guide to rolloff dumpster rental including sizes, pricing, permits, weight limits, and pro tips. Learn how to choose the right dumpster and avoid costly mistakes.",
-  keywords: "rolloff dumpster guide, dumpster rental guide, dumpster sizes, dumpster costs, dumpster permits, rolloff dumpster tips, dumpster rental Utah",
-  openGraph: {
-    title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips",
-    description: "Complete guide to rolloff dumpster rental including sizes, pricing, permits, weight limits, and pro tips. Learn how to choose the right dumpster and avoid costly mistakes.",
-    url: 'https://icondumpsters.com/rolloff-dumpster-guide-2025',
-    type: 'article',
-    publishedTime: '2025-01-27T00:00:00.000Z',
-    modifiedTime: '2025-01-27T00:00:00.000Z',
-    authors: ['Icon Dumpsters'],
-    images: [
+  "title": "Rolloff Dumpster Guide 2025 | Utah Construction Waste Management",
+  "description": "Complete guide to rolloff dumpster rental in Utah for 2025. Learn about sizes, delivery, and construction waste management.",
+  "keywords": [
+    "rolloff dumpster guide",
+    "construction waste management",
+    "utah rolloff dumpster",
+    "construction dumpster rental"
+  ],
+  "alternates": {
+    "canonical": "/rolloff-dumpster-guide-2025"
+  },
+  "openGraph": {
+    "title": "Rolloff Dumpster Guide 2025 | Utah Construction Waste Management",
+    "description": "Complete guide to rolloff dumpster rental in Utah for 2025. Learn about sizes, delivery, and construction waste management.",
+    "url": "https://icondumpsters.com/rolloff-dumpster-guide-2025",
+    "images": [
       {
-        url: '/images/dumpster500x500-1.jpeg',
-        width: 500,
-        height: 500,
-        alt: 'Rolloff Dumpster Guide 2025 - Complete Guide to Dumpster Rental',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Rolloff Dumpster Guide - Icon Dumpsters"
+      }
     ],
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Rolloff Dumpster Guide 2025: Sizes, Costs, Permits & Pro Tips",
-    description: "Complete guide to rolloff dumpster rental including sizes, pricing, permits, weight limits, and pro tips.",
-    images: ['/images/dumpster500x500-1.jpeg'],
-  },
-  alternates: {
-    canonical: '/rolloff-dumpster-guide-2025',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 const blogData = {

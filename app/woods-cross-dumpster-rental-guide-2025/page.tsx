@@ -2,51 +2,35 @@ import { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Woods Cross Dumpster Rental - Professional Dumpster Services in Woods Cross, UT | (801-918-6000)',
-  description: 'Professional dumpster rental services in Woods Cross, UT. Fast delivery, competitive pricing, and reliable waste management solutions. Call 801-918-6000 for instant quotes.',
-  keywords: 'Woods Cross dumpster rental, dumpster rental Woods Cross UT, Woods Cross UT dumpster, roll-off dumpster Woods Cross, construction dumpster Woods Cross, waste management Woods Cross',
-  openGraph: {
-    title: 'Woods Cross Dumpster Rental - Professional Dumpster Services in Woods Cross, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Woods Cross, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/woods-cross',
-    siteName: 'Icon Dumpsters',
-    images: [
+  "title": "Woods Cross Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+  "description": "Complete Woods Cross dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices for waste management in Utah.",
+  "keywords": [
+    "Woods Cross dumpster rental guide",
+    "utah waste management",
+    "dumpster rental tips",
+    "construction waste disposal"
+  ],
+  "alternates": {
+    "canonical": "/woods-cross-dumpster-rental-guide-2025"
+  },
+  "openGraph": {
+    "title": "Woods Cross Dumpster Rental Guide 2025 | Complete Waste Management Tips",
+    "description": "Complete Woods Cross dumpster rental guide for 2025. Learn about sizes, pricing, permits, and best practices.",
+    "url": "https://icondumpsters.com/woods-cross-dumpster-rental-guide-2025",
+    "images": [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Woods Cross Dumpster Rental - Professional Dumpster Services in Woods Cross, UT',
-      },
+        "url": "/images/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "Woods Cross Dumpster Rental Guide - Icon Dumpsters"
+      }
     ],
-    locale: 'en_US',
-    type: 'website',
+    "type": "article"
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Woods Cross Dumpster Rental - Professional Dumpster Services in Woods Cross, UT | (801-918-6000)',
-    description: 'Professional dumpster rental services in Woods Cross, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://icondumpsters.com/woods-cross',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'geo.region': 'US-UT',
-    'geo.placename': 'Woods Cross, UT',
-    'geo.position': '40.7608;-111.8910',
-    'ICBM': '40.7608, -111.8910',
-  },
+  "robots": {
+    "index": true,
+    "follow": true
+  }
 };
 
 export default function WoodsCrossDumpsterRental() {

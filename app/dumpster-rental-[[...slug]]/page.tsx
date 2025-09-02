@@ -4,9 +4,9 @@ import { cityData, getCityData } from '../config/cityData';
 import CityPageTemplate from '../components/CityPageTemplate';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -16,17 +16,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  
   // Validate that slug array exists and has the right length
-  if (!params.slug || params.slug.length < 2) {
+  if (!resolvedParams.slug || resolvedParams.slug.length < 2) {
     return {
       title: 'City Not Found',
     };
   }
 
-  const citySlug = params.slug[0]; // First part is the city
+  const citySlug = resolvedParams.slug[0]; // First part is the city
   const cityData = getCityData(citySlug);
   
-  if (!cityData || params.slug[1] !== 'ut') {
+  if (!cityData || resolvedParams.slug[1] !== 'ut') {
     return {
       title: 'City Not Found',
     };
@@ -80,17 +82,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function CityPage({ params }: PageProps) {
+export default async function CityPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  
   // Validate that slug array exists and has the right length
-  if (!params.slug || params.slug.length < 2) {
+  if (!resolvedParams.slug || resolvedParams.slug.length < 2) {
     notFound();
   }
 
-  const citySlug = params.slug[0]; // First part is the city
+  const citySlug = resolvedParams.slug[0]; // First part is the city
   const cityData = getCityData(citySlug);
   
   // Check if it's a valid city and ends with 'ut'
-  if (!cityData || params.slug[1] !== 'ut') {
+  if (!cityData || resolvedParams.slug[1] !== 'ut') {
     notFound();
   }
 

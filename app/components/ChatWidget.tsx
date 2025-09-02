@@ -73,7 +73,7 @@ export default function ChatWidget() {
 
   function renderRich(content: string, bodyClass = 'text-gray-700', headerClass = 'text-gray-900', linkClass = 'text-[#4e37a8] underline') {
     const lines = formatText(content).split('\n');
-    const elements: JSX.Element[] = [];
+    const elements: React.ReactElement[] = [];
     let listItems: string[] = [];
 
     const flushList = () => {
@@ -89,8 +89,8 @@ export default function ChatWidget() {
       }
     };
 
-    const linkify = (text: string): (JSX.Element | string)[] => {
-      const parts: (JSX.Element | string)[] = [];
+    const linkify = (text: string): (React.ReactElement | string)[] => {
+      const parts: (React.ReactElement | string)[] = [];
       const regex = /(https?:\/\/[^\s]+|\/[a-zA-Z0-9\-\/]+|tel:\+?[0-9\-\(\) ]+)/g;
       let lastIndex = 0;
       let m: RegExpExecArray | null;
@@ -470,7 +470,7 @@ export default function ChatWidget() {
     // Accept bare numbers like "30" or with units like "30 yd"
     const sizeIntent = /(10|12|15|20|30)(?:\s*-?\s*(yd|yard)s?)?/i.exec(lower);
     if (!pendingQuote && sizeIntent) {
-      const size = sizeIntent[1] as '15' | '20' | '30';
+      const size = sizeIntent[1] as '10' | '12' | '15' | '20' | '30';
       if (size === '10' || size === '12') {
         // steer to standard sizes for main flow
         const steer: ChatMessage = { role: 'assistant', content: 'Nice! We do have those smaller sizes for dirt and concrete jobs. For a quick quote though, would a 15, 20, or 30 yard work for you? If you specifically need the 10/12 for heavy materials, just say "specialized" and I\'ll hook you up.', timestamp: new Date().toISOString() };

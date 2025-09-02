@@ -19,10 +19,13 @@ export default function DumpsterSizesGuide() {
       <ArticleSchema
         title="Dumpster Sizes Guide: Choose the Right Size for Your Project"
         description="Complete guide to dumpster sizes and capacity. Learn about different dumpster dimensions, weight limits, and which size is best for your specific project needs."
-        publishedTime="2025-01-15T08:00:00.000Z"
-        modifiedTime="2025-01-15T08:00:00.000Z"
-        authorName="Icon Dumpsters Team"
+        publishedDate="2025-01-15T08:00:00.000Z"
+        modifiedDate="2025-01-15T08:00:00.000Z"
+        author="Icon Dumpsters Team"
         imageUrl="/images/dumpster500x200-1.jpeg"
+        articleUrl="/dumpster-sizes-1"
+        category="DUMPSTER RENTAL"
+        readTime="10 min read"
       />
       
       <article className="max-w-4xl mx-auto px-4 py-8">
