@@ -41,7 +41,7 @@ export default function CookieConsent() {
     } catch {
       setIsVisible(true);
     }
-  }, [storageKey, setPrefs, setIsVisible, updateConsent]);
+  }, [storageKey]);
 
   const acceptAll = () => {
     const newPrefs = { analytics: true, ads: true };

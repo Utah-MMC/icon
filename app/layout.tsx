@@ -211,9 +211,6 @@ export default function RootLayout({
               </div>
               {/* Desktop/Nav */}
                               <nav className="hidden md:flex space-x-5">
-                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium">
-                    Calculator
-                  </a>
                   {/* Services Dropdown */}
                   <div className="relative group">
                     <a href="/services" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
@@ -371,11 +368,11 @@ export default function RootLayout({
                       </div>
                     </div>
                   </div>
-                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center" aria-label="Calculator" title="Calculator">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <a href="/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-bold flex items-center bg-purple-600 px-3 py-2 rounded-lg hover:bg-purple-500" aria-label="Calculator" title="Calculator">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
-                    <span className="sr-only">Calculator</span>
+                    <span className="font-bold text-sm">CALCULATOR</span>
                   </a>
 
                   <a href="/frequent-buyers" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BUYERS</a>
