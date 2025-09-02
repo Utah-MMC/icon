@@ -118,6 +118,90 @@ import { useSearchParams } from "next/navigation";
 const blogPosts = [
   // FEATURED POSTS (keep at top)
   {
+    id: "construction-dumpster-rental-guide-2025",
+    title: "Best Construction Dumpster Rental Companies of 2025: Complete Guide",
+    excerpt: "Find the best construction dumpster rental companies for your project. Compare prices, services, and get expert tips on choosing the right dumpster size and rental duration.",
+    category: "DUMPSTER RENTAL",
+    readTime: "15 min read",
+    image: "/images/dumpster500x500-1.jpeg",
+    fallbackImage: "/images/dumpster500x500-1.webp",
+    featured: true,
+    heroImage: "/images/dumpster500x500-1.jpeg",
+    heroImageAlt: "Construction Dumpster Rental Guide 2025 - Best Companies and Expert Tips",
+    bannerColor: "blue",
+    highlightBoxes: [
+      {
+        title: "Company Comparison",
+        content: "Compare top national and local dumpster rental companies",
+        icon: "🏢"
+      },
+      {
+        title: "Size Selection",
+        content: "Choose the right dumpster size to avoid costly overage fees",
+        icon: "📏"
+      },
+      {
+        title: "Cost Optimization",
+        content: "Learn how to get the best rates and avoid hidden charges",
+        icon: "💰"
+      }
+    ],
+    stats: [
+      {
+        label: "Average Cost",
+        value: "$300-700",
+        description: "Depending on size and location"
+      },
+      {
+        label: "Delivery Time",
+        value: "Same Day",
+        description: "Available in most areas"
+      },
+      {
+        label: "Weight Limits",
+        value: "2-8 Tons",
+        description: "Varies by dumpster size"
+      }
+    ],
+    ctaButton: {
+      text: "Get Construction Quote",
+      link: "/#quote-form",
+      color: "blue"
+    },
+    contentImages: [
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Construction dumpster being delivered to job site",
+        caption: "Professional construction dumpster delivery service",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Different construction dumpster sizes comparison",
+        caption: "Choose the right size for your construction project",
+        position: "after-sizes"
+      },
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Construction site with properly placed dumpster",
+        caption: "Strategic placement maximizes efficiency",
+        position: "after-placement"
+      },
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Construction debris being loaded into dumpster",
+        caption: "Proper loading techniques maximize capacity",
+        position: "after-loading"
+      },
+      {
+        src: "/images/dumpsterSmallBanner4.jpeg",
+        alt: "Construction dumpster pickup and removal",
+        caption: "Timely pickup keeps your project on schedule",
+        position: "after-pickup"
+      }
+    ]
+  },
+  {
     id: "demolition-dumpster-calculator",
     title: "Demolition Dumpster Calculator: Calculate Your Project Needs & Costs",
     excerpt: "Use our demolition dumpster calculator to estimate the right dumpster size, weight capacity, and rental costs for your demolition project. Get instant quotes for Utah demolition projects.",
@@ -372,6 +456,246 @@ const blogPosts = [
     readTime: "7 min read",
     image: "/images/dumpsterSmallBanner.jpeg",
     fallbackImage: "/images/dumpsterSmallBanner.webp"
+  },
+  {
+    id: "construction-waste-management-guide",
+    title: "Construction Waste Management: Ultimate Guide for Contractors",
+    excerpt: "Master construction waste management with our comprehensive guide. Learn waste segregation, recycling strategies, and compliance requirements for profitable projects.",
+    category: "GUIDES",
+    readTime: "18 min read",
+    image: "/images/dumpsterSmallBanner2.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner2.webp",
+    featured: true,
+    heroImage: "/images/dumpsterSmallBanner2.jpeg",
+    heroImageAlt: "Construction Waste Management Guide - Ultimate Guide for Contractors",
+    bannerColor: "green",
+    highlightBoxes: [
+      {
+        title: "Waste Segregation",
+        content: "Proper sorting maximizes recycling and reduces costs",
+        icon: "♻️"
+      },
+      {
+        title: "Compliance",
+        content: "Stay compliant with local and federal regulations",
+        icon: "📋"
+      },
+      {
+        title: "Cost Savings",
+        content: "Reduce disposal costs through smart waste management",
+        icon: "💰"
+      }
+    ],
+    stats: [
+      {
+        label: "Waste Reduction",
+        value: "30-40%",
+        description: "Through proper management"
+      },
+      {
+        label: "Recycling Rate",
+        value: "50%+",
+        description: "Required in many areas"
+      },
+      {
+        label: "Cost Savings",
+        value: "$2,000+",
+        description: "Per project average"
+      }
+    ],
+    ctaButton: {
+      text: "Get Waste Management Quote",
+      link: "/#quote-form",
+      color: "green"
+    },
+    contentImages: [
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Construction waste management and sorting",
+        caption: "Proper waste segregation improves efficiency",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Construction waste recycling center",
+        caption: "Recycling reduces disposal costs",
+        position: "after-recycling"
+      },
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Construction site waste management",
+        caption: "Organized waste management improves safety",
+        position: "after-safety"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Construction waste disposal tracking",
+        caption: "Track waste for compliance and cost control",
+        position: "after-tracking"
+      },
+      {
+        src: "/images/dumpsterSmallBanner4.jpeg",
+        alt: "Construction waste management completion",
+        caption: "Proper management leads to project success",
+        position: "after-completion"
+      }
+    ]
+  },
+  {
+    id: "home-renovation-waste-disposal-complete-guide",
+    title: "Home Renovation Waste Disposal: Complete Guide for 2025",
+    excerpt: "Master home renovation waste disposal with our comprehensive guide. Learn how to choose dumpster sizes, manage construction debris, and save money on your renovation project.",
+    category: "RENOVATION",
+    readTime: "16 min read",
+    image: "/images/dumpsterSmallBanner2.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner2.webp",
+    featured: true,
+    heroImage: "/images/dumpsterSmallBanner2.jpeg",
+    heroImageAlt: "Home Renovation Waste Disposal Guide - Complete Guide for 2025",
+    bannerColor: "orange",
+    highlightBoxes: [
+      {
+        title: "Dumpster Sizing",
+        content: "Choose the right size to avoid costly overage fees",
+        icon: "📏"
+      },
+      {
+        title: "Debris Management",
+        content: "Organize and sort renovation waste efficiently",
+        icon: "🗂️"
+      },
+      {
+        title: "Cost Control",
+        content: "Save money through smart waste planning",
+        icon: "💰"
+      }
+    ],
+    stats: [
+      {
+        label: "Typical Cost",
+        value: "$300-600",
+        description: "For renovation projects"
+      },
+      {
+        label: "Delivery",
+        value: "Same Day",
+        description: "Available in Utah"
+      },
+      {
+        label: "Waste Volume",
+        value: "2-8 Yards",
+        description: "Average per room"
+      }
+    ],
+    ctaButton: {
+      text: "Get Renovation Quote",
+      link: "/#quote-form",
+      color: "orange"
+    },
+    contentImages: [
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Home renovation waste disposal planning",
+        caption: "Plan your waste disposal before starting renovation",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Renovation debris in dumpster",
+        caption: "Organized disposal of construction materials",
+        position: "after-planning"
+      },
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Renovation site with dumpster",
+        caption: "Convenient on-site waste management",
+        position: "after-process"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Renovation cleanup completion",
+        caption: "Clean project completion with proper disposal",
+        position: "after-completion"
+      }
+    ]
+  },
+  {
+    id: "commercial-dumpster-rental-business-solutions-2025",
+    title: "Commercial Dumpster Rental: Business Solutions for 2025",
+    excerpt: "Professional commercial dumpster rental solutions for businesses, construction companies, and commercial projects. Get reliable waste management services across Utah.",
+    category: "COMMERCIAL",
+    readTime: "14 min read",
+    image: "/images/dumpsterSmallBanner.jpeg",
+    fallbackImage: "/images/dumpsterSmallBanner.webp",
+    featured: true,
+    heroImage: "/images/dumpsterSmallBanner.jpeg",
+    heroImageAlt: "Commercial Dumpster Rental Business Solutions - Professional Utah Dumpster Services",
+    bannerColor: "purple",
+    highlightBoxes: [
+      {
+        title: "Business Solutions",
+        content: "Tailored waste management for commercial needs",
+        icon: "🏢"
+      },
+      {
+        title: "Reliability",
+        content: "Consistent service for business operations",
+        icon: "⚡"
+      },
+      {
+        title: "Cost Efficiency",
+        content: "Volume discounts and business rates",
+        icon: "💰"
+      }
+    ],
+    stats: [
+      {
+        label: "Business Discounts",
+        value: "15-25%",
+        description: "Volume pricing available"
+      },
+      {
+        label: "Service Areas",
+        value: "Statewide",
+        description: "Coverage across Utah"
+      },
+      {
+        label: "Response Time",
+        value: "4 Hours",
+        description: "Emergency service available"
+      }
+    ],
+    ctaButton: {
+      text: "Get Business Quote",
+      link: "/#quote-form",
+      color: "purple"
+    },
+    contentImages: [
+      {
+        src: "/images/dumpsterSmallBanner.jpeg",
+        alt: "Commercial dumpster rental for businesses",
+        caption: "Professional waste management for commercial projects",
+        position: "after-intro"
+      },
+      {
+        src: "/images/dumpster500x500-1.jpeg",
+        alt: "Commercial construction site with dumpster",
+        caption: "Large-scale commercial waste management",
+        position: "after-commercial"
+      },
+      {
+        src: "/images/dumpsterSmallBanner2.jpeg",
+        alt: "Business waste disposal solutions",
+        caption: "Efficient waste removal for business operations",
+        position: "after-solutions"
+      },
+      {
+        src: "/images/dumpster500x500-2.jpeg",
+        alt: "Commercial waste management completion",
+        caption: "Professional service ensures project success",
+        position: "after-completion"
+      }
+    ]
   }
 ];
 
