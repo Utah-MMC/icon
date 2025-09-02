@@ -63,6 +63,21 @@ export default function CompetitiveKPITracking() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const formListenersRef = useRef<Array<{ form: Element; listener: EventListener }>>([]);
 
+  const initializeCompetitiveTracking = () => {
+    try {
+      // Load existing KPI data
+      loadExistingKPIData();
+      
+      // Set up competitive monitoring
+      setupCompetitiveMonitoring();
+      
+      // Start automated tracking
+      startAutomatedTracking();
+    } catch (error) {
+      console.log('Error initializing competitive tracking:', error);
+    }
+  };
+
   useEffect(() => {
     console.log('Competitive KPI Tracking: Active');
     
@@ -92,21 +107,6 @@ export default function CompetitiveKPITracking() {
       formListenersRef.current = [];
     };
   }, []);
-
-  const initializeCompetitiveTracking = () => {
-    try {
-      // Load existing KPI data
-      loadExistingKPIData();
-      
-      // Set up competitive monitoring
-      setupCompetitiveMonitoring();
-      
-      // Start automated tracking
-      startAutomatedTracking();
-    } catch (error) {
-      console.log('Error initializing competitive tracking:', error);
-    }
-  };
 
   const loadExistingKPIData = () => {
     try {

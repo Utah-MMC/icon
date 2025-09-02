@@ -32,11 +32,6 @@ export default function CustomerRatingSystem() {
     reviewPosted: false
   });
 
-  useEffect(() => {
-    // Initialize rating system
-    initializeRatingSystem();
-  }, []);
-
   const initializeRatingSystem = () => {
     // Check if we should show rating modal (e.g., 3 days after rental)
     const shouldShowRating = checkIfShouldShowRating();
@@ -47,6 +42,11 @@ export default function CustomerRatingSystem() {
     // Set up automatic follow-up emails
     setupFollowUpEmails();
   };
+
+  useEffect(() => {
+    // Initialize rating system
+    initializeRatingSystem();
+  }, []);
 
   const checkIfShouldShowRating = (): boolean => {
     // Check URL parameters for rating request

@@ -18,7 +18,7 @@ export default function RatingClient() {
     } else {
       setLoading(false);
     }
-  }, []);
+  }, [loadRentalData]);
 
   const loadRentalData = (rentalId: string) => {
     const rentals = localStorage.getItem('customerRentals');

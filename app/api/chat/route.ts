@@ -14,7 +14,6 @@ type ChatMessage = {
 function generateSessionId(): string {
   try {
     // Use crypto if available (Node 18+ on Next)
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const crypto = require('crypto');
     return crypto.randomBytes(16).toString('hex');
   } catch (_) {

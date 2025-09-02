@@ -22,20 +22,6 @@ interface CustomerRental {
 }
 
 export default function EmailFollowUpSystem() {
-  useEffect(() => {
-    initializeEmailSystem();
-  }, []);
-
-  const initializeEmailSystem = () => {
-    // Check for new rentals that need follow-up
-    checkForFollowUps();
-    
-    // Set up daily check for follow-ups
-    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
-    
-    return () => clearInterval(interval);
-  };
-
   const checkForFollowUps = () => {
     const rentals = getCustomerRentals();
     const now = new Date();
@@ -63,6 +49,20 @@ export default function EmailFollowUpSystem() {
       }
     });
   };
+
+  const initializeEmailSystem = () => {
+    // Check for new rentals that need follow-up
+    checkForFollowUps();
+    
+    // Set up daily check for follow-ups
+    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
+    
+    return () => clearInterval(interval);
+  };
+
+  useEffect(() => {
+    initializeEmailSystem();
+  }, [initializeEmailSystem]);
 
   const getCustomerRentals = (): CustomerRental[] => {
     const rentals = localStorage.getItem('customerRentals');

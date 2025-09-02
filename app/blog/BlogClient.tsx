@@ -422,7 +422,7 @@ function BlogContent() {
       console.error('Error generating categories:', error);
       return ["ALL"];
     }
-  }, []);
+  }, [blogPosts]);
 
   // Track page view
   useEffect(() => {

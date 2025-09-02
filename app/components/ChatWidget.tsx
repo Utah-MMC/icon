@@ -276,7 +276,7 @@ export default function ChatWidget() {
         try { fn(); } catch {}
       });
     };
-  }, []);
+  }, [chatConfig.triggers.sessionCap.key, chatConfig.greetings, chatConfig.defaultGreeting]);
 
   // Persist key chat state
   useEffect(() => {
@@ -299,7 +299,7 @@ export default function ChatWidget() {
     fetchStatus();
     const id = window.setInterval(fetchStatus, 20000);
     return () => { cancelled = true; window.clearInterval(id); };
-  }, []);
+  }, [setAgentStatus]);
 
   useEffect(() => {
     // Scroll so the most recent message's top aligns with the top of the viewport
@@ -328,7 +328,7 @@ export default function ChatWidget() {
       window.addEventListener('keydown', onKey);
       return () => window.removeEventListener('keydown', onKey);
     }
-  }, [isOpen]);
+  }, [isOpen, setUnreadCount, setIsOpen]);
 
   async function sendMessage() {
     if (!input.trim() || isSubmitting) return;
@@ -893,7 +893,7 @@ export default function ChatWidget() {
         body: JSON.stringify(payload),
       }).catch(() => {});
     }
-  }, [isOpen]);
+  }, [isOpen, lead, messages, pageUrl]);
 
   return (
     <div className="fixed bottom-4 right-4 z-[60]">

@@ -12,22 +12,6 @@ export default function CookieConsent() {
   const [prefs, setPrefs] = useState<ConsentPreferences>({ analytics: true, ads: true });
   const storageKey = 'cookie-consent-preferences-v1';
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (saved) {
-        const parsed: ConsentPreferences = JSON.parse(saved);
-        setPrefs(parsed);
-        updateConsent(parsed);
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-    } catch {
-      setIsVisible(true);
-    }
-  }, []);
-
   const updateConsent = (preferences: ConsentPreferences) => {
     const analyticsVal = preferences.analytics ? 'granted' : 'denied';
     const adsVal = preferences.ads ? 'granted' : 'denied';
@@ -42,6 +26,22 @@ export default function CookieConsent() {
       });
     }
   };
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const parsed: ConsentPreferences = JSON.parse(saved);
+        setPrefs(parsed);
+        updateConsent(parsed);
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    } catch {
+      setIsVisible(true);
+    }
+  }, [storageKey, setPrefs, setIsVisible, updateConsent]);
 
   const acceptAll = () => {
     const newPrefs = { analytics: true, ads: true };

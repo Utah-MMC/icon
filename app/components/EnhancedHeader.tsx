@@ -9,6 +9,7 @@ export default function EnhancedHeader() {
   const [isCityMenuOpen, setIsCityMenuOpen] = useState(false);
   const [isDumpsterSizesMenuOpen, setIsDumpsterSizesMenuOpen] = useState(false);
   const [isFrequentBuyersMenuOpen, setIsFrequentBuyersMenuOpen] = useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
 
   return (
     <>
@@ -33,9 +34,45 @@ export default function EnhancedHeader() {
 
             {/* Navigation - Hidden on mobile */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-[#4e37a8] transition-colors">
-                Services
-              </a>
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setIsServicesMenuOpen(true)}
+                  onMouseLeave={() => setIsServicesMenuOpen(false)}
+                  className="text-gray-700 hover:text-[#4e37a8] transition-colors flex items-center"
+                >
+                  Services
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isServicesMenuOpen && (
+                  <div
+                    onMouseEnter={() => setIsServicesMenuOpen(true)}
+                    onMouseLeave={() => setIsServicesMenuOpen(false)}
+                    className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                  >
+                    <div className="py-2">
+                      <a href="/services" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">All Services</div>
+                        <div className="text-xs text-gray-500">Complete service overview</div>
+                      </a>
+                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                        Service Types
+                      </div>
+                      <a href="/services?type=residential" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Residential Services</div>
+                        <div className="text-xs text-gray-500">Home projects & renovations</div>
+                      </a>
+                      <a href="/services?type=commercial" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                        <div className="font-semibold">Commercial Services</div>
+                        <div className="text-xs text-gray-500">Business & construction projects</div>
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
               
               {/* Dumpster Sizes Dropdown */}
               <div className="relative">
@@ -290,11 +327,15 @@ export default function EnhancedHeader() {
         {/* Mobile Navigation Menu */}
         <div className="md:hidden bg-gray-50 border-t border-gray-200">
           <div className="px-4 py-3 space-y-2">
-            <a href="#services" className="block text-gray-700 hover:text-[#4e37a8] py-2">
-              Services
-            </a>
+            {/* Mobile Services */}
+            <div className="border-b border-gray-200 pb-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Services</div>
+              <a href="/services" className="block text-gray-700 hover:text-[#4e37a8] py-1">All Services</a>
+              <a href="/services?type=residential" className="block text-gray-700 hover:text-[#4e37a8] py-1">Residential Services</a>
+              <a href="/services?type=commercial" className="block text-gray-700 hover:text-[#4e37a8] py-1">Commercial Services</a>
+            </div>
             
-                         {/* Mobile SIZES */}
+            {/* Mobile SIZES */}
              <div className="border-t border-gray-200 pt-2">
                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">SIZES - Specialized Dumpsters</div>
                <a href="/dumpster-sizes#10-yard-dirt" className="block text-gray-700 hover:text-[#4e37a8] py-1">10 Yard Dirt</a>
