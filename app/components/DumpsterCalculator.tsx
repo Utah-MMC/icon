@@ -93,7 +93,7 @@ export default function DumpsterCalculator() {
       setRentalDate(formatDateForInput(dates[0]));
       setSelectedDateIndex(0);
     }
-  }, [getAvailableDeliveryDates, formatDateForInput, setAvailableDates, setRentalDate, setSelectedDateIndex]);
+  }, [setAvailableDates, setRentalDate, setSelectedDateIndex]);
 
   // Handle click outside calendar to close it
   useEffect(() => {
@@ -393,7 +393,7 @@ export default function DumpsterCalculator() {
     const handler = () => { try { track('cta','get_exact_quote'); } catch {} ; setShowCallPopup(true); };
     btn.addEventListener('click', handler);
     return () => btn.removeEventListener('click', handler);
-  }, [result, track, setShowCallPopup]);
+  }, [result, setShowCallPopup]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

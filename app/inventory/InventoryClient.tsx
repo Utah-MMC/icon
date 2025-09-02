@@ -22,7 +22,7 @@ export default function InventoryClient() {
     };
 
     loadInventoryStatus();
-  }, [inventoryService, setInventoryStatus, setIsLoading]);
+  }, [setInventoryStatus, setIsLoading]);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

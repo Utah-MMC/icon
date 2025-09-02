@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface RatingData {
   customerName: string;
@@ -32,7 +32,7 @@ export default function CustomerRatingSystem() {
     reviewPosted: false
   });
 
-  const initializeRatingSystem = () => {
+  const initializeRatingSystem = useCallback(() => {
     // Check if we should show rating modal (e.g., 3 days after rental)
     const shouldShowRating = checkIfShouldShowRating();
     if (shouldShowRating) {
@@ -41,12 +41,12 @@ export default function CustomerRatingSystem() {
 
     // Set up automatic follow-up emails
     setupFollowUpEmails();
-  };
+  }, []);
 
   useEffect(() => {
     // Initialize rating system
     initializeRatingSystem();
-  }, []);
+  }, [initializeRatingSystem]);
 
   const checkIfShouldShowRating = (): boolean => {
     // Check URL parameters for rating request

@@ -1,12 +1,23 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import CustomerRatingSystem from '../components/CustomerRatingSystem';
 
 export default function RatingClient() {
   const [rentalData, setRentalData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+
+  const loadRentalData = useCallback((rentalId: string) => {
+    const rentals = localStorage.getItem('customerRentals');
+    if (rentals) {
+      const rental = JSON.parse(rentals).find((r: any) => r.id === rentalId);
+      if (rental) {
+        setRentalData(rental);
+      }
+    }
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     // Get rental ID from URL parameters
@@ -19,17 +30,6 @@ export default function RatingClient() {
       setLoading(false);
     }
   }, [loadRentalData]);
-
-  const loadRentalData = (rentalId: string) => {
-    const rentals = localStorage.getItem('customerRentals');
-    if (rentals) {
-      const rental = JSON.parse(rentals).find((r: any) => r.id === rentalId);
-      if (rental) {
-        setRentalData(rental);
-      }
-    }
-    setLoading(false);
-  };
 
   if (loading) {
     return (

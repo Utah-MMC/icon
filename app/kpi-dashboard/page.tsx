@@ -26,7 +26,7 @@ export default function KPIDashboard() {
     refresh();
     const id = setInterval(refresh, 10000);
     return () => clearInterval(id);
-  }, [refresh]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">

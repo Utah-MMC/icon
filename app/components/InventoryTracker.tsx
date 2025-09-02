@@ -55,7 +55,7 @@ export default function InventoryTracker() {
       console.log('Setting loading to false');
       setIsLoading(false);
     }
-  }, [inventoryService, setDumpsters, setError, setIsLoading]);
+  }, [setDumpsters, setError, setIsLoading]);
 
   const saveDumpsters = (newDumpsters: Dumpster[]) => {
     setDumpsters(newDumpsters);

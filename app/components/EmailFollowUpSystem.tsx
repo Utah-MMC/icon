@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 interface CustomerRental {
   id: string;
@@ -22,7 +22,7 @@ interface CustomerRental {
 }
 
 export default function EmailFollowUpSystem() {
-  const checkForFollowUps = () => {
+  const checkForFollowUps = useCallback(() => {
     const rentals = getCustomerRentals();
     const now = new Date();
     
@@ -48,7 +48,7 @@ export default function EmailFollowUpSystem() {
         sendReminderEmail(rental);
       }
     });
-  };
+  }, []);
 
   const initializeEmailSystem = () => {
     // Check for new rentals that need follow-up
@@ -61,8 +61,14 @@ export default function EmailFollowUpSystem() {
   };
 
   useEffect(() => {
-    initializeEmailSystem();
-  }, [initializeEmailSystem]);
+    // Check for new rentals that need follow-up
+    checkForFollowUps();
+    
+    // Set up daily check for follow-ups
+    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
+    
+    return () => clearInterval(interval);
+  }, []);
 
   const getCustomerRentals = (): CustomerRental[] => {
     const rentals = localStorage.getItem('customerRentals');

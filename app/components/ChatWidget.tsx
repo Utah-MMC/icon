@@ -276,7 +276,7 @@ export default function ChatWidget() {
         try { fn(); } catch {}
       });
     };
-  }, [chatConfig.triggers.sessionCap.key, chatConfig.greetings, chatConfig.defaultGreeting]);
+  }, []);
 
   // Persist key chat state
   useEffect(() => {

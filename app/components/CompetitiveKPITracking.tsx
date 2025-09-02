@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 
 interface CompetitiveMetrics {
   // Review Metrics
@@ -63,7 +63,7 @@ export default function CompetitiveKPITracking() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const formListenersRef = useRef<Array<{ form: Element; listener: EventListener }>>([]);
 
-  const initializeCompetitiveTracking = () => {
+  const initializeCompetitiveTracking = useCallback(() => {
     try {
       // Load existing KPI data
       loadExistingKPIData();
@@ -76,7 +76,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error initializing competitive tracking:', error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     console.log('Competitive KPI Tracking: Active');
@@ -106,7 +106,7 @@ export default function CompetitiveKPITracking() {
       });
       formListenersRef.current = [];
     };
-  }, []);
+  }, [initializeCompetitiveTracking]);
 
   const loadExistingKPIData = () => {
     try {
@@ -127,7 +127,7 @@ export default function CompetitiveKPITracking() {
     }
   };
 
-  const setupCompetitiveMonitoring = () => {
+  const setupCompetitiveMonitoring = useCallback(() => {
     try {
       // Track competitor changes - only set up one interval
       if (!intervalRef.current) {
@@ -138,9 +138,9 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error setting up competitive monitoring:', error);
     }
-  };
+  }, []);
 
-  const startAutomatedTracking = () => {
+  const startAutomatedTracking = useCallback(() => {
     try {
       // Track review requests
       trackReviewRequests();
@@ -153,7 +153,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error starting automated tracking:', error);
     }
-  };
+  }, []);
 
   const trackReviewRequests = () => {
     try {
