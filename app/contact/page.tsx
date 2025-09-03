@@ -155,7 +155,7 @@ export default function ContactPage() {
                          <p className="text-sm text-gray-600 mb-4">
                By checking this box, you agree to receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS from Icon Dumpsters. 
                Message frequency varies. Message and data rates may apply. For help, reply HELP. To opt out, reply STOP. 
-               We do not share your information with third parties. See our privacy policy at https://www.icondumpsters.com/privacy-policy and terms and conditions at https://www.icondumpsters.com/terms-of-service.
+               We do not share your information with third parties. See our privacy policy at https://icondumpsters.com/privacy-policy and terms and conditions at https://icondumpsters.com/terms-of-service.
              </p>
                          <div className="text-sm text-gray-600 space-y-2">
                <p><strong>Message Types:</strong> Quote confirmations, delivery updates, service reminders, and promotional offers</p>

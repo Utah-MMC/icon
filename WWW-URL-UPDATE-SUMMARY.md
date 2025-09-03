@@ -1,7 +1,7 @@
 # 🔧 **WWW URL UPDATE SUMMARY** - Domain Configuration Changes
 
 ## **Overview**
-Updated all code references to consistently use `https://www.icondumpsters.com` throughout the codebase to match your domain configuration where non-www redirects to www.
+Updated all code references to consistently use `https://icondumpsters.com` throughout the codebase to match your domain configuration where non-www redirects to www.
 
 ---
 
@@ -42,15 +42,15 @@ Updated the following page files to use www URLs in their metadata:
 ## 🎯 **Current Domain Behavior**
 
 ### **Expected Redirects**
-- ✅ `https://icondumpsters.com` → redirects to → `https://www.icondumpsters.com`
-- ✅ `https://www.icondumpsters.com` → stays as → `https://www.icondumpsters.com`
+- ✅ `https://icondumpsters.com` → redirects to → `https://icondumpsters.com`
+- ✅ `https://icondumpsters.com` → stays as → `https://icondumpsters.com`
 
 ### **Consistent URL Usage**
 All code now consistently uses:
-- ✅ **Canonical URLs**: `https://www.icondumpsters.com`
-- ✅ **OpenGraph URLs**: `https://www.icondumpsters.com`
-- ✅ **Email URLs**: `https://www.icondumpsters.com`
-- ✅ **Sitemap URLs**: `https://www.icondumpsters.com`
+- ✅ **Canonical URLs**: `https://icondumpsters.com`
+- ✅ **OpenGraph URLs**: `https://icondumpsters.com`
+- ✅ **Email URLs**: `https://icondumpsters.com`
+- ✅ **Sitemap URLs**: `https://icondumpsters.com`
 
 ---
 
@@ -117,7 +117,7 @@ All files have been manually updated to use www URLs. No additional commands nee
 
 1. **Test the redirects**:
    - Visit `https://icondumpsters.com` (should redirect to www)
-   - Visit `https://www.icondumpsters.com` (should stay as www)
+   - Visit `https://icondumpsters.com` (should stay as www)
 
 2. **All files updated** ✅:
    - All city guide pages updated
@@ -142,4 +142,4 @@ Your domain is now properly configured with:
 - ✅ **Updated .htaccess** rules matching DNS configuration
 - ✅ **Clean SEO setup** with no duplicate content issues
 
-**Your site will now work consistently with `https://www.icondumpsters.com` as the canonical URL!**
+**Your site will now work consistently with `https://icondumpsters.com` as the canonical URL!**

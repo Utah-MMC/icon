@@ -2,18 +2,18 @@ export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.icondumpsters.com/#organization",
+    "@id": "https://icondumpsters.com/#organization",
     "name": "Icon Dumpsters",
     "alternateName": "Icon Dumpster Rental",
     "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. Offering 15-30 yard roll-off dumpsters with reliable, affordable service. Serving Salt Lake City, Sandy, Murray, West Jordan, and 40+ Utah cities.",
-    "url": "https://www.icondumpsters.com",
+    "url": "https://icondumpsters.com",
          "logo": {
        "@type": "ImageObject",
-       "url": "https://www.icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
+       "url": "https://icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
        "width": 1200,
        "height": 630
      },
-     "image": "https://www.icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
+     "image": "https://icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
     "telephone": "+1-801-918-6000",
     "email": "icondumpsters@gmail.com",
     "address": {
@@ -223,18 +223,18 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://www.icondumpsters.com/#website",
-    "url": "https://www.icondumpsters.com",
+    "@id": "https://icondumpsters.com/#website",
+    "url": "https://icondumpsters.com",
     "name": "Icon Dumpsters",
     "description": "Professional dumpster rental services in Utah. Get reliable, affordable roll-off dumpsters for construction, renovation, and waste management projects. Serving Salt Lake City, Sandy, Murray, and 40+ Utah cities.",
     "publisher": {
-      "@id": "https://www.icondumpsters.com/#organization"
+      "@id": "https://icondumpsters.com/#organization"
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.icondumpsters.com/search?q={search_term_string}"
+        "urlTemplate": "https://icondumpsters.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -248,13 +248,13 @@ export default function StructuredData() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.icondumpsters.com"
+        "item": "https://icondumpsters.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://www.icondumpsters.com/services"
+        "item": "https://icondumpsters.com/services"
       }
     ]
   };

@@ -20,7 +20,7 @@ Business Name: Icon Dumpsters
 Category: Dumpster Rental Service
 Address: [Your actual business address]
 Phone: (801) 918-6000
-Website: https://www.icondumpsters.com
+Website: https://icondumpsters.com
 Hours: [Set accurate business hours]
 ```
 
@@ -153,7 +153,7 @@ Services Offered:
 - Name: Icon Dumpsters
 - Address: [Consistent address across all platforms]
 - Phone: (801) 918-6000
-- Website: https://www.icondumpsters.com
+- Website: https://icondumpsters.com
 
 ### **Phase 6: Ongoing Maintenance**
 

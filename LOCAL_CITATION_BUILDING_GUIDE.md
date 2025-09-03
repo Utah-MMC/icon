@@ -136,7 +136,7 @@ Local citations are mentions of your business name, address, and phone number (N
 Business Name: Icon Dumpsters
 Address: [Your exact business address]
 Phone: (801) 918-6000
-Website: https://www.icondumpsters.com
+Website: https://icondumpsters.com
 Email: icondumpsters@gmail.com
 Hours: [Consistent business hours]
 Categories: Dumpster Rental Service, Waste Management

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Residential Dumpster Rental | Home Projects & Cleanouts',
     description: 'Professional residential dumpster rental services for home projects, cleanouts, and renovations. Same-day delivery and competitive pricing.',
     type: 'website',
-    url: 'https://www.icondumpsters.com/residential-dumpsters',
+          url: 'https://icondumpsters.com/residential-dumpsters',
   },
 };
 

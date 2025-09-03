@@ -37,6 +37,7 @@ function collectRoutePaths(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Canonical domain - no www
   const baseUrl = 'https://icondumpsters.com'
   const paths = collectRoutePaths()
 

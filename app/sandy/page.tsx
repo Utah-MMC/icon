@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental Sandy, UT | Icon Dumpsters",
     description: "Professional dumpster rental services in Sandy, Utah. Same-day delivery, competitive pricing, and reliable service.",
-    url: "https://www.icondumpsters.com/sandy",
+          url: "https://icondumpsters.com/sandy",
     siteName: "Icon Dumpsters",
     locale: "en_US",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Professional dumpster rental services in Sandy, Utah. Same-day delivery and competitive pricing.",
   },
   alternates: {
-    canonical: "https://www.icondumpsters.com/sandy",
+          canonical: "https://icondumpsters.com/sandy",
   },
 };
 

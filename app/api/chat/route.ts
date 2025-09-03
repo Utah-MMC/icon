@@ -353,7 +353,7 @@ export async function POST(request: NextRequest) {
             Manager | Icon Dumpsters<br/>
             📞 (801) 918-6000<br/>
             📧 icondumpsters@gmail.com<br/>
-            🌐 <a href="https://www.icondumpsters.com" style="color:#4e37a8;text-decoration:underline">www.icondumpsters.com</a><br/>
+            🌐 <a href="https://icondumpsters.com" style="color:#4e37a8;text-decoration:underline">icondumpsters.com</a><br/>
             <div style="margin-top:6px;color:#4e37a8">♻ Affordable | Fast | Local</div>
           </td>
         </tr>

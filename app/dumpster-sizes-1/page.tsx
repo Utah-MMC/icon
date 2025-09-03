@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Dumpster Sizes Guide | Choose the Right Size for Your Project',
     description: 'Complete guide to dumpster sizes and capacity. Learn which dumpster size is right for your project.',
     type: 'website',
-    url: 'https://www.icondumpsters.com/dumpster-sizes-1',
+          url: 'https://icondumpsters.com/dumpster-sizes-1',
   },
 };
 

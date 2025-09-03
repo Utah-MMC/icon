@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms of Service | Icon Dumpsters Utah",
     description: "Terms of Service for Icon Dumpsters. Learn about our rental agreements and service terms.",
-    url: 'https://www.icondumpsters.com/terms-of-service',
+          url: 'https://icondumpsters.com/terms-of-service',
   },
   twitter: {
     card: 'summary',
@@ -166,7 +166,7 @@ export default function TermsOfService() {
             <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
               <p className="text-green-800 font-semibold mb-2">Messaging Terms and Conditions</p>
               <p className="text-green-700 text-sm mb-2">
-                By providing your phone number on our website contact form at <a href="https://www.icondumpsters.com/contact/" className="text-green-600 underline">https://www.icondumpsters.com/contact/</a> and checking the consent box, 
+                By providing your phone number on our website contact form at <a href="https://icondumpsters.com/contact/" className="text-green-600 underline">https://icondumpsters.com/contact/</a> and checking the consent box, 
                 you consent to receive text messages from Icon Dumpsters from 801-918-6000 regarding quote confirmations, delivery updates, service reminders, and promotional offers. 
                 <strong>You will receive quote confirmations, delivery updates, service reminders, and promotional offers via SMS.</strong> 
                 <strong>You will receive promotional offers, account alerts, and service updates via SMS.</strong>
@@ -208,7 +208,7 @@ export default function TermsOfService() {
                          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
                <p className="text-blue-800 font-semibold mb-2">Privacy Policy and Terms & Conditions</p>
                <p className="text-blue-700 text-sm">
-                 For more information, please visit the Privacy Policy at: <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://www.icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/terms-of-service/</a>
+                 For more information, please visit the Privacy Policy at: <a href="https://icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://icondumpsters.com/terms-of-service/</a>
                </p>
              </div>
 
@@ -247,7 +247,7 @@ export default function TermsOfService() {
               </p>
                              <p className="text-blue-800 text-sm mt-2">
                  <strong>For more information, please visit the Privacy Policy at:</strong> 
-                 <a href="https://www.icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://www.icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://www.icondumpsters.com/terms-of-service/</a>
+                 <a href="https://icondumpsters.com/privacy-policy/" className="text-blue-600 underline font-medium">https://icondumpsters.com/privacy-policy/</a> and Terms & Conditions at: <a href="https://icondumpsters.com/terms-of-service/" className="text-blue-600 underline font-medium">https://icondumpsters.com/terms-of-service/</a>
                </p>
             </div>
           </div>

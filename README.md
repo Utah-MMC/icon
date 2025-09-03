@@ -20,16 +20,16 @@ This is a [Next.js](https://nextjs.org) project for Icon Dumpsters, a profession
 
 ## Deployment Status
 
-- **Production URL**: https://www.icondumpsters.com
+- **Production URL**: https://icondumpsters.com
 - **Domain**: icondumpsters.com (redirects to www)
-- **Test Page**: https://www.icondumpsters.com/test
-- **Health Check**: https://www.icondumpsters.com/api/health
+- **Test Page**: https://icondumpsters.com/test
+- **Health Check**: https://icondumpsters.com/api/health
 
 ## Domain Configuration
 
 The site is now properly configured with:
 - **Primary Domain**: `icondumpsters.com`
-- **Canonical URL**: `https://www.icondumpsters.com`
+- **Canonical URL**: `https://icondumpsters.com`
 - **WWW Redirect**: Non-www automatically redirects to www
 - **SSL Certificate**: Automatic HTTPS via Vercel
 - **DNS**: CNAME record pointing to Vercel deployment
@@ -39,14 +39,14 @@ The site is now properly configured with:
 
 If you encounter a 404 error:
 
-1. **Check the correct URL**: Use https://www.icondumpsters.com
+1. **Check the correct URL**: Use https://icondumpsters.com
 2. **Wait for deployment**: New deployments can take 2-5 minutes to propagate
 3. **Try the test page**: Visit `/test` to verify the deployment is working
 4. **Check Vercel dashboard**: Look for the actual deployment URL in your Vercel project
 5. **Health check**: Visit `/api/health` to verify API routes are working
 
 ### Common Issues:
-- **Wrong URL**: Make sure you're using https://www.icondumpsters.com
+- **Wrong URL**: Make sure you're using https://icondumpsters.com
 - **Deployment in progress**: Wait a few minutes for the deployment to complete
 - **Cache issues**: Try hard refresh (Ctrl+F5) or incognito mode
 - **DNS propagation**: DNS changes can take up to 48 hours to fully propagate

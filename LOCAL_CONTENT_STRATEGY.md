@@ -37,11 +37,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental [CITY], UT | Icon Dumpsters",
     description: "Professional dumpster rental services in [CITY], Utah. Same-day delivery available. Call (801) 918-6000 for free quote!",
-    url: `https://www.icondumpsters.com/${citySlug}`,
+    url: `https://icondumpsters.com/${citySlug}`,
     siteName: "Icon Dumpsters",
     images: [
       {
-        url: "https://www.icondumpsters.com/images/dumpster-rental-[city].jpg",
+        url: "https://icondumpsters.com/images/dumpster-rental-[city].jpg",
         width: 1200,
         height: 630,
         alt: `Dumpster rental services in ${cityName}, Utah`

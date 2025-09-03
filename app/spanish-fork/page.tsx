@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental Spanish Fork, UT | Icon Dumpsters",
     description: "Professional dumpster rental services in Spanish Fork, Utah. Same-day delivery, competitive pricing, and reliable service.",
-    url: "https://www.icondumpsters.com/spanish-fork",
+          url: "https://icondumpsters.com/spanish-fork",
     siteName: "Icon Dumpsters",
     locale: "en_US",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Professional dumpster rental services in Spanish Fork, Utah. Same-day delivery and competitive pricing.",
   },
   alternates: {
-    canonical: "https://www.icondumpsters.com/spanish-fork",
+          canonical: "https://icondumpsters.com/spanish-fork",
   },
 };
 

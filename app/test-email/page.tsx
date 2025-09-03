@@ -270,7 +270,7 @@ export default function TestEmailPage() {
               <div>SMTP_PORT=587</div>
               <div>SMTP_USER=jeremyuwg@gmail.com</div>
               <div>SMTP_PASS=your_app_password_here</div>
-              <div>NEXT_PUBLIC_SITE_URL=https://www.icondumpsters.com</div>
+              <div>NEXT_PUBLIC_SITE_URL=https://icondumpsters.com</div>
             </div>
           </div>
         </div>

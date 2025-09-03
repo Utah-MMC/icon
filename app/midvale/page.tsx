@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental Midvale, UT | Icon Dumpsters",
     description: "Professional dumpster rental services in Midvale, Utah. Same-day delivery, competitive pricing, and reliable service.",
-    url: "https://www.icondumpsters.com/midvale",
+          url: "https://icondumpsters.com/midvale",
     siteName: "Icon Dumpsters",
     locale: "en_US",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Professional dumpster rental services in Midvale, Utah. Same-day delivery and competitive pricing.",
   },
   alternates: {
-    canonical: "https://www.icondumpsters.com/midvale",
+          canonical: "https://icondumpsters.com/midvale",
   },
 };
 

@@ -89,6 +89,16 @@
       "source": "/test-security",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "https://www.icondumpsters.com/:path*",
+      "destination": "https://icondumpsters.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.icondumpsters.com",
+      "destination": "https://icondumpsters.com",
+      "permanent": true
     }
   ]
 }

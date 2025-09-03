@@ -82,7 +82,7 @@ You can check using:
 ### **4.2 Test Your Domain**
 1. Visit `https://icondumpsters.com`
 2. Verify homepage loads correctly
-3. Test `https://www.icondumpsters.com`
+3. Test `https://icondumpsters.com`
 4. Both should work and redirect properly
 
 ---

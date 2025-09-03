@@ -2,7 +2,15 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  const { pathname, hostname } = req.nextUrl;
+  
+  // Redirect www to non-www
+  if (hostname === 'icondumpsters.com') {
+    const url = req.nextUrl.clone();
+    url.hostname = 'icondumpsters.com';
+    return NextResponse.redirect(url, 301);
+  }
+  
   // Protect the KPI dashboard
   if (pathname.startsWith('/kpi-dashboard')) {
     const cookie = req.cookies.get('admin_auth');
@@ -16,7 +24,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/kpi-dashboard'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
 
 

@@ -161,7 +161,7 @@ Test these key pages:
 
 ### **Your site is now live at:**
 - ✅ `https://icondumpsters.com` (main domain)
-- ✅ `www.icondumpsters.com` (should redirect to main)
+- ✅ `icondumpsters.com` (should redirect to main)
 - ✅ `icondumpsters.vercel.app` (still works as backup)
 
 ### **What This Means:**

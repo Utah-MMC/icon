@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Construction Dumpster Rental | Professional Waste Management Solutions',
     description: 'Professional construction dumpster rental services for commercial and residential projects. Same-day delivery and competitive pricing.',
     type: 'website',
-    url: 'https://www.icondumpsters.com/construction-dumpsters',
+          url: 'https://icondumpsters.com/construction-dumpsters',
   },
 };
 

@@ -14,7 +14,7 @@ export default function DumpsterRentalsNearMe() {
         <meta property="og:description" content="Find reliable dumpster rentals near me in Utah. Same-day delivery, competitive pricing, and expert service. Get your roll-off dumpster today!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://utahdumpsterrental.com/dumpster-rentals-near-me-2025" />
-        <link rel="canonical" href="https://utahdumpsterrental.com/dumpster-rentals-near-me-2025" />
+        <link rel="canonical" href="https://icondumpsters.com/dumpster-rentals-near-me-2025" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">

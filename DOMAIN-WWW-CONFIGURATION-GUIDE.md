@@ -1,6 +1,6 @@
 # 🔧 **DOMAIN WWW CONFIGURATION GUIDE** - Fix Redirect Issues
 
-## **Current Issue**: `icondumpsters.com` redirects to `www.icondumpsters.com`
+## **Current Issue**: `icondumpsters.com` redirects to `icondumpsters.com`
 
 Your domain is currently configured to redirect **non-www to www**, but your `.htaccess` file is set up to redirect **www to non-www**. This creates a conflict.
 
@@ -10,11 +10,11 @@ Your domain is currently configured to redirect **non-www to www**, but your `.h
 
 ### **Test Your Domain**
 1. **Visit**: `https://icondumpsters.com`
-   - **Expected**: Should redirect to `https://www.icondumpsters.com`
+   - **Expected**: Should redirect to `https://icondumpsters.com`
    - **Current**: ✅ Confirmed (this is happening)
 
-2. **Visit**: `https://www.icondumpsters.com`
-   - **Expected**: Should stay as `https://www.icondumpsters.com`
+2. **Visit**: `https://icondumpsters.com`
+   - **Expected**: Should stay as `https://icondumpsters.com`
    - **Current**: ✅ Confirmed (no redirect)
 
 ---
@@ -97,7 +97,7 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 ```
 
 ### **Expected Behavior After Fix**
-1. **Visit**: `https://www.icondumpsters.com`
+1. **Visit**: `https://icondumpsters.com`
    - **Should redirect to**: `https://icondumpsters.com`
 
 2. **Visit**: `https://icondumpsters.com`
@@ -119,7 +119,7 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
 2. **Update all metadata** in your code to use www URLs:
 ```typescript
-url: "https://www.icondumpsters.com/your-page"
+url: "https://icondumpsters.com/your-page"
 ```
 
 ### **Option B: Remove WWW (Current Setup)**
@@ -137,11 +137,11 @@ url: "https://icondumpsters.com/your-page"
 ## 📋 **Step 7: Update Code References**
 
 ### **Find and Replace WWW References**
-Search your codebase for `www.icondumpsters.com` and replace with `icondumpsters.com`:
+Search your codebase for `icondumpsters.com` and replace with `icondumpsters.com`:
 
 ```bash
 # Search for www references
-grep -r "www.icondumpsters.com" .
+grep -r "icondumpsters.com" .
 
 # Files that need updating:
 # - app/midvale/page.tsx
@@ -153,8 +153,8 @@ grep -r "www.icondumpsters.com" .
 ### **Update Metadata Examples**
 ```typescript
 // Change from:
-url: "https://www.icondumpsters.com/midvale"
-canonical: "https://www.icondumpsters.com/midvale"
+url: "https://icondumpsters.com/midvale"
+canonical: "https://icondumpsters.com/midvale"
 
 // Change to:
 url: "https://icondumpsters.com/midvale"

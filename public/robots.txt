@@ -22,5 +22,5 @@ Disallow: /test-formspree/
 Disallow: /test-og/
 Disallow: /test-security/
 
-# Sitemap location
+# Sitemap location - canonical domain only
 Sitemap: https://icondumpsters.com/sitemap.xml
