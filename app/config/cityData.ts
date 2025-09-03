@@ -2996,37 +2996,57 @@ export const cityData: Record<string, CityData> = {
     longitude: '-111.8910',
     landmarks: [
       {
-        name: 'Sugar House City Hall',
-        address: 'City Hall Address',
-        url: 'https://www.sugarhouse.utah.gov/',
+        name: 'Sugar House Park',
+        address: '1330 E 2100 S, Salt Lake City, UT 84106',
+        url: 'https://www.slc.gov/parks/parks-division/sugar-house-park/',
       },
       {
-        name: 'Sugar House Park',
-        address: 'Local Park Address',
-        url: 'https://www.google.com/maps/search/Sugar%20House%20Park',
+        name: 'Sugar House Library',
+        address: '2131 S 1100 E, Salt Lake City, UT 84106',
+        url: 'https://slcolibrary.org/location/sugar-house/',
+      },
+      {
+        name: 'Sugar House Business District',
+        address: '1100 E 2100 S, Salt Lake City, UT 84106',
+        url: 'https://www.sugarhousechamber.com/',
+      },
+      {
+        name: 'Sugar House Coffee',
+        address: '2011 S 1100 E, Salt Lake City, UT 84106',
+        url: 'https://sugarhousecoffee.com/',
+      },
+      {
+        name: 'Sugar House Monument',
+        address: '2100 S 1100 E, Salt Lake City, UT 84106',
+        url: 'https://www.google.com/maps/search/Sugar+House+Monument',
       },
     ],
     businessDistricts: [
       {
         name: 'Sugar House Central',
-        description: 'Major retail and dining district',
+        description: 'Historic shopping and dining district with local businesses',
         link: '/sugar-house',
       },
       {
         name: 'Sugar House East',
-        description: 'Residential and commercial mix',
+        description: 'Residential neighborhoods and community services',
         link: '/sugar-house',
       },
       {
         name: 'Sugar House West',
-        description: 'Industrial and commercial area',
+        description: 'Mixed residential and commercial area',
+        link: '/sugar-house',
+      },
+      {
+        name: 'Sugar House Business District',
+        description: 'Local shops, restaurants, and professional services',
         link: '/sugar-house',
       },
     ],
     permitInfo: {
-      cityName: 'Sugar House',
-      phoneNumber: '801-918-6000',
-      requirements: 'Contact Sugar House for permit requirements and applications. We can help guide you through the process.',
+      cityName: 'Salt Lake City',
+      phoneNumber: '801-535-6000',
+      requirements: 'Contact Salt Lake City for permit requirements and applications. We can help guide you through the process.',
     },
     contentSections: {
       overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Sugar House, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
@@ -3062,8 +3082,8 @@ export const cityData: Record<string, CityData> = {
           useCases: ['Large construction', 'Commercial demolition', 'Major renovations', 'Industrial projects'],
         },
       ],
-      localInfo: 'Sugar House is home to several popular attractions and landmarks. Whether you\'re working on a project near these areas or just exploring the city, we\'re here to help with your dumpster rental needs.',
-      serviceAreas: 'We provide dumpster rental services throughout Sugar House, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
+      localInfo: 'Sugar House is a vibrant neighborhood in Salt Lake City known for its historic charm, local businesses, and community spirit. Whether you\'re working on a project near Sugar House Park or in the business district, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Sugar House and surrounding areas, including residential neighborhoods, the business district, and areas near popular attractions. Our same-day delivery ensures you get your dumpster when and where you need it.',
     },
   },
   'syracuse': {

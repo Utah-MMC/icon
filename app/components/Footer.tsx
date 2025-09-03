@@ -218,17 +218,17 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Top Cities</h4>
             <div className="grid grid-cols-2 gap-1 text-sm">
-              <a href="/salt-lake-city" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
-              <a href="/west-valley-city" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
-              <a href="/sandy" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
-              <a href="/west-jordan" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
-              <a href="/murray" className="text-purple-200 hover:text-white transition-colors">Murray</a>
-              <a href="/south-jordan" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
-              <a href="/draper" className="text-purple-200 hover:text-white transition-colors">Draper</a>
-              <a href="/midvale" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
-              <a href="/holladay" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
-              <a href="/taylorsville" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
-              <a href="/kearns" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
+              <a href="/salt-lake-city-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
+              <a href="/west-valley-city-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
+              <a href="/sandy-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
+              <a href="/west-jordan-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
+              <a href="/murray-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Murray</a>
+              <a href="/south-jordan-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
+              <a href="/draper-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Draper</a>
+              <a href="/midvale-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
+              <a href="/holladay-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
+              <a href="/taylorsville-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
+              <a href="/kearns-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
               <a href="/millcreek" className="text-purple-200 hover:text-white transition-colors">Millcreek</a>
             </div>
           </div>

@@ -44,10 +44,10 @@ export default function HolladayClient() {
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">
                 <li>• <a href="/millcreek" className="text-[#4e37a8] hover:underline">Millcreek</a></li>
-                <li>• <a href="/murray" className="text-[#4e37a8] hover:underline">Murray</a></li>
-                <li>• <a href="/salt-lake-city" className="text-[#4e37a8] hover:underline">Salt Lake City</a></li>
+                <li>• <a href="/murray-dumpster-rentals" className="text-[#4e37a8] hover:underline">Murray</a></li>
+                <li>• <a href="/salt-lake-city-dumpster-rentals" className="text-[#4e37a8] hover:underline">Salt Lake City</a></li>
                 <li>• <a href="/cottonwood-heights" className="text-[#4e37a8] hover:underline">Cottonwood Heights</a></li>
-                <li>• <a href="/sugar-house" className="text-[#4e37a8] hover:underline">Sugar House</a></li>
+                <li>• <a href="/sugar-house-dumpster-rentals" className="text-[#4e37a8] hover:underline">Sugar House</a></li>
               </ul>
             </div>
           </div>

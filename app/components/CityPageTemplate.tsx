@@ -96,17 +96,15 @@ export default function CityPageTemplate({
                 </a>
               </div>
             </div>
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="bg-white rounded-lg shadow-2xl p-4 w-full max-w-md lg:max-w-lg">
-                <Image
-                  src="/images/Icon_Dumpsters_Final.png"
-                  alt="Icon Dumpsters - Professional Dumpster Rental Services"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
-                  priority
-                />
-              </div>
+            {/* Hero Image - Dumpster in action */}
+            <div className="mb-8">
+              <Image
+                src="/images/dumpsterWithTruck.jpeg"
+                alt={`Professional dumpster rental services in ${cityName}, Utah`}
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -127,6 +125,15 @@ export default function CityPageTemplate({
               <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/images/IMG_3190.jpg"
+                      alt={`Residential dumpster rental services in ${cityName}, Utah`}
+                      width={400}
+                      height={250}
+                      className="w-full h-auto rounded-lg shadow-md"
+                    />
+                  </div>
                   <ul className="space-y-2 text-gray-700">
                     {contentSections.residentialServices.map((service, index) => (
                       <li key={index}>• {service}</li>
@@ -135,6 +142,15 @@ export default function CityPageTemplate({
             </div>
             <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 Commercial Projects</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/images/commercial.jpg"
+                      alt={`Commercial dumpster rental services in ${cityName}, Utah`}
+                      width={400}
+                      height={250}
+                      className="w-full h-auto rounded-lg shadow-md"
+                    />
+                  </div>
                   <ul className="space-y-2 text-gray-700">
                     {contentSections.commercialServices.map((service, index) => (
                       <li key={index}>• {service}</li>
@@ -163,6 +179,45 @@ export default function CityPageTemplate({
               <p className="text-lg text-gray-700 mb-6">
                 {contentSections.whyChooseUs}
               </p>
+              
+              {/* Why choose us image */}
+              <div className="mb-6">
+                <Image
+                  src="/images/IMG_0350.jpg"
+                  alt={`Professional dumpster rental services in ${cityName}, Utah`}
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+              {/* Equipment Showcase */}
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="relative h-32 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/dumpster500x500-1.jpeg"
+                    alt={`Professional roll-off dumpster in ${cityName}, Utah`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-32 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/dumpster500x500-2.jpeg"
+                    alt={`High-quality dumpster rental equipment in ${cityName}, Utah`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-32 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/dumpsterWithTruck.jpeg"
+                    alt={`Dumpster delivery service in ${cityName}, Utah`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
               
           <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-purple-50 p-6 rounded-lg">
@@ -199,6 +254,37 @@ export default function CityPageTemplate({
                 Choose the perfect dumpster size for your project in {cityName}. All rentals include delivery, pickup, and landfill fees. Weight is billed at $55/ton after pickup.
               </p>
               
+              {/* Dumpster sizes image */}
+              <div className="mb-8">
+                <Image
+                  src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg"
+                  alt={`Dumpster size comparison for ${cityName} projects`}
+                  width={800}
+                  height={300}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+              {/* Additional dumpster visuals */}
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                <div className="relative h-48 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/dumpster500x500-1.jpeg"
+                    alt={`Professional roll-off dumpster rental in ${cityName}, Utah`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-48 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/dumpster500x500-2.jpeg"
+                    alt={`High-quality dumpster equipment in ${cityName}, Utah`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              
               <div className="grid md:grid-cols-3 gap-6">
                 {contentSections.dumpsterSizes.map((dumpster, index) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-6 text-center">
@@ -217,11 +303,22 @@ export default function CityPageTemplate({
             {/* Local Information */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">{cityName} Local Information</h2>
-              <p className="text-lg text-gray-700 mb-6">
+                            <p className="text-lg text-gray-700 mb-6">
                 {contentSections.localInfo}
               </p>
               
-          <div className="grid md:grid-cols-2 gap-6">
+              {/* Local city image */}
+              <div className="mb-6">
+                <Image
+                  src="/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp"
+                  alt={`${cityName}, Utah - Local attractions and business districts`}
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+           <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">🏛️ Popular {cityName} Attractions</h3>
                   <ul className="space-y-2 text-gray-700">
@@ -298,6 +395,17 @@ export default function CityPageTemplate({
               <p className="text-lg text-gray-700 mb-6">
                 Our dumpster rental process in {cityName} is simple and straightforward. We make it easy to get the waste management solution you need for your project.
               </p>
+              
+              {/* Process illustration */}
+              <div className="mb-6">
+                <Image
+                  src="/images/dumpster500x500-1.jpeg"
+                  alt={`Dumpster rental process in ${cityName}, Utah`}
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>

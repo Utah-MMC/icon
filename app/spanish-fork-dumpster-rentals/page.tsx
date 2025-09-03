@@ -1,0 +1,55 @@
+import type { Metadata } from 'next';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
+
+export const metadata: Metadata = {
+  title: "Spanish Fork Dumpster Rentals - Professional Services in Spanish Fork, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rentals in Spanish Fork, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Spanish Fork dumpster rentals, dumpster rental Spanish Fork UT, Spanish Fork Utah dumpster, roll-off dumpster Spanish Fork, construction dumpster Spanish Fork, waste management Spanish Fork",
+  openGraph: {
+    title: "Spanish Fork Dumpster Rentals - Professional Services in Spanish Fork, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rentals in Spanish Fork, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/spanish-fork-dumpster-rentals',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Spanish Fork Dumpster Rentals - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Spanish Fork Dumpster Rentals - Professional Services in Spanish Fork, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rentals in Spanish Fork, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: '/spanish-fork-dumpster-rentals',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export default function SpanishForkDumpsterRentalsPage() {
+  const cityData = getCityData('spanish-fork');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
+
+  return <CityPageTemplate {...cityData} />;
+}

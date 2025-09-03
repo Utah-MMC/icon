@@ -4,12 +4,6 @@ const nextConfig = {
   experimental: {
     // Enable optimizations for static generation
     optimizePackageImports: ['@next/font', 'lucide-react'],
-    // Enable modern React features
-    reactCompiler: true,
-    // Optimize server components
-    serverComponentsExternalPackages: ['canvas'],
-    // Enable partial prerendering for better performance
-    ppr: true,
   },
 
   // Turbopack configuration (replaces deprecated experimental.turbo)
@@ -30,10 +24,6 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Enable lazy loading by default
-    loading: 'lazy',
-    // Optimize quality
-    quality: 85,
   },
 
   // Webpack optimizations for large builds
@@ -113,8 +103,7 @@ const nextConfig = {
     pagesBufferLength: 2,
   },
 
-  // Enable SWC minification for better performance
-  swcMinify: true,
+
 
   // Optimize output
   output: 'standalone',

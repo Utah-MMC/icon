@@ -1,55 +1,55 @@
-'use client';
+import type { Metadata } from 'next';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
+
+export const metadata: Metadata = {
+  title: "Murray Dumpster Rental - Professional Services in Murray, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Murray, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Murray dumpster rental, dumpster rental Murray UT, Murray Utah dumpster, roll-off dumpster Murray, construction dumpster Murray, waste management Murray",
+  openGraph: {
+    title: "Murray Dumpster Rental - Professional Services in Murray, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Murray, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/murray',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Murray Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Murray Dumpster Rental - Professional Services in Murray, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Murray, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: '/murray',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function MurrayPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Murray, UT
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Professional dumpster rental services in Murray, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
-        </p>
-        
-        <div className="bg-gray-50 p-8 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Murray?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Murray and surrounding areas</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>Flexible rental periods (1-30 days)</li>
-            <li>Professional customer service</li>
-            <li>Local knowledge of Murray regulations</li>
-            <li>Multiple dumpster sizes available</li>
-          </ul>
-        </div>
+  const cityData = getCityData('murray');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
 
-        <div className="bg-blue-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Murray Service Areas</h2>
-          <p className="text-gray-600 mb-4">We serve all of Murray and surrounding communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Murray Areas:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Downtown Murray</li>
-                <li>• Murray Park Area</li>
-                <li>• Murray Highlands</li>
-                <li>• Murray East</li>
-                <li>• Murray West</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
-              <ul className="space-y-1 text-gray-600">
-                <li>• Midvale</li>
-                <li>• Sandy</li>
-                <li>• South Salt Lake</li>
-                <li>• Taylorsville</li>
-                <li>• West Valley City</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <CityPageTemplate {...cityData} />;
 }

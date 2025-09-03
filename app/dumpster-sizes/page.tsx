@@ -67,6 +67,41 @@ export default function DumpsterSizes() {
             </p>
           </div>
           
+          {/* Equipment Showcase */}
+          <div className="mb-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Professional Equipment</h3>
+              <p className="text-gray-600">High-quality, well-maintained roll-off dumpsters ready for your project</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
+                <ImageWithFallback
+                  src="/images/dumpster500x500-1.jpeg"
+                  alt="Professional roll-off dumpster rental equipment"
+                  className="w-full h-full object-cover"
+                  fallbackSrc="/images/dumpster500x500-1.webp"
+                />
+              </div>
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
+                <ImageWithFallback
+                  src="/images/dumpster500x500-2.jpeg"
+                  alt="High-quality dumpster rental equipment"
+                  className="w-full h-full object-cover"
+                  fallbackSrc="/images/dumpster500x500-2.webp"
+                />
+              </div>
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
+                <ImageWithFallback
+                  src="/images/dumpsterWithTruck.jpeg"
+                  alt="Dumpster delivery and pickup service"
+                  className="w-full h-full object-cover"
+                  fallbackSrc="/images/dumpsterWithTruck.webp"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Modern Dumpster Sizes Table */}
           <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl border border-gray-100 p-8">
             <div className="text-center mb-8">

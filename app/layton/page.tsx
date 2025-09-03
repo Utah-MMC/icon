@@ -1,125 +1,55 @@
+import type { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
+
+export const metadata: Metadata = {
+  title: "Layton Dumpster Rental - Professional Services in Layton, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Layton, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Layton dumpster rental, dumpster rental Layton UT, Layton Utah dumpster, roll-off dumpster Layton, construction dumpster Layton, waste management Layton",
+  openGraph: {
+    title: "Layton Dumpster Rental - Professional Services in Layton, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Layton, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/layton',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Layton Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Layton Dumpster Rental - Professional Services in Layton, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Layton, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: '/layton',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function LaytonPage() {
-  return (
-    <CityPageTemplate
-      cityName="Layton"
-      citySlug="layton"
-      state="Utah"
-      phoneNumber="801-918-6000"
-      latitude="41.0602"
-      longitude="-111.9711"
-      landmarks={[
-        {
-                "name": "Layton City Park",
-                "address": "437 N Wasatch Dr, Layton, UT 84041",
-                "url": "https://www.laytoncity.org/parks-recreation/"
-        },
-        {
-                "name": "Layton Library",
-                "address": "155 N Wasatch Dr, Layton, UT 84041",
-                "url": "https://slcolibrary.org/location/layton/"
-        },
-        {
-                "name": "Layton Historic District",
-                "address": "Main St, Layton, UT 84041",
-                "url": "https://www.laytoncity.org/community/history/"
-        },
-        {
-                "name": "Layton Cemetery",
-                "address": "437 N Wasatch Dr, Layton, UT 84041",
-                "url": "https://www.laytoncity.org/cemetery/"
-        },
-        {
-                "name": "Layton Golf Course",
-                "address": "437 N Wasatch Dr, Layton, UT 84041",
-                "url": "https://www.laytoncity.org/parks-recreation/golf-course/"
-        }
-]}
-      businessDistricts={[
-        {
-                "name": "Layton City Center",
-                "description": "City government and services",
-                "link": "/layton-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Layton East",
-                "description": "Residential neighborhoods",
-                "link": "/home-renovation-dumpster-guide"
-        },
-        {
-                "name": "Layton West",
-                "description": "Commercial and industrial",
-                "link": "/commercial-dumpsters"
-        },
-        {
-                "name": "Layton Business District",
-                "description": "Mixed commercial area",
-                "link": "/layton-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Layton Hills Mall",
-                "description": "Shopping and retail center",
-                "link": "/retail-renovation-dumpster-guide"
-        }
-]}
-      permitInfo={{
-        cityName: "Layton",
-        phoneNumber: "801-336-3900",
-        requirements: "Contact Layton for permit requirements and applications. We can help guide you through the process."
-      }}
-      contentSections={{
-        overview: "Icon Dumpsters provides reliable dumpster rental services throughout Layton, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.",
-        residentialServices: [
-          "Home renovations and remodeling",
-          "Basement cleanouts",
-          "Garage organization",
-          "Yard waste removal",
-          "Estate cleanouts"
-        ],
-        commercialServices: [
-          "Construction and demolition",
-          "Office renovations",
-          "Retail store cleanouts",
-          "Industrial waste removal",
-          "Event cleanup"
-        ],
-        whyChooseUs: "Icon Dumpsters is your trusted partner for dumpster rental in Layton. We understand the unique needs of this community and provide reliable, professional service for all your waste management needs.",
-        dumpsterSizes: [
-          {
-            size: "15 Yard",
-            description: "Perfect for small to medium projects",
-            useCases: [
-              "Kitchen remodel",
-              "Bathroom renovation",
-              "Garage cleanout",
-              "Small construction"
-            ]
-          },
-          {
-            size: "20 Yard",
-            description: "Great for medium to large projects",
-            useCases: [
-              "Full home renovation",
-              "Large construction",
-              "Commercial projects",
-              "Major cleanouts"
-            ]
-          },
-          {
-            size: "30 Yard",
-            description: "For major projects and construction",
-            useCases: [
-              "Large construction",
-              "Commercial demolition",
-              "Major renovations",
-              "Industrial projects"
-            ]
-          }
-        ],
-        localInfo: "Layton is a vibrant community in Utah known for its beautiful surroundings and strong community spirit. From residential neighborhoods to commercial districts, Layton offers a great place to live and work.",
-        serviceAreas: "We provide dumpster rental services throughout Layton and surrounding areas. Our service area covers residential neighborhoods, commercial districts, and industrial areas to meet all your waste management needs."
-      }}
-    />
-  );
+  const cityData = getCityData('layton');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
+
+  return <CityPageTemplate {...cityData} />;
 }

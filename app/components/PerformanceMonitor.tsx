@@ -24,12 +24,41 @@ export default function PerformanceMonitor() {
   });
   const [isVisible, setIsVisible] = useState(false);
 
+  // Helper methods
+  const calculateOverallScore = () => {
+    // This would be implemented based on the actual metrics
+    return 'A+';
+  };
+
+  const getRecommendations = () => {
+    const recommendations: string[] = [];
+    
+    // Add recommendations based on metrics
+    if (metrics.lcp && metrics.lcp > 4000) {
+      recommendations.push('Optimize images and reduce LCP');
+    }
+    
+    if (metrics.cls && metrics.cls > 0.25) {
+      recommendations.push('Fix layout shifts to improve CLS');
+    }
+    
+    if (metrics.fid && metrics.fid > 300) {
+      recommendations.push('Reduce JavaScript execution time');
+    }
+    
+    if (recommendations.length === 0) {
+      recommendations.push('Performance looks great!');
+    }
+    
+    return recommendations;
+  };
+
   useEffect(() => {
     // Only show in development or when explicitly enabled
     if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true') {
       setIsVisible(true);
-      this.measurePerformance();
-      this.setupPerformanceObservers();
+      measurePerformance();
+      setupPerformanceObservers();
     }
   }, []);
 
@@ -185,16 +214,16 @@ export default function PerformanceMonitor() {
         <div className="text-center">
           <div className="text-gray-600 mb-1">Overall Score</div>
           <div className="text-lg font-bold text-purple-600">
-            {this.calculateOverallScore()}
+            {calculateOverallScore()}
           </div>
         </div>
         
         {/* Recommendations */}
-        {this.getRecommendations().length > 0 && (
+        {getRecommendations().length > 0 && (
           <div className="mt-3 p-2 bg-gray-50 rounded text-xs">
             <div className="font-semibold mb-1">Recommendations:</div>
             <ul className="space-y-1">
-              {this.getRecommendations().map((rec, index) => (
+              {getRecommendations().map((rec: string, index: number) => (
                 <li key={index} className="text-gray-700">• {rec}</li>
               ))}
             </ul>
@@ -204,32 +233,3 @@ export default function PerformanceMonitor() {
     </div>
   );
 }
-
-// Helper methods
-const calculateOverallScore = () => {
-  // This would be implemented based on the actual metrics
-  return 'A+';
-};
-
-const getRecommendations = () => {
-  const recommendations = [];
-  
-  // Add recommendations based on metrics
-  if (metrics.lcp && metrics.lcp > 4000) {
-    recommendations.push('Optimize images and reduce LCP');
-  }
-  
-  if (metrics.cls && metrics.cls > 0.25) {
-    recommendations.push('Fix layout shifts to improve CLS');
-  }
-  
-  if (metrics.fid && metrics.fid > 300) {
-    recommendations.push('Reduce JavaScript execution time');
-  }
-  
-  if (recommendations.length === 0) {
-    recommendations.push('Performance looks great!');
-  }
-  
-  return recommendations;
-};

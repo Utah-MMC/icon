@@ -34,6 +34,11 @@ export default function EnhancedHeader() {
 
             {/* Navigation - Hidden on mobile */}
             <nav className="hidden md:flex items-center space-x-8">
+              {/* Main Dumpster Rental Link */}
+              <a href="/dumpster-rental" className="text-gray-700 hover:text-[#4e37a8] transition-colors font-medium">
+                Dumpster Rentals
+              </a>
+              
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -77,9 +82,29 @@ export default function EnhancedHeader() {
                         <div className="font-semibold">Yard Waste & Debris Bin Rental</div>
                         <div className="text-xs text-gray-500">Landscaping & outdoor cleanup</div>
                       </a>
-                      <a href="/services/downsizing-dumpster-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/services/downsizing-dumpster-rentals" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
                         <div className="font-semibold">Downsizing Dumpster Rentals</div>
                         <div className="text-xs text-gray-500">Moving & decluttering projects</div>
+                      </a>
+                      
+                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+                        Service Categories
+                      </div>
+                      <a href="/dumpster-rental" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">All Dumpster Rentals</div>
+                        <div className="text-xs text-gray-500">Complete service overview</div>
+                      </a>
+                      <a href="/dumpster-rental/home" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Residential Services</div>
+                        <div className="text-xs text-gray-500">Home & renovation projects</div>
+                      </a>
+                      <a href="/dumpster-rental/business" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Commercial Services</div>
+                        <div className="text-xs text-gray-500">Business & office projects</div>
+                      </a>
+                      <a href="/dumpster-rental/construction" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                        <div className="font-semibold">Construction Services</div>
+                        <div className="text-xs text-gray-500">Construction & demolition</div>
                       </a>
                     </div>
                   </div>
@@ -175,75 +200,113 @@ export default function EnhancedHeader() {
                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                         Utah Cities
                       </div>
-                      <a href="/murray" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/murray-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         Murray
                       </a>
-                      <a href="/midvale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/midvale-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         Midvale
                       </a>
-                      <a href="/sandy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/sandy-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         Sandy
                       </a>
-                      <a href="/west-jordan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/west-jordan-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         West Jordan
                       </a>
-                      <a href="/south-jordan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                      <a href="/south-jordan-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                         South Jordan
                       </a>
-                                             <a href="/draper" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                                             <a href="/draper-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
                          Draper
                        </a>
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
                          Salt Lake County
                        </div>
-                       <a href="/west-valley-city" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">West Valley City</a>
-                       <a href="/taylorsville" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Taylorsville</a>
-                       <a href="/kearns" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Kearns</a>
-                       <a href="/magna" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Magna</a>
-                       <a href="/millcreek" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Millcreek</a>
-                       <a href="/holladay" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Holladay</a>
-                       <a href="/cottonwood-heights" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Cottonwood Heights</a>
-                       <a href="/south-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">South Salt Lake</a>
-                       <a href="/riverton" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Riverton</a>
-                       <a href="/herriman" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Herriman</a>
-                       <a href="/bluffdale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bluffdale</a>
+                       <a href="/west-valley-city-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">West Valley City</a>
+                       <a href="/taylorsville-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Taylorsville</a>
+                       <a href="/kearns-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Kearns</a>
+                       <a href="/magna-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Magna</a>
+                       <a href="/millcreek-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Millcreek</a>
+                       <a href="/holladay-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Holladay</a>
+                       <a href="/cottonwood-heights-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Cottonwood Heights</a>
+                       <a href="/south-salt-lake-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">South Salt Lake</a>
+                       <a href="/riverton-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Riverton</a>
+                       <a href="/herriman-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Herriman</a>
+                       <a href="/bluffdale-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bluffdale</a>
 
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
                          Davis County
                        </div>
-                       <a href="/bountiful" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bountiful</a>
-                       <a href="/north-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">North Salt Lake</a>
-                       <a href="/centerville" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Centerville</a>
-                       <a href="/farmington" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Farmington</a>
-                       <a href="/layton" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Layton</a>
-                       <a href="/woods-cross" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Woods Cross</a>
-                       <a href="/clearfield" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Clearfield</a>
+                       <a href="/bountiful-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Bountiful</a>
+                       <a href="/north-salt-lake-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">North Salt Lake</a>
+                       <a href="/centerville-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Centerville</a>
+                       <a href="/farmington-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Farmington</a>
+                       <a href="/layton-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Layton</a>
+                       <a href="/woods-cross-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Woods Cross</a>
+                       <a href="/clearfield-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Clearfield</a>
 
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
                          Utah County
                        </div>
-                       <a href="/lehi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Lehi</a>
-                       <a href="/american-fork" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">American Fork</a>
-                       <a href="/pleasant-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Pleasant Grove</a>
-                       <a href="/eagle-mountain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Eagle Mountain</a>
-                       <a href="/saratoga-springs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Saratoga Springs</a>
-                       <a href="/orem" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Orem</a>
-                       <a href="/provo" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Provo</a>
+                       <a href="/lehi-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Lehi</a>
+                       <a href="/american-fork-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">American Fork</a>
+                       <a href="/pleasant-grove-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Pleasant Grove</a>
+                       <a href="/eagle-mountain-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Eagle Mountain</a>
+                       <a href="/saratoga-springs-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Saratoga Springs</a>
+                       <a href="/orem-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Orem</a>
+                       <a href="/provo-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Provo</a>
 
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
                          Summit & Tooele
                        </div>
-                       <a href="/park-city" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Park City</a>
-                       <a href="/tooele" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Tooele</a>
+                       <a href="/park-city-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Park City</a>
+                       <a href="/tooele-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Tooele</a>
 
                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
                          SLC Neighborhoods
                        </div>
-                       <a href="/rose-park" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Rose Park</a>
-                       <a href="/sugar-house" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Sugar House</a>
-                       <a href="/glendale" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Glendale</a>
-                       <a href="/poplar-grove" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Poplar Grove</a>
-                       <a href="/downtown-salt-lake" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Downtown Salt Lake</a>
+                       <a href="/rose-park-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Rose Park</a>
+                       <a href="/sugar-house-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Sugar House</a>
+                       <a href="/glendale-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Glendale</a>
+                       <a href="/poplar-grove-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Poplar Grove</a>
+                       <a href="/downtown-salt-lake-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Downtown Salt Lake</a>
+                       
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         Additional Cities
+                       </div>
+                       <a href="/spanish-fork-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Spanish Fork</a>
+                       <a href="/springville-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Springville</a>
+                       <a href="/lindon-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Lindon</a>
+                       <a href="/kaysville-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Kaysville</a>
+                       <a href="/roy-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Roy</a>
+                       <a href="/fairpark-dumpster-rentals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">Fairpark</a>
+                       
+                       <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-t border-gray-100 mt-2 pt-2">
+                         County-Based Services
+                       </div>
+                       <a href="/dumpster-rental-salt-lake-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Salt Lake County
+                       </a>
+                       <a href="/dumpster-rental-utah-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Utah County
+                       </a>
+                       <a href="/dumpster-rental-davis-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Davis County
+                       </a>
+                       <a href="/dumpster-rental-weber-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Weber County
+                       </a>
+                       <a href="/dumpster-rental-cache-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Cache County
+                       </a>
+                       <a href="/dumpster-rental-tooele-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Tooele County
+                       </a>
+                       <a href="/dumpster-rental-summit-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                         Summit County
+                       </a>
+                       <a href="/dumpster-rental-wasatch-county-ut" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                         Wasatch County
+                       </a>
                     </div>
                   </div>
                 )}
@@ -350,12 +413,19 @@ export default function EnhancedHeader() {
         {/* Mobile Navigation Menu */}
         <div className="md:hidden bg-gray-50 border-t border-gray-200">
           <div className="px-4 py-3 space-y-2">
+            {/* Main Dumpster Rental Link */}
+            <a href="/dumpster-rental" className="block text-gray-700 hover:text-[#4e37a8] py-2 font-medium text-lg">
+              Dumpster Rentals
+            </a>
+            
             {/* Mobile Services */}
             <div className="border-b border-gray-200 pb-2">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Services</div>
+              <a href="/dumpster-rental" className="block text-gray-700 hover:text-[#4e37a8] py-1">All Dumpster Rentals</a>
+              <a href="/dumpster-rental/home" className="block text-gray-700 hover:text-[#4e37a8] py-1">Residential Services</a>
+              <a href="/dumpster-rental/business" className="block text-gray-700 hover:text-[#4e37a8] py-1">Commercial Services</a>
+              <a href="/dumpster-rental/construction" className="block text-gray-700 hover:text-[#4e37a8] py-1">Construction Services</a>
               <a href="/services" className="block text-gray-700 hover:text-[#4e37a8] py-1">All Services</a>
-              <a href="/services?type=residential" className="block text-gray-700 hover:text-[#4e37a8] py-1">Residential Services</a>
-              <a href="/services?type=commercial" className="block text-gray-700 hover:text-[#4e37a8] py-1">Commercial Services</a>
             </div>
             
             {/* Mobile SIZES */}
@@ -378,42 +448,52 @@ export default function EnhancedHeader() {
             {/* Mobile City Pages */}
             <div className="border-t border-gray-200 pt-2">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Salt Lake County</div>
-              <a href="/west-valley-city" className="block text-gray-700 hover:text-[#4e37a8] py-1">West Valley City</a>
-              <a href="/taylorsville" className="block text-gray-700 hover:text-[#4e37a8] py-1">Taylorsville</a>
-              <a href="/kearns" className="block text-gray-700 hover:text-[#4e37a8] py-1">Kearns</a>
-              <a href="/magna" className="block text-gray-700 hover:text-[#4e37a8] py-1">Magna</a>
+              <a href="/west-valley-city-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">West Valley City</a>
+              <a href="/taylorsville-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Taylorsville</a>
+              <a href="/kearns-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Kearns</a>
+              <a href="/magna-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Magna</a>
               <a href="/millcreek" className="block text-gray-700 hover:text-[#4e37a8] py-1">Millcreek</a>
-              <a href="/holladay" className="block text-gray-700 hover:text-[#4e37a8] py-1">Holladay</a>
+              <a href="/holladay-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Holladay</a>
               <a href="/cottonwood-heights" className="block text-gray-700 hover:text-[#4e37a8] py-1">Cottonwood Heights</a>
-              <a href="/south-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">South Salt Lake</a>
-              <a href="/riverton" className="block text-gray-700 hover:text-[#4e37a8] py-1">Riverton</a>
-              <a href="/herriman" className="block text-gray-700 hover:text-[#4e37a8] py-1">Herriman</a>
+              <a href="/south-salt-lake-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">South Salt Lake</a>
+              <a href="/riverton-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Riverton</a>
+              <a href="/herriman-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Herriman</a>
               <a href="/bluffdale" className="block text-gray-700 hover:text-[#4e37a8] py-1">Bluffdale</a>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Davis County</div>
-              <a href="/bountiful" className="block text-gray-700 hover:text-[#4e37a8] py-1">Bountiful</a>
+              <a href="/bountiful-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Bountiful</a>
               <a href="/north-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">North Salt Lake</a>
-              <a href="/centerville" className="block text-gray-700 hover:text-[#4e37a8] py-1">Centerville</a>
-              <a href="/farmington" className="block text-gray-700 hover:text-[#4e37a8] py-1">Farmington</a>
-              <a href="/layton" className="block text-gray-700 hover:text-[#4e37a8] py-1">Layton</a>
-              <a href="/woods-cross" className="block text-gray-700 hover:text-[#4e37a8] py-1">Woods Cross</a>
-              <a href="/clearfield" className="block text-gray-700 hover:text-[#4e37a8] py-1">Clearfield</a>
+              <a href="/centerville-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Centerville</a>
+              <a href="/farmington-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Farmington</a>
+              <a href="/layton-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Layton</a>
+              <a href="/woods-cross-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Woods Cross</a>
+              <a href="/clearfield-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Clearfield</a>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Utah County</div>
               <a href="/lehi" className="block text-gray-700 hover:text-[#4e37a8] py-1">Lehi</a>
-              <a href="/american-fork" className="block text-gray-700 hover:text-[#4e37a8] py-1">American Fork</a>
-              <a href="/pleasant-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">Pleasant Grove</a>
-              <a href="/eagle-mountain" className="block text-gray-700 hover:text-[#4e37a8] py-1">Eagle Mountain</a>
-              <a href="/saratoga-springs" className="block text-gray-700 hover:text-[#4e37a8] py-1">Saratoga Springs</a>
-              <a href="/orem" className="block text-gray-700 hover:text-[#4e37a8] py-1">Orem</a>
-              <a href="/provo" className="block text-gray-700 hover:text-[#4e37a8] py-1">Provo</a>
+              <a href="/american-fork-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">American Fork</a>
+              <a href="/pleasant-grove-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Pleasant Grove</a>
+              <a href="/eagle-mountain-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Eagle Mountain</a>
+              <a href="/saratoga-springs-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Saratoga Springs</a>
+              <a href="/orem-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Orem</a>
+              <a href="/provo-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Provo</a>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">Summit & Tooele</div>
-              <a href="/park-city" className="block text-gray-700 hover:text-[#4e37a8] py-1">Park City</a>
-              <a href="/tooele" className="block text-gray-700 hover:text-[#4e37a8] py-1">Tooele</a>
+              <a href="/park-city-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Park City</a>
+              <a href="/tooele-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Tooele</a>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">SLC Neighborhoods</div>
               <a href="/rose-park" className="block text-gray-700 hover:text-[#4e37a8] py-1">Rose Park</a>
-              <a href="/sugar-house" className="block text-gray-700 hover:text-[#4e37a8] py-1">Sugar House</a>
-              <a href="/glendale" className="block text-gray-700 hover:text-[#4e37a8] py-1">Glendale</a>
-              <a href="/poplar-grove" className="block text-gray-700 hover:text-[#4e37a8] py-1">Poplar Grove</a>
+              <a href="/sugar-house-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Sugar House</a>
+              <a href="/glendale-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Glendale</a>
+              <a href="/poplar-grove-dumpster-rentals" className="block text-gray-700 hover:text-[#4e37a8] py-1">Poplar Grove</a>
               <a href="/downtown-salt-lake" className="block text-gray-700 hover:text-[#4e37a8] py-1">Downtown Salt Lake</a>
+              
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mt-2 pt-2 border-t border-gray-200">County-Based Services</div>
+              <a href="/dumpster-rental-salt-lake-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Salt Lake County</a>
+              <a href="/dumpster-rental-utah-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Utah County</a>
+              <a href="/dumpster-rental-davis-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Davis County</a>
+              <a href="/dumpster-rental-weber-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Weber County</a>
+              <a href="/dumpster-rental-cache-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Cache County</a>
+              <a href="/dumpster-rental-tooele-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Tooele County</a>
+              <a href="/dumpster-rental-summit-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Summit County</a>
+              <a href="/dumpster-rental-wasatch-county-ut" className="block text-gray-700 hover:text-[#4e37a8] py-1">Wasatch County</a>
             </div>
             
             <a href="/frequent-buyers" className="block text-gray-700 hover:text-[#4e37a8] py-2">

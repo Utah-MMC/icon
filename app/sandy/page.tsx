@@ -1,49 +1,55 @@
 import { Metadata } from "next";
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
-  title: "Dumpster Rental Sandy, UT | Icon Dumpsters - Same Day Delivery",
-  description: "Professional dumpster rental in Sandy, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters. Serving Sandy and Salt Lake County. Call (801) 918-6000 for free quote!",
-  keywords: "dumpster rental sandy ut, sandy dumpster rental, roll-off dumpster sandy, construction dumpster sandy utah, sandy waste disposal, dumpster rental near me sandy",
+  title: "Sandy Dumpster Rental - Professional Services in Sandy, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Sandy, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Sandy dumpster rental, dumpster rental Sandy UT, Sandy Utah dumpster, roll-off dumpster Sandy, construction dumpster Sandy, waste management Sandy",
   openGraph: {
-    title: "Dumpster Rental Sandy, UT | Icon Dumpsters",
-    description: "Professional dumpster rental services in Sandy, Utah. Same-day delivery, competitive pricing, and reliable service.",
-          url: "https://icondumpsters.com/sandy",
+    title: "Sandy Dumpster Rental - Professional Services in Sandy, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Sandy, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: "https://icondumpsters.com/sandy",
     siteName: "Icon Dumpsters",
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sandy Dumpster Rental - Icon Dumpsters',
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dumpster Rental Sandy, UT | Icon Dumpsters",
-    description: "Professional dumpster rental services in Sandy, Utah. Same-day delivery and competitive pricing.",
+    title: "Sandy Dumpster Rental - Professional Services in Sandy, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Sandy, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
   },
   alternates: {
-          canonical: "https://icondumpsters.com/sandy",
+    canonical: "/sandy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 export default function SandyPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Dumpster Rental Sandy, UT
-        </h1>
-        <p className="text-lg text-gray-600">
-          Professional dumpster rental services in Sandy, Utah. Get same-day delivery for 15-30 yard roll-off dumpsters.
-        </p>
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Icon Dumpsters in Sandy?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Same-day delivery to Sandy and surrounding areas</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>Flexible rental periods (1-30 days)</li>
-            <li>Professional customer service</li>
-            <li>Local knowledge of Sandy regulations</li>
-            <li>Multiple dumpster sizes available</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
+  const cityData = getCityData('sandy');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
+
+  return <CityPageTemplate {...cityData} />;
 }

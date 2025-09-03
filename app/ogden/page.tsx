@@ -1,125 +1,55 @@
+import type { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
+
+export const metadata: Metadata = {
+  title: "Ogden Dumpster Rental - Professional Services in Ogden, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Ogden, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Ogden dumpster rental, dumpster rental Ogden UT, Ogden Utah dumpster, roll-off dumpster Ogden, construction dumpster Ogden, waste management Ogden",
+  openGraph: {
+    title: "Ogden Dumpster Rental - Professional Services in Ogden, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Ogden, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/ogden',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ogden Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Ogden Dumpster Rental - Professional Services in Ogden, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Ogden, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: '/ogden',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function OgdenPage() {
-  return (
-    <CityPageTemplate
-      cityName="Ogden"
-      citySlug="ogden"
-      state="Utah"
-      phoneNumber="801-918-6000"
-      latitude="41.2230"
-      longitude="-111.9738"
-      landmarks={[
-        {
-                "name": "Ogden Union Station",
-                "address": "2501 Wall Ave, Ogden, UT 84401",
-                "url": "https://www.theunionstation.org/"
-        },
-        {
-                "name": "Ogden City Park",
-                "address": "343 E 25th St, Ogden, UT 84401",
-                "url": "https://www.ogdencity.com/parks-recreation/"
-        },
-        {
-                "name": "Ogden Library",
-                "address": "2464 Jefferson Ave, Ogden, UT 84401",
-                "url": "https://slcolibrary.org/location/ogden/"
-        },
-        {
-                "name": "Ogden Historic District",
-                "address": "Main St, Ogden, UT 84401",
-                "url": "https://www.ogdencity.com/community/history/"
-        },
-        {
-                "name": "Ogden Cemetery",
-                "address": "343 E 25th St, Ogden, UT 84401",
-                "url": "https://www.ogdencity.com/cemetery/"
-        }
-]}
-      businessDistricts={[
-        {
-                "name": "Ogden Downtown",
-                "description": "Historic downtown area",
-                "link": "/ogden-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Ogden East",
-                "description": "Residential neighborhoods",
-                "link": "/home-renovation-dumpster-guide"
-        },
-        {
-                "name": "Ogden West",
-                "description": "Commercial and industrial",
-                "link": "/commercial-dumpsters"
-        },
-        {
-                "name": "Ogden Business District",
-                "description": "Mixed commercial area",
-                "link": "/ogden-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Ogden Historic District",
-                "description": "Historic preservation area",
-                "link": "/home-renovation-dumpster-guide"
-        }
-]}
-      permitInfo={{
-        cityName: "Ogden",
-        phoneNumber: "801-629-8000",
-        requirements: "Contact Ogden for permit requirements and applications. We can help guide you through the process."
-      }}
-      contentSections={{
-        overview: "Icon Dumpsters provides reliable dumpster rental services throughout Ogden, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.",
-        residentialServices: [
-          "Home renovations and remodeling",
-          "Basement cleanouts",
-          "Garage organization",
-          "Yard waste removal",
-          "Estate cleanouts"
-        ],
-        commercialServices: [
-          "Construction and demolition",
-          "Office renovations",
-          "Retail store cleanouts",
-          "Industrial waste removal",
-          "Event cleanup"
-        ],
-        whyChooseUs: "Icon Dumpsters is your trusted partner for dumpster rental in Ogden. We understand the unique needs of this community and provide reliable, professional service for all your waste management needs.",
-        dumpsterSizes: [
-          {
-            size: "15 Yard",
-            description: "Perfect for small to medium projects",
-            useCases: [
-              "Kitchen remodel",
-              "Bathroom renovation",
-              "Garage cleanout",
-              "Small construction"
-            ]
-          },
-          {
-            size: "20 Yard",
-            description: "Great for medium to large projects",
-            useCases: [
-              "Full home renovation",
-              "Large construction",
-              "Commercial projects",
-              "Major cleanouts"
-            ]
-          },
-          {
-            size: "30 Yard",
-            description: "For major projects and construction",
-            useCases: [
-              "Large construction",
-              "Commercial demolition",
-              "Major renovations",
-              "Industrial projects"
-            ]
-          }
-        ],
-        localInfo: "Ogden is a vibrant community in Utah known for its beautiful surroundings and strong community spirit. From residential neighborhoods to commercial districts, Ogden offers a great place to live and work.",
-        serviceAreas: "We provide dumpster rental services throughout Ogden and surrounding areas. Our service area covers residential neighborhoods, commercial districts, and industrial areas to meet all your waste management needs."
-      }}
-    />
-  );
+  const cityData = getCityData('ogden');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
+
+  return <CityPageTemplate {...cityData} />;
 }

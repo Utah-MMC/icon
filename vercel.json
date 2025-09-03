@@ -143,6 +143,5 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "compress": true
+  "trailingSlash": false
 }

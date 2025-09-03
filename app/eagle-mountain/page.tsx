@@ -1,125 +1,55 @@
+import type { Metadata } from 'next';
 import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
+
+export const metadata: Metadata = {
+  title: "Eagle Mountain Dumpster Rental - Professional Services in Eagle Mountain, UT | Icon Dumpsters",
+  description: "Get reliable dumpster rental in Eagle Mountain, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  keywords: "Eagle Mountain dumpster rental, dumpster rental Eagle Mountain UT, Eagle Mountain Utah dumpster, roll-off dumpster Eagle Mountain, construction dumpster Eagle Mountain, waste management Eagle Mountain",
+  openGraph: {
+    title: "Eagle Mountain Dumpster Rental - Professional Services in Eagle Mountain, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Eagle Mountain, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available.",
+    url: 'https://icondumpsters.com/eagle-mountain',
+    siteName: 'Icon Dumpsters',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Eagle Mountain Dumpster Rental - Icon Dumpsters',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Eagle Mountain Dumpster Rental - Professional Services in Eagle Mountain, UT | Icon Dumpsters",
+    description: "Get reliable dumpster rental in Eagle Mountain, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
+    images: ['/images/og-image.png'],
+  },
+  alternates: {
+    canonical: '/eagle-mountain',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function EagleMountainPage() {
-  return (
-    <CityPageTemplate
-      cityName="Eagle Mountain"
-      citySlug="eagle-mountain"
-      state="Utah"
-      phoneNumber="801-918-6000"
-      latitude="40.3141"
-      longitude="-112.0069"
-      landmarks={[
-        {
-                "name": "Eagle Mountain City Park",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
-                "url": "https://www.eaglemountaincity.org/parks-recreation/"
-        },
-        {
-                "name": "Eagle Mountain Library",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
-                "url": "https://slcolibrary.org/location/eagle-mountain/"
-        },
-        {
-                "name": "Eagle Mountain Golf Course",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
-                "url": "https://www.eaglemountaincity.org/parks-recreation/golf-course/"
-        },
-        {
-                "name": "Eagle Mountain Cemetery",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
-                "url": "https://www.eaglemountaincity.org/cemetery/"
-        },
-        {
-                "name": "Eagle Mountain City Hall",
-                "address": "1650 E Stagecoach Run, Eagle Mountain, UT 84005",
-                "url": "https://www.eaglemountaincity.org/"
-        }
-]}
-      businessDistricts={[
-        {
-                "name": "Eagle Mountain City Center",
-                "description": "City government and services",
-                "link": "/eagle-mountain-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Eagle Mountain East",
-                "description": "Residential neighborhoods",
-                "link": "/home-renovation-dumpster-guide"
-        },
-        {
-                "name": "Eagle Mountain West",
-                "description": "Commercial and residential mix",
-                "link": "/commercial-dumpsters"
-        },
-        {
-                "name": "Eagle Mountain Business District",
-                "description": "Mixed residential and commercial",
-                "link": "/eagle-mountain-dumpster-rental-guide-2025"
-        },
-        {
-                "name": "Eagle Mountain North",
-                "description": "Growing residential area",
-                "link": "/home-renovation-dumpster-guide"
-        }
-]}
-      permitInfo={{
-        cityName: "Eagle Mountain",
-        phoneNumber: "801-789-6600",
-        requirements: "Contact Eagle Mountain for permit requirements and applications. We can help guide you through the process."
-      }}
-      contentSections={{
-        overview: "Icon Dumpsters provides reliable dumpster rental services throughout Eagle Mountain, Utah. Whether you're tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.",
-        residentialServices: [
-          "Home renovations and remodeling",
-          "Basement cleanouts",
-          "Garage organization",
-          "Yard waste removal",
-          "Estate cleanouts"
-        ],
-        commercialServices: [
-          "Construction and demolition",
-          "Office renovations",
-          "Retail store cleanouts",
-          "Industrial waste removal",
-          "Event cleanup"
-        ],
-        whyChooseUs: "Icon Dumpsters is your trusted partner for dumpster rental in Eagle Mountain. We understand the unique needs of this community and provide reliable, professional service for all your waste management needs.",
-        dumpsterSizes: [
-          {
-            size: "15 Yard",
-            description: "Perfect for small to medium projects",
-            useCases: [
-              "Kitchen remodel",
-              "Bathroom renovation",
-              "Garage cleanout",
-              "Small construction"
-            ]
-          },
-          {
-            size: "20 Yard",
-            description: "Great for medium to large projects",
-            useCases: [
-              "Full home renovation",
-              "Large construction",
-              "Commercial projects",
-              "Major cleanouts"
-            ]
-          },
-          {
-            size: "30 Yard",
-            description: "For major projects and construction",
-            useCases: [
-              "Large construction",
-              "Commercial demolition",
-              "Major renovations",
-              "Industrial projects"
-            ]
-          }
-        ],
-        localInfo: "Eagle Mountain is a vibrant community in Utah known for its beautiful surroundings and strong community spirit. From residential neighborhoods to commercial districts, Eagle Mountain offers a great place to live and work.",
-        serviceAreas: "We provide dumpster rental services throughout Eagle Mountain and surrounding areas. Our service area covers residential neighborhoods, commercial districts, and industrial areas to meet all your waste management needs."
-      }}
-    />
-  );
+  const cityData = getCityData('eagle-mountain');
+  
+  if (!cityData) {
+    return <div>City data not found</div>;
+  }
+
+  return <CityPageTemplate {...cityData} />;
 }

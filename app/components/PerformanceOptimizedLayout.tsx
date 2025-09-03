@@ -3,6 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 interface PerformanceOptimizedLayoutProps {
   children: React.ReactNode;
   preloadCritical?: boolean;
@@ -21,32 +28,21 @@ export default function PerformanceOptimizedLayout({
   useEffect(() => {
     // Preload critical resources
     if (preloadCritical) {
-      this.preloadCriticalResources();
+      preloadCriticalResources();
     }
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading) {
-      this.setupIntersectionObserver();
+      setupIntersectionObserver();
     }
 
     // Performance monitoring
-    this.setupPerformanceMonitoring();
+    setupPerformanceMonitoring();
 
     setIsLoaded(true);
   }, [preloadCritical, enableLazyLoading]);
 
-  useEffect(() => {
-    // Route change performance monitoring
-    const handleRouteChange = () => {
-      this.measureRouteChange();
-    };
 
-    router.events?.on('routeChangeComplete', handleRouteChange);
-    
-    return () => {
-      router.events?.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
 
   const preloadCriticalResources = () => {
     // Preload critical CSS
@@ -117,7 +113,7 @@ export default function PerformanceOptimizedLayout({
         // FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach((entry: any) => {
             console.log('FID:', entry.processingStart - entry.startTime);
             
             if (window.gtag) {
