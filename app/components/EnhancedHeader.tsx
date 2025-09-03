@@ -293,7 +293,8 @@ export default function EnhancedHeader() {
                   <div className="text-xs text-gray-500">Call Now</div>
                   <a 
                     href="tel:(801) 918-6000" 
-                    className="text-sm font-semibold text-[#4e37a8] hover:text-purple-700"
+                    className="text-sm font-semibold text-[#4e37a8] hover:text-purple-700 transition-colors cursor-pointer"
+                    title="Call (801) 918-6000"
                   >
                     (801) 918-6000
                   </a>
