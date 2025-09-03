@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
+// Force sitemap regeneration - updated 2025-01-03
+
 function collectRoutePaths(): string[] {
   const appDir = path.join(process.cwd(), 'app')
   const excluded = new Set(['api', 'components', 'config', 'public', 'images', 'hostgator-deploy', 'scripts', 'global-error.tsx'])
