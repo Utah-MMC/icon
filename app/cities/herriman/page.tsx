@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
+import PageHero from '../../components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Herriman, UT | Icon Dumpsters - Local Dumpster Rental Services',

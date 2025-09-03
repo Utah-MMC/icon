@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import PageHero from '../../components/PageHero';
+import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: "Dumpster Rentals in Salt Lake County County, Utah | Icon Dumpsters",

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import PageHero from '@/app/components/PageHero';
+import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Centerville, UT | Fast Delivery & Competitive Pricing',
