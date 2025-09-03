@@ -12,17 +12,17 @@ const patterns = [
   {
     name: 'HTTP URLs',
     regex: /https?:\/\/www\.icondumpsters\.com/g,
-    description: 'URLs starting with http:// or https://www.icondumpsters.com'
+    description: 'URLs starting with http:// or https://www.icondumpsters.com (should be https://icondumpsters.com)'
   },
   {
     name: 'HTTP without www',
-    regex: /http:\/\/icondumpsters\.com/g,
-    description: 'URLs starting with http://icondumpsters.com (should be https)'
+    regex: /http:\/\/icondumpsters.com/g,
+    description: 'URLs starting with http://icondumpsters.com (should be https://icondumpsters.com)'
   },
   {
     name: 'Relative www references',
     regex: /www\.icondumpsters\.com/g,
-    description: 'References to www.icondumpsters.com without protocol'
+    description: 'References to www.icondumpsters.com without protocol (should be icondumpsters.com)'
   }
 ];
 
