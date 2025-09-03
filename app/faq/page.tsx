@@ -184,17 +184,7 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ArticleSchema
-        title="Dumpster Rental FAQ - Common Questions & Answers"
-        description="Get answers to frequently asked questions about dumpster rental in Utah. Learn about sizes, pricing, permits, delivery, and more."
-        author="Icon Dumpsters"
-        publishedDate="2025-01-15"
-        modifiedDate="2025-01-15"
-        imageUrl="https://icondumpsters.com/images/IMG_0350.jpg"
-        articleUrl="https://icondumpsters.com/faq"
-        category="FAQ"
-        readTime="PT5M"
-      />
+      {/* Article Schema removed to prevent duplicate structured data - FAQ schema already provided by FAQSchema */}
       
       {/* FAQ Schema for structured data */}
       <FAQSchema 

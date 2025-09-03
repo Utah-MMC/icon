@@ -38,38 +38,7 @@ export const metadata: Metadata = {
 export default function DumpsterSizeEstimationGuide() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Schema Markup for FAQ and Article */}
-      <Script
-        id="article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)",
-            "description": "Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.",
-            "image": "https://icondumpsters.com/images/blog/dumpster-size-estimation.jpg",
-            "author": {
-              "@type": "Organization",
-              "name": "Icon Dumpsters"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Icon Dumpsters",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png"
-              }
-            },
-                         "datePublished": "2025-08-24",
-             "dateModified": "2025-08-24",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout"
-            }
-          })
-        }}
-      />
+      {/* Article Schema removed to prevent duplicate structured data - FAQ schema already provided */}
 
       {/* FAQ Schema Markup */}
       <Script

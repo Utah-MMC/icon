@@ -4,11 +4,11 @@ This is a [Next.js](https://nextjs.org) project for Icon Dumpsters, a profession
 
 ## Recent Updates (Latest Deployment)
 
-- **Domain Configuration**: Successfully configured custom domain with www redirect
-- **SEO Optimization**: Updated all internal links to use canonical www URLs
+- **Domain Configuration**: Successfully consolidated to non-www domain (icondumpsters.com)
+- **SEO Optimization**: Updated all internal links to use canonical non-www URLs
 - **City Pages**: 40+ Utah city pages with local SEO optimization
 - **Meta Tags**: Consistent OpenGraph and canonical URLs across all pages
-- **Sitemap**: Updated to use www domain for better search engine indexing
+- **Sitemap**: Updated to use non-www domain for better search engine indexing
 - **Email Templates**: Updated all email service templates with correct domain
 - **Fixed 404 errors**: Added fallback image handling with Client Components
 - **Improved error handling**: Added ErrorBoundary component and custom error pages
@@ -30,10 +30,10 @@ This is a [Next.js](https://nextjs.org) project for Icon Dumpsters, a profession
 The site is now properly configured with:
 - **Primary Domain**: `icondumpsters.com`
 - **Canonical URL**: `https://icondumpsters.com`
-- **WWW Redirect**: Non-www automatically redirects to www
+- **WWW Redirect**: www automatically redirects to non-www (301 redirect)
 - **SSL Certificate**: Automatic HTTPS via Vercel
 - **DNS**: CNAME record pointing to Vercel deployment
-- **SEO**: All internal links and metadata use www version
+- **SEO**: All internal links and metadata use non-www version
 
 ## Troubleshooting 404 Errors
 
@@ -46,7 +46,7 @@ If you encounter a 404 error:
 5. **Health check**: Visit `/api/health` to verify API routes are working
 
 ### Common Issues:
-- **Wrong URL**: Make sure you're using https://icondumpsters.com
+- **Wrong URL**: Make sure you're using https://icondumpsters.com (not www.icondumpsters.com)
 - **Deployment in progress**: Wait a few minutes for the deployment to complete
 - **Cache issues**: Try hard refresh (Ctrl+F5) or incognito mode
 - **DNS propagation**: DNS changes can take up to 48 hours to fully propagate

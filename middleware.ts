@@ -5,7 +5,7 @@ export function middleware(req: NextRequest) {
   const { pathname, hostname } = req.nextUrl;
   
   // Redirect www to non-www
-  if (hostname === 'icondumpsters.com') {
+  if (hostname === 'www.icondumpsters.com') {
     const url = req.nextUrl.clone();
     url.hostname = 'icondumpsters.com';
     return NextResponse.redirect(url, 301);
