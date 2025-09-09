@@ -218,17 +218,17 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Top Cities</h4>
             <div className="grid grid-cols-2 gap-1 text-sm">
-              <a href="/salt-lake-city-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
-              <a href="/west-valley-city-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
-              <a href="/sandy-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
-              <a href="/west-jordan-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
-              <a href="/murray-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Murray</a>
-              <a href="/south-jordan-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
-              <a href="/draper-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Draper</a>
-              <a href="/midvale-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
-              <a href="/holladay-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
-              <a href="/taylorsville-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
-              <a href="/kearns-dumpster-rentals" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
+              <a href="/salt-lake-city" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
+              <a href="/west-valley-city" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
+              <a href="/sandy" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
+              <a href="/west-jordan" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
+              <a href="/murray" className="text-purple-200 hover:text-white transition-colors">Murray</a>
+              <a href="/south-jordan" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
+              <a href="/draper" className="text-purple-200 hover:text-white transition-colors">Draper</a>
+              <a href="/midvale" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
+              <a href="/holladay" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
+              <a href="/taylorsville" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
+              <a href="/kearns" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
               <a href="/millcreek" className="text-purple-200 hover:text-white transition-colors">Millcreek</a>
             </div>
           </div>
@@ -237,11 +237,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Helpful Links</h4>
             <div className="grid grid-cols-1 gap-1 text-sm">
-              <a href="/dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
-              <a href="/dumpster-rentals-near-me-2025" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
-              <a href="/construction-waste-management-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
-              <a href="/home-renovation-waste-disposal-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
-              <a href="/commercial-dumpster-rental-business-solutions" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
+              <a href="/complete-dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
+              <a href="/locations" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
+              <a href="/complete-dumpster-rental-guide-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
+              <a href="/home-renovation-dumpster-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
+              <a href="/services" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
               <a href="/fees" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_fees' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_fees' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Fees & Surcharges</a>
               <a href="/frequent-buyers" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_frequent' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_frequent' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Frequent Buyers Program</a>
               <a href="/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_service_area' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_service_area' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Service Area</a>

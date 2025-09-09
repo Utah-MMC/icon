@@ -16,10 +16,12 @@ class EmailService {
     
     try {
       this.transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: process.env.SMTP_HOST || 'smtp.gmail.com',
+        port: parseInt(process.env.SMTP_PORT || '587'),
+        secure: false,
         auth: {
-          user: process.env.EMAIL_USER || 'your-email@gmail.com',
-          pass: process.env.EMAIL_PASS || 'your-app-password'
+          user: process.env.SMTP_USER || 'icondumpsters@gmail.com',
+          pass: process.env.SMTP_PASS || 'your-app-password'
         }
       });
       console.log('EmailService: Email service configured with SMTP settings');
@@ -35,7 +37,7 @@ class EmailService {
       const transporter = await this.initializeTransporter();
       
       const mailOptions = {
-        from: process.env.EMAIL_USER || 'your-email@gmail.com',
+        from: process.env.SMTP_USER || 'icondumpsters@gmail.com',
         to,
         subject,
         text,

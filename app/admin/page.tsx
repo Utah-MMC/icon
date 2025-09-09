@@ -18,7 +18,7 @@ export default function AdminLogin() {
         setError("Invalid password");
         return;
       }
-      window.location.href = '/kpi-dashboard';
+      window.location.href = '/admin-dashboard';
     } catch {
       setError("Login failed");
     } finally {

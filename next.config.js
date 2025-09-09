@@ -116,6 +116,77 @@ const nextConfig = {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
 
+  // Redirects for broken links and domain migration
+  async redirects() {
+    return [
+      // CRITICAL: Redirect all www traffic to non-www (301 permanent redirect)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.icondumpsters.com',
+          },
+        ],
+        destination: 'https://icondumpsters.com/:path*',
+        permanent: true,
+      },
+      // Redirect common broken links to correct pages
+      {
+        source: '/Link',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/complete',
+        destination: '/complete-dumpster-rental-guide-2025',
+        permanent: true,
+      },
+      {
+        source: '/tooel',
+        destination: '/tooele',
+        permanent: true,
+      },
+      {
+        source: '/construction-waste-management',
+        destination: '/complete-dumpster-rental-guide-2025',
+        permanent: true,
+      },
+      {
+        source: '/commercial-dumpster-rental',
+        destination: '/services/commercial-dumpster-rentals',
+        permanent: true,
+      },
+      {
+        source: '/how-to-choose-dumpster-size',
+        destination: '/dumpster-sizes',
+        permanent: true,
+      },
+      // Redirect city guide pages that might be missing
+      {
+        source: '/rose-park-dumpster-rental-guide-2025',
+        destination: '/rose-park',
+        permanent: true,
+      },
+      // Redirect service pages to main services page
+      {
+        source: '/services/residential-dumpster-rentals',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/services/commercial-dumpster-rentals',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/services/construction-dumpster-rentals',
+        destination: '/services',
+        permanent: true,
+      },
+    ];
+  },
+
   // Headers for performance
   async headers() {
     return [
