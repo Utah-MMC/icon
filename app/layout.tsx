@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import StructuredData from "./components/StructuredData";
+import StructuredData, { IconDumpstersBusinessData } from "./components/StructuredData";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import CookieConsent from "./components/CookieConsent";
 import KPITracking from "./components/KPITracking";
@@ -139,7 +139,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <StructuredData />
+        <StructuredData type="organization" data={IconDumpstersBusinessData} />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         {/* Ahrefs Analytics */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="ctDHetXbMmD8XDhk/vJMcQ" async></script>

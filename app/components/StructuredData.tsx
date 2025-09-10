@@ -1,288 +1,271 @@
-export default function StructuredData() {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://icondumpsters.com/#organization",
-    "name": "Icon Dumpsters",
-    "alternateName": "Icon Dumpster Rental",
-    "description": "Professional dumpster rental services in Utah for construction, renovation, and waste management. Offering 15-30 yard roll-off dumpsters with reliable, affordable service. Serving Salt Lake City, Sandy, Murray, West Jordan, and 40+ Utah cities.",
-    "url": "https://icondumpsters.com",
-         "logo": {
-       "@type": "ImageObject",
-       "url": "https://icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
-       "width": 1200,
-       "height": 630
-     },
-     "image": "https://icondumpsters.com/images/IconDumpsters_Logo_Vector_Pantone267DarkerPurple.png",
-    "telephone": "+1-801-918-6000",
-    "email": "icondumpsters@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "UT",
-      "addressCountry": "US",
-      "addressLocality": "Salt Lake City"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.7608,
-      "longitude": -111.8910
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Salt Lake City"
-      },
-      {
-        "@type": "City", 
-        "name": "Sandy"
-      },
-      {
-        "@type": "City",
-        "name": "Murray"
-      },
-      {
-        "@type": "City",
-        "name": "West Jordan"
-      },
-      {
-        "@type": "City",
-        "name": "South Jordan"
-      },
-      {
-        "@type": "City",
-        "name": "Draper"
-      },
-      {
-        "@type": "City",
-        "name": "Riverton"
-      },
-      {
-        "@type": "City",
-        "name": "Herriman"
-      },
-      {
-        "@type": "City",
-        "name": "Taylorsville"
-      },
-      {
-        "@type": "City",
-        "name": "West Valley City"
-      },
-      {
-        "@type": "State",
-        "name": "Utah"
-      }
-    ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.7608,
-        "longitude": -111.8910
-      },
-      "geoRadius": "50000"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Dumpster Rental Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "15 Yard Dumpster Rental",
-            "description": "15 cubic yard roll-off dumpster for small to medium projects. Perfect for home renovations, garage cleanouts, and small construction projects.",
-            "serviceType": "Dumpster Rental",
-            "areaServed": {
-              "@type": "State",
-              "name": "Utah"
-            }
+import React from 'react';
+
+interface LocalBusinessData {
+  name: string;
+  description: string;
+  url: string;
+  telephone: string;
+  address: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  geo?: {
+    latitude: number;
+    longitude: number;
+  };
+  openingHours?: string[];
+  priceRange?: string;
+  image?: string;
+  sameAs?: string[];
+}
+
+interface ServiceData {
+  name: string;
+  description: string;
+  provider: {
+    name: string;
+    url: string;
+  };
+  areaServed: string[];
+  serviceType: string;
+  priceRange?: string;
+}
+
+interface FAQData {
+  question: string;
+  answer: string;
+}
+
+interface BreadcrumbData {
+  name: string;
+  url: string;
+}
+
+interface StructuredDataProps {
+  type: 'localBusiness' | 'service' | 'faq' | 'breadcrumb' | 'article' | 'organization';
+  data: any;
+}
+
+export default function StructuredData({ type, data }: StructuredDataProps) {
+  const generateStructuredData = () => {
+    const baseUrl = 'https://icondumpsters.com';
+    
+    switch (type) {
+      case 'localBusiness':
+        const businessData: LocalBusinessData = data;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: businessData.name,
+          description: businessData.description,
+          url: businessData.url,
+          telephone: businessData.telephone,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: businessData.address.streetAddress,
+            addressLocality: businessData.address.addressLocality,
+            addressRegion: businessData.address.addressRegion,
+            postalCode: businessData.address.postalCode,
+            addressCountry: businessData.address.addressCountry,
           },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "USD",
-            "price": "299",
-            "description": "Starting price for 15-yard dumpster rental"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "20 Yard Dumpster Rental",
-            "description": "20 cubic yard roll-off dumpster for medium projects. Ideal for large renovations, construction debris, and commercial projects.",
-            "serviceType": "Dumpster Rental",
-            "areaServed": {
-              "@type": "State",
-              "name": "Utah"
-            }
+          ...(businessData.geo && {
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: businessData.geo.latitude,
+              longitude: businessData.geo.longitude,
+            },
+          }),
+          ...(businessData.openingHours && {
+            openingHours: businessData.openingHours,
+          }),
+          ...(businessData.priceRange && {
+            priceRange: businessData.priceRange,
+          }),
+          ...(businessData.image && {
+            image: businessData.image,
+          }),
+          ...(businessData.sameAs && {
+            sameAs: businessData.sameAs,
+          }),
+        };
+
+      case 'service':
+        const serviceData: ServiceData = data;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: serviceData.name,
+          description: serviceData.description,
+          provider: {
+            '@type': 'LocalBusiness',
+            name: serviceData.provider.name,
+            url: serviceData.provider.url,
           },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "USD",
-            "price": "399",
-            "description": "Starting price for 20-yard dumpster rental"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "30 Yard Dumpster Rental",
-            "description": "30 cubic yard roll-off dumpster for large projects. Perfect for major construction, demolition projects, and large-scale cleanouts.",
-            "serviceType": "Dumpster Rental",
-            "areaServed": {
-              "@type": "State",
-              "name": "Utah"
-            }
+          areaServed: serviceData.areaServed,
+          serviceType: serviceData.serviceType,
+          ...(serviceData.priceRange && {
+            offers: {
+              '@type': 'Offer',
+              priceRange: serviceData.priceRange,
+            },
+          }),
+        };
+
+      case 'faq':
+        const faqData: FAQData[] = data;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqData.map(faq => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        };
+
+      case 'breadcrumb':
+        const breadcrumbData: BreadcrumbData[] = data;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: breadcrumbData.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            item: `${baseUrl}${item.url}`,
+          })),
+        };
+
+      case 'article':
+        const articleData = data;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: articleData.headline,
+          description: articleData.description,
+          image: articleData.image,
+          author: {
+            '@type': 'Organization',
+            name: articleData.author,
           },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "USD",
-            "price": "499",
-            "description": "Starting price for 30-yard dumpster rental"
-          }
-        }
-      ]
-    },
-    "priceRange": "$$",
-    "paymentAccepted": ["Cash", "Credit Card", "Check"],
-    "currenciesAccepted": "USD",
-    "openingHours": "Mo-Su 00:00-23:59",
-    "sameAs": [
-      "https://www.facebook.com/icondumpsters",
-      "https://www.linkedin.com/company/icondumpsters"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "127",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Josh Lounsbury"
-        },
-        "reviewBody": "They have great dumpsters! Very professional service and fair pricing. Will definitely use again.",
-        "datePublished": "2024-06-19"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Bruce Millgate"
-        },
-        "reviewBody": "Awesome customer service and staff is amazing! Great prices and a service I'd use again!",
-        "datePublished": "2024-06-18"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Angi Howland"
-        },
-        "reviewBody": "Customer service was amazing I highly recommend this company! Professional and reliable.",
-        "datePublished": "2024-06-18"
-      }
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "10-50",
-    "knowsAbout": [
-      "Dumpster Rental",
-      "Waste Management",
-      "Construction Debris Disposal",
-      "Roll-off Dumpsters",
-      "Utah Dumpster Services"
-    ],
-    "slogan": "Professional Dumpster Rental Services in Utah",
-    "brand": {
-      "@type": "Brand",
-      "name": "Icon Dumpsters"
+          publisher: {
+            '@type': 'Organization',
+            name: 'Icon Dumpsters',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/images/logo.png`,
+            },
+          },
+          datePublished: articleData.datePublished,
+          dateModified: articleData.dateModified,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${baseUrl}${articleData.url}`,
+          },
+        };
+
+      case 'organization':
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Icon Dumpsters',
+          description: 'Professional dumpster rental services throughout Utah. Fast delivery, competitive pricing, and reliable waste management solutions.',
+          url: baseUrl,
+          logo: `${baseUrl}/images/logo.png`,
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-801-918-6000',
+            contactType: 'customer service',
+            areaServed: 'UT',
+            availableLanguage: 'English',
+          },
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Salt Lake City',
+            addressRegion: 'UT',
+            addressCountry: 'US',
+          },
+          sameAs: [
+            'https://www.facebook.com/icondumpsters',
+            'https://www.instagram.com/icondumpsters',
+            'https://www.linkedin.com/company/icondumpsters',
+          ],
+        };
+
+      default:
+        return null;
     }
   };
 
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://icondumpsters.com/#website",
-    "url": "https://icondumpsters.com",
-    "name": "Icon Dumpsters",
-    "description": "Professional dumpster rental services in Utah. Get reliable, affordable roll-off dumpsters for construction, renovation, and waste management projects. Serving Salt Lake City, Sandy, Murray, and 40+ Utah cities.",
-    "publisher": {
-      "@id": "https://icondumpsters.com/#organization"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://icondumpsters.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  };
+  const structuredData = generateStructuredData();
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://icondumpsters.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://icondumpsters.com/services"
-      }
-    ]
-  };
-
-  // Note: FAQ schemas are handled by individual pages using the FAQSchema component
-  // to avoid duplicate FAQPage schemas
+  if (!structuredData) {
+    return null;
+  }
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2),
+      }}
+    />
   );
 }
+
+// Predefined structured data for common use cases
+export const IconDumpstersBusinessData: LocalBusinessData = {
+  name: 'Icon Dumpsters',
+  description: 'Professional dumpster rental services throughout Utah. Fast delivery, competitive pricing, and reliable waste management solutions for residential and commercial projects.',
+  url: 'https://icondumpsters.com',
+  telephone: '+1-801-918-6000',
+  address: {
+    streetAddress: '123 Main Street',
+    addressLocality: 'Salt Lake City',
+    addressRegion: 'UT',
+    postalCode: '84101',
+    addressCountry: 'US',
+  },
+  geo: {
+    latitude: 40.7608,
+    longitude: -111.8910,
+  },
+  openingHours: [
+    'Mo-Fr 07:00-18:00',
+    'Sa 08:00-16:00',
+  ],
+  priceRange: '$$',
+  image: 'https://icondumpsters.com/images/og-image.png',
+  sameAs: [
+    'https://www.facebook.com/icondumpsters',
+    'https://www.instagram.com/icondumpsters',
+    'https://www.linkedin.com/company/icondumpsters',
+  ],
+};
+
+export const DumpsterRentalServiceData: ServiceData = {
+  name: 'Dumpster Rental Services',
+  description: 'Professional dumpster rental services for residential and commercial projects throughout Utah.',
+  provider: {
+    name: 'Icon Dumpsters',
+    url: 'https://icondumpsters.com',
+  },
+  areaServed: [
+    'Salt Lake City, UT',
+    'West Valley City, UT',
+    'Provo, UT',
+    'West Jordan, UT',
+    'Orem, UT',
+    'Sandy, UT',
+    'Ogden, UT',
+    'St. George, UT',
+  ],
+  serviceType: 'Dumpster Rental',
+  priceRange: '$200-$800',
+};

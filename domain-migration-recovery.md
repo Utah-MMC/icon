@@ -60,3 +60,4 @@ Test these URLs to ensure 301 redirects work:
 - [ ] Rankings start recovering
 - [ ] Organic traffic returns to normal
 - [ ] All pages indexed under new domain
+

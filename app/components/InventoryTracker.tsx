@@ -81,9 +81,11 @@ export default function InventoryTracker() {
     try {
       // Use InventoryService to add item
       const newItem = inventoryService.addItem({
-        name: dumpster.size,
+        name: `${dumpster.size} Yard Dumpster`,
+        size: dumpster.size,
         quantity: 1,
-        location: dumpster.location
+        location: dumpster.location,
+        status: dumpster.status
       });
       if (newItem) {
         // Refresh from InventoryService
@@ -119,9 +121,11 @@ export default function InventoryTracker() {
     try {
       // Use InventoryService to update item
       const success = inventoryService.updateItem(id, {
-        name: updates.size || '',
+        name: updates.size ? `${updates.size} Yard Dumpster` : undefined,
+        size: updates.size,
         quantity: 1,
-        location: updates.location || ''
+        location: updates.location,
+        status: updates.status
       });
       if (success) {
         // Refresh from InventoryService

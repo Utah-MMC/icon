@@ -4,7 +4,7 @@ interface InventoryItem {
   size: string;
   quantity: number;
   location: string;
-  status: 'available' | 'rented' | 'maintenance' | 'delivered';
+  status: 'available' | 'rented' | 'maintenance' | 'out-for-delivery' | 'reserved';
   customerId?: string;
   rentalStartDate?: Date;
   rentalEndDate?: Date;
@@ -201,7 +201,7 @@ class InventoryService {
   }
 
   // Get items by status
-  getItemsByStatus(status: 'available' | 'rented' | 'maintenance' | 'delivered'): InventoryItem[] {
+  getItemsByStatus(status: 'available' | 'rented' | 'maintenance' | 'out-for-delivery' | 'reserved'): InventoryItem[] {
     return this.inventory.filter(item => item.status === status);
   }
 

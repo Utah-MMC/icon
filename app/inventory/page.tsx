@@ -9,7 +9,7 @@ interface InventoryItem {
   size: string;
   quantity: number;
   location: string;
-  status: 'available' | 'rented' | 'maintenance' | 'delivered';
+  status: 'available' | 'rented' | 'maintenance' | 'out-for-delivery' | 'reserved';
   customerId?: string;
   rentalStartDate?: Date;
   rentalEndDate?: Date;
@@ -18,7 +18,7 @@ interface InventoryItem {
 
 export default function InventoryPage() {
   const [inventory, setInventory] = useState<InventoryItem[]>([]);
-  const [filter, setFilter] = useState<'all' | 'available' | 'rented' | 'maintenance' | 'delivered'>('all');
+  const [filter, setFilter] = useState<'all' | 'available' | 'rented' | 'maintenance' | 'out-for-delivery' | 'reserved'>('all');
   const [sizeFilter, setSizeFilter] = useState<string>('all');
 
   useEffect(() => {
@@ -41,7 +41,8 @@ export default function InventoryPage() {
       case 'available': return 'bg-green-100 text-green-800';
       case 'rented': return 'bg-blue-100 text-blue-800';
       case 'maintenance': return 'bg-yellow-100 text-yellow-800';
-      case 'delivered': return 'bg-purple-100 text-purple-800';
+      case 'out-for-delivery': return 'bg-orange-100 text-orange-800';
+      case 'reserved': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -51,7 +52,8 @@ export default function InventoryPage() {
       case 'available': return '✅';
       case 'rented': return '🚛';
       case 'maintenance': return '🔧';
-      case 'delivered': return '📦';
+      case 'out-for-delivery': return '🚚';
+      case 'reserved': return '📦';
       default: return '❓';
     }
   };
@@ -131,7 +133,8 @@ export default function InventoryPage() {
                 <option value="available">Available</option>
                 <option value="rented">Rented</option>
                 <option value="maintenance">Maintenance</option>
-                <option value="delivered">Delivered</option>
+                <option value="out-for-delivery">Out for Delivery</option>
+                <option value="reserved">Reserved</option>
               </select>
             </div>
             
