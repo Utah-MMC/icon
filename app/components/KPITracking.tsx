@@ -66,7 +66,18 @@ export default function KPITracking() {
         if (typeof window !== 'undefined') {
           const stored = localStorage.getItem('iconDumpstersKPI');
           if (stored) {
-            this.metrics = { ...this.metrics, ...JSON.parse(stored) };
+            try {
+              const parsedData = JSON.parse(stored);
+              // Only load data if it's from today or recent (prevent stale data)
+              const today = new Date().toDateString();
+              const dataDate = parsedData.lastUpdated ? new Date(parsedData.lastUpdated).toDateString() : today;
+              
+              if (dataDate === today || parsedData.lastUpdated) {
+                this.metrics = { ...this.metrics, ...parsedData.metrics };
+              }
+            } catch (error) {
+              console.error('Failed to parse stored KPI data:', error);
+            }
           }
         }
       }
@@ -74,7 +85,12 @@ export default function KPITracking() {
       // Save data to localStorage
       saveData() {
         if (typeof window !== 'undefined') {
-          localStorage.setItem('iconDumpstersKPI', JSON.stringify(this.metrics));
+          const dataToStore = {
+            metrics: this.metrics,
+            lastUpdated: new Date().toISOString(),
+            version: '1.0'
+          };
+          localStorage.setItem('iconDumpstersKPI', JSON.stringify(dataToStore));
         }
       }
 
@@ -115,7 +131,13 @@ export default function KPITracking() {
         this.saveData();
         this.updateDashboard();
         
-        // Send to analytics
+        // Send to analytics API
+        this.sendAnalyticsEvent('form', 'quote_request', {
+          sessionId: this.getSessionId(),
+          timestamp: Date.now()
+        });
+        
+        // Send to Google Analytics
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'quote_request', {
             'event_category': 'engagement',
@@ -130,7 +152,13 @@ export default function KPITracking() {
         this.saveData();
         this.updateDashboard();
         
-        // Send to analytics
+        // Send to analytics API
+        this.sendAnalyticsEvent('cta', 'phone_call', {
+          sessionId: this.getSessionId(),
+          timestamp: Date.now()
+        });
+        
+        // Send to Google Analytics
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'phone_call', {
             'event_category': 'engagement',
@@ -144,6 +172,41 @@ export default function KPITracking() {
         this.metrics.websiteVisitors++;
         this.saveData();
         this.updateDashboard();
+      }
+
+      // Get or create session ID
+      getSessionId() {
+        if (typeof window !== 'undefined') {
+          let sessionId = sessionStorage.getItem('iconDumpstersSessionId');
+          if (!sessionId) {
+            sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            sessionStorage.setItem('iconDumpstersSessionId', sessionId);
+          }
+          return sessionId;
+        }
+        return 'unknown';
+      }
+
+      // Send analytics event
+      async sendAnalyticsEvent(type: string, name: string, meta: any = {}) {
+        try {
+          await fetch('/api/analytics', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type,
+              name,
+              meta: {
+                ...meta,
+                path: window.location.pathname,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent
+              }
+            })
+          });
+        } catch (error) {
+          console.error('Failed to send analytics event:', error);
+        }
       }
 
       // Calculate conversion rate

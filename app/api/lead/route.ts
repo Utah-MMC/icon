@@ -134,6 +134,28 @@ export async function POST(request: NextRequest) {
       </html>
       `;
 
+    // Track quote request in analytics
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/analytics`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'form',
+          name: 'quote_request',
+          meta: {
+            source: source,
+            zipCode: zipCode,
+            dumpsterSize: dumpsterSize,
+            wasteType: wasteType,
+            sessionId: data.sessionId || 'unknown',
+            timestamp: Date.now()
+          }
+        })
+      });
+    } catch (error) {
+      console.error('Failed to track quote request:', error);
+    }
+
     // Send notification email
     const emailSent = await emailService.sendEmail(
       'icondumpsters@gmail.com',

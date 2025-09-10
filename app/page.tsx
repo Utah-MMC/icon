@@ -38,31 +38,53 @@ export default function Home() {
         >
           <div className="absolute inset-0" style={{zIndex: 1}}>
             <img
-              src="/images/dumpster500x500-1.jpeg" 
-              alt="Icon Dumpsters professional roll-off dumpster - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
+              src="/images/dumpsters.jpeg" 
+              alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
               className="w-full h-full object-cover object-center"
               style={{display: 'block', minHeight: '100%'}}
             />
           </div>
           
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          {/* Enhanced overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+          
+          {/* TEXT US Call-to-Action - Top Left */}
+          <div className="absolute top-4 left-4 z-20">
+            <a 
+              href="sms:+18019186000" 
+              data-analytics-type="cta" 
+              data-analytics-name="text_us_hero"
+              className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-[#3d2c85] transition-colors font-medium text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+            >
+              <span className="text-lg">📱</span>
+              <div className="text-left">
+                <div className="font-bold">TEXT US</div>
+                <div className="text-xs sm:text-sm">(801) 918-6000</div>
+              </div>
+            </a>
+          </div>
           
           {/* Hero Content - Overlaid on image */}
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
             <div className="text-center">
-              <h1 className="hero-text font-bold mb-4 sm:mb-6 text-white drop-shadow-lg leading-tight">
-                <span className="text-[#4e37a8]">Icon Dumpsters</span> - Professional Dumpster Rental Services in Utah
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto drop-shadow-md">
-                Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 flex-wrap">
+              {/* Enhanced text container with background for better readability */}
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-8 border border-white/20">
+                <h1 className="hero-text font-bold mb-4 sm:mb-6 leading-tight">
+                  <span className="text-white bg-[#4e37a8] px-3 py-1 rounded-lg shadow-lg">Icon Dumpsters</span>
+                  <span className="text-white block mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    Professional Dumpster Rental Services in Utah
+                  </span>
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
+                  Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap">
                 <a 
                   href="#quote-form" 
                   data-analytics-type="cta" 
                   data-analytics-name="quote_hero" 
-                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-base sm:text-lg inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white"
                 >
                   Get A Quote
                 </a>
@@ -70,7 +92,7 @@ export default function Home() {
                   href="/book" 
                   data-analytics-type="cta" 
                   data-analytics-name="book_hero" 
-                  className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-colors font-medium text-base sm:text-lg inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white"
                 >
                   Book Now
                 </a>

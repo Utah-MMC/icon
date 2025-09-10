@@ -63,14 +63,21 @@ export default function AdminDashboard() {
     utilizationRate: 0
   });
 
+  const [lastRefresh, setLastRefresh] = useState<Date>(new Date());
+
   // Load KPI data from localStorage
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('iconDumpstersKPI');
       if (stored) {
         try {
-          const data = JSON.parse(stored);
-          setKpiData(data);
+          const parsedData = JSON.parse(stored);
+          // Handle both old and new data formats
+          if (parsedData.metrics) {
+            setKpiData(parsedData.metrics);
+          } else {
+            setKpiData(parsedData);
+          }
         } catch (error) {
           console.error('Failed to load KPI data:', error);
         }
@@ -102,6 +109,49 @@ export default function AdminDashboard() {
     }
   }, []);
 
+  // Auto-refresh KPI data every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (typeof window !== 'undefined') {
+        const stored = localStorage.getItem('iconDumpstersKPI');
+        if (stored) {
+          try {
+            const parsedData = JSON.parse(stored);
+            if (parsedData.metrics) {
+              setKpiData(parsedData.metrics);
+            } else {
+              setKpiData(parsedData);
+            }
+            setLastRefresh(new Date());
+          } catch (error) {
+            console.error('Failed to refresh KPI data:', error);
+          }
+        }
+      }
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const refreshData = () => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('iconDumpstersKPI');
+      if (stored) {
+        try {
+          const parsedData = JSON.parse(stored);
+          if (parsedData.metrics) {
+            setKpiData(parsedData.metrics);
+          } else {
+            setKpiData(parsedData);
+          }
+          setLastRefresh(new Date());
+        } catch (error) {
+          console.error('Failed to refresh KPI data:', error);
+        }
+      }
+    }
+  };
+
   const getStatus = (current: number, target: number) => {
     if (current >= target * 0.9) return '🟢';
     if (current >= target * 0.7) return '🟡';
@@ -118,8 +168,13 @@ export default function AdminDashboard() {
       const stored = localStorage.getItem('iconDumpstersKPI');
       if (stored) {
         try {
-          const data = JSON.parse(stored);
-          setKpiData(data);
+          const parsedData = JSON.parse(stored);
+          // Handle both old and new data formats
+          if (parsedData.metrics) {
+            setKpiData(parsedData.metrics);
+          } else {
+            setKpiData(parsedData);
+          }
         } catch (error) {
           console.error('Failed to reload KPI data:', error);
         }
@@ -155,8 +210,19 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Icon Dumpsters - Admin Dashboard</h1>
-          <p className="text-gray-600">Monitor your business performance and manage inventory</p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Icon Dumpsters - Admin Dashboard</h1>
+              <p className="text-gray-600">Monitor your business performance and manage inventory</p>
+              <p className="text-sm text-gray-500 mt-1">Last updated: {lastRefresh.toLocaleTimeString()}</p>
+            </div>
+            <button
+              onClick={refreshData}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+            >
+              🔄 Refresh Data
+            </button>
+          </div>
           
           {/* Navigation Links */}
           <div className="mt-4 flex flex-wrap gap-4">
@@ -206,6 +272,28 @@ export default function AdminDashboard() {
             className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors"
           >
             Reset Data
+          </button>
+          <button
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
+                (window as any).iconDumpstersKPI.trackQuoteRequest();
+                refreshData();
+              }
+            }}
+            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
+          >
+            Test Quote Request
+          </button>
+          <button
+            onClick={() => {
+              if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
+                (window as any).iconDumpstersKPI.trackPhoneCall();
+                refreshData();
+              }
+            }}
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Test Phone Call
           </button>
         </div>
 
