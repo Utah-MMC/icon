@@ -498,6 +498,92 @@ const emailTemplates = {
       </body>
       </html>
     `
+  },
+  
+  custom: {
+    subject: "Custom Email - Icon Dumpsters",
+    template: `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Custom Email - Icon Dumpsters</title>
+        <style>
+          body { font-family: Arial, sans-serif; color: #111827; line-height: 1.6; margin: 0; padding: 0; }
+          .container { max-width: 640px; margin: 0 auto; padding: 24px; background: #ffffff; }
+          .header { text-align: center; margin-bottom: 32px; }
+          .logo { width: 120px; height: 120px; border-radius: 12px; }
+          h1 { color: #4e37a8; margin-bottom: 16px; font-size: 28px; }
+          .content { margin-bottom: 24px; }
+          .cta-button { 
+            display: inline-block; 
+            background: #4e37a8 !important; 
+            color: #ffffff !important; 
+            padding: 16px 32px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            margin: 16px 8px;
+            font-size: 16px;
+            border: 2px solid #4e37a8;
+            box-shadow: 0 4px 8px rgba(78, 55, 168, 0.3);
+            transition: all 0.3s ease;
+          }
+          .cta-button:hover { 
+            background: #3d2d7a !important; 
+            color: #ffffff !important;
+            border-color: #3d2d7a;
+            box-shadow: 0 6px 12px rgba(78, 55, 168, 0.4);
+            transform: translateY(-2px);
+          }
+          .cta-button:visited {
+            color: #ffffff !important;
+          }
+          .cta-button:link {
+            color: #ffffff !important;
+          }
+          .footer { 
+            border-top: 1px solid #e5e7eb; 
+            padding-top: 24px; 
+            margin-top: 32px; 
+            text-align: center; 
+            color: #6b7280; 
+            font-size: 14px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <img src="https://icondumpsters.com/Icon_Dumpsters_Final.png" alt="Icon Dumpsters" class="logo" />
+            <h1>Icon Dumpsters</h1>
+            <p style="color: #6b7280; font-size: 18px;">Your trusted waste management partner in Utah</p>
+          </div>
+          
+          <div class="content">
+            <h2>Hi {firstName},</h2>
+            <p>{customContent}</p>
+            
+            <div style="text-align: center; margin: 24px 0;">
+              <a href="tel:8019186000" class="cta-button">Call Us Now</a>
+            </div>
+          </div>
+          
+          <div class="footer">
+            <p><strong>Icon Dumpsters</strong><br/>
+            📞 (801) 918-6000 | 📧 icondumpsters@gmail.com<br/>
+            🌐 <a href="https://icondumpsters.com" style="color: #4e37a8;">icondumpsters.com</a></p>
+            <p style="margin-top: 16px; font-size: 12px;">
+              You're receiving this because you're a valued Icon Dumpsters customer.<br/>
+              <a href="https://icondumpsters.com/unsubscribe" style="color: #6b7280;">Unsubscribe</a> | 
+              <a href="https://icondumpsters.com/preferences" style="color: #6b7280;">Update Preferences</a> |
+              <a href="https://icondumpsters.com/rating" style="color: #6b7280;">Leave a Review</a>
+            </p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `
   }
 };
 
