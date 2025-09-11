@@ -171,7 +171,7 @@ export default function RatingPage() {
                     required
                     value={form.customerName}
                     onChange={(e) => setForm(prev => ({ ...prev, customerName: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -183,7 +183,7 @@ export default function RatingPage() {
                     required
                     value={form.customerEmail}
                     onChange={(e) => setForm(prev => ({ ...prev, customerEmail: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -193,7 +193,7 @@ export default function RatingPage() {
                   <select
                     value={form.serviceType}
                     onChange={(e) => setForm(prev => ({ ...prev, serviceType: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                   >
                     <option value="Dumpster Rental">Dumpster Rental</option>
                     <option value="Construction Cleanup">Construction Cleanup</option>
@@ -210,7 +210,7 @@ export default function RatingPage() {
                     rows={4}
                     value={form.reviewText}
                     onChange={(e) => setForm(prev => ({ ...prev, reviewText: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                     placeholder="Tell us about your experience with Icon Dumpsters..."
                   />
                 </div>

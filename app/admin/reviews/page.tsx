@@ -183,7 +183,7 @@ export default function AdminReviewsPage() {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => toggleVerification(review.id, review.verified)}
-                      className={`px-3 py-1 text-sm rounded ${
+                      className={`px-3 py-1 text-sm rounded text-black ${
                         review.verified
                           ? 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200'
                           : 'bg-green-100 text-green-800 hover:bg-green-200'

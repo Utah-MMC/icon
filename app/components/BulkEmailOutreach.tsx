@@ -317,7 +317,7 @@ export default function BulkEmailOutreach() {
                 type="text"
                 value={form.subject}
                 onChange={(e) => handleFormChange('subject', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                 placeholder="Enter email subject..."
               />
             </div>
@@ -332,7 +332,7 @@ export default function BulkEmailOutreach() {
                   value={form.content}
                   onChange={(e) => handleFormChange('content', e.target.value)}
                   rows={8}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                   placeholder="Enter your custom HTML email content..."
                 />
               </div>
@@ -402,7 +402,7 @@ export default function BulkEmailOutreach() {
                     value={form.manualEmails}
                     onChange={(e) => handleFormChange('manualEmails', e.target.value)}
                     rows={6}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                     placeholder="Enter email addresses separated by commas, semicolons, or new lines:&#10;john@example.com&#10;jane@example.com&#10;bob@example.com"
                   />
                   <p className="text-xs text-gray-500 mt-1">
@@ -432,7 +432,7 @@ export default function BulkEmailOutreach() {
                 <select
                   value={form.filters.clientType}
                   onChange={(e) => handleFormChange('filters.clientType', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                 >
                   <option value="all">All Clients</option>
                   <option value="residential">Residential Only</option>
@@ -448,7 +448,7 @@ export default function BulkEmailOutreach() {
                 <select
                   value={form.filters.county}
                   onChange={(e) => handleFormChange('filters.county', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                 >
                   <option value="all">All Counties</option>
                   {stats?.counties.map(county => (
@@ -467,7 +467,7 @@ export default function BulkEmailOutreach() {
                     type="date"
                     value={form.filters.createdAfter}
                     onChange={(e) => handleFormChange('filters.createdAfter', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                   />
                 </div>
                 <div>
@@ -478,7 +478,7 @@ export default function BulkEmailOutreach() {
                     type="date"
                     value={form.filters.createdBefore}
                     onChange={(e) => handleFormChange('filters.createdBefore', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent text-black"
                   />
                 </div>
               </div>
