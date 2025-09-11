@@ -22,54 +22,6 @@ interface CustomerRental {
 }
 
 export default function EmailFollowUpSystem() {
-  const checkForFollowUps = useCallback(() => {
-    const rentals = getCustomerRentals();
-    const now = new Date();
-    
-    rentals.forEach(rental => {
-      const rentalDate = new Date(rental.rentalDate);
-      const daysSinceRental = (now.getTime() - rentalDate.getTime()) / (1000 * 3600 * 24);
-      
-      // Send rating request after 3 days
-      if (daysSinceRental >= 3 && !rental.followUpEmailsSent.ratingRequest) {
-        sendRatingRequestEmail(rental);
-      }
-      
-      // Send review request after 7 days (if rating was good)
-      if (daysSinceRental >= 7 && rental.ratingReceived && !rental.followUpEmailsSent.reviewRequest) {
-        const rating = getCustomerRating(rental.id);
-        if (rating && rating >= 4) {
-          sendReviewRequestEmail(rental);
-        }
-      }
-      
-      // Send reminder after 14 days (if no response)
-      if (daysSinceRental >= 14 && !rental.ratingReceived && !rental.followUpEmailsSent.reminder) {
-        sendReminderEmail(rental);
-      }
-    });
-  }, [sendRatingRequestEmail, sendReminderEmail, sendReviewRequestEmail]);
-
-  const initializeEmailSystem = () => {
-    // Check for new rentals that need follow-up
-    checkForFollowUps();
-    
-    // Set up daily check for follow-ups
-    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
-    
-    return () => clearInterval(interval);
-  };
-
-  useEffect(() => {
-    // Check for new rentals that need follow-up
-    checkForFollowUps();
-    
-    // Set up daily check for follow-ups
-    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
-    
-    return () => clearInterval(interval);
-  }, [checkForFollowUps]);
-
   const getCustomerRentals = (): CustomerRental[] => {
     const rentals = localStorage.getItem('customerRentals');
     return rentals ? JSON.parse(rentals) : [];
@@ -83,116 +35,22 @@ export default function EmailFollowUpSystem() {
     return ratingData ? ratingData.rating : null;
   };
 
-  const sendRatingRequestEmail = async (rental: CustomerRental) => {
-    try {
-      // Use the new email service
-      const response = await fetch('/api/test-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          action: 'send_kpi_email',
-          emailData: {
-            type: 'rating_request',
-            customerData: {
-              customerName: rental.customerName,
-              customerEmail: rental.customerEmail,
-              customerPhone: rental.customerPhone,
-              rentalDate: rental.rentalDate,
-              dumpsterSize: rental.dumpsterSize,
-              rentalId: rental.id,
-            }
+  const updateRentalFollowUp = (rentalId: string, emailType: 'ratingRequest' | 'reviewRequest' | 'reminder') => {
+    const rentals = getCustomerRentals();
+    const updatedRentals = rentals.map(rental => {
+      if (rental.id === rentalId) {
+        return {
+          ...rental,
+          followUpEmailsSent: {
+            ...rental.followUpEmailsSent,
+            [emailType]: true
           }
-        })
-      });
-
-      const result = await response.json();
-      console.log('Rating request email result:', result);
-      
-      // Update rental record
-      updateRentalFollowUp(rental.id, 'ratingRequest');
-    } catch (error) {
-      console.error('Failed to send rating request email:', error);
-      // Fallback to console log
-      const emailContent = generateRatingRequestEmail(rental);
-      console.log('Sending rating request email (fallback):', emailContent);
-      updateRentalFollowUp(rental.id, 'ratingRequest');
-    }
-  };
-
-  const sendReviewRequestEmail = async (rental: CustomerRental) => {
-    try {
-      // Use the new email service
-      const response = await fetch('/api/test-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          action: 'send_kpi_email',
-          emailData: {
-            type: 'review_request',
-            customerData: {
-              customerName: rental.customerName,
-              customerEmail: rental.customerEmail,
-              customerPhone: rental.customerPhone,
-              rentalDate: rental.rentalDate,
-              dumpsterSize: rental.dumpsterSize,
-              rentalId: rental.id,
-            }
-          }
-        })
-      });
-
-      const result = await response.json();
-      console.log('Review request email result:', result);
-      
-      updateRentalFollowUp(rental.id, 'reviewRequest');
-    } catch (error) {
-      console.error('Failed to send review request email:', error);
-      // Fallback to console log
-      const emailContent = generateReviewRequestEmail(rental);
-      console.log('Sending review request email (fallback):', emailContent);
-      updateRentalFollowUp(rental.id, 'reviewRequest');
-    }
-  };
-
-  const sendReminderEmail = async (rental: CustomerRental) => {
-    try {
-      // Use the new email service
-      const response = await fetch('/api/test-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          action: 'send_kpi_email',
-          emailData: {
-            type: 'reminder',
-            customerData: {
-              customerName: rental.customerName,
-              customerEmail: rental.customerEmail,
-              customerPhone: rental.customerPhone,
-              rentalDate: rental.rentalDate,
-              dumpsterSize: rental.dumpsterSize,
-              rentalId: rental.id,
-            }
-          }
-        })
-      });
-
-      const result = await response.json();
-      console.log('Reminder email result:', result);
-      
-      updateRentalFollowUp(rental.id, 'reminder');
-    } catch (error) {
-      console.error('Failed to send reminder email:', error);
-      // Fallback to console log
-      const emailContent = generateReminderEmail(rental);
-      console.log('Sending reminder email (fallback):', emailContent);
-      updateRentalFollowUp(rental.id, 'reminder');
-    }
+        };
+      }
+      return rental;
+    });
+    
+    localStorage.setItem('customerRentals', JSON.stringify(updatedRentals));
   };
 
   const generateRatingRequestEmail = (rental: CustomerRental) => {
@@ -306,23 +164,166 @@ export default function EmailFollowUpSystem() {
     `;
   };
 
-  const updateRentalFollowUp = (rentalId: string, emailType: 'ratingRequest' | 'reviewRequest' | 'reminder') => {
-    const rentals = getCustomerRentals();
-    const updatedRentals = rentals.map(rental => {
-      if (rental.id === rentalId) {
-        return {
-          ...rental,
-          followUpEmailsSent: {
-            ...rental.followUpEmailsSent,
-            [emailType]: true
+  const sendRatingRequestEmail = useCallback(async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'rating_request',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
           }
-        };
-      }
-      return rental;
-    });
+        })
+      });
+
+      const result = await response.json();
+      console.log('Rating request email result:', result);
+      
+      // Update rental record
+      updateRentalFollowUp(rental.id, 'ratingRequest');
+    } catch (error) {
+      console.error('Failed to send rating request email:', error);
+      // Fallback to console log
+      const emailContent = generateRatingRequestEmail(rental);
+      console.log('Sending rating request email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'ratingRequest');
+    }
+  }, [updateRentalFollowUp]);
+
+  const sendReviewRequestEmail = useCallback(async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'review_request',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
+          }
+        })
+      });
+
+      const result = await response.json();
+      console.log('Review request email result:', result);
+      
+      updateRentalFollowUp(rental.id, 'reviewRequest');
+    } catch (error) {
+      console.error('Failed to send review request email:', error);
+      // Fallback to console log
+      const emailContent = generateReviewRequestEmail(rental);
+      console.log('Sending review request email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'reviewRequest');
+    }
+  }, [updateRentalFollowUp]);
+
+  const sendReminderEmail = useCallback(async (rental: CustomerRental) => {
+    try {
+      // Use the new email service
+      const response = await fetch('/api/test-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'send_kpi_email',
+          emailData: {
+            type: 'reminder',
+            customerData: {
+              customerName: rental.customerName,
+              customerEmail: rental.customerEmail,
+              customerPhone: rental.customerPhone,
+              rentalDate: rental.rentalDate,
+              dumpsterSize: rental.dumpsterSize,
+              rentalId: rental.id,
+            }
+          }
+        })
+      });
+
+      const result = await response.json();
+      console.log('Reminder email result:', result);
+      
+      updateRentalFollowUp(rental.id, 'reminder');
+    } catch (error) {
+      console.error('Failed to send reminder email:', error);
+      // Fallback to console log
+      const emailContent = generateReminderEmail(rental);
+      console.log('Sending reminder email (fallback):', emailContent);
+      updateRentalFollowUp(rental.id, 'reminder');
+    }
+  }, [updateRentalFollowUp]);
+
+  const checkForFollowUps = useCallback(() => {
+    const rentals = getCustomerRentals();
+    const now = new Date();
     
-    localStorage.setItem('customerRentals', JSON.stringify(updatedRentals));
+    rentals.forEach(rental => {
+      const rentalDate = new Date(rental.rentalDate);
+      const daysSinceRental = (now.getTime() - rentalDate.getTime()) / (1000 * 3600 * 24);
+      
+      // Send rating request after 3 days
+      if (daysSinceRental >= 3 && !rental.followUpEmailsSent.ratingRequest) {
+        sendRatingRequestEmail(rental);
+      }
+      
+      // Send review request after 7 days (if rating was good)
+      if (daysSinceRental >= 7 && rental.ratingReceived && !rental.followUpEmailsSent.reviewRequest) {
+        const rating = getCustomerRating(rental.id);
+        if (rating && rating >= 4) {
+          sendReviewRequestEmail(rental);
+        }
+      }
+      
+      // Send reminder after 14 days (if no response)
+      if (daysSinceRental >= 14 && !rental.ratingReceived && !rental.followUpEmailsSent.reminder) {
+        sendReminderEmail(rental);
+      }
+    });
+  }, [sendRatingRequestEmail, sendReminderEmail, sendReviewRequestEmail, getCustomerRentals, getCustomerRating]);
+
+  const initializeEmailSystem = () => {
+    // Check for new rentals that need follow-up
+    checkForFollowUps();
+    
+    // Set up daily check for follow-ups
+    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
+    
+    return () => clearInterval(interval);
   };
+
+  useEffect(() => {
+    // Check for new rentals that need follow-up
+    checkForFollowUps();
+    
+    // Set up daily check for follow-ups
+    const interval = setInterval(checkForFollowUps, 24 * 60 * 60 * 1000); // Daily
+    
+    return () => clearInterval(interval);
+  }, [checkForFollowUps]);
+
 
   const addNewRental = (rentalData: Omit<CustomerRental, 'id' | 'ratingRequested' | 'ratingReceived' | 'reviewRequested' | 'reviewPosted' | 'followUpEmailsSent'>) => {
     const newRental: CustomerRental = {

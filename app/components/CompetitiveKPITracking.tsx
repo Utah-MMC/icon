@@ -63,6 +63,124 @@ export default function CompetitiveKPITracking() {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const formListenersRef = useRef<Array<{ form: Element; listener: EventListener }>>([]);
 
+  const loadExistingKPIData = useCallback(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const existingKPI = localStorage.getItem('iconDumpstersKPI');
+        if (existingKPI) {
+          const kpiData = JSON.parse(existingKPI);
+          setMetrics(prev => ({
+            ...prev,
+            googleReviews: kpiData.quoteRequests || 0,
+            customerSatisfaction: kpiData.customerSatisfaction || 0,
+            onlineBookingRate: kpiData.websiteVisitors ? (kpiData.quoteRequests / kpiData.websiteVisitors * 100) : 0
+          }));
+        }
+      }
+    } catch (error) {
+      console.log('Error loading existing KPI data:', error);
+    }
+  }, []);
+
+  const trackReviewRequests = useCallback(() => {
+    try {
+      // Only track forms that are not part of the inventory system
+      const forms = document.querySelectorAll('form:not([data-inventory-form])');
+      forms.forEach(form => {
+        const listener = () => {
+          const currentMetrics = { ...metrics };
+          currentMetrics.reviewRequestRate += 1;
+          setMetrics(currentMetrics);
+          saveCompetitiveData(currentMetrics);
+        };
+        
+        form.addEventListener('submit', listener);
+        formListenersRef.current.push({ form, listener });
+      });
+    } catch (error) {
+      console.log('Error tracking review requests:', error);
+    }
+  }, [metrics]);
+
+  const trackResponseTimes = useCallback(() => {
+    try {
+      // Track customer service response times
+      const startTime = Date.now();
+      
+      // Simulate response time tracking
+      setTimeout(() => {
+        const responseTime = Date.now() - startTime;
+        const currentMetrics = { ...metrics };
+        currentMetrics.responseTime = responseTime / 1000; // Convert to seconds
+        setMetrics(currentMetrics);
+        saveCompetitiveData(currentMetrics);
+      }, 1000);
+    } catch (error) {
+      console.log('Error tracking response times:', error);
+    }
+  }, [metrics]);
+
+  const trackServiceQuality = useCallback(() => {
+    try {
+      // Track customer satisfaction and service quality
+      const satisfactionScore = Math.random() * 5; // Simulate satisfaction score
+      const currentMetrics = { ...metrics };
+      currentMetrics.customerSatisfaction = satisfactionScore;
+      setMetrics(currentMetrics);
+      saveCompetitiveData(currentMetrics);
+    } catch (error) {
+      console.log('Error tracking service quality:', error);
+    }
+  }, [metrics]);
+
+  const updateCompetitivePosition = useCallback(() => {
+    try {
+      // Calculate market position based on metrics
+      const totalReviews = competitors.reduce((sum, comp) => sum + comp.reviews, 0);
+      const marketShare = (metrics.googleReviews / totalReviews) * 100;
+      
+      // Calculate position ranking
+      const sortedCompetitors = [...competitors].sort((a, b) => b.reviews - a.reviews);
+      const position = sortedCompetitors.findIndex(comp => comp.reviews <= metrics.googleReviews) + 1;
+      
+      const currentMetrics = { ...metrics };
+      currentMetrics.marketShare = marketShare;
+      currentMetrics.competitorPosition = position;
+      setMetrics(currentMetrics);
+      saveCompetitiveData(currentMetrics);
+    } catch (error) {
+      console.log('Error updating competitive position:', error);
+    }
+  }, [metrics, competitors]);
+
+  const setupCompetitiveMonitoring = useCallback(() => {
+    try {
+      // Track competitor changes - only set up one interval
+      if (!intervalRef.current) {
+        intervalRef.current = setInterval(() => {
+          updateCompetitivePosition();
+        }, 24 * 60 * 60 * 1000); // Daily updates
+      }
+    } catch (error) {
+      console.log('Error setting up competitive monitoring:', error);
+    }
+  }, [updateCompetitivePosition]);
+
+  const startAutomatedTracking = useCallback(() => {
+    try {
+      // Track review requests
+      trackReviewRequests();
+      
+      // Track response times
+      trackResponseTimes();
+      
+      // Track service quality
+      trackServiceQuality();
+    } catch (error) {
+      console.log('Error starting automated tracking:', error);
+    }
+  }, [trackResponseTimes, trackReviewRequests, trackServiceQuality]);
+
   const initializeCompetitiveTracking = useCallback(() => {
     try {
       // Load existing KPI data
@@ -76,7 +194,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error initializing competitive tracking:', error);
     }
-  }, [setupCompetitiveMonitoring, startAutomatedTracking]);
+  }, [loadExistingKPIData, setupCompetitiveMonitoring, startAutomatedTracking]);
 
   useEffect(() => {
     console.log('Competitive KPI Tracking: Active');
@@ -108,123 +226,6 @@ export default function CompetitiveKPITracking() {
     };
   }, [initializeCompetitiveTracking]);
 
-  const loadExistingKPIData = () => {
-    try {
-      if (typeof window !== 'undefined') {
-        const existingKPI = localStorage.getItem('iconDumpstersKPI');
-        if (existingKPI) {
-          const kpiData = JSON.parse(existingKPI);
-          setMetrics(prev => ({
-            ...prev,
-            googleReviews: kpiData.quoteRequests || 0,
-            customerSatisfaction: kpiData.customerSatisfaction || 0,
-            onlineBookingRate: kpiData.websiteVisitors ? (kpiData.quoteRequests / kpiData.websiteVisitors * 100) : 0
-          }));
-        }
-      }
-    } catch (error) {
-      console.log('Error loading existing KPI data:', error);
-    }
-  };
-
-  const setupCompetitiveMonitoring = useCallback(() => {
-    try {
-      // Track competitor changes - only set up one interval
-      if (!intervalRef.current) {
-        intervalRef.current = setInterval(() => {
-          updateCompetitivePosition();
-        }, 24 * 60 * 60 * 1000); // Daily updates
-      }
-    } catch (error) {
-      console.log('Error setting up competitive monitoring:', error);
-    }
-  }, [updateCompetitivePosition]);
-
-  const startAutomatedTracking = useCallback(() => {
-    try {
-      // Track review requests
-      trackReviewRequests();
-      
-      // Track response times
-      trackResponseTimes();
-      
-      // Track service quality
-      trackServiceQuality();
-    } catch (error) {
-      console.log('Error starting automated tracking:', error);
-    }
-  }, [trackResponseTimes, trackReviewRequests, trackServiceQuality]);
-
-  const trackReviewRequests = () => {
-    try {
-      // Only track forms that are not part of the inventory system
-      const forms = document.querySelectorAll('form:not([data-inventory-form])');
-      forms.forEach(form => {
-        const listener = () => {
-          const currentMetrics = { ...metrics };
-          currentMetrics.reviewRequestRate += 1;
-          setMetrics(currentMetrics);
-          saveCompetitiveData(currentMetrics);
-        };
-        
-        form.addEventListener('submit', listener);
-        formListenersRef.current.push({ form, listener });
-      });
-    } catch (error) {
-      console.log('Error tracking review requests:', error);
-    }
-  };
-
-  const trackResponseTimes = () => {
-    try {
-      // Track customer service response times
-      const startTime = Date.now();
-      
-      // Simulate response time tracking
-      setTimeout(() => {
-        const responseTime = Date.now() - startTime;
-        const currentMetrics = { ...metrics };
-        currentMetrics.responseTime = responseTime / 1000; // Convert to seconds
-        setMetrics(currentMetrics);
-        saveCompetitiveData(currentMetrics);
-      }, 1000);
-    } catch (error) {
-      console.log('Error tracking response times:', error);
-    }
-  };
-
-  const trackServiceQuality = () => {
-    try {
-      // Track customer satisfaction and service quality
-      const satisfactionScore = Math.random() * 5; // Simulate satisfaction score
-      const currentMetrics = { ...metrics };
-      currentMetrics.customerSatisfaction = satisfactionScore;
-      setMetrics(currentMetrics);
-      saveCompetitiveData(currentMetrics);
-    } catch (error) {
-      console.log('Error tracking service quality:', error);
-    }
-  };
-
-  const updateCompetitivePosition = () => {
-    try {
-      // Calculate market position based on metrics
-      const totalReviews = competitors.reduce((sum, comp) => sum + comp.reviews, 0);
-      const marketShare = (metrics.googleReviews / totalReviews) * 100;
-      
-      // Calculate position ranking
-      const sortedCompetitors = [...competitors].sort((a, b) => b.reviews - a.reviews);
-      const position = sortedCompetitors.findIndex(comp => comp.reviews <= metrics.googleReviews) + 1;
-      
-      const currentMetrics = { ...metrics };
-      currentMetrics.marketShare = marketShare;
-      currentMetrics.competitorPosition = position;
-      setMetrics(currentMetrics);
-      saveCompetitiveData(currentMetrics);
-    } catch (error) {
-      console.log('Error updating competitive position:', error);
-    }
-  };
 
   const saveCompetitiveData = (data: CompetitiveMetrics) => {
     try {
