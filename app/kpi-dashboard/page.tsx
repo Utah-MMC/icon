@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import ClientDatabase from '../components/ClientDatabase';
 import ClientInsights from '../components/ClientInsights';
+import BulkEmailOutreach from '../components/BulkEmailOutreach';
+import ReviewAnalytics from '../components/ReviewAnalytics';
 
 type Counts = { byType: Record<string, number>; byName: Record<string, number>; total: number };
 type Summary = { sessions: number; utmSources: Record<string, number>; referrers: Record<string, number>; paths: Record<string, number>; sessionsWithCTA: number; sessionsWithForm: number; conversionRate: number; topCTAs: Record<string, number> };
@@ -134,6 +136,22 @@ export default function KPIDashboard() {
         
         <div className="mt-8">
           <ClientDatabase />
+        </div>
+        
+        {/* Bulk Email Outreach Section */}
+        <div className="mt-12">
+          <div className="border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Email Outreach Campaigns</h2>
+            <BulkEmailOutreach />
+          </div>
+        </div>
+
+        {/* Review Analytics Section */}
+        <div className="mt-12">
+          <div className="border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Review Analytics</h2>
+            <ReviewAnalytics />
+          </div>
         </div>
       </div>
     </div>

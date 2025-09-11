@@ -1,29 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef, useCallback } from 'react';
-
-interface CompetitiveMetrics {
-  // Review Metrics
-  googleReviews: number;
-  googleRating: number;
-  reviewResponseTime: number;
-  reviewRequestRate: number;
-  
-  // Market Position
-  adRank: number;
-  marketShare: number;
-  competitorPosition: number;
-  
-  // Service Quality
-  responseTime: number;
-  customerSatisfaction: number;
-  serviceGuaranteeClaims: number;
-  
-  // Technology Adoption
-  onlineBookingRate: number;
-  mobileAppUsage: number;
-  digitalServiceAdoption: number;
-}
+import { useEffect, useRef } from 'react';
 
 interface CompetitorData {
   name: string;
@@ -34,174 +11,109 @@ interface CompetitorData {
 }
 
 export default function CompetitiveKPITracking() {
-  const [metrics, setMetrics] = useState<CompetitiveMetrics>({
-    googleReviews: 0,
-    googleRating: 5.0,
-    reviewResponseTime: 0,
-    reviewRequestRate: 0,
-    adRank: 0,
-    marketShare: 0,
-    competitorPosition: 7,
-    responseTime: 0,
-    customerSatisfaction: 0,
-    serviceGuaranteeClaims: 0,
-    onlineBookingRate: 0,
-    mobileAppUsage: 0,
-    digitalServiceAdoption: 0
-  });
-
-  const [competitors, setCompetitors] = useState<CompetitorData[]>([
-    { name: 'Blue Bin Dumpster Rentals', rating: 5.0, reviews: 259, adRank: 1.9, marketPosition: 'Market Leader' },
-    { name: 'Bin There Dump That Salt Lake', rating: 4.9, reviews: 309, adRank: 4.3, marketPosition: 'Strong Competitor' },
-    { name: 'Dumpster Today', rating: 4.9, reviews: 59, adRank: 7.6, marketPosition: 'Mid-Market' },
-    { name: 'redbox+ Dumpsters', rating: 5.0, reviews: 41, adRank: 4.1, marketPosition: 'Niche Player' },
-    { name: 'Dumpster Depot', rating: 5.0, reviews: 29, adRank: 4.5, marketPosition: 'Small Player' },
-    { name: 'Brady Brothers Containers', rating: 5.0, reviews: 18, adRank: 8.7, marketPosition: 'Small Player' },
-    { name: 'T&T Dumpsters', rating: 4.5, reviews: 23, adRank: 7.3, marketPosition: 'Small Player' }
-  ]);
-
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const formListenersRef = useRef<Array<{ form: Element; listener: EventListener }>>([]);
+  const initializedRef = useRef(false);
 
-  const loadExistingKPIData = useCallback(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        const existingKPI = localStorage.getItem('iconDumpstersKPI');
-        if (existingKPI) {
-          const kpiData = JSON.parse(existingKPI);
-          setMetrics(prev => ({
-            ...prev,
-            googleReviews: kpiData.quoteRequests || 0,
-            customerSatisfaction: kpiData.customerSatisfaction || 0,
-            onlineBookingRate: kpiData.websiteVisitors ? (kpiData.quoteRequests / kpiData.websiteVisitors * 100) : 0
-          }));
-        }
-      }
-    } catch (error) {
-      console.log('Error loading existing KPI data:', error);
+  useEffect(() => {
+    // Only initialize once
+    if (initializedRef.current || typeof window === 'undefined') {
+      return;
     }
-  }, []);
 
-  const trackReviewRequests = useCallback(() => {
+    console.log('Competitive KPI Tracking: Initializing');
+
     try {
-      // Only track forms that are not part of the inventory system
+      // Static competitor data
+      const competitors: CompetitorData[] = [
+        { name: 'Blue Bin Dumpster Rentals', rating: 5.0, reviews: 259, adRank: 1.9, marketPosition: 'Market Leader' },
+        { name: 'Bin There Dump That Salt Lake', rating: 4.9, reviews: 309, adRank: 4.3, marketPosition: 'Strong Competitor' },
+        { name: 'Dumpster Today', rating: 4.9, reviews: 59, adRank: 7.6, marketPosition: 'Mid-Market' },
+        { name: 'redbox+ Dumpsters', rating: 5.0, reviews: 41, adRank: 4.1, marketPosition: 'Niche Player' },
+        { name: 'Dumpster Depot', rating: 5.0, reviews: 29, adRank: 4.5, marketPosition: 'Small Player' },
+        { name: 'Brady Brothers Containers', rating: 5.0, reviews: 18, adRank: 8.7, marketPosition: 'Small Player' },
+        { name: 'T&T Dumpsters', rating: 4.5, reviews: 23, adRank: 7.3, marketPosition: 'Small Player' }
+      ];
+
+      // Load existing KPI data and save competitive metrics
+      const existingKPI = localStorage.getItem('iconDumpstersKPI');
+      let competitiveData = {
+        googleReviews: 0,
+        googleRating: 5.0,
+        reviewResponseTime: 0,
+        reviewRequestRate: 0,
+        adRank: 0,
+        marketShare: 0,
+        competitorPosition: 7,
+        responseTime: 0,
+        customerSatisfaction: 0,
+        serviceGuaranteeClaims: 0,
+        onlineBookingRate: 0,
+        mobileAppUsage: 0,
+        digitalServiceAdoption: 0
+      };
+
+      if (existingKPI) {
+        const kpiData = JSON.parse(existingKPI);
+        competitiveData = {
+          ...competitiveData,
+          googleReviews: kpiData.quoteRequests || 0,
+          customerSatisfaction: kpiData.customerSatisfaction || 0,
+          onlineBookingRate: kpiData.websiteVisitors ? (kpiData.quoteRequests / kpiData.websiteVisitors * 100) : 0
+        };
+      }
+
+      // Set up form tracking
       const forms = document.querySelectorAll('form:not([data-inventory-form])');
       forms.forEach(form => {
         const listener = () => {
-          const currentMetrics = { ...metrics };
-          currentMetrics.reviewRequestRate += 1;
-          setMetrics(currentMetrics);
-          saveCompetitiveData(currentMetrics);
+          // Update competitive data without state
+          competitiveData.reviewRequestRate += 1;
+          try {
+            localStorage.setItem('iconDumpstersCompetitiveKPI', JSON.stringify(competitiveData));
+          } catch (error) {
+            console.log('Error saving competitive data:', error);
+          }
         };
         
         form.addEventListener('submit', listener);
         formListenersRef.current.push({ form, listener });
       });
-    } catch (error) {
-      console.log('Error tracking review requests:', error);
-    }
-  }, [metrics]);
 
-  const trackResponseTimes = useCallback(() => {
-    try {
-      // Track customer service response times
-      const startTime = Date.now();
-      
-      // Simulate response time tracking
-      setTimeout(() => {
-        const responseTime = Date.now() - startTime;
-        const currentMetrics = { ...metrics };
-        currentMetrics.responseTime = responseTime / 1000; // Convert to seconds
-        setMetrics(currentMetrics);
-        saveCompetitiveData(currentMetrics);
-      }, 1000);
-    } catch (error) {
-      console.log('Error tracking response times:', error);
-    }
-  }, [metrics]);
-
-  const trackServiceQuality = useCallback(() => {
-    try {
-      // Track customer satisfaction and service quality
-      const satisfactionScore = Math.random() * 5; // Simulate satisfaction score
-      const currentMetrics = { ...metrics };
-      currentMetrics.customerSatisfaction = satisfactionScore;
-      setMetrics(currentMetrics);
-      saveCompetitiveData(currentMetrics);
-    } catch (error) {
-      console.log('Error tracking service quality:', error);
-    }
-  }, [metrics]);
-
-  const updateCompetitivePosition = useCallback(() => {
-    try {
-      // Calculate market position based on metrics
-      const totalReviews = competitors.reduce((sum, comp) => sum + comp.reviews, 0);
-      const marketShare = (metrics.googleReviews / totalReviews) * 100;
-      
-      // Calculate position ranking
-      const sortedCompetitors = [...competitors].sort((a, b) => b.reviews - a.reviews);
-      const position = sortedCompetitors.findIndex(comp => comp.reviews <= metrics.googleReviews) + 1;
-      
-      const currentMetrics = { ...metrics };
-      currentMetrics.marketShare = marketShare;
-      currentMetrics.competitorPosition = position;
-      setMetrics(currentMetrics);
-      saveCompetitiveData(currentMetrics);
-    } catch (error) {
-      console.log('Error updating competitive position:', error);
-    }
-  }, [metrics, competitors]);
-
-  const setupCompetitiveMonitoring = useCallback(() => {
-    try {
-      // Track competitor changes - only set up one interval
+      // Set up competitive monitoring interval
       if (!intervalRef.current) {
         intervalRef.current = setInterval(() => {
-          updateCompetitivePosition();
+          const totalReviews = competitors.reduce((sum, comp) => sum + comp.reviews, 0);
+          const marketShare = (competitiveData.googleReviews / totalReviews) * 100;
+          const sortedCompetitors = [...competitors].sort((a, b) => b.reviews - a.reviews);
+          const position = sortedCompetitors.findIndex(comp => comp.reviews <= competitiveData.googleReviews) + 1;
+          
+          competitiveData.marketShare = marketShare;
+          competitiveData.competitorPosition = position;
+          
+          try {
+            localStorage.setItem('iconDumpstersCompetitiveKPI', JSON.stringify(competitiveData));
+          } catch (error) {
+            console.log('Error saving competitive data:', error);
+          }
         }, 24 * 60 * 60 * 1000); // Daily updates
       }
-    } catch (error) {
-      console.log('Error setting up competitive monitoring:', error);
-    }
-  }, [updateCompetitivePosition]);
 
-  const startAutomatedTracking = useCallback(() => {
-    try {
-      // Track review requests
-      trackReviewRequests();
+      // Set initial metrics
+      const startTime = Date.now();
+      competitiveData.responseTime = (Date.now() - startTime) / 1000;
+      competitiveData.customerSatisfaction = Math.random() * 5;
       
-      // Track response times
-      trackResponseTimes();
-      
-      // Track service quality
-      trackServiceQuality();
-    } catch (error) {
-      console.log('Error starting automated tracking:', error);
-    }
-  }, [trackResponseTimes, trackReviewRequests, trackServiceQuality]);
+      try {
+        localStorage.setItem('iconDumpstersCompetitiveKPI', JSON.stringify(competitiveData));
+      } catch (error) {
+        console.log('Error saving competitive data:', error);
+      }
 
-  const initializeCompetitiveTracking = useCallback(() => {
-    try {
-      // Load existing KPI data
-      loadExistingKPIData();
-      
-      // Set up competitive monitoring
-      setupCompetitiveMonitoring();
-      
-      // Start automated tracking
-      startAutomatedTracking();
+      initializedRef.current = true;
+
     } catch (error) {
       console.log('Error initializing competitive tracking:', error);
-    }
-  }, [loadExistingKPIData, setupCompetitiveMonitoring, startAutomatedTracking]);
-
-  useEffect(() => {
-    console.log('Competitive KPI Tracking: Active');
-    
-    // Only initialize if we're in the browser
-    if (typeof window !== 'undefined') {
-      initializeCompetitiveTracking();
     }
 
     // Cleanup function
@@ -224,18 +136,7 @@ export default function CompetitiveKPITracking() {
       });
       formListenersRef.current = [];
     };
-  }, [initializeCompetitiveTracking]);
-
-
-  const saveCompetitiveData = (data: CompetitiveMetrics) => {
-    try {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('iconDumpstersCompetitiveKPI', JSON.stringify(data));
-      }
-    } catch (error) {
-      console.log('Error saving competitive data:', error);
-    }
-  };
+  }, []); // Empty dependency array - only run once
 
   // This component doesn't render anything visible
   return null;
