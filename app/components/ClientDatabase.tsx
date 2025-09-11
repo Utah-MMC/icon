@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import CSVUploader from './CSVUploader';
 
 interface Client {
@@ -59,9 +59,9 @@ export default function ClientDatabase() {
         console.error('Error loading saved client data:', error);
       }
     }
-  }, []);
+  }, [loadClientData]);
 
-  const loadClientData = async () => {
+  const loadClientData = useCallback(async () => {
     try {
       // Fetch from the API endpoint
       const response = await fetch('/api/clients');
@@ -91,7 +91,7 @@ export default function ClientDatabase() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const calculateAnalytics = (clientData: Client[]) => {
     const totalClients = clientData.length;

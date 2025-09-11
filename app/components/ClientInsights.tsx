@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface ClientInsight {
   metric: string;
@@ -20,9 +20,9 @@ export default function ClientInsights({ clientData = [] }: ClientInsightsProps)
 
   useEffect(() => {
     calculateInsights();
-  }, [clientData]);
+  }, [calculateInsights]);
 
-  const calculateInsights = () => {
+  const calculateInsights = useCallback(() => {
     if (!clientData || clientData.length === 0) {
       setLoading(false);
       return;
@@ -37,7 +37,7 @@ export default function ClientInsights({ clientData = [] }: ClientInsightsProps)
     clientData.forEach(client => {
       if (client.tags) {
         const sources = client.tags.split(',');
-        sources.forEach(source => {
+        sources.forEach((source: string) => {
           const cleanSource = source.trim();
           if (cleanSource && !cleanSource.includes('Due Upon Receipt')) {
             leadSources[cleanSource] = (leadSources[cleanSource] || 0) + 1;
@@ -109,7 +109,7 @@ export default function ClientInsights({ clientData = [] }: ClientInsightsProps)
 
     setInsights(calculatedInsights);
     setLoading(false);
-  };
+  }, [clientData]);
 
   if (loading) {
     return (
