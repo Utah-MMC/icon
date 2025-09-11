@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
         .replace(/{city}/g, client.city || 'your area')
         .replace(/{county}/g, client.county || 'your county')
         .replace(/{month}/g, month)
-        .replace(/{year}/g, year);
+        .replace(/{year}/g, year.toString());
     }
 
     // Create a mock client object for personalization

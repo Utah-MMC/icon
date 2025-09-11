@@ -514,7 +514,7 @@ function personalizeEmail(template: string, client: any, customData: any = {}) {
     .replace(/{city}/g, client.city || 'your area')
     .replace(/{county}/g, client.county || 'your county')
     .replace(/{month}/g, month)
-    .replace(/{year}/g, year)
+    .replace(/{year}/g, year.toString())
     .replace(/{promotionTitle}/g, customData.promotionTitle || 'Special Offer')
     .replace(/{discountAmount}/g, customData.discountAmount || '10%')
     .replace(/{promoCode}/g, customData.promoCode || 'SAVE10')
