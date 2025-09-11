@@ -46,21 +46,6 @@ export default function ClientDatabase() {
   const [currentPage, setCurrentPage] = useState(1);
   const [clientsPerPage, setClientsPerPage] = useState(25);
 
-  useEffect(() => {
-    loadClientData();
-    // Try to load from localStorage first
-    const savedData = localStorage.getItem('clientData');
-    if (savedData) {
-      try {
-        const clients = JSON.parse(savedData);
-        setClients(clients);
-        calculateAnalytics(clients);
-      } catch (error) {
-        console.error('Error loading saved client data:', error);
-      }
-    }
-  }, [loadClientData]);
-
   const loadClientData = useCallback(async () => {
     try {
       // Fetch from the API endpoint
@@ -92,6 +77,21 @@ export default function ClientDatabase() {
       setLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    loadClientData();
+    // Try to load from localStorage first
+    const savedData = localStorage.getItem('clientData');
+    if (savedData) {
+      try {
+        const clients = JSON.parse(savedData);
+        setClients(clients);
+        calculateAnalytics(clients);
+      } catch (error) {
+        console.error('Error loading saved client data:', error);
+      }
+    }
+  }, [loadClientData]);
 
   const calculateAnalytics = (clientData: Client[]) => {
     const totalClients = clientData.length;
