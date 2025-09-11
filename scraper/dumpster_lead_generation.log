@@ -1,0 +1,99 @@
+2025-09-11 13:11:36,380 - INFO - ============================================================
+2025-09-11 13:11:36,383 - INFO - ----------------------------------------
+2025-09-11 13:11:36,383 - INFO - Testing search keywords configuration...
+2025-09-11 13:11:36,745 - INFO - Database initialized successfully
+2025-09-11 13:11:36,745 - INFO - Total search keywords: 15
+2025-09-11 13:11:36,746 - INFO - Dumpster-related keywords: 11
+2025-09-11 13:11:36,746 - INFO - Utah location keywords: 5
+2025-09-11 13:11:36,751 - INFO - ----------------------------------------
+2025-09-11 13:11:36,751 - INFO - Testing competitor URLs configuration...
+2025-09-11 13:11:36,752 - INFO - Total dumpster rental competitor URLs: 30
+2025-09-11 13:11:36,752 - INFO - Utah-specific competitor URLs: 12
+2025-09-11 13:11:36,756 - INFO - ----------------------------------------
+2025-09-11 13:11:36,757 - INFO - Testing Dumpster Lead Generation System...
+2025-09-11 13:11:36,759 - INFO - Database initialized successfully
+2025-09-11 13:11:36,759 - INFO - Lead scoring test - Score: 50
+2025-09-11 13:11:36,762 - INFO - Database initialized successfully
+2025-09-11 13:11:36,767 - INFO - ----------------------------------------
+2025-09-11 13:11:36,767 - INFO - Testing Dumpster Competitor Scraper...
+2025-09-11 13:11:36,768 - INFO - Testing scraper with URL: https://www.budgetdumpster.com/
+2025-09-11 13:11:39,634 - INFO - Company: budget dumpster
+2025-09-11 13:11:39,634 - INFO - Phone: 855-900-5728
+2025-09-11 13:11:39,634 - INFO - Services: Waste_Types: Yard Waste, Yard Waste Dumpster...
+2025-09-11 13:11:39,635 - INFO - 
+============================================================
+2025-09-11 13:11:39,637 - INFO - ============================================================
+2025-09-11 13:11:39,646 - INFO - 
+Overall: 4/4 tests passed
+2025-09-11 13:11:39,649 - INFO - 
+Test log saved to: dumpster_scraper_test.log
+2025-09-11 13:19:47,061 - INFO - ============================================================
+2025-09-11 13:19:47,064 - INFO - ----------------------------------------
+2025-09-11 13:19:47,064 - INFO - Testing search keywords configuration...
+2025-09-11 13:19:47,065 - INFO - Database initialized successfully
+2025-09-11 13:19:47,066 - INFO - Total search keywords: 25
+2025-09-11 13:19:47,066 - INFO - Dumpster-related keywords: 13
+2025-09-11 13:19:47,066 - INFO - Utah location keywords: 9
+2025-09-11 13:19:47,071 - INFO - ----------------------------------------
+2025-09-11 13:19:47,071 - INFO - Testing competitor URLs configuration...
+2025-09-11 13:19:47,071 - INFO - Total dumpster rental competitor URLs: 30
+2025-09-11 13:19:47,071 - INFO - Utah-specific competitor URLs: 12
+2025-09-11 13:19:47,076 - INFO - ----------------------------------------
+2025-09-11 13:19:47,076 - INFO - Testing Dumpster Lead Generation System...
+2025-09-11 13:19:47,077 - INFO - Database initialized successfully
+2025-09-11 13:19:47,077 - INFO - Lead scoring test - Score: 60
+2025-09-11 13:19:47,080 - INFO - Database initialized successfully
+2025-09-11 13:19:47,084 - INFO - ----------------------------------------
+2025-09-11 13:19:47,085 - INFO - Testing Dumpster Competitor Scraper...
+2025-09-11 13:19:47,085 - INFO - Testing scraper with URL: https://www.budgetdumpster.com/
+2025-09-11 13:19:49,107 - INFO - Company: budget dumpster
+2025-09-11 13:19:49,107 - INFO - Phone: 855-900-5728
+2025-09-11 13:19:49,107 - INFO - Services: Waste_Types: Yard Waste Dumpster, Yard Waste...
+2025-09-11 13:19:49,107 - INFO - 
+============================================================
+2025-09-11 13:19:49,109 - INFO - ============================================================
+2025-09-11 13:19:49,118 - INFO - 
+Overall: 4/4 tests passed
+2025-09-11 13:19:49,121 - INFO - 
+Test log saved to: dumpster_scraper_test.log
+2025-09-11 13:23:31,903 - INFO - ============================================================
+2025-09-11 13:23:31,906 - INFO - ----------------------------------------
+2025-09-11 13:23:31,906 - INFO - Testing search keywords configuration...
+2025-09-11 13:23:31,907 - INFO - Database initialized successfully
+2025-09-11 13:23:31,907 - INFO - Total search keywords: 25
+2025-09-11 13:23:31,908 - INFO - Dumpster-related keywords: 13
+2025-09-11 13:23:31,908 - INFO - Utah location keywords: 9
+2025-09-11 13:23:31,913 - INFO - ----------------------------------------
+2025-09-11 13:23:31,913 - INFO - Testing competitor URLs configuration...
+2025-09-11 13:23:31,914 - INFO - Total dumpster rental competitor URLs: 43
+2025-09-11 13:23:31,914 - INFO - Utah-specific competitor URLs: 15
+2025-09-11 13:23:31,919 - INFO - ----------------------------------------
+2025-09-11 13:23:31,919 - INFO - Testing Dumpster Lead Generation System...
+2025-09-11 13:23:31,920 - INFO - Database initialized successfully
+2025-09-11 13:23:31,921 - INFO - Lead scoring test - Score: 60
+2025-09-11 13:23:31,924 - INFO - Database initialized successfully
+2025-09-11 13:23:31,930 - INFO - ----------------------------------------
+2025-09-11 13:23:31,930 - INFO - Testing Dumpster Competitor Scraper...
+2025-09-11 13:23:31,930 - INFO - Testing scraper with URL: https://www.budgetdumpster.com/
+2025-09-11 13:23:34,721 - INFO - Company: budget dumpster
+2025-09-11 13:23:34,722 - INFO - Phone: 855-900-5728
+2025-09-11 13:23:34,722 - INFO - Services: Waste_Types: Yard Waste Dumpster, Yard Waste...
+2025-09-11 13:23:34,722 - INFO - 
+============================================================
+2025-09-11 13:23:34,724 - INFO - ============================================================
+2025-09-11 13:23:34,733 - INFO - 
+Overall: 4/4 tests passed
+2025-09-11 13:23:34,735 - INFO - 
+Test log saved to: dumpster_scraper_test.log
+2025-09-11 14:13:12,213 - INFO - Database initialized successfully
+2025-09-11 14:13:12,579 - INFO - Icon Dumpsters Lead Generation System initialized
+2025-09-11 14:13:12,579 - INFO - Starting lead generation process...
+2025-09-11 14:13:12,579 - INFO - Starting lead generation process...
+2025-09-11 14:13:12,579 - INFO - Searching real estate listings...
+2025-09-11 14:13:12,579 - INFO - Searching Craigslist...
+2025-09-11 14:20:56,285 - INFO - Found 0 Craigslist leads
+2025-09-11 14:20:56,289 - INFO - Found 5 real estate leads
+2025-09-11 14:20:56,289 - INFO - Searching social media...
+2025-09-11 14:20:56,289 - INFO - Searching Reddit...
+2025-09-11 14:24:10,432 - INFO - Found 36 Reddit leads
+2025-09-11 14:24:10,434 - INFO - Searching Facebook Marketplace...

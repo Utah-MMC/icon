@@ -1,0 +1,203 @@
+2025-09-11 14:43:42,080 - INFO - Database initialized successfully
+2025-09-11 14:43:42,081 - INFO - Starting enhanced lead generation...
+2025-09-11 14:43:42,081 - INFO - Generating construction leads...
+2025-09-11 14:43:42,081 - INFO - Generating business leads...
+2025-09-11 14:43:42,082 - INFO - Generating residential leads...
+2025-09-11 14:43:42,082 - INFO - Saving 15 leads to database...
+2025-09-11 14:44:27,655 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:44:27,656 - INFO - Database initialized successfully
+2025-09-11 14:44:27,657 - INFO - Starting enhanced lead generation...
+2025-09-11 14:44:27,657 - INFO - Generating construction leads...
+2025-09-11 14:44:27,657 - INFO - Generating business leads...
+2025-09-11 14:44:27,658 - INFO - Generating residential leads...
+2025-09-11 14:44:27,658 - INFO - Saving 15 leads to database...
+2025-09-11 14:44:54,520 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:44:54,522 - INFO - Database initialized successfully
+2025-09-11 14:44:54,522 - INFO - Starting enhanced lead generation...
+2025-09-11 14:44:54,523 - INFO - Generating construction leads...
+2025-09-11 14:44:54,523 - INFO - Generating business leads...
+2025-09-11 14:44:54,524 - INFO - Generating residential leads...
+2025-09-11 14:44:54,524 - INFO - Saving 15 leads to database...
+2025-09-11 14:44:54,526 - INFO - Lead generation completed. 0 new leads added.
+2025-09-11 14:45:03,829 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:45:03,830 - INFO - Database initialized successfully
+2025-09-11 14:45:03,832 - INFO - Icon Dumpsters Lead Generation System initialized
+2025-09-11 14:45:03,832 - INFO - Starting lead generation process...
+2025-09-11 14:45:03,832 - INFO - Starting enhanced lead generation...
+2025-09-11 14:45:03,832 - INFO - Generating construction leads...
+2025-09-11 14:45:03,832 - INFO - Generating business leads...
+2025-09-11 14:45:03,833 - INFO - Generating residential leads...
+2025-09-11 14:45:03,833 - INFO - Saving 15 leads to database...
+2025-09-11 14:45:03,992 - INFO - Lead generation completed. 15 new leads added.
+2025-09-11 14:45:03,992 - ERROR - Error in lead generation: no such column: created_at
+2025-09-11 14:45:19,615 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:45:19,616 - INFO - Database initialized successfully
+2025-09-11 14:45:19,617 - INFO - Icon Dumpsters Lead Generation System initialized
+2025-09-11 14:45:19,618 - INFO - Starting lead generation process...
+2025-09-11 14:45:19,618 - INFO - Starting enhanced lead generation...
+2025-09-11 14:45:19,618 - INFO - Generating construction leads...
+2025-09-11 14:45:19,619 - INFO - Generating business leads...
+2025-09-11 14:45:19,619 - INFO - Generating residential leads...
+2025-09-11 14:45:19,619 - INFO - Saving 15 leads to database...
+2025-09-11 14:45:19,623 - INFO - Lead generation completed. 0 new leads added.
+2025-09-11 14:45:20,041 - INFO - Scheduled follow-up sequence for lead 1
+2025-09-11 14:45:20,173 - INFO - Scheduled follow-up sequence for lead 2
+2025-09-11 14:45:20,329 - INFO - Scheduled follow-up sequence for lead 4
+2025-09-11 14:45:20,474 - INFO - Scheduled follow-up sequence for lead 5
+2025-09-11 14:45:20,628 - INFO - Scheduled follow-up sequence for lead 9
+2025-09-11 14:45:20,859 - INFO - Scheduled follow-up sequence for lead 10
+2025-09-11 14:45:21,150 - INFO - Scheduled follow-up sequence for lead 13
+2025-09-11 14:45:21,305 - INFO - Scheduled follow-up sequence for lead 14
+2025-09-11 14:45:21,448 - INFO - Scheduled follow-up sequence for lead 15
+2025-09-11 14:45:21,581 - INFO - Scheduled follow-up sequence for lead 8
+2025-09-11 14:45:21,727 - INFO - Scheduled follow-up sequence for lead 11
+2025-09-11 14:45:21,896 - INFO - Scheduled follow-up sequence for lead 3
+2025-09-11 14:45:22,147 - INFO - Scheduled follow-up sequence for lead 6
+2025-09-11 14:45:22,472 - INFO - Scheduled follow-up sequence for lead 7
+2025-09-11 14:45:22,627 - INFO - Scheduled follow-up sequence for lead 12
+2025-09-11 14:45:22,628 - INFO - Lead generation completed. Generated 15 total leads.
+2025-09-11 14:45:28,585 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:45:28,586 - INFO - Database initialized successfully
+2025-09-11 14:45:28,587 - INFO - Icon Dumpsters Lead Generation System initialized
+2025-09-11 14:58:19,789 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 14:58:19,790 - INFO - Database initialized successfully
+2025-09-11 14:58:19,791 - INFO - Starting enhanced lead generation...
+2025-09-11 14:58:19,791 - INFO - Generating construction leads...
+2025-09-11 14:58:19,791 - INFO - Scraping construction permits from Utah government sites...
+2025-09-11 14:58:32,623 - INFO - Found 0 construction leads
+2025-09-11 14:58:32,624 - INFO - Generating business leads...
+2025-09-11 14:58:32,624 - INFO - Scraping business directories for contractor leads...
+2025-09-11 14:59:05,504 - INFO - Found 0 business leads
+2025-09-11 14:59:05,505 - INFO - Generating residential leads...
+2025-09-11 14:59:05,505 - INFO - Scraping residential project leads...
+2025-09-11 14:59:07,967 - INFO - Found 0 residential leads
+2025-09-11 14:59:07,967 - INFO - Saving 0 leads to database...
+2025-09-11 14:59:07,969 - INFO - Lead generation completed. 0 new leads added.
+2025-09-11 15:02:28,618 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:02:28,619 - INFO - Database initialized successfully
+2025-09-11 15:02:28,619 - INFO - Starting enhanced lead generation...
+2025-09-11 15:02:28,619 - INFO - Generating construction leads...
+2025-09-11 15:02:28,619 - INFO - Scraping construction permits from Utah government sites...
+2025-09-11 15:02:28,620 - INFO - Attempting to scrape: https://permitsearch.slcgov.com/
+2025-09-11 15:02:36,175 - ERROR - Stealth request failed for https://permitsearch.slcgov.com/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=140.0.7339.128)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7d2dbfc95+79861]
+	GetHandleVerifier [0x0x7ff7d2dbfcf0+79952]
+	(No symbol) [0x0x7ff7d2b3cada]
+	(No symbol) [0x0x7ff7d2b397e1]
+	(No symbol) [0x0x7ff7d2b2a339]
+	(No symbol) [0x0x7ff7d2b2c111]
+	(No symbol) [0x0x7ff7d2b2a656]
+	(No symbol) [0x0x7ff7d2b2a0a7]
+	(No symbol) [0x0x7ff7d2b29d6b]
+	(No symbol) [0x0x7ff7d2b278dc]
+	(No symbol) [0x0x7ff7d2b2816c]
+	(No symbol) [0x0x7ff7d2b40baa]
+	(No symbol) [0x0x7ff7d2be5d6e]
+	(No symbol) [0x0x7ff7d2bbcada]
+	(No symbol) [0x0x7ff7d2be4f8b]
+	(No symbol) [0x0x7ff7d2bbc8b3]
+	(No symbol) [0x0x7ff7d2b85272]
+	(No symbol) [0x0x7ff7d2b86043]
+	GetHandleVerifier [0x0x7ff7d307b9cd+2946349]
+	GetHandleVerifier [0x0x7ff7d3075c4a+2922410]
+	GetHandleVerifier [0x0x7ff7d30959d7+3052855]
+	GetHandleVerifier [0x0x7ff7d2ddaa7e+189918]
+	GetHandleVerifier [0x0x7ff7d2de2a1f+222591]
+	GetHandleVerifier [0x0x7ff7d2dc8ab4+116244]
+	GetHandleVerifier [0x0x7ff7d2dc8c69+116681]
+	GetHandleVerifier [0x0x7ff7d2daf048+11176]
+	BaseThreadInitThunk [0x0x7ffa51f47374+20]
+	RtlUserThreadStart [0x0x7ffa529dcc91+33]
+
+2025-09-11 15:02:40,237 - INFO - Attempting to scrape: https://www.slc.gov/development-services/building-permits/
+2025-09-11 15:02:46,500 - ERROR - Stealth request failed for https://www.slc.gov/development-services/building-permits/: Message: move target out of bounds
+  (Session info: chrome=140.0.7339.128)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7d2dbfc95+79861]
+	GetHandleVerifier [0x0x7ff7d2dbfcf0+79952]
+	(No symbol) [0x0x7ff7d2b3c8fc]
+	(No symbol) [0x0x7ff7d2bf03fc]
+	(No symbol) [0x0x7ff7d2bbcada]
+	(No symbol) [0x0x7ff7d2be4f8b]
+	(No symbol) [0x0x7ff7d2bbc8b3]
+	(No symbol) [0x0x7ff7d2b85272]
+	(No symbol) [0x0x7ff7d2b86043]
+	GetHandleVerifier [0x0x7ff7d307b9cd+2946349]
+	GetHandleVerifier [0x0x7ff7d3075c4a+2922410]
+	GetHandleVerifier [0x0x7ff7d30959d7+3052855]
+	GetHandleVerifier [0x0x7ff7d2ddaa7e+189918]
+	GetHandleVerifier [0x0x7ff7d2de2a1f+222591]
+	GetHandleVerifier [0x0x7ff7d2dc8ab4+116244]
+	GetHandleVerifier [0x0x7ff7d2dc8c69+116681]
+	GetHandleVerifier [0x0x7ff7d2daf048+11176]
+	BaseThreadInitThunk [0x0x7ffa51f47374+20]
+	RtlUserThreadStart [0x0x7ffa529dcc91+33]
+
+2025-09-11 15:02:50,557 - INFO - Attempting to scrape: https://www.slc.gov/development-services/
+2025-09-11 15:02:57,681 - ERROR - Stealth request failed for https://www.slc.gov/development-services/: Message: move target out of bounds
+  (Session info: chrome=140.0.7339.128)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7d2dbfc95+79861]
+	GetHandleVerifier [0x0x7ff7d2dbfcf0+79952]
+	(No symbol) [0x0x7ff7d2b3c8fc]
+	(No symbol) [0x0x7ff7d2bf03fc]
+	(No symbol) [0x0x7ff7d2bbcada]
+	(No symbol) [0x0x7ff7d2be4f8b]
+	(No symbol) [0x0x7ff7d2bbc8b3]
+	(No symbol) [0x0x7ff7d2b85272]
+	(No symbol) [0x0x7ff7d2b86043]
+	GetHandleVerifier [0x0x7ff7d307b9cd+2946349]
+	GetHandleVerifier [0x0x7ff7d3075c4a+2922410]
+	GetHandleVerifier [0x0x7ff7d30959d7+3052855]
+	GetHandleVerifier [0x0x7ff7d2ddaa7e+189918]
+	GetHandleVerifier [0x0x7ff7d2de2a1f+222591]
+	GetHandleVerifier [0x0x7ff7d2dc8ab4+116244]
+	GetHandleVerifier [0x0x7ff7d2dc8c69+116681]
+	GetHandleVerifier [0x0x7ff7d2daf048+11176]
+	BaseThreadInitThunk [0x0x7ffa51f47374+20]
+	RtlUserThreadStart [0x0x7ffa529dcc91+33]
+
+2025-09-11 15:03:08,801 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-09-11 15:03:13,599 - INFO - Found 0 construction leads
+2025-09-11 15:03:13,600 - INFO - No real leads found, using realistic sample data for demonstration...
+2025-09-11 15:03:13,600 - INFO - Generating business leads...
+2025-09-11 15:03:13,600 - INFO - Scraping business directories for contractor leads...
+2025-09-11 15:03:47,281 - INFO - Found 0 business leads
+2025-09-11 15:03:47,281 - INFO - Generating residential leads...
+2025-09-11 15:03:47,281 - INFO - Scraping residential project leads...
+2025-09-11 15:03:47,282 - INFO - Scraping Reddit: https://www.reddit.com/r/HomeImprovement/search.json?q=dumpster&sort=new&limit=25
+2025-09-11 15:03:51,605 - INFO - Scraping Reddit: https://www.reddit.com/r/HomeImprovement/search.json?q=renovation&sort=new&limit=25
+2025-09-11 15:03:56,003 - INFO - Scraping Reddit: https://www.reddit.com/r/HomeImprovement/search.json?q=construction&sort=new&limit=25
+2025-09-11 15:03:56,620 - ERROR - Error scraping Reddit URL https://www.reddit.com/r/HomeImprovement/search.json?q=construction&sort=new&limit=25: EnhancedLeadGenerator.extract_reddit_lead() takes 4 positional arguments but 5 were given
+2025-09-11 15:03:56,620 - INFO - Scraping Reddit: https://www.reddit.com/r/Construction/search.json?q=utah&sort=new&limit=25
+2025-09-11 15:03:59,855 - INFO - Scraping Reddit: https://www.reddit.com/r/SaltLakeCity/search.json?q=construction&sort=new&limit=25
+2025-09-11 15:04:00,467 - ERROR - Error scraping Reddit URL https://www.reddit.com/r/SaltLakeCity/search.json?q=construction&sort=new&limit=25: EnhancedLeadGenerator.extract_reddit_lead() takes 4 positional arguments but 5 were given
+2025-09-11 15:04:03,945 - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-09-11 15:04:03,958 - INFO - Scraping Craigslist for construction leads...
+2025-09-11 15:04:03,958 - INFO - Scraping Craigslist: https://saltlakecity.craigslist.org/search/sss?query=construction+services
+2025-09-11 15:04:13,374 - INFO - Scraping Craigslist: https://saltlakecity.craigslist.org/search/sss?query=home+renovation
+2025-09-11 15:04:21,853 - INFO - Scraping Craigslist: https://saltlakecity.craigslist.org/search/sss?query=demolition
+2025-09-11 15:04:28,265 - INFO - Found 0 residential leads
+2025-09-11 15:04:28,265 - INFO - Saving 3 leads to database...
+2025-09-11 15:04:28,386 - INFO - Lead generation completed. 3 new leads added.
+2025-09-11 15:05:14,300 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:05:14,300 - INFO - Database initialized successfully
+2025-09-11 15:05:14,302 - INFO - Icon Dumpsters Lead Generation System initialized
+2025-09-11 15:07:53,850 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:07:53,851 - INFO - Database initialized successfully
+2025-09-11 15:09:02,834 - INFO - Starting logged-in browser scraping for yellowpages
+2025-09-11 15:09:02,835 - INFO - Browser will stay open for manual interaction
+2025-09-11 15:16:17,535 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:16:17,536 - INFO - Database initialized successfully
+2025-09-11 15:16:59,807 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /session/61422078d49fc396889ec17040902377
+2025-09-11 15:17:03,874 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000242C992C550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/61422078d49fc396889ec17040902377
+2025-09-11 15:17:07,915 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000242C992CF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/61422078d49fc396889ec17040902377
+2025-09-11 15:20:25,129 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:20:25,130 - INFO - Database initialized successfully
+2025-09-11 15:21:54,833 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:21:54,834 - INFO - Database initialized successfully
+2025-09-11 15:22:03,946 - INFO - Existing leads table columns: ['id', 'source_url', 'company_name', 'contact_name', 'phone', 'email', 'website', 'address', 'city', 'state', 'zip_code', 'services', 'lead_score', 'lead_status', 'lead_source', 'notes', 'created_date', 'last_contacted', 'next_follow_up', 'contact_history']
+2025-09-11 15:22:03,947 - INFO - Database initialized successfully
+2025-09-11 15:22:03,949 - INFO - Icon Dumpsters Lead Generation System initialized

@@ -1,0 +1,46 @@
+{
+  "database_path": "dumpster_leads.db",
+  "email_config": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "your-email@gmail.com",
+    "password": "your-app-password",
+    "from_name": "Icon Dumpsters"
+  },
+  "scraping_settings": {
+    "max_leads_per_source": 50,
+    "delay_between_requests": 2,
+    "timeout": 10
+  },
+  "lead_scoring": {
+    "high_value_keywords": [
+      "dumpster rental",
+      "roll off dumpster",
+      "construction dumpster",
+      "demolition dumpster",
+      "junk removal",
+      "contractor cleanup",
+      "construction cleanup"
+    ],
+    "medium_value_keywords": [
+      "dumpster",
+      "waste removal",
+      "debris removal",
+      "construction cleanup",
+      "project cleanup",
+      "site cleanup",
+      "building cleanup"
+    ],
+    "location_bonus": [
+      "Salt Lake City",
+      "West Jordan",
+      "Sandy",
+      "Ogden",
+      "Provo",
+      "Murray",
+      "Taylorsville",
+      "Midvale",
+      "Utah"
+    ]
+  }
+}

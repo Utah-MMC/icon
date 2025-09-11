@@ -213,7 +213,7 @@ export default function AdminDashboard() {
           <div className="flex justify-between items-start">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Icon Dumpsters - Admin Dashboard</h1>
-              <p className="text-gray-600">Monitor your business performance and manage inventory</p>
+              <p className="text-gray-600">Administrative controls, data management, and system configuration</p>
               <p className="text-sm text-gray-500 mt-1">Last updated: {lastRefresh.toLocaleTimeString()}</p>
             </div>
             <button
@@ -227,16 +227,22 @@ export default function AdminDashboard() {
           {/* Navigation Links */}
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="/inventory"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+              href="/scraper-dashboard"
+              className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm"
             >
-              📦 Inventory Management
+              🕷️ Scraper Dashboard
             </a>
             <a
               href="/kpi-dashboard"
               className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
             >
               📊 Analytics Dashboard
+            </a>
+            <a
+              href="/inventory"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+            >
+              📦 Inventory Management
             </a>
             <a
               href="/admin"
@@ -253,48 +259,86 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="mb-8 flex flex-wrap gap-4">
-          <button
-            onClick={() => setShowManualEntry(!showManualEntry)}
-            className="bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
-          >
-            {showManualEntry ? 'Hide' : 'Show'} Manual Entry
-          </button>
-          <button
-            onClick={exportData}
-            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Export Data
-          </button>
-          <button
-            onClick={resetData}
-            className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors"
-          >
-            Reset Data
-          </button>
-          <button
-            onClick={() => {
-              if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
-                (window as any).iconDumpstersKPI.trackQuoteRequest();
-                refreshData();
-              }
-            }}
-            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Test Quote Request
-          </button>
-          <button
-            onClick={() => {
-              if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
-                (window as any).iconDumpstersKPI.trackPhoneCall();
-                refreshData();
-              }
-            }}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Test Phone Call
-          </button>
+        {/* Admin Controls Section */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Administrative Controls</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Data Management</h3>
+              <div className="space-y-2">
+                <button
+                  onClick={() => setShowManualEntry(!showManualEntry)}
+                  className="w-full bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm"
+                >
+                  {showManualEntry ? 'Hide' : 'Show'} Manual Entry
+                </button>
+                <button
+                  onClick={exportData}
+                  className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                >
+                  📊 Export Data
+                </button>
+                <button
+                  onClick={resetData}
+                  className="w-full bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm"
+                >
+                  🗑️ Reset Data
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">System Testing</h3>
+              <div className="space-y-2">
+                <button
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
+                      (window as any).iconDumpstersKPI.trackQuoteRequest();
+                      refreshData();
+                    }
+                  }}
+                  className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                >
+                  📝 Test Quote Request
+                </button>
+                <button
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).iconDumpstersKPI) {
+                      (window as any).iconDumpstersKPI.trackPhoneCall();
+                      refreshData();
+                    }
+                  }}
+                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                >
+                  📞 Test Phone Call
+                </button>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Quick Actions</h3>
+              <div className="space-y-2">
+                <a
+                  href="/scraper-dashboard"
+                  className="block w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm text-center"
+                >
+                  🕷️ Scraper Dashboard
+                </a>
+                <a
+                  href="/inventory"
+                  className="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm text-center"
+                >
+                  📦 Manage Inventory
+                </a>
+                <a
+                  href="/kpi-dashboard"
+                  className="block w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm text-center"
+                >
+                  📊 View Analytics
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Manual Entry Form */}
@@ -362,63 +406,44 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* KPI Dashboard */}
-        <div id="kpi-dashboard" className="mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Revenue</h3>
-              <p className="text-3xl font-bold text-gray-900">${kpiData.revenue.toLocaleString()}</p>
-              <p className="text-sm text-gray-600">Target: ${targets.monthlyRevenue.toLocaleString()}</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.revenue, targets.monthlyRevenue)}</p>
+        {/* Key Performance Overview */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-semibold text-gray-900">Key Performance Overview</h2>
+            <a
+              href="/kpi-dashboard"
+              className="text-[#4e37a8] hover:text-purple-700 text-sm font-medium"
+            >
+              View Detailed Analytics →
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-sm font-medium text-[#4e37a8] mb-1">Revenue</h3>
+              <p className="text-2xl font-bold text-gray-900">${kpiData.revenue.toLocaleString()}</p>
+              <p className="text-xs text-gray-600">Target: ${targets.monthlyRevenue.toLocaleString()}</p>
+              <p className="text-lg mt-1">{getStatus(kpiData.revenue, targets.monthlyRevenue)}</p>
             </div>
             
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Rentals</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.rentals}</p>
-              <p className="text-sm text-gray-600">Target: {targets.monthlyRentals}</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.rentals, targets.monthlyRentals)}</p>
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-sm font-medium text-[#4e37a8] mb-1">Rentals</h3>
+              <p className="text-2xl font-bold text-gray-900">{kpiData.rentals}</p>
+              <p className="text-xs text-gray-600">Target: {targets.monthlyRentals}</p>
+              <p className="text-lg mt-1">{getStatus(kpiData.rentals, targets.monthlyRentals)}</p>
             </div>
             
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Utilization</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.utilization.toFixed(1)}%</p>
-              <p className="text-sm text-gray-600">Target: {targets.utilization}%</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.utilization, targets.utilization)}</p>
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-sm font-medium text-[#4e37a8] mb-1">Utilization</h3>
+              <p className="text-2xl font-bold text-gray-900">{kpiData.utilization.toFixed(1)}%</p>
+              <p className="text-xs text-gray-600">Target: {targets.utilization}%</p>
+              <p className="text-lg mt-1">{getStatus(kpiData.utilization, targets.utilization)}</p>
             </div>
             
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Website Visitors</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.websiteVisitors}</p>
-              <p className="text-sm text-gray-600">Target: {targets.websiteVisitors}</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.websiteVisitors, targets.websiteVisitors)}</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Quote Requests</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.quoteRequests}</p>
-              <p className="text-sm text-gray-600">Target: {targets.quoteRequests}</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.quoteRequests, targets.quoteRequests)}</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Phone Calls</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.phoneCalls}</p>
-              <p className="text-sm text-gray-600">Target: {targets.phoneCalls}</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.phoneCalls, targets.phoneCalls)}</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Conversion Rate</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.conversionRate.toFixed(1)}%</p>
-              <p className="text-sm text-gray-600">Target: {targets.conversionRate}%</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.conversionRate, targets.conversionRate)}</p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow border p-6">
-              <h3 className="text-lg font-semibold text-[#4e37a8] mb-2">Customer Satisfaction</h3>
-              <p className="text-3xl font-bold text-gray-900">{kpiData.customerSatisfaction.toFixed(1)}</p>
-              <p className="text-sm text-gray-600">Target: {targets.customerSatisfaction}+</p>
-              <p className="text-2xl mt-2">{getStatus(kpiData.customerSatisfaction, targets.customerSatisfaction)}</p>
+            <div className="bg-white rounded-xl shadow border p-4">
+              <h3 className="text-sm font-medium text-[#4e37a8] mb-1">Conversion</h3>
+              <p className="text-2xl font-bold text-gray-900">{kpiData.conversionRate.toFixed(1)}%</p>
+              <p className="text-xs text-gray-600">Target: {targets.conversionRate}%</p>
+              <p className="text-lg mt-1">{getStatus(kpiData.conversionRate, targets.conversionRate)}</p>
             </div>
           </div>
         </div>

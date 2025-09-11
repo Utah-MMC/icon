@@ -1,0 +1,2 @@
+2025-09-11 13:29:54,899 - INFO - Database initialized successfully
+2025-09-11 13:29:58,980 - ERROR - Error getting dashboard data: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/scraper-data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002087FEBE490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))

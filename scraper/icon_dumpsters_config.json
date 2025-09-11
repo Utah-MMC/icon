@@ -1,0 +1,77 @@
+{
+  "database_path": "dumpster_leads.db",
+  "email_config": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "your-email@gmail.com",
+    "password": "your-app-password",
+    "from_name": "Icon Dumpsters"
+  },
+  "scraping_settings": {
+    "max_leads_per_source": 50,
+    "delay_between_requests": 2,
+    "timeout": 10
+  },
+  "lead_scoring": {
+    "high_value_keywords": [
+      "dumpster rental",
+      "roll off dumpster",
+      "construction dumpster",
+      "demolition dumpster",
+      "junk removal",
+      "waste disposal",
+      "contractor cleanup",
+      "construction cleanup"
+    ],
+    "medium_value_keywords": [
+      "dumpster",
+      "waste removal",
+      "debris removal",
+      "construction cleanup",
+      "junk hauling",
+      "project cleanup",
+      "site cleanup",
+      "building cleanup"
+    ],
+    "location_bonus": [
+      "Salt Lake City",
+      "West Jordan",
+      "Sandy",
+      "Ogden",
+      "Provo",
+      "Murray",
+      "Taylorsville",
+      "Midvale",
+      "Utah"
+    ]
+  },
+  "business_info": {
+    "company_name": "Icon Dumpsters",
+    "website": "icondumpsters.com",
+    "phone": "(801) 555-0123",
+    "email": "info@icondumpsters.com",
+    "service_areas": [
+      "Salt Lake City",
+      "West Jordan",
+      "Sandy",
+      "Ogden",
+      "Provo",
+      "Murray",
+      "Taylorsville",
+      "Midvale"
+    ],
+    "services": [
+      "10 Yard Dumpster Rental",
+      "15 Yard Dumpster Rental",
+      "20 Yard Dumpster Rental",
+      "30 Yard Dumpster Rental",
+      "40 Yard Dumpster Rental",
+      "Construction Cleanup",
+      "Demolition Waste Disposal",
+      "Junk Removal",
+      "Same Day Delivery",
+      "Residential Dumpster Rental",
+      "Commercial Dumpster Rental"
+    ]
+  }
+}
