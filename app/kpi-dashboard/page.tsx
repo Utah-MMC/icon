@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import ClientDatabase from '../components/ClientDatabase';
+import ClientInsights from '../components/ClientInsights';
 
 type Counts = { byType: Record<string, number>; byName: Record<string, number>; total: number };
 type Summary = { sessions: number; utmSources: Record<string, number>; referrers: Record<string, number>; paths: Record<string, number>; sessionsWithCTA: number; sessionsWithForm: number; conversionRate: number; topCTAs: Record<string, number> };
@@ -121,6 +123,18 @@ export default function KPIDashboard() {
         </div>
 
         <div className="mt-8 text-sm text-gray-500">Tip: Events automatically attach UTM, session, referrer, and path for attribution.</div>
+        
+        {/* Client Database Section */}
+        <div className="mt-12">
+          <div className="border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Client Database Analytics</h2>
+            <ClientInsights />
+          </div>
+        </div>
+        
+        <div className="mt-8">
+          <ClientDatabase />
+        </div>
       </div>
     </div>
   );

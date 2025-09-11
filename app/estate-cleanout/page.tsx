@@ -1,5 +1,6 @@
-'use client';
-
+import type { Metadata } from 'next';
+import PageHero from '../components/PageHero';
+import PageTemplate from '../components/PageTemplate';
 import Image from "next/image";
 import ImageWithFallback from "../components/ImageWithFallback";
 import QuoteForm from "../components/QuoteForm";
@@ -7,17 +8,45 @@ import TrustSection from "../components/TrustSection";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import BlogAuthor from "../components/BlogAuthor";
 
+export const metadata: Metadata = {
+  title: 'Estate Cleanout Services in Utah | Icon Dumpsters',
+  description: 'Professional estate cleanout services for complete property cleanup, downsizing, and moving projects. Residential-friendly dumpster rentals throughout Utah. Call (801) 918-6000.',
+  keywords: 'estate cleanout, property cleanup, downsizing dumpster rental, moving cleanout, Utah estate services',
+  alternates: { canonical: '/estate-cleanout' },
+  robots: { index: true, follow: true }
+};
+
 export default function EstateCleanout() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="relative">
-        {/* Background image */}
-        <div className="relative h-64 sm:h-80 lg:h-96">
-          <ImageWithFallback 
-            src="/images/dumpsterSmallBanner5.jpeg" 
-            alt="Professional Estate Cleanout Services in Utah - Complete Property Cleanup and Waste Removal" 
-            className="w-full h-full object-cover"
+    <PageTemplate>
+      <PageHero
+        title="Estate Cleanout Services"
+        subtitle="Professional estate cleanout services for complete property cleanup, downsizing, and moving projects"
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="/#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:(801) 918-6000"
+      />
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        {/* Service Overview */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Complete Estate Cleanout Services in Utah
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            When you need to clear out a property completely, our estate cleanout services provide the perfect solution. Whether you're dealing with a loved one's estate, downsizing for a move, or preparing a property for sale, we make the process simple and stress-free.
+          </p>
+        </div>
+
+        {/* Service Images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+            <ImageWithFallback 
+              src="/images/dumpsterSmallBanner5.jpeg" 
+              alt="Professional Estate Cleanout Services in Utah - Complete Property Cleanup and Waste Removal" 
+              className="w-full h-full object-cover"
             fallbackSrc="/images/dumpsterSmallBanner5.webp"
           />
           <div className="absolute inset-0 bg-black/40"></div>
@@ -243,11 +272,12 @@ export default function EstateCleanout() {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <TrustSection />
+        {/* Trust Section */}
+        <TrustSection />
 
-      {/* Reviews Section */}
-      <ReviewsCarousel />
-    </div>
+        {/* Reviews Section */}
+        <ReviewsCarousel />
+      </div>
+    </PageTemplate>
   );
 }
