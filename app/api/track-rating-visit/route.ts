@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
       userAgent: request.headers.get('user-agent') || undefined,
       referrer: request.headers.get('referer') || body.referrer || undefined,
-      ip: request.ip || request.headers.get('x-forwarded-for') || undefined,
+      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || undefined,
       source: body.source || 'direct'
     };
     
