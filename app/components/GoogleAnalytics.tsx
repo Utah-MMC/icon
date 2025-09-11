@@ -4,10 +4,18 @@ import Script from 'next/script';
 
 export default function GoogleAnalytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-TCJ2JFCZ1V';
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-17497114208';
+  
   return (
     <>
+      {/* Google Analytics */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        strategy="afterInteractive"
+      />
+      {/* Google Ads */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -25,6 +33,7 @@ export default function GoogleAnalytics() {
           });
           gtag('js', new Date());
           gtag('config', '${gaId}');
+          gtag('config', '${googleAdsId}');
         `}
       </Script>
     </>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { track } from './analytics';
 
 export default function KPITracking() {
   useEffect(() => {
@@ -158,13 +159,11 @@ export default function KPITracking() {
           timestamp: Date.now()
         });
         
-        // Send to Google Analytics
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'phone_call', {
-            'event_category': 'engagement',
-            'event_label': 'dumpster_rental_call'
-          });
-        }
+        // Use centralized tracking function for Google Analytics and Google Ads
+        track('phone', 'call_click', {
+          sessionId: this.getSessionId(),
+          timestamp: Date.now()
+        });
       }
 
       // Track page views

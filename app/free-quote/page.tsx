@@ -2,6 +2,7 @@ import QuoteForm from '../components/QuoteForm';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import PageHero from '../components/PageHero';
+import PageTemplate from '../components/PageTemplate';
 
 export const metadata: Metadata = {
   title: 'Free Dumpster Rental Quote | Icon Dumpsters Utah',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function FreeQuotePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <PageTemplate>
       {/* Schema Markup for Service */}
       <Script
         id="service-schema"
@@ -170,6 +171,6 @@ export default function FreeQuotePage() {
           </div>
         </div>
       </div>
-    </div>
+    </PageTemplate>
   );
 }

@@ -62,6 +62,26 @@ export function track(type: string, name: string, meta?: Record<string, any>) {
       ...analyticsData 
     });
 
+    // Google Ads conversion tracking for quote submissions
+    if (type === 'form' && name === 'quote_submit' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17497114208',
+        'value': 1.0,
+        'currency': 'USD',
+        'transaction_id': sessionData?.sessionId || 'unknown'
+      });
+    }
+
+    // Google Ads conversion tracking for phone calls
+    if (type === 'phone' && name === 'call_click' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17497114208',
+        'value': 1.0,
+        'currency': 'USD',
+        'transaction_id': sessionData?.sessionId || 'unknown'
+      });
+    }
+
     // Custom analytics events
     (window as any).__analyticsEvents = (window as any).__analyticsEvents || [];
     (window as any).__analyticsEvents.push(analyticsData);

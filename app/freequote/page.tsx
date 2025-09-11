@@ -1,4 +1,6 @@
 import QuoteForm from '../components/QuoteForm';
+import PageHero from '../components/PageHero';
+import PageTemplate from '../components/PageTemplate';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -34,23 +36,15 @@ export const metadata: Metadata = {
 
 export default function FreeQuotePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#4e37a8] to-purple-600 text-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get Your Free Quote</h1>
-            <p className="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">
-              Professional dumpster rental services in Utah with competitive pricing and reliable delivery
-            </p>
-          </div>
-        </div>
-      </div>
+    <PageTemplate>
+      <PageHero
+        title="Get Your Free Quote"
+        subtitle="Professional dumpster rental services in Utah with competitive pricing and reliable delivery"
+        primaryCtaText="Get Free Quote"
+        primaryCtaLink="#quote-form"
+        secondaryCtaText="Call (801) 918-6000"
+        secondaryCtaLink="tel:(801) 918-6000"
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -153,6 +147,6 @@ export default function FreeQuotePage() {
           </div>
         </div>
       </div>
-    </div>
+    </PageTemplate>
   );
 }
