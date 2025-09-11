@@ -18,10 +18,6 @@ export default function ClientInsights({ clientData = [] }: ClientInsightsProps)
   const [insights, setInsights] = useState<ClientInsight[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    calculateInsights();
-  }, [calculateInsights]);
-
   const calculateInsights = useCallback(() => {
     if (!clientData || clientData.length === 0) {
       setLoading(false);
@@ -110,6 +106,10 @@ export default function ClientInsights({ clientData = [] }: ClientInsightsProps)
     setInsights(calculatedInsights);
     setLoading(false);
   }, [clientData]);
+
+  useEffect(() => {
+    calculateInsights();
+  }, [calculateInsights]);
 
   if (loading) {
     return (

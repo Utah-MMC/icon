@@ -48,7 +48,7 @@ export default function EmailFollowUpSystem() {
         sendReminderEmail(rental);
       }
     });
-  }, []);
+  }, [sendRatingRequestEmail, sendReminderEmail, sendReviewRequestEmail]);
 
   const initializeEmailSystem = () => {
     // Check for new rentals that need follow-up

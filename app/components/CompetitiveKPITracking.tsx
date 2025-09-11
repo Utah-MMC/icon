@@ -76,7 +76,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error initializing competitive tracking:', error);
     }
-  }, []);
+  }, [setupCompetitiveMonitoring, startAutomatedTracking]);
 
   useEffect(() => {
     console.log('Competitive KPI Tracking: Active');
@@ -138,7 +138,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error setting up competitive monitoring:', error);
     }
-  }, []);
+  }, [updateCompetitivePosition]);
 
   const startAutomatedTracking = useCallback(() => {
     try {
@@ -153,7 +153,7 @@ export default function CompetitiveKPITracking() {
     } catch (error) {
       console.log('Error starting automated tracking:', error);
     }
-  }, []);
+  }, [trackResponseTimes, trackReviewRequests, trackServiceQuality]);
 
   const trackReviewRequests = () => {
     try {
