@@ -15,6 +15,9 @@ interface ScraperData {
     dataQuality?: any;
     industries?: number;
     serviceAreas?: number;
+    highPriorityLeads?: number;
+    newLeads?: number;
+    averageScore?: number;
   };
 }
 
@@ -22,7 +25,18 @@ export default function ScraperDashboard() {
   const [scraperData, setScraperData] = useState<ScraperData | null>(null);
   const [scraperStatus, setScraperStatus] = useState<'idle' | 'running' | 'completed' | 'error'>('idle');
   const [scraperLogs, setScraperLogs] = useState<string[]>([]);
-  const [activeTab, setActiveTab] = useState<'leads' | 'competitors' | 'analytics' | 'insights' | 'logs'>('analytics');
+  const [activeTab, setActiveTab] = useState<'leads' | 'competitors' | 'analytics' | 'insights' | 'facebook-leads' | 'logs'>('analytics');
+  
+  // Pagination and selection state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(10);
+  const [selectedLeads, setSelectedLeads] = useState<Set<number>>(new Set());
+  const [selectedCompetitors, setSelectedCompetitors] = useState<Set<number>>(new Set());
+  const [selectedFacebookLeads, setSelectedFacebookLeads] = useState<Set<number>>(new Set());
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deleteType, setDeleteType] = useState<'leads' | 'competitors' | 'facebook-leads'>('leads');
+  const [facebookLeads, setFacebookLeads] = useState<any[]>([]);
+  const [facebookLeadsSummary, setFacebookLeadsSummary] = useState<any>(null);
 
   async function runLeadGeneration() {
     setScraperStatus('running');
@@ -45,6 +59,33 @@ export default function ScraperDashboard() {
         await loadScraperData();
       } else {
         throw new Error('Failed to generate leads');
+      }
+    } catch (error) {
+      setScraperStatus('error');
+      setScraperLogs(prev => [...prev, `Error: ${error}`]);
+    }
+  }
+
+  async function runFacebookLeadGeneration() {
+    setScraperStatus('running');
+    setScraperLogs(['Starting Facebook lead generation...']);
+    
+    try {
+      const response = await fetch('/api/scraper/facebook-leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'generate_facebook_leads' })
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        setScraperLogs(prev => [...prev, 'Facebook lead generation completed successfully!', `Generated ${data.totalLeads || 0} Facebook leads`, `High priority: ${data.highPriorityLeads || 0}`]);
+        setActiveTab('facebook-leads');
+        
+        // Refresh the Facebook leads data
+        await loadFacebookLeads();
+      } else {
+        throw new Error('Failed to generate Facebook leads');
       }
     } catch (error) {
       setScraperStatus('error');
@@ -120,6 +161,22 @@ export default function ScraperDashboard() {
     }
   }
 
+  async function loadFacebookLeads() {
+    try {
+      const response = await fetch('/api/scraper/facebook-leads');
+      if (response.ok) {
+        const data = await response.json();
+        setFacebookLeads(data.leads || []);
+        setFacebookLeadsSummary(data.summary || {});
+        setScraperLogs(prev => [...prev, 'Facebook leads loaded successfully', `Loaded ${data.leads?.length || 0} Facebook leads`]);
+      } else {
+        setScraperLogs(prev => [...prev, 'Error loading Facebook leads']);
+      }
+    } catch (error) {
+      setScraperLogs(prev => [...prev, `Error loading Facebook leads: ${error}`]);
+    }
+  }
+
   function exportData(format: 'csv' | 'json') {
     if (!scraperData) return;
     
@@ -169,9 +226,193 @@ export default function ScraperDashboard() {
     setScraperLogs(prev => [...prev, `Data exported as ${format.toUpperCase()}: ${filename}`]);
   }
 
+  // Pagination functions
+  function getCurrentPageData() {
+    if (!scraperData?.leads) return [];
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return scraperData.leads.slice(startIndex, endIndex);
+  }
+
+  function getCurrentPageCompetitors() {
+    if (!scraperData?.competitors) return [];
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return scraperData.competitors.slice(startIndex, endIndex);
+  }
+
+  function getCurrentPageFacebookLeads() {
+    if (!facebookLeads) return [];
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return facebookLeads.slice(startIndex, endIndex);
+  }
+
+  function getTotalPages() {
+    if (activeTab === 'leads') {
+      if (!scraperData?.leads) return 0;
+      return Math.ceil(scraperData.leads.length / itemsPerPage);
+    } else if (activeTab === 'competitors') {
+      if (!scraperData?.competitors) return 0;
+      return Math.ceil(scraperData.competitors.length / itemsPerPage);
+    } else if (activeTab === 'facebook-leads') {
+      if (!facebookLeads) return 0;
+      return Math.ceil(facebookLeads.length / itemsPerPage);
+    }
+    return 0;
+  }
+
+  // Selection functions
+  function toggleLeadSelection(index: number) {
+    const newSelected = new Set(selectedLeads);
+    if (newSelected.has(index)) {
+      newSelected.delete(index);
+    } else {
+      newSelected.add(index);
+    }
+    setSelectedLeads(newSelected);
+  }
+
+  function toggleCompetitorSelection(index: number) {
+    const newSelected = new Set(selectedCompetitors);
+    if (newSelected.has(index)) {
+      newSelected.delete(index);
+    } else {
+      newSelected.add(index);
+    }
+    setSelectedCompetitors(newSelected);
+  }
+
+  function selectAllLeads() {
+    const currentPageData = getCurrentPageData();
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const allIndices = currentPageData.map((_, i) => startIndex + i);
+    setSelectedLeads(new Set(allIndices));
+  }
+
+  function selectAllCompetitors() {
+    const currentPageData = getCurrentPageCompetitors();
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const allIndices = currentPageData.map((_, i) => startIndex + i);
+    setSelectedCompetitors(new Set(allIndices));
+  }
+
+  function toggleFacebookLeadSelection(index: number) {
+    const newSelected = new Set(selectedFacebookLeads);
+    if (newSelected.has(index)) {
+      newSelected.delete(index);
+    } else {
+      newSelected.add(index);
+    }
+    setSelectedFacebookLeads(newSelected);
+  }
+
+  function selectAllFacebookLeads() {
+    const currentPageData = getCurrentPageFacebookLeads();
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const allIndices = currentPageData.map((_, i) => startIndex + i);
+    setSelectedFacebookLeads(new Set(allIndices));
+  }
+
+  function clearSelection() {
+    setSelectedLeads(new Set());
+    setSelectedCompetitors(new Set());
+    setSelectedFacebookLeads(new Set());
+  }
+
+  function getSelectedCount() {
+    if (activeTab === 'leads') return selectedLeads.size;
+    if (activeTab === 'competitors') return selectedCompetitors.size;
+    if (activeTab === 'facebook-leads') return selectedFacebookLeads.size;
+    return 0;
+  }
+
+  function getSelectedItems() {
+    if (activeTab === 'leads') return selectedLeads;
+    if (activeTab === 'competitors') return selectedCompetitors;
+    if (activeTab === 'facebook-leads') return selectedFacebookLeads;
+    return new Set();
+  }
+
+  // Delete function
+  async function deleteSelectedItems() {
+    const selectedCount = getSelectedCount();
+    if (selectedCount === 0) return;
+    
+    try {
+      if (deleteType === 'leads') {
+        const response = await fetch('/api/scraper/leads', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            action: 'delete_leads',
+            leadIds: Array.from(selectedLeads)
+          })
+        });
+        
+        if (response.ok) {
+          setScraperLogs(prev => [...prev, `Deleted ${selectedLeads.size} leads successfully`]);
+          setSelectedLeads(new Set());
+          setShowDeleteConfirm(false);
+          // Refresh the data
+          await loadScraperData();
+        } else {
+          throw new Error('Failed to delete leads');
+        }
+      } else if (deleteType === 'competitors') {
+        const response = await fetch('/api/scraper/competitors', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            action: 'delete_competitors',
+            competitorIds: Array.from(selectedCompetitors)
+          })
+        });
+        
+        if (response.ok) {
+          setScraperLogs(prev => [...prev, `Deleted ${selectedCompetitors.size} competitors successfully`]);
+          setSelectedCompetitors(new Set());
+          setShowDeleteConfirm(false);
+          // Refresh the data
+          await loadScraperData();
+        } else {
+          throw new Error('Failed to delete competitors');
+        }
+      } else if (deleteType === 'facebook-leads') {
+        const response = await fetch('/api/scraper/facebook-leads', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            action: 'delete_facebook_leads',
+            leadIds: Array.from(selectedFacebookLeads)
+          })
+        });
+        
+        if (response.ok) {
+          setScraperLogs(prev => [...prev, `Deleted ${selectedFacebookLeads.size} Facebook leads successfully`]);
+          setSelectedFacebookLeads(new Set());
+          setShowDeleteConfirm(false);
+          // Refresh the Facebook leads data
+          await loadFacebookLeads();
+        } else {
+          throw new Error('Failed to delete Facebook leads');
+        }
+      }
+    } catch (error) {
+      setScraperLogs(prev => [...prev, `Error deleting ${deleteType}: ${error}`]);
+    }
+  }
+
   useEffect(() => {
     loadScraperData();
+    loadFacebookLeads();
   }, []);
+
+  // Reset pagination when switching tabs
+  useEffect(() => {
+    setCurrentPage(1);
+    clearSelection();
+  }, [activeTab]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -343,6 +584,16 @@ export default function ScraperDashboard() {
                   🏢 Competitors ({scraperData?.competitors?.length || 0})
                 </button>
                 <button
+                  onClick={() => setActiveTab('facebook-leads')}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                    activeTab === 'facebook-leads'
+                      ? 'border-[#4e37a8] text-[#4e37a8]'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  📘 Facebook Leads ({facebookLeads?.length || 0})
+                </button>
+                <button
                   onClick={() => setActiveTab('analytics')}
                   className={`py-4 px-1 border-b-2 font-medium text-sm ${
                     activeTab === 'analytics'
@@ -402,11 +653,61 @@ export default function ScraperDashboard() {
                         </div>
                       </div>
 
+                      {/* Selection Controls */}
+                      {scraperData.leads.length > 0 && (
+                        <div className="flex justify-between items-center mb-4">
+                          <div className="flex items-center gap-4">
+                            <button
+                              onClick={selectAllLeads}
+                              className="text-sm text-blue-600 hover:text-blue-800"
+                            >
+                              Select All on Page
+                            </button>
+                            <button
+                              onClick={clearSelection}
+                              className="text-sm text-gray-600 hover:text-gray-800"
+                            >
+                              Clear Selection
+                            </button>
+                            {selectedLeads.size > 0 && (
+                              <span className="text-sm text-gray-600">
+                                {selectedLeads.size} selected
+                              </span>
+                            )}
+                          </div>
+                          {selectedLeads.size > 0 && (
+                            <button
+                              onClick={() => {
+                                setDeleteType('leads');
+                                setShowDeleteConfirm(true);
+                              }}
+                              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm"
+                            >
+                              🗑️ Delete Selected ({selectedLeads.size})
+                            </button>
+                          )}
+                        </div>
+                      )}
+
                       {/* Leads Table */}
                       <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">
                           <thead className="bg-gray-50">
                             <tr>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <input
+                                  type="checkbox"
+                                  className="rounded border-gray-300"
+                                  onChange={(e) => {
+                                    if (e.target.checked) {
+                                      selectAllLeads();
+                                    } else {
+                                      clearSelection();
+                                    }
+                                  }}
+                                  checked={getCurrentPageData().length > 0 && getCurrentPageData().every((_, i) => selectedLeads.has((currentPage - 1) * itemsPerPage + i))}
+                                />
+                              </th>
                               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
                               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
@@ -418,35 +719,89 @@ export default function ScraperDashboard() {
                             </tr>
                           </thead>
                           <tbody className="bg-white divide-y divide-gray-200">
-                            {scraperData.leads.slice(0, 20).map((lead, index) => (
-                              <tr key={index}>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{lead.contact_name || lead.name || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.company_name || lead.company || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.phone || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.address || lead.location || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.lead_source || lead.source || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.services || lead.lead_type || 'N/A'}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                  <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                    lead.lead_score >= 80 ? 'bg-green-100 text-green-800' :
-                                    lead.lead_score >= 60 ? 'bg-blue-100 text-blue-800' :
-                                    lead.lead_score >= 40 ? 'bg-yellow-100 text-yellow-800' :
-                                    'bg-red-100 text-red-800'
-                                  }`}>
-                                    {lead.lead_score}/100
-                                  </div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                  {lead.estimated_value ? `$${lead.estimated_value.toLocaleString()}` : 'N/A'}
-                                </td>
-                              </tr>
-                            ))}
+                            {getCurrentPageData().map((lead, index) => {
+                              const globalIndex = (currentPage - 1) * itemsPerPage + index;
+                              return (
+                                <tr key={globalIndex} className={selectedLeads.has(globalIndex) ? 'bg-blue-50' : ''}>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <input
+                                      type="checkbox"
+                                      className="rounded border-gray-300"
+                                      checked={selectedLeads.has(globalIndex)}
+                                      onChange={() => toggleLeadSelection(globalIndex)}
+                                    />
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{lead.contact_name || lead.name || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.company_name || lead.company || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.phone || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.address || lead.location || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.lead_source || lead.source || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.services || lead.lead_type || 'N/A'}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                      lead.lead_score >= 80 ? 'bg-green-100 text-green-800' :
+                                      lead.lead_score >= 60 ? 'bg-blue-100 text-blue-800' :
+                                      lead.lead_score >= 40 ? 'bg-yellow-100 text-yellow-800' :
+                                      'bg-red-100 text-red-800'
+                                    }`}>
+                                      {lead.lead_score}/100
+                                    </div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    {lead.estimated_value ? `$${lead.estimated_value.toLocaleString()}` : 'N/A'}
+                                  </td>
+                                </tr>
+                              );
+                            })}
                           </tbody>
                         </table>
-                        {scraperData.leads.length > 20 && (
-                          <p className="mt-4 text-sm text-gray-500">Showing first 20 of {scraperData.leads.length} leads</p>
-                        )}
                       </div>
+
+                      {/* Pagination */}
+                      {getTotalPages() > 1 && (
+                        <div className="flex items-center justify-between mt-6">
+                          <div className="text-sm text-gray-700">
+                            Showing {((currentPage - 1) * itemsPerPage) + 1} to {Math.min(currentPage * itemsPerPage, scraperData.leads.length)} of {scraperData.leads.length} leads
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                              disabled={currentPage === 1}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Previous
+                            </button>
+                            
+                            {/* Page Numbers */}
+                            {Array.from({ length: Math.min(5, getTotalPages()) }, (_, i) => {
+                              const pageNum = Math.max(1, Math.min(getTotalPages() - 4, currentPage - 2)) + i;
+                              if (pageNum > getTotalPages()) return null;
+                              
+                              return (
+                                <button
+                                  key={pageNum}
+                                  onClick={() => setCurrentPage(pageNum)}
+                                  className={`px-3 py-2 text-sm font-medium rounded-md ${
+                                    currentPage === pageNum
+                                      ? 'bg-[#4e37a8] text-white'
+                                      : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50'
+                                  }`}
+                                >
+                                  {pageNum}
+                                </button>
+                              );
+                            })}
+                            
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.min(getTotalPages(), prev + 1))}
+                              disabled={currentPage === getTotalPages()}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="text-center py-8 text-gray-500">
@@ -462,51 +817,363 @@ export default function ScraperDashboard() {
                 <div>
                   <h3 className="text-lg font-semibold mb-4">Competitor Analysis</h3>
                   {scraperData?.competitors && scraperData.competitors.length > 0 ? (
-                    <div className="overflow-x-auto">
-                      <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                          <tr>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Website</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quality Score</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service Areas</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Specializations</th>
-                          </tr>
-                        </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                          {scraperData.competitors.slice(0, 20).map((competitor, index) => (
-                            <tr key={index}>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{competitor.company_name}</td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <a href={competitor.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                                  {competitor.domain}
-                                </a>
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{competitor.phone}</td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                  competitor.quality_score >= 80 ? 'bg-green-100 text-green-800' :
-                                  competitor.quality_score >= 60 ? 'bg-blue-100 text-blue-800' :
-                                  competitor.quality_score >= 40 ? 'bg-yellow-100 text-yellow-800' :
-                                  'bg-red-100 text-red-800'
-                                }`}>
-                                  {competitor.quality_score}/100
-                                </div>
-                              </td>
-                              <td className="px-6 py-4 text-sm text-gray-500">{competitor.service_area_count}</td>
-                              <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{competitor.specializations}</td>
+                    <div className="space-y-6">
+                      {/* Selection Controls */}
+                      <div className="flex justify-between items-center mb-4">
+                        <div className="flex items-center gap-4">
+                          <button
+                            onClick={selectAllCompetitors}
+                            className="text-sm text-blue-600 hover:text-blue-800"
+                          >
+                            Select All on Page
+                          </button>
+                          <button
+                            onClick={clearSelection}
+                            className="text-sm text-gray-600 hover:text-gray-800"
+                          >
+                            Clear Selection
+                          </button>
+                          {selectedCompetitors.size > 0 && (
+                            <span className="text-sm text-gray-600">
+                              {selectedCompetitors.size} selected
+                            </span>
+                          )}
+                        </div>
+                        {selectedCompetitors.size > 0 && (
+                          <button
+                            onClick={() => {
+                              setDeleteType('competitors');
+                              setShowDeleteConfirm(true);
+                            }}
+                            className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm"
+                          >
+                            🗑️ Delete Selected ({selectedCompetitors.size})
+                          </button>
+                        )}
+                      </div>
+
+                      {/* Competitors Table */}
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full divide-y divide-gray-200">
+                          <thead className="bg-gray-50">
+                            <tr>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <input
+                                  type="checkbox"
+                                  className="rounded border-gray-300"
+                                  onChange={(e) => {
+                                    if (e.target.checked) {
+                                      selectAllCompetitors();
+                                    } else {
+                                      clearSelection();
+                                    }
+                                  }}
+                                  checked={getCurrentPageCompetitors().length > 0 && getCurrentPageCompetitors().every((_, i) => selectedCompetitors.has((currentPage - 1) * itemsPerPage + i))}
+                                />
+                              </th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Website</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quality Score</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service Areas</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Specializations</th>
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                      {scraperData.competitors.length > 20 && (
-                        <p className="mt-4 text-sm text-gray-500">Showing first 20 of {scraperData.competitors.length} competitors</p>
+                          </thead>
+                          <tbody className="bg-white divide-y divide-gray-200">
+                            {getCurrentPageCompetitors().map((competitor, index) => {
+                              const globalIndex = (currentPage - 1) * itemsPerPage + index;
+                              return (
+                                <tr key={globalIndex} className={selectedCompetitors.has(globalIndex) ? 'bg-blue-50' : ''}>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <input
+                                      type="checkbox"
+                                      className="rounded border-gray-300"
+                                      checked={selectedCompetitors.has(globalIndex)}
+                                      onChange={() => toggleCompetitorSelection(globalIndex)}
+                                    />
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{competitor.company_name}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <a href={competitor.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                                      {competitor.domain}
+                                    </a>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{competitor.phone}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                      competitor.quality_score >= 80 ? 'bg-green-100 text-green-800' :
+                                      competitor.quality_score >= 60 ? 'bg-blue-100 text-blue-800' :
+                                      competitor.quality_score >= 40 ? 'bg-yellow-100 text-yellow-800' :
+                                      'bg-red-100 text-red-800'
+                                    }`}>
+                                      {competitor.quality_score}/100
+                                    </div>
+                                  </td>
+                                  <td className="px-6 py-4 text-sm text-gray-500">{competitor.service_area_count}</td>
+                                  <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">{competitor.specializations}</td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Pagination */}
+                      {getTotalPages() > 1 && (
+                        <div className="flex items-center justify-between mt-6">
+                          <div className="text-sm text-gray-700">
+                            Showing {((currentPage - 1) * itemsPerPage) + 1} to {Math.min(currentPage * itemsPerPage, scraperData.competitors.length)} of {scraperData.competitors.length} competitors
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                              disabled={currentPage === 1}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Previous
+                            </button>
+                            
+                            {/* Page Numbers */}
+                            {Array.from({ length: Math.min(5, getTotalPages()) }, (_, i) => {
+                              const pageNum = Math.max(1, Math.min(getTotalPages() - 4, currentPage - 2)) + i;
+                              if (pageNum > getTotalPages()) return null;
+                              
+                              return (
+                                <button
+                                  key={pageNum}
+                                  onClick={() => setCurrentPage(pageNum)}
+                                  className={`px-3 py-2 text-sm font-medium rounded-md ${
+                                    currentPage === pageNum
+                                      ? 'bg-[#4e37a8] text-white'
+                                      : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50'
+                                  }`}
+                                >
+                                  {pageNum}
+                                </button>
+                              );
+                            })}
+                            
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.min(getTotalPages(), prev + 1))}
+                              disabled={currentPage === getTotalPages()}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </div>
                       )}
                     </div>
                   ) : (
                     <div className="text-center py-8 text-gray-500">
                       No competitor data available. Run competitor analysis to see results.
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {activeTab === 'facebook-leads' && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Facebook Leads</h3>
+                  {facebookLeads && facebookLeads.length > 0 ? (
+                    <div className="space-y-6">
+                      {/* Facebook Lead Statistics */}
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div className="bg-blue-50 p-4 rounded-lg">
+                          <div className="text-2xl font-bold text-blue-600">{facebookLeadsSummary?.totalLeads || 0}</div>
+                          <div className="text-sm text-blue-800">Total Facebook Leads</div>
+                        </div>
+                        <div className="bg-green-50 p-4 rounded-lg">
+                          <div className="text-2xl font-bold text-green-600">{facebookLeadsSummary?.highPriorityLeads || 0}</div>
+                          <div className="text-sm text-green-800">High Priority</div>
+                        </div>
+                        <div className="bg-purple-50 p-4 rounded-lg">
+                          <div className="text-2xl font-bold text-purple-600">{facebookLeadsSummary?.newLeads || 0}</div>
+                          <div className="text-sm text-purple-800">New This Week</div>
+                        </div>
+                        <div className="bg-orange-50 p-4 rounded-lg">
+                          <div className="text-2xl font-bold text-orange-600">{facebookLeadsSummary?.averageScore || 0}</div>
+                          <div className="text-sm text-orange-800">Avg Score</div>
+                        </div>
+                      </div>
+
+                      {/* Selection Controls */}
+                      {facebookLeads.length > 0 && (
+                        <div className="flex justify-between items-center mb-4">
+                          <div className="flex items-center gap-4">
+                            <button
+                              onClick={selectAllFacebookLeads}
+                              className="text-sm text-blue-600 hover:text-blue-800"
+                            >
+                              Select All on Page
+                            </button>
+                            <button
+                              onClick={clearSelection}
+                              className="text-sm text-gray-600 hover:text-gray-800"
+                            >
+                              Clear Selection
+                            </button>
+                            {selectedFacebookLeads.size > 0 && (
+                              <button
+                                onClick={() => {
+                                  setDeleteType('facebook-leads');
+                                  setShowDeleteConfirm(true);
+                                }}
+                                className="text-sm text-red-600 hover:text-red-800"
+                              >
+                                Delete Selected ({selectedFacebookLeads.size})
+                              </button>
+                            )}
+                          </div>
+                          <button
+                            onClick={runFacebookLeadGeneration}
+                            disabled={scraperStatus === 'running'}
+                            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {scraperStatus === 'running' ? 'Generating...' : '📘 Generate Facebook Leads'}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Facebook Leads Table */}
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full divide-y divide-gray-200">
+                          <thead className="bg-gray-50">
+                            <tr>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <input
+                                  type="checkbox"
+                                  onChange={(e) => {
+                                    if (e.target.checked) {
+                                      selectAllFacebookLeads();
+                                    } else {
+                                      setSelectedFacebookLeads(new Set());
+                                    }
+                                  }}
+                                  className="rounded"
+                                />
+                              </th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Project Type</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estimated Value</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Source</th>
+                              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Post Link</th>
+                            </tr>
+                          </thead>
+                          <tbody className="bg-white divide-y divide-gray-200">
+                            {getCurrentPageFacebookLeads().map((lead: any, index: number) => {
+                              const actualIndex = (currentPage - 1) * itemsPerPage + index;
+                              return (
+                                <tr key={actualIndex} className="hover:bg-gray-50">
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <input
+                                      type="checkbox"
+                                      checked={selectedFacebookLeads.has(actualIndex)}
+                                      onChange={() => toggleFacebookLeadSelection(actualIndex)}
+                                      className="rounded"
+                                    />
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm font-medium text-gray-900">{lead.name}</div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <div>{lead.phone || 'No phone'}</div>
+                                    <div>{lead.email || 'No email'}</div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.location}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.lead_type}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                      lead.lead_score >= 80 ? 'bg-green-100 text-green-800' :
+                                      lead.lead_score >= 70 ? 'bg-blue-100 text-blue-800' :
+                                      lead.lead_score >= 60 ? 'bg-yellow-100 text-yellow-800' :
+                                      'bg-red-100 text-red-800'
+                                    }`}>
+                                      {lead.lead_score}/100
+                                    </div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${lead.estimated_value?.toLocaleString() || 0}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{lead.source}</td>
+                                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    {lead.post_url ? (
+                                      <a 
+                                        href={lead.post_url} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="text-blue-600 hover:text-blue-800 underline"
+                                      >
+                                        View Post
+                                      </a>
+                                    ) : (
+                                      <span className="text-gray-400">No link</span>
+                                    )}
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Pagination */}
+                      {getTotalPages() > 1 && (
+                        <div className="flex items-center justify-between mt-6">
+                          <div className="text-sm text-gray-700">
+                            Showing {((currentPage - 1) * itemsPerPage) + 1} to {Math.min(currentPage * itemsPerPage, facebookLeads.length)} of {facebookLeads.length} Facebook leads
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                              disabled={currentPage === 1}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Previous
+                            </button>
+                            
+                            {/* Page Numbers */}
+                            {Array.from({ length: Math.min(5, getTotalPages()) }, (_, i) => {
+                              const pageNum = Math.max(1, Math.min(getTotalPages() - 4, currentPage - 2)) + i;
+                              if (pageNum > getTotalPages()) return null;
+                              
+                              return (
+                                <button
+                                  key={pageNum}
+                                  onClick={() => setCurrentPage(pageNum)}
+                                  className={`px-3 py-2 text-sm font-medium rounded-md ${
+                                    currentPage === pageNum
+                                      ? 'bg-[#4e37a8] text-white'
+                                      : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50'
+                                  }`}
+                                >
+                                  {pageNum}
+                                </button>
+                              );
+                            })}
+                            
+                            <button
+                              onClick={() => setCurrentPage(prev => Math.min(getTotalPages(), prev + 1))}
+                              disabled={currentPage === getTotalPages()}
+                              className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 text-gray-500">
+                      <p className="mb-4">No Facebook leads available.</p>
+                      <button
+                        onClick={runFacebookLeadGeneration}
+                        disabled={scraperStatus === 'running'}
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {scraperStatus === 'running' ? 'Generating...' : '📘 Generate Facebook Leads'}
+                      </button>
                     </div>
                   )}
                 </div>
@@ -788,6 +1455,33 @@ export default function ScraperDashboard() {
           </div>
         </div>
       </div>
+
+      {/* Delete Confirmation Modal */}
+      {showDeleteConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Confirm Delete</h3>
+            <p className="text-gray-600 mb-6">
+              Are you sure you want to delete {getSelectedCount()} selected {deleteType === 'leads' ? 'lead' : 'competitor'}{getSelectedCount() > 1 ? 's' : ''}? 
+              This action cannot be undone.
+            </p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setShowDeleteConfirm(false)}
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={deleteSelectedItems}
+                className="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700"
+              >
+                Delete {getSelectedCount()} {deleteType === 'leads' ? 'Lead' : 'Competitor'}{getSelectedCount() > 1 ? 's' : ''}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

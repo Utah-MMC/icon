@@ -68,6 +68,74 @@ export async function POST(request: Request) {
   }
 }
 
+export async function DELETE(request: Request) {
+  try {
+    const { action, competitorIds } = await request.json();
+    
+    if (action === 'delete_competitors' && competitorIds && Array.isArray(competitorIds)) {
+      const dataPath = path.join(process.cwd(), 'data', 'competitor-data.json');
+      
+      if (!fs.existsSync(dataPath)) {
+        return NextResponse.json({
+          error: 'Competitor data file not found'
+        }, { status: 404 });
+      }
+
+      // Read current data
+      const rawData = fs.readFileSync(dataPath, 'utf8');
+      const competitorData = JSON.parse(rawData);
+      
+      // Get all competitors first to map indices to actual competitors
+      const allCompetitors = competitorData.competitors;
+      
+      // Map frontend indices to actual competitors
+      const competitorsToDelete = [];
+      for (const index of competitorIds) {
+        if (0 <= index && index < allCompetitors.length) {
+          competitorsToDelete.push(allCompetitors[index]);
+        }
+      }
+      
+      if (competitorsToDelete.length === 0) {
+        return NextResponse.json({
+          error: 'No valid competitors to delete',
+          deletedCount: 0
+        }, { status: 400 });
+      }
+      
+      // Remove the selected competitors
+      const updatedCompetitors = allCompetitors.filter((competitor: any, index: number) => 
+        !competitorIds.includes(index)
+      );
+      
+      // Update the data
+      competitorData.competitors = updatedCompetitors;
+      
+      // Recalculate analytics and summary
+      competitorData.analytics = recalculateAnalytics(updatedCompetitors);
+      competitorData.summary = recalculateSummary(updatedCompetitors);
+      
+      // Write back to file
+      fs.writeFileSync(dataPath, JSON.stringify(competitorData, null, 2));
+      
+      return NextResponse.json({
+        message: `Successfully deleted ${competitorsToDelete.length} competitors`,
+        deletedCount: competitorsToDelete.length,
+        deletedCompetitors: competitorsToDelete.map(c => c.company_name)
+      });
+    }
+
+    return NextResponse.json({
+      error: 'Invalid delete request'
+    }, { status: 400 });
+  } catch (error) {
+    console.error('Error deleting competitors:', error);
+    return NextResponse.json({
+      error: 'Failed to delete competitors'
+    }, { status: 500 });
+  }
+}
+
 function generateCompetitorInsights(data: any) {
   const insights = {
     market_analysis: {
@@ -237,5 +305,106 @@ function identifyDigitalOpportunities(competitors: any[]) {
       email_marketing_opportunity: ((withoutEmail / competitors.length) * 100).toFixed(1),
       content_marketing_opportunity: ((withoutAbout / competitors.length) * 100).toFixed(1)
     }
+  };
+}
+
+function recalculateAnalytics(competitors: any[]) {
+  const industries: any = {};
+  const serviceAreas: any = {};
+  const socialMediaPresence: any = {};
+  const contactInfo = {
+    has_phone: 0,
+    has_email: 0,
+    has_both: 0,
+    has_neither: 0
+  };
+  
+  competitors.forEach(comp => {
+    // Industries
+    if (comp.industry) {
+      industries[comp.industry] = (industries[comp.industry] || 0) + 1;
+    }
+    
+    // Service areas
+    if (comp.service_areas) {
+      const areas = comp.service_areas.split(',').map((area: string) => area.trim());
+      areas.forEach((area: string) => {
+        if (area) {
+          serviceAreas[area] = {
+            count: (serviceAreas[area]?.count || 0) + 1,
+            percentage: 0 // Will be calculated below
+          };
+        }
+      });
+    }
+    
+    // Social media presence
+    if (comp.social_media) {
+      const platforms = comp.social_media.split('|').map((p: string) => p.trim());
+      platforms.forEach((platform: string) => {
+        if (platform) {
+          socialMediaPresence[platform] = (socialMediaPresence[platform] || 0) + 1;
+        }
+      });
+    }
+    
+    // Contact info
+    const hasPhone = comp.has_phone || comp.phone;
+    const hasEmail = comp.has_email || comp.email;
+    
+    if (hasPhone && hasEmail) {
+      contactInfo.has_both++;
+    } else if (hasPhone) {
+      contactInfo.has_phone++;
+    } else if (hasEmail) {
+      contactInfo.has_email++;
+    } else {
+      contactInfo.has_neither++;
+    }
+  });
+  
+  // Calculate percentages for service areas
+  Object.keys(serviceAreas).forEach(area => {
+    serviceAreas[area].percentage = ((serviceAreas[area].count / competitors.length) * 100).toFixed(1);
+  });
+  
+  return {
+    industries,
+    service_areas: serviceAreas,
+    social_media_presence: socialMediaPresence,
+    contact_info: contactInfo
+  };
+}
+
+function recalculateSummary(competitors: any[]) {
+  const totalCompetitors = competitors.length;
+  const industries = new Set(competitors.map(comp => comp.industry).filter(Boolean)).size;
+  const serviceAreas = new Set();
+  
+  competitors.forEach(comp => {
+    if (comp.service_areas) {
+      comp.service_areas.split(',').forEach((area: string) => {
+        if (area.trim()) serviceAreas.add(area.trim());
+      });
+    }
+  });
+  
+  const hasPhone = competitors.filter(comp => comp.has_phone || comp.phone).length;
+  const phoneCoverage = totalCompetitors > 0 ? Math.round((hasPhone / totalCompetitors) * 100) : 0;
+  
+  return {
+    totalCompetitors,
+    industries,
+    serviceAreas: serviceAreas.size,
+    dataQuality: {
+      hasPhone: phoneCoverage,
+      qualityDistribution: {
+        excellent: competitors.filter(comp => comp.quality_score >= 80).length,
+        good: competitors.filter(comp => comp.quality_score >= 60 && comp.quality_score < 80).length,
+        fair: competitors.filter(comp => comp.quality_score >= 40 && comp.quality_score < 60).length,
+        poor: competitors.filter(comp => comp.quality_score < 40).length
+      }
+    },
+    lastUpdated: new Date().toISOString()
   };
 }

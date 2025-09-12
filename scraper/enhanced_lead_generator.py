@@ -1959,5 +1959,19 @@ def main():
     for type_name, count in result['types'].items():
         print(f"  {type_name}: {count}")
 
+def run_facebook_scraper():
+    """Run the dedicated Facebook scraper"""
+    try:
+        from facebook_scraper import FacebookScraper
+        scraper = FacebookScraper()
+        leads = scraper.run_facebook_scraper()
+        return leads
+    except ImportError:
+        print("Facebook scraper not available. Please run facebook_scraper.py separately.")
+        return []
+    except Exception as e:
+        print(f"Error running Facebook scraper: {e}")
+        return []
+
 if __name__ == "__main__":
     main()

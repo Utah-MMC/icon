@@ -87,6 +87,46 @@ export async function POST(request: Request) {
   }
 }
 
+export async function DELETE(request: Request) {
+  try {
+    const { action, leadIds } = await request.json();
+    
+    if (action === 'delete_leads' && leadIds && Array.isArray(leadIds)) {
+      const leadsDbPath = path.join(process.cwd(), 'scraper', 'dumpster_leads.db');
+      
+      if (!fs.existsSync(leadsDbPath)) {
+        return NextResponse.json({
+          error: 'Leads database not found'
+        }, { status: 404 });
+      }
+
+      // Delete leads using Python script
+      const result = await deleteLeadsFromDatabase(leadsDbPath, leadIds);
+      
+      if (result.error) {
+        return NextResponse.json({
+          error: 'Failed to delete leads',
+          message: result.error
+        }, { status: 500 });
+      }
+      
+      return NextResponse.json({
+        message: `Successfully deleted ${result.deletedCount} leads`,
+        deletedCount: result.deletedCount
+      });
+    }
+    
+    return NextResponse.json({
+      error: 'Invalid delete request'
+    }, { status: 400 });
+  } catch (error) {
+    console.error('Error deleting leads:', error);
+    return NextResponse.json({
+      error: 'Failed to delete leads'
+    }, { status: 500 });
+  }
+}
+
 function parsePythonOutput(output: string) {
   const stats: any = {};
   
@@ -188,6 +228,79 @@ if __name__ == '__main__':
         averageScore: 0,
         lastUpdated: new Date().toISOString()
       }
+    };
+  }
+}
+
+async function deleteLeadsFromDatabase(dbPath: string, leadIds: number[]) {
+  try {
+    // Use a Python script to delete leads from the SQLite database
+    const pythonScript = `
+import sqlite3
+import json
+import sys
+
+def delete_leads():
+    try:
+        conn = sqlite3.connect('${dbPath}')
+        cursor = conn.cursor()
+        
+        # Get all leads first to map indices to IDs
+        cursor.execute('SELECT id FROM leads ORDER BY lead_score DESC, created_date DESC')
+        all_ids = [row[0] for row in cursor.fetchall()]
+        
+        # Map frontend indices to actual database IDs
+        ids_to_delete = []
+        for index in ${JSON.stringify(leadIds)}:
+            if 0 <= index < len(all_ids):
+                ids_to_delete.append(all_ids[index])
+        
+        if not ids_to_delete:
+            return {'error': 'No valid leads to delete', 'deletedCount': 0}
+        
+        # Delete the leads
+        placeholders = ','.join(['?' for _ in ids_to_delete])
+        cursor.execute(f'DELETE FROM leads WHERE id IN ({placeholders})', ids_to_delete)
+        
+        deleted_count = cursor.rowcount
+        conn.commit()
+        conn.close()
+        
+        return {
+            'deletedCount': deleted_count,
+            'deletedIds': ids_to_delete
+        }
+    except Exception as e:
+        return {'error': str(e), 'deletedCount': 0}
+
+if __name__ == '__main__':
+    result = delete_leads()
+    print(json.dumps(result))
+`;
+
+    // Write the Python script to a temporary file
+    const tempScriptPath = path.join(process.cwd(), 'temp_leads_deleter.py');
+    fs.writeFileSync(tempScriptPath, pythonScript);
+    
+    // Execute the Python script
+    const { stdout, stderr } = await execAsync(`python "${tempScriptPath}"`);
+    
+    // Clean up the temporary file
+    fs.unlinkSync(tempScriptPath);
+    
+    if (stderr) {
+      console.error('Python script error:', stderr);
+    }
+    
+    // Parse the JSON output
+    const result = JSON.parse(stdout);
+    return result;
+    
+  } catch (error) {
+    console.error('Error deleting leads:', error);
+    return { 
+      error: error.message,
+      deletedCount: 0
     };
   }
 }
