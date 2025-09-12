@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import CityPageTemplate from '../../../components/CityPageTemplate';
-import { getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
   title: "Sandy Dumpster Rental - Professional Services in Sandy, UT | Icon Dumpsters",

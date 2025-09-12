@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import CityPageTemplate from '../../../components/CityPageTemplate';
-import { getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
   title: "Riverton Dumpster Rental - Professional Services in Riverton, UT | Icon Dumpsters",

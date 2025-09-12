@@ -98,5 +98,3 @@ export function track(type: string, name: string, meta?: Record<string, any>) {
     console.debug('Analytics tracking failed:', error);
   }
 }
-
-

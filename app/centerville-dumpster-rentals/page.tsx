@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import CityPageTemplate from '../../../components/CityPageTemplate';
-import { getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
   title: "Centerville Dumpster Rentals - Professional Services in Centerville, UT | Icon Dumpsters",

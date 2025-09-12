@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../../../components/CityPageTemplate';
-import { getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
   "title": "South Jordan Dumpster Rental Guide 2025 | Complete Waste Management Tips",

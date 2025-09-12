@@ -166,8 +166,7 @@ function generateCompetitorInsights(data: any) {
 
 function getTopIndustry(industries: any) {
   const sorted = Object.entries(industries).sort(([,a], [,b]) => (b as number) - (a as number));
-  const totalCount = Object.values(industries).reduce((a: number, b: any) => a + (b as number), 0);
-  return sorted[0] ? { industry: sorted[0][0], count: sorted[0][1], percentage: ((sorted[0][1] as number) / totalCount * 100).toFixed(1) } : null;
+  return sorted[0] ? { industry: sorted[0][0], count: sorted[0][1], percentage: ((sorted[0][1] as number) / Object.values(industries).reduce((a: number, b: any) => a + (b as number), 0) * 100).toFixed(1) } : null;
 }
 
 function getTopServiceAreas(serviceAreas: any) {
@@ -289,7 +288,7 @@ function identifyServiceGaps(competitors: any[]) {
   
   // Common dumpster rental services that might be missing
   const commonServices = ['Same Day Delivery', 'Weekend Service', 'Emergency Pickup', 'Eco-Friendly Disposal', 'Bulk Pricing'];
-  return commonServices.filter(service => !Array.from(allServices).some((existing: any) => existing.toLowerCase().includes(service.toLowerCase())));
+  return commonServices.filter(service => !Array.from(allServices).some(existing => (existing as string).toLowerCase().includes(service.toLowerCase())));
 }
 
 function identifyDigitalOpportunities(competitors: any[]) {

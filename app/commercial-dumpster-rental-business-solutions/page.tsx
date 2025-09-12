@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../../../components/CityPageTemplate';
+import CityPageTemplate from '../components/CityPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Commercial Business Solutions Dumpster Rental - Professional Dumpster Services in Commercial Business Solutions, UT | (801-918-6000)',

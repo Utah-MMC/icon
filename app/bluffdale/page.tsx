@@ -1,5 +1,5 @@
-import CityPageTemplate from '../../../components/CityPageTemplate';
-import { getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../components/CityPageTemplate';
+import { getCityData } from '../config/cityData';
 
 export default function BluffdalePage() {
   const cityData = getCityData('bluffdale');
