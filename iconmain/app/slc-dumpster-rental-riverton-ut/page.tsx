@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
-import CityPageTemplate from '../../components/CityPageTemplate';
+﻿import { Metadata } from 'next';
+import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
 import { getCityData } from '../config/cityData';
+import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "Riverton Dumpster Rental - Professional Services in Riverton, UT | Icon Dumpsters",
@@ -45,11 +46,22 @@ export const metadata: Metadata = {
 };
 
 export default function RivertonDumpsterRentalPage() {
-  const cityData = getCityData('riverton');
+  const cityData = getCityData('');
+  const slcCityData = getSaltLakeCountyCity('');
   
-  if (!cityData) {
+  if (!cityData || !slcCityData) {
     return <div>City data not found</div>;
   }
 
-  return <CityPageTemplate {...cityData} />;
+  return (
+    <EnhancedCityPageTemplate 
+      {...cityData} 
+      population={slcCityData.population}
+      area={slcCityData.area}
+      established={slcCityData.established}
+    />
+  );
 }
+
+
+

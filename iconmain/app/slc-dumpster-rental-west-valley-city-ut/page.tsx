@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
 import { getCityData } from '../config/cityData';
 import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
@@ -62,3 +62,6 @@ export default function WestValleyCityDumpsterRentalPage() {
     />
   );
 }
+
+
+

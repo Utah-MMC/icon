@@ -22,20 +22,20 @@ interface CustomerRental {
 }
 
 export default function EmailFollowUpSystem() {
-  const getCustomerRentals = (): CustomerRental[] => {
+  const getCustomerRentals = useCallback((): CustomerRental[] => {
     const rentals = localStorage.getItem('customerRentals');
     return rentals ? JSON.parse(rentals) : [];
-  };
+  }, []);
 
-  const getCustomerRating = (rentalId: string): number | null => {
+  const getCustomerRating = useCallback((rentalId: string): number | null => {
     const ratings = localStorage.getItem('customerRatings');
     if (!ratings) return null;
     
     const ratingData = JSON.parse(ratings).find((r: any) => r.rentalId === rentalId);
     return ratingData ? ratingData.rating : null;
-  };
+  }, []);
 
-  const updateRentalFollowUp = (rentalId: string, emailType: 'ratingRequest' | 'reviewRequest' | 'reminder') => {
+  const updateRentalFollowUp = useCallback((rentalId: string, emailType: 'ratingRequest' | 'reviewRequest' | 'reminder') => {
     const rentals = getCustomerRentals();
     const updatedRentals = rentals.map(rental => {
       if (rental.id === rentalId) {
@@ -51,7 +51,7 @@ export default function EmailFollowUpSystem() {
     });
     
     localStorage.setItem('customerRentals', JSON.stringify(updatedRentals));
-  };
+  }, [getCustomerRentals]);
 
   const generateRatingRequestEmail = (rental: CustomerRental) => {
     const ratingUrl = `${window.location.origin}/rating?rental=${rental.id}`;

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
+import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
 import { getCityData } from '../config/cityData';
 import Link from 'next/link';
 
@@ -91,5 +91,5 @@ export default function SaltLakeCountyCityPage({
     );
   }
 
-  return <CityPageTemplate {...cityData} />;
+  return <EnhancedCityPageTemplate {...cityData} />;
 }

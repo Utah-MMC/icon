@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
+﻿import { Metadata } from 'next';
+import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Utah Dumpster Rental Locations Dumpster Rental - Professional Dumpster Services in Utah Dumpster Rental Locations, UT | (801-918-6000)',
@@ -145,5 +145,5 @@ export default function UtahDumpsterRentalLocationsDumpsterRental() {
 }
   };
 
-  return <CityPageTemplate {...cityData} />;
+  return <EnhancedCityPageTemplate {...cityData} />;
 }

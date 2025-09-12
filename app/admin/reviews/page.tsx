@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface Review {
   id: string;
@@ -20,11 +20,7 @@ export default function AdminReviewsPage() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'verified' | 'pending'>('all');
 
-  useEffect(() => {
-    loadReviews();
-  }, [filter]);
-
-  const loadReviews = async () => {
+  const loadReviews = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch('/api/reviews');
@@ -46,7 +42,11 @@ export default function AdminReviewsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [filter]);
+
+  useEffect(() => {
+    loadReviews();
+  }, [filter, loadReviews]);
 
   const toggleVerification = async (reviewId: string, verified: boolean) => {
     try {
