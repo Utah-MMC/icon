@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import QuoteForm from './QuoteForm';
-import BlogSEO from './BlogSEO';
+import QuoteForm from '@/app/components/QuoteForm';
+import BlogSEO from '@/app/components/BlogSEO';
 
 interface EnhancedCityPageTemplateProps {
   cityName: string;
