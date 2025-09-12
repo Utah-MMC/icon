@@ -299,7 +299,7 @@ if __name__ == '__main__':
   } catch (error) {
     console.error('Error deleting leads:', error);
     return { 
-      error: error.message,
+      error: error instanceof Error ? error.message : 'Unknown error',
       deletedCount: 0
     };
   }

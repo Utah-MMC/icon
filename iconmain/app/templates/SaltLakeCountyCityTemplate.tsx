@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-import { getCityData } from '../config/cityData';
+import CityPageTemplate from '../../../components/CityPageTemplate';
+import { getCityData } from '../../../config/cityData';
 import Link from 'next/link';
 
 interface SaltLakeCountyCityPageProps {

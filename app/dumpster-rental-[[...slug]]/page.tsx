@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { cityData, getCityData } from '../config/cityData';
-import CityPageTemplate from '../components/CityPageTemplate';
+import { cityData, getCityData } from '../../../config/cityData';
+import CityPageTemplate from '../../../components/CityPageTemplate';
 
 interface PageProps {
   params: Promise<{

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-import { getCityData } from '../config/cityData';
+import CityPageTemplate from '../../../components/CityPageTemplate';
+import { getCityData } from '../../../config/cityData';
 
 export const metadata: Metadata = {
   title: "Kaysville Dumpster Rentals - Professional Services in Kaysville, UT | Icon Dumpsters",

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
-import { getCityData } from '../config/cityData';
-import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
+import EnhancedCityPageTemplate from '../../../components/EnhancedCityPageTemplate';
+import { getCityData } from '../../../config/cityData';
+import { getSaltLakeCountyCity } from '../../../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "Utah Dumpster Rental Magna - Professional Services | Icon Dumpsters",

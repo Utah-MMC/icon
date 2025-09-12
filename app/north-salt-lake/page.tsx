@@ -1,4 +1,4 @@
-import CityPageTemplate from '../components/CityPageTemplate';
+import CityPageTemplate from '../../../components/CityPageTemplate';
 
 export default function NorthSaltLakePage() {
   return (

@@ -166,14 +166,15 @@ function generateCompetitorInsights(data: any) {
 
 function getTopIndustry(industries: any) {
   const sorted = Object.entries(industries).sort(([,a], [,b]) => (b as number) - (a as number));
-  return sorted[0] ? { industry: sorted[0][0], count: sorted[0][1], percentage: ((sorted[0][1] as number) / Object.values(industries).reduce((a: number, b: number) => a + b, 0) * 100).toFixed(1) } : null;
+  const totalCount = Object.values(industries).reduce((a: number, b: any) => a + (b as number), 0);
+  return sorted[0] ? { industry: sorted[0][0], count: sorted[0][1], percentage: ((sorted[0][1] as number) / totalCount * 100).toFixed(1) } : null;
 }
 
 function getTopServiceAreas(serviceAreas: any) {
   const sorted = Object.entries(serviceAreas)
     .sort(([,a], [,b]) => (b as any).count - (a as any).count)
     .slice(0, 5);
-  return sorted.map(([area, data]) => ({ area, ...data }));
+  return sorted.map(([area, data]) => ({ area, ...(data as any) }));
 }
 
 function identifyMarketGaps(competitors: any[]) {
@@ -275,7 +276,7 @@ function identifyUnderservedAreas(serviceAreas: any) {
   const sorted = Object.entries(serviceAreas)
     .sort(([,a], [,b]) => (a as any).count - (b as any).count)
     .slice(0, 5);
-  return sorted.map(([area, data]) => ({ area, ...data, opportunity: 'Low competition' }));
+  return sorted.map(([area, data]) => ({ area, ...(data as any), opportunity: 'Low competition' }));
 }
 
 function identifyServiceGaps(competitors: any[]) {
@@ -288,7 +289,7 @@ function identifyServiceGaps(competitors: any[]) {
   
   // Common dumpster rental services that might be missing
   const commonServices = ['Same Day Delivery', 'Weekend Service', 'Emergency Pickup', 'Eco-Friendly Disposal', 'Bulk Pricing'];
-  return commonServices.filter(service => !Array.from(allServices).some(existing => existing.toLowerCase().includes(service.toLowerCase())));
+  return commonServices.filter(service => !Array.from(allServices).some((existing: any) => existing.toLowerCase().includes(service.toLowerCase())));
 }
 
 function identifyDigitalOpportunities(competitors: any[]) {

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../components/CityPageTemplate';
-import { getCityData } from '../config/cityData';
+import CityPageTemplate from '../../../components/CityPageTemplate';
+import { getCityData } from '../../../config/cityData';
 
 export const metadata: Metadata = {
   "title": "Complete Dumpster Rental Guide 2025 | Utah Waste Management Tips",

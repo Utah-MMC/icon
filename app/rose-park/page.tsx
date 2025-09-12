@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-import CityPageTemplate from '../components/CityPageTemplate';
+import CityPageTemplate from '../../../components/CityPageTemplate';
 
 export default function RoseParkPage() {
   return (
