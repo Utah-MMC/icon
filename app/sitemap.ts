@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 // Force sitemap regeneration - updated 2025-01-10
+// SEO optimized sitemap with all URLs and proper priorities
 
 function collectRoutePaths(): string[] {
   const appDir = path.join(process.cwd(), 'app')
@@ -50,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (p.includes('calculator')) return 0.8
     if (p.includes('guide-2025')) return 0.7
     if (p.includes('dumpster-rental-') && p.includes('-ut')) return 0.8
+    if (p.includes('slc-dumpster-rental-')) return 0.8
     if (p.includes('services')) return 0.9
     if (p.includes('contact') || p.includes('free-quote')) return 0.9
     if (p.includes('test') || p.includes('api-test')) return 0.1
@@ -60,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const changeFreqFor = (p: string): MetadataRoute.Sitemap[number]['changeFrequency'] => {
     if (p === '/' || p.startsWith('/blog')) return 'weekly'
     if (p.includes('dumpster-sizes') || p.includes('calculator')) return 'monthly'
+    if (p.includes('slc-dumpster-rental-')) return 'monthly'
     if (p.includes('test') || p.includes('api-test')) return 'never'
     if (p.includes('inventory') || p.includes('kpi-dashboard')) return 'never'
     return 'monthly'
@@ -69,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (p.includes('test') || p.includes('api-test')) return false
     if (p.includes('inventory') || p.includes('kpi-dashboard')) return false
     if (p.includes('admin') || p.includes('dashboard')) return false
+    if (p.includes('test-route')) return false
     return true
   }
 

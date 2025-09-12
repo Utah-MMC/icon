@@ -140,6 +140,11 @@
       "source": "/test-security",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/www/:path*",
+      "destination": "/:path*",
+      "permanent": true
     }
   ],
   "cleanUrls": true,
