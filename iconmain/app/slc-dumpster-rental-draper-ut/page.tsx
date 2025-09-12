@@ -47,10 +47,18 @@ export const metadata: Metadata = {
 
 export default function DraperDumpsterRentalPage() {
   const cityData = getCityData('draper');
+  const slcCityData = getSaltLakeCountyCity('draper');
   
-  if (!cityData) {
+  if (!cityData || !slcCityData) {
     return <div>City data not found</div>;
   }
 
-  return <CityPageTemplate {...cityData} />;
+  return (
+    <EnhancedCityPageTemplate 
+      {...cityData} 
+      population={slcCityData.population}
+      area={slcCityData.area}
+      established={slcCityData.established}
+    />
+  );
 }
