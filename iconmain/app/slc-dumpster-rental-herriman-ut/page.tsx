@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import CityPageTemplate from '../../components/CityPageTemplate';
-import { getCityData } from '../../config/cityData';
+import { getCityData } from '../config/cityData';
 
 export const metadata: Metadata = {
   title: "Herriman Dumpster Rental - Professional Services in Herriman, UT | Icon Dumpsters",

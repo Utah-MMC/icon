@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
-import CityPageTemplate from '../../components/CityPageTemplate';
-import { getCityData } from '../../config/cityData';
+import EnhancedCityPageTemplate from '../components/EnhancedCityPageTemplate';
+import { getCityData } from '../config/cityData';
+import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "Draper Dumpster Rental - Professional Services in Draper, UT | Icon Dumpsters",
