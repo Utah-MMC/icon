@@ -145,6 +145,66 @@
       "source": "/www/:path*",
       "destination": "/:path*",
       "permanent": true
+    },
+    {
+      "source": "/dumpster-size-estimation-guide",
+      "destination": "/blog/dumpster-size-estimation-guide",
+      "permanent": true
+    },
+    {
+      "source": "/commercialbusiness-solutions",
+      "destination": "/blog/commercial-dumpster-rental-business-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/commercialbusiness-solutions-dumpster-rental-guide-2025",
+      "destination": "/blog/commercial-dumpster-rental-business-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/springville-dumpster-rental-guide-2025",
+      "destination": "/springville",
+      "permanent": true
+    },
+    {
+      "source": "/lindon-dumpster-rental-guide-2025",
+      "destination": "/lindon",
+      "permanent": true
+    },
+    {
+      "source": "/spanish-fork-dumpster-rental-guide-2025",
+      "destination": "/spanish-fork",
+      "permanent": true
+    },
+    {
+      "source": "/dumpster-rental-sandy-utah",
+      "destination": "/sandy",
+      "permanent": true
+    },
+    {
+      "source": "/salt-lake-county-dumpster-program",
+      "destination": "/salt-lake-county-dumpster-rental",
+      "permanent": true
+    },
+    {
+      "source": "/utahlocations-dumpster-rental-guide-2025",
+      "destination": "/utah-dumpster-rental-locations",
+      "permanent": true
+    },
+    {
+      "source": "/st-george",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/dumpster-rental-[city]-ut",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/dumpster-rental-[[...slug]]",
+      "destination": "/contact",
+      "permanent": true
     }
   ],
   "cleanUrls": true,

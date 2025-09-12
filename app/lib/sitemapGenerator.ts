@@ -10,7 +10,7 @@ interface SitemapEntry {
 // City data for sitemap generation
 const cities = [
   'salt-lake-city', 'west-valley-city', 'provo', 'west-jordan', 'orem', 'sandy', 'ogden',
-  'st-george', 'layton', 'taylorsville', 'millcreek', 'south-jordan', 'lehi', 'riverton',
+  'layton', 'taylorsville', 'millcreek', 'south-jordan', 'lehi', 'riverton',
   'murray', 'draper', 'bountiful', 'midvale', 'herriman', 'spanish-fork', 'roy', 'cottonwood-heights',
   'kearns', 'tooele', 'clearfield', 'kaysville', 'holladay', 'american-fork', 'syracuse',
   'magna', 'saratoga-springs', 'south-salt-lake', 'pleasant-grove', 'farmington', 'north-salt-lake',
