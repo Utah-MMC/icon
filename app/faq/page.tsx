@@ -121,7 +121,7 @@ export default function FAQPage() {
         },
         {
           question: "What are the weight limits for dumpsters?",
-          answer: "Our dumpsters have a weight limit of approximately 2 <Link href="https://icondumpsters.com/tonnage-calculator" className='text-[#4e37a8] hover:text-purple-700 underline font-semibold'>tons</Link> (4,000 pounds). This covers most household and construction waste. If you exceed this limit, additional fees may apply. Heavy materials like concrete, dirt, or roofing shingles should be discussed with us beforehand."
+          answer: "Our dumpsters have a weight limit of approximately 2 tons (4,000 pounds). This covers most household and construction waste. If you exceed this limit, additional fees may apply. Heavy materials like concrete, dirt, or roofing shingles should be discussed with us beforehand. Use our /tonnage-calculator to estimate your project's weight."
         },
         {
           question: "Are there any materials you don't accept?",
