@@ -56,7 +56,7 @@ export default function EnhancedKPIDashboard() {
   const getUniqueCities = () => {
     const cities = new Set<string>();
     enhancedKPIData.clients.allClients.forEach(client => {
-      client.serviceAreas.forEach(area => cities.add(area));
+      client.serviceAreas.forEach((area: string) => cities.add(area));
     });
     return Array.from(cities).sort();
   };

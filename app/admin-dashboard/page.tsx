@@ -28,15 +28,23 @@ interface KPITargets {
 }
 
 export default function AdminDashboard() {
-  const [kpiData, setKpiData] = useState<KPIData>({
-    revenue: 0,
-    rentals: 0,
-    utilization: 0,
-    websiteVisitors: 0,
-    quoteRequests: 0,
-    phoneCalls: 0,
-    conversionRate: 0,
-    customerSatisfaction: 0
+  // Initialize with real data immediately to prevent flash of zeros
+  const [kpiData, setKpiData] = useState<KPIData>(() => {
+    try {
+      return getCurrentKPIData();
+    } catch (error) {
+      console.warn('Failed to load initial KPI data, using defaults:', error);
+      return {
+        revenue: 0,
+        rentals: 0,
+        utilization: 0,
+        websiteVisitors: 0,
+        quoteRequests: 0,
+        phoneCalls: 0,
+        conversionRate: 0,
+        customerSatisfaction: 0
+      };
+    }
   });
 
   const [targets] = useState<KPITargets>({
@@ -75,31 +83,11 @@ export default function AdminDashboard() {
     setLastRefresh(new Date());
   }, []);
 
-  // Load real KPI data instead of localStorage
+  // Listen for inventory updates and handle data refresh
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        // Load real sales data
-        const realKPIData = getCurrentKPIData();
-        setKpiData(realKPIData);
-      } catch (error) {
-        console.error('Failed to load real KPI data:', error);
-        // Fallback to localStorage if real data fails
-        const stored = localStorage.getItem('iconDumpstersKPI');
-        if (stored) {
-          try {
-            const parsedData = JSON.parse(stored);
-            if (parsedData.metrics) {
-              setKpiData(parsedData.metrics);
-            } else {
-              setKpiData(parsedData);
-            }
-          } catch (error) {
-            console.error('Failed to load KPI data from localStorage:', error);
-          }
-        }
-      }
-    }
+    // Data is now loaded immediately in useState initializer
+    // This useEffect handles inventory updates and potential data refresh
+    console.log('KPI data loaded:', kpiData);
 
     // Listen for inventory updates
     const handleInventoryUpdate = (event: CustomEvent) => {
@@ -124,7 +112,7 @@ export default function AdminDashboard() {
     return () => {
       window.removeEventListener('inventory-updated', handleInventoryUpdate as EventListener);
     };
-  }, []);
+  }, [kpiData]);
 
   // Update inventory data
   useEffect(() => {

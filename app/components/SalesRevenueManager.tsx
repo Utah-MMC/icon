@@ -54,11 +54,6 @@ export default function SalesRevenueManager() {
   const [dragActive, setDragActive] = useState(false);
   const [monthlyComparison, setMonthlyComparison] = useState<any>(null);
 
-  // Load existing reports and stats
-  useEffect(() => {
-    loadSalesData();
-  }, []);
-
   const loadSalesData = useCallback(async () => {
     try {
       // Load from localStorage
@@ -96,6 +91,11 @@ export default function SalesRevenueManager() {
       setLoading(false);
     }
   }, []);
+
+  // Load existing reports and stats
+  useEffect(() => {
+    loadSalesData();
+  }, [loadSalesData]);
 
   const handleFileSelect = (file: File) => {
     const isPDF = file.type === 'application/pdf';
