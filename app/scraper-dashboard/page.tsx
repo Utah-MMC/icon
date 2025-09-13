@@ -1456,34 +1456,33 @@ export default function ScraperDashboard() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Delete Confirmation Modal */}
-      {showDeleteConfirm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Confirm Delete</h3>
-            <p className="text-gray-600 mb-6">
-              Are you sure you want to delete {getSelectedCount()} selected {deleteType === 'leads' ? 'lead' : 'competitor'}{getSelectedCount() > 1 ? 's' : ''}? 
-              This action cannot be undone.
-            </p>
-            <div className="flex justify-end gap-3">
-              <button
-                onClick={() => setShowDeleteConfirm(false)}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={deleteSelectedItems}
-                className="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700"
-              >
-                Delete {getSelectedCount()} {deleteType === 'leads' ? 'Lead' : 'Competitor'}{getSelectedCount() > 1 ? 's' : ''}
-              </button>
+        {/* Delete Confirmation Modal */}
+        {showDeleteConfirm && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Confirm Delete</h3>
+              <p className="text-gray-600 mb-6">
+                Are you sure you want to delete {getSelectedCount()} selected {deleteType === 'leads' ? 'lead' : 'competitor'}{getSelectedCount() > 1 ? 's' : ''}? 
+                This action cannot be undone.
+              </p>
+              <div className="flex justify-end gap-3">
+                <button
+                  onClick={() => setShowDeleteConfirm(false)}
+                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={deleteSelectedItems}
+                  className="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700"
+                >
+                  Delete {getSelectedCount()} {deleteType === 'leads' ? 'Lead' : 'Competitor'}{getSelectedCount() > 1 ? 's' : ''}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
         </div>
       </div>
     </AdminAuthGuard>
