@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { getSalesStats, getMonthlyComparison } from '../../realSalesData';
 
 interface SalesReport {
   id: string;
@@ -51,6 +52,7 @@ export default function SalesRevenueManager() {
   const [uploading, setUploading] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [dragActive, setDragActive] = useState(false);
+  const [monthlyComparison, setMonthlyComparison] = useState<any>(null);
 
   // Load existing reports and stats
   useEffect(() => {
@@ -61,33 +63,35 @@ export default function SalesRevenueManager() {
     try {
       // Load from localStorage
       const storedReports = localStorage.getItem('salesReports');
-      const storedStats = localStorage.getItem('salesStats');
       
       if (storedReports) {
         const parsedReports = JSON.parse(storedReports);
         setReports(parsedReports);
       }
       
-      if (storedStats) {
-        const parsedStats = JSON.parse(storedStats);
-        setStats(parsedStats);
-      } else {
-        // Initialize with default stats
-        setStats({
-          totalRevenue: 0,
-          totalRentals: 0,
-          averageRentalValue: 0,
-          monthlyGrowth: 0,
-          quarterlyGrowth: 0,
-          previousMonthRevenue: 0,
-          previousQuarterRevenue: 0,
-          topCustomers: [],
-          revenueByMonth: [],
-          recentReports: []
-        });
-      }
+      // Load real sales data instead of localStorage
+      const realStats = getSalesStats();
+      setStats(realStats);
+      
+      // Load monthly comparison data
+      const comparison = getMonthlyComparison();
+      setMonthlyComparison(comparison);
+      
     } catch (error) {
       console.error('Error loading sales data:', error);
+      // Fallback to default stats if real data fails
+      setStats({
+        totalRevenue: 0,
+        totalRentals: 0,
+        averageRentalValue: 0,
+        monthlyGrowth: 0,
+        quarterlyGrowth: 0,
+        previousMonthRevenue: 0,
+        previousQuarterRevenue: 0,
+        topCustomers: [],
+        revenueByMonth: [],
+        recentReports: []
+      });
     } finally {
       setLoading(false);
     }
@@ -655,6 +659,116 @@ export default function SalesRevenueManager() {
             <p className="text-orange-100 text-sm">
               ${stats.topCustomers[0]?.revenue?.toLocaleString() || '0'} revenue
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Monthly Comparison Section */}
+      {monthlyComparison && (
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold mb-4">Month-over-Month Comparison</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            {/* Revenue Comparison */}
+            <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-2">Revenue Comparison</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-green-100">September:</span>
+                  <span className="font-bold">${monthlyComparison.currentMonth.metrics.totalRevenue.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-green-100">August:</span>
+                  <span className="font-bold">${monthlyComparison.previousMonth.metrics.totalRevenue.toLocaleString()}</span>
+                </div>
+                <div className="border-t border-green-400 pt-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Change:</span>
+                    <span className={`font-bold ${monthlyComparison.comparison.revenueChange >= 0 ? 'text-green-100' : 'text-red-200'}`}>
+                      {monthlyComparison.comparison.revenueChange >= 0 ? '+' : ''}${monthlyComparison.comparison.revenueChange.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="text-sm text-green-100">
+                    ({monthlyComparison.comparison.revenueGrowthPercent >= 0 ? '+' : ''}{monthlyComparison.comparison.revenueGrowthPercent.toFixed(1)}%)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Profit Comparison */}
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-2">Profit Comparison</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-blue-100">September:</span>
+                  <span className="font-bold">${monthlyComparison.currentMonth.metrics.totalProfit.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-blue-100">August:</span>
+                  <span className="font-bold">${monthlyComparison.previousMonth.metrics.totalProfit.toLocaleString()}</span>
+                </div>
+                <div className="border-t border-blue-400 pt-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Change:</span>
+                    <span className={`font-bold ${monthlyComparison.comparison.profitChange >= 0 ? 'text-blue-100' : 'text-red-200'}`}>
+                      {monthlyComparison.comparison.profitChange >= 0 ? '+' : ''}${monthlyComparison.comparison.profitChange.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="text-sm text-blue-100">
+                    ({monthlyComparison.comparison.profitGrowthPercent >= 0 ? '+' : ''}{monthlyComparison.comparison.profitGrowthPercent.toFixed(1)}%)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Rentals Comparison */}
+            <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-2">Rentals Comparison</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-purple-100">September:</span>
+                  <span className="font-bold">{monthlyComparison.currentMonth.metrics.totalRentals}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-purple-100">August:</span>
+                  <span className="font-bold">{monthlyComparison.previousMonth.metrics.totalRentals}</span>
+                </div>
+                <div className="border-t border-purple-400 pt-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Change:</span>
+                    <span className={`font-bold ${monthlyComparison.comparison.rentalChange >= 0 ? 'text-purple-100' : 'text-red-200'}`}>
+                      {monthlyComparison.comparison.rentalChange >= 0 ? '+' : ''}{monthlyComparison.comparison.rentalChange}
+                    </span>
+                  </div>
+                  <div className="text-sm text-purple-100">
+                    ({monthlyComparison.comparison.rentalGrowthPercent >= 0 ? '+' : ''}{monthlyComparison.comparison.rentalGrowthPercent.toFixed(1)}%)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Average Rental Value Comparison */}
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-2">Avg Rental Value</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-orange-100">September:</span>
+                  <span className="font-bold">${monthlyComparison.currentMonth.metrics.averageRentalValue.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-orange-100">August:</span>
+                  <span className="font-bold">${monthlyComparison.previousMonth.metrics.averageRentalValue.toLocaleString()}</span>
+                </div>
+                <div className="border-t border-orange-400 pt-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Change:</span>
+                    <span className={`font-bold ${(monthlyComparison.currentMonth.metrics.averageRentalValue - monthlyComparison.previousMonth.metrics.averageRentalValue) >= 0 ? 'text-orange-100' : 'text-red-200'}`}>
+                      ${(monthlyComparison.currentMonth.metrics.averageRentalValue - monthlyComparison.previousMonth.metrics.averageRentalValue).toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

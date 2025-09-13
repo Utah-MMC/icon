@@ -3,6 +3,7 @@
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { kpiSyncService } from '../lib/KPISyncService';
 import SalesRevenueManager from '../components/SalesRevenueManager';
+import { getCurrentKPIData } from '../../realSalesData';
 
 interface KPIData {
   revenue: number;
@@ -39,14 +40,14 @@ export default function AdminDashboard() {
   });
 
   const [targets] = useState<KPITargets>({
-    monthlyRevenue: 20000,
-    monthlyRentals: 40,
-    utilization: 75,
-    websiteVisitors: 1500,
-    quoteRequests: 75,
-    phoneCalls: 150,
-    conversionRate: 20,
-    customerSatisfaction: 4.5
+    monthlyRevenue: 25000, // Increased target based on current performance
+    monthlyRentals: 50, // Increased target based on current performance
+    utilization: 85, // Slightly higher target
+    websiteVisitors: 2000, // Increased target
+    quoteRequests: 100, // Increased target
+    phoneCalls: 200, // Increased target
+    conversionRate: 25, // Increased target
+    customerSatisfaction: 4.7 // Slightly higher target
   });
 
   const [showManualEntry, setShowManualEntry] = useState(false);
@@ -74,30 +75,30 @@ export default function AdminDashboard() {
     setLastRefresh(new Date());
   }, []);
 
-  // Load KPI data from localStorage and listen for inventory updates
+  // Load real KPI data instead of localStorage
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('iconDumpstersKPI');
-      if (stored) {
-        try {
-          const parsedData = JSON.parse(stored);
-          // Handle both old and new data formats
-          if (parsedData.metrics) {
-            setKpiData(parsedData.metrics);
-          } else {
-            setKpiData(parsedData);
+      try {
+        // Load real sales data
+        const realKPIData = getCurrentKPIData();
+        setKpiData(realKPIData);
+      } catch (error) {
+        console.error('Failed to load real KPI data:', error);
+        // Fallback to localStorage if real data fails
+        const stored = localStorage.getItem('iconDumpstersKPI');
+        if (stored) {
+          try {
+            const parsedData = JSON.parse(stored);
+            if (parsedData.metrics) {
+              setKpiData(parsedData.metrics);
+            } else {
+              setKpiData(parsedData);
+            }
+          } catch (error) {
+            console.error('Failed to load KPI data from localStorage:', error);
           }
-        } catch (error) {
-          console.error('Failed to load KPI data:', error);
         }
       }
-      
-      // Force update utilization to current inventory data
-      setKpiData(prev => ({
-        ...prev,
-        utilization: 81.8, // Current inventory utilization
-        rentals: 36 // Current active rentals
-      }));
     }
 
     // Listen for inventory updates
@@ -304,6 +305,12 @@ export default function AdminDashboard() {
             >
               🧪 API Testing
             </a>
+            <a
+              href="https://icondumpsters.com/enhanced-dashboard"
+              className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm"
+            >
+              📊 Enhanced Analytics
+            </a>
           </div>
         </div>
 
@@ -383,6 +390,12 @@ export default function AdminDashboard() {
                   className="block w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm text-center"
                 >
                   📊 View Analytics
+                </a>
+                <a
+                  href="https://icondumpsters.com/enhanced-dashboard"
+                  className="block w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm text-center"
+                >
+                  🗺️ Enhanced Analytics
                 </a>
               </div>
             </div>
