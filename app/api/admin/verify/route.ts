@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
       }
 
       // Check if IP matches (basic security)
-      const currentIp = req.ip || req.headers.get('x-forwarded-for') || 'unknown';
+      const currentIp = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.headers.get('x-client-ip') || 'unknown';
       if (sessionData.ip !== currentIp) {
         console.warn('IP mismatch detected:', { sessionIp: sessionData.ip, currentIp });
         return NextResponse.json({ authenticated: false }, { status: 401 });
