@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
     description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
     type: 'article',
-    url: 'https://iconmain.com/dumpster-size-estimation-guide',
+    url: 'https://icondumpsters.com/blog/dumpster-size-estimation-guide',
     images: [
       {
         url: '/images/dumpster-size-estimation.jpg',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/images/dumpster-size-estimation.jpg']
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/dumpster-size-estimation-guide'
+    canonical: 'https://icondumpsters.com/blog/dumpster-size-estimation-guide'
   },
   robots: 'index, follow'
 }
