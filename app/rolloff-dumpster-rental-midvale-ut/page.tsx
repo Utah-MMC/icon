@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rolloff Dumpster Rental Midvale - Professional Services | Icon Dumpsters",
     description: "Professional rolloff dumpster rental services in Midvale, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard rolloff dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/rolloff-dumpster-rental-Midvale-ut",
+    url: "https://icondumpsters.com/rolloff-dumpster-rental-midvale-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/rolloff-dumpster-rental-Midvale-ut',
+    canonical: 'https://icondumpsters.com/rolloff-dumpster-rental-midvale-ut',
   },
   robots: {
     index: true,

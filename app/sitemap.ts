@@ -7,7 +7,7 @@ import path from 'path'
 
 function collectRoutePaths(): string[] {
   const appDir = path.join(process.cwd(), 'app')
-  const excluded = new Set(['api', 'components', 'config', 'public', 'images', 'hostgator-deploy', 'scripts', 'global-error.tsx', 'not-found.tsx', 'loading.tsx', 'error.tsx'])
+  const excluded = new Set(['api', 'components', 'config', 'public', 'images', 'hostgator-deploy', 'scripts', 'global-error.tsx', 'not-found.tsx', 'loading.tsx', 'error.tsx', 'test-route', 'api-test', 'simple-test', 'test-email', 'test-og', 'test-blog-post', 'test-bulk-email', 'test-city', 'test-email-config', 'test-email-rate', 'construction-dumpster-rental-guide-2025', 'home-renovation-waste-disposal-complete-guide', 'commercial-dumpster-rental-business-solutions-2025', 'construction-waste-management-guide', 'roll-off-dumpster-rental-taylorsville', '30-yard-dumpster-rental-taylorsville-ut', 'roll-off-dumpster-rental-magna', '30-yard-dumpster-rental-kearns-ut', 'dumpster-rental-near-me-taylorsville-ut', '30-yard-dumpster-rental-sandy-ut', 'dumpster-rental-near-me-south-jordan-ut', '30-yard-dumpster-rental-draper-ut', '30-yard-dumpster-rental-south-jordan-ut', '30-yard-dumpster-rental-riverton-ut']))))
 
   const results = new Set<string>()
 

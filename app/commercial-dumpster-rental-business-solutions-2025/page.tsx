@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Commercial Dumpster Rental: Business Solutions for 2025',
     description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn enterprise waste management strategies, bulk pricing, and compliance requirements.',
     type: 'article',
-    url: 'https://iconmain.com/commercial-dumpster-rental-business-solutions-2025',
+    url: 'https://icondumpsters.com/commercial-dumpster-rental-business-solutions-2025',
     images: [
       {
         url: '/images/dumpster500x500-1.jpeg',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['/images/dumpster500x500-1.jpeg']
   },
   alternates: {
-    canonical: 'https://iconmain.com/commercial-dumpster-rental-business-solutions-2025'
+    canonical: 'https://icondumpsters.com/commercial-dumpster-rental-business-solutions-2025'
   },
   robots: 'index, follow'
 }

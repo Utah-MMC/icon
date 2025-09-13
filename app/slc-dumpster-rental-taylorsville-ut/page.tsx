@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Taylorsville Dumpster Rental - Professional Services in Taylorsville, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Taylorsville, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Taylorsville-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-taylorsville-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Taylorsville-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-taylorsville-ut',
   },
   robots: {
     index: true,

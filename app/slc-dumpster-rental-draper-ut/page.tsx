@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Draper Dumpster Rental - Professional Services in Draper, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Draper, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Draper-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-draper-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Draper-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-draper-ut',
   },
   robots: {
     index: true,

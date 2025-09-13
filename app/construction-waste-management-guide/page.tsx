@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Construction Waste Management: Ultimate Guide for Contractors',
     description: 'Master construction waste management with our comprehensive guide. Learn recycling strategies, compliance requirements, and cost-saving techniques for contractors.',
     type: 'article',
-    url: 'https://iconmain.com/construction-waste-management-guide',
+    url: 'https://icondumpsters.com/construction-waste-management-guide',
     images: [
       {
         url: '/images/dumpster500x500-1.jpeg',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['/images/dumpster500x500-1.jpeg']
   },
   alternates: {
-    canonical: 'https://iconmain.com/construction-waste-management-guide'
+    canonical: 'https://icondumpsters.com/construction-waste-management-guide'
   },
   robots: 'index, follow'
 }

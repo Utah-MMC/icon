@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dumpster Rental Near Me Sandy - Local Services | Icon Dumpsters",
     description: "Find reliable dumpster rental near me in Sandy, Utah. Local same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/dumpster-rental-near-me-Sandy-ut",
+    url: "https://icondumpsters.com/dumpster-rental-near-me-sandy-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/dumpster-rental-near-me-Sandy-ut',
+    canonical: 'https://icondumpsters.com/dumpster-rental-near-me-sandy-ut',
   },
   robots: {
     index: true,

@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Utah Dumpster Rental Brighton - Professional Services | Icon Dumpsters",
     description: "Professional Utah dumpster rental services in Brighton. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/utah-dumpster-rental-Brighton",
+    url: "https://icondumpsters.com/utah-dumpster-rental-brighton",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/utah-dumpster-rental-Brighton',
+    canonical: 'https://icondumpsters.com/utah-dumpster-rental-brighton',
   },
   robots: {
     index: true,

@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roll-Off Dumpster Rental Alta - Professional Services | Icon Dumpsters",
     description: "Professional roll-off dumpster rental services in Alta, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/roll-off-dumpster-rental-Alta",
+    url: "https://icondumpsters.com/roll-off-dumpster-rental-alta",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/roll-off-dumpster-rental-Alta',
+    canonical: 'https://icondumpsters.com/roll-off-dumpster-rental-alta',
   },
   robots: {
     index: true,

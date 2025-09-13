@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Riverton Dumpster Rental - Professional Services in Riverton, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Riverton, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Riverton-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-riverton-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Riverton-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-riverton-ut',
   },
   robots: {
     index: true,

@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bluffdale Dumpster Rental - Professional Services in Bluffdale, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Bluffdale, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Bluffdale-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-bluffdale-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Bluffdale-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-bluffdale-ut',
   },
   robots: {
     index: true,

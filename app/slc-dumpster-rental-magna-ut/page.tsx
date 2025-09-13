@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Magna Dumpster Rental - Professional Services in Magna, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Magna, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Magna-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-magna-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Magna-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-magna-ut',
   },
   robots: {
     index: true,

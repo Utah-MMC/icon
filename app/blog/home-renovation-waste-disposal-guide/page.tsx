@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Home Renovation Waste Disposal Guide: Complete 2025 Guide',
     description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective disposal strategies for your renovation project.',
     type: 'article',
-    url: 'https://iconmain.com/home-renovation-waste-disposal-guide',
+    url: 'https://icondumpsters.com/home-renovation-waste-disposal-guide',
     images: [
       {
         url: '/images/home-renovation-waste-disposal.jpg',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/images/home-renovation-waste-disposal.jpg']
   },
   alternates: {
-    canonical: 'https://iconmain.com/home-renovation-waste-disposal-guide'
+    canonical: 'https://icondumpsters.com/home-renovation-waste-disposal-guide'
   },
   robots: 'index, follow'
 }

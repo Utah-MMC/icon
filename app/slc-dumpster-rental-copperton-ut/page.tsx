@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Copperton Dumpster Rental - Professional Services in Copperton, UT | Icon Dumpsters",
     description: "Get reliable dumpster rental in Copperton, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/slc-dumpster-rental-Copperton-ut",
+    url: "https://icondumpsters.com/slc-dumpster-rental-copperton-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/slc-dumpster-rental-Copperton-ut',
+    canonical: 'https://icondumpsters.com/slc-dumpster-rental-copperton-ut',
   },
   robots: {
     index: true,

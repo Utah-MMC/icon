@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "30 Yard Dumpster Rental Murray - Professional Services | Icon Dumpsters",
     description: "Professional 30 yard dumpster rental services in Murray, Utah. Same-day delivery, competitive pricing, and excellent customer service. Perfect for large construction projects and home renovations. Call (801) 918-6000.",
-    url: "https://icondumpsters.com/30-yard-dumpster-rental-Murray-ut",
+    url: "https://icondumpsters.com/30-yard-dumpster-rental-murray-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/30-yard-dumpster-rental-Murray-ut',
+    canonical: 'https://icondumpsters.com/30-yard-dumpster-rental-murray-ut',
   },
   robots: {
     index: true,

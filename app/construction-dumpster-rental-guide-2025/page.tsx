@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Best Construction Dumpster Rental Companies of 2025: Complete Guide',
     description: 'Find the best construction dumpster rental companies for your project. Compare prices, services, and get expert tips on choosing the right dumpster size and rental duration.',
     type: 'article',
-    url: 'https://iconmain.com/construction-dumpster-rental-guide-2025',
+    url: 'https://icondumpsters.com/construction-dumpster-rental-guide-2025',
     images: [
       {
         url: '/images/dumpster500x500-1.jpeg',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['/images/dumpster500x500-1.jpeg']
   },
   alternates: {
-    canonical: 'https://iconmain.com/construction-dumpster-rental-guide-2025'
+    canonical: 'https://icondumpsters.com/construction-dumpster-rental-guide-2025'
   },
   robots: 'index, follow'
 }
