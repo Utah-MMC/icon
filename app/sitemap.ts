@@ -77,70 +77,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (p.includes('simple-test')) return false
     if (p.includes('sitemap')) return false
     
-    // Exclude pages that are likely to cause canonical issues
-    if (p.includes('construction-dumpster-rental-guide-2025')) return false
-    if (p.includes('home-renovation-waste-disposal-complete-guide')) return false
-    if (p.includes('commercial-dumpster-rental-business-solutions-2025')) return false
-    if (p.includes('construction-waste-management-guide')) return false
-    
-    // Exclude specific problematic pages that cause 4XX errors
-    if (p.includes('roll-off-dumpster-rental-taylorsville')) return false
-    if (p.includes('30-yard-dumpster-rental-taylorsville-ut')) return false
-    if (p.includes('roll-off-dumpster-rental-magna')) return false
-    if (p.includes('30-yard-dumpster-rental-kearns-ut')) return false
-    if (p.includes('dumpster-rental-near-me-taylorsville-ut')) return false
-    if (p.includes('30-yard-dumpster-rental-sandy-ut')) return false
-    if (p.includes('dumpster-rental-near-me-south-jordan-ut')) return false
-    if (p.includes('30-yard-dumpster-rental-draper-ut')) return false
-    if (p.includes('30-yard-dumpster-rental-south-jordan-ut')) return false
-    if (p.includes('30-yard-dumpster-rental-riverton-ut')) return false
-    
-    // Exclude pages with canonical URL issues (missing or incorrect)
-    if (p.startsWith('/services/')) return false  // Most service pages have canonical issues
-    if (p.includes('slc-dumpster-rental-')) return false  // Case sensitivity issues
-    if (p.includes('utah-dumpster-rental-')) return false  // Case sensitivity issues
-    
-    // Only include main pages and blog posts for now
-    const allowedPaths = [
-      '/',
-      '/blog',
-      '/faq',
-      '/contact',
-      '/freequote',
-      '/dumpster-sizes',
-      '/services',
-      '/about',
-      '/transparent-pricing',
-      '/utah-dumpster-permits-guide',
-      '/utah-wide-coverage',
-      '/tonnage-calculator'
+    // Exclude specific problematic pages that cause 4XX errors or canonical issues
+    const problematicPages = [
+      'construction-dumpster-rental-guide-2025',
+      'home-renovation-waste-disposal-complete-guide', 
+      'commercial-dumpster-rental-business-solutions-2025',
+      'construction-waste-management-guide',
+      'roll-off-dumpster-rental-taylorsville',
+      '30-yard-dumpster-rental-taylorsville-ut',
+      'roll-off-dumpster-rental-magna',
+      '30-yard-dumpster-rental-kearns-ut',
+      'dumpster-rental-near-me-taylorsville-ut',
+      '30-yard-dumpster-rental-sandy-ut',
+      'dumpster-rental-near-me-south-jordan-ut',
+      '30-yard-dumpster-rental-draper-ut',
+      '30-yard-dumpster-rental-south-jordan-ut',
+      '30-yard-dumpster-rental-riverton-ut'
     ];
     
-    // Allow city pages (main city pages only)
-    if (p.match(/^\/[a-z-]+$/)) {
-      const cityName = p.replace('/', '');
-      // Only include major cities
-      const majorCities = [
-        'salt-lake-city', 'west-valley-city', 'sandy', 'west-jordan', 'murray',
-        'taylorsville', 'south-jordan', 'draper', 'riverton', 'midvale',
-        'millcreek', 'holladay', 'cottonwood-heights', 'kearns', 'magna',
-        'bluffdale', 'herriman', 'tooele', 'bountiful', 'centerville',
-        'clearfield', 'layton', 'ogden', 'provo', 'orem', 'spanish-fork',
-        'springville', 'american-fork', 'pleasant-grove', 'lehi'
-      ];
-      return majorCities.includes(cityName);
+    // Check if page contains any problematic patterns
+    for (const problematic of problematicPages) {
+      if (p.includes(problematic)) return false;
     }
     
-    // Allow blog posts
-    if (p.startsWith('/blog/')) return true;
+    // Exclude pages with case sensitivity issues
+    if (p.includes('slc-dumpster-rental-')) return false
+    if (p.includes('utah-dumpster-rental-')) return false
     
-    // Allow guide pages
-    if (p.includes('-guide-2025')) return true;
-    
-    // Allow main city dumpster rental pages
-    if (p.match(/^\/[a-z-]+-dumpster-rentals$/)) return true;
-    
-    return allowedPaths.includes(p);
+    // Include everything else - much more permissive approach
+    return true;
   }
 
   const now = new Date()
