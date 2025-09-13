@@ -6,7 +6,7 @@ const MAX_ATTEMPTS = 5;
 const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
 
 function getRateLimitKey(req: NextRequest): string {
-  const ip = req.ip || req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
+  const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.headers.get('x-client-ip') || 'unknown';
   return `login_${ip}`;
 }
 
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     const sessionToken = Buffer.from(JSON.stringify({
       authenticated: true,
       timestamp: Date.now(),
-      ip: req.ip || req.headers.get('x-forwarded-for') || 'unknown'
+      ip: req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.headers.get('x-client-ip') || 'unknown'
     })).toString('base64');
 
     res.cookies.set('admin_auth', sessionToken, {
