@@ -707,136 +707,167 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-            <a href="https://icondumpsters.com/salt-lake-city-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/salt-lake-city/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Salt Lake City</h3>
             </a>
-            <a href="https://icondumpsters.com/murray-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/murray/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Murray</h3>
             </a>
-            <a href="https://icondumpsters.com/sandy-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/sandy/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Sandy</h3>
             </a>
-            <a href="https://icondumpsters.com/west-jordan-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/west-jordan/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">West Jordan</h3>
             </a>
-            <a href="https://icondumpsters.com/south-jordan-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/south-jordan/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">South Jordan</h3>
             </a>
-            <a href="https://icondumpsters.com/draper-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/draper/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Draper</h3>
             </a>
-            <a href="https://icondumpsters.com/lehi" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/lehi/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Lehi</h3>
             </a>
-            <a href="https://icondumpsters.com/orem-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/orem/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Orem</h3>
             </a>
-            <a href="https://icondumpsters.com/provo-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/provo/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Provo</h3>
             </a>
-            <a href="https://icondumpsters.com/ogden-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/ogden/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Ogden</h3>
             </a>
-            <a href="https://icondumpsters.com/layton-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/layton/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Layton</h3>
             </a>
-            <a href="https://icondumpsters.com/clearfield-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/clearfield/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Clearfield</h3>
             </a>
-            <a href="https://icondumpsters.com/roy-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/roy/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Roy</h3>
             </a>
-            <a href="https://icondumpsters.com/syracuse-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/syracuse/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Syracuse</h3>
             </a>
-            <a href="https://icondumpsters.com/kaysville-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/kaysville/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Kaysville</h3>
             </a>
-            <a href="https://icondumpsters.com/farmington-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/farmington/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Farmington</h3>
             </a>
-            <a href="https://icondumpsters.com/centerville-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/centerville/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Centerville</h3>
             </a>
-            <a href="https://icondumpsters.com/bountiful-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/bountiful/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Bountiful</h3>
             </a>
-            <a href="https://icondumpsters.com/north-salt-lake" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/north-salt-lake/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">North Salt Lake</h3>
             </a>
-            <a href="https://icondumpsters.com/woods-cross-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/woods-cross/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Woods Cross</h3>
             </a>
-            <a href="https://icondumpsters.com/millcreek" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/millcreek/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Millcreek</h3>
             </a>
-            <a href="https://icondumpsters.com/holladay-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/holladay/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Holladay</h3>
             </a>
-            <a href="https://icondumpsters.com/cottonwood-heights" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/cottonwood-heights/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Cottonwood Heights</h3>
             </a>
-            <a href="https://icondumpsters.com/midvale-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/midvale/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Midvale</h3>
             </a>
-            <a href="https://icondumpsters.com/taylorsville-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/taylorsville/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Taylorsville</h3>
             </a>
-            <a href="https://icondumpsters.com/kearns-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/kearns/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Kearns</h3>
             </a>
-            <a href="https://icondumpsters.com/magna-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/magna/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Magna</h3>
             </a>
-            <a href="https://icondumpsters.com/south-salt-lake-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/south-salt-lake/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">South Salt Lake</h3>
             </a>
-            <a href="https://icondumpsters.com/sugar-house-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/sugar-house/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Sugar House</h3>
             </a>
-            <a href="https://icondumpsters.com/downtown-salt-lake" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/downtown-salt-lake/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Downtown Salt Lake</h3>
             </a>
-            <a href="https://icondumpsters.com/fairpark-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/fairpark/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Fairpark</h3>
             </a>
-            <a href="https://icondumpsters.com/poplar-grove-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/poplar-grove/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Poplar Grove</h3>
             </a>
-            <a href="https://icondumpsters.com/glendale-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/glendale/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Glendale</h3>
             </a>
-            <a href="https://icondumpsters.com/riverton-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/riverton/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Riverton</h3>
             </a>
-            <a href="https://icondumpsters.com/herriman-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/herriman/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Herriman</h3>
             </a>
-            <a href="https://icondumpsters.com/saratoga-springs-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/saratoga-springs/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Saratoga Springs</h3>
             </a>
-            <a href="https://icondumpsters.com/eagle-mountain-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/eagle-mountain/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Eagle Mountain</h3>
             </a>
-            <a href="https://icondumpsters.com/pleasant-grove-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/pleasant-grove/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Pleasant Grove</h3>
             </a>
-            <a href="https://icondumpsters.com/american-fork-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/american-fork/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">American Fork</h3>
             </a>
-            <a href="https://icondumpsters.com/bluffdale" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/bluffdale/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Bluffdale</h3>
             </a>
-            <a href="https://icondumpsters.com/park-city-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/park-city/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Park City</h3>
             </a>
-            <a href="https://icondumpsters.com/tooele-dumpster-rentals" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <a href="/cities/tooele/dumpster-rental" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-semibold text-[#4e37a8]">Tooele</h3>
             </a>
           </div>
           
+          {/* Utility Pages Section */}
+          <div className="mt-12 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Dumpster Rental Resources</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <a href="/transparent-pricing" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Transparent Pricing</h4>
+              </a>
+              <a href="/same-day-delivery" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Same-Day Delivery</h4>
+              </a>
+              <a href="/residential-dumpsters" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Residential Dumpsters</h4>
+              </a>
+              <a href="/construction-dumpsters" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Construction Dumpsters</h4>
+              </a>
+              <a href="/dumpster-sizes-1" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Dumpster Sizes Guide</h4>
+              </a>
+              <a href="/responsible-disposal" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Responsible Disposal</h4>
+              </a>
+              <a href="/local-pros" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Local Pros</h4>
+              </a>
+              <a href="/blog/home-renovation-waste-disposal-guide" className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="font-semibold text-[#4e37a8]">Renovation Guide</h4>
+              </a>
+            </div>
+          </div>
+          
           <div className="text-center">
-            <a href="https://icondumpsters.com/services" className="inline-flex items-center px-6 py-3 bg-[#4e37a8] text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
+            <a href="/services" className="inline-flex items-center px-6 py-3 bg-[#4e37a8] text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
               View All Services
               <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />

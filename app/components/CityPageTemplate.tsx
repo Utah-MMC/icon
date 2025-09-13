@@ -375,18 +375,41 @@ export default function CityPageTemplate({
           </div>
         </section>
 
-            {/* Detailed Guide Link */}
+            {/* Related Cities and Resources */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete {cityName} Dumpster Rental Guide</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Get detailed information about dumpster rental in {cityName}, including pricing, regulations, permit requirements, and more.
-              </p>
-              <Link 
-                href={`/${citySlug}-dumpster-rental-guide-2025`}
-                className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
-              >
-                Read Complete Guide →
-              </Link>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Rental Resources</h2>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Nearby Cities</h3>
+                  <div className="space-y-2">
+                    <a href="/cities/salt-lake-city/dumpster-rental" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Salt Lake City Dumpster Rental</a>
+                    <a href="/cities/murray/dumpster-rental" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Murray Dumpster Rental</a>
+                    <a href="/cities/sandy/dumpster-rental" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Sandy Dumpster Rental</a>
+                    <a href="/cities/west-jordan/dumpster-rental" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">West Jordan Dumpster Rental</a>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Helpful Resources</h3>
+                  <div className="space-y-2">
+                    <a href="/transparent-pricing" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Transparent Pricing</a>
+                    <a href="/same-day-delivery" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Same-Day Delivery</a>
+                    <a href="/dumpster-sizes-1" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Dumpster Sizes Guide</a>
+                    <a href="/responsible-disposal" className="block text-[#4e37a8] hover:text-purple-700 transition-colors">Responsible Disposal</a>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-4">Complete {cityName} Dumpster Rental Guide</h3>
+                <p className="text-gray-700 mb-4">
+                  Get detailed information about dumpster rental in {cityName}, including pricing, regulations, permit requirements, and more.
+                </p>
+                <Link 
+                  href={`/${citySlug}-dumpster-rental-guide-2025`}
+                  className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
+                >
+                  Read Complete Guide →
+                </Link>
+              </div>
             </section>
 
             {/* Additional Content for SEO */}
