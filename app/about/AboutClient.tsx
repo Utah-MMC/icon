@@ -25,7 +25,7 @@ export default function AboutClient() {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
               <ImageWithFallback 
-                src="/Icon_Dumpsters_Final.png" 
+                src="https://icondumpsters.com/Icon_Dumpsters_Final.png" 
                 alt="Icon Dumpsters - Professional Dumpster Rental Services in Utah" 
                 className="w-full h-full object-contain"
               />
@@ -218,7 +218,7 @@ export default function AboutClient() {
              Get your free quote today.
            </p>
                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#quote-form" className="bg-[#4e37a8] hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
+              <a href="https://icondumpsters.com/#quote-form" className="bg-[#4e37a8] hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
                 Get Free Quote
               </a>
               <button className="border-2 border-[#4e37a8] text-[#4e37a8] hover:bg-[#4e37a8] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">

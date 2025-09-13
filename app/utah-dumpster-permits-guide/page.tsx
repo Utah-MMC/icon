@@ -231,10 +231,10 @@ export default function UtahDumpsterPermitsGuide() {
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Links</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/dumpster-prices" className="text-blue-600 hover:text-blue-800">Dumpster Prices</Link></li>
-                  <li><Link href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800">Dumpster Sizes</Link></li>
-                  <li><Link href="/faq" className="text-blue-600 hover:text-blue-800">FAQ</Link></li>
-                  <li><Link href="/contact" className="text-blue-600 hover:text-blue-800">Contact Us</Link></li>
+                  <li><Link href="https://icondumpsters.com/dumpster-prices" className="text-blue-600 hover:text-blue-800">Dumpster Prices</Link></li>
+                  <li><Link href="https://icondumpsters.com/dumpster-sizes" className="text-blue-600 hover:text-blue-800">Dumpster Sizes</Link></li>
+                  <li><Link href="https://icondumpsters.com/faq" className="text-blue-600 hover:text-blue-800">FAQ</Link></li>
+                  <li><Link href="https://icondumpsters.com/contact" className="text-blue-600 hover:text-blue-800">Contact Us</Link></li>
                 </ul>
               </div>
             </div>

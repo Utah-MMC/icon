@@ -72,7 +72,7 @@ export default function SaltLakeCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/salt-lake-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/salt-lake-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Salt Lake City</h3>
@@ -80,7 +80,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/west-valley-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/west-valley-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">West Valley City</h3>
@@ -88,7 +88,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/sandy-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/sandy-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Sandy</h3>
@@ -96,7 +96,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/west-jordan-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/west-jordan-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">West Jordan</h3>
@@ -104,7 +104,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/murray-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/murray-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Murray</h3>
@@ -112,7 +112,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/taylorsville-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/taylorsville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Taylorsville</h3>
@@ -120,7 +120,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/south-jordan-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/south-jordan-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">South Jordan</h3>
@@ -128,7 +128,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/draper-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/draper-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Draper</h3>
@@ -136,7 +136,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/midvale-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/midvale-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Midvale</h3>
@@ -144,7 +144,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/holladay-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/holladay-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Holladay</h3>
@@ -152,7 +152,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/cottonwood-heights-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/cottonwood-heights-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Cottonwood Heights</h3>
@@ -160,7 +160,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/herriman-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/herriman-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Herriman</h3>
@@ -168,7 +168,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/riverton-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/riverton-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Riverton</h3>
@@ -176,7 +176,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/bluffdale-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/bluffdale-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Bluffdale</h3>
@@ -184,7 +184,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/white-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/white-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">White City</h3>
@@ -192,7 +192,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/brighton-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/brighton-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Brighton</h3>
@@ -200,7 +200,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/emigration-canyon-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/emigration-canyon-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Emigration Canyon</h3>
@@ -208,7 +208,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/granite-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/granite-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Granite</h3>
@@ -216,7 +216,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/kearns-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/kearns-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Kearns</h3>
@@ -224,7 +224,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/magna-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/magna-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Magna</h3>
@@ -232,7 +232,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/millcreek-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/millcreek-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Millcreek</h3>
@@ -240,7 +240,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/salt-lake-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/salt-lake-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Salt Lake City</h3>
@@ -248,7 +248,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/south-salt-lake-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/south-salt-lake-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">South Salt Lake</h3>
@@ -256,7 +256,7 @@ export default function SaltLakeCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-salt-lake-county-ut/taylorsville-ut"
+              href="https://icondumpsters.com/dumpster-rental-salt-lake-county-ut/taylorsville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Taylorsville</h3>
@@ -331,7 +331,7 @@ export default function SaltLakeCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -348,7 +348,7 @@ export default function SaltLakeCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -365,7 +365,7 @@ export default function SaltLakeCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -392,7 +392,7 @@ export default function SaltLakeCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

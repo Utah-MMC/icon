@@ -48,14 +48,14 @@ export default function DumpsterRentalCostGuide() {
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-blue-600">
-            <li><a href="#cost-overview" className="hover:underline">Cost Overview</a></li>
-            <li><a href="#pricing-factors" className="hover:underline">Pricing Factors</a></li>
-            <li><a href="#dumpster-sizes" className="hover:underline">Dumpster Sizes & Costs</a></li>
-            <li><a href="#project-types" className="hover:underline">Project Type Costs</a></li>
-            <li><a href="#additional-fees" className="hover:underline">Additional Fees</a></li>
-            <li><a href="#cost-saving-tips" className="hover:underline">Cost-Saving Tips</a></li>
-            <li><a href="#getting-quotes" className="hover:underline">Getting Accurate Quotes</a></li>
-            <li><a href="#faq" className="hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="https://icondumpsters.com/#cost-overview" className="hover:underline">Cost Overview</a></li>
+            <li><a href="https://icondumpsters.com/#pricing-factors" className="hover:underline">Pricing Factors</a></li>
+            <li><a href="https://icondumpsters.com/#dumpster-sizes" className="hover:underline">Dumpster Sizes & Costs</a></li>
+            <li><a href="https://icondumpsters.com/#project-types" className="hover:underline">Project Type Costs</a></li>
+            <li><a href="https://icondumpsters.com/#additional-fees" className="hover:underline">Additional Fees</a></li>
+            <li><a href="https://icondumpsters.com/#cost-saving-tips" className="hover:underline">Cost-Saving Tips</a></li>
+            <li><a href="https://icondumpsters.com/#getting-quotes" className="hover:underline">Getting Accurate Quotes</a></li>
+            <li><a href="https://icondumpsters.com/#faq" className="hover:underline">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
@@ -296,7 +296,7 @@ export default function DumpsterRentalCostGuide() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Free Quote

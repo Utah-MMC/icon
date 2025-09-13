@@ -8,7 +8,7 @@ export default function NotFound() {
           The page you're looking for doesn't exist. It might have been moved or deleted.
         </p>
         <a 
-          href="/" 
+          href="https://icondumpsters.com/" 
           className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
         >
           Go Back Home

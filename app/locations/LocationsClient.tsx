@@ -152,7 +152,7 @@ export default function LocationsClient() {
         author="Icon Dumpsters"
         publishedDate="2024-01-01"
         modifiedDate="2024-12-19"
-        imageUrl="https://icondumpsters.com/images/utah-dumpster-rental-locations.jpg"
+        imageUrl="/images/utah-dumpster-rental-locations.jpg"
         articleUrl="https://icondumpsters.com/locations"
         category="Dumpster Rental Locations"
         readTime="5 min read"
@@ -277,7 +277,7 @@ export default function LocationsClient() {
           <p className="text-purple-100 mb-6">Get a free quote for your project, no matter where you're located in Utah.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/free-quote" 
+              href="https://icondumpsters.com/free-quote" 
               className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Free Quote

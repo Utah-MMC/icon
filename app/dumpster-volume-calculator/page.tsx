@@ -21,7 +21,7 @@ export default function DumpsterVolumeCalculator() {
         author="Icon Dumpsters"
         publishedDate="2025-01-27"
         modifiedDate="2025-01-27"
-        imageUrl="https://icondumpsters.com/images/dumpster500x500-2.jpeg"
+        imageUrl="/images/dumpster500x500-2.jpeg"
         articleUrl="https://icondumpsters.com/dumpster-volume-calculator"
         category="CALCULATOR"
         readTime="PT7M"
@@ -53,9 +53,9 @@ export default function DumpsterVolumeCalculator() {
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><Link href="https://icondumpsters.com/" className="hover:text-purple-600 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><Link href="https://icondumpsters.com/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
               <li><span className="mx-2">/</span></li>
               <li className="text-gray-900 font-medium">Dumpster Volume Calculator</li>
             </ol>
@@ -245,7 +245,7 @@ export default function DumpsterVolumeCalculator() {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Weight (<Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">Tons</Link>)</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Weight (<Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">Tons</Link>)</h4>
                 <ul className="text-gray-700 space-y-2">
                   <li>• Measures the weight the dumpster can hold</li>
                   <li>• Important for heavy, dense materials</li>
@@ -425,7 +425,7 @@ export default function DumpsterVolumeCalculator() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/#quote-form" 
+                  href="https://icondumpsters.com/#quote-form" 
                   className="bg-white text-[#4e37a8] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Free Quote
@@ -445,7 +445,7 @@ export default function DumpsterVolumeCalculator() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/demolition-dumpster-calculator" className="group">
+            <Link href="https://icondumpsters.com/demolition-dumpster-calculator" className="group">
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
@@ -466,7 +466,7 @@ export default function DumpsterVolumeCalculator() {
               </div>
             </Link>
             
-            <Link href="/dumpster-calculator-for-concrete" className="group">
+            <Link href="https://icondumpsters.com/dumpster-calculator-for-concrete" className="group">
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 

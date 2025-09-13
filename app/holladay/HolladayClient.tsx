@@ -43,11 +43,11 @@ export default function HolladayClient() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Nearby Cities:</h3>
               <ul className="space-y-1 text-gray-600">
-                <li>• <a href="/millcreek" className="text-[#4e37a8] hover:underline">Millcreek</a></li>
-                <li>• <a href="/murray-dumpster-rentals" className="text-[#4e37a8] hover:underline">Murray</a></li>
-                <li>• <a href="/salt-lake-city-dumpster-rentals" className="text-[#4e37a8] hover:underline">Salt Lake City</a></li>
-                <li>• <a href="/cottonwood-heights" className="text-[#4e37a8] hover:underline">Cottonwood Heights</a></li>
-                <li>• <a href="/sugar-house-dumpster-rentals" className="text-[#4e37a8] hover:underline">Sugar House</a></li>
+                <li>• <a href="https://icondumpsters.com/millcreek" className="text-[#4e37a8] hover:underline">Millcreek</a></li>
+                <li>• <a href="https://icondumpsters.com/murray-dumpster-rentals" className="text-[#4e37a8] hover:underline">Murray</a></li>
+                <li>• <a href="https://icondumpsters.com/salt-lake-city-dumpster-rentals" className="text-[#4e37a8] hover:underline">Salt Lake City</a></li>
+                <li>• <a href="https://icondumpsters.com/cottonwood-heights" className="text-[#4e37a8] hover:underline">Cottonwood Heights</a></li>
+                <li>• <a href="https://icondumpsters.com/sugar-house-dumpster-rentals" className="text-[#4e37a8] hover:underline">Sugar House</a></li>
               </ul>
             </div>
           </div>
@@ -59,17 +59,17 @@ export default function HolladayClient() {
             <div className="text-center">
               <h3 className="font-semibold text-gray-900 mb-2">Dumpster Sizes</h3>
               <p className="text-gray-600 mb-3">15, 20, and 30 yard options</p>
-              <a href="/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">View All Sizes →</a>
+              <a href="https://icondumpsters.com/dumpster-sizes" className="text-[#4e37a8] hover:underline font-medium">View All Sizes →</a>
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-gray-900 mb-2">Pricing</h3>
               <p className="text-gray-600 mb-3">Competitive rates with no hidden fees</p>
-              <a href="#pricing" className="text-[#4e37a8] hover:underline font-medium">Get Quote →</a>
+              <a href="https://icondumpsters.com/#pricing" className="text-[#4e37a8] hover:underline font-medium">Get Quote →</a>
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-gray-900 mb-2">Services</h3>
               <p className="text-gray-600 mb-3">Residential and commercial solutions</p>
-              <a href="/services" className="text-[#4e37a8] hover:underline font-medium">Learn More →</a>
+              <a href="https://icondumpsters.com/services" className="text-[#4e37a8] hover:underline font-medium">Learn More →</a>
             </div>
           </div>
         </div>

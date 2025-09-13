@@ -89,7 +89,7 @@ export default function CityPageTemplate({
                   Call {phoneNumber}
                 </a>
                 <a 
-                  href="#quote-form" 
+                  href="https://icondumpsters.com/#quote-form" 
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
                 >
                   Get Free Quote
@@ -361,7 +361,7 @@ export default function CityPageTemplate({
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Near {cityName} Parks</h4>
-                    <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                    <p className="text-gray-600">Perfect for <a href="https://icondumpsters.com/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="https://icondumpsters.com/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
             </div>
             <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
@@ -369,7 +369,7 @@ export default function CityPageTemplate({
               </div>
               <div>
                     <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                    <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and residential cleanouts</p>
+                    <p className="text-gray-600">Ideal for <a href="https://icondumpsters.com/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and residential cleanouts</p>
               </div>
             </div>
           </div>
@@ -518,7 +518,7 @@ export default function CityPageTemplate({
               Call Now: {phoneNumber}
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
               Get Free Quote

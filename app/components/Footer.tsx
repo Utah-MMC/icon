@@ -175,7 +175,7 @@ function handleZipCodeSearch() {
   } else {
     // If zip code not found, redirect to locations page
     alert('Zip code not found in our service area. Please visit our locations page to see all areas we serve.');
-    window.location.href = '/locations';
+    window.location.href = 'https://icondumpsters.com/locations';
   }
 }
 
@@ -208,9 +208,9 @@ export default function Footer() {
               </button>
             </div>
             <div className="space-y-2 text-sm">
-              <a href="/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_locations' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_locations' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">View All Locations</a>
-              <a href="/dumpster-sizes" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_sizes' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_sizes' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Dumpster Sizes</a>
-              <a href="/dumpster-prices" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_pricing' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_pricing' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Pricing</a>
+              <a href="https://icondumpsters.com/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_locations' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_locations' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">View All Locations</a>
+              <a href="https://icondumpsters.com/dumpster-sizes" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_sizes' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_sizes' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Dumpster Sizes</a>
+              <a href="https://icondumpsters.com/dumpster-prices" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_pricing' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_pricing' })}); } catch {} }} className="text-gray-300 hover:text-white transition-colors block">Pricing</a>
             </div>
           </div>
 
@@ -218,18 +218,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Top Cities</h4>
             <div className="grid grid-cols-2 gap-1 text-sm">
-              <a href="/salt-lake-city" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
-              <a href="/west-valley-city" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
-              <a href="/sandy" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
-              <a href="/west-jordan" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
-              <a href="/murray" className="text-purple-200 hover:text-white transition-colors">Murray</a>
-              <a href="/south-jordan" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
-              <a href="/draper" className="text-purple-200 hover:text-white transition-colors">Draper</a>
-              <a href="/midvale" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
-              <a href="/holladay" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
-              <a href="/taylorsville" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
-              <a href="/kearns" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
-              <a href="/millcreek" className="text-purple-200 hover:text-white transition-colors">Millcreek</a>
+              <a href="https://icondumpsters.com/salt-lake-city" className="text-purple-200 hover:text-white transition-colors">Salt Lake City</a>
+              <a href="https://icondumpsters.com/west-valley-city" className="text-purple-200 hover:text-white transition-colors">West Valley City</a>
+              <a href="https://icondumpsters.com/sandy" className="text-purple-200 hover:text-white transition-colors">Sandy</a>
+              <a href="https://icondumpsters.com/west-jordan" className="text-purple-200 hover:text-white transition-colors">West Jordan</a>
+              <a href="https://icondumpsters.com/murray" className="text-purple-200 hover:text-white transition-colors">Murray</a>
+              <a href="https://icondumpsters.com/south-jordan" className="text-purple-200 hover:text-white transition-colors">South Jordan</a>
+              <a href="https://icondumpsters.com/draper" className="text-purple-200 hover:text-white transition-colors">Draper</a>
+              <a href="https://icondumpsters.com/midvale" className="text-purple-200 hover:text-white transition-colors">Midvale</a>
+              <a href="https://icondumpsters.com/holladay" className="text-purple-200 hover:text-white transition-colors">Holladay</a>
+              <a href="https://icondumpsters.com/taylorsville" className="text-purple-200 hover:text-white transition-colors">Taylorsville</a>
+              <a href="https://icondumpsters.com/kearns" className="text-purple-200 hover:text-white transition-colors">Kearns</a>
+              <a href="https://icondumpsters.com/millcreek" className="text-purple-200 hover:text-white transition-colors">Millcreek</a>
             </div>
           </div>
 
@@ -237,14 +237,14 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Helpful Links</h4>
             <div className="grid grid-cols-1 gap-1 text-sm">
-              <a href="/complete-dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
-              <a href="/locations" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
-              <a href="/complete-dumpster-rental-guide-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
-              <a href="/home-renovation-dumpster-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
-              <a href="/services" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
-              <a href="/fees" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_fees' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_fees' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Fees & Surcharges</a>
-              <a href="/frequent-buyers" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_frequent' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_frequent' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Frequent Buyers Program</a>
-              <a href="/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_service_area' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_service_area' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Service Area</a>
+              <a href="https://icondumpsters.com/complete-dumpster-rental-guide-2025" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_guide' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_guide' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Dumpster Rental Guide 2025</a>
+              <a href="https://icondumpsters.com/locations" className="text-purple-200 hover:text-white transition-colors">Dumpster Rentals Near Me</a>
+              <a href="https://icondumpsters.com/complete-dumpster-rental-guide-2025" className="text-purple-200 hover:text-white transition-colors">Construction Waste Management</a>
+              <a href="https://icondumpsters.com/home-renovation-dumpster-guide" className="text-purple-200 hover:text-white transition-colors">Home Renovation Waste Disposal</a>
+              <a href="https://icondumpsters.com/services" className="text-purple-200 hover:text-white transition-colors">Commercial Solutions</a>
+              <a href="https://icondumpsters.com/fees" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_fees' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_fees' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Fees & Surcharges</a>
+              <a href="https://icondumpsters.com/frequent-buyers" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_frequent' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_frequent' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Frequent Buyers Program</a>
+              <a href="https://icondumpsters.com/locations" onClick={() => { try { (window as any).dataLayer?.push({ event:'nav_click', link:'footer_service_area' }); fetch('/api/analytics',{ method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'nav', name:'footer_service_area' })}); } catch {} }} className="text-purple-200 hover:text-white transition-colors">Service Area</a>
             </div>
           </div>
 
@@ -270,7 +270,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3">Leave a Review</h4>
             <div className="mb-4">
               <img
-                src="/google-review-barcode.png" 
+                src="https://icondumpsters.com/google-review-barcode.png" 
                 alt="Google Review QR Code - Scan to leave a review for Icon Dumpsters"
                 className="w-16 h-16 object-contain border border-gray-300 rounded-lg mb-2"
               />
@@ -296,7 +296,7 @@ export default function Footer() {
         <div className="mt-8 pt-6 border-t border-white/20">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-300">
-              ©2025 Icon Dumpsters. All Rights Reserved | <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>
+              ©2025 Icon Dumpsters. All Rights Reserved | <a href="https://icondumpsters.com/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="https://icondumpsters.com/sitemap" className="hover:text-white transition-colors">Sitemap</a>
             </p>
             <div className="flex space-x-4 mt-4 sm:mt-0">
               <a href="https://facebook.com/icondumpsters" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">

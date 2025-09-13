@@ -446,7 +446,7 @@ export default function ScraperDashboard() {
                 💾 Export JSON
               </button>
               <a
-                href="/admin-dashboard"
+                href="https://icondumpsters.com/admin-dashboard"
                 className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
               >
                 🔧 Admin Dashboard
@@ -457,19 +457,19 @@ export default function ScraperDashboard() {
           {/* Navigation Links */}
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="/admin-dashboard"
+              href="https://icondumpsters.com/admin-dashboard"
               className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
             >
               🔧 Admin Dashboard
             </a>
             <a
-              href="/kpi-dashboard"
+              href="https://icondumpsters.com/kpi-dashboard"
               className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
             >
               📊 Analytics Dashboard
             </a>
             <a
-              href="/inventory"
+              href="https://icondumpsters.com/inventory"
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
             >
               📦 Inventory Management

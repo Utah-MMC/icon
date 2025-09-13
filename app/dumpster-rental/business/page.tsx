@@ -169,7 +169,7 @@ export default function CommercialDumpsterRentalPage() {
                   📞 Call Now
                 </a>
                 <a
-                  href="#quote-form"
+                  href="https://icondumpsters.com/#quote-form"
                   className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Get Quote
@@ -252,7 +252,7 @@ export default function CommercialDumpsterRentalPage() {
         {/* Back to Main Services */}
         <div className="mt-12 text-center">
           <Link
-            href="/dumpster-rental"
+            href="https://icondumpsters.com/dumpster-rental"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors"
           >
             ← Back to All Dumpster Rental Services

@@ -23,7 +23,7 @@ export default function PromotionalBanner() {
           <div className="flex justify-center">
             <div className="relative">
               <ImageWithFallback
-                src="/result.png"
+                src="https://icondumpsters.com/result.png"
                 alt="Icon Dumpsters - Professional Utah Dumpster Rental Services"
                 className="object-contain rounded-lg shadow-xl"
                 fallbackSrc="/images/IMG_0350.jpg"
@@ -39,7 +39,7 @@ export default function PromotionalBanner() {
               </p>
             </div>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Request a Quote Online

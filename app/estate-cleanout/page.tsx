@@ -23,7 +23,7 @@ export default function EstateCleanout() {
         title="Estate Cleanout Services"
         subtitle="Professional estate cleanout services for complete property cleanup, downsizing, and moving projects"
         primaryCtaText="Get Free Quote"
-        primaryCtaLink="/#quote-form"
+        primaryCtaLink="https://icondumpsters.com/#quote-form"
         secondaryCtaText="Call (801) 918-6000"
         secondaryCtaLink="tel:(801) 918-6000"
       />
@@ -62,7 +62,7 @@ export default function EstateCleanout() {
               Professional estate cleanout and property clearing services in Salt Lake County
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-medium text-base sm:text-lg inline-block">
+              <a href="https://icondumpsters.com/#quote-form" className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-medium text-base sm:text-lg inline-block">
                 Get Free Quote
               </a>
               <a href="tel:801-918-6000" className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-white hover:text-[#4e37a8] transition-all duration-300 font-medium text-base sm:text-lg inline-block">
@@ -194,7 +194,7 @@ export default function EstateCleanout() {
               <p className="text-gray-700 mb-4">
                 Our experienced team can help you determine the right dumpster size and provide guidance on the cleanout process. We offer flexible rental periods and can accommodate both small and large estate cleanouts.
               </p>
-              <a href="#quote-form" className="inline-flex items-center text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/#quote-form" className="inline-flex items-center text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors">
                 Get a free consultation →
               </a>
             </div>
@@ -242,7 +242,7 @@ export default function EstateCleanout() {
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>Fast turnaround times</strong> to help you get the property on the market quickly and maximize your sale price.
                   </p>
-                  <a href="/sell-house" className="inline-flex items-center gap-2 bg-[#4e37a8] px-5 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold shadow" style={{ color: '#ffffff' }}>
+                  <a href="https://icondumpsters.com/sell-house" className="inline-flex items-center gap-2 bg-[#4e37a8] px-5 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold shadow" style={{ color: '#ffffff' }}>
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>

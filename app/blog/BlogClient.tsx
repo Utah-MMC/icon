@@ -998,7 +998,7 @@ function BlogContent() {
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
               <div className="space-y-4">
-                <Link href="/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
+                <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
                   <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                     <ImageWithFallback 
                       src="/images/dumpsterSmallBanner2.jpeg" 
@@ -1017,7 +1017,7 @@ function BlogContent() {
                   </div>
                 </Link>
                 
-                <Link href="/commercial-dumpster-rental-business-solutions" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
+                <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
                   <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                     <ImageWithFallback 
                       src="/images/dumpsterSmallBanner.jpeg" 
@@ -1073,7 +1073,7 @@ function BlogContent() {
               </div>
               
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="w-full bg-[#4e37a8] text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold inline-block text-center shadow-md hover:shadow-lg"
               >
                 Get Free Quote

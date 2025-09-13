@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Icon Dumpsters",
     images: [
       {
-        url: "https://icondumpsters.com/images/dumpster500x500-1.jpeg",
+        url: "/images/dumpster500x500-1.jpeg",
         width: 1200,
         height: 630,
         alt: "Icon Dumpsters Blog - Expert Waste Management Insights"
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Icon Dumpsters Blog - Expert Waste Management Insights & Tips",
     description: "Expert insights, tips, and guides on waste management, dumpster rental, and construction cleanup.",
-    images: ["https://icondumpsters.com/images/dumpster500x500-1.jpeg"]
+    images: ["/images/dumpster500x500-1.jpeg"]
   }
 };
 
@@ -54,7 +54,7 @@ export default function BlogPage() {
         author="Icon Dumpsters"
         publishedDate="2024-01-01"
         modifiedDate="2024-12-19"
-        imageUrl="https://icondumpsters.com/images/dumpster500x500-1.jpeg"
+        imageUrl="/images/dumpster500x500-1.jpeg"
         articleUrl="https://icondumpsters.com/blog"
         category="Waste Management"
         readTime="10 min read"

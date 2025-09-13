@@ -1,0 +1,229 @@
+#!/usr/bin/env node
+
+/**
+ * Script to verify robots.txt is not blocking important URLs
+ * This helps ensure that Ahrefs and other crawlers can access all important content
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Important pages that should NOT be blocked
+const IMPORTANT_PAGES = [
+  '/',
+  '/services',
+  '/dumpster-sizes',
+  '/dumpster-prices',
+  '/contact',
+  '/faq',
+  '/reviews',
+  '/locations',
+  '/about',
+  '/dumpster-calculator',
+  '/frequent-buyers',
+  '/book',
+  '/estate-cleanout',
+  '/privacy-policy',
+  '/terms-of-service',
+  '/sitemap',
+  // City pages
+  '/salt-lake-city',
+  '/west-valley-city',
+  '/provo',
+  '/west-jordan',
+  '/orem',
+  '/sandy',
+  '/ogden',
+  '/murray',
+  '/draper',
+  '/midvale',
+  '/holladay',
+  '/taylorsville',
+  '/kearns',
+  '/millcreek',
+  '/south-jordan',
+  '/lehi',
+  '/riverton',
+  '/bountiful',
+  '/herriman',
+  '/spanish-fork',
+  '/roy',
+  '/cottonwood-heights',
+  '/clearfield',
+  '/kaysville',
+  '/american-fork',
+  '/syracuse',
+  '/magna',
+  '/saratoga-springs',
+  '/south-salt-lake',
+  '/pleasant-grove',
+  '/farmington',
+  '/north-salt-lake',
+  '/eagle-mountain',
+  '/woods-cross',
+  '/centerville',
+  '/park-city',
+  '/layton',
+  '/tooele',
+  // Service pages
+  '/services/residential-dumpster-rentals',
+  '/services/construction-dumpster-rentals',
+  '/services/garbage-junk-bin-rentals',
+  '/services/yard-waste-debris-bin-rental',
+  '/services/downsizing-dumpster-rentals',
+  '/dumpster-rental/home',
+  '/dumpster-rental/business',
+  '/dumpster-rental/construction',
+  // Calculator pages
+  '/dumpster-size-calculator',
+  '/dumpster-volume-calculator',
+  '/concrete-debris-calculator',
+  '/demolition-dumpster-calculator',
+  '/roofing-dumpster-calculator',
+  '/tonnage-calculator',
+  // Blog pages
+  '/blog',
+  // Guide pages
+  '/dumpster-rental-guide-2025',
+  '/construction-dumpster-rental-guide-2025',
+  '/home-renovation-dumpster-guide',
+  '/complete-dumpster-rental-guide-2025',
+  '/construction-waste-management-guide',
+  '/utah-dumpster-permits-guide',
+  '/dumpster-rentals-near-me-2025',
+  '/commercial-dumpster-rental-business-solutions-2025',
+  '/rolloff-dumpster-guide-2025',
+  '/estimate-right-dumpster-size-home-cleanout',
+  '/home-renovation-waste-disposal-complete-guide',
+  '/park-renovation-projects',
+  '/retail-renovation-dumpster-guide',
+  '/tooele-dumpster-rental-guide-2025',
+  '/rose-park-dumpster-rental-guide-2025'
+];
+
+// Pages that SHOULD be blocked (admin/test pages)
+const BLOCKED_PAGES = [
+  '/admin',
+  '/admin/',
+  '/api/',
+  '/_next/',
+  '/inventory',
+  '/inventory/',
+  '/kpi-dashboard',
+  '/kpi-dashboard/',
+  '/api-test',
+  '/api-test/',
+  '/test',
+  '/test/',
+  '/test-email',
+  '/test-email/',
+  '/test-og',
+  '/test-og/',
+  '/simple-test',
+  '/simple-test/',
+  '/scraper-dashboard',
+  '/scraper-dashboard/',
+  '/private',
+  '/private/'
+];
+
+function checkRobotsTxt() {
+  console.log('🔍 Verifying robots.txt configuration...\n');
+  
+  // Check if robots.ts exists
+  const robotsTsPath = 'app/robots.ts';
+  if (fs.existsSync(robotsTsPath)) {
+    console.log('✅ Found robots.ts file');
+    
+    const content = fs.readFileSync(robotsTsPath, 'utf8');
+    
+    // Check for important patterns
+    if (content.includes('allow: \'/\'')) {
+      console.log('✅ robots.ts allows root access');
+    } else {
+      console.log('❌ robots.ts does not allow root access');
+    }
+    
+    if (content.includes('sitemap: \'https://icondumpsters.com/sitemap.xml\'')) {
+      console.log('✅ robots.ts includes correct sitemap URL');
+    } else {
+      console.log('❌ robots.ts sitemap URL may be incorrect');
+    }
+    
+    // Check that important directories are not blocked
+    const blockedPatterns = [
+      'disallow: [',
+      '/admin/',
+      '/api/',
+      '/_next/',
+      '/test/',
+      '/test-*/',
+      '/inventory/',
+      '/kpi-dashboard/',
+      '/scraper-dashboard/',
+      '/private/'
+    ];
+    
+    let allBlockedPatternsFound = true;
+    blockedPatterns.forEach(pattern => {
+      if (content.includes(pattern)) {
+        console.log(`✅ Found expected block pattern: ${pattern}`);
+      } else {
+        console.log(`❌ Missing expected block pattern: ${pattern}`);
+        allBlockedPatternsFound = false;
+      }
+    });
+    
+    if (allBlockedPatternsFound) {
+      console.log('✅ All expected block patterns found');
+    }
+    
+  } else {
+    console.log('❌ robots.ts file not found');
+  }
+  
+  // Check static robots.txt files
+  const staticFiles = [
+    'public/robots.txt',
+    'hostgator-deploy/robots.txt'
+  ];
+  
+  staticFiles.forEach(filePath => {
+    if (fs.existsSync(filePath)) {
+      console.log(`\n✅ Found ${filePath}`);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      if (content.includes('User-agent: *')) {
+        console.log(`✅ ${filePath} has User-agent: * rule`);
+      }
+      
+      if (content.includes('Allow: /')) {
+        console.log(`✅ ${filePath} allows root access`);
+      }
+      
+      if (content.includes('Sitemap: https://icondumpsters.com/sitemap.xml')) {
+        console.log(`✅ ${filePath} includes correct sitemap URL`);
+      }
+    }
+  });
+  
+  console.log('\n📊 Summary:');
+  console.log(`   Important pages that should be accessible: ${IMPORTANT_PAGES.length}`);
+  console.log(`   Admin/test pages that should be blocked: ${BLOCKED_PAGES.length}`);
+  
+  console.log('\n🎯 Recommendations:');
+  console.log('1. Deploy the updated robots.ts file to production');
+  console.log('2. Test robots.txt at: https://icondumpsters.com/robots.txt');
+  console.log('3. Submit updated sitemap to Google Search Console');
+  console.log('4. Check Ahrefs crawl results after deployment');
+  console.log('5. Monitor GSC for any crawl errors');
+  
+  console.log('\n✅ robots.txt verification complete!');
+}
+
+// Run the verification
+if (require.main === module) {
+  checkRobotsTxt();
+}
+
+module.exports = { checkRobotsTxt, IMPORTANT_PAGES, BLOCKED_PAGES };

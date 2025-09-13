@@ -22,7 +22,7 @@ export default function DumpsterRentalGuide2025() {
         author="Icon Dumpsters"
         publishedDate="2025-01-20"
         modifiedDate="2025-01-20"
-        imageUrl="https://icondumpsters.com/images/IMG_0350.jpg"
+        imageUrl="/images/IMG_0350.jpg"
         articleUrl="https://icondumpsters.com/dumpster-rental-guide-2025"
         category="DUMPSTER RENTAL"
         readTime="PT8M"
@@ -42,9 +42,9 @@ export default function DumpsterRentalGuide2025() {
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><Link href="https://icondumpsters.com/" className="hover:text-purple-600 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><Link href="https://icondumpsters.com/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
               <li><span className="mx-2">/</span></li>
               <li className="text-gray-900 font-medium">Dumpster Rental Guide 2025</li>
             </ol>
@@ -625,7 +625,7 @@ export default function DumpsterRentalGuide2025() {
                 <p className="text-gray-700 ml-9">
                   For most home renovations, a <strong>20-yard dumpster</strong> is the sweet spot. It fits flooring, cabinets, drywall, and debris 
                   from multiple rooms without being too large for residential driveways. For more detailed guidance, check out our 
-                  <Link href="/home-renovation-waste-disposal-guide" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> complete home renovation waste disposal guide</Link>.
+                  <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> complete home renovation waste disposal guide</Link>.
                 </p>
               </div>
 
@@ -648,7 +648,7 @@ export default function DumpsterRentalGuide2025() {
                 <p className="text-gray-700 ml-9">
                   You generally cannot throw away <strong>hazardous waste, paint, chemicals, tires, electronics, propane tanks, or medical waste</strong>. 
                   Always check your provider's prohibited items list before loading. For construction-specific guidance, see our 
-                  <Link href="/construction-waste-management-2025" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> construction waste management guide</Link>.
+                  <Link href="https://icondumpsters.com/construction-waste-management-2025" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> construction waste management guide</Link>.
                 </p>
               </div>
 
@@ -766,7 +766,7 @@ export default function DumpsterRentalGuide2025() {
               <p className="text-yellow-800 font-medium mb-2">💡 Pro Tip</p>
               <p className="text-yellow-700">
                 For commercial projects or businesses needing ongoing waste management solutions, check out our 
-                <Link href="/commercial-dumpster-rental-business-solutions" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> commercial dumpster rental guide</Link> 
+                <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> commercial dumpster rental guide</Link> 
                 for specialized solutions and pricing.
               </p>
             </div>
@@ -804,7 +804,7 @@ export default function DumpsterRentalGuide2025() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/#quote-form" 
+                  href="https://icondumpsters.com/#quote-form" 
                   className="bg-white text-[#4e37a8] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Free Quote
@@ -824,7 +824,7 @@ export default function DumpsterRentalGuide2025() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/construction-waste-management-2025" className="group">
+            <Link href="https://icondumpsters.com/construction-waste-management-2025" className="group">
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
@@ -845,7 +845,7 @@ export default function DumpsterRentalGuide2025() {
               </div>
             </Link>
             
-            <Link href="/home-renovation-waste-disposal-guide" className="group">
+            <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="group">
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 

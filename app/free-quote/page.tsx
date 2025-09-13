@@ -52,7 +52,7 @@ export default function FreeQuotePage() {
               "@type": "Organization",
               "name": "Icon Dumpsters",
               "url": "https://icondumpsters.com",
-              "logo": "https://icondumpsters.com/images/Icon_Dumpsters_Final.png"
+              "logo": "/images/Icon_Dumpsters_Final.png"
             },
             "serviceType": "Dumpster Rental",
             "areaServed": {

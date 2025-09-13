@@ -51,24 +51,24 @@ export default function HomeRenovationWasteDisposalGuide() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#planning" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#planning" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   1. Planning Your Waste Disposal
                 </a>
-                <a href="#dumpster-sizing" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#dumpster-sizing" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   2. Choosing the Right Dumpster Size
                 </a>
-                <a href="#recycling" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#recycling" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   3. Recycling and Reuse Opportunities
                 </a>
               </div>
               <div>
-                <a href="#disposal-methods" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#disposal-methods" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   4. Proper Disposal Methods
                 </a>
-                <a href="#cost-optimization" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#cost-optimization" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   5. Cost Optimization Strategies
                 </a>
-                <a href="#safety" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#safety" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   6. Safety and Best Practices
                 </a>
               </div>
@@ -145,7 +145,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                             I always recommend using our <Link href="/choose-dumpster-size" className="text-blue-600 hover:text-blue-800 underline">dumpster size selection guide</Link> to get accurate calculations. 
+                             I always recommend using our <Link href="https://icondumpsters.com/choose-dumpster-size" className="text-blue-600 hover:text-blue-800 underline">dumpster size selection guide</Link> to get accurate calculations. 
               It's saved me thousands in overage charges over the years.
             </p>
           </section>
@@ -179,7 +179,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For comprehensive guidance on construction waste management, check out our <Link href="/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">construction waste management guide</Link>. 
+              For comprehensive guidance on construction waste management, check out our <Link href="https://icondumpsters.com/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">construction waste management guide</Link>. 
               It covers everything from recycling strategies to compliance requirements.
             </p>
           </section>
@@ -239,7 +239,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                             To get accurate pricing for your specific project, use our <Link href="/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
+                             To get accurate pricing for your specific project, use our <Link href="https://icondumpsters.com/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
               It factors in your location, project type, and timeline to give you realistic cost estimates.
             </p>
           </section>
@@ -260,7 +260,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For construction projects specifically, our <Link href="/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> provides 
+              For construction projects specifically, our <Link href="https://icondumpsters.com/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> provides 
               detailed safety protocols and best practices for managing construction waste.
             </p>
           </section>
@@ -280,7 +280,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             
             <div className="text-center mt-8">
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Get Renovation Quote

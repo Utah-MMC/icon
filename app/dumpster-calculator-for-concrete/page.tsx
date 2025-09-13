@@ -21,7 +21,7 @@ export default function DumpsterCalculatorForConcrete() {
         author="Icon Dumpsters"
         publishedDate="2025-01-27"
         modifiedDate="2025-01-27"
-        imageUrl="https://icondumpsters.com/images/concrete.webp"
+        imageUrl="/images/concrete.webp"
         articleUrl="https://icondumpsters.com/dumpster-calculator-for-concrete"
         category="CONCRETE"
         readTime="PT8M"
@@ -53,9 +53,9 @@ export default function DumpsterCalculatorForConcrete() {
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><Link href="https://icondumpsters.com/" className="hover:text-purple-600 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><Link href="https://icondumpsters.com/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
               <li><span className="mx-2">/</span></li>
               <li className="text-gray-900 font-medium">Concrete Dumpster Calculator</li>
             </ol>
@@ -347,7 +347,7 @@ export default function DumpsterCalculatorForConcrete() {
                 for personalized assistance with your concrete disposal project.
               </p>
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold inline-block"
               >
                 Get Your Free Quote

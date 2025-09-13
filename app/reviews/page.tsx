@@ -31,7 +31,7 @@ export default function Reviews() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-[#4e37a8] hover:bg-purple-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors duration-300"
               >
                 Get Free Quote

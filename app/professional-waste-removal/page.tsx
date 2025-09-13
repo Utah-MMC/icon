@@ -11,7 +11,7 @@ export default function ProfessionalWasteRemovalPage() {
     <div className="bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-4">
-          <a href="/" className="text-[#4e37a8] hover:underline">Home</a>
+          <a href="https://icondumpsters.com/" className="text-[#4e37a8] hover:underline">Home</a>
           <span className="mx-2">/</span>
           <span>Professional Waste Removal</span>
         </nav>

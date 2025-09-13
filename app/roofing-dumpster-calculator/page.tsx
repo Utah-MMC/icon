@@ -21,7 +21,7 @@ export default function RoofingDumpsterCalculator() {
         author="Icon Dumpsters"
         publishedDate="2025-01-27"
         modifiedDate="2025-01-27"
-        imageUrl="https://icondumpsters.com/images/dumpsterSmallBanner4.jpeg"
+        imageUrl="/images/dumpsterSmallBanner4.jpeg"
         articleUrl="https://icondumpsters.com/roofing-dumpster-calculator"
         category="ROOFING"
         readTime="PT9M"
@@ -53,9 +53,9 @@ export default function RoofingDumpsterCalculator() {
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><Link href="https://icondumpsters.com/" className="hover:text-purple-600 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><Link href="https://icondumpsters.com/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
               <li><span className="mx-2">/</span></li>
               <li className="text-gray-900 font-medium">Roofing Dumpster Calculator</li>
             </ol>
@@ -363,7 +363,7 @@ export default function RoofingDumpsterCalculator() {
                 for personalized assistance with your roofing waste disposal project.
               </p>
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold inline-block"
               >
                 Get Your Free Quote

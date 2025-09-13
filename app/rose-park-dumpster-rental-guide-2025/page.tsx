@@ -28,7 +28,7 @@ export default function RoseParkDumpsterRentalGuide2025() {
                 Call 801-555-0123
               </a>
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
               >
                 Get Free Quote
@@ -201,7 +201,7 @@ export default function RoseParkDumpsterRentalGuide2025() {
                     Call 801-555-0123
                   </a>
                   <a 
-                    href="#quote-form" 
+                    href="https://icondumpsters.com/#quote-form" 
                     className="block w-full bg-transparent border-2 border-[#4e37a8] text-[#4e37a8] px-4 py-3 rounded-lg font-semibold text-center hover:bg-[#4e37a8] hover:text-white transition-colors"
                   >
                     Get Free Quote
@@ -227,10 +227,10 @@ export default function RoseParkDumpsterRentalGuide2025() {
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Links</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/dumpster-prices" className="text-blue-600 hover:text-blue-800">Dumpster Prices</Link></li>
-                  <li><Link href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800">Dumpster Sizes</Link></li>
-                  <li><Link href="/faq" className="text-blue-600 hover:text-blue-800">FAQ</Link></li>
-                  <li><Link href="/contact" className="text-blue-600 hover:text-blue-800">Contact Us</Link></li>
+                  <li><Link href="https://icondumpsters.com/dumpster-prices" className="text-blue-600 hover:text-blue-800">Dumpster Prices</Link></li>
+                  <li><Link href="https://icondumpsters.com/dumpster-sizes" className="text-blue-600 hover:text-blue-800">Dumpster Sizes</Link></li>
+                  <li><Link href="https://icondumpsters.com/faq" className="text-blue-600 hover:text-blue-800">FAQ</Link></li>
+                  <li><Link href="https://icondumpsters.com/contact" className="text-blue-600 hover:text-blue-800">Contact Us</Link></li>
                 </ul>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function RoseParkDumpsterRentalGuide2025() {
               Call Now: 801-555-0123
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
               Get Free Quote

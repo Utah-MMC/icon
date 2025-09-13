@@ -121,7 +121,7 @@ export default function FAQPage() {
         },
         {
           question: "What are the weight limits for dumpsters?",
-          answer: "Our dumpsters have a weight limit of approximately 2 <Link href='/tonnage-calculator' className='text-[#4e37a8] hover:text-purple-700 underline font-semibold'>tons</Link> (4,000 pounds). This covers most household and construction waste. If you exceed this limit, additional fees may apply. Heavy materials like concrete, dirt, or roofing shingles should be discussed with us beforehand."
+          answer: "Our dumpsters have a weight limit of approximately 2 <Link href="https://icondumpsters.com/tonnage-calculator" className='text-[#4e37a8] hover:text-purple-700 underline font-semibold'>tons</Link> (4,000 pounds). This covers most household and construction waste. If you exceed this limit, additional fees may apply. Heavy materials like concrete, dirt, or roofing shingles should be discussed with us beforehand."
         },
         {
           question: "Are there any materials you don't accept?",
@@ -236,7 +236,7 @@ export default function FAQPage() {
             {/* Quick Contact */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
               >
                 Get Free Quote
@@ -258,7 +258,7 @@ export default function FAQPage() {
           <nav className="flex" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-4">
               <li>
-                <Link href="/" className="text-gray-500 hover:text-[#4e37a8] transition-colors">
+                <Link href="https://icondumpsters.com/" className="text-gray-500 hover:text-[#4e37a8] transition-colors">
                   Home
                 </Link>
               </li>
@@ -287,7 +287,7 @@ export default function FAQPage() {
               <p className="text-gray-600 leading-relaxed">
                 We've compiled answers to the most common questions our customers ask about dumpster rental services. 
                 If you don't see your question here, don't hesitate to call us at (801) 918-6000 or 
-                <Link href="/#quote-form" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> request a free quote</Link>.
+                <Link href="https://icondumpsters.com/#quote-form" className="text-[#4e37a8] hover:text-purple-700 font-semibold"> request a free quote</Link>.
               </p>
             </div>
 
@@ -365,7 +365,7 @@ export default function FAQPage() {
                 Need a dumpster? Get an instant quote for your project.
               </p>
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="w-full bg-[#4e37a8] text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold inline-block text-center"
               >
                 Request Quote
@@ -395,7 +395,7 @@ export default function FAQPage() {
                 </div>
               </div>
               <Link 
-                href="/dumpster-sizes" 
+                href="https://icondumpsters.com/dumpster-sizes" 
                 className="block mt-4 text-[#4e37a8] hover:text-purple-700 font-semibold text-sm"
               >
                 View Size Guide →

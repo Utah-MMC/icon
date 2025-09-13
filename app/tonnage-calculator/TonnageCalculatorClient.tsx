@@ -115,7 +115,7 @@ export default function TonnageCalculatorClient() {
               </ul>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-4 text-sm text-gray-700">
-              We drop off empty and bill actual weight after pickup at $55/ton. No weight is included in base rental. See more details on our <Link href="/fees" className="text-[#4e37a8] hover:underline">fees</Link> and <Link href="/dumpster-sizes" className="text-[#4e37a8] hover:underline">sizes</Link> pages.
+              We drop off empty and bill actual weight after pickup at $55/ton. No weight is included in base rental. See more details on our <Link href="https://icondumpsters.com/fees" className="text-[#4e37a8] hover:underline">fees</Link> and <Link href="https://icondumpsters.com/dumpster-sizes" className="text-[#4e37a8] hover:underline">sizes</Link> pages.
             </div>
           </aside>
         </div>

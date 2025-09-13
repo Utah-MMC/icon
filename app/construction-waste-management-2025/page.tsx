@@ -20,7 +20,7 @@ export default function ConstructionWasteManagement() {
         author="Icon Dumpsters"
         publishedDate="2025-01-20"
         modifiedDate="2025-01-20"
-        imageUrl="https://icondumpsters.com/images/construction-waste.jpg"
+        imageUrl="/images/construction-waste.jpg"
         articleUrl="https://icondumpsters.com/construction-waste-management-2025"
         category="CONSTRUCTION"
         readTime="PT6M"
@@ -40,9 +40,9 @@ export default function ConstructionWasteManagement() {
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
-              <li><Link href="/" className="hover:text-purple-600 transition-colors">Home</Link></li>
+              <li><Link href="https://icondumpsters.com/" className="hover:text-purple-600 transition-colors">Home</Link></li>
               <li><span className="mx-2">/</span></li>
-              <li><Link href="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
+              <li><Link href="https://icondumpsters.com/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
               <li><span className="mx-2">/</span></li>
               <li className="text-gray-900 font-medium">Construction Waste Management 2025</li>
             </ol>
@@ -133,18 +133,18 @@ export default function ConstructionWasteManagement() {
         <nav className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-12" aria-label="Table of contents">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-gray-700">
-            <li><a href="#introduction" className="hover:text-blue-600 transition-colors">Introduction to Construction Waste Management</a></li>
-            <li><a href="#waste-types" className="hover:text-blue-600 transition-colors">Understanding Construction Waste Types</a></li>
-            <li><a href="#planning" className="hover:text-blue-600 transition-colors">Waste Management Planning</a></li>
-            <li><a href="#sorting-strategies" className="hover:text-blue-600 transition-colors">On-Site Waste Sorting Strategies</a></li>
-            <li><a href="#dumpster-selection" className="hover:text-blue-600 transition-colors">Dumpster Selection and Optimization</a></li>
-            <li><a href="#recycling-reuse" className="hover:text-blue-600 transition-colors">Recycling and Reuse Strategies</a></li>
-            <li><a href="#cost-management" className="hover:text-blue-600 transition-colors">Cost Management and Optimization</a></li>
-            <li><a href="#compliance" className="hover:text-blue-600 transition-colors">Environmental Compliance and Regulations</a></li>
-            <li><a href="#technology" className="hover:text-blue-600 transition-colors">Technology and Innovation in Waste Management</a></li>
-            <li><a href="#safety" className="hover:text-blue-600 transition-colors">Safety Considerations</a></li>
-            <li><a href="#measuring-success" className="hover:text-blue-600 transition-colors">Measuring Success and Continuous Improvement</a></li>
-            <li><a href="#conclusion" className="hover:text-blue-600 transition-colors">Conclusion</a></li>
+            <li><a href="https://icondumpsters.com/#introduction" className="hover:text-blue-600 transition-colors">Introduction to Construction Waste Management</a></li>
+            <li><a href="https://icondumpsters.com/#waste-types" className="hover:text-blue-600 transition-colors">Understanding Construction Waste Types</a></li>
+            <li><a href="https://icondumpsters.com/#planning" className="hover:text-blue-600 transition-colors">Waste Management Planning</a></li>
+            <li><a href="https://icondumpsters.com/#sorting-strategies" className="hover:text-blue-600 transition-colors">On-Site Waste Sorting Strategies</a></li>
+            <li><a href="https://icondumpsters.com/#dumpster-selection" className="hover:text-blue-600 transition-colors">Dumpster Selection and Optimization</a></li>
+            <li><a href="https://icondumpsters.com/#recycling-reuse" className="hover:text-blue-600 transition-colors">Recycling and Reuse Strategies</a></li>
+            <li><a href="https://icondumpsters.com/#cost-management" className="hover:text-blue-600 transition-colors">Cost Management and Optimization</a></li>
+            <li><a href="https://icondumpsters.com/#compliance" className="hover:text-blue-600 transition-colors">Environmental Compliance and Regulations</a></li>
+            <li><a href="https://icondumpsters.com/#technology" className="hover:text-blue-600 transition-colors">Technology and Innovation in Waste Management</a></li>
+            <li><a href="https://icondumpsters.com/#safety" className="hover:text-blue-600 transition-colors">Safety Considerations</a></li>
+            <li><a href="https://icondumpsters.com/#measuring-success" className="hover:text-blue-600 transition-colors">Measuring Success and Continuous Improvement</a></li>
+            <li><a href="https://icondumpsters.com/#conclusion" className="hover:text-blue-600 transition-colors">Conclusion</a></li>
           </ul>
         </nav>
 
@@ -781,7 +781,7 @@ export default function ConstructionWasteManagement() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
               >
                 Get Free Quote
@@ -800,7 +800,7 @@ export default function ConstructionWasteManagement() {
         <section className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/complete-dumpster-rental-guide-2025" className="group">
+            <Link href="https://icondumpsters.com/complete-dumpster-rental-guide-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                   Complete Guide to Dumpster Rental: Everything You Need to Know in 2025
@@ -810,7 +810,7 @@ export default function ConstructionWasteManagement() {
                 </p>
               </div>
             </Link>
-            <Link href="/home-renovation-waste-disposal-guide" className="group">
+            <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                   Home Renovation Waste Disposal: A Complete Guide
@@ -836,7 +836,7 @@ export default function ConstructionWasteManagement() {
             </div>
             <div className="flex gap-4">
               <Link 
-                href="/blog" 
+                href="https://icondumpsters.com/blog" 
                 className="text-blue-600 hover:text-blue-700 transition-colors font-medium"
               >
                 ← Back to Blog

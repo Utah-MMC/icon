@@ -135,7 +135,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">15 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 12' x 8' x 6'</div>
-                      <div><strong>Weight Limit:</strong> 3 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
+                      <div><strong>Weight Limit:</strong> 3 <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Small projects</div>
                     </div>
@@ -164,7 +164,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">20 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 22' x 8' x 6'</div>
-                      <div><strong>Weight Limit:</strong> 4 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
+                      <div><strong>Weight Limit:</strong> 4 <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Medium projects</div>
                     </div>
@@ -193,7 +193,7 @@ export default function DumpsterSizes() {
                     <h5 className="font-bold text-gray-900 text-lg mb-2">30 Yard</h5>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div><strong>Dimensions:</strong> 22' x 8' x 8'</div>
-                      <div><strong>Weight Limit:</strong> 6 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
+                      <div><strong>Weight Limit:</strong> 6 <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link></div>
                       <div><strong>Loading:</strong> Level with top</div>
                       <div><strong>Best For:</strong> Large projects</div>
                     </div>
@@ -308,7 +308,7 @@ export default function DumpsterSizes() {
 
             {/* Call to Action */}
             <div className="mt-8 text-center">
-              <a href="/free-quote" className="inline-flex items-center bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <a href="https://icondumpsters.com/free-quote" className="inline-flex items-center bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white px-8 py-3 rounded-lg hover:from-purple-600 hover:to-[#4e37a8] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -617,7 +617,7 @@ export default function DumpsterSizes() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Rent a Dumpster?</h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="inline-flex items-center bg-[#4e37a8] text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
               >
                 Order Online

@@ -167,7 +167,7 @@ export default function DowntownSaltLakePage() {
               
               
               <Link 
-                href="/downtown-salt-lake-dumpster-rental-guide-2025"
+                href="https://icondumpsters.com/downtown-salt-lake-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
                 📖 Read Complete Guide →
@@ -199,7 +199,7 @@ export default function DowntownSaltLakePage() {
               📞 Call Now: (801) 918-6000
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
               Get Free Quote

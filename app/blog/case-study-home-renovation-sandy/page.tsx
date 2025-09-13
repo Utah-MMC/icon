@@ -53,9 +53,9 @@ export default function CaseStudySandy() {
           <div className="my-8 p-6 bg-white border rounded-xl shadow">
             <h3 className="m-0">Plan a Similar Project</h3>
             <ul>
-              <li><Link href="/dumpster-sizes" className="text-[#4e37a8] underline">Compare Dumpster Sizes</Link></li>
-              <li><Link href="/faq" className="text-[#4e37a8] underline">FAQs: permits, placement, timelines</Link></li>
-              <li><a href="/#quote-form" className="text-[#4e37a8] underline">Get a Free Quote</a></li>
+              <li><Link href="https://icondumpsters.com/dumpster-sizes" className="text-[#4e37a8] underline">Compare Dumpster Sizes</Link></li>
+              <li><Link href="https://icondumpsters.com/faq" className="text-[#4e37a8] underline">FAQs: permits, placement, timelines</Link></li>
+              <li><a href="https://icondumpsters.com/#quote-form" className="text-[#4e37a8] underline">Get a Free Quote</a></li>
             </ul>
           </div>
         </article>

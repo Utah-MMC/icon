@@ -351,7 +351,7 @@ export default function DumpsterCalculator() {
 
     html += '<div class="mt-3 p-3 bg-purple-50 rounded-lg border border-[#4e37a8]/20">';
     html += '<p class="text-sm text-[#4e37a8]">';
-                    html += '<strong>⚖️ <a href="/tonnage-calculator" class="text-[#4e37a8] hover:text-purple-700 underline font-semibold">Tonnage</a> billed separately after service is weighed at $55.00 per <a href="/tonnage-calculator" class="text-[#4e37a8] hover:text-purple-700 underline font-semibold">ton</a>.</strong> This estimate does not include weight charges.';
+                    html += '<strong>⚖️ <a href="https://icondumpsters.com/tonnage-calculator" class="text-[#4e37a8] hover:text-purple-700 underline font-semibold">Tonnage</a> billed separately after service is weighed at $55.00 per <a href="https://icondumpsters.com/tonnage-calculator" class="text-[#4e37a8] hover:text-purple-700 underline font-semibold">ton</a>.</strong> This estimate does not include weight charges.';
     html += '</p>';
     html += '</div>';
     
@@ -956,7 +956,7 @@ export default function DumpsterCalculator() {
                 </li>
                 <li className="flex items-start">
                 <span className="w-2 h-2 bg-[#4e37a8] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span><strong>Weight-Based Pricing:</strong> $55 per <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">ton</Link> charged after disposal facility weighing</span>
+                  <span><strong>Weight-Based Pricing:</strong> $55 per <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">ton</Link> charged after disposal facility weighing</span>
                 </li>
               </ul>
             </div>

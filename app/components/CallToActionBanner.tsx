@@ -25,7 +25,7 @@ export default function CallToActionBanner() {
           <div className="flex-1 flex justify-center mb-6 lg:mb-0">
             <div className="relative">
               <ImageWithFallback
-                src="/result.png"
+                src="https://icondumpsters.com/result.png"
                 alt="Icon Dumpsters roll-off dumpster rental in Utah"
 
                 className="object-contain rounded-lg shadow-lg"
@@ -40,7 +40,7 @@ export default function CallToActionBanner() {
               (801) 918-6000
             </div>
             <Link 
-              href="/#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors"
             >
               Request a Quote Online

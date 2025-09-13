@@ -51,24 +51,24 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#business-needs" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#business-needs" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   1. Understanding Business Waste Needs
                 </a>
-                <a href="#enterprise-solutions" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#enterprise-solutions" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   2. Enterprise Waste Management Solutions
                 </a>
-                <a href="#bulk-pricing" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#bulk-pricing" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   3. Bulk Pricing and Volume Discounts
                 </a>
               </div>
               <div>
-                <a href="#compliance" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#compliance" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   4. Business Compliance Requirements
                 </a>
-                <a href="#cost-optimization" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#cost-optimization" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   5. Cost Optimization Strategies
                 </a>
-                <a href="#implementation" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#implementation" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   6. Implementation and Best Practices
                 </a>
               </div>
@@ -145,7 +145,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For construction businesses specifically, our <Link href="/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> provides 
+              For construction businesses specifically, our <Link href="https://icondumpsters.com/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> provides 
               detailed information on managing construction waste at scale, including multi-site coordination and project-based pricing.
             </p>
           </section>
@@ -205,7 +205,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For comprehensive guidance on waste management compliance, check out our <Link href="/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">construction waste management guide</Link>. 
+              For comprehensive guidance on waste management compliance, check out our <Link href="https://icondumpsters.com/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">construction waste management guide</Link>. 
               It covers everything from regulatory requirements to best practices for maintaining compliance.
             </p>
           </section>
@@ -239,7 +239,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                             To get accurate pricing for your specific business needs, use our <Link href="/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
+                             To get accurate pricing for your specific business needs, use our <Link href="https://icondumpsters.com/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
               It factors in your business type, volume, and location to give you realistic cost projections.
             </p>
           </section>
@@ -261,7 +261,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For home renovation businesses specifically, our <Link href="/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation waste disposal guide</Link> provides 
+              For home renovation businesses specifically, our <Link href="https://icondumpsters.com/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation waste disposal guide</Link> provides 
               detailed implementation strategies for managing renovation waste at scale.
             </p>
           </section>
@@ -282,7 +282,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             
             <div className="text-center mt-8">
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Get Business Quote

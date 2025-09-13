@@ -71,7 +71,7 @@ export default function WasatchCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-wasatch-county-ut/heber-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/heber-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Heber City</h3>
@@ -79,7 +79,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/midway-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/midway-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Midway</h3>
@@ -87,7 +87,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/charleston-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/charleston-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Charleston</h3>
@@ -95,7 +95,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/daniels-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/daniels-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Daniels</h3>
@@ -103,7 +103,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/independence-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/independence-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Independence</h3>
@@ -111,7 +111,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/timber-lakes-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/timber-lakes-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Timber Lakes</h3>
@@ -119,7 +119,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/timber-lakes-estates-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/timber-lakes-estates-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Timber Lakes Estates</h3>
@@ -127,7 +127,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/river-hollow-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/river-hollow-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">River Hollow</h3>
@@ -135,7 +135,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/deer-creek-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/deer-creek-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Deer Creek</h3>
@@ -143,7 +143,7 @@ export default function WasatchCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-wasatch-county-ut/cascade-springs-ut"
+              href="https://icondumpsters.com/dumpster-rental-wasatch-county-ut/cascade-springs-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Cascade Springs</h3>
@@ -177,7 +177,7 @@ export default function WasatchCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -194,7 +194,7 @@ export default function WasatchCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -211,7 +211,7 @@ export default function WasatchCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -238,7 +238,7 @@ export default function WasatchCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

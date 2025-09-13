@@ -310,7 +310,7 @@ export default function SaltLakeCountyDumpsterRentalPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rental-west-valley" className="text-indigo-600 hover:text-indigo-800">
+                  <a href="https://icondumpsters.com/dumpster-rental-west-valley" className="text-indigo-600 hover:text-indigo-800">
                     West Valley Dumpster Rental Guide
                   </a>
                 </h3>
@@ -320,7 +320,7 @@ export default function SaltLakeCountyDumpsterRentalPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rental-sandy-utah" className="text-indigo-600 hover:text-indigo-800">
+                  <a href="https://icondumpsters.com/dumpster-rental-sandy-utah" className="text-indigo-600 hover:text-indigo-800">
                     Sandy, Utah Dumpster Rental Services
                   </a>
                 </h3>

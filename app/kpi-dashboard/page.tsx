@@ -1,9 +1,6 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import ClientDatabase from '../components/ClientDatabase';
-import ClientInsights from '../components/ClientInsights';
-import BulkEmailOutreach from '../components/BulkEmailOutreach';
 import ReviewAnalytics from '../components/ReviewAnalytics';
 
 type Counts = { byType: Record<string, number>; byName: Record<string, number>; total: number };
@@ -14,7 +11,6 @@ export default function KPIDashboard() {
   const [status, setStatus] = useState<{ online: boolean; queueSize: number; etaMinutes: number } | null>(null);
   const [lastUpdated, setLastUpdated] = useState<number>(0);
   const [summary, setSummary] = useState<Summary | null>(null);
-  const [showClientDatabase, setShowClientDatabase] = useState(false);
 
   async function refresh() {
     try {
@@ -52,7 +48,7 @@ export default function KPIDashboard() {
                 🔄 Refresh Data
               </button>
               <a
-                href="/admin-dashboard"
+                href="https://icondumpsters.com/admin-dashboard"
                 className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
               >
                 🔧 Admin Controls
@@ -63,31 +59,37 @@ export default function KPIDashboard() {
           {/* Navigation Links */}
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="/scraper-dashboard"
+              href="https://icondumpsters.com/scraper-dashboard"
               className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm"
             >
               🕷️ Scraper Dashboard
             </a>
             <a
-              href="/admin-dashboard"
+              href="https://icondumpsters.com/admin-dashboard"
               className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
             >
               🔧 Admin Dashboard
             </a>
             <a
-              href="/inventory"
+              href="https://icondumpsters.com/inventory"
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
             >
               📦 Inventory Management
             </a>
             <a
-              href="/admin"
+              href="https://icondumpsters.com/email-outreach"
+              className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm"
+            >
+              📧 Email Outreach
+            </a>
+            <a
+              href="https://icondumpsters.com/admin"
               className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
             >
               🔐 Admin Login
             </a>
             <a
-              href="/api-test"
+              href="https://icondumpsters.com/api-test"
               className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm"
             >
               🧪 API Testing
@@ -215,34 +217,17 @@ export default function KPIDashboard() {
         
         {/* Business Intelligence Sections */}
         <div className="space-y-8">
-          {/* Client Database Analytics */}
+          {/* Email Outreach & Client Management Link */}
           <div className="bg-white rounded-xl shadow border p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Client Database Analytics</h2>
-            <ClientInsights />
-          </div>
-          
-          {/* Combined Email Outreach & Client Management */}
-          <div className="bg-white rounded-xl shadow border p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold text-gray-900">Email Outreach Campaigns</h2>
-              <button
-                onClick={() => setShowClientDatabase(!showClientDatabase)}
-                className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm"
-              >
-                {showClientDatabase ? 'Hide' : 'Show'} Client Database
-              </button>
-            </div>
-            
-            {/* Client Database - Conditionally Rendered */}
-            {showClientDatabase && (
-              <div className="mb-6 border-t border-gray-200 pt-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Client Database Management</h3>
-                <ClientDatabase />
-              </div>
-            )}
-            
-            {/* Email Outreach */}
-            <BulkEmailOutreach />
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Email Outreach & Client Management</h2>
+            <p className="text-gray-600 mb-4">Manage your client database and send targeted email campaigns</p>
+            <a 
+              href="/email-outreach" 
+              className="inline-flex items-center px-4 py-2 bg-[#4e37a8] text-white rounded-lg hover:bg-[#3d2d8a] transition-colors"
+            >
+              <span className="mr-2">📧</span>
+              View Email Outreach Dashboard
+            </a>
           </div>
 
           {/* Review Analytics */}

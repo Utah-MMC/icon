@@ -46,14 +46,14 @@ export default function DumpsterSizesGuide() {
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-blue-600">
-            <li><a href="#size-overview" className="hover:underline">Size Overview</a></li>
-            <li><a href="#10-yard-dumpster" className="hover:underline">10 Yard Dumpster</a></li>
-            <li><a href="#15-yard-dumpster" className="hover:underline">15 Yard Dumpster</a></li>
-            <li><a href="#20-yard-dumpster" className="hover:underline">20 Yard Dumpster</a></li>
-            <li><a href="#30-yard-dumpster" className="hover:underline">30 Yard Dumpster</a></li>
-            <li><a href="#40-yard-dumpster" className="hover:underline">40 Yard Dumpster</a></li>
-            <li><a href="#choosing-size" className="hover:underline">Choosing the Right Size</a></li>
-            <li><a href="#faq" className="hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="https://icondumpsters.com/#size-overview" className="hover:underline">Size Overview</a></li>
+            <li><a href="https://icondumpsters.com/#10-yard-dumpster" className="hover:underline">10 Yard Dumpster</a></li>
+            <li><a href="https://icondumpsters.com/#15-yard-dumpster" className="hover:underline">15 Yard Dumpster</a></li>
+            <li><a href="https://icondumpsters.com/#20-yard-dumpster" className="hover:underline">20 Yard Dumpster</a></li>
+            <li><a href="https://icondumpsters.com/#30-yard-dumpster" className="hover:underline">30 Yard Dumpster</a></li>
+            <li><a href="https://icondumpsters.com/#40-yard-dumpster" className="hover:underline">40 Yard Dumpster</a></li>
+            <li><a href="https://icondumpsters.com/#choosing-size" className="hover:underline">Choosing the Right Size</a></li>
+            <li><a href="https://icondumpsters.com/#faq" className="hover:underline">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
@@ -316,7 +316,7 @@ export default function DumpsterSizesGuide() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Free Quote

@@ -11,7 +11,7 @@ export default function CompetitivePricingPage() {
     <div className="bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-4">
-          <a href="/" className="text-[#4e37a8] hover:underline">Home</a>
+          <a href="https://icondumpsters.com/" className="text-[#4e37a8] hover:underline">Home</a>
           <span className="mx-2">/</span>
           <span>Competitive Pricing</span>
         </nav>
@@ -24,7 +24,7 @@ export default function CompetitivePricingPage() {
         </ul>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a href="/#quote-form" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Free Quote</a>
+          <a href="https://icondumpsters.com/#quote-form" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Free Quote</a>
           <a href="tel:801-918-6000" className="inline-block border-2 border-[#4e37a8] text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-[#4e37a8] hover:text-white">Call (801) 918-6000</a>
         </div>
       </div>

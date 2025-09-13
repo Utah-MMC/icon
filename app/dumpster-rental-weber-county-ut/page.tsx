@@ -71,7 +71,7 @@ export default function WeberCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-weber-county-ut/ogden-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/ogden-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Ogden</h3>
@@ -79,7 +79,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/roosevelt-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/roosevelt-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Roosevelt</h3>
@@ -87,7 +87,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/riverdale-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/riverdale-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Riverdale</h3>
@@ -95,7 +95,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/south-ogden-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/south-ogden-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">South Ogden</h3>
@@ -103,7 +103,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/north-ogden-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/north-ogden-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">North Ogden</h3>
@@ -111,7 +111,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/washington-terrace-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/washington-terrace-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Washington Terrace</h3>
@@ -119,7 +119,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/farr-west-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/farr-west-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Farr West</h3>
@@ -127,7 +127,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/harrisville-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/harrisville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Harrisville</h3>
@@ -135,7 +135,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/plain-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/plain-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Plain City</h3>
@@ -143,7 +143,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/west-haven-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/west-haven-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">West Haven</h3>
@@ -151,7 +151,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/hooper-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/hooper-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Hooper</h3>
@@ -159,7 +159,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/roy-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/roy-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Roy</h3>
@@ -167,7 +167,7 @@ export default function WeberCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-weber-county-ut/uintah-ut"
+              href="https://icondumpsters.com/dumpster-rental-weber-county-ut/uintah-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Uintah</h3>
@@ -201,7 +201,7 @@ export default function WeberCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -218,7 +218,7 @@ export default function WeberCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -235,7 +235,7 @@ export default function WeberCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -262,7 +262,7 @@ export default function WeberCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

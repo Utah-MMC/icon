@@ -20,7 +20,7 @@ export default function TestOGPage() {
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
             <h2 className="text-lg font-semibold text-blue-800 mb-2">Test Information</h2>
             <div className="text-blue-700 space-y-1">
-              <p><strong>Image URL:</strong> https://icondumpsters.com/images/og-image.png</p>
+              <p><strong>Image URL:</strong> /images/og-image.png</p>
               <p><strong>Dimensions:</strong> 1200x630 pixels</p>
               <p><strong>Format:</strong> PNG</p>
               <p><strong>Purpose:</strong> Social media sharing (Facebook, Twitter, LinkedIn)</p>

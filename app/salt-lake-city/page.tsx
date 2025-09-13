@@ -188,7 +188,7 @@ export default function SaltLakeCityPage() {
                   />
                 </div>
               <Link 
-                href="/salt-lake-city-dumpster-rental-guide-2025"
+                href="https://icondumpsters.com/salt-lake-city-dumpster-rental-guide-2025"
                 className="inline-block bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
               >
                 📖 Read Complete Guide →
@@ -214,12 +214,12 @@ export default function SaltLakeCityPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Salt Lake City Business Districts</h3>
                     <ul className="space-y-2 text-gray-700">
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City Central</a></strong> - <span className="text-gray-500">Major retail and dining</span></li>
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City East</a></strong> - <span className="text-gray-500">Government and civic center</span></li>
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City West</a></strong> - <span className="text-gray-500">Residential and commercial mix</span></li>
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City South</a></strong> - <span className="text-gray-500">Industrial and commercial</span></li>
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City North</a></strong> - <span className="text-gray-500">Growing residential area</span></li>
-                        <li>• <strong><a href="/" className="text-blue-600 hover:text-blue-800 underline">Downtown Salt Lake City</a></strong> - <span className="text-gray-500">Established neighborhoods</span></li>                    </ul>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City Central</a></strong> - <span className="text-gray-500">Major retail and dining</span></li>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City East</a></strong> - <span className="text-gray-500">Government and civic center</span></li>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City West</a></strong> - <span className="text-gray-500">Residential and commercial mix</span></li>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City South</a></strong> - <span className="text-gray-500">Industrial and commercial</span></li>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Salt Lake City North</a></strong> - <span className="text-gray-500">Growing residential area</span></li>
+                        <li>• <strong><a href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">Downtown Salt Lake City</a></strong> - <span className="text-gray-500">Established neighborhoods</span></li>                    </ul>
                   </div>
                 </div>
                 
@@ -231,15 +231,15 @@ export default function SaltLakeCityPage() {
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Near Salt Lake City Parks</h4>
-                      <p className="text-gray-600">Perfect for <a href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
+                      <p className="text-gray-600">Perfect for <a href="https://icondumpsters.com/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</a> and <a href="https://icondumpsters.com/" className="text-purple-600 hover:text-purple-800 underline">community events</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
-                      <p className="text-gray-600">Convenient for <a href="/" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
+                      <p className="text-gray-600">Convenient for <a href="https://icondumpsters.com/" className="text-purple-600 hover:text-purple-800 underline">retail and restaurant renovation projects</a></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                      <p className="text-gray-600">Ideal for <a href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="/" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
+                      <p className="text-gray-600">Ideal for <a href="https://icondumpsters.com/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</a> and <a href="https://icondumpsters.com/" className="text-purple-600 hover:text-purple-800 underline">residential cleanouts</a></p>
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export default function SaltLakeCityPage() {
               📞 Call Now: (801) 918-6000
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
               Get Free Quote

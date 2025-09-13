@@ -131,7 +131,7 @@ export default function Services() {
                   <span>Garage organization projects</span>
                 </div>
               </div>
-              <a href="/services/residential-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/services/residential-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -171,7 +171,7 @@ export default function Services() {
                   <span>Demolition debris removal</span>
                 </div>
               </div>
-              <a href="/services/construction-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/services/construction-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -211,7 +211,7 @@ export default function Services() {
                   <span>General household waste</span>
                 </div>
               </div>
-              <a href="/services/garbage-junk-bin-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/services/garbage-junk-bin-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -251,7 +251,7 @@ export default function Services() {
                   <span>Seasonal yard cleanup</span>
                 </div>
               </div>
-              <a href="/services/yard-waste-debris-bin-rental" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/services/yard-waste-debris-bin-rental" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -292,7 +292,7 @@ export default function Services() {
                   <span>Life transition projects</span>
                 </div>
               </div>
-              <a href="/services/downsizing-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/services/downsizing-dumpster-rentals" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -332,7 +332,7 @@ export default function Services() {
                   <span>Property preparation</span>
                 </div>
               </div>
-              <a href="/estate-cleanout" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="https://icondumpsters.com/estate-cleanout" className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Learn More
               </a>
             </div>
@@ -353,7 +353,7 @@ export default function Services() {
               Call (801) 918-6000
             </a>
             <a 
-              href="/#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors"
             >
               Get Free Quote

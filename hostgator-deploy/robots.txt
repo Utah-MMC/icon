@@ -1,7 +1,27 @@
 User-Agent: *
 Allow: /
+
+# Disallow admin and API areas
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /_next/
+Disallow: /inventory/
+Disallow: /kpi-dashboard/
+Disallow: /api-test/
+Disallow: /test/
+Disallow: /test-*/
+Disallow: /simple-test/
+Disallow: /scraper-dashboard/
+
+# Allow Google Search Console and other search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://icondumpsters.com/sitemap.xml

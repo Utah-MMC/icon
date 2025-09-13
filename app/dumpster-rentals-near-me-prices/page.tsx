@@ -433,7 +433,7 @@ export default function DumpsterRentalsNearMePrices() {
           <p className="text-xl mb-8">Compare our competitive local prices and get the best deal on dumpster rental in your area.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Local Quote

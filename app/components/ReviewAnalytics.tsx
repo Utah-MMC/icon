@@ -162,7 +162,7 @@ export default function ReviewAnalytics() {
             <p>No reviews yet. Encourage customers to leave reviews!</p>
             <div className="mt-4">
               <a
-                href="/rating"
+                href="https://icondumpsters.com/rating"
                 className="inline-flex items-center px-4 py-2 bg-[#4e37a8] text-white rounded-lg hover:bg-purple-700"
               >
                 View Rating Page
@@ -207,7 +207,7 @@ export default function ReviewAnalytics() {
         <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
         <div className="flex flex-wrap gap-3">
           <a
-            href="/rating"
+            href="https://icondumpsters.com/rating"
             className="px-4 py-2 bg-[#4e37a8] text-white rounded-lg hover:bg-purple-700 text-sm"
           >
             View Rating Page

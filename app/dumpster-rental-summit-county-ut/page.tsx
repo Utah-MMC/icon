@@ -71,7 +71,7 @@ export default function SummitCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-summit-county-ut/park-city-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/park-city-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Park City</h3>
@@ -79,7 +79,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/coalville-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/coalville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Coalville</h3>
@@ -87,7 +87,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/kamas-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/kamas-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Kamas</h3>
@@ -95,7 +95,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/oakley-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/oakley-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Oakley</h3>
@@ -103,7 +103,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/henefer-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/henefer-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Henefer</h3>
@@ -111,7 +111,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/francis-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/francis-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Francis</h3>
@@ -119,7 +119,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/samak-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/samak-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Samak</h3>
@@ -127,7 +127,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/peoa-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/peoa-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Peoa</h3>
@@ -135,7 +135,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/wanship-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/wanship-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Wanship</h3>
@@ -143,7 +143,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/echo-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/echo-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Echo</h3>
@@ -151,7 +151,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/summit-park-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/summit-park-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Summit Park</h3>
@@ -159,7 +159,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/snyders-basin-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/snyders-basin-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Snyders Basin</h3>
@@ -167,7 +167,7 @@ export default function SummitCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-summit-county-ut/pinebrook-ut"
+              href="https://icondumpsters.com/dumpster-rental-summit-county-ut/pinebrook-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Pinebrook</h3>
@@ -201,7 +201,7 @@ export default function SummitCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -218,7 +218,7 @@ export default function SummitCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -235,7 +235,7 @@ export default function SummitCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -262,7 +262,7 @@ export default function SummitCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

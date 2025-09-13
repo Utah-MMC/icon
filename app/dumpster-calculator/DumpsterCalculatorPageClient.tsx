@@ -20,7 +20,7 @@ export default function DumpsterCalculatorPageClient() {
         author="Icon Dumpsters"
         publishedDate="2025-01-27"
         modifiedDate="2025-01-27"
-        imageUrl="https://icondumpsters.com/images/dumpster500x500-2.jpeg"
+        imageUrl="/images/dumpster500x500-2.jpeg"
         articleUrl="https://icondumpsters.com/dumpster-calculator"
         category="CALCULATOR"
         readTime="PT8M"

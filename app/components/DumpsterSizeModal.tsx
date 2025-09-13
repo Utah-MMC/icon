@@ -242,7 +242,7 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
             <p className="text-gray-600 mb-4 text-sm sm:text-base">Ready to get started?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#quote-form"
+                href="https://icondumpsters.com/#quote-form"
                 className="inline-flex items-center bg-[#4e37a8] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm sm:text-base"
                 onClick={onClose}
               >

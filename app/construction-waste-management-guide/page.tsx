@@ -51,24 +51,24 @@ export default function ConstructionWasteManagementGuide() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#basics" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#basics" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   1. Understanding Construction Waste
                 </a>
-                <a href="#recycling" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#recycling" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   2. Recycling and Reuse Strategies
                 </a>
-                <a href="#compliance" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#compliance" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   3. Compliance and Regulations
                 </a>
               </div>
               <div>
-                <a href="#planning" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#planning" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   4. Waste Management Planning
                 </a>
-                <a href="#costs" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#costs" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   5. Cost Optimization Strategies
                 </a>
-                <a href="#best-practices" className="block text-blue-600 hover:text-blue-800 transition-colors">
+                <a href="https://icondumpsters.com/#best-practices" className="block text-blue-600 hover:text-blue-800 transition-colors">
                   6. Best Practices and Tips
                 </a>
               </div>
@@ -147,7 +147,7 @@ export default function ConstructionWasteManagementGuide() {
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               The key to successful construction waste recycling is planning ahead and setting up proper sorting systems on-site. 
-              I always recommend checking out our <Link href="/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> 
+              I always recommend checking out our <Link href="https://icondumpsters.com/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">construction dumpster rental guide</Link> 
               for tips on choosing the right containers for different types of waste.
             </p>
           </section>
@@ -180,7 +180,7 @@ export default function ConstructionWasteManagementGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                             For comprehensive guidance on construction waste compliance, I recommend our <Link href="/utah-dumpster-rental-locations" className="text-blue-600 hover:text-blue-800 underline">Utah dumpster rental locations guide</Link>. 
+                             For comprehensive guidance on construction waste compliance, I recommend our <Link href="https://icondumpsters.com/utah-dumpster-rental-locations" className="text-blue-600 hover:text-blue-800 underline">Utah dumpster rental locations guide</Link>. 
               It covers local requirements and helps ensure your projects stay compliant.
             </p>
           </section>
@@ -206,7 +206,7 @@ export default function ConstructionWasteManagementGuide() {
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Your waste management plan should include waste characterization, recycling goals, disposal methods, and contingency 
-              plans. For home renovation projects specifically, our <Link href="/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation waste disposal guide</Link> 
+              plans. For home renovation projects specifically, our <Link href="https://icondumpsters.com/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">home renovation waste disposal guide</Link> 
               provides detailed planning templates.
             </p>
           </section>
@@ -239,7 +239,7 @@ export default function ConstructionWasteManagementGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                             To get accurate cost estimates for your specific project, use our <Link href="/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
+                             To get accurate cost estimates for your specific project, use our <Link href="https://icondumpsters.com/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster rental cost calculator</Link>. 
               It factors in your location, project type, and waste volume to give you realistic cost projections.
             </p>
           </section>
@@ -260,7 +260,7 @@ export default function ConstructionWasteManagementGuide() {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For commercial projects, don't miss our <Link href="/commercial-dumpster-rental-business-solutions-2025" className="text-blue-600 hover:text-blue-800 underline">commercial dumpster rental business solutions guide</Link>. 
+              For commercial projects, don't miss our <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions-2025" className="text-blue-600 hover:text-blue-800 underline">commercial dumpster rental business solutions guide</Link>. 
               It covers enterprise-level waste management strategies and bulk pricing negotiations.
             </p>
           </section>
@@ -280,7 +280,7 @@ export default function ConstructionWasteManagementGuide() {
             
             <div className="text-center mt-8">
               <Link 
-                href="/#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Get Waste Management Quote

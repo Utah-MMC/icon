@@ -46,14 +46,14 @@ export default function ResidentialDumpstersPage() {
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-blue-600">
-            <li><a href="#residential-services" className="hover:underline">Residential Services</a></li>
-            <li><a href="#dumpster-sizes" className="hover:underline">Dumpster Sizes Available</a></li>
-            <li><a href="#project-types" className="hover:underline">Home Project Types</a></li>
-            <li><a href="#pricing-guide" className="hover:underline">Pricing Guide</a></li>
-            <li><a href="#delivery-scheduling" className="hover:underline">Delivery & Scheduling</a></li>
-            <li><a href="#waste-management" className="hover:underline">Waste Management</a></li>
-            <li><a href="#homeowner-tips" className="hover:underline">Homeowner Tips</a></li>
-            <li><a href="#faq" className="hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="https://icondumpsters.com/#residential-services" className="hover:underline">Residential Services</a></li>
+            <li><a href="https://icondumpsters.com/#dumpster-sizes" className="hover:underline">Dumpster Sizes Available</a></li>
+            <li><a href="https://icondumpsters.com/#project-types" className="hover:underline">Home Project Types</a></li>
+            <li><a href="https://icondumpsters.com/#pricing-guide" className="hover:underline">Pricing Guide</a></li>
+            <li><a href="https://icondumpsters.com/#delivery-scheduling" className="hover:underline">Delivery & Scheduling</a></li>
+            <li><a href="https://icondumpsters.com/#waste-management" className="hover:underline">Waste Management</a></li>
+            <li><a href="https://icondumpsters.com/#homeowner-tips" className="hover:underline">Homeowner Tips</a></li>
+            <li><a href="https://icondumpsters.com/#faq" className="hover:underline">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
@@ -307,7 +307,7 @@ export default function ResidentialDumpstersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Free Quote

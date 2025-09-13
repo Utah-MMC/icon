@@ -9,7 +9,7 @@ export default function CalculatorCTA({ className = '' }: { className?: string }
           <p className="text-gray-700">Get an instant estimate tailored to your project in seconds.</p>
         </div>
         <Link
-          href="/dumpster-calculator"
+          href="https://icondumpsters.com/dumpster-calculator"
           className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
         >
           Try the Calculator

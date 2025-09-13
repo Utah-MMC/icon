@@ -71,7 +71,7 @@ export default function UtahCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-utah-county-ut/provo-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/provo-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Provo</h3>
@@ -79,7 +79,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/orem-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/orem-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Orem</h3>
@@ -87,7 +87,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/lehi-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/lehi-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Lehi</h3>
@@ -95,7 +95,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/lindon-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/lindon-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Lindon</h3>
@@ -103,7 +103,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/pleasant-grove-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/pleasant-grove-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Pleasant Grove</h3>
@@ -111,7 +111,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/american-fork-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/american-fork-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">American Fork</h3>
@@ -119,7 +119,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/eagle-mountain-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/eagle-mountain-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Eagle Mountain</h3>
@@ -127,7 +127,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/saratoga-springs-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/saratoga-springs-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Saratoga Springs</h3>
@@ -135,7 +135,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/cedar-hills-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/cedar-hills-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Cedar Hills</h3>
@@ -143,7 +143,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/highland-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/highland-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Highland</h3>
@@ -151,7 +151,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/alpine-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/alpine-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Alpine</h3>
@@ -159,7 +159,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/mapleton-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/mapleton-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Mapleton</h3>
@@ -167,7 +167,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/spanish-fork-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/spanish-fork-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Spanish Fork</h3>
@@ -175,7 +175,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/springville-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/springville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Springville</h3>
@@ -183,7 +183,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/payson-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/payson-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Payson</h3>
@@ -191,7 +191,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/santaquin-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/santaquin-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Santaquin</h3>
@@ -199,7 +199,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/genola-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/genola-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Genola</h3>
@@ -207,7 +207,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/woodland-hills-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/woodland-hills-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Woodland Hills</h3>
@@ -215,7 +215,7 @@ export default function UtahCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-utah-county-ut/vineyard-ut"
+              href="https://icondumpsters.com/dumpster-rental-utah-county-ut/vineyard-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Vineyard</h3>
@@ -249,7 +249,7 @@ export default function UtahCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -266,7 +266,7 @@ export default function UtahCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -283,7 +283,7 @@ export default function UtahCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -310,7 +310,7 @@ export default function UtahCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

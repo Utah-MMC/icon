@@ -241,7 +241,7 @@ export const IconDumpstersBusinessData: LocalBusinessData = {
     'Sa 08:00-16:00',
   ],
   priceRange: '$$',
-  image: 'https://icondumpsters.com/images/og-image.png',
+  image: '/images/og-image.png',
   sameAs: [
     'https://www.facebook.com/icondumpsters',
     'https://www.instagram.com/icondumpsters',

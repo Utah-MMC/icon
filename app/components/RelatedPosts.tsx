@@ -90,7 +90,7 @@ export default function RelatedPosts({ currentPostId, currentCategory, posts }: 
 
         <div className="text-center mt-12">
           <Link 
-            href="/blog" 
+            href="https://icondumpsters.com/blog" 
             className="inline-flex items-center px-8 py-3 bg-[#4e37a8] text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
           >
             View All Articles

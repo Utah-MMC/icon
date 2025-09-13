@@ -75,7 +75,7 @@ export default function CookieConsent() {
             <h2 className="text-lg font-semibold text-gray-900 mb-2">Privacy and Cookies</h2>
             <p className="text-sm text-gray-600 mb-4">
               We use cookies to enhance your experience, analyze traffic, and support essential site functionality. You can manage your
-              preferences below. For details, see our <a href="/privacy-policy" className="text-[#4e37a8] underline">Privacy Policy</a>.
+              preferences below. For details, see our <a href="https://icondumpsters.com/privacy-policy" className="text-[#4e37a8] underline">Privacy Policy</a>.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">

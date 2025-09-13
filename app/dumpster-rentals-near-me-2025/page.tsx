@@ -31,13 +31,13 @@ export default function DumpsterRentalsNearMe() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/freequote"
+                  href="https://icondumpsters.com/freequote"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Instant Quote
                 </Link>
                 <Link 
-                  href="#dumpster-sizes"
+                  href="https://icondumpsters.com/#dumpster-sizes"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View Sizes & Prices
@@ -54,14 +54,14 @@ export default function DumpsterRentalsNearMe() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Table of Contents</h2>
               <nav className="space-y-2">
                 <ul className="grid md:grid-cols-2 gap-2 text-blue-600">
-                  <li><a href="#why-choose-us" className="hover:underline">• Why Choose Our Dumpster Rentals Near Me</a></li>
-                  <li><a href="#dumpster-sizes" className="hover:underline">• Dumpster Sizes & Pricing Near You</a></li>
-                  <li><a href="#service-areas" className="hover:underline">• Service Areas - We Deliver Near You</a></li>
-                  <li><a href="#rental-process" className="hover:underline">• Simple Rental Process</a></li>
-                  <li><a href="#what-goes-in" className="hover:underline">• What Can Go in Your Dumpster</a></li>
-                  <li><a href="#prohibited-items" className="hover:underline">• Prohibited Items</a></li>
-                  <li><a href="#faq" className="hover:underline">• Frequently Asked Questions</a></li>
-                  <li><a href="#contact" className="hover:underline">• Contact Us for Local Service</a></li>
+                  <li><a href="https://icondumpsters.com/#why-choose-us" className="hover:underline">• Why Choose Our Dumpster Rentals Near Me</a></li>
+                  <li><a href="https://icondumpsters.com/#dumpster-sizes" className="hover:underline">• Dumpster Sizes & Pricing Near You</a></li>
+                  <li><a href="https://icondumpsters.com/#service-areas" className="hover:underline">• Service Areas - We Deliver Near You</a></li>
+                  <li><a href="https://icondumpsters.com/#rental-process" className="hover:underline">• Simple Rental Process</a></li>
+                  <li><a href="https://icondumpsters.com/#what-goes-in" className="hover:underline">• What Can Go in Your Dumpster</a></li>
+                  <li><a href="https://icondumpsters.com/#prohibited-items" className="hover:underline">• Prohibited Items</a></li>
+                  <li><a href="https://icondumpsters.com/#faq" className="hover:underline">• Frequently Asked Questions</a></li>
+                  <li><a href="https://icondumpsters.com/#contact" className="hover:underline">• Contact Us for Local Service</a></li>
                 </ul>
               </nav>
             </div>
@@ -138,7 +138,7 @@ export default function DumpsterRentalsNearMe() {
                     </p>
                   </div>
                   <Link 
-                    href="/freequote"
+                    href="https://icondumpsters.com/freequote"
                     className="mt-4 inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                   >
                     Get Quote
@@ -164,7 +164,7 @@ export default function DumpsterRentalsNearMe() {
                     </p>
                   </div>
                   <Link 
-                    href="/freequote"
+                    href="https://icondumpsters.com/freequote"
                     className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Get Quote
@@ -190,7 +190,7 @@ export default function DumpsterRentalsNearMe() {
                     </p>
                   </div>
                   <Link 
-                    href="/freequote"
+                    href="https://icondumpsters.com/freequote"
                     className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
                   >
                     Get Quote
@@ -360,7 +360,7 @@ export default function DumpsterRentalsNearMe() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
-                    href="/freequote"
+                    href="https://icondumpsters.com/freequote"
                     className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                   >
                     Get Instant Quote
@@ -384,27 +384,27 @@ export default function DumpsterRentalsNearMe() {
               </p>
               
               <div className="grid md:grid-cols-3 gap-4">
-                <Link href="/salt-lake-city-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/salt-lake-city-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">Salt Lake City Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Same-day delivery and competitive pricing in Salt Lake City</p>
                 </Link>
-                <Link href="/sandy-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/sandy-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">Sandy Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Reliable dumpster service in Sandy with expert local knowledge</p>
                 </Link>
-                <Link href="/west-valley-city-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/west-valley-city-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">West Valley City Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Fast delivery and affordable rates in West Valley City</p>
                 </Link>
-                <Link href="/murray-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/murray-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">Murray Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Professional dumpster service in Murray with eco-friendly disposal</p>
                 </Link>
-                <Link href="/provo-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/provo-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">Provo Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Trusted dumpster rentals in Provo with transparent pricing</p>
                 </Link>
-                <Link href="/orem-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <Link href="https://icondumpsters.com/orem-dumpster-rental-guide-2025" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow">
                   <h4 className="font-semibold text-blue-600 mb-2">Orem Dumpster Rental</h4>
                   <p className="text-gray-600 text-sm">Convenient dumpster service in Orem with flexible scheduling</p>
                 </Link>
@@ -412,7 +412,7 @@ export default function DumpsterRentalsNearMe() {
               
               <div className="mt-8 text-center">
                 <Link 
-                  href="/sitemap"
+                  href="https://icondumpsters.com/sitemap"
                   className="text-blue-600 hover:underline font-semibold"
                 >
                   View All Service Areas →

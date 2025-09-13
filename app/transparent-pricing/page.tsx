@@ -24,8 +24,8 @@ export default function TransparentPricing() {
       </div>
       <p className="text-gray-700 mb-8">Weight is billed after disposal at $55/ton. We\'ll email a receipt with the scale ticket.</p>
       <div className="flex gap-3">
-        <Link href="/dumpster-calculator" className="bg-[#4e37a8] text-white px-5 py-3 rounded-lg hover:bg-purple-700">Open Calculator</Link>
-        <Link href="/" className="border-2 border-[#4e37a8] text-[#4e37a8] px-5 py-3 rounded-lg hover:bg-[#4e37a8] hover:text-white">Get Free Quote</Link>
+        <Link href="https://icondumpsters.com/dumpster-calculator" className="bg-[#4e37a8] text-white px-5 py-3 rounded-lg hover:bg-purple-700">Open Calculator</Link>
+        <Link href="https://icondumpsters.com/" className="border-2 border-[#4e37a8] text-[#4e37a8] px-5 py-3 rounded-lg hover:bg-[#4e37a8] hover:text-white">Get Free Quote</Link>
       </div>
     </div>
   );

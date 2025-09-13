@@ -111,13 +111,13 @@ export default function MidvaleCityPage() {
           <p className="text-xl mb-8">Get your free dumpster rental quote for your Midvale project today</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/dumpster-rental-midvale-ut"
+              href="https://icondumpsters.com/dumpster-rental-midvale-ut"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Free Quote
             </Link>
             <Link 
-              href="/contact"
+              href="https://icondumpsters.com/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Contact Us

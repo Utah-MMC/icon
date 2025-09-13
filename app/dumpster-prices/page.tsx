@@ -28,7 +28,7 @@ export default function DumpsterPricesPage() {
                 Call 801-555-0123
               </a>
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
               >
                 Get Free Quote
@@ -184,7 +184,7 @@ export default function DumpsterPricesPage() {
               Call Now: 801-555-0123
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
               Get Free Quote

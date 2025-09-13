@@ -16,7 +16,7 @@ export default function SameDayDelivery() {
         <li>Professional, courteous drivers</li>
       </ul>
       <div className="flex gap-3">
-        <Link href="/" className="bg-[#4e37a8] text-white px-5 py-3 rounded-lg hover:bg-purple-700">Get Free Quote</Link>
+        <Link href="https://icondumpsters.com/" className="bg-[#4e37a8] text-white px-5 py-3 rounded-lg hover:bg-purple-700">Get Free Quote</Link>
         <a href="tel:+18019186000" className="border-2 border-[#4e37a8] text-[#4e37a8] px-5 py-3 rounded-lg hover:bg-[#4e37a8] hover:text-white">Call (801) 918‑6000</a>
       </div>
     </div>

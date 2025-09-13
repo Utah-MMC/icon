@@ -47,7 +47,7 @@ export default function MagnaServicesPage() {
                 📞 Call (801) 918-6000
               </a>
               <a 
-                href="/magna-dumpster-rentals#quote-form" 
+                href="https://icondumpsters.com/magna-dumpster-rentals#quote-form" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
               >
                 Get Free Quote
@@ -73,7 +73,7 @@ export default function MagnaServicesPage() {
               <li>• Moving and relocation</li>
             </ul>
             <Link 
-              href="/magna-dumpster-rentals"
+              href="https://icondumpsters.com/magna-dumpster-rentals"
               className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               View Residential Options →
@@ -93,7 +93,7 @@ export default function MagnaServicesPage() {
               <li>• Warehouse cleanouts</li>
             </ul>
             <Link 
-              href="/magna-dumpster-rentals"
+              href="https://icondumpsters.com/magna-dumpster-rentals"
               className="inline-block bg-[#4e37a8] text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               View Commercial Options →
@@ -120,7 +120,7 @@ export default function MagnaServicesPage() {
         {/* CTA Section */}
         <div className="mt-12 text-center">
           <Link 
-            href="/magna-dumpster-rentals"
+            href="https://icondumpsters.com/magna-dumpster-rentals"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors"
           >
             ← Back to Magna Dumpster Rentals

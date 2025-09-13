@@ -268,7 +268,7 @@ export default function DumpsterRentalMagnaPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/salt-lake-county-dumpster-rental" className="text-teal-600 hover:text-teal-800">
+                  <a href="https://icondumpsters.com/salt-lake-county-dumpster-rental" className="text-teal-600 hover:text-teal-800">
                     Salt Lake County Dumpster Rental Guide
                   </a>
                 </h3>
@@ -278,7 +278,7 @@ export default function DumpsterRentalMagnaPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rental-west-valley" className="text-teal-600 hover:text-teal-800">
+                  <a href="https://icondumpsters.com/dumpster-rental-west-valley" className="text-teal-600 hover:text-teal-800">
                     West Valley Dumpster Rental Services
                   </a>
                 </h3>

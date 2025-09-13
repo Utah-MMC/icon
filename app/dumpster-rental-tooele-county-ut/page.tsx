@@ -71,7 +71,7 @@ export default function TooeleCountyCountyPage() {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             <Link
-              href="/dumpster-rental-tooele-county-ut/tooele-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/tooele-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Tooele</h3>
@@ -79,7 +79,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/grantsville-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/grantsville-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Grantsville</h3>
@@ -87,7 +87,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/stansbury-park-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/stansbury-park-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Stansbury Park</h3>
@@ -95,7 +95,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/stockton-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/stockton-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Stockton</h3>
@@ -103,7 +103,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/wendover-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/wendover-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Wendover</h3>
@@ -111,7 +111,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/lake-point-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/lake-point-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Lake Point</h3>
@@ -119,7 +119,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/oquirrh-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/oquirrh-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Oquirrh</h3>
@@ -127,7 +127,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/vernon-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/vernon-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Vernon</h3>
@@ -135,7 +135,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/rush-valley-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/rush-valley-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Rush Valley</h3>
@@ -143,7 +143,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/clive-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/clive-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Clive</h3>
@@ -151,7 +151,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/ibapah-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/ibapah-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Ibapah</h3>
@@ -159,7 +159,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/dugway-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/dugway-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Dugway</h3>
@@ -167,7 +167,7 @@ export default function TooeleCountyCountyPage() {
               <span className="inline-block mt-3 text-[#4e37a8] font-medium">Learn More →</span>
             </Link>
             <Link
-              href="/dumpster-rental-tooele-county-ut/knolls-ut"
+              href="https://icondumpsters.com/dumpster-rental-tooele-county-ut/knolls-ut"
               className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Knolls</h3>
@@ -201,7 +201,7 @@ export default function TooeleCountyCountyPage() {
                 Perfect for home renovations, cleanouts, and yard projects. Flexible scheduling and competitive rates.
               </p>
               <Link
-                href="/dumpster-rental/home"
+                href="https://icondumpsters.com/dumpster-rental/home"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Learn More →
@@ -218,7 +218,7 @@ export default function TooeleCountyCountyPage() {
                 Professional waste management for businesses of all sizes. Reliable service and flexible scheduling.
               </p>
               <Link
-                href="/dumpster-rental/business"
+                href="https://icondumpsters.com/dumpster-rental/business"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Learn More →
@@ -235,7 +235,7 @@ export default function TooeleCountyCountyPage() {
                 Heavy-duty dumpsters for construction and demolition projects. Multiple sizes available.
               </p>
               <Link
-                href="/dumpster-rental/construction"
+                href="https://icondumpsters.com/dumpster-rental/construction"
                 className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Learn More →
@@ -262,7 +262,7 @@ export default function TooeleCountyCountyPage() {
               📞 Call (801) 918-6000
             </a>
             <a
-              href="#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
             >
               Get Free Quote

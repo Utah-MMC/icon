@@ -263,7 +263,7 @@ export default function DumpsterRentalWestValleyPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/salt-lake-county-dumpster-rental" className="text-orange-600 hover:text-orange-800">
+                  <a href="https://icondumpsters.com/salt-lake-county-dumpster-rental" className="text-orange-600 hover:text-orange-800">
                     Salt Lake County Dumpster Rental Guide
                   </a>
                 </h3>
@@ -273,7 +273,7 @@ export default function DumpsterRentalWestValleyPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/cheapest-dumpster-rental-salt-lake-city" className="text-orange-600 hover:text-orange-800">
+                  <a href="https://icondumpsters.com/cheapest-dumpster-rental-salt-lake-city" className="text-orange-600 hover:text-orange-800">
                     Cheapest Dumpster Rental Salt Lake City
                   </a>
                 </h3>

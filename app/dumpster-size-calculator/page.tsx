@@ -328,7 +328,7 @@ export default function DumpsterSizeCalculatorPage() {
                 
                 <div className="mt-6 pt-4 border-t border-gray-200">
                   <a
-                    href="/dumpster-calculator/quote"
+                    href="https://icondumpsters.com/dumpster-calculator/quote"
                     className="block w-full bg-[#4e37a8] text-white text-center py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors font-medium"
                   >
                     Get Quote for {result.recommendedSize}
@@ -380,7 +380,7 @@ export default function DumpsterSizeCalculatorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/dumpster-calculator/quote"
+              href="https://icondumpsters.com/dumpster-calculator/quote"
               className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-lg"
             >
               Get Price Quote

@@ -234,7 +234,7 @@ export default function DumpsterCalculatorHubPage() {
               Call (801) 918-6000
             </a>
             <a
-              href="#calculators"
+              href="https://icondumpsters.com/#calculators"
               className="bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition-colors font-medium text-lg"
             >
               Choose Calculator

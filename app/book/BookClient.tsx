@@ -83,7 +83,7 @@ export default function BookClient() {
             <div className="text-center mb-12">
               <div className="inline-block bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl p-6 mb-8 shadow-2xl">
                 <img 
-                  src="/Icon_Dumpsters_Final.png" 
+                  src="https://icondumpsters.com/Icon_Dumpsters_Final.png" 
                   alt="Icon Dumpsters" 
                   className="h-16 w-auto mx-auto mb-4"
                 />
@@ -285,7 +285,7 @@ export default function BookClient() {
                     Call (801) 918-6000
                   </a>
                   <a 
-                    href="/#quote-form" 
+                    href="https://icondumpsters.com/#quote-form" 
                     className="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl"
                   >
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -263,7 +263,7 @@ export default function MurrayCityDumpsterRentalPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/salt-lake-county-dumpster-rental" className="text-blue-600 hover:text-blue-800">
+                  <a href="https://icondumpsters.com/salt-lake-county-dumpster-rental" className="text-blue-600 hover:text-blue-800">
                     Salt Lake County Dumpster Rental Guide
                   </a>
                 </h3>
@@ -273,7 +273,7 @@ export default function MurrayCityDumpsterRentalPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rental-sandy-utah" className="text-blue-600 hover:text-blue-800">
+                  <a href="https://icondumpsters.com/dumpster-rental-sandy-utah" className="text-blue-600 hover:text-blue-800">
                     Sandy, Utah Dumpster Rental Services
                   </a>
                 </h3>

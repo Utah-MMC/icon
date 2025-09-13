@@ -21,7 +21,7 @@ export default function HomeRenovationWasteDisposal() {
         author="Icon Dumpsters"
         publishedDate="2025-01-18"
         modifiedDate="2025-01-18"
-        imageUrl="https://icondumpsters.com/images/home-renovation.jpg"
+        imageUrl="/images/home-renovation.jpg"
         articleUrl="https://icondumpsters.com/home-renovation-waste-disposal-guide"
         category="HOME RENOVATION"
         readTime="PT7M"
@@ -106,30 +106,30 @@ export default function HomeRenovationWasteDisposal() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#introduction" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#introduction" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   1. Introduction to Home Renovation Waste Management
                 </a>
-                <a href="#waste-types" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#waste-types" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   2. Understanding Renovation Waste Types
                 </a>
-                <a href="#waste-assessment" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#waste-assessment" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   3. Pre-Renovation Waste Assessment
                 </a>
-                <a href="#dumpster-selection" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#dumpster-selection" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   4. Dumpster Selection for Renovation Projects
                 </a>
               </div>
               <div>
-                <a href="#waste-sorting" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#waste-sorting" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   5. Waste Sorting and Organization Strategies
                 </a>
-                <a href="#cost-management" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#cost-management" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   6. Cost Management and Budgeting
                 </a>
-                <a href="#environmental-considerations" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#environmental-considerations" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   7. Environmental Considerations and Sustainability
                 </a>
-                <a href="#safety-compliance" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#safety-compliance" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   8. Safety Considerations and Best Practices
                 </a>
               </div>
@@ -470,13 +470,13 @@ export default function HomeRenovationWasteDisposal() {
             </p>
             <div className="space-x-4">
               <Link 
-                href="/contact" 
+                href="https://icondumpsters.com/contact" 
                 className="inline-block bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Get Free Quote
               </Link>
               <Link 
-                href="/blog" 
+                href="https://icondumpsters.com/blog" 
                 className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
               >
                 View More Articles
@@ -489,7 +489,7 @@ export default function HomeRenovationWasteDisposal() {
         <section className="mt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/complete-dumpster-rental-guide-2025" className="group">
+            <Link href="https://icondumpsters.com/complete-dumpster-rental-guide-2025" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
@@ -502,7 +502,7 @@ export default function HomeRenovationWasteDisposal() {
               </div>
             </Link>
             
-            <Link href="/construction-waste-management-2025" className="group">
+            <Link href="https://icondumpsters.com/construction-waste-management-2025" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
@@ -515,7 +515,7 @@ export default function HomeRenovationWasteDisposal() {
               </div>
             </Link>
             
-            <Link href="/commercial-dumpster-rental-business-solutions" className="group">
+            <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">

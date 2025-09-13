@@ -55,24 +55,24 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#business-needs" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#business-needs" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   1. Understanding Business Waste Management Needs
                 </a>
-                <a href="#dumpster-solutions" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#dumpster-solutions" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   2. Commercial Dumpster Solutions & Sizing
                 </a>
-                <a href="#cost-optimization" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#cost-optimization" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   3. Cost Optimization Strategies
                 </a>
               </div>
               <div>
-                <a href="#compliance-requirements" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#compliance-requirements" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   4. Compliance & Regulatory Requirements
                 </a>
-                <a href="#scheduling-management" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#scheduling-management" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   5. Scheduling & Project Management
                 </a>
-                <a href="#sustainability" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#sustainability" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   6. Sustainability & Environmental Impact
                 </a>
               </div>
@@ -361,13 +361,13 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             </p>
             <div className="space-x-4">
               <Link 
-                href="/contact" 
+                href="https://icondumpsters.com/contact" 
                 className="inline-block bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Get Business Quote
               </Link>
               <Link 
-                href="/blog" 
+                href="https://icondumpsters.com/blog" 
                 className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4e37a8] transition-colors"
               >
                 Explore More Solutions
@@ -380,7 +380,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
         <section className="mt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/complete-dumpster-rental-guide-2025" className="group">
+            <Link href="https://icondumpsters.com/complete-dumpster-rental-guide-2025" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
@@ -393,7 +393,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
               </div>
             </Link>
             
-            <Link href="/construction-waste-management-2025" className="group">
+            <Link href="https://icondumpsters.com/construction-waste-management-2025" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
@@ -406,7 +406,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
               </div>
             </Link>
             
-            <Link href="/home-renovation-waste-disposal-guide" className="group">
+            <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">

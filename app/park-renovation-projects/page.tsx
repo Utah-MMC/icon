@@ -64,7 +64,7 @@ export default function ParkRenovationProjectsPage() {
               📞 Call (801) 918-6000
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               Get Free Quote
@@ -81,7 +81,7 @@ export default function ParkRenovationProjectsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Park Renovation Waste Management</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Park renovation projects require careful planning, especially when it comes to waste management. From playground equipment removal to landscaping debris, having the right <Link href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</Link> and disposal strategy is crucial for project success.
+                Park renovation projects require careful planning, especially when it comes to waste management. From playground equipment removal to landscaping debris, having the right <Link href="https://icondumpsters.com/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</Link> and disposal strategy is crucial for project success.
               </p>
 
               <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-8">
@@ -183,7 +183,7 @@ export default function ParkRenovationProjectsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Considerations for Park Renovation Projects</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Park renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
+                Park renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
               </p>
 
               <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-8">
@@ -287,7 +287,7 @@ export default function ParkRenovationProjectsPage() {
                     📞 Call (801) 918-6000
                   </a>
                   <a 
-                    href="/freequote" 
+                    href="https://icondumpsters.com/freequote" 
                     className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
                   >
                     Get Free Quote
@@ -302,7 +302,7 @@ export default function ParkRenovationProjectsPage() {
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/" className="group">
+            <Link href="https://icondumpsters.com/" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                   Community Event Cleanup: Complete Guide
@@ -312,7 +312,7 @@ export default function ParkRenovationProjectsPage() {
                 </p>
               </div>
             </Link>
-            <Link href="/construction-waste-management" className="group">
+            <Link href="https://icondumpsters.com/construction-waste-management" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                   Construction Waste Management Best Practices

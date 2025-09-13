@@ -321,7 +321,7 @@ export default function MurrayCityDumpsterProgramPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/murray-city-dumpster-rental" className="text-purple-600 hover:text-purple-800">
+                  <a href="https://icondumpsters.com/murray-city-dumpster-rental" className="text-purple-600 hover:text-purple-800">
                     Murray City Dumpster Rental Services
                   </a>
                 </h3>
@@ -331,7 +331,7 @@ export default function MurrayCityDumpsterProgramPage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <a href="/salt-lake-county-dumpster-program" className="text-purple-600 hover:text-purple-800">
+                  <a href="https://icondumpsters.com/salt-lake-county-dumpster-program" className="text-purple-600 hover:text-purple-800">
                     Salt Lake County Dumpster Programs
                   </a>
                 </h3>

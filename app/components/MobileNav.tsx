@@ -25,21 +25,21 @@ export default function MobileNav() {
       {open && (
         <div className="absolute left-0 right-0 top-full mt-2 mx-4 bg-white rounded-xl shadow-xl border border-gray-200 z-[60]">
           <nav className="py-2">
-            <a href="/services" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Services</a>
-            <a href="/locations" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Service Area</a>
-            <a href="/dumpster-sizes" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Dumpster Sizes</a>
-            <a href="/dumpster-calculator" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Calculator</a>
-            <a href="/blog" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Blog</a>
-            <a href="/frequent-buyers" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Frequent Buyers</a>
-            <a href="/book" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Book Now</a>
+            <a href="https://icondumpsters.com/services" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Services</a>
+            <a href="https://icondumpsters.com/locations" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Service Area</a>
+            <a href="https://icondumpsters.com/dumpster-sizes" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Dumpster Sizes</a>
+            <a href="https://icondumpsters.com/dumpster-calculator" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Calculator</a>
+            <a href="https://icondumpsters.com/blog" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Blog</a>
+            <a href="https://icondumpsters.com/frequent-buyers" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Frequent Buyers</a>
+            <a href="https://icondumpsters.com/book" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Book Now</a>
             <div className="border-t my-1" />
-            <a href="/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">About</a>
-            <a href="/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Reviews</a>
-            <a href="/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">FAQ</a>
-            <a href="/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Contact</a>
+            <a href="https://icondumpsters.com/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">About</a>
+            <a href="https://icondumpsters.com/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Reviews</a>
+            <a href="https://icondumpsters.com/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">FAQ</a>
+            <a href="https://icondumpsters.com/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 font-medium">Contact</a>
             <div className="px-4 py-3">
               <a
-                href="#quote-form"
+                href="https://icondumpsters.com/#quote-form"
                 onClick={() => setOpen(false)}
                 className="block w-full text-center bg-[#4e37a8] text-white py-2 rounded-lg font-semibold hover:bg-purple-700"
               >

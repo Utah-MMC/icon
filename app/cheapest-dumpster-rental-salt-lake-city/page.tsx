@@ -282,7 +282,7 @@ export default function CheapestDumpsterRentalSaltLakeCity() {
           <p className="text-xl mb-8">Don't overpay for dumpster rental in Salt Lake City. Get our competitive quote and save money on your project.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/#quote-form"
+              href="https://icondumpsters.com/#quote-form"
               className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Instant Quote

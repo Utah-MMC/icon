@@ -35,7 +35,7 @@ export default function DownsizingDumpsterRentals() {
               Whether you're moving to a smaller space, helping a loved one transition to assisted living, or simply clearing out years of accumulated belongings, our clean, driveway-safe dumpsters are the perfect solution. Downsizing doesn't have to be overwhelming.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/#quote-form" className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors text-center">
+              <a href="https://icondumpsters.com/#quote-form" className="bg-[#4e37a8] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition-colors text-center">
                 Get Free Quote
               </a>
               <a href="tel:(801) 918-6000" className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-bold text-lg border-2 border-[#4e37a8] hover:bg-gray-50 transition-colors text-center">
@@ -318,7 +318,7 @@ export default function DownsizingDumpsterRentals() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Free Quote

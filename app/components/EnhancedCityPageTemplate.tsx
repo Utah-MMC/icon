@@ -116,7 +116,7 @@ export default function EnhancedCityPageTemplate({
                     Call {phoneNumber}
                   </a>
                   <a 
-                    href="#quote-form" 
+                    href="https://icondumpsters.com/#quote-form" 
                     className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#4e37a8] transition-colors"
                   >
                     Get Free Quote
@@ -410,7 +410,7 @@ export default function EnhancedCityPageTemplate({
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Near {cityName} Parks</h4>
-                      <p className="text-gray-600">Perfect for <Link href="/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</Link> and <Link href="/" className="text-purple-600 hover:text-purple-800 underline">community events</Link></p>
+                      <p className="text-gray-600">Perfect for <Link href="https://icondumpsters.com/park-renovation-projects" className="text-purple-600 hover:text-purple-800 underline">park renovation projects</Link> and <Link href="https://icondumpsters.com/" className="text-purple-600 hover:text-purple-800 underline">community events</Link></p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Business Districts</h4>
@@ -418,7 +418,7 @@ export default function EnhancedCityPageTemplate({
                     </div>
                     <div>
                       <h4 className="font-semibold text-purple-800 mb-2">Residential Areas</h4>
-                      <p className="text-gray-600">Ideal for <Link href="/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</Link> and residential cleanouts</p>
+                      <p className="text-gray-600">Ideal for <Link href="https://icondumpsters.com/home-renovation-dumpster-guide" className="text-purple-600 hover:text-purple-800 underline">home renovations</Link> and residential cleanouts</p>
                     </div>
                   </div>
                 </div>
@@ -438,9 +438,9 @@ export default function EnhancedCityPageTemplate({
                       Professional dumpster rental for construction sites, demolition projects, and building renovations in {cityName}.
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                      <li>• <Link href="/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">Construction dumpster rental guide</Link></li>
-                      <li>• <Link href="/demolition-dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Demolition waste calculator</Link></li>
-                      <li>• <Link href="/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">Waste management strategies</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/construction-dumpster-rental-guide-2025" className="text-blue-600 hover:text-blue-800 underline">Construction dumpster rental guide</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/demolition-dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Demolition waste calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/construction-waste-management-guide" className="text-blue-600 hover:text-blue-800 underline">Waste management strategies</Link></li>
                     </ul>
                   </div>
                   
@@ -450,9 +450,9 @@ export default function EnhancedCityPageTemplate({
                       Reliable dumpster rental for home improvement projects, kitchen remodels, and residential cleanouts in {cityName}.
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                      <li>• <Link href="/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">Home renovation guide</Link></li>
-                      <li>• <Link href="/estimate-right-dumpster-size-home-cleanout" className="text-blue-600 hover:text-blue-800 underline">Dumpster size estimator</Link></li>
-                      <li>• <Link href="/rolloff-dumpster-guide-2025" className="text-blue-600 hover:text-blue-800 underline">Complete dumpster guide</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/home-renovation-waste-disposal-complete-guide" className="text-blue-600 hover:text-blue-800 underline">Home renovation guide</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout" className="text-blue-600 hover:text-blue-800 underline">Dumpster size estimator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/rolloff-dumpster-guide-2025" className="text-blue-600 hover:text-blue-800 underline">Complete dumpster guide</Link></li>
                     </ul>
                   </div>
                   
@@ -462,9 +462,9 @@ export default function EnhancedCityPageTemplate({
                       Business-focused dumpster rental solutions for offices, retail spaces, and commercial properties in {cityName}.
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                      <li>• <Link href="/commercial-dumpster-rental-business-solutions-2025" className="text-blue-600 hover:text-blue-800 underline">Commercial solutions</Link></li>
-                      <li>• <Link href="/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Dumpster calculator</Link></li>
-                      <li>• <Link href="/dumpster-volume-calculator" className="text-blue-600 hover:text-blue-800 underline">Volume calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions-2025" className="text-blue-600 hover:text-blue-800 underline">Commercial solutions</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Dumpster calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/dumpster-volume-calculator" className="text-blue-600 hover:text-blue-800 underline">Volume calculator</Link></li>
                     </ul>
                   </div>
                   
@@ -474,9 +474,9 @@ export default function EnhancedCityPageTemplate({
                       Use our specialized calculators to determine the right dumpster size and estimate costs for your {cityName} project.
                     </p>
                     <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                      <li>• <Link href="/dumpster-calculator-for-concrete" className="text-blue-600 hover:text-blue-800 underline">Concrete disposal calculator</Link></li>
-                      <li>• <Link href="/roofing-dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Roofing waste calculator</Link></li>
-                      <li>• <Link href="/concrete-debris-calculator" className="text-blue-600 hover:text-blue-800 underline">Concrete debris calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/dumpster-calculator-for-concrete" className="text-blue-600 hover:text-blue-800 underline">Concrete disposal calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/roofing-dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">Roofing waste calculator</Link></li>
+                      <li>• <Link href="https://icondumpsters.com/concrete-debris-calculator" className="text-blue-600 hover:text-blue-800 underline">Concrete debris calculator</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -525,7 +525,7 @@ export default function EnhancedCityPageTemplate({
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">How do I choose the right dumpster size for my {cityName} project?</h3>
                     <p className="text-gray-700">
-                      Use our <Link href="/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster calculator</Link> or <Link href="/estimate-right-dumpster-size-home-cleanout" className="text-blue-600 hover:text-blue-800 underline">size estimator</Link> to determine the right size. Our team can also help you choose based on your project details.
+                      Use our <Link href="https://icondumpsters.com/dumpster-calculator" className="text-blue-600 hover:text-blue-800 underline">dumpster calculator</Link> or <Link href="https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout" className="text-blue-600 hover:text-blue-800 underline">size estimator</Link> to determine the right size. Our team can also help you choose based on your project details.
                     </p>
                   </div>
                 </div>
@@ -556,7 +556,7 @@ export default function EnhancedCityPageTemplate({
                 Call Now: {phoneNumber}
               </a>
               <a 
-                href="#quote-form" 
+                href="https://icondumpsters.com/#quote-form" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
                 Get Free Quote

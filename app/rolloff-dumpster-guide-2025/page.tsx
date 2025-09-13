@@ -168,7 +168,7 @@ export default function RolloffDumpsterGuide2025() {
                 We'll walk through the rental process step-by-step and compare alternatives like junk removal or bag dumpsters. 
                 With construction-and-demolition (C&D) debris piling up by the millions of tons each year, smarter disposal isn't just convenient—it's responsible. 
                 Stick with me and you'll rent with confidence, keep your driveway intact, and skip those "whoops" charges! 
-                If you need help calculating the right size for your specific project, check out our <Link href="/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size calculator</Link> for instant estimates.
+                If you need help calculating the right size for your specific project, check out our <Link href="https://icondumpsters.com/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size calculator</Link> for instant estimates.
               </p>
             </div>
 
@@ -201,7 +201,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Rolloffs shine on remodeling, roofing, estate cleanouts, yard overhauls, and light demolition. They're different from front-load dumpsters (the kind behind restaurants) that are mostly for ongoing commercial trash with lids and scheduled pickups. A rolloff is temporary, open-top, and designed for bulky or heavy debris. You can keep it for a standard rental period—usually 7 days in my area—but extensions are common. If you fill it early, a "swap-out" (dump & return) keeps your project moving. That was a lifesaver during a deck demo when we underestimated how many joists were rotten and oversized. For home renovation projects specifically, our <Link href="/home-renovation-waste-disposal-guide" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">home renovation waste disposal guide</Link> covers everything you need to know about managing construction debris.
+                Rolloffs shine on remodeling, roofing, estate cleanouts, yard overhauls, and light demolition. They're different from front-load dumpsters (the kind behind restaurants) that are mostly for ongoing commercial trash with lids and scheduled pickups. A rolloff is temporary, open-top, and designed for bulky or heavy debris. You can keep it for a standard rental period—usually 7 days in my area—but extensions are common. If you fill it early, a "swap-out" (dump & return) keeps your project moving. That was a lifesaver during a deck demo when we underestimated how many joists were rotten and oversized. For home renovation projects specifically, our <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">home renovation waste disposal guide</Link> covers everything you need to know about managing construction debris.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -233,11 +233,11 @@ export default function RolloffDumpsterGuide2025() {
               </div>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                A note on weight capacity: sizes don't guarantee tonnage. Some companies bundle 1–3 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with a 10–20 yard and 4–6 <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with larger bins, but it varies by market and debris. Dense stuff like concrete or dirt belongs in smaller containers to stay within axle limits.
+                A note on weight capacity: sizes don't guarantee tonnage. Some companies bundle 1–3 <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with a 10–20 yard and 4–6 <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tons</Link> with larger bins, but it varies by market and debris. Dense stuff like concrete or dirt belongs in smaller containers to stay within axle limits.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                If you're torn between two sizes, I use the "two-size test." If you're even slightly worried about space and the debris is not super dense, it's often cheaper to upsize than to pay a second haul fee. For more detailed size guidance, check out our <Link href="/estimate-right-dumpster-size-home-cleanout" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size estimation guide</Link> which includes specific examples and scenarios.
+                If you're torn between two sizes, I use the "two-size test." If you're even slightly worried about space and the debris is not super dense, it's often cheaper to upsize than to pay a second haul fee. For more detailed size guidance, check out our <Link href="https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster size estimation guide</Link> which includes specific examples and scenarios.
               </p>
             </section>
 
@@ -266,17 +266,17 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Common debris is straightforward: lumber, drywall, flooring, cabinets, trim, furniture, yard waste, and packaging. Roof tear-offs are common too, but shingles are dense—20–30 pounds per bundle adds up. I like to layer light materials between heavy chunks to keep the load level and within axle limits, not just for safety but to avoid "heaping" above the rim. For roofing projects specifically, our <Link href="/roofing-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">roofing dumpster calculator</Link> helps estimate the exact size and weight you'll need.
+                Common debris is straightforward: lumber, drywall, flooring, cabinets, trim, furniture, yard waste, and packaging. Roof tear-offs are common too, but shingles are dense—20–30 pounds per bundle adds up. I like to layer light materials between heavy chunks to keep the load level and within axle limits, not just for safety but to avoid "heaping" above the rim. For roofing projects specifically, our <Link href="https://icondumpsters.com/roofing-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">roofing dumpster calculator</Link> helps estimate the exact size and weight you'll need.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Dense materials (concrete, dirt, brick, rock) are a different game. Many haulers require a dedicated container for clean concrete or clean dirt, and they'll cap fill height at half to keep legal road weights. I've used a 10-yard for broken sidewalk and still hit weight faster than volume. For concrete disposal projects, use our <Link href="/dumpster-calculator-for-concrete" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete dumpster calculator</Link> to get accurate estimates for concrete weight and volume.
+                Dense materials (concrete, dirt, brick, rock) are a different game. Many haulers require a dedicated container for clean concrete or clean dirt, and they'll cap fill height at half to keep legal road weights. I've used a 10-yard for broken sidewalk and still hit weight faster than volume. For concrete disposal projects, use our <Link href="https://icondumpsters.com/dumpster-calculator-for-concrete" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete dumpster calculator</Link> to get accurate estimates for concrete weight and volume.
               </p>
               
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
                 <h4 className="font-semibold text-yellow-800 mb-2">Pro Tip:</h4>
                                  <p className="text-yellow-700">
-                   Avoiding overage fees is part art, part discipline: Break down furniture and boxes to fill voids evenly. Keep debris below the rim so it can be tarped. Don't mix dirt, rock, or concrete with general trash—use a dedicated bin. Cover the container before rain if possible; water weight is sneaky. Use our <Link href="/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tonnage calculator</Link> to estimate your project weight and avoid surprises.
+                   Avoiding overage fees is part art, part discipline: Break down furniture and boxes to fill voids evenly. Keep debris below the rim so it can be tarped. Don't mix dirt, rock, or concrete with general trash—use a dedicated bin. Cover the container before rain if possible; water weight is sneaky. Use our <Link href="https://icondumpsters.com/tonnage-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">tonnage calculator</Link> to estimate your project weight and avoid surprises.
                  </p>
               </div>
             </section>
@@ -290,7 +290,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Flat-rate shines when debris is mixed or you're unsure of weight. During a kitchen and bath combo, the flat-rate 20-yard with 3 tons included gave me peace of mind. On the flip side, when I did a garage cleanout of mostly cardboard, old shelving, and a few trash bags, the base + per-ton saved money because the load was light but bulky. To get an instant quote for your project, try our <Link href="/dumpster-volume-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster volume calculator</Link> which provides real-time pricing based on your specific needs.
+                Flat-rate shines when debris is mixed or you're unsure of weight. During a kitchen and bath combo, the flat-rate 20-yard with 3 tons included gave me peace of mind. On the flip side, when I did a garage cleanout of mostly cardboard, old shelving, and a few trash bags, the base + per-ton saved money because the load was light but bulky. To get an instant quote for your project, try our <Link href="https://icondumpsters.com/dumpster-volume-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">dumpster volume calculator</Link> which provides real-time pricing based on your specific needs.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -620,7 +620,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                On construction sites, the container is a tool on the schedule. Contractors want predictable pulls, diversion reporting, and bins staged close to work areas. I label bins by material when we're chasing recycling credits—wood here, metal there, cardboard by the gate. Crews rotate loads daily, and the foreman keeps an eye out for contamination. For commercial projects, our <Link href="/commercial-dumpster-rental-business-solutions" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">commercial dumpster rental solutions</Link> provide specialized services for businesses and construction companies.
+                On construction sites, the container is a tool on the schedule. Contractors want predictable pulls, diversion reporting, and bins staged close to work areas. I label bins by material when we're chasing recycling credits—wood here, metal there, cardboard by the gate. Crews rotate loads daily, and the foreman keeps an eye out for contamination. For commercial projects, our <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">commercial dumpster rental solutions</Link> provide specialized services for businesses and construction companies.
               </p>
             </section>
 
@@ -637,7 +637,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Don't sleep on donation and resale. Before a kitchen demo, we listed the old but solid cabinets and the farmhouse sink online. A local guy picked them up, and that space never touched the dumpster. Habitat-style stores are great for doors, lighting, and gently used fixtures. For demolition projects, our <Link href="/demolition-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">demolition dumpster calculator</Link> helps estimate the right size and weight capacity for your demolition debris.
+                Don't sleep on donation and resale. Before a kitchen demo, we listed the old but solid cabinets and the farmhouse sink online. A local guy picked them up, and that space never touched the dumpster. Habitat-style stores are great for doors, lighting, and gently used fixtures. For demolition projects, our <Link href="https://icondumpsters.com/demolition-dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">demolition dumpster calculator</Link> helps estimate the right size and weight capacity for your demolition debris.
               </p>
             </section>
 
@@ -708,7 +708,7 @@ export default function RolloffDumpsterGuide2025() {
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I know this stuff can seem dull, but a boring dumpster experience is a beautiful thing. Pick your size, protect the driveway, label what goes where, and take five minutes to ask about restricted items. And if you've learned a tip the hard way (we all have!), drop it in the comments so the next person saves a buck and a headache. Ready to get started? Use our <Link href="/30-yard-dumpster-rental-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">30-yard dumpster rental calculator</Link> for large projects or check out our <Link href="/concrete-debris-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete debris calculator</Link> for specialized concrete disposal needs.
+                I know this stuff can seem dull, but a boring dumpster experience is a beautiful thing. Pick your size, protect the driveway, label what goes where, and take five minutes to ask about restricted items. And if you've learned a tip the hard way (we all have!), drop it in the comments so the next person saves a buck and a headache. Ready to get started? Use our <Link href="https://icondumpsters.com/30-yard-dumpster-rental-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">30-yard dumpster rental calculator</Link> for large projects or check out our <Link href="https://icondumpsters.com/concrete-debris-calculator" className="text-[#4e37a8] hover:text-purple-700 underline font-semibold">concrete debris calculator</Link> for specialized concrete disposal needs.
               </p>
             </section>
 
@@ -718,7 +718,7 @@ export default function RolloffDumpsterGuide2025() {
               <p className="text-lg mb-6">Get a free quote and expert guidance for your project</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/#quote-form" 
+                  href="https://icondumpsters.com/#quote-form" 
                   className="bg-white text-[#4e37a8] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Free Quote
@@ -748,7 +748,7 @@ export default function RolloffDumpsterGuide2025() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                 <Link href="/estimate-right-dumpster-size-home-cleanout" className="block">
+                                 <Link href="https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
                      <Image
                        src="/images/blog/dumpster-size-estimation.jpg"
@@ -790,7 +790,7 @@ export default function RolloffDumpsterGuide2025() {
               </article>
 
                              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                 <Link href="/home-renovation-waste-disposal-guide" className="block">
+                 <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
                      <Image
                        src="/images/dumpsterSmallBanner2.jpeg"
@@ -832,7 +832,7 @@ export default function RolloffDumpsterGuide2025() {
               </article>
 
                              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                 <Link href="/commercial-dumpster-rental-business-solutions" className="block">
+                 <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
                      <Image
                        src="/images/dumpsterSmallBanner.jpeg"
@@ -876,7 +876,7 @@ export default function RolloffDumpsterGuide2025() {
 
             <div className="text-center mt-12">
               <Link 
-                href="/blog" 
+                href="https://icondumpsters.com/blog" 
                 className="inline-flex items-center px-8 py-3 bg-[#4e37a8] text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 View All Articles

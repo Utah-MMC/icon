@@ -126,30 +126,30 @@ export default function DumpsterSizeEstimationGuide() {
           <nav className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <a href="#introduction" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#introduction" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   1. Introduction
                 </a>
-                <a href="#why-size-matters" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#why-size-matters" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   2. Why Choosing the Right Dumpster Size Matters
                 </a>
-                <a href="#common-sizes" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#common-sizes" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   3. Common Dumpster Sizes for Home Cleanouts
                 </a>
-                <a href="#estimation-guide" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#estimation-guide" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   4. How to Estimate the Right Size for Your Project
                 </a>
               </div>
               <div>
-                <a href="#project-examples" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#project-examples" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   5. Dumpster Size by Project Type
                 </a>
-                <a href="#mistakes-to-avoid" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#mistakes-to-avoid" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   6. Mistakes to Avoid When Estimating Dumpster Size
                 </a>
-                <a href="#cost-factors" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#cost-factors" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   7. Cost Factors Linked to Dumpster Sizes
                 </a>
-                <a href="#faq" className="block text-purple-600 hover:text-purple-800 transition-colors">
+                <a href="https://icondumpsters.com/#faq" className="block text-purple-600 hover:text-purple-800 transition-colors">
                   8. FAQ Section
                 </a>
               </div>
@@ -433,7 +433,7 @@ export default function DumpsterSizeEstimationGuide() {
               Compare sizes, prices, and availability in your area in just minutes.
             </p>
             <Link 
-              href="/freequote" 
+              href="https://icondumpsters.com/freequote" 
               className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🔗 Get My Free Quote Now

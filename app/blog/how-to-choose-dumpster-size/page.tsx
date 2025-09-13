@@ -51,9 +51,9 @@ export default function BlogChooseSize() {
           <div className="my-8 p-6 bg-white border rounded-xl shadow">
             <h3 className="m-0">Helpful Resources</h3>
             <ul>
-              <li><Link href="/dumpster-sizes" className="text-[#4e37a8] underline">Dumpster Sizes & Dimensions</Link></li>
-              <li><Link href="/faq" className="text-[#4e37a8] underline">Dumpster Rental FAQ</Link></li>
-              <li><a href="#quote" className="text-[#4e37a8] underline">Get a Free Quote</a></li>
+              <li><Link href="https://icondumpsters.com/dumpster-sizes" className="text-[#4e37a8] underline">Dumpster Sizes & Dimensions</Link></li>
+              <li><Link href="https://icondumpsters.com/faq" className="text-[#4e37a8] underline">Dumpster Rental FAQ</Link></li>
+              <li><a href="https://icondumpsters.com/#quote" className="text-[#4e37a8] underline">Get a Free Quote</a></li>
             </ul>
           </div>
 
@@ -69,7 +69,7 @@ export default function BlogChooseSize() {
           <div className="bg-gradient-to-r from-[#4e37a8] to-purple-700 rounded-2xl p-8 text-white text-center mb-10">
             <h2 className="text-3xl font-bold mb-2">Ready for a Quick Quote?</h2>
             <p className="text-purple-100 mb-6">We’ll recommend the right size and give you instant pricing.</p>
-            <a href="/#quote-form" className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
+            <a href="https://icondumpsters.com/#quote-form" className="inline-block bg-white text-[#4e37a8] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Start Free Quote</a>
           </div>
           <InternalLinks />
         </section>

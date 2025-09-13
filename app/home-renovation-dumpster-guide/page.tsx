@@ -54,7 +54,7 @@ export default function HomeRenovationDumpsterGuidePage() {
               📞 Call (801) 918-6000
             </a>
             <a 
-              href="#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
             >
               Get Free Quote
@@ -71,7 +71,7 @@ export default function HomeRenovationDumpsterGuidePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Home Renovation Waste Management</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Home renovation projects generate significant amounts of waste that need proper disposal. From kitchen remodels to bathroom renovations, having the right <Link href="/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</Link> and disposal strategy is crucial for keeping your renovation organized and on schedule.
+                Home renovation projects generate significant amounts of waste that need proper disposal. From kitchen remodels to bathroom renovations, having the right <Link href="https://icondumpsters.com/dumpster-sizes" className="text-blue-600 hover:text-blue-800 underline">dumpster size</Link> and disposal strategy is crucial for keeping your renovation organized and on schedule.
               </p>
 
               <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg mb-8">
@@ -173,7 +173,7 @@ export default function HomeRenovationDumpsterGuidePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Considerations for Home Renovations</h2>
               
               <p className="text-lg text-gray-700 mb-6">
-                Home renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
+                Home renovation projects often have specific budget constraints. Understanding the costs associated with <Link href="https://icondumpsters.com/" className="text-blue-600 hover:text-blue-800 underline">dumpster rental</Link> and waste disposal helps with accurate project planning.
               </p>
 
               <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg mb-8">
@@ -277,7 +277,7 @@ export default function HomeRenovationDumpsterGuidePage() {
                     📞 Call (801) 918-6000
                   </a>
                   <a 
-                    href="/freequote" 
+                    href="https://icondumpsters.com/freequote" 
                     className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
                   >
                     Get Free Quote
@@ -292,7 +292,7 @@ export default function HomeRenovationDumpsterGuidePage() {
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/" className="group">
+            <Link href="https://icondumpsters.com/" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   Dumpster Rental Services
@@ -302,7 +302,7 @@ export default function HomeRenovationDumpsterGuidePage() {
                 </p>
               </div>
             </Link>
-            <Link href="/construction-waste-management" className="group">
+            <Link href="https://icondumpsters.com/construction-waste-management" className="group">
               <div className="bg-white p-6 rounded-lg shadow-md border hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                   Construction Waste Management Best Practices

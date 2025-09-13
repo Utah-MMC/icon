@@ -61,7 +61,7 @@ export default function CentervilleDumpsterRentalPage() {
               </li>
             </ul>
             <Link 
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Quote
@@ -94,7 +94,7 @@ export default function CentervilleDumpsterRentalPage() {
               </li>
             </ul>
             <Link 
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Quote
@@ -127,7 +127,7 @@ export default function CentervilleDumpsterRentalPage() {
               </li>
             </ul>
             <Link 
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Quote
@@ -231,13 +231,13 @@ export default function CentervilleDumpsterRentalPage() {
           <p className="text-xl mb-8">Get your free dumpster rental quote today</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/free-quote"
+              href="https://icondumpsters.com/free-quote"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Free Quote
             </Link>
             <Link 
-              href="/centerville-dumpster-rental-guide-2025"
+              href="https://icondumpsters.com/centerville-dumpster-rental-guide-2025"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Read Our Centerville Guide

@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
+import { kpiSyncService } from '../lib/KPISyncService';
+import SalesRevenueManager from '../components/SalesRevenueManager';
 
 interface KPIData {
   revenue: number;
@@ -51,21 +53,28 @@ export default function AdminDashboard() {
   const [manualData, setManualData] = useState({
     totalRentals: 0,
     totalRevenue: 0,
-    activeRentals: 0,
-    totalDumpsters: 20,
+    activeRentals: 36,
+    totalDumpsters: 44,
     customerSatisfaction: 0
   });
 
   const [inventoryData, setInventoryData] = useState({
-    totalDumpsters: 20,
-    availableDumpsters: 20,
-    activeRentals: 0,
-    utilizationRate: 0
+    totalDumpsters: 44,
+    availableDumpsters: 8,
+    activeRentals: 36,
+    utilizationRate: 81.8
   });
 
-  const [lastRefresh, setLastRefresh] = useState<Date>(new Date());
+  const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
-  // Load KPI data from localStorage
+  // Initialize client-side state
+  useLayoutEffect(() => {
+    setIsClient(true);
+    setLastRefresh(new Date());
+  }, []);
+
+  // Load KPI data from localStorage and listen for inventory updates
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('iconDumpstersKPI');
@@ -82,7 +91,38 @@ export default function AdminDashboard() {
           console.error('Failed to load KPI data:', error);
         }
       }
+      
+      // Force update utilization to current inventory data
+      setKpiData(prev => ({
+        ...prev,
+        utilization: 81.8, // Current inventory utilization
+        rentals: 36 // Current active rentals
+      }));
     }
+
+    // Listen for inventory updates
+    const handleInventoryUpdate = (event: CustomEvent) => {
+      const inventoryStats = event.detail;
+      setKpiData(prev => ({
+        ...prev,
+        utilization: inventoryStats.utilizationRate,
+        rentals: inventoryStats.activeRentals
+      }));
+      
+      // Update inventory data state
+      setInventoryData({
+        totalDumpsters: inventoryStats.totalDumpsters,
+        availableDumpsters: inventoryStats.availableDumpsters,
+        activeRentals: inventoryStats.activeRentals,
+        utilizationRate: inventoryStats.utilizationRate
+      });
+    };
+
+    window.addEventListener('inventory-updated', handleInventoryUpdate as EventListener);
+
+    return () => {
+      window.removeEventListener('inventory-updated', handleInventoryUpdate as EventListener);
+    };
   }, []);
 
   // Update inventory data
@@ -214,7 +254,9 @@ export default function AdminDashboard() {
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Icon Dumpsters - Admin Dashboard</h1>
               <p className="text-gray-600">Administrative controls, data management, and system configuration</p>
-              <p className="text-sm text-gray-500 mt-1">Last updated: {lastRefresh.toLocaleTimeString()}</p>
+              <p className="text-sm text-gray-500 mt-1" suppressHydrationWarning>
+                Last updated: {isClient && lastRefresh ? lastRefresh.toLocaleTimeString() : 'Loading...'}
+              </p>
             </div>
             <button
               onClick={refreshData}
@@ -227,31 +269,37 @@ export default function AdminDashboard() {
           {/* Navigation Links */}
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="/scraper-dashboard"
+              href="https://icondumpsters.com/scraper-dashboard"
               className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm"
             >
               🕷️ Scraper Dashboard
             </a>
             <a
-              href="/kpi-dashboard"
+              href="https://icondumpsters.com/kpi-dashboard"
               className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
             >
               📊 Analytics Dashboard
             </a>
             <a
-              href="/inventory"
+              href="https://icondumpsters.com/inventory"
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
             >
               📦 Inventory Management
             </a>
             <a
-              href="/admin"
+              href="https://icondumpsters.com/email-outreach"
+              className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm"
+            >
+              📧 Email Outreach
+            </a>
+            <a
+              href="https://icondumpsters.com/admin"
               className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm"
             >
               🔐 Admin Login
             </a>
             <a
-              href="/api-test"
+              href="https://icondumpsters.com/api-test"
               className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm"
             >
               🧪 API Testing
@@ -319,19 +367,19 @@ export default function AdminDashboard() {
               <h3 className="text-lg font-medium text-gray-900 mb-3">Quick Actions</h3>
               <div className="space-y-2">
                 <a
-                  href="/scraper-dashboard"
+                  href="https://icondumpsters.com/scraper-dashboard"
                   className="block w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm text-center"
                 >
                   🕷️ Scraper Dashboard
                 </a>
                 <a
-                  href="/inventory"
+                  href="https://icondumpsters.com/inventory"
                   className="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm text-center"
                 >
                   📦 Manage Inventory
                 </a>
                 <a
-                  href="/kpi-dashboard"
+                  href="https://icondumpsters.com/kpi-dashboard"
                   className="block w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm text-center"
                 >
                   📊 View Analytics
@@ -411,7 +459,7 @@ export default function AdminDashboard() {
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold text-gray-900">Key Performance Overview</h2>
             <a
-              href="/kpi-dashboard"
+              href="https://icondumpsters.com/kpi-dashboard"
               className="text-[#4e37a8] hover:text-purple-700 text-sm font-medium"
             >
               View Detailed Analytics →
@@ -448,27 +496,22 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Inventory Status */}
-        <div className="bg-white rounded-xl shadow border p-6">
-          <h2 className="text-xl font-semibold mb-4">Inventory Status</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <p className="text-2xl font-bold text-[#4e37a8]">{inventoryData.totalDumpsters}</p>
-              <p className="text-sm text-gray-600">Total Dumpsters</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-green-600">{inventoryData.availableDumpsters}</p>
-              <p className="text-sm text-gray-600">Available</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-orange-600">{inventoryData.activeRentals}</p>
-              <p className="text-sm text-gray-600">Active Rentals</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-[#4e37a8]">{inventoryData.utilizationRate.toFixed(1)}%</p>
-              <p className="text-sm text-gray-600">Utilization Rate</p>
-            </div>
-          </div>
+        {/* Sales & Revenue Management */}
+        <div className="mb-8">
+          <SalesRevenueManager />
+        </div>
+
+        {/* Inventory Management Link */}
+        <div className="mb-8 bg-white rounded-xl shadow border p-6">
+          <h2 className="text-xl font-semibold mb-4">Inventory Management</h2>
+          <p className="text-gray-600 mb-4">Manage your dumpster fleet and track availability</p>
+          <a 
+            href="/inventory" 
+            className="inline-flex items-center px-4 py-2 bg-[#4e37a8] text-white rounded-lg hover:bg-[#3d2d8a] transition-colors"
+          >
+            <span className="mr-2">📦</span>
+            View Inventory Dashboard
+          </a>
         </div>
 
         {/* Status Legend */}

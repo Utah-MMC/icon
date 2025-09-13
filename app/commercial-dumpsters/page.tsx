@@ -81,7 +81,7 @@ export default function CommercialDumpstersPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
-                  href="/#quote-form" 
+                  href="https://icondumpsters.com/#quote-form" 
                   className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors text-center"
                 >
                   Get Free Quote
@@ -96,7 +96,7 @@ export default function CommercialDumpstersPage() {
             </div>
             <div className="relative">
               <ImageWithFallback 
-                src="/iconmain/images/dumpsterSmallBanner6.jpeg" 
+                src="https://icondumpsters.com/iconmain/images/dumpsterSmallBanner6.jpeg" 
                 alt="Commercial Dumpster Rental Services in Utah"
                 className="rounded-lg shadow-2xl"
                 fallbackSrc="/iconmain/images/dumpsterSmallBanner6.jpeg"
@@ -187,7 +187,7 @@ export default function CommercialDumpstersPage() {
                 <li>• Ideal for small projects</li>
               </ul>
               <Link 
-                href="/dumpster-sizes" 
+                href="https://icondumpsters.com/dumpster-sizes" 
                 className="inline-block bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Learn More
@@ -209,7 +209,7 @@ export default function CommercialDumpstersPage() {
                 <li>• Great value for most projects</li>
               </ul>
               <Link 
-                href="/dumpster-sizes" 
+                href="https://icondumpsters.com/dumpster-sizes" 
                 className="inline-block bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Learn More
@@ -231,7 +231,7 @@ export default function CommercialDumpstersPage() {
                 <li>• Maximum efficiency for large projects</li>
               </ul>
               <Link 
-                href="/dumpster-sizes" 
+                href="https://icondumpsters.com/dumpster-sizes" 
                 className="inline-block bg-[#4e37a8] text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
               >
                 Learn More
@@ -317,7 +317,7 @@ export default function CommercialDumpstersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/#quote-form" 
+              href="https://icondumpsters.com/#quote-form" 
               className="bg-white text-[#4e37a8] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Free Quote
