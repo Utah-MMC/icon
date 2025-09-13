@@ -515,7 +515,7 @@ export default function HomeRenovationWasteDisposal() {
               </div>
             </Link>
             
-            <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="group">
+            <Link href="/commercial-dumpster-rental-business-solutions" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">

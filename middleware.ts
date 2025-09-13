@@ -1,30 +1,52 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(req: NextRequest) {
-  const { pathname, hostname } = req.nextUrl;
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
   
-  // Redirect www to non-www
-  if (hostname === 'www.icondumpsters.com') {
-    const url = req.nextUrl.clone();
-    url.hostname = 'icondumpsters.com';
-    return NextResponse.redirect(url, 301);
-  }
-  
-  // Protect the KPI dashboard
-  if (pathname.startsWith('/kpi-dashboard')) {
-    const cookie = req.cookies.get('admin_auth');
-    if (!cookie || cookie.value !== '1') {
-      const url = req.nextUrl.clone();
-      url.pathname = '/admin';
-      return NextResponse.redirect(url);
+  // Protect admin routes
+  if (pathname.startsWith('/admin-dashboard')) {
+    const adminAuth = request.cookies.get('admin_auth');
+    
+    if (!adminAuth || adminAuth.value !== '1') {
+      // Redirect to admin login if not authenticated
+      return NextResponse.redirect(new URL('/admin', request.url));
     }
   }
-  return NextResponse.next();
+
+  // Protect API admin routes
+  if (pathname.startsWith('/api/admin') && !pathname.includes('/login')) {
+    const adminAuth = request.cookies.get('admin_auth');
+    
+    if (!adminAuth || adminAuth.value !== '1') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+  }
+
+  // Add security headers
+  const response = NextResponse.next();
+  
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  
+  // CSP for admin pages
+  if (pathname.startsWith('/admin')) {
+    response.headers.set(
+      'Content-Security-Policy',
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+    );
+  }
+
+  return response;
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: [
+    '/admin-dashboard/:path*',
+    '/api/admin/:path*',
+    '/admin/:path*'
+  ]
 };
-
-

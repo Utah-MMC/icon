@@ -3981,9 +3981,9 @@ export const cityData: Record<string, CityData> = {
       serviceAreas: 'We provide dumpster rental services throughout Salt Lake City, including areas near popular attractions and business districts. Our same-day delivery ensures you get your dumpster when and where you need it.',
     },
   },
-  'commercialbusiness-solutions': {
+  'commercial-dumpster-rental-business-solutions': {
     cityName: 'Commercial Business Solutions',
-    citySlug: 'commercialbusiness-solutions',
+    citySlug: 'commercial-dumpster-rental-business-solutions',
     state: 'UT',
     phoneNumber: '801-918-6000',
     latitude: '40.7608',
@@ -3999,7 +3999,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Commercial Central',
         description: 'Major business and industrial district',
-        link: '/commercialbusiness-solutions',
+        link: '/commercial-dumpster-rental-business-solutions',
       },
     ],
     permitInfo: {

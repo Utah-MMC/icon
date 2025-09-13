@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/admin/',
+          '/admin-dashboard/',
           '/api/',
           '/_next/',
           '/inventory/',
@@ -25,6 +26,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/admin/',
+          '/admin-dashboard/',
           '/api/',
           '/_next/',
           '/inventory/',
@@ -42,6 +44,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/admin/',
+          '/admin-dashboard/',
           '/api/',
           '/_next/',
           '/inventory/',

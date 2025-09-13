@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Commercial Business Solutions Dumpster Rental - Professional Dumpster Services in Commercial Business Solutions, UT | (801-918-6000)',
     description: 'Professional dumpster rental services in Commercial Business Solutions, UT. Fast delivery, competitive pricing, and reliable waste management solutions.',
-    url: 'https://icondumpsters.com/commercialbusiness-solutions',
+    url: 'https://icondumpsters.com/commercial-dumpster-rental-business-solutions',
     siteName: 'Icon Dumpsters',
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['/images/og-image.png'],
   },
   alternates: {
-    canonical: 'https://icondumpsters.com/commercialbusiness-solutions',
+    canonical: 'https://icondumpsters.com/commercial-dumpster-rental-business-solutions',
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 export default function CommercialBusinessSolutionsDumpsterRental() {
   const cityData = {
     cityName: 'Commercial Business Solutions',
-    citySlug: 'commercialbusiness-solutions',
+    citySlug: 'commercial-dumpster-rental-business-solutions',
     state: 'UT',
     phoneNumber: '801-918-6000',
     latitude: '40.7608',
@@ -73,17 +73,17 @@ export default function CommercialBusinessSolutionsDumpsterRental() {
   {
     "name": "Commercial Business Solutions Central",
     "description": "Major retail and dining district",
-    "link": "/commercialbusiness-solutions"
+    "link": "/commercial-dumpster-rental-business-solutions"
   },
   {
     "name": "Commercial Business Solutions East",
     "description": "Residential and commercial mix",
-    "link": "/commercialbusiness-solutions"
+    "link": "/commercial-dumpster-rental-business-solutions"
   },
   {
     "name": "Commercial Business Solutions West",
     "description": "Industrial and commercial area",
-    "link": "/commercialbusiness-solutions"
+    "link": "/commercial-dumpster-rental-business-solutions"
   }
 ],
     permitInfo: {

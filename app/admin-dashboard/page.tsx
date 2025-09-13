@@ -3,6 +3,15 @@
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { kpiSyncService } from '../lib/KPISyncService';
 import SalesRevenueManager from '../components/SalesRevenueManager';
+import GoogleAdsAnalytics from '../components/GoogleAdsAnalytics';
+import GoogleAdsKeywordAnalytics from '../components/GoogleAdsKeywordAnalytics';
+import SalesByRentalAnalytics from '../components/SalesByRentalAnalytics';
+import ErrorBoundary from '../components/ErrorBoundary';
+import DataBackup from '../components/DataBackup';
+import LoadingSpinner, { DashboardCardSkeleton } from '../components/LoadingSpinner';
+import AdminAuthGuard from '../components/AdminAuthGuard';
+import AdminLogout from '../components/AdminLogout';
+import SecurityStatus from '../components/SecurityStatus';
 import { getCurrentKPIData } from '../../realSalesData';
 
 interface KPIData {
@@ -236,7 +245,8 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <AdminAuthGuard>
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex justify-between items-start">
@@ -247,12 +257,15 @@ export default function AdminDashboard() {
                 Last updated: {isClient && lastRefresh ? lastRefresh.toLocaleTimeString() : 'Loading...'}
               </p>
             </div>
-            <button
-              onClick={refreshData}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-            >
-              🔄 Refresh Data
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={refreshData}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+              >
+                🔄 Refresh Data
+              </button>
+              <AdminLogout />
+            </div>
           </div>
           
           {/* Navigation Links */}
@@ -497,10 +510,47 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Sales & Revenue Management */}
-        <div className="mb-8">
-          <SalesRevenueManager />
-        </div>
+                    {/* Sales & Revenue Management */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <SalesRevenueManager />
+                        </ErrorBoundary>
+                    </div>
+
+                    {/* Google Ads Analytics */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <GoogleAdsAnalytics />
+                        </ErrorBoundary>
+                    </div>
+
+                    {/* Google Ads Keyword Analytics */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <GoogleAdsKeywordAnalytics />
+                        </ErrorBoundary>
+                    </div>
+
+                    {/* Sales by Rental Analytics */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <SalesByRentalAnalytics />
+                        </ErrorBoundary>
+                    </div>
+
+                    {/* Data Backup & Recovery */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <DataBackup />
+                        </ErrorBoundary>
+                    </div>
+
+                    {/* Security Status */}
+                    <div className="mb-8">
+                        <ErrorBoundary>
+                            <SecurityStatus />
+                        </ErrorBoundary>
+                    </div>
 
         {/* Inventory Management Link */}
         <div className="mb-8 bg-white rounded-xl shadow border p-6">
@@ -535,5 +585,6 @@ export default function AdminDashboard() {
         </div>
       </div>
     </div>
+    </AdminAuthGuard>
   );
 }

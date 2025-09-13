@@ -29,7 +29,15 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-sm bg-white border rounded-xl shadow p-6">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Admin Login</h1>
+        <div className="text-center mb-4">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Login</h1>
+          <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
+            <p className="text-sm text-red-800">
+              <strong>🔒 Secure Access Only</strong><br/>
+              Authorized personnel only. All access is logged and monitored.
+            </p>
+          </div>
+        </div>
         <form onSubmit={submit} className="space-y-4">
           <div>
             <label className="block text-sm text-gray-600 mb-1">Password</label>
