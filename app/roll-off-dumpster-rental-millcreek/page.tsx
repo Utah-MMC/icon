@@ -5,7 +5,7 @@ import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "Roll-Off Dumpster Rental Millcreek - Professional Services | Icon Dumpsters",
-  description: "Professional roll-off dumpster rental services in Millcreek, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  description: "Professional roll-off dumpster rental services in Millcreek, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
   keywords: [
     "roll-off dumpster rental Millcreek",
     "Millcreek roll-off dumpster rental",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Roll-Off Dumpster Rental Millcreek - Professional Services | Icon Dumpsters",
-    description: "Professional roll-off dumpster rental services in Millcreek, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+    description: "Professional roll-off dumpster rental services in Millcreek, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
     url: "https://icondumpsters.com/roll-off-dumpster-rental-millcreek",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],

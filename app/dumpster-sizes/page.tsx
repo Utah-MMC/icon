@@ -10,11 +10,11 @@ import PageHero from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-  description: "Complete guide to dumpster sizes: 15, 20, 30 yard roll-off dumpsters plus specialized 10-yard dirt, 10-yard mixed load, and 12-yard concrete dumpsters. View dimensions, weight limits, and pricing. Find the perfect size for your project. Call (801) 918-6000.",
+  description: "Complete guide to dumpster sizes: 15, 20, 30 yard roll-off dumpsters plus specialized 10-yard dirt, 10-yard mixed load, and 12-yard concrete dumpsters.",
   keywords: "dumpster sizes, 15 yard dumpster, 20 yard dumpster, 30 yard dumpster, 10 yard dirt dumpster, 10 yard mixed load dumpster, 12 yard concrete dumpster, roll off dumpster, rolloff dumpster, dumpster rental, dumpster rental near me, roll off dumpster dimensions, dumpster weight limits, Utah dumpster rental sizes, concrete disposal dumpster, dirt disposal dumpster",
   openGraph: {
     title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-    description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
+    description: "Complete guide to dumpster sizes: 15, 20, 30 yard roll-off dumpsters plus specialized 10-yard dirt, 10-yard mixed load, and 12-yard concrete dumpsters.",
     url: 'https://icondumpsters.com/dumpster-sizes',
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
-    description: "Complete guide to dumpster sizes: 15, 20, and 30 yard roll-off dumpsters. View dimensions, weight limits, and pricing.",
+    description: "Complete guide to dumpster sizes: 15, 20, 30 yard roll-off dumpsters plus specialized 10-yard dirt, 10-yard mixed load, and 12-yard concrete dumpsters.",
     images: ['/images/dumpsterWithTruck.webp'],
   },
   alternates: {

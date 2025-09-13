@@ -5,11 +5,11 @@ import PageHero from '../components/PageHero';
 
 export const metadata: Metadata = {
   title: "Dumpster Rentals for Home & Business | Icon Dumpsters",
-  description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery, competitive pricing, and excellent customer service throughout Utah. Call (801) 918-6000.",
+  description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery, competitive pricing,...",
   keywords: "dumpster rental, dumpster rentals, residential dumpster, commercial dumpster, construction dumpster, Utah dumpster rental, same day delivery",
   openGraph: {
     title: "Dumpster Rentals for Home & Business | Icon Dumpsters",
-    description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery and competitive pricing throughout Utah.",
+    description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery, competitive pricing,...",
     url: 'https://icondumpsters.com/dumpster-rental',
     siteName: 'Icon Dumpsters',
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Dumpster Rentals for Home & Business | Icon Dumpsters",
-    description: "Professional dumpster rental services for residential, commercial, and construction projects.",
+    description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery, competitive pricing,...",
     images: ['/images/og-image.png'],
   },
   alternates: {

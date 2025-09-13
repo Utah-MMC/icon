@@ -5,7 +5,7 @@ import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "Roll-Off Dumpster Rental Bluffdale - Professional Services | Icon Dumpsters",
-  description: "Professional roll-off dumpster rental services in Bluffdale, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+  description: "Professional roll-off dumpster rental services in Bluffdale, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
   keywords: [
     "roll-off dumpster rental Bluffdale",
     "Bluffdale roll-off dumpster rental",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Roll-Off Dumpster Rental Bluffdale - Professional Services | Icon Dumpsters",
-    description: "Professional roll-off dumpster rental services in Bluffdale, Utah. Same-day delivery, competitive pricing, and excellent customer service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000.",
+    description: "Professional roll-off dumpster rental services in Bluffdale, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
     url: "https://icondumpsters.com/roll-off-dumpster-rental-bluffdale",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],

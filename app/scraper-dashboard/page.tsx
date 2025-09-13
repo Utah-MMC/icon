@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import AdminAuthGuard from '../components/AdminAuthGuard';
 
 interface ScraperData {
   leads?: any[];
@@ -415,8 +416,9 @@ export default function ScraperDashboard() {
   }, [activeTab]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <AdminAuthGuard>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex justify-between items-start">
             <div>
@@ -1482,6 +1484,8 @@ export default function ScraperDashboard() {
           </div>
         </div>
       )}
-    </div>
+        </div>
+      </div>
+    </AdminAuthGuard>
   );
 }

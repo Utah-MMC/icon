@@ -5,7 +5,7 @@ import { getSaltLakeCountyCity } from '../config/saltLakeCountyCities';
 
 export const metadata: Metadata = {
   title: "30 Yard Dumpster Rental Brighton - Professional Services | Icon Dumpsters",
-  description: "Professional 30 yard dumpster rental services in Brighton, Utah. Same-day delivery, competitive pricing, and excellent customer service. Perfect for large construction projects and home renovations. Call (801) 918-6000.",
+  description: "Professional 30 yard dumpster rental services in Brighton, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
   keywords: [
     "30 yard dumpster rental Brighton",
     "Brighton 30 yard dumpster rental",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "30 Yard Dumpster Rental Brighton - Professional Services | Icon Dumpsters",
-    description: "Professional 30 yard dumpster rental services in Brighton, Utah. Same-day delivery, competitive pricing, and excellent customer service. Perfect for large construction projects and home renovations. Call (801) 918-6000.",
+    description: "Professional 30 yard dumpster rental services in Brighton, Utah. Same-day delivery, competitive pricing, and excellent customer service.",
     url: "https://icondumpsters.com/30-yard-dumpster-rental-brighton-ut",
     siteName: "Icon Dumpsters",
     images: ['/images/og-image.png'],

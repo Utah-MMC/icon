@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import EnhancedKPIDashboard from "../components/EnhancedKPIDashboard";
+import AdminAuthGuard from "../components/AdminAuthGuard";
 
 export const metadata: Metadata = {
   title: "Enhanced KPI Dashboard - Icon Dumpsters Analytics",
@@ -19,15 +20,17 @@ export const metadata: Metadata = {
     ],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
 export default function EnhancedDashboardPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <EnhancedKPIDashboard />
-    </div>
+    <AdminAuthGuard>
+      <div className="min-h-screen bg-gray-50">
+        <EnhancedKPIDashboard />
+      </div>
+    </AdminAuthGuard>
   );
 }

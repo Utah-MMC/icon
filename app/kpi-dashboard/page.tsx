@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import ReviewAnalytics from '../components/ReviewAnalytics';
+import AdminAuthGuard from '../components/AdminAuthGuard';
 
 type Counts = { byType: Record<string, number>; byName: Record<string, number>; total: number };
 type Summary = { sessions: number; utmSources: Record<string, number>; referrers: Record<string, number>; paths: Record<string, number>; sessionsWithCTA: number; sessionsWithForm: number; conversionRate: number; topCTAs: Record<string, number> };
@@ -31,8 +32,9 @@ export default function KPIDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <AdminAuthGuard>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex justify-between items-start">
             <div>
@@ -236,8 +238,9 @@ export default function KPIDashboard() {
             <ReviewAnalytics />
           </div>
         </div>
+        </div>
       </div>
-    </div>
+    </AdminAuthGuard>
   );
 }
 
