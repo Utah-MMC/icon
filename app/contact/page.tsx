@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Contact Icon Dumpsters - Get Your Free Quote Today',
   description: 'Contact Icon Dumpsters for professional dumpster rental services in Utah. Get a free quote, schedule delivery, or speak with our waste management experts.',
   keywords: ['contact icon dumpsters', 'dumpster rental quote', 'utah waste management contact', 'free dumpster quote'],
-  alternates: { canonical: '/contact' },
+  alternates: { canonical: 'https://icondumpsters.com/contact' },
   openGraph: {
     title: 'Contact Icon Dumpsters - Get Your Free Quote Today',
     description: 'Contact Icon Dumpsters for professional dumpster rental services in Utah. Get a free quote today.',

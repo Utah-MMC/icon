@@ -6,7 +6,7 @@ import PageTemplate from "../components/PageTemplate";
 export const metadata: Metadata = {
   title: 'Dumpster Rental Services in Utah | Icon Dumpsters',
   description: 'Professional dumpster rental services in Utah including residential, construction, garbage removal, yard waste, and downsizing projects. Call (801) 918-6000 for instant quotes.',
-  alternates: { canonical: '/services' },
+  alternates: { canonical: 'https://icondumpsters.com/services' },
   robots: { index: true, follow: true }
 };
 

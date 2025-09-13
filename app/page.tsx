@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
   description: 'Professional dumpster rental services throughout Utah. Fast delivery, competitive pricing, and reliable waste management solutions for residential and commercial projects.',
   keywords: ['dumpster rental utah', 'utah dumpster rental', 'construction waste removal', 'residential dumpster rental', 'commercial dumpster rental'],
-  alternates: { canonical: '/' },
+  alternates: { canonical: 'https://icondumpsters.com' },
   openGraph: {
     title: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
     description: 'Professional dumpster rental services throughout Utah. Fast delivery, competitive pricing, and reliable waste management solutions.',

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "About Icon Dumpsters - Utah's Trusted Waste Management Partner",
   description: "Learn about Icon Dumpsters, Utah's leading provider of professional dumpster rental services. Committed to excellence, sustainability, and customer satisfaction.",
   keywords: ['about icon dumpsters', 'utah waste management', 'dumpster rental company', 'professional waste services'],
-  alternates: { canonical: '/about' },
+  alternates: { canonical: 'https://icondumpsters.com/about' },
   openGraph: {
     title: "About Icon Dumpsters - Utah's Trusted Waste Management Partner",
     description: "Learn about Icon Dumpsters, Utah's leading provider of professional dumpster rental services.",
