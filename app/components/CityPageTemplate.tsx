@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import QuoteForm from './QuoteForm';
+import RelatedPages from './RelatedPages';
+import RelatedCities from './RelatedCities';
 
 interface CityPageTemplateProps {
   cityName: string;
@@ -524,6 +526,12 @@ export default function CityPageTemplate({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Internal Linking Sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <RelatedPages pageType="city" cityName={cityName} />
+        <RelatedCities currentCity={cityName} />
       </div>
 
       {/* CTA Section */}

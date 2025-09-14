@@ -7,6 +7,7 @@ import FeesAndSurcharges from "../components/FeesAndSurcharges";
 import AvailableTodayBadge from "../components/AvailableTodayBadge";
 import BookNowBanner from "../components/BookNowBanner";
 import PageHero from "../components/PageHero";
+import RelatedPages from "../components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Dumpster Sizes & Dimensions Guide | Icon Dumpsters Utah",
@@ -696,6 +697,11 @@ export default function DumpsterSizes() {
              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                Ready to get started? Fill out the form below and we'll get back to you with a custom quote for your project.
              </p>
+           </div>
+           
+           {/* Internal Linking Section */}
+           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+             <RelatedPages pageType="service" />
            </div>
            
            <div className="max-w-2xl mx-auto">

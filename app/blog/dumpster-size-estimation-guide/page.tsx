@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import ImageWithFallback from '../../components/ImageWithFallback'
 import Link from 'next/link'
+import RelatedPages from '../../components/RelatedPages'
 
 export const metadata: Metadata = {
   title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
@@ -421,6 +422,9 @@ export default function DumpsterSizeEstimationGuide() {
               So, whether you're clearing out the garage, tackling a flooded basement, or doing a full home cleanout, there's a perfect dumpster size out there for you. Pick wisely, plan ahead, and you'll save yourself money, time, and frustration.
             </p>
           </section>
+
+          {/* Internal Linking Section */}
+          <RelatedPages pageType="blog" />
 
           {/* CTA Section */}
           <section className="bg-white rounded-xl shadow-lg p-8 text-center">

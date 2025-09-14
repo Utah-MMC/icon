@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "../components/PageHero";
 import PageTemplate from "../components/PageTemplate";
+import RelatedPages from "../components/RelatedPages";
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Services in Utah | Icon Dumpsters',
@@ -360,6 +361,11 @@ export default function Services() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Internal Linking Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <RelatedPages pageType="service" />
       </div>
     </PageTemplate>
   );
