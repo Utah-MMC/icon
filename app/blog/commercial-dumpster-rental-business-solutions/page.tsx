@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Commercial Dumpster Rental: Business Solutions for 2025',
-  description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn about waste management strategies, cost optimization, and compliance requirements for commercial projects.',
+  description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn waste management strategies, cost optimization, and compliance requirements.',
   keywords: 'commercial dumpster rental, business waste management, commercial waste disposal, dumpster rental for businesses, construction waste solutions, commercial cleanup',
   openGraph: {
     title: 'Commercial Dumpster Rental: Business Solutions for 2025',
-    description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn about waste management strategies, cost optimization, and compliance requirements for commercial projects.',
+    description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn waste management strategies, cost optimization, and compliance requirements.',
     type: 'article',
     url: 'https://icondumpsters.com/commercial-dumpster-rental-business-solutions',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Commercial Dumpster Rental: Business Solutions for 2025',
-    description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn about waste management strategies, cost optimization, and compliance requirements for commercial projects.',
+    description: 'Discover comprehensive commercial dumpster rental solutions for businesses. Learn waste management strategies, cost optimization, and compliance requirements.',
     images: ['/images/commercial-dumpster-rental.jpg']
   },
   alternates: {

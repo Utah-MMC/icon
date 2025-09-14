@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
-  description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
+  description: 'Learn how to pick the right dumpster size for your cleanout project. This 2025 guide covers dumpster sizes, costs, capacity, and tips to avoid overspending.',
   keywords: 'dumpster size estimation, home cleanout dumpster, dumpster rental guide, waste disposal planning, dumpster capacity, cleanout project planning',
   openGraph: {
     title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
-    description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
+    description: 'Learn how to pick the right dumpster size for your cleanout project. This 2025 guide covers dumpster sizes, costs, capacity, and tips to avoid overspending.',
     type: 'article',
     url: 'https://icondumpsters.com/blog/dumpster-size-estimation-guide',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
-    description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',
+    description: 'Learn how to pick the right dumpster size for your cleanout project. This 2025 guide covers dumpster sizes, costs, capacity, and tips to avoid overspending.',
     images: ['/images/dumpster-size-estimation.jpg']
   },
   alternates: {

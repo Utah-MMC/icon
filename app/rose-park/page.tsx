@@ -57,7 +57,7 @@ export default function RoseParkPage() {
         {
           name: "Rose Park Golf Course",
           address: "1386 N Redwood Rd, Salt Lake City, UT 84116",
-          url: "https://www.slc.gov/parks/rose-park-golf-course/",
+          url: "https://www.google.com/maps/search/Rose+Park+Golf+Course+Utah",
           description: "Public golf course in Rose Park"
         },
         {

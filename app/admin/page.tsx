@@ -41,7 +41,7 @@ export default function AdminLogin() {
         <form onSubmit={submit} className="space-y-4">
           <div>
             <label className="block text-sm text-gray-600 mb-1">Password</label>
-            <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} className="w-full border rounded-lg px-3 py-2" placeholder="Enter admin password" />
+            <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} className="w-full border rounded-lg px-3 py-2" placeholder="Enter admin password" autoComplete="new-password" />
           </div>
           {error && <div className="text-sm text-red-600">{error}</div>}
           <button disabled={loading} className="w-full bg-[#4e37a8] text-white rounded-lg px-3 py-2 font-semibold hover:bg-purple-700 disabled:opacity-60">{loading ? 'Signing in…' : 'Sign In'}</button>

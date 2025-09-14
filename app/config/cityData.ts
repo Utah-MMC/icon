@@ -48,7 +48,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Draper City Hall',
         address: '1020 E Pioneer Rd',
-        url: 'https://www.draper.utah.gov/',
+        url: 'https://www.google.com/maps/search/Draper+City+Hall+Utah',
       },
       {
         name: 'Corner Canyon',
@@ -58,17 +58,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Draper Park',
         address: '12500 S 1300 E',
-        url: 'https://www.draper.utah.gov/parks/draper-park/',
+        url: 'https://www.google.com/maps/search/Draper+Park+Utah',
       },
       {
         name: 'Loveland Living Planet Aquarium',
         address: '12033 S Lone Peak Pkwy',
-        url: 'https://thelivingplanet.com/',
+        url: 'https://www.google.com/maps/search/Loveland+Living+Planet+Aquarium+Utah',
       },
       {
         name: 'Draper Library',
         address: '1136 E Pioneer Rd',
-        url: 'https://www.draper.utah.gov/library/',
+        url: 'https://www.google.com/maps/search/Draper+Library+Utah',
       },
       {
         name: 'Porter Rockwell Trail',
@@ -277,17 +277,17 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Murray City Hall',
         address: '5025 S State St',
-        url: 'https://www.murray.utah.gov/',
+        url: 'https://www.google.com/maps/search/Murray+City+Hall+Utah',
       },
       {
         name: 'Murray Park',
         address: '296 E Murray Park Ave',
-        url: 'https://www.murray.utah.gov/parks-recreation/parks/murray-park/',
+        url: 'https://www.google.com/maps/search/Murray+Park+Utah',
       },
       {
         name: 'Murray Library',
         address: '166 E 5300 S',
-        url: 'https://www.murray.utah.gov/parks-recreation/library/',
+        url: 'https://www.google.com/maps/search/Murray+Library+Utah',
       },
       {
         name: 'Murray Theater',
@@ -297,7 +297,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Murray Golf Course',
         address: '5600 S 900 E',
-        url: 'https://www.murray.utah.gov/parks-recreation/golf/',
+        url: 'https://www.google.com/maps/search/Murray+Golf+Course+Utah',
       },
     ],
     businessDistricts: [
@@ -376,7 +376,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Sandy City Hall',
         address: '10000 Centennial Pkwy',
-        url: 'https://www.sandy.utah.gov/',
+        url: 'https://www.google.com/maps/search/Sandy+City+Hall+Utah',
       },
       {
         name: 'South Towne Expo Center',
@@ -386,12 +386,12 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Sandy Amphitheater',
         address: '1245 E 9400 S',
-        url: 'https://www.sandy.utah.gov/amphitheater/',
+        url: 'https://www.google.com/maps/search/Sandy+Amphitheater+Utah',
       },
       {
         name: 'Dimple Dell Regional Park',
         address: '10600 S 1000 E',
-        url: 'https://www.sandy.utah.gov/parks/dimple-dell-regional-park/',
+        url: 'https://www.google.com/maps/search/Dimple+Dell+Regional+Park+Utah',
       },
     ],
     businessDistricts: [
@@ -475,7 +475,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'West Jordan Library',
         address: '8030 S 1825 W',
-        url: 'https://www.westjordan.utah.gov/library/',
+        url: 'https://www.google.com/maps/search/West+Jordan+Library+Utah',
       },
     ],
     businessDistricts: [
@@ -549,7 +549,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'American Fork City Hall',
         address: 'City Hall Address',
-        url: 'https://www.americanfork.utah.gov/',
+        url: 'https://www.google.com/maps/search/American+Fork+City+Hall+Utah',
       },
       {
         name: 'American Fork Park',
@@ -628,7 +628,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Bountiful City Hall',
         address: 'City Hall Address',
-        url: 'https://www.bountiful.utah.gov/',
+        url: 'https://www.google.com/maps/search/Bountiful+City+Hall+Utah',
       },
       {
         name: 'Bountiful Park',
@@ -707,7 +707,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Centerville City Hall',
         address: 'City Hall Address',
-        url: 'https://www.centerville.utah.gov/',
+        url: 'https://www.google.com/maps/search/Centerville+City+Hall+Utah',
       },
       {
         name: 'Centerville Park',
@@ -786,7 +786,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Clearfield City Hall',
         address: 'City Hall Address',
-        url: 'https://www.clearfield.utah.gov/',
+        url: 'https://www.google.com/maps/search/Clearfield+City+Hall+Utah',
       },
       {
         name: 'Clearfield Park',
@@ -865,7 +865,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Cottonwood Heights City Hall',
         address: 'City Hall Address',
-        url: 'https://www.cottonwoodheights.utah.gov/',
+        url: 'https://www.google.com/maps/search/Cottonwood+Heights+City+Hall+Utah',
       },
       {
         name: 'Cottonwood Heights Park',
@@ -944,7 +944,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Downtown Salt Lake City Hall',
         address: 'City Hall Address',
-        url: 'https://www.downtownsalt-lake.utah.gov/',
+        url: 'https://www.google.com/maps/search/Downtown+Salt+Lake+City+Hall+Utah',
       },
       {
         name: 'Downtown Salt Lake Park',
@@ -1023,7 +1023,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Eagle Mountain City Hall',
         address: 'City Hall Address',
-        url: 'https://www.eaglemountain.utah.gov/',
+        url: 'https://www.google.com/maps/search/Eagle+Mountain+City+Hall+Utah',
       },
       {
         name: 'Eagle Mountain Park',
@@ -1102,7 +1102,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Fairpark City Hall',
         address: 'City Hall Address',
-        url: 'https://www.fairpark.utah.gov/',
+        url: 'https://www.google.com/maps/search/Fairpark+City+Hall+Utah',
       },
       {
         name: 'Fairpark Park',
@@ -1181,7 +1181,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Farmington City Hall',
         address: 'City Hall Address',
-        url: 'https://www.farmington.utah.gov/',
+        url: 'https://www.google.com/maps/search/Farmington+City+Hall+Utah',
       },
       {
         name: 'Farmington Park',
@@ -1260,7 +1260,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Glendale City Hall',
         address: 'City Hall Address',
-        url: 'https://www.glendale.utah.gov/',
+        url: 'https://www.google.com/maps/search/Glendale+City+Hall+Utah',
       },
       {
         name: 'Glendale Park',
@@ -1339,7 +1339,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Herriman City Hall',
         address: 'City Hall Address',
-        url: 'https://www.herriman.utah.gov/',
+        url: 'https://www.google.com/maps/search/Herriman+City+Hall+Utah',
       },
       {
         name: 'Herriman Park',
@@ -1418,7 +1418,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Holladay City Hall',
         address: 'City Hall Address',
-        url: 'https://www.holladay.utah.gov/',
+        url: 'https://www.google.com/maps/search/Holladay+City+Hall+Utah',
       },
       {
         name: 'Holladay Park',
@@ -1497,7 +1497,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Kaysville City Hall',
         address: 'City Hall Address',
-        url: 'https://www.kaysville.utah.gov/',
+        url: 'https://www.google.com/maps/search/Kaysville+City+Hall+Utah',
       },
       {
         name: 'Kaysville Park',
@@ -1576,7 +1576,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Kearns City Hall',
         address: 'City Hall Address',
-        url: 'https://www.kearns.utah.gov/',
+        url: 'https://www.google.com/maps/search/Kearns+City+Hall+Utah',
       },
       {
         name: 'Kearns Park',
@@ -1655,7 +1655,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Layton City Hall',
         address: 'City Hall Address',
-        url: 'https://www.layton.utah.gov/',
+        url: 'https://www.google.com/maps/search/Layton+City+Hall+Utah',
       },
       {
         name: 'Layton Park',
@@ -1734,7 +1734,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Lehi City Hall',
         address: 'City Hall Address',
-        url: 'https://www.lehi.utah.gov/',
+        url: 'https://www.google.com/maps/search/Lehi+City+Hall+Utah',
       },
       {
         name: 'Lehi Park',
@@ -1813,7 +1813,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Magna City Hall',
         address: 'City Hall Address',
-        url: 'https://www.magna.utah.gov/',
+        url: 'https://www.google.com/maps/search/Magna+City+Hall+Utah',
       },
       {
         name: 'Magna Park',
@@ -1892,7 +1892,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Midvale City Hall',
         address: 'City Hall Address',
-        url: 'https://www.midvale.utah.gov/',
+        url: 'https://www.google.com/maps/search/Midvale+City+Hall+Utah',
       },
       {
         name: 'Midvale Park',
@@ -1971,7 +1971,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Millcreek City Hall',
         address: 'City Hall Address',
-        url: 'https://www.millcreek.utah.gov/',
+        url: 'https://www.google.com/maps/search/Millcreek+City+Hall+Utah',
       },
       {
         name: 'Millcreek Park',
@@ -2050,7 +2050,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'North Salt Lake City Hall',
         address: 'City Hall Address',
-        url: 'https://www.northsalt-lake.utah.gov/',
+        url: 'https://nslcity.org/',
       },
       {
         name: 'North Salt Lake Park',
@@ -2129,7 +2129,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Ogden City Hall',
         address: 'City Hall Address',
-        url: 'https://www.ogden.utah.gov/',
+        url: 'https://www.google.com/maps/search/Ogden+City+Hall+Utah',
       },
       {
         name: 'Ogden Park',
@@ -2208,7 +2208,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Orem City Hall',
         address: 'City Hall Address',
-        url: 'https://www.orem.utah.gov/',
+        url: 'https://www.google.com/maps/search/Orem+City+Hall+Utah',
       },
       {
         name: 'Orem Park',
@@ -2287,7 +2287,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Park City City Hall',
         address: 'City Hall Address',
-        url: 'https://www.parkcity.utah.gov/',
+        url: 'https://www.google.com/maps/search/Park+City+City+Hall+Utah',
       },
       {
         name: 'Park City Park',
@@ -2366,7 +2366,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Pleasant Grove City Hall',
         address: 'City Hall Address',
-        url: 'https://www.pleasantgrove.utah.gov/',
+        url: 'https://www.google.com/maps/search/Pleasant+Grove+City+Hall+Utah',
       },
       {
         name: 'Pleasant Grove Park',
@@ -2445,7 +2445,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Poplar Grove City Hall',
         address: 'City Hall Address',
-        url: 'https://www.poplargrove.utah.gov/',
+        url: 'https://www.google.com/maps/search/Poplar+Grove+City+Hall+Utah',
       },
       {
         name: 'Poplar Grove Park',
@@ -2524,7 +2524,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Provo City Hall',
         address: 'City Hall Address',
-        url: 'https://www.provo.utah.gov/',
+        url: 'https://www.google.com/maps/search/Provo+City+Hall+Utah',
       },
       {
         name: 'Provo Park',
@@ -2603,7 +2603,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Riverton City Hall',
         address: 'City Hall Address',
-        url: 'https://www.riverton.utah.gov/',
+        url: 'https://www.google.com/maps/search/Riverton+City+Hall+Utah',
       },
       {
         name: 'Riverton Park',
@@ -2682,7 +2682,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Roy City Hall',
         address: 'City Hall Address',
-        url: 'https://www.roy.utah.gov/',
+        url: 'https://www.google.com/maps/search/Roy+City+Hall+Utah',
       },
       {
         name: 'Roy Park',
@@ -2761,7 +2761,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Saratoga Springs City Hall',
         address: 'City Hall Address',
-        url: 'https://www.saratogasprings.utah.gov/',
+        url: 'https://www.google.com/maps/search/Saratoga+Springs+City+Hall+Utah',
       },
       {
         name: 'Saratoga Springs Park',
@@ -2840,7 +2840,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'South Jordan City Hall',
         address: 'City Hall Address',
-        url: 'https://www.southjordan.utah.gov/',
+        url: 'https://www.google.com/maps/search/South+Jordan+City+Hall+Utah',
       },
       {
         name: 'South Jordan Park',
@@ -2919,7 +2919,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'South Salt Lake City Hall',
         address: 'City Hall Address',
-        url: 'https://www.southsalt-lake.utah.gov/',
+        url: 'https://www.google.com/maps/search/South+Salt+Lake+City+Hall+Utah',
       },
       {
         name: 'South Salt Lake Park',
@@ -3097,7 +3097,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Syracuse City Hall',
         address: 'City Hall Address',
-        url: 'https://www.syracuse.utah.gov/',
+        url: 'https://www.google.com/maps/search/Syracuse+City+Hall+Utah',
       },
       {
         name: 'Syracuse Park',
@@ -3176,7 +3176,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Taylorsville City Hall',
         address: 'City Hall Address',
-        url: 'https://www.taylorsville.utah.gov/',
+        url: 'https://www.google.com/maps/search/Taylorsville+City+Hall+Utah',
       },
       {
         name: 'Taylorsville Park',
@@ -3255,7 +3255,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Tooele City Hall',
         address: 'City Hall Address',
-        url: 'https://www.tooele.utah.gov/',
+        url: 'https://www.google.com/maps/search/Tooele+City+Hall+Utah',
       },
       {
         name: 'Tooele Park',
@@ -3334,7 +3334,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Tooele City Hall',
         address: 'City Hall Address',
-        url: 'https://www.tooele.utah.gov/',
+        url: 'https://www.google.com/maps/search/Tooele+City+Hall+Utah',
       },
       {
         name: 'Tooele Park',
@@ -3413,7 +3413,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'West Valley City City Hall',
         address: 'City Hall Address',
-        url: 'https://www.westvalley-city.utah.gov/',
+        url: 'https://www.google.com/maps/search/West+Valley+City+Hall+Utah',
       },
       {
         name: 'West Valley City Park',
@@ -3492,7 +3492,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Woods Cross City Hall',
         address: 'City Hall Address',
-        url: 'https://www.woodscross.utah.gov/',
+        url: 'https://www.google.com/maps/search/Woods+Cross+City+Hall+Utah',
       },
       {
         name: 'Woods Cross Park',
@@ -3665,7 +3665,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Springville Museum of Art',
         address: '126 E 400 S',
-        url: 'https://www.sma.nebo.edu/',
+        url: 'https://www.google.com/maps/search/Springville+Museum+of+Art+Utah',
       },
       {
         name: 'Springville Library',
@@ -3675,7 +3675,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Springville High School',
         address: '1205 E 900 S',
-        url: 'https://www.nebo.edu/shs',
+        url: 'https://www.google.com/maps/search/Springville+High+School+Utah',
       },
     ],
     businessDistricts: [
@@ -3838,7 +3838,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'Bluffdale City Hall',
         address: 'City Hall Address',
-        url: 'https://www.bluffdale.utah.gov/',
+        url: 'https://www.google.com/maps/search/Bluffdale+City+Hall+Utah',
       },
       {
         name: 'Bluffdale Park',
@@ -4175,6 +4175,664 @@ export const cityData: Record<string, CityData> = {
       ],
       localInfo: 'Our Utah dumpster rental locations are strategically placed to serve communities throughout the state. Whether you\'re in the Salt Lake Valley, Utah County, Davis County, or anywhere else in Utah, we have a location near you.',
       serviceAreas: 'We provide dumpster rental services at multiple locations throughout Utah, ensuring convenient access for all our customers. Our strategic placement and same-day delivery ensure you get your dumpster when and where you need it, no matter which location serves your area.',
+    },
+  },
+  'white-city': {
+    cityName: 'White City',
+    citySlug: 'white-city',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.5656',
+    longitude: '-111.8639',
+    landmarks: [
+      {
+        name: 'White City Community Center',
+        address: 'Local Community Center',
+        url: 'https://www.google.com/maps/search/White+City+Community+Center+Utah',
+      },
+      {
+        name: 'White City Park',
+        address: 'Local Park Area',
+        url: 'https://www.google.com/maps/search/White+City+Park+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'White City Central',
+        description: 'Main residential and commercial area',
+        link: '/white-city',
+      },
+      {
+        name: 'White City East',
+        description: 'Residential neighborhoods',
+        link: '/white-city',
+      },
+      {
+        name: 'White City West',
+        description: 'Commercial and residential mix',
+        link: '/white-city',
+      },
+    ],
+    permitInfo: {
+      cityName: 'White City',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact White City for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout White City, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in White City, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of White City\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'White City is a growing community in Salt Lake County with a mix of residential and commercial areas. Whether you\'re working on a project in the central area or the surrounding neighborhoods, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout White City, including all residential neighborhoods and commercial areas. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'emigration-canyon': {
+    cityName: 'Emigration Canyon',
+    citySlug: 'emigration-canyon',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.7500',
+    longitude: '-111.8000',
+    landmarks: [
+      {
+        name: 'Emigration Canyon Park',
+        address: 'Canyon Park Area',
+        url: 'https://www.google.com/maps/search/Emigration+Canyon+Park+Utah',
+      },
+      {
+        name: 'This Is The Place Heritage Park',
+        address: '2601 E Sunnyside Ave',
+        url: 'https://www.google.com/maps/search/This+Is+The+Place+Heritage+Park+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Emigration Canyon Central',
+        description: 'Main residential area',
+        link: '/emigration-canyon',
+      },
+      {
+        name: 'Emigration Canyon East',
+        description: 'Mountain residential area',
+        link: '/emigration-canyon',
+      },
+      {
+        name: 'Emigration Canyon West',
+        description: 'Lower canyon residential',
+        link: '/emigration-canyon',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Emigration Canyon',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Emigration Canyon for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Emigration Canyon, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Emigration Canyon, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Emigration Canyon\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'Emigration Canyon is a beautiful mountain community with historic significance and stunning natural surroundings. Whether you\'re working on a project in the canyon or near the heritage park, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Emigration Canyon, including all residential areas and mountain properties. Our same-day delivery ensures you get your dumpster when and where you need it, even in the canyon areas.',
+    },
+  },
+  'copperton': {
+    cityName: 'Copperton',
+    citySlug: 'copperton',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.5667',
+    longitude: '-112.1000',
+    landmarks: [
+      {
+        name: 'Copperton Community Center',
+        address: 'Local Community Center',
+        url: 'https://www.google.com/maps/search/Copperton+Community+Center+Utah',
+      },
+      {
+        name: 'Copperton Park',
+        address: 'Local Park Area',
+        url: 'https://www.google.com/maps/search/Copperton+Park+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Copperton Central',
+        description: 'Main residential area',
+        link: '/copperton',
+      },
+      {
+        name: 'Copperton East',
+        description: 'Residential neighborhoods',
+        link: '/copperton',
+      },
+      {
+        name: 'Copperton West',
+        description: 'Commercial and residential mix',
+        link: '/copperton',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Copperton',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Copperton for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Copperton, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Copperton, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Copperton\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'Copperton is a small, close-knit community in Salt Lake County with a rich mining history. Whether you\'re working on a project in the central area or the surrounding neighborhoods, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Copperton, including all residential neighborhoods and commercial areas. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'brighton': {
+    cityName: 'Brighton',
+    citySlug: 'brighton',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.6000',
+    longitude: '-111.5833',
+    landmarks: [
+      {
+        name: 'Brighton Ski Resort',
+        address: '8302 S Brighton Loop Rd',
+        url: 'https://www.google.com/maps/search/Brighton+Ski+Resort+Utah',
+      },
+      {
+        name: 'Brighton Lakes',
+        address: 'Mountain Lakes Area',
+        url: 'https://www.google.com/maps/search/Brighton+Lakes+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Brighton Central',
+        description: 'Main resort and residential area',
+        link: '/brighton',
+      },
+      {
+        name: 'Brighton East',
+        description: 'Mountain residential area',
+        link: '/brighton',
+      },
+      {
+        name: 'Brighton West',
+        description: 'Lower mountain residential',
+        link: '/brighton',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Brighton',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Brighton for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Brighton, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Brighton, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Brighton\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'Brighton is a beautiful mountain community known for its world-class ski resort and stunning natural surroundings. Whether you\'re working on a project near the resort or in the mountain residential areas, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Brighton, including all residential areas and mountain properties. Our same-day delivery ensures you get your dumpster when and where you need it, even in the mountain areas.',
+    },
+  },
+  'alta': {
+    cityName: 'Alta',
+    citySlug: 'alta',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.5833',
+    longitude: '-111.6333',
+    landmarks: [
+      {
+        name: 'Alta Ski Area',
+        address: '10300 E Little Cottonwood Canyon Rd',
+        url: 'https://www.google.com/maps/search/Alta+Ski+Area+Utah',
+      },
+      {
+        name: 'Alta Lakes',
+        address: 'Mountain Lakes Area',
+        url: 'https://www.google.com/maps/search/Alta+Lakes+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Alta Central',
+        description: 'Main resort and residential area',
+        link: '/alta',
+      },
+      {
+        name: 'Alta East',
+        description: 'Mountain residential area',
+        link: '/alta',
+      },
+      {
+        name: 'Alta West',
+        description: 'Lower mountain residential',
+        link: '/alta',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Alta',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Alta for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Alta, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Alta, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Alta\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'Alta is a beautiful mountain community known for its world-class ski area and stunning natural surroundings. Whether you\'re working on a project near the ski area or in the mountain residential areas, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Alta, including all residential areas and mountain properties. Our same-day delivery ensures you get your dumpster when and where you need it, even in the mountain areas.',
+    },
+  },
+  'west-bountiful': {
+    cityName: 'West Bountiful',
+    citySlug: 'west-bountiful',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.8894',
+    longitude: '-111.9047',
+    landmarks: [
+      {
+        name: 'West Bountiful City Hall',
+        address: '550 N 800 W',
+        url: 'https://www.google.com/maps/search/West+Bountiful+City+Hall+Utah',
+      },
+      {
+        name: 'West Bountiful Park',
+        address: 'Local Park Area',
+        url: 'https://www.google.com/maps/search/West+Bountiful+Park+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'West Bountiful Central',
+        description: 'Main residential and commercial area',
+        link: '/west-bountiful',
+      },
+      {
+        name: 'West Bountiful East',
+        description: 'Residential neighborhoods',
+        link: '/west-bountiful',
+      },
+      {
+        name: 'West Bountiful West',
+        description: 'Commercial and residential mix',
+        link: '/west-bountiful',
+      },
+    ],
+    permitInfo: {
+      cityName: 'West Bountiful',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact West Bountiful for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout West Bountiful, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in West Bountiful, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of West Bountiful\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'West Bountiful is a growing community in Davis County with a mix of residential and commercial areas. Whether you\'re working on a project in the central area or the surrounding neighborhoods, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout West Bountiful, including all residential neighborhoods and commercial areas. Our same-day delivery ensures you get your dumpster when and where you need it.',
+    },
+  },
+  'granger': {
+    cityName: 'Granger',
+    citySlug: 'granger',
+    state: 'UT',
+    phoneNumber: '801-918-6000',
+    latitude: '40.6916',
+    longitude: '-111.9931',
+    landmarks: [
+      {
+        name: 'Granger Community Center',
+        address: 'Local Community Center',
+        url: 'https://www.google.com/maps/search/Granger+Community+Center+Utah',
+      },
+      {
+        name: 'Granger Park',
+        address: 'Local Park Area',
+        url: 'https://www.google.com/maps/search/Granger+Park+Utah',
+      },
+    ],
+    businessDistricts: [
+      {
+        name: 'Granger Central',
+        description: 'Main residential and commercial area',
+        link: '/granger',
+      },
+      {
+        name: 'Granger East',
+        description: 'Residential neighborhoods',
+        link: '/granger',
+      },
+      {
+        name: 'Granger West',
+        description: 'Commercial and residential mix',
+        link: '/granger',
+      },
+    ],
+    permitInfo: {
+      cityName: 'Granger',
+      phoneNumber: '801-918-6000',
+      requirements: 'Contact Granger for permit requirements and applications. We can help guide you through the process.',
+    },
+    contentSections: {
+      overview: 'Icon Dumpsters provides reliable dumpster rental services throughout Granger, Utah. Whether you\'re tackling a home renovation, construction project, or major cleanup, we have the right dumpster size for your needs.',
+      residentialServices: [
+        'Home renovations and remodeling',
+        'Basement cleanouts',
+        'Garage organization',
+        'Yard waste removal',
+        'Estate cleanouts',
+      ],
+      commercialServices: [
+        'Construction and demolition',
+        'Office renovations',
+        'Retail store cleanouts',
+        'Industrial waste removal',
+        'Event cleanup',
+      ],
+      whyChooseUs: 'When you need reliable dumpster rental services in Granger, Icon Dumpsters stands out as your trusted local partner. Our commitment to excellence and deep understanding of Granger\'s unique needs makes us the preferred choice for residents and businesses alike.',
+      dumpsterSizes: [
+        {
+          size: '15 Yard',
+          description: 'Perfect for small to medium projects',
+          useCases: [
+            'Kitchen remodel',
+            'Bathroom renovation',
+            'Garage cleanout',
+            'Small construction',
+          ],
+        },
+        {
+          size: '20 Yard',
+          description: 'Great for medium to large projects',
+          useCases: [
+            'Full home renovation',
+            'Large construction',
+            'Commercial projects',
+            'Major cleanouts',
+          ],
+        },
+        {
+          size: '30 Yard',
+          description: 'For major projects and construction',
+          useCases: [
+            'Large construction',
+            'Commercial demolition',
+            'Major renovations',
+            'Industrial projects',
+          ],
+        },
+      ],
+      localInfo: 'Granger is a residential community in Salt Lake County with a mix of residential neighborhoods and commercial areas. Whether you\'re working on a project in the central area or the surrounding neighborhoods, we\'re here to help with your dumpster rental needs.',
+      serviceAreas: 'We provide dumpster rental services throughout Granger, including all residential neighborhoods and commercial areas. Our same-day delivery ensures you get your dumpster when and where you need it.',
     },
   },
   // Continue with more cities...

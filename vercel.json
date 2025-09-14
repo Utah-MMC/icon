@@ -891,6 +891,66 @@
       "source": "/slc-dumpster-rental-South%20Jordan-ut",
       "destination": "/slc-dumpster-rental-south-jordan-ut",
       "permanent": true
+    },
+    {
+      "source": "/cities/bluffdale/dumpster-rental",
+      "destination": "/bluffdale",
+      "permanent": true
+    },
+    {
+      "source": "/cities/downtown-salt-lake/dumpster-rental",
+      "destination": "/downtown-salt-lake",
+      "permanent": true
+    },
+    {
+      "source": "/cities/west-bountiful/dumpster-rental",
+      "destination": "/west-bountiful",
+      "permanent": true
+    },
+    {
+      "source": "/cities/granger/dumpster-rental",
+      "destination": "/granger",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-dumpster-rental-business-solutions-dumpster-rental-guide-2025",
+      "destination": "/commercial-dumpster-rental-business-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/west-bountiful",
+      "destination": "/west-bountiful",
+      "permanent": true
+    },
+    {
+      "source": "/granger",
+      "destination": "/granger",
+      "permanent": true
+    },
+    {
+      "source": "/white-city",
+      "destination": "/roll-off-dumpster-rental-white-city",
+      "permanent": true
+    },
+    {
+      "source": "/emigration-canyon",
+      "destination": "/roll-off-dumpster-rental-emigration-canyon",
+      "permanent": true
+    },
+    {
+      "source": "/copperton",
+      "destination": "/roll-off-dumpster-rental-copperton",
+      "permanent": true
+    },
+    {
+      "source": "/brighton",
+      "destination": "/roll-off-dumpster-rental-brighton",
+      "permanent": true
+    },
+    {
+      "source": "/alta",
+      "destination": "/roll-off-dumpster-rental-alta",
+      "permanent": true
     }
   ],
   "cleanUrls": true,

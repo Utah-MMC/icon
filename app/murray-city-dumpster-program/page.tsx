@@ -290,7 +290,7 @@ export default function MurrayCityDumpsterProgramPage() {
                 </div>
                 <div>
                   <p className="text-gray-700 mb-2"><strong>Hours:</strong> Monday-Friday, 8:00 AM - 5:00 PM</p>
-                  <p className="text-gray-700 mb-2"><strong>Website:</strong> murray.utah.gov</p>
+                  <p className="text-gray-700 mb-2"><strong>Website:</strong> <a href="https://www.google.com/maps/search/Murray+City+Hall+Utah" className="text-blue-600 hover:underline">Murray City Hall</a></p>
                   <p className="text-gray-700 mb-2"><strong>Emergency:</strong> (801) 264-2660</p>
                 </div>
               </div>

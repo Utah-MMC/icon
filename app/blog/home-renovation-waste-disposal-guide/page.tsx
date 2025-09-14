@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Home Renovation Waste Disposal Guide: Complete 2025 Guide',
-  description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective disposal strategies for your renovation project.',
+  description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective strategies.',
   keywords: 'home renovation waste disposal, renovation dumpster rental, construction waste management, home improvement waste, renovation cleanup, waste disposal guide',
   openGraph: {
     title: 'Home Renovation Waste Disposal Guide: Complete 2025 Guide',
-    description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective disposal strategies for your renovation project.',
+    description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective strategies.',
     type: 'article',
     url: 'https://icondumpsters.com/home-renovation-waste-disposal-guide',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Home Renovation Waste Disposal Guide: Complete 2025 Guide',
-    description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective disposal strategies for your renovation project.',
+    description: 'Master home renovation waste disposal with our comprehensive guide. Learn about dumpster rental, waste sorting, recycling tips, and cost-effective strategies.',
     images: ['/images/home-renovation-waste-disposal.jpg']
   },
   alternates: {
