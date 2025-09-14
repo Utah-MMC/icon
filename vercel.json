@@ -145,817 +145,817 @@
     {
       "source": "/test-security",
       "destination": "/",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/www/:path*",
       "destination": "/:path*",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-size-estimation-guide",
       "destination": "/blog/dumpster-size-estimation-guide",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/commercialbusiness-solutions",
       "destination": "/commercial-dumpster-rental-business-solutions",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/commercialbusiness-solutions-dumpster-rental-guide-2025",
       "destination": "/commercial-dumpster-rental-business-solutions",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/springville-dumpster-rental-guide-2025",
       "destination": "/springville",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/lindon-dumpster-rental-guide-2025",
       "destination": "/lindon",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/spanish-fork-dumpster-rental-guide-2025",
       "destination": "/spanish-fork",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-sandy-utah",
       "destination": "/sandy",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/salt-lake-county-dumpster-program",
       "destination": "/salt-lake-county-dumpster-rental",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utahlocations-dumpster-rental-guide-2025",
       "destination": "/utah-dumpster-rental-locations",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/st-george",
       "destination": "/contact",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Taylorsville",
       "destination": "/roll-off-dumpster-rental-taylorsville",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Taylorsville-ut",
       "destination": "/30-yard-dumpster-rental-taylorsville-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Magna",
       "destination": "/roll-off-dumpster-rental-magna",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Kearns-ut",
       "destination": "/30-yard-dumpster-rental-kearns-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Taylorsville-ut",
       "destination": "/dumpster-rental-near-me-taylorsville-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Sandy-ut",
       "destination": "/30-yard-dumpster-rental-sandy-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-South%20Jordan-ut",
       "destination": "/dumpster-rental-near-me-south-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Draper-ut",
       "destination": "/30-yard-dumpster-rental-draper-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-South%20Jordan-ut",
       "destination": "/30-yard-dumpster-rental-south-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Riverton-ut",
       "destination": "/30-yard-dumpster-rental-riverton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-South%20Salt%20Lake-ut",
       "destination": "/30-yard-dumpster-rental-south-salt-lake-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Cottonwood%20Heights-ut",
       "destination": "/slc-dumpster-rental-cottonwood-heights-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Draper-ut",
       "destination": "/slc-dumpster-rental-draper-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-South%20Salt%20Lake-ut",
       "destination": "/dumpster-rental-near-me-south-salt-lake-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Holladay-ut",
       "destination": "/rolloff-dumpster-rental-holladay-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Bluffdale",
       "destination": "/roll-off-dumpster-rental-bluffdale",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Kearns",
       "destination": "/utah-dumpster-rental-kearns",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Brighton",
       "destination": "/utah-dumpster-rental-brighton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Taylorsville-ut",
       "destination": "/slc-dumpster-rental-taylorsville-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-White%20City-ut",
       "destination": "/rolloff-dumpster-rental-white-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Murray-ut",
       "destination": "/dumpster-rental-near-me-murray-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-West%20Valley%20City",
       "destination": "/roll-off-dumpster-rental-west-valley-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Emigration%20Canyon-ut",
       "destination": "/slc-dumpster-rental-emigration-canyon-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Copperton-ut",
       "destination": "/rolloff-dumpster-rental-copperton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Magna-ut",
       "destination": "/dumpster-rental-near-me-magna-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Millcreek-ut",
       "destination": "/slc-dumpster-rental-millcreek-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Herriman-ut",
       "destination": "/rolloff-dumpster-rental-herriman-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Copperton-ut",
       "destination": "/30-yard-dumpster-rental-copperton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Riverton",
       "destination": "/roll-off-dumpster-rental-riverton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Emigration%20Canyon-ut",
       "destination": "/dumpster-rental-near-me-emigration-canyon-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Brighton-ut",
       "destination": "/dumpster-rental-near-me-brighton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Salt%20Lake%20City",
       "destination": "/roll-off-dumpster-rental-salt-lake-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Emigration%20Canyon-ut",
       "destination": "/rolloff-dumpster-rental-emigration-canyon-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Midvale",
       "destination": "/roll-off-dumpster-rental-midvale",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Salt%20Lake%20City-ut",
       "destination": "/dumpster-rental-near-me-salt-lake-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Brighton-ut",
       "destination": "/rolloff-dumpster-rental-brighton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Alta-ut",
       "destination": "/rolloff-dumpster-rental-alta-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Midvale",
       "destination": "/utah-dumpster-rental-midvale",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Alta",
       "destination": "/roll-off-dumpster-rental-alta",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Bluffdale",
       "destination": "/utah-dumpster-rental-bluffdale",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Copperton",
       "destination": "/roll-off-dumpster-rental-copperton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-White%20City",
       "destination": "/roll-off-dumpster-rental-white-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Holladay-ut",
       "destination": "/slc-dumpster-rental-holladay-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Sandy-ut",
       "destination": "/dumpster-rental-near-me-sandy-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-South%20Jordan-ut",
       "destination": "/rolloff-dumpster-rental-south-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-South%20Jordan",
       "destination": "/utah-dumpster-rental-south-jordan",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Sandy",
       "destination": "/utah-dumpster-rental-sandy",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Herriman-ut",
       "destination": "/slc-dumpster-rental-herriman-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Riverton-ut",
       "destination": "/rolloff-dumpster-rental-riverton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Holladay-ut",
       "destination": "/dumpster-rental-near-me-holladay-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Alta-ut",
       "destination": "/slc-dumpster-rental-alta-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-West%20Valley%20City",
       "destination": "/utah-dumpster-rental-west-valley-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Sandy-ut",
       "destination": "/slc-dumpster-rental-sandy-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Draper",
       "destination": "/roll-off-dumpster-rental-draper",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Emigration%20Canyon",
       "destination": "/roll-off-dumpster-rental-emigration-canyon",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Draper-ut",
       "destination": "/rolloff-dumpster-rental-draper-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Alta-ut",
       "destination": "/dumpster-rental-near-me-alta-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Emigration%20Canyon",
       "destination": "/utah-dumpster-rental-emigration-canyon",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-White%20City-ut",
       "destination": "/30-yard-dumpster-rental-white-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Kearns-ut",
       "destination": "/rolloff-dumpster-rental-kearns-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Millcreek-ut",
       "destination": "/rolloff-dumpster-rental-millcreek-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Sandy",
       "destination": "/roll-off-dumpster-rental-sandy",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Holladay-ut",
       "destination": "/30-yard-dumpster-rental-holladay-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Magna-ut",
       "destination": "/slc-dumpster-rental-magna-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Draper-ut",
       "destination": "/dumpster-rental-near-me-draper-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Riverton-ut",
       "destination": "/slc-dumpster-rental-riverton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-West%20Valley%20City-ut",
       "destination": "/rolloff-dumpster-rental-west-valley-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-West%20Jordan-ut",
       "destination": "/slc-dumpster-rental-west-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Midvale-ut",
       "destination": "/30-yard-dumpster-rental-midvale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Draper",
       "destination": "/utah-dumpster-rental-draper",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Herriman-ut",
       "destination": "/dumpster-rental-near-me-herriman-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-South%20Salt%20Lake-ut",
       "destination": "/slc-dumpster-rental-south-salt-lake-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Emigration%20Canyon-ut",
       "destination": "/30-yard-dumpster-rental-emigration-canyon-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Alta-ut",
       "destination": "/30-yard-dumpster-rental-alta-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Salt%20Lake%20City-ut",
       "destination": "/slc-dumpster-rental-salt-lake-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Midvale-ut",
       "destination": "/dumpster-rental-near-me-midvale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-White%20City-ut",
       "destination": "/slc-dumpster-rental-white-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Cottonwood%20Heights",
       "destination": "/utah-dumpster-rental-cottonwood-heights",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Sandy-ut",
       "destination": "/rolloff-dumpster-rental-sandy-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Magna-ut",
       "destination": "/rolloff-dumpster-rental-magna-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Riverton-ut",
       "destination": "/dumpster-rental-near-me-riverton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Riverton",
       "destination": "/utah-dumpster-rental-riverton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Alta",
       "destination": "/utah-dumpster-rental-alta",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-West%20Valley%20City-ut",
       "destination": "/dumpster-rental-near-me-west-valley-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Herriman",
       "destination": "/roll-off-dumpster-rental-herriman",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-West%20Jordan-ut",
       "destination": "/rolloff-dumpster-rental-west-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Midvale-ut",
       "destination": "/rolloff-dumpster-rental-midvale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Herriman",
       "destination": "/utah-dumpster-rental-herriman",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-White%20City-ut",
       "destination": "/dumpster-rental-near-me-white-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Taylorsville-ut",
       "destination": "/rolloff-dumpster-rental-taylorsville-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Salt%20Lake%20City-ut",
       "destination": "/rolloff-dumpster-rental-salt-lake-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Cottonwood%20Heights-ut",
       "destination": "/rolloff-dumpster-rental-cottonwood-heights-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-South%20Jordan",
       "destination": "/roll-off-dumpster-rental-south-jordan",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Magna-ut",
       "destination": "/30-yard-dumpster-rental-magna-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Taylorsville",
       "destination": "/utah-dumpster-rental-taylorsville",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Brighton-ut",
       "destination": "/30-yard-dumpster-rental-brighton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Cottonwood%20Heights",
       "destination": "/roll-off-dumpster-rental-cottonwood-heights",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Millcreek",
       "destination": "/roll-off-dumpster-rental-millcreek",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Murray",
       "destination": "/roll-off-dumpster-rental-murray",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Bluffdale-ut",
       "destination": "/dumpster-rental-near-me-bluffdale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Cottonwood%20Heights-ut",
       "destination": "/dumpster-rental-near-me-cottonwood-heights-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Murray-ut",
       "destination": "/rolloff-dumpster-rental-murray-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Kearns",
       "destination": "/roll-off-dumpster-rental-kearns",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Brighton-ut",
       "destination": "/slc-dumpster-rental-brighton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-West%20Jordan",
       "destination": "/utah-dumpster-rental-west-jordan",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-West%20Jordan-ut",
       "destination": "/30-yard-dumpster-rental-west-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Millcreek-ut",
       "destination": "/dumpster-rental-near-me-millcreek-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Magna",
       "destination": "/utah-dumpster-rental-magna",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-West%20Valley%20City-ut",
       "destination": "/slc-dumpster-rental-west-valley-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Copperton-ut",
       "destination": "/dumpster-rental-near-me-copperton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Salt%20Lake%20City",
       "destination": "/utah-dumpster-rental-salt-lake-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Copperton",
       "destination": "/utah-dumpster-rental-copperton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-Kearns-ut",
       "destination": "/dumpster-rental-near-me-kearns-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-Bluffdale-ut",
       "destination": "/rolloff-dumpster-rental-bluffdale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Holladay",
       "destination": "/utah-dumpster-rental-holladay",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-locations",
       "destination": "/utah-dumpster-rental-locations",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-South%20Salt%20Lake",
       "destination": "/utah-dumpster-rental-south-salt-lake",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Bluffdale-ut",
       "destination": "/30-yard-dumpster-rental-bluffdale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Cottonwood%20Heights-ut",
       "destination": "/30-yard-dumpster-rental-cottonwood-heights-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Kearns-ut",
       "destination": "/slc-dumpster-rental-kearns-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Bluffdale-ut",
       "destination": "/slc-dumpster-rental-bluffdale-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/rolloff-dumpster-rental-South%20Salt%20Lake-ut",
       "destination": "/rolloff-dumpster-rental-south-salt-lake-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-West%20Jordan",
       "destination": "/roll-off-dumpster-rental-west-jordan",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/dumpster-rental-near-me-West%20Jordan-ut",
       "destination": "/dumpster-rental-near-me-west-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Salt%20Lake%20City-ut",
       "destination": "/30-yard-dumpster-rental-salt-lake-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-South%20Salt%20Lake",
       "destination": "/roll-off-dumpster-rental-south-salt-lake",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Copperton-ut",
       "destination": "/slc-dumpster-rental-copperton-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-West%20Valley%20City-ut",
       "destination": "/30-yard-dumpster-rental-west-valley-city-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Brighton",
       "destination": "/roll-off-dumpster-rental-brighton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Millcreek-ut",
       "destination": "/30-yard-dumpster-rental-millcreek-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Millcreek",
       "destination": "/utah-dumpster-rental-millcreek",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-White%20City",
       "destination": "/utah-dumpster-rental-white-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/utah-dumpster-rental-Murray",
       "destination": "/utah-dumpster-rental-murray",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/roll-off-dumpster-rental-Holladay",
       "destination": "/roll-off-dumpster-rental-holladay",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-Murray-ut",
       "destination": "/slc-dumpster-rental-murray-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Herriman-ut",
       "destination": "/30-yard-dumpster-rental-herriman-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/30-yard-dumpster-rental-Murray-ut",
       "destination": "/30-yard-dumpster-rental-murray-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/slc-dumpster-rental-South%20Jordan-ut",
       "destination": "/slc-dumpster-rental-south-jordan-ut",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/cities/bluffdale/dumpster-rental",
       "destination": "/bluffdale",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/cities/downtown-salt-lake/dumpster-rental",
       "destination": "/downtown-salt-lake",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/cities/west-bountiful/dumpster-rental",
       "destination": "/bountiful",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/cities/granger/dumpster-rental",
       "destination": "/west-valley-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/commercial-dumpster-rental-business-solutions-dumpster-rental-guide-2025",
       "destination": "/commercial-dumpster-rental-business-solutions",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/commercial-dumpster-rental",
       "destination": "/services",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/west-bountiful",
       "destination": "/bountiful",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/granger",
       "destination": "/west-valley-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/white-city",
       "destination": "/roll-off-dumpster-rental-white-city",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/emigration-canyon",
       "destination": "/roll-off-dumpster-rental-emigration-canyon",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/copperton",
       "destination": "/roll-off-dumpster-rental-copperton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/brighton",
       "destination": "/roll-off-dumpster-rental-brighton",
-      "permanent": true
+      "permanent": 308
     },
     {
       "source": "/alta",
       "destination": "/roll-off-dumpster-rental-alta",
-      "permanent": true
+      "permanent": 308
     }
   ],
   "cleanUrls": true,
