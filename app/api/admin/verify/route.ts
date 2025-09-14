@@ -20,9 +20,9 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ authenticated: false }, { status: 401 });
       }
 
-      // Check if IP matches (basic security)
+      // Check if IP matches (basic security) - but be more lenient for development
       const currentIp = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || req.headers.get('x-client-ip') || 'unknown';
-      if (sessionData.ip !== currentIp) {
+      if (sessionData.ip !== currentIp && process.env.NODE_ENV === 'production') {
         console.warn('IP mismatch detected:', { sessionIp: sessionData.ip, currentIp });
         return NextResponse.json({ authenticated: false }, { status: 401 });
       }
@@ -58,11 +58,11 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ authenticated: false }, { status: 403 });
     }
 
-    // Check if request is from same origin (basic CSRF protection)
+    // Check if request is from same origin (basic CSRF protection) - but be more lenient for development
     const origin = req.headers.get('origin');
     const host = req.headers.get('host');
     
-    if (origin && !origin.includes(host || '')) {
+    if (origin && !origin.includes(host || '') && process.env.NODE_ENV === 'production') {
       console.warn('Cross-origin request detected:', { origin, host });
       return NextResponse.json({ authenticated: false }, { status: 403 });
     }

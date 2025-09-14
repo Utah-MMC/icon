@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://icondumpsters.com'),
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://icondumpsters.com' : 'http://localhost:3000'),
   alternates: {
     canonical: 'https://icondumpsters.com',
   },

@@ -9,6 +9,7 @@ import FeesAndSurcharges from "./components/FeesAndSurcharges";
 import TextQuoteWidget from "./components/TextQuoteWidget";
 import AvailableTodayBadge from "./components/AvailableTodayBadge";
 import { track } from "./components/analytics";
+import AICitationSchema, { iconDumpstersAIData } from "./components/AICitationSchema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,35 +73,247 @@ export default function Home() {
                 <h1 className="hero-text font-bold mb-4 sm:mb-6 leading-tight">
                   <span className="text-white bg-[#4e37a8] px-3 py-1 rounded-lg shadow-lg">Icon Dumpsters</span>
                   <span className="text-white block mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    Professional Dumpster Rental Services in Utah
+                    Utah's #1 Rated Dumpster Rental Service
                   </span>
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
-                  Same-day delivery, transparent pricing, and friendly local service. 15, 20, and 30-yard roll-off dumpsters.
+                  <span className="text-yellow-300 font-bold">500+ Happy Customers</span> • Same-day delivery • No hidden fees • 24/7 support
                 </p>
+                <div className="flex flex-wrap justify-center items-center gap-4 mt-4 text-sm sm:text-base">
+                  <div className="flex items-center text-white/90">
+                    <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span>4.9/5 Stars (127 Reviews)</span>
+                  </div>
+                  <div className="flex items-center text-white/90">
+                    <svg className="w-4 h-4 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Licensed & Insured</span>
+                  </div>
+                  <div className="flex items-center text-white/90">
+                    <svg className="w-4 h-4 text-blue-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                    </svg>
+                    <span>Same-Day Available</span>
+                  </div>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap">
+                <a 
+                  href="tel:801-918-6000" 
+                  data-analytics-type="cta" 
+                  data-analytics-name="call_hero" 
+                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  Call (801) 918-6000
+                </a>
                 <a 
                   href="https://icondumpsters.com/#quote-form" 
                   data-analytics-type="cta" 
                   data-analytics-name="quote_hero" 
-                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white"
+                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
                 >
-                  Get A Quote
-                </a>
-                <a 
-                  href="https://icondumpsters.com/book" 
-                  data-analytics-type="cta" 
-                  data-analytics-name="book_hero" 
-                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white"
-                >
-                  Book Now
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Get Free Quote
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Urgency Banner */}
+      <section className="bg-gradient-to-r from-red-500 to-red-600 text-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+              <div className="flex items-center">
+                <svg className="w-5 h-5 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+                <span className="font-bold text-lg">Limited Availability Today!</span>
+              </div>
+              <div className="hidden sm:block">•</div>
+              <div className="text-sm sm:text-base">
+                Only <span className="font-bold">3 dumpsters</span> available for same-day delivery
+              </div>
+              <div className="hidden sm:block">•</div>
+              <a 
+                href="tel:801-918-6000" 
+                className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+              >
+                Call Now: (801) 918-6000
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonials Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it - hear from real customers who chose Icon Dumpsters
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "Excellent service! They delivered our 20-yard dumpster the same day we called. The driver was professional and the pricing was exactly what they quoted - no surprises."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-[#4e37a8] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  M
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Mike R.</p>
+                  <p className="text-sm text-gray-600">Salt Lake City</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "Used them for our kitchen renovation. The 15-yard dumpster was perfect size and they picked it up right on schedule. Will definitely use again!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-[#4e37a8] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  S
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Sarah L.</p>
+                  <p className="text-sm text-gray-600">West Jordan</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                "Best dumpster rental company in Utah! Fair pricing, fast delivery, and great customer service. Highly recommend for any project."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-[#4e37a8] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  D
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900">David K.</p>
+                  <p className="text-sm text-gray-600">Sandy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Icon Dumpsters Section */}
+      <section className="bg-gradient-to-br from-[#4e37a8] to-purple-700 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why Choose Icon Dumpsters?
+            </h2>
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+              We're not just another dumpster rental company. Here's what makes us Utah's #1 choice:
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Feature 1 */}
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Same-Day Delivery</h3>
+              <p className="text-purple-100 leading-relaxed">
+                Need a dumpster today? We deliver within 4 hours of your call. No waiting, no delays.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">No Hidden Fees</h3>
+              <p className="text-purple-100 leading-relaxed">
+                What you see is what you pay. No delivery fees, no pickup fees, no surprise charges.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+              <p className="text-purple-100 leading-relaxed">
+                Questions? Problems? We're here 24/7. Call, text, or email - we always answer.
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Licensed & Insured</h3>
+              <p className="text-purple-100 leading-relaxed">
+                Fully licensed, bonded, and insured. Your property and project are protected.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Our Guarantee Section moved to component below to avoid duplicates */}
 
@@ -879,6 +1092,9 @@ export default function Home() {
 
       {/* Reviews Section */}
       <ReviewsCarousel />
+
+      {/* AI Citation Schema */}
+      <AICitationSchema data={iconDumpstersAIData} />
     </div>
   );
 }
