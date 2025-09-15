@@ -40,39 +40,39 @@ export default function Home() {
         >
           <div className="absolute inset-0" style={{zIndex: 1}}>
             <Image
-              src="/images/optimized/dumpsterWithTruck.jpg" 
+              src="/dumpsterWithTruck-enhance-4x-faceai-textai.jpeg" 
               alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
               fill
-              className="object-cover object-center"
+              className="object-cover object-center sm:object-right-center"
               priority
               sizes="100vw"
             />
           </div>
           
-          {/* Enhanced overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+          {/* Enhanced overlay for better text readability - optimized for mobile */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 sm:from-black/60 sm:via-black/50 sm:to-black/70"></div>
           
-          {/* TEXT US Call-to-Action - Top Left */}
-          <div className="absolute top-4 left-4 z-20">
+          {/* TEXT US Call-to-Action - Top Left - Mobile Optimized */}
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20">
             <a 
               href="sms:+18019186000" 
               data-analytics-type="cta" 
               data-analytics-name="text_us_hero"
-              className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-[#3d2c85] transition-colors font-medium text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+              className="bg-[#4e37a8] text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-[#3d2c85] transition-colors font-medium text-xs sm:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-1 sm:gap-2"
             >
-              <span className="text-lg">📱</span>
+              <span className="text-sm sm:text-lg">📱</span>
               <div className="text-left">
-                <div className="font-bold">TEXT US</div>
+                <div className="font-bold text-xs sm:text-sm">TEXT US</div>
                 <div className="text-xs sm:text-sm">(801) 918-6000</div>
               </div>
             </a>
           </div>
           
-          {/* Hero Content - Overlaid on image */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+          {/* Hero Content - Overlaid on image - optimized for mobile */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-20">
             <div className="text-center">
-              {/* Enhanced text container with background for better readability */}
-              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-8 border border-white/20">
+              {/* Enhanced text container with background for better readability - mobile optimized */}
+              <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-4 sm:p-8 md:p-10 mb-4 sm:mb-8 border border-white/20">
                 <h1 className="hero-text font-bold mb-4 sm:mb-6 leading-tight">
                   <span className="text-white bg-[#4e37a8] px-3 py-1 rounded-lg shadow-lg">Icon Dumpsters</span>
                   <span className="text-white block mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
@@ -103,14 +103,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 flex-wrap">
                 <a 
                   href="tel:801-918-6000" 
                   data-analytics-type="cta" 
                   data-analytics-name="call_hero" 
-                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
+                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-6 sm:px-10 py-3 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-base sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
                 >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   Call (801) 918-6000
@@ -119,9 +119,9 @@ export default function Home() {
                   href="https://icondumpsters.com/#quote-form" 
                   data-analytics-type="cta" 
                   data-analytics-name="quote_hero" 
-                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-lg sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
+                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-base sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center"
                 >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Get Free Quote
