@@ -60,7 +60,7 @@ export default function EnhancedHeader() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24 py-4">
             {/* Logo */}
-            <div className="flex items-center flex-shrink-0">
+            <div className="flex items-center flex-shrink-0 mr-12">
               <a href="/" className="flex items-center hover:opacity-90 transition-opacity duration-200">
                 <Image
                   src="/IconDumpsters_Logo_Vector_Pantone266purple.png" 
