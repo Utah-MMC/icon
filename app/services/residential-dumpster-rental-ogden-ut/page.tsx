@@ -80,8 +80,7 @@ export default function OgdenResidentialDumpsterRentalPage() {
           
           <div className="relative">
             <div className="relative w-full h-64 rounded-lg overflow-hidden">
-              <Image
-                src="/images/dumpsterSmallBanner5.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner5.jpg"
                 alt="Ogden residential dumpster rental"
                 fill
                 className="object-cover"
@@ -98,8 +97,7 @@ export default function OgdenResidentialDumpsterRentalPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg text-center">
               <div className="relative w-full h-48 mb-6">
-                <Image
-                  src="/images/dumpster500x500-1.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                   alt="15 yard residential dumpster"
                   fill
                   className="object-cover rounded-lg"
@@ -131,8 +129,7 @@ export default function OgdenResidentialDumpsterRentalPage() {
 
             <div className="bg-gray-50 p-8 rounded-lg text-center border-2 border-blue-600">
               <div className="relative w-full h-48 mb-6">
-                <Image
-                  src="/images/dumpster500x500-2.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                   alt="20 yard residential dumpster"
                   fill
                   className="object-cover rounded-lg"
@@ -164,8 +161,7 @@ export default function OgdenResidentialDumpsterRentalPage() {
 
             <div className="bg-gray-50 p-8 rounded-lg text-center">
               <div className="relative w-full h-48 mb-6">
-                <Image
-                  src="/images/dumpster5-500x500-1.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster5-500x500-1.jpg"
                   alt="30 yard residential dumpster"
                   fill
                   className="object-cover rounded-lg"
@@ -298,8 +294,7 @@ export default function OgdenResidentialDumpsterRentalPage() {
             
             <div className="relative">
               <div className="relative w-full h-64 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Icon_Dumpsters_Final.webp"
+                <OptimizedImage src="/images/optimized/Icon_Dumpsters_Final.jpg"
                   alt="Icon Dumpsters residential services"
                   fill
                   className="object-contain"

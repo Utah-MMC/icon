@@ -175,8 +175,7 @@ export default function RolloffDumpsterGuide2025() {
             {/* Image 1: After Introduction */}
             <div className="my-12">
               <div className="relative">
-                <Image
-                  src="/images/dumpster500x500-1.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                   alt="Professional rolloff dumpster delivery service - Icon Dumpsters"
                   width={800}
                   height={600}
@@ -244,8 +243,7 @@ export default function RolloffDumpsterGuide2025() {
             {/* Image 2: After Sizes Section */}
             <div className="my-12">
               <div className="relative">
-                <Image
-                  src="/images/dumpster500x500-2.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                   alt="Different dumpster sizes comparison - Choose the right size for your project"
                   width={800}
                   height={600}
@@ -527,8 +525,7 @@ export default function RolloffDumpsterGuide2025() {
             {/* Image 3: After Placement Section */}
             <div className="my-12">
               <div className="relative">
-                <Image
-                  src="/images/dumpsterSmallBanner.jpeg"
+                <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                   alt="Dumpster placement and site preparation - Proper site preparation ensures smooth delivery"
                   width={800}
                   height={400}
@@ -598,8 +595,7 @@ export default function RolloffDumpsterGuide2025() {
             {/* Image 4: After Loading Process */}
             <div className="my-12">
               <div className="relative">
-                <Image
-                  src="/images/dumpsterSmallBanner2.jpeg"
+                <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
                   alt="Construction debris being loaded into dumpster - Efficient loading maximizes space utilization"
                   width={800}
                   height={400}
@@ -686,8 +682,7 @@ export default function RolloffDumpsterGuide2025() {
             {/* Image 5: Before Conclusion */}
             <div className="my-12">
               <div className="relative">
-                <Image
-                  src="/images/dumpsterSmallBanner4.jpeg"
+                <OptimizedImage src="/images/optimized/dumpsterSmallBanner4.jpg"
                   alt="Dumpster pickup and removal service - Timely pickup keeps your project on schedule"
                   width={800}
                   height={400}
@@ -750,8 +745,7 @@ export default function RolloffDumpsterGuide2025() {
               <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                  <Link href="https://icondumpsters.com/estimate-right-dumpster-size-home-cleanout" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                     <Image
-                       src="/images/blog/dumpster-size-estimation.jpg"
+                     <OptimizedImage src="/images/blog/dumpster-size-estimation.jpg"
                        alt="How to Estimate the Right Dumpster Size for a Home Cleanout Project - Icon Dumpsters Blog"
                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                        fill
@@ -792,8 +786,7 @@ export default function RolloffDumpsterGuide2025() {
                              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                  <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                     <Image
-                       src="/images/dumpsterSmallBanner2.jpeg"
+                     <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
                        alt="Home Renovation Waste Disposal Guide - Icon Dumpsters Blog"
                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                        fill
@@ -834,8 +827,7 @@ export default function RolloffDumpsterGuide2025() {
                              <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                  <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="block">
                    <div className="relative h-48 overflow-hidden bg-white flex items-center justify-center">
-                     <Image
-                       src="/images/dumpsterSmallBanner.jpeg"
+                     <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                        alt="Commercial Dumpster Rental Business Solutions - Icon Dumpsters Blog"
                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                        fill

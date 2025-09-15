@@ -67,7 +67,7 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="w-12 h-12 sm:w-16 sm:h-16">
                         <ImageWithFallback 
-                          src="/images/IMG_0350.jpg" 
+                          src="/images/optimized/IMG_0350.jpg" 
                           alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" 
                           className="w-full h-full object-cover rounded"
                           fallbackSrc="/images/dumpsters.webp"
@@ -91,7 +91,7 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="w-12 h-12 sm:w-16 sm:h-16">
                         <ImageWithFallback 
-                          src="/images/dumpster500x200-2.jpeg" 
+                          src="/images/optimized/dumpster500x200-2.jpg" 
                           alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental - Ideal for Medium Projects" 
                           className="w-full h-full object-cover rounded"
                           fallbackSrc="/images/dumpster500x200-2.webp"
@@ -115,7 +115,7 @@ export default function DumpsterSizeModal({ isOpen, onClose }: DumpsterSizeModal
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="w-12 h-12 sm:w-16 sm:h-16">
                         <ImageWithFallback 
-                          src="/images/dumpster500x200-3.jpeg" 
+                          src="/images/optimized/dumpster500x200-3.jpg" 
                           alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental - Great for Large Projects" 
                           className="w-full h-full object-cover rounded"
                           fallbackSrc="/images/dumpster500x200-3.webp"

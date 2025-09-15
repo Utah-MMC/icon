@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import OptimizedImage from './OptimizedImage';
 
 interface PageHeroProps {
   title: string;
@@ -56,8 +57,8 @@ export default function PageHero({
           </div>
           <div className="relative flex justify-center lg:justify-end">
             <div className="bg-white rounded-lg shadow-2xl p-4 w-full max-w-md lg:max-w-lg">
-              <Image
-                src="/images/IconDumpsters_Logo_Vector_Pantone266purple.png"
+              <OptimizedImage
+                src="/images/optimized/IconDumpsters_Logo_Vector_Pantone266purple.jpg"
                 alt="Icon Dumpsters - Professional Dumpster Rental Services"
                 width={600}
                 height={400}

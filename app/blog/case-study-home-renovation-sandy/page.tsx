@@ -24,7 +24,7 @@ export default function CaseStudySandy() {
       <section className="relative bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="relative h-56 md:h-72 lg:h-80 rounded-xl overflow-hidden shadow mx-auto max-w-5xl bg-white flex items-center justify-center">
-            <ImageWithFallback src="/images/dumpsterWithTruck.jpeg" fallbackSrc="/images/dumpsters.webp" alt="Sandy UT home renovation cleanup case study" fill className="object-contain" />
+            <ImageWithFallback src="/images/optimized/dumpsterWithTruck.jpg" fallbackSrc="/images/dumpsters.webp" alt="Sandy UT home renovation cleanup case study" fill className="object-contain" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mt-8">Case Study: Home Renovation Cleanup in Sandy, UT</h1>
           <p className="text-purple-100 text-lg md:text-xl mt-3">How a 20‑yard dumpster kept a kitchen & flooring remodel on track.</p>

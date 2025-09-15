@@ -78,7 +78,7 @@ export default function DumpsterSizes() {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <ImageWithFallback
-                  src="/images/dumpster500x500-1.jpeg"
+                  src="/images/optimized/dumpster500x500-1.jpg"
                   alt="Professional roll-off dumpster rental equipment"
                   className="w-full h-full object-cover"
                   fallbackSrc="/images/dumpster500x500-1.webp"
@@ -86,7 +86,7 @@ export default function DumpsterSizes() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <ImageWithFallback
-                  src="/images/dumpster500x500-2.jpeg"
+                  src="/images/optimized/dumpster500x500-2.jpg"
                   alt="High-quality dumpster rental equipment"
                   className="w-full h-full object-cover"
                   fallbackSrc="/images/dumpster500x500-2.webp"
@@ -94,7 +94,7 @@ export default function DumpsterSizes() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <ImageWithFallback
-                  src="/images/dumpsterWithTruck.jpeg"
+                  src="/images/optimized/dumpsterWithTruck.jpg"
                   alt="Dumpster delivery and pickup service"
                   className="w-full h-full object-cover"
                   fallbackSrc="/images/dumpsterWithTruck.webp"
@@ -127,7 +127,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/IMG_0350.jpg" 
+                        src="/images/optimized/IMG_0350.jpg" 
                         alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/dumpsters.webp" 
@@ -156,7 +156,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/IMG_0336.jpg" 
+                        src="/images/optimized/IMG_0336.jpg" 
                         alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/dumpster500x500-1.webp" 
@@ -185,7 +185,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/dumpster5-500x500-1.jpeg" 
+                        src="/images/optimized/dumpster5-500x500-1.jpg" 
                         alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/dumpster5-500x500-1.webp" 
@@ -223,7 +223,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/IMG_3190.jpg" 
+                        src="/images/optimized/IMG_3190.jpg" 
                         alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/IMG_3190.jpg" 
@@ -252,7 +252,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/IMG_3190.jpg" 
+                        src="/images/optimized/IMG_3190.jpg" 
                         alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/IMG_3190.jpg" 
@@ -281,7 +281,7 @@ export default function DumpsterSizes() {
                   <div className="p-6">
                     <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 mb-4">
                       <ImageWithFallback 
-                        src="/images/IMG_3190.jpg" 
+                        src="/images/optimized/IMG_3190.jpg" 
                         alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental" 
                         className="w-full h-32 object-contain object-center rounded-lg" 
                         fallbackSrc="/images/IMG_3190.jpg" 
@@ -367,7 +367,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/IMG_0350.jpg" 
+                            src="/images/optimized/IMG_0350.jpg" 
                             alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/dumpsters.webp"
@@ -391,7 +391,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/dumpster500x200-2.jpeg" 
+                            src="/images/optimized/dumpster500x200-2.jpg" 
                             alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental - Ideal for Medium Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/dumpster500x200-2.webp"
@@ -415,7 +415,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/dumpster500x200-3.jpeg" 
+                            src="/images/optimized/dumpster500x200-3.jpg" 
                             alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental - Great for Large Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/dumpster500x200-3.webp"
@@ -439,7 +439,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
+                            src="/images/optimized/IMG_3190.jpg" 
                             alt="10 Yard Clean Dirt Disposal Dumpster for Utah Dumpster Rental - Perfect for Dirt and Soil Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/IMG_3190.jpg"
@@ -463,7 +463,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
+                            src="/images/optimized/IMG_3190.jpg" 
                             alt="10 Yard Mixed Load Disposal Dumpster for Utah Dumpster Rental" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/IMG_3190.jpg"
@@ -487,7 +487,7 @@ export default function DumpsterSizes() {
                       <div className="flex items-center gap-2 sm:gap-3">
                         <div className="w-12 h-12 sm:w-16 sm:h-16">
                           <ImageWithFallback 
-                            src="/images/IMG_3190.jpg" 
+                            src="/images/optimized/IMG_3190.jpg" 
                             alt="12 Yard Concrete Disposal Dumpster for Utah Dumpster Rental - Perfect for Concrete Projects" 
                             className="w-full h-full object-cover rounded"
                             fallbackSrc="/images/IMG_3190.jpg"

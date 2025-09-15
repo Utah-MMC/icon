@@ -25,7 +25,7 @@ export default function BlogChooseSize() {
       <section className="relative bg-gradient-to-br from-[#4e37a8] via-purple-700 to-[#4e37a8] text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="relative h-56 md:h-72 lg:h-80 rounded-xl overflow-hidden shadow mx-auto max-w-5xl bg-white flex items-center justify-center">
-            <ImageWithFallback src="/images/dumpsterSmallBanner3.jpeg" fallbackSrc="/images/dumpsterSmallBanner3.webp" alt="Dumpster sizes in Utah - roll‑off dumpster guide" fill className="object-contain" />
+            <ImageWithFallback src="/images/optimized/dumpsterSmallBanner3.jpg" fallbackSrc="/images/dumpsterSmallBanner3.webp" alt="Dumpster sizes in Utah - roll‑off dumpster guide" fill className="object-contain" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mt-8">How to Choose the Right Dumpster Size</h1>
           <p className="text-purple-100 text-lg md:text-xl mt-3">15, 20, or 30 yard? Here’s how to decide.</p>

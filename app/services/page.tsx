@@ -40,8 +40,7 @@ export default function Services() {
         {/* Service Images Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/dumpster500x500-1.jpeg"
+            <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
               alt="Professional dumpster delivery service in Utah"
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
@@ -54,8 +53,7 @@ export default function Services() {
           </div>
           
           <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/dumpster500x500-2.jpeg"
+            <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
               alt="Multiple dumpster sizes available for different projects"
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
@@ -68,8 +66,7 @@ export default function Services() {
           </div>
           
           <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/dumpsterSmallBanner.jpeg"
+            <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
               alt="Construction site with properly placed dumpster"
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
@@ -82,8 +79,7 @@ export default function Services() {
           </div>
           
           <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/dumpsterSmallBanner2.jpeg"
+            <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
               alt="Efficient waste loading and management"
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
@@ -101,8 +97,7 @@ export default function Services() {
           {/* Residential Dumpster Rentals */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpster500x500-1.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Residential dumpster rental for home projects"
                 fill
                 className="object-cover"
@@ -141,8 +136,7 @@ export default function Services() {
           {/* Construction Dumpster Rentals */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpsterSmallBanner.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Construction dumpster rental for building projects"
                 fill
                 className="object-cover"
@@ -181,8 +175,7 @@ export default function Services() {
           {/* Garbage & Junk Bin Rentals */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpsterSmallBanner2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Garbage and junk bin rental for waste removal"
                 fill
                 className="object-cover"
@@ -221,8 +214,7 @@ export default function Services() {
           {/* Yard Waste & Debris Bin Rental */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpster500x500-2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Yard waste and debris bin rental for landscaping"
                 fill
                 className="object-cover"
@@ -261,8 +253,7 @@ export default function Services() {
           {/* Downsizing Dumpster Rentals */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpsterSmallBanner4.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner4.jpg"
                 alt="Downsizing dumpster rental for moving and estate cleanout"
                 fill
                 className="object-cover"
@@ -302,8 +293,7 @@ export default function Services() {
           {/* Estate Cleanout */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 overflow-hidden">
-              <Image
-                src="/images/dumpsterSmallBanner.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Estate cleanout dumpster rental for property cleanup"
                 fill
                 className="object-cover"

@@ -10,6 +10,7 @@ import TextQuoteWidget from "./components/TextQuoteWidget";
 import AvailableTodayBadge from "./components/AvailableTodayBadge";
 import { track } from "./components/analytics";
 import AICitationSchema, { iconDumpstersAIData } from "./components/AICitationSchema";
+import OptimizedImage from "./components/OptimizedImage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,11 +39,13 @@ export default function Home() {
           className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] xl:min-h-screen flex items-center justify-center overflow-hidden bg-[#4e37a8]"
         >
           <div className="absolute inset-0" style={{zIndex: 1}}>
-            <img
-              src="/images/dumpsters.jpeg" 
+            <OptimizedImage
+              src="/images/optimized/dumpsterWithTruck.jpg" 
               alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
-              className="w-full h-full object-cover object-center"
-              style={{display: 'block', minHeight: '100%'}}
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
             />
           </div>
           
@@ -592,7 +595,7 @@ export default function Home() {
           {/* General Residential Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/dumpsters.jpeg" alt="Residential Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/dumpsters.jpg" alt="Residential Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -609,7 +612,7 @@ export default function Home() {
           {/* Construction Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/Construction-Rental-480x480.jpg" alt="Construction Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -626,7 +629,7 @@ export default function Home() {
           {/* Concrete Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/dumpster500x500-1.jpeg" alt="Concrete Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg" alt="Concrete Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -643,7 +646,7 @@ export default function Home() {
           {/* Roofing Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/dumpster500x500-2.jpeg" alt="Roofing Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg" alt="Roofing Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -660,7 +663,7 @@ export default function Home() {
           {/* Yard Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/dumpsterSmallBanner2.jpeg" alt="Yard Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg" alt="Yard Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">
@@ -677,7 +680,7 @@ export default function Home() {
           {/* Recyclable Waste */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <a href="https://icondumpsters.com/services" className="block">
-              <Image src="/images/dumpster500x500-1.jpeg" alt="Recyclable Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg" alt="Recyclable Waste Dumpster Rental Services in Utah" width={400} height={200} className="w-full h-40 sm:h-48 object-cover hover:opacity-90 transition-opacity" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             </a>
             <div className="p-4 sm:p-6">
               <div className="flex items-center justify-between mb-3">

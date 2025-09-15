@@ -122,7 +122,7 @@ export default function ConstructionWasteManagement() {
         {/* Featured Image */}
         <div className="mb-12">
           <ImageWithFallback 
-            src="/images/dumpsterSmallBanner.jpeg" 
+            src="/images/optimized/dumpsterSmallBanner.jpg" 
             alt="Construction Waste Management Best Practices 2025 - Professional construction waste disposal and management services" 
             className="w-full h-96 object-cover rounded-lg shadow-lg" 
             fallbackSrc="/images/dumpsterSmallBanner.webp" 
@@ -165,7 +165,7 @@ export default function ConstructionWasteManagement() {
             
             <div className="mb-8">
               <ImageWithFallback
-                src="/images/Construction-Rental-480x480.jpg"
+                src="/images/optimized/Construction-Rental-480x480.jpg"
                 fallbackSrc="/images/Construction-Rental-480x480.jpg"
                 alt="Construction site with professional waste management and dumpster rental services"
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
@@ -189,7 +189,7 @@ export default function ConstructionWasteManagement() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <ImageWithFallback
-                  src="/images/dumpster500x200-4.jpeg"
+                  src="/images/optimized/dumpster500x200-4.jpg"
                   fallbackSrc="/images/dumpster500x200-4.jpeg"
                   alt="Construction debris and materials in organized waste management system"
                   className="w-full h-32 object-cover rounded-lg mb-4"
@@ -213,7 +213,7 @@ export default function ConstructionWasteManagement() {
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
                 <ImageWithFallback
-                  src="/images/dumpster500x500-1.jpeg"
+                  src="/images/optimized/dumpster500x500-1.jpg"
                   fallbackSrc="/images/dumpster500x500-1.jpeg"
                   alt="Large construction dumpster for major building projects"
                   className="w-full h-32 object-cover rounded-lg mb-4"
@@ -238,7 +238,7 @@ export default function ConstructionWasteManagement() {
 
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-8">
               <ImageWithFallback
-                src="/images/dumpsterWithTruck.jpeg"
+                src="/images/optimized/dumpsterWithTruck.jpg"
                 fallbackSrc="/images/dumpsterWithTruck.jpeg"
                 alt="Professional waste removal service with dumpster and truck for construction sites"
                 className="w-full h-48 object-cover rounded-lg mb-4"
@@ -283,7 +283,7 @@ export default function ConstructionWasteManagement() {
             
             <div className="mb-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner3.jpeg"
+                src="/images/optimized/dumpsterSmallBanner3.jpg"
                 fallbackSrc="/images/dumpsterSmallBanner3.jpeg"
                 alt="Strategic construction waste management planning and organization"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"

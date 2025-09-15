@@ -127,7 +127,7 @@ export default function DumpsterCalculatorForConcrete() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/concrete.webp"
+              src="/images/optimized/concrete.jpg"
               alt="Concrete Dumpster Calculator - Calculate concrete disposal costs and dumpster size requirements"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/concrete.jpg"

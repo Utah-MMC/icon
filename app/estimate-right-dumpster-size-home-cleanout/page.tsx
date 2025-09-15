@@ -161,8 +161,7 @@ export default function DumpsterSizeEstimationGuide() {
           <section id="introduction">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
             <div className="mb-8">
-              <Image
-                src="/images/dumpster500x500-1.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Professional dumpster rental for home cleanout projects"
                 width={800}
                 height={400}
@@ -217,8 +216,7 @@ export default function DumpsterSizeEstimationGuide() {
           <section id="common-sizes">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Dumpster Sizes for Home Cleanouts</h2>
             <div className="mb-8">
-              <Image
-                src="/images/dumpster500x500-2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Different dumpster sizes available for home cleanout projects"
                 width={800}
                 height={400}
@@ -286,8 +284,7 @@ export default function DumpsterSizeEstimationGuide() {
           <section id="project-examples">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Dumpster Size by Project Type (Practical Examples)</h2>
             <div className="mb-8">
-              <Image
-                src="/images/dumpsterSmallBanner.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Dumpster rental for different project types"
                 width={800}
                 height={400}
@@ -366,8 +363,7 @@ export default function DumpsterSizeEstimationGuide() {
           <section id="cost-factors">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Factors Linked to Dumpster Sizes</h2>
             <div className="mb-8">
-              <Image
-                src="/images/dumpsterSmallBanner2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Dumpster rental cost factors and pricing"
                 width={800}
                 height={400}

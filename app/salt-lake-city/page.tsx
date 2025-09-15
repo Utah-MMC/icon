@@ -77,7 +77,7 @@ export default function SaltLakeCityPage() {
                 {/* Hero Image */}
                 <div className="mb-8">
                   <img
-                    src="/images/IMG_0350.jpg" 
+                    src="/images/optimized/IMG_0350.jpg" 
                     alt="Professional dumpster rental services in Salt Lake City, Utah - Icon Dumpsters" 
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
@@ -126,7 +126,7 @@ export default function SaltLakeCityPage() {
                 {/* Dumpster Sizes Image */}
                 <div className="mb-8">
                   <img
-                    src="/images/dumpsterSmallBanner3.jpeg" 
+                    src="/images/optimized/dumpsterSmallBanner3.jpg" 
                     alt="Available dumpster sizes for Salt Lake City dumpster rental - 15, 20, and 30 yard options" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"
                   />
@@ -174,7 +174,7 @@ export default function SaltLakeCityPage() {
                 {/* Guide Image */}
                 <div className="mb-6">
                   <img
-                    src="/images/IMG_0336.jpg" 
+                    src="/images/optimized/IMG_0336.jpg" 
                     alt="Complete Salt Lake City dumpster rental guide with pricing and regulations" 
                     className="w-full h-48 object-cover rounded-lg shadow-md"
                   />
@@ -182,7 +182,7 @@ export default function SaltLakeCityPage() {
                 {/* Hero Image */}
                 <div className="mb-8">
                   <img
-                    src="/images/IMG_0350.jpg" 
+                    src="/images/optimized/IMG_0350.jpg" 
                     alt="Professional dumpster rental services in Salt Lake City, Utah - Icon Dumpsters" 
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />

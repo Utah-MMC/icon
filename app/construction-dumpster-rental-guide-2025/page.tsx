@@ -101,7 +101,7 @@ export default function ConstructionDumpsterRentalGuide() {
             {/* First Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-1.jpeg"
+                src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Construction dumpster being delivered to job site"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -135,7 +135,7 @@ export default function ConstructionDumpsterRentalGuide() {
             {/* Second Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-2.jpeg"
+                src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Different construction dumpster sizes comparison"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -169,7 +169,7 @@ export default function ConstructionDumpsterRentalGuide() {
             {/* Third Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner.jpeg"
+                src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Construction site with properly placed dumpster"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -203,7 +203,7 @@ export default function ConstructionDumpsterRentalGuide() {
             {/* Fourth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner2.jpeg"
+                src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Construction debris being loaded into dumpster"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -229,7 +229,7 @@ export default function ConstructionDumpsterRentalGuide() {
             {/* Fifth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner4.jpeg"
+                src="/images/optimized/dumpsterSmallBanner4.jpg"
                 alt="Construction dumpster pickup and removal"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

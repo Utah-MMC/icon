@@ -101,7 +101,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             {/* First Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-1.jpeg"
+                src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Home renovation project with organized waste management planning"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -135,7 +135,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             {/* Second Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-2.jpeg"
+                src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Different dumpster sizes for home renovation projects"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -169,7 +169,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             {/* Third Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner.jpeg"
+                src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Home renovation materials being sorted for recycling and reuse"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -195,7 +195,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             {/* Fourth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner2.jpeg"
+                src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Proper disposal methods for home renovation waste"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -229,7 +229,7 @@ export default function HomeRenovationWasteDisposalGuide() {
             {/* Fifth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner4.jpeg"
+                src="/images/optimized/dumpsterSmallBanner4.jpg"
                 alt="Cost-effective home renovation waste disposal solutions"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

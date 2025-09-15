@@ -92,8 +92,7 @@ export default function AboutClient() {
           {/* Image Gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-1.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Icon Dumpsters professional service team"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -106,8 +105,7 @@ export default function AboutClient() {
             </div>
             
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Icon Dumpsters fleet of dumpsters"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -120,8 +118,7 @@ export default function AboutClient() {
             </div>
             
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpsterSmallBanner.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Icon Dumpsters serving Utah communities"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -134,8 +131,7 @@ export default function AboutClient() {
             </div>
             
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpsterSmallBanner2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Icon Dumpsters customer satisfaction"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"

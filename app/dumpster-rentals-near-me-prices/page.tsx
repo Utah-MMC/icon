@@ -67,7 +67,7 @@ export default function DumpsterRentalsNearMePrices() {
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src="/images/dumpster500x500-1.jpeg" 
+              src="/images/optimized/dumpster500x500-1.jpg" 
               alt="Local dumpster rental prices near you - Icon Dumpsters" 
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg"
             />
@@ -137,7 +137,7 @@ export default function DumpsterRentalsNearMePrices() {
         {/* Dumpster Size Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpster500x500-2.webp" 
+            src="/images/optimized/dumpster500x500-2.jpg" 
             alt="Different dumpster sizes and their rental prices near you" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -228,7 +228,7 @@ export default function DumpsterRentalsNearMePrices() {
         {/* Construction Debris Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpster500x200-1.webp" 
+            src="/images/optimized/dumpster500x200-1.jpg" 
             alt="Construction debris and waste management - dumpster rental near me" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -296,7 +296,7 @@ export default function DumpsterRentalsNearMePrices() {
         {/* Final Service Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpsterSmallBanner.webp" 
+            src="/images/optimized/dumpsterSmallBanner.jpg" 
             alt="Professional dumpster rental service near you - Icon Dumpsters" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />

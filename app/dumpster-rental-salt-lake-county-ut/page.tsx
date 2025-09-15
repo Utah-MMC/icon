@@ -281,24 +281,21 @@ export default function SaltLakeCountyCountyPage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-1.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Professional roll-off dumpster for rent in Salt Lake County"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                 alt="High-quality dumpster rental equipment in Salt Lake County"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpsterWithTruck.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterWithTruck.jpg"
                 alt="Dumpster delivery and pickup service in Salt Lake County"
                 fill
                 className="object-cover"

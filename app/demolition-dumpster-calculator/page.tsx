@@ -127,7 +127,7 @@ export default function DemolitionDumpsterCalculator() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/dumpster500x500-1.jpeg"
+              src="/images/optimized/dumpster500x500-1.jpg"
               alt="Demolition Dumpster Calculator - Calculate dumpster size and costs for demolition projects"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/dumpster500x500-1.webp"

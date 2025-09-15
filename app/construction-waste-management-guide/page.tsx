@@ -101,7 +101,7 @@ export default function ConstructionWasteManagementGuide() {
             {/* First Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-1.jpeg"
+                src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Construction site with organized waste management system"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -136,7 +136,7 @@ export default function ConstructionWasteManagementGuide() {
             {/* Second Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-2.jpeg"
+                src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Construction materials being sorted for recycling"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -170,7 +170,7 @@ export default function ConstructionWasteManagementGuide() {
             {/* Third Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner.jpeg"
+                src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Construction site with proper waste management compliance signage"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -195,7 +195,7 @@ export default function ConstructionWasteManagementGuide() {
             {/* Fourth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner2.jpeg"
+                src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Construction waste management planning and organization"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -229,7 +229,7 @@ export default function ConstructionWasteManagementGuide() {
             {/* Fifth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner4.jpeg"
+                src="/images/optimized/dumpsterSmallBanner4.jpg"
                 alt="Cost-effective construction waste management solutions"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

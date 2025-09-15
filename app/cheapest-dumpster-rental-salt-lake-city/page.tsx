@@ -67,7 +67,7 @@ export default function CheapestDumpsterRentalSaltLakeCity() {
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src="/images/dumpsters.jpeg" 
+              src="/images/optimized/dumpsters.jpg" 
               alt="Professional dumpster rental services in Salt Lake City - Icon Dumpsters" 
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg"
             />
@@ -114,7 +114,7 @@ export default function CheapestDumpsterRentalSaltLakeCity() {
           {/* Dumpster Size Comparison Image */}
           <div className="mb-8">
             <img 
-              src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" 
+              src="/images/optimized/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg" 
               alt="20 yard roll-off dumpster size comparison - Salt Lake City dumpster rental" 
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg"
             />
@@ -149,7 +149,7 @@ export default function CheapestDumpsterRentalSaltLakeCity() {
         {/* Construction Project Image */}
         <section className="mb-12">
           <img 
-            src="/images/Construction-Rental-480x480.jpg" 
+            src="/images/optimized/Construction-Rental-480x480.jpg" 
             alt="Construction project with dumpster rental in Salt Lake City" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -270,7 +270,7 @@ export default function CheapestDumpsterRentalSaltLakeCity() {
         {/* Final Dumpster Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpsterWithTruck.jpeg" 
+            src="/images/optimized/dumpsterWithTruck.jpg" 
             alt="Icon Dumpsters truck delivering dumpster rental in Salt Lake City" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />

@@ -12,7 +12,7 @@ export default function Reviews() {
       <div className="relative">
         <div className="relative h-64 sm:h-80 lg:h-96">
           <ImageWithFallback 
-            src="/images/dumpsterSmallBanner5.jpeg" 
+            src="/images/optimized/dumpsterSmallBanner5.jpg" 
             alt="Customer Reviews and Testimonials for Icon Dumpsters - Utah's Trusted Dumpster Rental Service"
             fill
             className="object-cover"

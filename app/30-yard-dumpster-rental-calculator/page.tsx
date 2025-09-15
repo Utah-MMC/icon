@@ -127,7 +127,7 @@ export default function ThirtyYardDumpsterRentalCalculator() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/dumpster500x500-2.jpeg"
+              src="/images/optimized/dumpster500x500-2.jpg"
               alt="30 Yard Dumpster Rental Calculator - Calculate costs and capacity for large projects"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/dumpster500x500-2.webp"

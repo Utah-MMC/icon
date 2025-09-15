@@ -127,7 +127,7 @@ export default function TwentyYardDumpsterWeight() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/dumpster500x500-1.jpeg"
+              src="/images/optimized/dumpster500x500-1.jpg"
               alt="20 Yard Dumpster Weight - Empty dumpster weight and specifications guide"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/dumpster500x500-1.webp"

@@ -66,7 +66,7 @@ export default function MidvaleCityDumpsterRental() {
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src="/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp" 
+              src="/images/optimized/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.jpg" 
               alt="Professional dumpster rental services in Midvale City, Utah" 
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg"
             />
@@ -139,7 +139,7 @@ export default function MidvaleCityDumpsterRental() {
         {/* Midvale City Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpster500x200-2.webp" 
+            src="/images/optimized/dumpster500x200-2.jpg" 
             alt="Midvale City, Utah - local dumpster rental service area" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -202,7 +202,7 @@ export default function MidvaleCityDumpsterRental() {
         {/* Service Area Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpsterSmallBanner3.webp" 
+            src="/images/optimized/dumpsterSmallBanner3.jpg" 
             alt="Midvale City dumpster rental service areas - professional waste management" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -257,7 +257,7 @@ export default function MidvaleCityDumpsterRental() {
         {/* Final Midvale Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpsterSmallBanner4.webp" 
+            src="/images/optimized/dumpsterSmallBanner4.jpg" 
             alt="Midvale City dumpster rental - professional local service" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />

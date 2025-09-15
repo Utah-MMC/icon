@@ -125,8 +125,7 @@ export default function EnhancedCityPageTemplate({
               </div>
               {/* Hero Image - Dumpster in action */}
               <div className="mb-8">
-                <Image
-                  src="/images/dumpsterWithTruck.jpeg"
+                <OptimizedImage src="/images/optimized/dumpsterWithTruck.jpg"
                   alt={`Professional dumpster rental services in ${cityName}, Utah`}
                   width={800}
                   height={400}
@@ -175,8 +174,7 @@ export default function EnhancedCityPageTemplate({
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">🏠 Residential Projects</h3>
                     <div className="mb-4">
-                      <Image
-                        src="/images/IMG_3190.jpg"
+                      <OptimizedImage src="/images/optimized/IMG_3190.jpg"
                         alt={`Residential dumpster rental services in ${cityName}, Utah`}
                         width={400}
                         height={250}
@@ -192,8 +190,7 @@ export default function EnhancedCityPageTemplate({
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 Commercial Projects</h3>
                     <div className="mb-4">
-                      <Image
-                        src="/images/commercial.jpg"
+                      <OptimizedImage src="/images/optimized/commercial.jpg"
                         alt={`Commercial dumpster rental services in ${cityName}, Utah`}
                         width={400}
                         height={250}
@@ -231,8 +228,7 @@ export default function EnhancedCityPageTemplate({
                 
                 {/* Why choose us image */}
                 <div className="mb-6">
-                  <Image
-                    src="/images/IMG_0350.jpg"
+                  <OptimizedImage src="/images/optimized/IMG_0350.jpg"
                     alt={`Professional dumpster rental services in ${cityName}, Utah`}
                     width={800}
                     height={400}
@@ -243,24 +239,21 @@ export default function EnhancedCityPageTemplate({
                 {/* Equipment Showcase */}
                 <div className="grid md:grid-cols-3 gap-4 mb-6">
                   <div className="relative h-32 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/dumpster500x500-1.jpeg"
+                    <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                       alt={`Professional roll-off dumpster in ${cityName}, Utah`}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative h-32 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/dumpster500x500-2.jpeg"
+                    <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                       alt={`High-quality dumpster rental equipment in ${cityName}, Utah`}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative h-32 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/dumpsterWithTruck.jpeg"
+                    <OptimizedImage src="/images/optimized/dumpsterWithTruck.jpg"
                       alt={`Dumpster delivery service in ${cityName}, Utah`}
                       fill
                       className="object-cover"
@@ -305,8 +298,7 @@ export default function EnhancedCityPageTemplate({
                 
                 {/* Dumpster sizes image */}
                 <div className="mb-8">
-                  <Image
-                    src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg"
+                  <OptimizedImage src="/images/optimized/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg"
                     alt={`Dumpster size comparison for ${cityName} projects`}
                     width={800}
                     height={300}
@@ -317,16 +309,14 @@ export default function EnhancedCityPageTemplate({
                 {/* Additional dumpster visuals */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="relative h-48 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/dumpster500x500-1.jpeg"
+                    <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                       alt={`Professional roll-off dumpster rental in ${cityName}, Utah`}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/dumpster500x500-2.jpeg"
+                    <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                       alt={`High-quality dumpster equipment in ${cityName}, Utah`}
                       fill
                       className="object-cover"
@@ -358,8 +348,7 @@ export default function EnhancedCityPageTemplate({
                 
                 {/* Local city image */}
                 <div className="mb-6">
-                  <Image
-                    src="/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp"
+                  <OptimizedImage src="/images/optimized/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.jpg"
                     alt={`${cityName}, Utah - Local attractions and business districts`}
                     width={800}
                     height={400}

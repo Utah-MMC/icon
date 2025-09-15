@@ -101,7 +101,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             {/* First Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-1.jpeg"
+                src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Commercial business with organized waste management system"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -135,7 +135,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             {/* Second Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpster500x500-2.jpeg"
+                src="/images/optimized/dumpster500x500-2.jpg"
                 alt="Enterprise waste management solutions with multiple dumpster types"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -169,7 +169,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             {/* Third Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner.jpeg"
+                src="/images/optimized/dumpsterSmallBanner.jpg"
                 alt="Commercial waste management with bulk pricing and volume discounts"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -195,7 +195,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             {/* Fourth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner2.jpeg"
+                src="/images/optimized/dumpsterSmallBanner2.jpg"
                 alt="Business compliance requirements for commercial waste management"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -229,7 +229,7 @@ export default function CommercialDumpsterRentalBusinessSolutions() {
             {/* Fifth Image */}
             <div className="my-8">
               <ImageWithFallback
-                src="/images/dumpsterSmallBanner4.jpeg"
+                src="/images/optimized/dumpsterSmallBanner4.jpg"
                 alt="Cost-effective commercial waste management solutions"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

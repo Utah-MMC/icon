@@ -127,7 +127,7 @@ export default function ConcreteDebrisCalculator() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/concrete.webp"
+              src="/images/optimized/concrete.jpg"
               alt="Concrete Debris Calculator - Calculate concrete waste volume and disposal costs"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/concrete.jpg"

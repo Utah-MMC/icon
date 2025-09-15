@@ -127,7 +127,7 @@ export default function RoofingDumpsterCalculator() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/dumpsterSmallBanner4.jpeg"
+              src="/images/optimized/dumpsterSmallBanner4.jpg"
               alt="Roofing Dumpster Calculator - Calculate roofing waste disposal costs and dumpster size requirements"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/dumpsterSmallBanner4.webp"

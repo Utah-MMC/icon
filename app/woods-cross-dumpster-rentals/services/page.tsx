@@ -71,8 +71,7 @@ export default function WoodsCrossServicesPage() {
           {/* Residential Services */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="mb-6">
-              <Image
-                src="/images/IMG_3190.jpg"
+              <OptimizedImage src="/images/optimized/IMG_3190.jpg"
                 alt="Residential dumpster rental services in Woods Cross, Utah"
                 width={600}
                 height={300}
@@ -106,8 +105,7 @@ export default function WoodsCrossServicesPage() {
           {/* Commercial Services */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="mb-6">
-              <Image
-                src="/images/commercial.jpg"
+              <OptimizedImage src="/images/optimized/commercial.jpg"
                 alt="Commercial dumpster rental services in Woods Cross, Utah"
                 width={600}
                 height={300}
@@ -147,8 +145,7 @@ export default function WoodsCrossServicesPage() {
           </p>
           
           <div className="mb-8">
-            <Image
-              src="/images/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg"
+            <OptimizedImage src="/images/optimized/20-yard-roll-off-dumpster-rental-graphic-labeled.jpg"
               alt="Dumpster size comparison for Woods Cross projects"
               width={800}
               height={300}

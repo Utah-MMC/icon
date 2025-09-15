@@ -109,7 +109,7 @@ export default function DumpsterRentalGuide2025() {
           {/* Featured Image */}
           <div className="relative h-96 overflow-hidden rounded-xl mb-12">
             <ImageWithFallback 
-                              src="/images/IMG_0350.jpg" 
+                              src="/images/optimized/IMG_0350.jpg" 
               alt="Dumpster Rental Guide 2025 - Professional Utah Dumpster Rental Services for Construction and Cleanup Projects" 
               className="object-cover" 
               fallbackSrc="/images/dumpsters.webp"
@@ -300,7 +300,7 @@ export default function DumpsterRentalGuide2025() {
             {/* Second Image - Dumpster Sizes */}
             <div className="my-12">
               <ImageWithFallback 
-                src="/images/dumpster500x500-1.jpeg" 
+                src="/images/optimized/dumpster500x500-1.jpg" 
                 alt="Different Dumpster Sizes for Utah Dumpster Rental - 15, 20, and 30 Yard Options" 
                 className="w-full h-64 object-cover rounded-xl" 
                 fallbackSrc="/images/dumpster500x500-1.webp"
@@ -476,7 +476,7 @@ export default function DumpsterRentalGuide2025() {
             {/* Third Image - Construction Site */}
             <div className="my-12">
               <ImageWithFallback 
-                src="/images/dumpsterSmallBanner.jpeg" 
+                src="/images/optimized/dumpsterSmallBanner.jpg" 
                 alt="Construction Site Dumpster Rental - Professional Utah Dumpster Services for Construction Projects" 
                 className="w-full h-64 object-cover rounded-xl" 
                 fallbackSrc="/images/dumpsterSmallBanner.webp"
@@ -703,7 +703,7 @@ export default function DumpsterRentalGuide2025() {
             {/* Fourth Image - Large Dumpster */}
             <div className="my-12">
               <ImageWithFallback 
-                src="/images/dumpster5-500x500-1.jpeg" 
+                src="/images/optimized/dumpster5-500x500-1.jpg" 
                 alt="Large 30 Yard Dumpster for Major Projects - Utah Dumpster Rental Services" 
                 className="w-full h-64 object-cover rounded-xl" 
                 fallbackSrc="/images/dumpster5-500x500-1.webp"
@@ -828,7 +828,7 @@ export default function DumpsterRentalGuide2025() {
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
-                    src="/images/dumpsterSmallBanner.jpeg" 
+                    src="/images/optimized/dumpsterSmallBanner.jpg" 
                     alt="Construction Waste Management 2025 - Professional Utah Dumpster Services" 
                     className="group-hover:scale-105 transition-transform duration-500" 
                     fallbackSrc="/images/dumpsterSmallBanner.webp"
@@ -849,7 +849,7 @@ export default function DumpsterRentalGuide2025() {
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
-                    src="/images/dumpsterSmallBanner2.jpeg" 
+                    src="/images/optimized/dumpsterSmallBanner2.jpg" 
                     alt="Home Renovation Waste Disposal Guide - Utah Dumpster Rental for Renovation Projects" 
                     className="group-hover:scale-105 transition-transform duration-500" 
                     fallbackSrc="/images/dumpsterSmallBanner2.webp"

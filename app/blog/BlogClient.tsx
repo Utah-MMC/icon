@@ -1001,7 +1001,7 @@ function BlogContent() {
                 <Link href="https://icondumpsters.com/home-renovation-waste-disposal-guide" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
                   <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                     <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner2.jpeg" 
+                      src="/images/optimized/dumpsterSmallBanner2.jpg" 
                       alt="Home Renovation Waste Disposal Guide - Utah Dumpster Rental for Renovation Projects" 
                       className="object-cover" 
                       fallbackSrc="/images/dumpsterSmallBanner2.webp"
@@ -1020,7 +1020,7 @@ function BlogContent() {
                 <Link href="https://icondumpsters.com/commercial-dumpster-rental-business-solutions" className="flex gap-3 text-gray-700 hover:text-[#4e37a8] transition-colors group">
                   <div className="bg-gray-200 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:shadow-md transition-shadow relative">
                     <ImageWithFallback 
-                      src="/images/dumpsterSmallBanner.jpeg" 
+                      src="/images/optimized/dumpsterSmallBanner.jpg" 
                       alt="Commercial Dumpster Rental Business Solutions - Professional Utah Dumpster Services" 
                       className="object-cover" 
                       fallbackSrc="/images/dumpsterSmallBanner.webp"

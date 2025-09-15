@@ -67,7 +67,7 @@ export default function CheapDumpsterRentalsNearMe() {
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src="/images/dumpster3-500x500-1.webp" 
+              src="/images/optimized/dumpster3-500x500-1.jpg" 
               alt="Cheap dumpster rental options near you - budget-friendly waste management" 
               className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg"
             />
@@ -140,7 +140,7 @@ export default function CheapDumpsterRentalsNearMe() {
         {/* Budget Dumpster Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpster4-500x500-1.webp" 
+            src="/images/optimized/dumpster4-500x500-1.jpg" 
             alt="Budget-friendly dumpster rental - how to save money on waste management" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -228,7 +228,7 @@ export default function CheapDumpsterRentalsNearMe() {
         {/* Cost Comparison Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpster5-500x500-1.webp" 
+            src="/images/optimized/dumpster5-500x500-1.jpg" 
             alt="Budget dumpster rental comparison - cheap waste management options" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />
@@ -320,7 +320,7 @@ export default function CheapDumpsterRentalsNearMe() {
         {/* Final Budget Image */}
         <section className="mb-12">
           <img 
-            src="/images/dumpsterSmallBanner2.webp" 
+            src="/images/optimized/dumpsterSmallBanner2.jpg" 
             alt="Affordable dumpster rental service - cheap waste management near you" 
             className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
           />

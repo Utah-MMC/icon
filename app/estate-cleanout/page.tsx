@@ -44,7 +44,7 @@ export default function EstateCleanout() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
             <ImageWithFallback 
-              src="/images/dumpsterSmallBanner5.jpeg" 
+              src="/images/optimized/dumpsterSmallBanner5.jpg" 
               alt="Professional Estate Cleanout Services in Utah - Complete Property Cleanup and Waste Removal" 
               className="w-full h-full object-cover"
             fallbackSrc="/images/dumpsterSmallBanner5.webp"

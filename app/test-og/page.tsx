@@ -29,8 +29,7 @@ export default function TestOGPage() {
           
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Preview of Open Graph Image:</h2>
           <div className="border-2 border-[#4e37a8] rounded-lg p-4 mb-6">
-            <Image 
-              src="/images/og-image.png" 
+            <OptimizedImage src="/images/optimized/og-image.jpg" 
               alt="Icon Dumpsters Open Graph Image" 
               width={600}
               height={315}

@@ -127,7 +127,7 @@ export default function DumpsterVolumeCalculator() {
           {/* Featured Image */}
           <div className="mb-12">
             <ImageWithFallback
-              src="/images/dumpster500x500-2.jpeg"
+              src="/images/optimized/dumpster500x500-2.jpg"
               alt="Dumpster Volume Calculator - Calculate dumpster capacity and dimensions for your project"
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
               fallbackSrc="/images/dumpster500x500-2.webp"
@@ -449,7 +449,7 @@ export default function DumpsterVolumeCalculator() {
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
-                    src="/images/dumpster500x500-1.jpeg" 
+                    src="/images/optimized/dumpster500x500-1.jpg" 
                     alt="Demolition Dumpster Calculator - Professional Utah Dumpster Services" 
                     className="group-hover:scale-105 transition-transform duration-500" 
                     fallbackSrc="/images/dumpster500x500-1.webp"
@@ -470,7 +470,7 @@ export default function DumpsterVolumeCalculator() {
               <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden relative">
                   <ImageWithFallback 
-                    src="/images/concrete.webp" 
+                    src="/images/optimized/concrete.jpg" 
                     alt="Dumpster Calculator for Concrete - Utah Dumpster Rental for Concrete Disposal" 
                     className="group-hover:scale-105 transition-transform duration-500" 
                     fallbackSrc="/images/concrete.jpg"

@@ -73,8 +73,7 @@ export default function DumpsterRentalPage() {
             {/* Residential Services */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/dumpster500x500-2.jpeg"
+                <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                   alt="Residential dumpster rental for home projects"
                   fill
                   className="object-cover"
@@ -102,8 +101,7 @@ export default function DumpsterRentalPage() {
             {/* Commercial Services */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/commercial.jpg"
+                <OptimizedImage src="/images/optimized/commercial.jpg"
                   alt="Commercial dumpster rental for business projects"
                   fill
                   className="object-cover"
@@ -131,8 +129,7 @@ export default function DumpsterRentalPage() {
             {/* Construction Services */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow overflow-hidden">
               <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Construction-Rental-480x480.jpg"
+                <OptimizedImage src="/images/optimized/Construction-Rental-480x480.jpg"
                   alt="Construction dumpster rental for heavy projects"
                   fill
                   className="object-cover"
@@ -174,24 +171,21 @@ export default function DumpsterRentalPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-1.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-1.jpg"
                 alt="Professional roll-off dumpster for rent"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpster500x500-2.jpeg"
+              <OptimizedImage src="/images/optimized/dumpster500x500-2.jpg"
                 alt="High-quality dumpster rental equipment"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/images/dumpsterWithTruck.jpeg"
+              <OptimizedImage src="/images/optimized/dumpsterWithTruck.jpg"
                 alt="Dumpster delivery and pickup service"
                 fill
                 className="object-cover"
