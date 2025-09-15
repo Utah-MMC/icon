@@ -135,7 +135,7 @@ export default function GoogleAdsAnalytics() {
     // Refresh data every 5 minutes
     const interval = setInterval(fetchGoogleAdsData, 5 * 60 * 1000);
     return () => clearInterval(interval);
-  }, [timeRange]);
+  }, [timeRange, fetchGoogleAdsData]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

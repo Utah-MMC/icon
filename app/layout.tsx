@@ -153,14 +153,14 @@ export default function RootLayout({
           src="https://www.google.com/recaptcha/api.js" 
           async 
           defer
-          onerror="console.warn('reCAPTCHA failed to load')"
+          onError={() => console.warn('reCAPTCHA failed to load')}
         ></script>
         {/* Ahrefs Analytics */}
         <script 
           src="https://analytics.ahrefs.com/analytics.js" 
           data-key="ctDHetXbMmD8XDhk/vJMcQ" 
           async
-          onerror="console.warn('Ahrefs Analytics failed to load')"
+          onError={() => console.warn('Ahrefs Analytics failed to load')}
         ></script>
         {/* Additional favicon links for better browser compatibility */}
         <link rel="icon" type="image/x-icon" href="https://icondumpsters.com/favicon.ico" />
