@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../../components/PageHero';
 
+import OptimizedImage from '../../components/OptimizedImage';
 export const metadata: Metadata = {
   "title": "Residential Dumpster Rental Poplar Grove, UT | Residential Waste Solutions",
   "description": "residential dumpster rental services in Poplar Grove, Utah. Reliable waste management for homeowners and residents. Get a free quote today.",

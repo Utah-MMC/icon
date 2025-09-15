@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../components/PageHero';
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: `Dumpster Rental Magna, UT | Same-Day Delivery | Icon Dumpsters`,
   description: `Magna dumpster rental with same-day delivery. 15-30 yard roll-off dumpsters, transparent pricing, and fast service. Get a free quote today.`,

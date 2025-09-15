@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../../components/PageHero';
 
+import OptimizedImage from '../../components/OptimizedImage';
 export const metadata: Metadata = {
   title: `Residential Dumpster Rental Magna, UT | Home Waste Removal | Icon Dumpsters`,
   description: `Residential dumpster rental services in Magna, Utah. Home renovation, cleanout, and maintenance waste removal. Same-day delivery available.`,

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../components/PageHero';
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: "Dumpster Rentals for Home & Business | Icon Dumpsters",
   description: "Professional dumpster rental services for residential, commercial, and construction projects. Same-day delivery, competitive pricing,...",

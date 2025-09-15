@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../../components/PageHero';
 
+import OptimizedImage from '../../components/OptimizedImage';
 export const metadata: Metadata = {
   title: `Commercial Dumpster Rental Magna, UT | Business Waste Solutions | Icon Dumpsters`,
   description: `Commercial dumpster rental services in Magna, Utah. Reliable waste management for businesses, construction sites, and commercial projects. Get a free quote today.`,

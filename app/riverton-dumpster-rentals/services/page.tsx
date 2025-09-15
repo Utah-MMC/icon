@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PageHero from '../../components/PageHero';
 import PageTemplate from '../../components/PageTemplate';
 
+import OptimizedImage from '../../components/OptimizedImage';
 export const metadata: Metadata = {
   title: "Riverton Dumpster Rental Services - Residential & Commercial | Icon Dumpsters",
   description: "Comprehensive dumpster rental services in Riverton, Utah. Residential, commercial, construction, and demolition services. Same-day delivery available. 15-30 yard roll-off dumpsters. Call (801) 918-6000.",

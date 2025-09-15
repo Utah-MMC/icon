@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../components/PageHero';
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: "Dumpster Rentals in Salt Lake County County, Utah | Icon Dumpsters",
   description: "Professional dumpster rental services throughout Salt Lake County County, Utah. Same-day delivery, competitive pricing, and excellent customer service for all your waste management needs.",

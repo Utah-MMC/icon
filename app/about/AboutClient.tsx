@@ -4,6 +4,7 @@ import Image from 'next/image';
 import QuoteForm from '../components/QuoteForm';
 import PageHero from '../components/PageHero';
 
+import OptimizedImage from '../components/OptimizedImage';
 export default function AboutClient() {
   return (
     <div className="min-h-screen bg-gray-50">

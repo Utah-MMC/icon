@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: "Open Graph Image Test - Icon Dumpsters",
   description: "Test page for Open Graph image configuration",

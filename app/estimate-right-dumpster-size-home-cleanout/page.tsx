@@ -5,6 +5,7 @@ import Image from 'next/image'
 import BlogAuthor from '../components/BlogAuthor'
 import PageHero from '../components/PageHero'
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: 'How to Estimate the Right Dumpster Size for a Home Cleanout Project (2025 Guide)',
   description: 'Struggling to pick the right dumpster size for your cleanout? This 2025 guide explains how to estimate dumpster sizes for home cleanout projects, covering costs, capacity, and tips to avoid overspending.',

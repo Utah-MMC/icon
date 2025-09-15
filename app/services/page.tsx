@@ -4,6 +4,7 @@ import PageHero from "../components/PageHero";
 import PageTemplate from "../components/PageTemplate";
 import RelatedPages from "../components/RelatedPages";
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: 'Dumpster Rental Services in Utah | Icon Dumpsters',
   description: 'Professional dumpster rental services in Utah including residential, construction, garbage removal, yard waste, and downsizing projects. Call (801) 918-6000 for instant quotes.',

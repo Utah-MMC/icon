@@ -4,6 +4,7 @@ import Image from 'next/image';
 import BlogSEO from '../components/BlogSEO';
 import FAQSchema from '../components/FAQSchema';
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   "title": "Rolloff Dumpster Guide 2025 | Utah Construction Waste Management",
   "description": "Complete guide to rolloff dumpster rental in Utah for 2025. Learn about sizes, delivery, and construction waste management.",

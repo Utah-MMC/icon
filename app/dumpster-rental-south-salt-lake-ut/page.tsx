@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../components/PageHero';
 
+import OptimizedImage from '../components/OptimizedImage';
 export const metadata: Metadata = {
   title: 'Dumpster Rental South Salt Lake, UT | Fast Delivery & Competitive Pricing',
   description: 'Dumpster rental in South Salt Lake, Utah. Multiple sizes available with same-day delivery. Get competitive pricing and professional service from Icon Dumpsters.',

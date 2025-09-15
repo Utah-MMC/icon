@@ -4,6 +4,7 @@ import Image from 'next/image';
 import QuoteForm from './QuoteForm';
 import BlogSEO from './BlogSEO';
 
+import OptimizedImage from './OptimizedImage';
 interface EnhancedCityPageTemplateProps {
   cityName: string;
   citySlug: string;

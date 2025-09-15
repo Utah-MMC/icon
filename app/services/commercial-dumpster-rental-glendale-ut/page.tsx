@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '../../components/PageHero';
 
+import OptimizedImage from '../../components/OptimizedImage';
 export const metadata: Metadata = {
   "title": "Commercial Dumpster Rental Glendale, UT | Commercial Waste Solutions",
   "description": "commercial dumpster rental services in Glendale, Utah. Reliable waste management for businesses and construction sites. Get a free quote today.",
