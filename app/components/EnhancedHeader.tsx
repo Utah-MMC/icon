@@ -62,42 +62,14 @@ export default function EnhancedHeader() {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <a href="/" className="flex items-center hover:opacity-90 transition-opacity duration-200">
-                <div className="flex items-center space-x-6">
-                  {/* Logo Graphic */}
-                  <div className="flex-shrink-0">
-                    <Image
-                      src="/IconDumpsters_Logo_Vector_Pantone266purple.png" 
-                      alt="Icon Dumpsters Logo" 
-                      className="h-14 w-auto"
-                      width={100}
-                      height={56}
-                      priority
-                    />
-                  </div>
-                  
-                  {/* Logo Text Elements - Hidden on mobile, visible on larger screens */}
-                  <div className="hidden md:flex items-center space-x-8">
-                    {/* Main Company Name */}
-                    <div className="flex flex-col">
-                      <span className="text-2xl font-bold text-[#4e37a8] leading-tight tracking-tight">
-                        ICON
-                      </span>
-                      <span className="text-2xl font-bold text-[#4e37a8] leading-tight tracking-tight -mt-1">
-                        DUMPSTERS
-                      </span>
-                    </div>
-                    
-                    {/* Service Description */}
-                    <div className="flex flex-col">
-                      <span className="text-lg font-semibold text-[#4e37a8] leading-tight">
-                        Dumpster
-                      </span>
-                      <span className="text-lg font-semibold text-[#4e37a8] leading-tight -mt-1">
-                        Rentals
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <Image
+                  src="/IconDumpsters_Logo_Vector_Pantone266purple.png" 
+                  alt="Icon Dumpsters - Professional Dumpster Rental Services" 
+                  className="h-16 w-auto"
+                  width={200}
+                  height={64}
+                  priority
+                />
               </a>
             </div>
 
