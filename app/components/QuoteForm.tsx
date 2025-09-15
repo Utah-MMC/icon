@@ -170,13 +170,26 @@ export default function QuoteForm() {
           <div>
             <label className="block text-sm font-semibold text-white mb-1 flex items-center">
               <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
-              Full Name
+              First Name
             </label>
             <input 
               type="text" 
               name="firstName"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
-              placeholder="Your full name"
+              placeholder="Your first name"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
+              Last Name
+            </label>
+            <input 
+              type="text" 
+              name="lastName"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
+              placeholder="Your last name"
               required
             />
           </div>
@@ -184,6 +197,19 @@ export default function QuoteForm() {
         
         {/* Contact Fields */}
         <div className="grid grid-cols-1 gap-3">
+          <div>
+            <label className="block text-sm font-semibold text-white mb-1 flex items-center">
+              <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
+              Email Address
+            </label>
+            <input 
+              type="email" 
+              name="email"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4e37a8] focus:border-transparent transition-all duration-300 shadow-sm text-black text-sm placeholder-gray-500"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
           <div>
             <label className="block text-sm font-semibold text-white mb-1 flex items-center">
               <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>

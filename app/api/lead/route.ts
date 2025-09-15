@@ -237,6 +237,31 @@ export async function POST(request: NextRequest) {
         '',
         autoReplyHtml
       );
+
+      // Schedule 24-hour follow-up email for quote requests (not newsletters)
+      if (!isNewsletter) {
+        try {
+          await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/schedule-followup`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email,
+              firstName,
+              lastName,
+              phone,
+              zipCode,
+              dumpsterSize,
+              wasteType,
+              deliveryDate,
+              pickupDate,
+              submittedAt: new Date().toISOString(),
+              followUpType: 'quote_request_24h'
+            })
+          });
+        } catch (error) {
+          console.error('Failed to schedule follow-up email:', error);
+        }
+      }
     }
 
     return NextResponse.json({ ok: true, emailed: emailSent });

@@ -510,3 +510,494 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/services/garbage-junk-bin-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+
+                          <div className="font-semibold">Garbage & Junk Bin Rentals</div>
+
+                          <div className="text-xs text-gray-500">Clutter removal & cleanouts</div>
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/services/yard-waste-debris-bin-rental" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+
+                          <div className="font-semibold">Yard Waste & Debris Bin Rental</div>
+
+                          <div className="text-xs text-gray-500">Landscaping & outdoor cleanup</div>
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/services/downsizing-dumpster-rentals" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+
+                          <div className="font-semibold">Downsizing Dumpster Rentals</div>
+
+                          <div className="text-xs text-gray-500">Moving & decluttering projects</div>
+
+                        </a>
+
+                        <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100">
+
+                          Specialized Services
+
+                        </div>
+
+                        <a href="https://icondumpsters.com/estate-cleanout" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium border-b border-gray-100">
+
+                          <div className="font-semibold">Estate Cleanout</div>
+
+                          <div className="text-xs text-gray-500">Complete property cleanup</div>
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/fees" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+
+                          <div className="font-semibold">Fees & Pricing</div>
+
+                          <div className="text-xs text-gray-500">Transparent cost breakdown</div>
+
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <a href="https://icondumpsters.com/locations" className="text-white hover:text-purple-200 transition-colors font-medium">AREA</a>
+
+                  <div className="relative group">
+
+                    <a href="https://icondumpsters.com/dumpster-sizes" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+
+                      SIZES
+
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+
+                      </svg>
+
+                    </a>
+
+                    
+
+                    {/* Dropdown Menu */}
+
+                    <div className="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+
+                      <div className="p-6">
+
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">Choose Your Dumpster Size</h3>
+
+                        
+
+                        {/* Specialized Dumpsters Section */}
+
+                        <div className="mb-6">
+
+                          <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 border-b border-gray-100 pb-2">Specialized Dumpsters</h4>
+
+                          <div className="grid grid-cols-3 gap-3">
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#10-yard-dirt" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <div className="w-full h-20 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+
+                                  <span className="text-white text-2xl">🏗️</span>
+
+                                </div>
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">10 Yard Dirt</h5>
+
+                                  <p className="text-xs text-gray-600">Perfect for dirt & soil</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                            
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#10-yard-mixed" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <div className="w-full h-20 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+
+                                  <span className="text-white text-2xl">📦</span>
+
+                                </div>
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">10 Yard Mixed</h5>
+
+                                  <p className="text-xs text-gray-600">Mixed heavy loads</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                            
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#12-yard-concrete" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <div className="w-full h-20 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+
+                                  <span className="text-white text-2xl">🧱</span>
+
+                                </div>
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">12 Yard Concrete</h5>
+
+                                  <p className="text-xs text-gray-600">Perfect for concrete</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                          </div>
+
+                        </div>
+
+                        
+
+                        {/* Standard Dumpsters Section */}
+
+                        <div className="mb-6">
+
+                          <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 border-b border-gray-100 pb-2">Standard Dumpsters</h4>
+
+                          <div className="grid grid-cols-3 gap-3">
+
+                            {/* 15 Yard Dumpster */}
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#15-yard" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <img src="/images/IMG_0350.jpg" alt="15 Yard Roll-off Dumpster for Utah Dumpster Rental - Perfect for Small Projects" className="w-full h-20 object-contain bg-white" />
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">15 Yard Dumpsters</h5>
+
+                                  <p className="text-xs text-gray-600">Ideal for medium projects</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                            
+
+                            {/* 20 Yard Dumpster */}
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#20-yard" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <img src="/images/IMG_0336.jpg" alt="20 Yard Roll-off Dumpster for Utah Dumpster Rental - Ideal for Medium Projects" className="w-full h-20 object-contain bg-white" />
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">20 Yard Dumpsters</h5>
+
+                                  <p className="text-xs text-gray-600">Great for large projects</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                            
+
+                            {/* 30 Yard Dumpster */}
+
+                            <a href="https://icondumpsters.com/dumpster-sizes#30-yard" className="group/item">
+
+                              <div className="relative overflow-hidden rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+
+                                <img src="/images/dumpster5-500x500-1.jpeg" alt="30 Yard Roll-off Dumpster for Utah Dumpster Rental - Great for Large Projects" className="w-full h-20 object-contain bg-white" />
+
+                                <div className="p-2">
+
+                                  <h5 className="font-semibold text-gray-800 text-xs">30 Yard Dumpsters</h5>
+
+                                  <p className="text-xs text-gray-600">For major projects</p>
+
+                                </div>
+
+                              </div>
+
+                            </a>
+
+                          </div>
+
+                        </div>
+
+                        
+
+                        {/* Quick Links */}
+
+                        <div className="mb-4 pt-4 border-t border-gray-200">
+
+                          <div className="grid grid-cols-2 gap-3">
+
+                            <a href="https://icondumpsters.com/dumpster-sizes" className="text-center py-2 px-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
+
+                              <div className="font-medium text-gray-800 text-sm">View All Sizes</div>
+
+                              <div className="text-xs text-gray-500">Complete guide</div>
+
+                            </a>
+
+                            <a href="https://icondumpsters.com/dumpster-calculator" className="text-center py-2 px-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
+
+                              <div className="font-medium text-gray-800 text-sm">Size Calculator</div>
+
+                              <div className="text-xs text-gray-500">Find your fit</div>
+
+                            </a>
+
+                          </div>
+
+                        </div>
+
+                        
+
+                        {/* Call to Action */}
+
+                        <div className="pt-4 border-t border-gray-200">
+
+                          <a href="https://icondumpsters.com/#quote-form" className="block w-full bg-[#4e37a8] text-white text-center py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+
+                            Get Exact Pricing Online
+
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <a href="https://icondumpsters.com/dumpster-calculator" className="text-white hover:text-purple-200 transition-colors font-bold flex items-center bg-purple-600 px-3 py-2 rounded-lg hover:bg-purple-500" aria-label="Calculator" title="Calculator">
+
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+
+                      <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+
+                    </svg>
+
+                    <span className="font-bold text-sm">CALCULATOR</span>
+
+                  </a>
+
+
+
+                  <a href="https://icondumpsters.com/frequent-buyers" className="hidden lg:inline text-white hover:text-purple-200 transition-colors font-medium">BUYERS</a>
+
+                  <div className="relative group hidden lg:block">
+
+                    <a href="https://icondumpsters.com/about" className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+
+                      ABOUT
+
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+
+                      </svg>
+
+                    </a>
+
+                    
+
+                    {/* About Dropdown Menu */}
+
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+
+                      <div className="py-2">
+
+                        <a href="https://icondumpsters.com/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+
+                          About Us
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+
+                          Reviews
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+
+                          FAQ
+
+                        </a>
+
+                        <a href="https://icondumpsters.com/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">
+
+                          Contact
+
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  {/* More menu for small/medium screens */}
+
+                  <div className="relative group lg:hidden">
+
+                    <button className="text-white hover:text-purple-200 transition-colors font-medium flex items-center">
+
+                      MORE
+
+                      <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+
+                      </svg>
+
+                    </button>
+
+                    <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+
+                      <div className="py-2">
+
+
+
+                        <a href="https://icondumpsters.com/frequent-buyers" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Frequent Buyers</a>
+
+                        <a href="https://icondumpsters.com/book" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Book Now</a>
+
+                        <div className="border-t my-1"></div>
+
+                        <a href="https://icondumpsters.com/about" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">About Us</a>
+
+                        <a href="https://icondumpsters.com/reviews" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Reviews</a>
+
+                        <a href="https://icondumpsters.com/faq" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">FAQ</a>
+
+                        <a href="https://icondumpsters.com/contact" className="block px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors font-medium">Contact</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </nav>
+
+              {/* Mobile hamburger */}
+
+              <MobileNav />
+
+              <div className="hidden md:flex items-center space-x-3">
+
+                {/* BOOK NOW Button - Positioned in the red circle area */}
+
+                <a 
+
+                  href="https://icondumpsters.com/book"
+
+                  className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-bold text-sm border-2 border-[#4e37a8] shadow-md"
+
+                >
+
+                  BOOK NOW
+
+                </a>
+
+                
+
+                <a href="https://icondumpsters.com/#quote-form" data-analytics-type="cta" data-analytics-name="header_quote" className="bg-white text-[#4e37a8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center space-x-2">
+
+                  <span>Get Quote</span>
+
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+
+                  </svg>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </header>
+
+
+
+        <main className="flex-1">
+
+          {children}
+
+        </main>
+
+
+
+        {/* Promotional Banner - Added to all pages */}
+
+        <PromotionalBanner />
+
+
+
+        {/* Live Chat Widget */}
+
+        <ChatWidget />
+
+
+
+        {/* Floating Text Button */}
+
+        <FloatingTextButton />
+
+
+
+        {/* Calculator Banner - Only on calculator-related pages */}
+
+        <ConditionalCalculatorBanner />
+
+
+
+        <Footer />
+
+      </body>
+
+    </html>
+
+  );
+
+}
+
+
