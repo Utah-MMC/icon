@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import GoogleAdsReportUpload from './GoogleAdsReportUpload';
 
 interface GoogleAdsMetrics {
@@ -49,7 +49,7 @@ export default function GoogleAdsAnalytics() {
   const [timeRange, setTimeRange] = useState('last_30_days');
 
   // Fetch Google Ads data from API
-  const fetchGoogleAdsData = async () => {
+  const fetchGoogleAdsData = useCallback(async () => {
     setLoading(true);
     setError(null);
     
@@ -127,7 +127,7 @@ export default function GoogleAdsAnalytics() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [timeRange]);
 
   useEffect(() => {
     fetchGoogleAdsData();
