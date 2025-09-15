@@ -19,6 +19,8 @@ import ConditionalCalculatorBanner from "./components/ConditionalCalculatorBanne
 import PromotionalBanner from "./components/PromotionalBanner";
 import FacebookPixel from "./components/FacebookPixel";
 import FloatingTextButton from "./components/FloatingTextButton";
+import PageLoader from "./components/PageLoader";
+import BrowserCompatibility from "./components/BrowserCompatibility";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -126,6 +128,13 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Error handling for script loading
+              window.addEventListener('error', function(e) {
+                console.error('Script error:', e.error);
+                // Don't let script errors break the page
+                e.preventDefault();
+              });
+              
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);} 
               gtag('consent', 'default', {
@@ -140,9 +149,19 @@ export default function RootLayout({
           }}
         />
         <StructuredData type="organization" data={IconDumpstersBusinessData} />
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script 
+          src="https://www.google.com/recaptcha/api.js" 
+          async 
+          defer
+          onerror="console.warn('reCAPTCHA failed to load')"
+        ></script>
         {/* Ahrefs Analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="ctDHetXbMmD8XDhk/vJMcQ" async></script>
+        <script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="ctDHetXbMmD8XDhk/vJMcQ" 
+          async
+          onerror="console.warn('Ahrefs Analytics failed to load')"
+        ></script>
         {/* Additional favicon links for better browser compatibility */}
         <link rel="icon" type="image/x-icon" href="https://icondumpsters.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="https://icondumpsters.com/favicon-16x16.png" />
@@ -165,6 +184,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <BrowserCompatibility />
+        <PageLoader />
         <CompetitiveKPITracking />
         <AnalyticsBoot />
         <AnalyticsDelegator />
