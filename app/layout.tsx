@@ -164,46 +164,6 @@ export default function RootLayout({
         <CompetitiveKPITracking />
         <AnalyticsBoot />
         <AnalyticsDelegator />
-        {/* Top Bar - Purple Theme */}
-        <div className="bg-[#4e37a8] text-white py-2">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center text-sm">
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center space-x-2">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  <a 
-                    href="mailto:icondumpsters@gmail.com" 
-                    className="hover:text-purple-200 transition-colors cursor-pointer"
-                    title="Email us at icondumpsters@gmail.com"
-                  >
-                    icondumpsters@gmail.com
-                  </a>
-                </div>
-                
-                <div className="flex items-center space-x-2">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <a 
-                    href="tel:+18019186000" 
-                    className="hover:text-purple-200 transition-colors cursor-pointer"
-                    title="Call us at (801) 918-6000"
-                  >
-                    (801) 918-6000
-                  </a>
-                </div>
-              </div>
-              
-              <div className="hidden md:flex items-center space-x-4">
-                <span className="text-purple-200">Serving Utah with Professional Dumpster Rentals</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Header */}
         <EnhancedHeader />
 
