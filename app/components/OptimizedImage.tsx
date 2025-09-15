@@ -47,6 +47,8 @@ export default function OptimizedImage({
       // Use WebP version if available
       const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       setImageSrc(webpSrc);
+    } else {
+      setImageSrc(src);
     }
   }, [src]);
 

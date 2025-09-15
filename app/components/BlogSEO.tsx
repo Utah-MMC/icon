@@ -102,7 +102,7 @@ export default function BlogSEO({
               "name": "Icon Dumpsters",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://icondumpsters.com/Icon_Dumpsters_Final.png"
+                "url": "https://icondumpsters.com/images/optimized/Icon_Dumpsters_Final.jpg"
               }
             },
             "datePublished": publishedDate,

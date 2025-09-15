@@ -39,7 +39,7 @@ export default function Home() {
           className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] xl:min-h-screen flex items-center justify-center overflow-hidden bg-[#4e37a8]"
         >
           <div className="absolute inset-0" style={{zIndex: 1}}>
-            <OptimizedImage
+            <Image
               src="/images/optimized/dumpsterWithTruck.jpg" 
               alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
               fill

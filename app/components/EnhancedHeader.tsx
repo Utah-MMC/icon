@@ -20,7 +20,7 @@ export default function EnhancedHeader() {
             <div className="flex items-center">
               <div className="bg-white p-1 rounded-lg shadow-sm">
                 <Image
-                  src="https://icondumpsters.com/Icon_Dumpsters_Final.png" 
+                  src="/images/optimized/Icon_Dumpsters_Final.jpg" 
                   alt="Icon Dumpsters Logo" 
                   className="h-8 w-auto"
                   width={32}
