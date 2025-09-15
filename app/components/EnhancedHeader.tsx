@@ -61,32 +61,16 @@ export default function EnhancedHeader() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="flex items-center space-x-4">
-                {/* Logo Image */}
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg shadow-lg flex items-center justify-center">
-                    <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                      <Image
-                        src="/images/optimized/Icon_Dumpsters_Final.jpg" 
-                        alt="Icon Dumpsters Logo" 
-                        className="h-8 w-auto"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Logo Text */}
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-[#4e37a8] leading-tight tracking-tight">
-                    ICON
-                  </span>
-                  <span className="text-2xl font-bold text-[#4e37a8] leading-tight tracking-tight -mt-1">
-                    DUMPSTERS
-                  </span>
-                </div>
-              </div>
+              <a href="/" className="flex items-center hover:opacity-90 transition-opacity duration-200">
+                <Image
+                  src="/IconDumpsters_Logo_Vector_Pantone266purple.png" 
+                  alt="Icon Dumpsters - Professional Dumpster Rental Services" 
+                  className="h-16 w-auto"
+                  width={200}
+                  height={64}
+                  priority
+                />
+              </a>
             </div>
 
             {/* Navigation - Hidden on mobile */}
