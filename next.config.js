@@ -216,7 +216,6 @@ const nextConfig = {
         destination: '/services',
         permanent: true,
       },
-    ,
       {
         source: '/utah-dumpster-rental-locations',
         destination: '/locations',
