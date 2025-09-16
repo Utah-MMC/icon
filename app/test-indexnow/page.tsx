@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function TestIndexNowPage() {
   const [urls, setUrls] = useState('https://icondumpsters.com/\nhttps://icondumpsters.com/about\nhttps://icondumpsters.com/dumpster-sizes');
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
@@ -25,7 +25,7 @@ export default function TestIndexNowPage() {
       const data = await response.json();
       setResults(data);
     } catch (error) {
-      setResults({ error: error.message });
+      setResults({ error: error instanceof Error ? error.message : 'Unknown error' });
     } finally {
       setLoading(false);
     }
@@ -38,7 +38,7 @@ export default function TestIndexNowPage() {
       const data = await response.json();
       setResults(data);
     } catch (error) {
-      setResults({ error: error.message });
+      setResults({ error: error instanceof Error ? error.message : 'Unknown error' });
     } finally {
       setLoading(false);
     }
