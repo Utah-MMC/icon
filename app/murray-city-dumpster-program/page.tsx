@@ -285,7 +285,7 @@ export default function MurrayCityDumpsterProgramPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <p className="text-gray-700 mb-2"><strong>Phone:</strong> (801) 264-2660</p>
-                  <p className="text-gray-700 mb-2"><strong>Email:</strong> publicworks@murray.utah.gov</p>
+                  <p className="text-gray-700 mb-2"><strong>Email:</strong> publicworks@murraycity.org</p>
                   <p className="text-gray-700 mb-2"><strong>Address:</strong> 5025 S State St, Murray, UT 84107</p>
                 </div>
                 <div>

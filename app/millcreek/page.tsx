@@ -18,7 +18,7 @@ export default function MillcreekPage() {
         {
                 "name": "Millcreek City Hall",
                 "address": "3330 S 1300 E, Millcreek, UT 84106",
-                "url": "https://www.millcreekut.gov/"
+                "url": "https://millcreekutah.org/"
         },
         {
                 "name": "Millcreek Library",
@@ -28,12 +28,12 @@ export default function MillcreekPage() {
         {
                 "name": "Millcreek Park",
                 "address": "3330 S 1300 E, Millcreek, UT 84106",
-                "url": "https://www.millcreekut.gov/"
+                "url": "https://millcreekutah.org/"
         },
         {
                 "name": "Millcreek Historic District",
                 "address": "Main St, Millcreek, UT 84109",
-                "url": "https://www.millcreekut.gov/"
+                "url": "https://millcreekutah.org/"
         }
 ]}
       businessDistricts={[

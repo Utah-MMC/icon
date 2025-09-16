@@ -77,7 +77,7 @@ const utahCities = [
     duration: "7 days",
     processingTime: "1-2 business days",
     contact: "(801) 264-2600",
-    website: "murray.utah.gov",
+    website: "murraycity.org",
     notes: "Same-day permits available"
   },
   {
@@ -97,7 +97,7 @@ const utahCities = [
     duration: "14 days",
     processingTime: "1-2 business days",
     contact: "(801) 768-7100",
-    website: "lehi-ut.gov",
+    website: "lehi.org",
     notes: "Online application preferred"
   },
   {

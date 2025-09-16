@@ -18,7 +18,7 @@ export default function CottonwoodHeightsPage() {
         {
                 "name": "Cottonwood Heights City Hall",
                 "address": "2277 E Bengal Blvd, Cottonwood Heights, UT 84121",
-                "url": "https://www.cottonwoodheights.utah.gov/"
+                "url": "https://cottonwoodheights.org/"
         },
         {
                 "name": "Cottonwood Heights Library",
@@ -28,12 +28,12 @@ export default function CottonwoodHeightsPage() {
         {
                 "name": "Cottonwood Heights Park",
                 "address": "7500 S 2700 E, Cottonwood Heights, UT 84121",
-                "url": "https://www.cottonwoodheights.utah.gov/parks-recreation/"
+                "url": "https://cottonwoodheights.org/parks-recreation/"
         },
         {
                 "name": "Fortune Ridge",
                 "address": "Fortune Ridge Dr, Cottonwood Heights, UT 84121",
-                "url": "https://www.cottonwoodheights.utah.gov/community/"
+                "url": "https://cottonwoodheights.org/community/"
         }
 ]}
       businessDistricts={[

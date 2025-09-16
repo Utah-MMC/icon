@@ -2050,7 +2050,7 @@ export const cityData: Record<string, CityData> = {
       {
         name: 'North Salt Lake City Hall',
         address: 'City Hall Address',
-        url: 'https://nslcity.org/',
+        url: 'https://northsaltlake.org/',
       },
       {
         name: 'North Salt Lake Park',

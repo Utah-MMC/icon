@@ -18,7 +18,7 @@ export default function LehiPage() {
         {
                 "name": "Lehi City Park",
                 "address": "100 N Center St, Lehi, UT 84043",
-                "url": "https://www.lehi-ut.gov/parks-recreation/"
+                "url": "https://lehi.org/parks-recreation/"
         },
         {
                 "name": "Lehi Library",
@@ -28,12 +28,12 @@ export default function LehiPage() {
         {
                 "name": "Lehi Historic District",
                 "address": "Main St, Lehi, UT 84043",
-                "url": "https://www.lehi-ut.gov/community/history/"
+                "url": "https://lehi.org/community/history/"
         },
         {
                 "name": "Lehi Cemetery",
                 "address": "100 N Center St, Lehi, UT 84043",
-                "url": "https://www.lehi-ut.gov/cemetery/"
+                "url": "https://lehi.org/cemetery/"
         }
 ]}
       businessDistricts={[

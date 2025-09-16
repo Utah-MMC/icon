@@ -216,6 +216,272 @@ const nextConfig = {
         destination: '/services',
         permanent: true,
       },
+    ,
+      {
+        source: '/utah-dumpster-rental-locations',
+        destination: '/locations',
+        permanent: true
+      },
+      {
+        source: '/cities/west-bountiful/dumpster-rental',
+        destination: '/bountiful',
+        permanent: true
+      },
+      {
+        source: '/cities/downtown-salt-lake/dumpster-rental',
+        destination: '/downtown-salt-lake',
+        permanent: true
+      },
+      {
+        source: '/cities/granger/dumpster-rental',
+        destination: '/west-valley-city',
+        permanent: true
+      },
+      {
+        source: '/cities/bluffdale/dumpster-rental',
+        destination: '/bluffdale',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-White%20City-ut',
+        destination: '/30-yard-dumpster-rental-white-city-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-West%20Jordan-ut',
+        destination: '/30-yard-dumpster-rental-west-jordan-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-West%20Valley%20City-ut',
+        destination: '/30-yard-dumpster-rental-west-valley-city-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-South%20Salt%20Lake-ut',
+        destination: '/30-yard-dumpster-rental-south-salt-lake-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-Cottonwood%20Heights-ut',
+        destination: '/30-yard-dumpster-rental-cottonwood-heights-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-Emigration%20Canyon-ut',
+        destination: '/30-yard-dumpster-rental-emigration-canyon-ut',
+        permanent: true
+      },
+      {
+        source: '/30-yard-dumpster-rental-Salt%20Lake%20City-ut',
+        destination: '/30-yard-dumpster-rental-salt-lake-city-ut',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-West%20Valley%20City',
+        destination: '/roll-off-dumpster-rental-west-valley-city',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-South%20Salt%20Lake',
+        destination: '/roll-off-dumpster-rental-south-salt-lake',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-West%20Jordan',
+        destination: '/roll-off-dumpster-rental-west-jordan',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-Salt%20Lake%20City',
+        destination: '/roll-off-dumpster-rental-salt-lake-city',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-Cottonwood%20Heights',
+        destination: '/roll-off-dumpster-rental-cottonwood-heights',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-South%20Jordan',
+        destination: '/roll-off-dumpster-rental-south-jordan',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-Emigration%20Canyon',
+        destination: '/roll-off-dumpster-rental-emigration-canyon',
+        permanent: true
+      },
+      {
+        source: '/roll-off-dumpster-rental-White%20City',
+        destination: '/roll-off-dumpster-rental-white-city',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-White%20City-ut',
+        destination: '/rolloff-dumpster-rental-white-city-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-South%20Salt%20Lake-ut',
+        destination: '/rolloff-dumpster-rental-south-salt-lake-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-Emigration%20Canyon-ut',
+        destination: '/rolloff-dumpster-rental-emigration-canyon-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-West%20Jordan-ut',
+        destination: '/rolloff-dumpster-rental-west-jordan-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-Salt%20Lake%20City-ut',
+        destination: '/rolloff-dumpster-rental-salt-lake-city-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-Cottonwood%20Heights-ut',
+        destination: '/rolloff-dumpster-rental-cottonwood-heights-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-West%20Valley%20City-ut',
+        destination: '/rolloff-dumpster-rental-west-valley-city-ut',
+        permanent: true
+      },
+      {
+        source: '/rolloff-dumpster-rental-South%20Jordan-ut',
+        destination: '/rolloff-dumpster-rental-south-jordan-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-South%20Salt%20Lake-ut',
+        destination: '/dumpster-rental-near-me-south-salt-lake-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-West%20Valley%20City-ut',
+        destination: '/dumpster-rental-near-me-west-valley-city-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-Emigration%20Canyon-ut',
+        destination: '/dumpster-rental-near-me-emigration-canyon-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-Cottonwood%20Heights-ut',
+        destination: '/dumpster-rental-near-me-cottonwood-heights-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-West%20Jordan-ut',
+        destination: '/dumpster-rental-near-me-west-jordan-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-White%20City-ut',
+        destination: '/dumpster-rental-near-me-white-city-ut',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-near-me-Salt%20Lake%20City-ut',
+        destination: '/dumpster-rental-near-me-salt-lake-city-ut',
+        permanent: true
+      },
+      {
+        source: '/granger',
+        destination: '/west-valley-city',
+        permanent: true
+      },
+      {
+        source: '/emigration-canyon',
+        destination: '/roll-off-dumpster-rental-emigration-canyon',
+        permanent: true
+      },
+      {
+        source: '/brighton',
+        destination: '/roll-off-dumpster-rental-brighton',
+        permanent: true
+      },
+      {
+        source: '/copperton',
+        destination: '/roll-off-dumpster-rental-copperton',
+        permanent: true
+      },
+      {
+        source: '/white-city',
+        destination: '/roll-off-dumpster-rental-white-city',
+        permanent: true
+      },
+      {
+        source: '/alta',
+        destination: '/roll-off-dumpster-rental-alta',
+        permanent: true
+      },
+      {
+        source: '/west-bountiful',
+        destination: '/bountiful',
+        permanent: true
+      },
+      {
+        source: '/rose-park-dumpster-rental-guide-2025',
+        destination: '/rose-park',
+        permanent: true
+      },
+      {
+        source: '/springville-dumpster-rental-guide-2025',
+        destination: '/springville',
+        permanent: true
+      },
+      {
+        source: '/lindon-dumpster-rental-guide-2025',
+        destination: '/lindon',
+        permanent: true
+      },
+      {
+        source: '/spanish-fork-dumpster-rental-guide-2025',
+        destination: '/spanish-fork',
+        permanent: true
+      },
+      {
+        source: '/terms-of-service/',
+        destination: '/terms-of-service',
+        permanent: true
+      },
+      {
+        source: '/privacy-policy/',
+        destination: '/privacy-policy',
+        permanent: true
+      },
+      {
+        source: '/contact/',
+        destination: '/contact',
+        permanent: true
+      },
+      {
+        source: '/dumpster-rental-sandy-utah',
+        destination: '/sandy',
+        permanent: true
+      },
+      {
+        source: '/salt-lake-county-dumpster-program',
+        destination: '/salt-lake-county-dumpster-rental',
+        permanent: true
+      },
+      {
+        source: '/admin-dashboard',
+        destination: '/admin',
+        permanent: true
+      },
+      {
+        source: '/commercial-dumpster-rental-business-solutions-dumpster-rental-guide-2025',
+        destination: '/commercial-dumpster-rental-business-solutions',
+        permanent: true
+      }
     ];
   },
 

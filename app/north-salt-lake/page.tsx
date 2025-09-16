@@ -13,7 +13,7 @@ export default function NorthSaltLakePage() {
         {
                 "name": "North Salt Lake City Park",
                 "address": "200 N 200 W, North Salt Lake, UT 84054",
-                "url": "https://www.nslcity.org/parks-recreation/"
+                "url": "https://northsaltlake.org/parks-recreation/"
         },
         {
                 "name": "North Salt Lake Library",
@@ -23,17 +23,17 @@ export default function NorthSaltLakePage() {
         {
                 "name": "North Salt Lake Historic District",
                 "address": "Main St, North Salt Lake, UT 84054",
-                "url": "https://www.nslcity.org/community/history/"
+                "url": "https://northsaltlake.org/community/history/"
         },
         {
                 "name": "North Salt Lake Cemetery",
                 "address": "200 N 200 W, North Salt Lake, UT 84054",
-                "url": "https://www.nslcity.org/cemetery/"
+                "url": "https://northsaltlake.org/cemetery/"
         },
         {
                 "name": "North Salt Lake Golf Course",
                 "address": "200 N 200 W, North Salt Lake, UT 84054",
-                "url": "https://www.nslcity.org/parks-recreation/golf-course/"
+                "url": "https://northsaltlake.org/parks-recreation/golf-course/"
         }
 ]}
       businessDistricts={[

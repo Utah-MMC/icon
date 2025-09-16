@@ -82,7 +82,7 @@ const utahRegulations = [
       "Landfill operation standards"
     ],
     contact: "(801) 536-4000",
-    website: "deq.utah.gov"
+    website: "https://deq.utah.gov/"
   },
   {
     agency: "Utah Division of Waste Management",
@@ -93,7 +93,7 @@ const utahRegulations = [
       "Transfer station operations"
     ],
     contact: "(801) 536-0200",
-    website: "deq.utah.gov/waste-management"
+    website: "https://deq.utah.gov//waste-management"
   },
   {
     agency: "Local Health Departments",
