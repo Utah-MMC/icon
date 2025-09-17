@@ -242,6 +242,12 @@ export default function Footer() {
               <a href="/residential-dumpsters" className="text-purple-200 hover:text-white transition-colors">Residential Dumpsters</a>
               <a href="/construction-dumpsters" className="text-purple-200 hover:text-white transition-colors">Construction Dumpsters</a>
               <a href="/dumpster-sizes-1" className="text-purple-200 hover:text-white transition-colors">Dumpster Sizes Guide</a>
+              <a href="/dumpster-size-guide-utah" className="text-purple-200 hover:text-white transition-colors">Utah Size Guide</a>
+              <a href="/cheap-dumpster-rentals-near-me" className="text-purple-200 hover:text-white transition-colors">Cheap Rentals</a>
+              <a href="/dumpster-rental-cost-calculator" className="text-purple-200 hover:text-white transition-colors">Cost Calculator</a>
+              <a href="/utah-waste-management-regulations" className="text-purple-200 hover:text-white transition-colors">Utah Regulations</a>
+              <a href="/dumpster-permit-guide-utah" className="text-purple-200 hover:text-white transition-colors">Permit Guide</a>
+              <a href="/frequent-buyers" className="text-purple-200 hover:text-white transition-colors">Frequent Buyers</a>
               <a href="/responsible-disposal" className="text-purple-200 hover:text-white transition-colors">Responsible Disposal</a>
               <a href="/local-pros" className="text-purple-200 hover:text-white transition-colors">Local Pros</a>
               <a href="/blog/home-renovation-waste-disposal-guide" className="text-purple-200 hover:text-white transition-colors">Renovation Guide</a>

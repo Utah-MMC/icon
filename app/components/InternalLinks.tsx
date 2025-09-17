@@ -14,6 +14,9 @@ const ALL_LINKS = {
   services: [
     { label: 'Dumpster Sizes', href: '/dumpster-sizes' },
     { label: 'Dumpster Calculator', href: '/dumpster-calculator' },
+    { label: 'Dumpster Size Guide Utah', href: '/dumpster-size-guide-utah' },
+    { label: 'Cheap Dumpster Rentals Near Me', href: '/cheap-dumpster-rentals-near-me' },
+    { label: 'Dumpster Rental Cost Calculator', href: '/dumpster-rental-cost-calculator' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
     { label: 'Blog', href: '/blog' },
@@ -24,6 +27,9 @@ const ALL_LINKS = {
     { label: 'Construction Waste Management 2025', href: '/construction-waste-management-2025' },
     { label: 'Home Renovation Waste Disposal', href: '/home-renovation-waste-disposal-guide' },
     { label: 'Commercial Dumpster Rental Solutions', href: '/commercial-dumpster-rental-business-solutions' },
+    { label: 'Utah Waste Management Regulations', href: '/utah-waste-management-regulations' },
+    { label: 'Dumpster Permit Guide Utah', href: '/dumpster-permit-guide-utah' },
+    { label: 'Dumpster Size Estimation Guide', href: '/blog/dumpster-size-estimation-guide' },
   ],
   areas: [
     { label: 'Salt Lake City', href: '/salt-lake-city' },
@@ -32,6 +38,35 @@ const ALL_LINKS = {
     { label: 'West Jordan', href: '/west-jordan' },
     { label: 'Murray', href: '/murray' },
     { label: 'South Jordan', href: '/south-jordan' },
+    { label: 'Orem', href: '/orem' },
+    { label: 'Provo', href: '/provo' },
+    { label: 'Layton', href: '/layton' },
+    { label: 'Taylorsville', href: '/taylorsville' },
+    { label: 'Millcreek', href: '/millcreek' },
+    { label: 'Holladay', href: '/holladay' },
+  ],
+  commercial: [
+    { label: 'Commercial Dumpster Rental Salt Lake City', href: '/services/commercial-dumpster-rental-salt-lake-city-ut' },
+    { label: 'Commercial Dumpster Rental Murray', href: '/services/commercial-dumpster-rental-murray-ut' },
+    { label: 'Commercial Dumpster Rental Sandy', href: '/services/commercial-dumpster-rental-sandy-ut' },
+    { label: 'Commercial Dumpster Rental West Jordan', href: '/services/commercial-dumpster-rental-west-jordan-ut' },
+    { label: 'Commercial Dumpster Rental Orem', href: '/services/commercial-dumpster-rental-orem-ut' },
+    { label: 'Commercial Dumpster Rental Provo', href: '/services/commercial-dumpster-rental-provo-ut' },
+  ],
+  residential: [
+    { label: 'Residential Dumpster Rental Salt Lake City', href: '/services/residential-dumpster-rental-salt-lake-city-ut' },
+    { label: 'Residential Dumpster Rental Murray', href: '/services/residential-dumpster-rental-murray-ut' },
+    { label: 'Residential Dumpster Rental Sandy', href: '/services/residential-dumpster-rental-sandy-ut' },
+    { label: 'Residential Dumpster Rental West Jordan', href: '/services/residential-dumpster-rental-west-jordan-ut' },
+    { label: 'Residential Dumpster Rental South Jordan', href: '/services/residential-dumpster-rental-south-jordan-ut' },
+    { label: 'Residential Dumpster Rental Orem', href: '/services/residential-dumpster-rental-orem-ut' },
+  ],
+  utilities: [
+    { label: 'Frequent Buyers Program', href: '/frequent-buyers' },
+    { label: 'Multiple Sizes Available', href: '/multiple-sizes-available' },
+    { label: 'Utah-Wide Coverage', href: '/utah-wide-coverage' },
+    { label: 'Dumpster Rentals Near Me Prices', href: '/dumpster-rentals-near-me-prices' },
+    { label: 'AI Optimized Content', href: '/ai-optimized-content' },
   ],
 };
 
@@ -52,15 +87,18 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
   const services = filterList(ALL_LINKS.services);
   const guides = filterList(ALL_LINKS.guides);
   const areas = filterList(ALL_LINKS.areas);
+  const commercial = filterList(ALL_LINKS.commercial);
+  const residential = filterList(ALL_LINKS.residential);
+  const utilities = filterList(ALL_LINKS.utilities);
 
   return (
     <section className={`bg-white rounded-xl shadow-md p-8 ${className || ''}`}>
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Explore More With Icon Dumpsters</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div>
           <h3 className="font-semibold text-gray-900 mb-2">Popular Services</h3>
           <ul className="space-y-2 text-gray-700">
-            {services.map((l) => (
+            {services.slice(0, 6).map((l) => (
               <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'services' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
@@ -68,7 +106,7 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
         <div>
           <h3 className="font-semibold text-gray-900 mb-2">Helpful Guides</h3>
           <ul className="space-y-2 text-gray-700">
-            {guides.map((l) => (
+            {guides.slice(0, 6).map((l) => (
               <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'guides' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
@@ -76,8 +114,32 @@ export default function InternalLinks({ currentPath, exclude = [], className }: 
         <div>
           <h3 className="font-semibold text-gray-900 mb-2">Top Areas</h3>
           <ul className="space-y-2 text-gray-700">
-            {areas.map((l) => (
+            {areas.slice(0, 6).map((l) => (
               <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'areas' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-2">Commercial Services</h3>
+          <ul className="space-y-2 text-gray-700">
+            {commercial.slice(0, 6).map((l) => (
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'commercial' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-2">Residential Services</h3>
+          <ul className="space-y-2 text-gray-700">
+            {residential.slice(0, 6).map((l) => (
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'residential' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-2">Utilities & Programs</h3>
+          <ul className="space-y-2 text-gray-700">
+            {utilities.slice(0, 6).map((l) => (
+              <li key={l.href}>• <Link href={l.href} onClick={() => { try { track('nav','internal_link',{ href: l.href, label: l.label, group: 'utilities' }); } catch {} }} className="text-[#4e37a8] hover:underline">{l.label}</Link></li>
             ))}
           </ul>
         </div>

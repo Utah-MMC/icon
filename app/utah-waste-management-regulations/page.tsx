@@ -509,7 +509,57 @@ export default function UtahWasteManagementRegulations() {
       </section>
 
       {/* FAQ Schema for AI */}
-      <FAQSchema faqs={regulationsFAQs} pageUrl="/utah-waste-management-regulations" />
+      {/* Internal Links Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Related Resources
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore more helpful resources for your dumpster rental needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/dumpster-permit-guide-utah" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Dumpster Permit Guide Utah
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/dumpster-size-guide-utah" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Dumpster Size Guide Utah
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/construction-waste-management-2025" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Construction Waste Management 2025
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/responsible-disposal" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Responsible Disposal
+                  </a>
+                </h3>
+              </div>
+            
+          </div>
+        </div>
+      </section>
+    
+            <FAQSchema faqs={regulationsFAQs} pageUrl="/utah-waste-management-regulations" />
     </div>
   );
 }

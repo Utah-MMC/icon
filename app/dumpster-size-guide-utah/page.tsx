@@ -479,7 +479,57 @@ export default function DumpsterSizeGuideUtah() {
       </section>
 
       {/* FAQ Schema for AI */}
-      <FAQSchema faqs={sizeGuideFAQs} pageUrl="/dumpster-size-guide-utah" />
+      {/* Internal Links Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Related Resources
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore more helpful resources for your dumpster rental needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Dumpster Calculator
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/dumpster-sizes" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Dumpster Sizes
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/cheap-dumpster-rentals-near-me" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Cheap Dumpster Rentals Near Me
+                  </a>
+                </h3>
+              </div>
+            
+              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <a href="/utah-waste-management-regulations" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
+                    Utah Waste Management Regulations
+                  </a>
+                </h3>
+              </div>
+            
+          </div>
+        </div>
+      </section>
+    
+            <FAQSchema faqs={sizeGuideFAQs} pageUrl="/dumpster-size-guide-utah" />
     </div>
   );
 }
