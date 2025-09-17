@@ -230,6 +230,14 @@ export default function EnhancedHeader() {
                 Pricing
               </a>
               
+              <a href="https://icondumpsters.com/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
+                Calculator
+              </a>
+              
+              <a href="https://icondumpsters.com/blog" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
+                Blog
+              </a>
+              
               {/* City Pages Dropdown */}
               <div className="relative">
                 <button
