@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageHero from '../components/PageHero';
+import FAQSchema from '../components/FAQSchema';
 
 export const metadata: Metadata = {
   title: 'Frequent Buyer Program | Icon Dumpsters',
@@ -7,6 +8,21 @@ export const metadata: Metadata = {
   alternates: { canonical: '/frequent-buyers' },
   robots: { index: true, follow: true }
 };
+
+const frequentBuyersFAQs = [
+  {
+    question: "What is the Frequent Buyer Program?",
+    answer: "Our Frequent Buyer Program offers discounts and benefits for customers who rent dumpsters regularly. Benefits include reduced rates on repeat rentals, priority scheduling, dedicated customer support, and flexible payment options."
+  },
+  {
+    question: "How do I qualify for the Frequent Buyer Program?",
+    answer: "You qualify for our Frequent Buyer Program after completing 3 or more dumpster rentals within a 12-month period. Contractors, property managers, and businesses with regular waste disposal needs are ideal candidates for this program."
+  },
+  {
+    question: "What discounts are available through the program?",
+    answer: "Frequent buyers receive 10-15% discounts on standard rental rates, waived delivery fees on subsequent rentals, extended rental periods at no additional cost, and priority scheduling during peak seasons."
+  }
+];
 
 export default function FrequentBuyers() {
   return (
@@ -171,55 +187,6 @@ export default function FrequentBuyers() {
           </div>
         </div>
       </div>
-    
-      {/* Internal Links Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Related Resources
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore more helpful resources for your dumpster rental needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/cheap-dumpster-rentals-near-me" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Cheap Dumpster Rentals Near Me
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rentals-near-me-prices" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Dumpster Rentals Near Me Prices
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/multiple-sizes-available" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Multiple Sizes Available
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/utah-wide-coverage" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Utah-Wide Coverage
-                  </a>
-                </h3>
-              </div>
-            
-          </div>
-        </div>
-      </section>
-    
     </div>
+  );
+}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import PageHero from '../components/PageHero';
 import PageTemplate from '../components/PageTemplate';
 import CalculatorBanner from '../components/CalculatorBanner';
+import FAQSchema from '../components/FAQSchema';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -36,6 +37,21 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
+
+const cheapRentalsFAQs = [
+  {
+    question: "What makes a dumpster rental 'cheap' or budget-friendly?",
+    answer: "Cheap dumpster rentals offer transparent pricing with no hidden fees, competitive rates compared to local competitors, and value-added services like free delivery and pickup. Look for companies that include basic rental period in the price and clearly state any additional costs upfront."
+  },
+  {
+    question: "Are there any hidden fees with cheap dumpster rentals?",
+    answer: "Reputable cheap dumpster rental companies provide transparent pricing with no hidden fees. The quoted price typically includes delivery, pickup, and a standard rental period (usually 7-10 days). Additional costs may apply for extended rental periods, overweight loads, or prohibited materials."
+  },
+  {
+    question: "How can I find the cheapest dumpster rental near me?",
+    answer: "Compare quotes from multiple local companies, ask about current promotions or discounts, consider smaller dumpster sizes if appropriate for your project, and look for companies offering free delivery and pickup. Online quote tools can help you quickly compare prices from different providers."
+  }
+];
 
 export default function CheapDumpsterRentalsNearMe() {
   return (
@@ -472,55 +488,7 @@ export default function CheapDumpsterRentalsNearMe() {
             </Link>
           </div>
         </section>
-      
-      {/* Internal Links Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Related Resources
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore more helpful resources for your dumpster rental needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-size-guide-utah" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Dumpster Size Guide Utah
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rental-cost-calculator" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Dumpster Rental Cost Calculator
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/dumpster-rentals-near-me-prices" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Dumpster Rentals Near Me Prices
-                  </a>
-                </h3>
-              </div>
-            
-              <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/frequent-buyers" className="text-[#4e37a8] hover:text-purple-700 transition-colors">
-                    Frequent Buyers Program
-                  </a>
-                </h3>
-              </div>
-            
-          </div>
-        </div>
-      </section>
-    
-    </div>
+      </div>
+    </PageTemplate>
+  );
+}
