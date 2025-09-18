@@ -147,6 +147,9 @@ function updateSitemapExclusions() {
   }
 }
 
+// Ensure all canonical URLs are set to https://icondumpsters.com
+const correctCanonical = 'https://icondumpsters.com';
+
 // Run all fixes
 async function runFixes() {
   try {
