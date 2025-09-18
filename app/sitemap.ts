@@ -70,7 +70,10 @@ function collectRoutePaths(): string[] {
     'construction-dumpster-rental-guide-2025', 'home-renovation-waste-disposal-complete-guide',
     'commercial-dumpster-rental-business-solutions-2025', 'construction-waste-management-guide',
     'roll-off-dumpster-rental-taylorsville', 'roll-off-dumpster-rental-magna',
-    'dumpster-rental-near-me-taylorsville-ut', 'dumpster-rental-near-me-south-jordan-ut'
+    'dumpster-rental-near-me-taylorsville-ut', 'dumpster-rental-near-me-south-jordan-ut',
+    
+    // Additional exclusions from remote branch
+    'recent-url-1', 'recent-url-2', 'utah-specific-guides'
   ]);
 
   const results = new Set<string>()
