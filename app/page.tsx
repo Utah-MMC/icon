@@ -140,30 +140,30 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* Desktop: Call-to-action buttons positioned below left overlay */}
-              <div className="hidden sm:block absolute top-1/2 left-8 transform translate-y-16 mt-4 z-10">
-                <div className="flex gap-4">
+              {/* Desktop: Compact call-to-action buttons positioned below left overlay */}
+              <div className="hidden sm:block absolute top-1/2 left-4 transform translate-y-12 mt-2 z-10">
+                <div className="flex gap-2">
                   <a 
                     href="tel:801-918-6000" 
                     data-analytics-type="cta" 
                     data-analytics-name="call_hero" 
-                    className="bg-white text-[#4e37a8] px-6 py-3 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/95"
+                    className="bg-white text-[#4e37a8] px-4 py-2 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-sm inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white flex items-center justify-center backdrop-blur-sm bg-white/95"
                   >
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    Call (801) 918-6000
+                    Call Now
                   </a>
                   <a 
                     href="https://icondumpsters.com/#quote-form" 
                     data-analytics-type="cta" 
                     data-analytics-name="quote_hero" 
-                    className="bg-[#4e37a8] text-white px-6 py-3 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-[#4e37a8]/95"
+                    className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-[#3d2c85] transition-all duration-300 font-bold text-sm inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white flex items-center justify-center backdrop-blur-sm bg-[#4e37a8]/95"
                   >
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Get Free Quote
+                    Free Quote
                   </a>
                 </div>
               </div>
