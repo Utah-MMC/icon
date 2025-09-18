@@ -48,12 +48,12 @@ export default function Home() {
               priority
               sizes="100vw"
             />
-            {/* Desktop image */}
+            {/* Desktop and Tablet image */}
             <Image
-              src="/dumpsterWithTruck-enhance-4x-faceai-textai.jpeg" 
+              src="/images/Untitled design (1).png" 
               alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
               fill
-              className="hidden sm:block object-cover object-center sm:object-right-center"
+              className="hidden sm:block object-cover object-center"
               priority
               sizes="100vw"
             />
@@ -113,61 +113,59 @@ export default function Home() {
           {/* Hero Content - Overlaid on image - optimized for mobile */}
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-20">
             <div className="text-center">
-              {/* Mobile: Clean text overlay, Desktop: Background container */}
-              <div className="hidden sm:block sm:bg-black/50 sm:backdrop-blur-sm sm:rounded-2xl p-4 sm:p-8 md:p-10 mb-4 sm:mb-8 sm:border sm:border-white/20">
-                <h1 className="hero-text font-bold mb-4 sm:mb-6 leading-tight">
-                  <span className="text-white bg-[#4e37a8] px-3 py-1 rounded-lg shadow-lg">Icon Dumpsters</span>
-                  <span className="text-white block mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    Utah's #1 Rated Dumpster Rental Service
+              {/* Desktop: Compact overlay positioned far left to avoid blocking truck */}
+              <div className="hidden sm:block absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/60 backdrop-blur-sm rounded-xl p-4 max-w-sm border border-white/20 z-10">
+                <h1 className="hero-text font-bold mb-3 leading-tight">
+                  <span className="text-white bg-[#4e37a8] px-2 py-1 rounded text-sm">Icon Dumpsters</span>
+                  <span className="text-white block mt-1 text-lg lg:text-xl">
+                    Utah's #1 Rated Service
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-white font-medium max-w-4xl mx-auto leading-relaxed">
-                  <span className="text-yellow-300 font-bold">500+ Happy Customers</span> • Same-day delivery • No hidden fees • 24/7 support
+                <p className="text-sm text-white font-medium leading-relaxed mb-3">
+                  <span className="text-yellow-300 font-bold">500+ Happy Customers</span><br/>
+                  Same-day delivery • No hidden fees
                 </p>
-                <div className="flex flex-wrap justify-center items-center gap-4 mt-4 text-sm sm:text-base">
+                <div className="flex flex-col gap-1 text-xs">
                   <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                     <span>4.9/5 Stars (127 Reviews)</span>
                   </div>
                   <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Licensed & Insured</span>
                   </div>
-                  <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-blue-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    <span>Same-Day Available</span>
-                  </div>
                 </div>
               </div>
-              <div className="hidden sm:flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 flex-wrap">
-                <a 
-                  href="tel:801-918-6000" 
-                  data-analytics-type="cta" 
-                  data-analytics-name="call_hero" 
-                  className="w-full sm:w-auto bg-white text-[#4e37a8] px-6 sm:px-10 py-3 sm:py-5 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-base sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/95"
-                >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  Call (801) 918-6000
-                </a>
-                <a 
-                  href="https://icondumpsters.com/#quote-form" 
-                  data-analytics-type="cta" 
-                  data-analytics-name="quote_hero" 
-                  className="w-full sm:w-auto bg-[#4e37a8] text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-base sm:text-xl inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-[#4e37a8]/95"
-                >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Get Free Quote
-                </a>
+              {/* Desktop: Call-to-action buttons positioned below left overlay */}
+              <div className="hidden sm:block absolute top-1/2 left-8 transform translate-y-16 mt-4 z-10">
+                <div className="flex gap-4">
+                  <a 
+                    href="tel:801-918-6000" 
+                    data-analytics-type="cta" 
+                    data-analytics-name="call_hero" 
+                    className="bg-white text-[#4e37a8] px-6 py-3 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/95"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    Call (801) 918-6000
+                  </a>
+                  <a 
+                    href="https://icondumpsters.com/#quote-form" 
+                    data-analytics-type="cta" 
+                    data-analytics-name="quote_hero" 
+                    className="bg-[#4e37a8] text-white px-6 py-3 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-[#4e37a8]/95"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Get Free Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>
