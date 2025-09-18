@@ -50,7 +50,7 @@ export default function Home() {
             />
             {/* Desktop and Tablet image */}
             <Image
-              src="/images/Untitled design (1).png" 
+              src="/images/Gemini_Generated_Image_r7be0dr7be0dr7be.png" 
               alt="Icon Dumpsters professional roll-off dumpster with truck - dumpster rental Utah, roll-off dumpster, dumpster rental near me"
               fill
               className="hidden sm:block object-cover object-center"
@@ -110,92 +110,95 @@ export default function Home() {
             </a>
           </div>
           
+          {/* Invisible clickable overlay for the "GET AN INSTANT QUOTE" button in the image */}
+          <a 
+            href="https://icondumpsters.com/#quote-form" 
+            data-analytics-type="cta" 
+            data-analytics-name="image_quote_button"
+            className="hidden sm:block absolute bottom-32 left-1/2 transform -translate-x-1/2 w-48 h-12 z-30 cursor-pointer"
+            title="Get an instant quote"
+          >
+            {/* Invisible clickable area - positioned over the purple button in the image */}
+          </a>
+
+          {/* Desktop: Compact top-left overlay in sky area - positioned outside main content flow */}
+          <div className="hidden sm:block absolute top-16 left-6 bg-black/70 backdrop-blur-sm rounded-xl p-4 max-w-sm border border-white/20 z-20">
+            <h1 className="font-bold mb-3 leading-tight">
+              <span className="text-white bg-[#4e37a8] px-2 py-1 rounded text-sm">Icon Dumpsters</span>
+              <span className="text-white block mt-2 text-lg lg:text-xl">
+                Utah's #1 Rated Dumpster Rental
+              </span>
+            </h1>
+            <p className="text-sm text-white font-medium leading-relaxed mb-3">
+              <span className="text-yellow-300 font-bold">500+ Happy Customers</span> • Same-day delivery
+            </p>
+            <div className="flex flex-col gap-1 text-xs">
+              <div className="flex items-center text-white/90">
+                <svg className="w-3 h-3 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span>4.9/5 Stars (127 Reviews)</span>
+              </div>
+              <div className="flex items-center text-white/90">
+                <svg className="w-3 h-3 text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Licensed & Insured</span>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 mt-3">
+              <a 
+                href="tel:801-918-6000" 
+                data-analytics-type="cta" 
+                data-analytics-name="call_hero" 
+                className="bg-white text-[#4e37a8] px-4 py-2 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-sm inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white flex items-center justify-center"
+              >
+                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                Call (801) 918-6000
+              </a>
+              <a 
+                href="https://icondumpsters.com/#quote-form" 
+                data-analytics-type="cta" 
+                data-analytics-name="quote_hero" 
+                className="bg-[#4e37a8] text-white px-4 py-2 rounded-lg hover:bg-[#3d2c85] transition-all duration-300 font-bold text-sm inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white flex items-center justify-center"
+              >
+                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Get Free Quote
+              </a>
+            </div>
+          </div>
+
           {/* Hero Content - Overlaid on image - optimized for mobile */}
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-20">
             <div className="text-center">
-              {/* Desktop: Left-aligned overlay to avoid blocking truck */}
-              <div className="hidden sm:block absolute top-1/2 left-8 transform -translate-y-1/2 bg-black/60 backdrop-blur-sm rounded-2xl p-6 lg:p-8 max-w-lg border border-white/20 z-10">
-                <h1 className="hero-text font-bold mb-4 leading-tight">
-                  <span className="text-white bg-[#4e37a8] px-3 py-1 rounded-lg shadow-lg">Icon Dumpsters</span>
-                  <span className="text-white block mt-2 text-2xl lg:text-3xl xl:text-4xl">
-                    Utah's #1 Rated Dumpster Rental Service
-                  </span>
-                </h1>
-                <p className="text-lg lg:text-xl text-white font-medium leading-relaxed mb-4">
-                  <span className="text-yellow-300 font-bold">500+ Happy Customers</span> • Same-day delivery • No hidden fees • 24/7 support
-                </p>
-                <div className="flex flex-col gap-2 text-sm">
-                  <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span>4.9/5 Stars (127 Reviews)</span>
-                  </div>
-                  <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Licensed & Insured</span>
-                  </div>
-                  <div className="flex items-center text-white/90">
-                    <svg className="w-4 h-4 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                    <span>Same-Day Available</span>
-                  </div>
-                </div>
-              </div>
-              {/* Desktop: Call-to-action buttons positioned below left overlay */}
-              <div className="hidden sm:block absolute top-1/2 left-8 transform translate-y-16 mt-4 z-10">
-                <div className="flex gap-4">
-                  <a 
-                    href="tel:801-918-6000" 
-                    data-analytics-type="cta" 
-                    data-analytics-name="call_hero" 
-                    className="bg-white text-[#4e37a8] px-6 py-3 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/95"
-                  >
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    Call (801) 918-6000
-                  </a>
-                  <a 
-                    href="https://icondumpsters.com/#quote-form" 
-                    data-analytics-type="cta" 
-                    data-analytics-name="quote_hero" 
-                    className="bg-[#4e37a8] text-white px-6 py-3 rounded-xl hover:bg-[#3d2c85] transition-all duration-300 font-bold text-base inline-block shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 border-2 border-white flex items-center justify-center backdrop-blur-sm bg-[#4e37a8]/95"
-                  >
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Get Free Quote
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Urgency Banner */}
-      <section className="bg-gradient-to-r from-red-500 to-red-600 text-white py-4">
+      {/* Compact Urgency Banner */}
+      <section className="bg-gradient-to-r from-[#4e37a8] to-purple-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
               <div className="flex items-center">
-                <svg className="w-5 h-5 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 mr-1 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                <span className="font-bold text-lg">Limited Availability Today!</span>
+                <span className="font-bold text-sm sm:text-base">Limited Availability Today!</span>
               </div>
-              <div className="hidden sm:block">•</div>
-              <div className="text-sm sm:text-base">
-                Only <span className="font-bold">3 dumpsters</span> available for same-day delivery
+              <div className="hidden sm:block text-purple-200">•</div>
+              <div className="text-xs sm:text-sm">
+                Only <span className="font-bold text-yellow-300">3 dumpsters</span> available for same-day delivery
               </div>
-              <div className="hidden sm:block">•</div>
+              <div className="hidden sm:block text-purple-200">•</div>
               <a 
                 href="tel:801-918-6000" 
-                className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                className="bg-white text-[#4e37a8] px-3 py-1 rounded-md font-bold hover:bg-gray-100 transition-colors text-xs sm:text-sm"
               >
                 Call Now: (801) 918-6000
               </a>
