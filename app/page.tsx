@@ -110,16 +110,18 @@ export default function Home() {
             </a>
           </div>
           
-          {/* Invisible clickable overlay for the "GET AN INSTANT QUOTE" button in the image */}
-          <a 
-            href="https://icondumpsters.com/#quote-form" 
-            data-analytics-type="cta" 
-            data-analytics-name="image_quote_button"
-            className="hidden sm:block absolute bottom-32 left-1/2 transform -translate-x-1/2 w-48 h-12 z-30 cursor-pointer"
-            title="Get an instant quote"
-          >
-            {/* Invisible clickable area - positioned over the purple button in the image */}
-          </a>
+          {/* Clickable overlay for the "GET AN INSTANT QUOTE" button in the image */}
+          <div className="hidden sm:block absolute bottom-84 left-16 w-64 h-16 z-[99999] pointer-events-auto">
+            <a 
+              href="https://icondumpsters.com/#quote-form" 
+              data-analytics-type="cta" 
+              data-analytics-name="image_quote_button"
+              className="block w-full h-full cursor-pointer"
+              title="Get an instant quote"
+            >
+              {/* Invisible clickable area over the purple button */}
+            </a>
+          </div>
 
           {/* Desktop: Compact top-left overlay in sky area - positioned outside main content flow */}
           <div className="hidden sm:block absolute top-16 left-6 bg-black/70 backdrop-blur-sm rounded-xl p-4 max-w-sm border border-white/20 z-20">
