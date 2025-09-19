@@ -10,6 +10,7 @@ export default function EnhancedHeader() {
   const [isDumpsterSizesMenuOpen, setIsDumpsterSizesMenuOpen] = useState(false);
   const [isFrequentBuyersMenuOpen, setIsFrequentBuyersMenuOpen] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isPricingMenuOpen, setIsPricingMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -58,25 +59,25 @@ export default function EnhancedHeader() {
       {/* Main Header - White */}
       <header className="bg-white shadow-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-24 py-4">
+          <div className="flex items-center justify-between h-20 py-3">
             {/* Logo */}
-            <div className="flex items-center flex-shrink-0 mr-12">
+            <div className="flex items-center flex-shrink-0 mr-8">
               <a href="/" className="flex items-center hover:opacity-90 transition-opacity duration-200">
                 <Image
                   src="/IconDumpsters_Logo_Vector_Pantone266purple.png" 
                   alt="Icon Dumpsters - Professional Dumpster Rental Services" 
-                  className="h-16 w-auto"
-                  width={200}
-                  height={64}
+                  className="h-12 w-auto"
+                  width={150}
+                  height={48}
                   priority
                 />
               </a>
             </div>
 
             {/* Navigation - Hidden on mobile */}
-            <nav className="hidden lg:flex items-center space-x-10">
+            <nav className="hidden lg:flex items-center space-x-6">
               {/* Main Dumpster Rental Link */}
-              <a href="https://icondumpsters.com/dumpster-rental" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
+              <a href="https://icondumpsters.com/dumpster-rental" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold text-sm">
                 Dumpster Rentals
               </a>
               
@@ -85,7 +86,7 @@ export default function EnhancedHeader() {
                 <button
                   onMouseEnter={() => setIsServicesMenuOpen(true)}
                   onMouseLeave={() => setIsServicesMenuOpen(false)}
-                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold"
+                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold text-sm"
                 >
                   Services
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,7 +170,7 @@ export default function EnhancedHeader() {
                 <button
                   onMouseEnter={() => setIsDumpsterSizesMenuOpen(true)}
                   onMouseLeave={() => setIsDumpsterSizesMenuOpen(false)}
-                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold"
+                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold text-sm"
                 >
                   SIZES
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,15 +227,40 @@ export default function EnhancedHeader() {
                  )}
               </div>
               
-              <a href="https://icondumpsters.com/#pricing" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
-                Pricing
-              </a>
+              {/* Pricing & Calculator Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setIsPricingMenuOpen(true)}
+                  onMouseLeave={() => setIsPricingMenuOpen(false)}
+                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold text-sm"
+                >
+                  Pricing
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isPricingMenuOpen && (
+                  <div
+                    onMouseEnter={() => setIsPricingMenuOpen(true)}
+                    onMouseLeave={() => setIsPricingMenuOpen(false)}
+                    className="absolute top-full left-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                  >
+                    <div className="py-2">
+                      <a href="https://icondumpsters.com/#pricing" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8] border-b border-gray-100">
+                        <div className="font-semibold">Pricing & Rates</div>
+                        <div className="text-xs text-gray-500">View our competitive pricing</div>
+                      </a>
+                      <a href="https://icondumpsters.com/dumpster-calculator" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#4e37a8]">
+                        <div className="font-semibold">Dumpster Calculator</div>
+                        <div className="text-xs text-gray-500">Calculate your project needs</div>
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
               
-              <a href="https://icondumpsters.com/dumpster-calculator" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
-                Calculator
-              </a>
-              
-              <a href="https://icondumpsters.com/blog" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold">
+              <a href="https://icondumpsters.com/blog" className="text-[#4e37a8] hover:text-purple-700 transition-colors font-semibold text-sm">
                 Blog
               </a>
               
@@ -243,7 +269,7 @@ export default function EnhancedHeader() {
                 <button
                   onMouseEnter={() => setIsCityMenuOpen(true)}
                   onMouseLeave={() => setIsCityMenuOpen(false)}
-                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold"
+                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold text-sm"
                 >
                   Service Areas
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -378,7 +404,7 @@ export default function EnhancedHeader() {
                 <button
                   onMouseEnter={() => setIsFrequentBuyersMenuOpen(true)}
                   onMouseLeave={() => setIsFrequentBuyersMenuOpen(false)}
-                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold"
+                  className="text-[#4e37a8] hover:text-purple-700 transition-colors flex items-center font-semibold text-sm"
                 >
                   BUYERS
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,19 +431,19 @@ export default function EnhancedHeader() {
             </nav>
 
             {/* Contact Info & CTAs */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4">
               {/* Phone Number - Always Visible */}
-              <div className="hidden lg:flex items-center space-x-3">
-                <div className="flex items-center space-x-3">
-                  <span className="text-[#4e37a8] font-semibold text-sm">Call Now</span>
-                  <div className="w-8 h-8 bg-[#4e37a8] rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="hidden lg:flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
+                  <span className="text-[#4e37a8] font-semibold text-xs">Call Now</span>
+                  <div className="w-6 h-6 bg-[#4e37a8] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                   </div>
                   <a 
                     href="tel:(801) 918-6000" 
-                    className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors cursor-pointer whitespace-nowrap"
+                    className="text-[#4e37a8] font-semibold hover:text-purple-700 transition-colors cursor-pointer whitespace-nowrap text-sm"
                     title="Call (801) 918-6000"
                   >
                     (801) 918-6000
@@ -437,27 +463,25 @@ export default function EnhancedHeader() {
 
               {/* BOOK NOW Button - Special styling with decorative elements */}
               <div className="hidden lg:block relative">
-                <div className="absolute -top-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#4e37a8] to-transparent"></div>
                 <a 
                   href="https://icondumpsters.com/book"
-                  className="bg-white text-[#4e37a8] px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-bold text-sm border-2 border-[#4e37a8] shadow-md block whitespace-nowrap"
+                  className="bg-white text-[#4e37a8] px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors font-bold text-xs border-2 border-[#4e37a8] shadow-md block whitespace-nowrap"
                 >
                   BOOK NOW
                 </a>
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#4e37a8] to-transparent"></div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="hidden lg:flex items-center space-x-4">
+              <div className="hidden lg:flex items-center space-x-2">
                 <a 
                   href="tel:(801) 918-6000"
-                  className="bg-[#4e37a8] text-white px-6 py-2.5 rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm whitespace-nowrap"
+                  className="bg-[#4e37a8] text-white px-3 py-1.5 rounded-lg hover:bg-purple-700 transition-colors font-medium text-xs whitespace-nowrap"
                 >
                   Call Now
                 </a>
                 <a 
                   href="https://icondumpsters.com/#quote-form"
-                  className="bg-orange-500 text-white px-6 py-2.5 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm whitespace-nowrap"
+                  className="bg-orange-500 text-white px-3 py-1.5 rounded-lg hover:bg-orange-600 transition-colors font-medium text-xs whitespace-nowrap"
                 >
                   Get Quote
                 </a>
@@ -508,9 +532,12 @@ export default function EnhancedHeader() {
                <a href="https://icondumpsters.com/dumpster-sizes" className="block text-[#4e37a8] hover:text-purple-700 py-1">View All Dumpster Sizes</a>
              </div>
             
-            <a href="https://icondumpsters.com/#pricing" className="block text-[#4e37a8] hover:text-purple-700 py-2 font-semibold">
-              Pricing
-            </a>
+            {/* Mobile Pricing & Calculator */}
+            <div className="border-t border-gray-200 pt-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing & Tools</div>
+              <a href="https://icondumpsters.com/#pricing" className="block text-[#4e37a8] hover:text-purple-700 py-1">Pricing & Rates</a>
+              <a href="https://icondumpsters.com/dumpster-calculator" className="block text-[#4e37a8] hover:text-purple-700 py-1">Dumpster Calculator</a>
+            </div>
             
             {/* Mobile City Pages */}
             <div className="border-t border-gray-200 pt-2">

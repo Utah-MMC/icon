@@ -76,13 +76,13 @@ export default function CityPageTemplate({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {cityName} Dumpster Rental
+                Dumpster Rentals Near Me in {cityName}
               </h1>
               <p className="text-xl md:text-2xl mb-8">
-                Same-day delivery, transparent pricing, and friendly local service.
+                Find dumpster rentals near me in {cityName}. Same-day delivery, transparent pricing, and friendly local service.
               </p>
               <p className="text-lg mb-8 text-purple-100">
-                15, 20, and 30-yard roll-off dumpsters.
+                15, 20, and 30-yard roll-off dumpsters available for delivery near you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a 
@@ -102,7 +102,7 @@ export default function CityPageTemplate({
             {/* Hero Image - Dumpster in action */}
             <div className="mb-8">
               <OptimizedImage
-                src="/images/optimized/dumpsterWithTruck.jpg"
+                src="/images/optimized/IMG_3190.jpg"
                 alt={`Professional dumpster rental services in ${cityName}, Utah`}
                 width={800}
                 height={400}
@@ -475,9 +475,16 @@ export default function CityPageTemplate({
 
             {/* FAQ Section */}
             <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions - {cityName} Dumpster Rental</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions - Dumpster Rentals Near Me in {cityName}</h2>
               
               <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Where can I find dumpster rentals near me in {cityName}?</h3>
+                  <p className="text-gray-700">
+                    Icon Dumpsters provides dumpster rental services throughout {cityName} and surrounding areas. We deliver to residential and commercial locations across the city. Call us at {phoneNumber} to confirm service to your specific address.
+                  </p>
+                </div>
+
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Do I need a permit for dumpster rental in {cityName}?</h3>
                   <p className="text-gray-700">
@@ -503,6 +510,13 @@ export default function CityPageTemplate({
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Do you offer same-day delivery in {cityName}?</h3>
                   <p className="text-gray-700">
                     Yes, we offer same-day delivery throughout {cityName} when available. Call us early in the day to check availability and schedule same-day service.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">What makes Icon Dumpsters the best choice for dumpster rentals near me?</h3>
+                  <p className="text-gray-700">
+                    We're a local Utah company with same-day delivery, transparent pricing with no hidden fees, and 24/7 customer support. Our drivers are professional and experienced, and we serve all major areas in and around {cityName}.
                   </p>
                 </div>
               </div>

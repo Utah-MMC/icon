@@ -20,6 +20,26 @@ interface LocalBusinessData {
   priceRange?: string;
   image?: string;
   sameAs?: string[];
+  serviceArea?: {
+    geoWithin: {
+      geoCircle: {
+        geoMidpoint: {
+          latitude: number;
+          longitude: number;
+        };
+        geoRadius: string;
+      };
+    };
+  };
+  hasOfferCatalog?: {
+    name: string;
+    itemListElement: Array<{
+      item: {
+        name: string;
+        description: string;
+      };
+    }>;
+  };
 }
 
 interface ServiceData {
@@ -78,6 +98,12 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               longitude: businessData.geo.longitude,
             },
           }),
+          ...(businessData.serviceArea && {
+            serviceArea: businessData.serviceArea,
+          }),
+          ...(businessData.hasOfferCatalog && {
+            hasOfferCatalog: businessData.hasOfferCatalog,
+          }),
           ...(businessData.openingHours && {
             openingHours: businessData.openingHours,
           }),
@@ -90,6 +116,30 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           ...(businessData.sameAs && {
             sameAs: businessData.sameAs,
           }),
+          // Enhanced for "near me" searches
+          makesOffer: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Dumpster Rental Near Me',
+                description: 'Professional dumpster rental services with same-day delivery',
+                serviceType: 'Dumpster Rental',
+                areaServed: [
+                  'Salt Lake City, UT',
+                  'Murray, UT',
+                  'Sandy, UT',
+                  'West Jordan, UT',
+                  'South Jordan, UT',
+                  'Draper, UT',
+                  'Provo, UT',
+                  'Orem, UT',
+                  'Layton, UT',
+                  'Clearfield, UT'
+                ]
+              }
+            }
+          ]
         };
 
       case 'service':

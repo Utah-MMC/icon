@@ -204,9 +204,15 @@ export default function ChatWidget() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'init' }),
         });
+        if (!res.ok) {
+          console.warn('Chat API init returned non-OK status:', res.status);
+          return;
+        }
         const data = await res.json();
         if (data?.sessionId) setSessionId(data.sessionId);
-      } catch {}
+      } catch (error) {
+        console.warn('Failed to initialize chat session:', error);
+      }
     }
     init();
 
@@ -291,10 +297,27 @@ export default function ChatWidget() {
     let cancelled = false;
     const fetchStatus = async () => {
       try {
-        const res = await fetch('/api/analytics', { method: 'GET' });
+        const res = await fetch('/api/analytics', { 
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (!res.ok) {
+          console.warn('Analytics API returned non-OK status:', res.status);
+          return;
+        }
         const data = await res.json();
-        if (!cancelled && data?.status) setAgentStatus(data.status);
-      } catch {}
+        if (!cancelled && data?.status) {
+          setAgentStatus(data.status);
+        }
+      } catch (error) {
+        console.warn('Failed to fetch agent status:', error);
+        // Set default status if fetch fails
+        if (!cancelled) {
+          setAgentStatus({ online: true, queueSize: 0, etaMinutes: 2 });
+        }
+      }
     };
     fetchStatus();
     const id = window.setInterval(fetchStatus, 20000);
@@ -796,6 +819,10 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'message', message: userText, sessionId }),
       });
+      if (!res.ok) {
+        console.warn('Chat API message returned non-OK status:', res.status);
+        throw new Error(`HTTP ${res.status}`);
+      }
       const data = await res.json();
       const replyText: string = data?.reply || "Got it! Want me to get you a quick quote? I just need your name, phone, zip, and what size you're thinking.";
       const botMsg: ChatMessage = { role: 'assistant', content: humanizeText(replyText), timestamp: new Date().toISOString() };
@@ -808,7 +835,8 @@ export default function ChatWidget() {
       if (/15\s?yd|20\s?yd|30\s?yd/i.test(replyText) && !pendingQuote) {
         setPendingQuote({});
       }
-    } catch {
+    } catch (error) {
+      console.warn('Failed to send chat message:', error);
       const botMsg: ChatMessage = { role: 'assistant', content: humanizeText('Oops, I\'m having a moment here. Mind trying that again? Or just give us a call at (801) 918-6000 and we\'ll get you sorted out.'), timestamp: new Date().toISOString() };
       setMessages((prev) => [...prev, botMsg]);
     } finally {

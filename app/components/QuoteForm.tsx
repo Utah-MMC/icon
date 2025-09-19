@@ -48,6 +48,13 @@ export default function QuoteForm() {
       return;
     }
 
+    // Check reCAPTCHA if it's enabled
+    const recaptchaEnabled = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY !== '';
+    if (recaptchaEnabled && !recaptchaToken) {
+      alert('Please complete the reCAPTCHA verification');
+      return;
+    }
+
     console.log('Form validation passed, starting submission');
     setIsSubmitting(true);
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
@@ -72,6 +79,11 @@ export default function QuoteForm() {
       formDataToSend.append('pickupDate', formData.get('pickupDate') as string);
       formDataToSend.append('additionalInfo', formData.get('additionalInfo') as string);
       formDataToSend.append('smsConsent', formData.get('smsConsent') as string);
+      
+      // Add reCAPTCHA token if available
+      if (recaptchaToken) {
+        formDataToSend.append('recaptchaToken', recaptchaToken);
+      }
 
       // Submit to internal API (can forward to CRM/email provider)
       const leadResponse = await fetch('/api/lead', {
@@ -402,13 +414,15 @@ export default function QuoteForm() {
           </div>
         </div>
         
-        {/* reCAPTCHA */}
-        <ReCaptcha 
-          siteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-          onVerify={handleRecaptchaVerify}
-          onExpired={handleRecaptchaExpired}
-          onError={handleRecaptchaError}
-        />
+        {/* reCAPTCHA - Only show if site key is available */}
+        {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY !== '' && (
+          <ReCaptcha 
+            siteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onVerify={handleRecaptchaVerify}
+            onExpired={handleRecaptchaExpired}
+            onError={handleRecaptchaError}
+          />
+        )}
         
         {/* Submit Button */}
         <button 

@@ -14,9 +14,9 @@ import OptimizedImage from "./components/OptimizedImage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
-  description: 'Professional dumpster rental services throughout Utah. Fast delivery, competitive pricing, and reliable waste management solutions for residential and commercial projects.',
-  keywords: ['dumpster rental utah', 'utah dumpster rental', 'construction waste removal', 'residential dumpster rental', 'commercial dumpster rental'],
+  title: 'Dumpster Rentals Near Me - Same Day Delivery | Icon Dumpsters Utah',
+  description: 'Find dumpster rentals near me in Utah. Same-day delivery, competitive pricing, and professional service. 15-30 yard roll-off dumpsters available. Call (801) 918-6000 for instant quote.',
+  keywords: ['dumpster rentals near me', 'dumpster rental near me', 'utah dumpster rental', 'construction waste removal', 'residential dumpster rental', 'commercial dumpster rental', 'roll off dumpster near me'],
   alternates: { canonical: 'https://icondumpsters.com' },
   openGraph: {
     title: 'Icon Dumpsters - Professional Dumpster Rental Services in Utah',
@@ -630,6 +630,52 @@ export default function Home() {
 
 
 
+
+      {/* Near Me Section */}
+      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Dumpster Rentals Near Me in Utah
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Looking for dumpster rentals near me? Icon Dumpsters serves all of Utah with same-day delivery and competitive pricing. Find the perfect dumpster size for your project.
+            </p>
+            <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-[#4e37a8] mb-6">Why Choose Icon Dumpsters for Your "Near Me" Search?</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#4e37a8] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Local Utah Service</h4>
+                  <p className="text-gray-600">We serve all major Utah cities with local drivers and equipment</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#4e37a8] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Same-Day Delivery</h4>
+                  <p className="text-gray-600">Get your dumpster delivered the same day you call</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#4e37a8] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Transparent Pricing</h4>
+                  <p className="text-gray-600">No hidden fees - what you see is what you pay</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Our Services Section */}
       <div id="our-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
